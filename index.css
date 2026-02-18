@@ -1,0 +1,113 @@
+@layer base {
+    :root {
+        --brand-dark: #0f172a;
+        --brand-yellow: #fbbf24;
+        --brand-yellow-hover: #d97706;
+        --brand-gray: #334155;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        color: #1f2937;
+        background-color: #f8fafc;
+    }
+
+    ::selection {
+        background-color: rgba(251, 191, 36, 0.3);
+        color: #0f172a;
+    }
+}
+
+.glass-morphism {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.premium-shadow {
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.15),
+        0 4px 10px -5px rgba(15, 23, 42, 0.1);
+}
+
+.premium-shadow-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-shadow-hover:hover {
+    box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.25),
+        0 10px 20px -10px rgba(15, 23, 42, 0.15);
+    transform: translateY(-4px);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #fbbf24, #f97316);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(15, 23, 42, 0.2);
+    border-radius: 9999px;
+    transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(15, 23, 42, 0.4);
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.service-card-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
