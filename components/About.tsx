@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Users, Award, Zap } from 'lucide-react';
+import { Users, Award, Zap } from 'lucide-react';
 import { COMPANY_NAME } from '../constants';
 
 const About: React.FC = () => {
@@ -11,9 +11,10 @@ const About: React.FC = () => {
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-4">
                                 <img
-                                    src="https://images.unsplash.com/photo-1599256621730-535171e28e50?q=80&w=1000&auto=format&fit=crop"
-                                    alt="Mechanic working"
+                                    src="/roadside_assistance_help.png"
+                                    alt="Roadside Assistance Help"
                                     className="rounded-3xl shadow-lg w-full h-64 object-cover"
+                                    loading="lazy"
                                 />
                                 <div className="bg-brand-yellow p-8 rounded-3xl shadow-xl animate-float">
                                     <div className="text-4xl font-black text-brand-dark mb-1">10k+</div>
@@ -27,9 +28,10 @@ const About: React.FC = () => {
                                     <div className="text-gray-400 text-xs uppercase tracking-widest mt-1">Availability</div>
                                 </div>
                                 <img
-                                    src="https://images.unsplash.com/photo-1562141982-c5c79ac8c4c3?q=80&w=1000&auto=format&fit=crop"
-                                    alt="Roadside help"
+                                    src="/roadside_technician_towing.png"
+                                    alt="Professional Roadside Service"
                                     className="rounded-3xl shadow-lg w-full h-64 object-cover"
+                                    loading="lazy"
                                 />
                             </div>
                         </div>
@@ -48,16 +50,7 @@ const About: React.FC = () => {
                             At {COMPANY_NAME}, we believe roadside assistance shouldn't be a stressful waiting game. We've combined expert mechanical skill with modern technology to provide the fastest, most reliable mobile services in the region.
                         </p>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                            <div className="flex gap-4">
-                                <div className="shrink-0 w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-brand-yellow premium-shadow">
-                                    <Shield size={24} />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-brand-dark mb-1">Full Insurance</h4>
-                                    <p className="text-gray-500 text-sm">Every service is 100% covered for your peace of mind.</p>
-                                </div>
-                            </div>
+                        <div className="flex flex-col gap-6 mb-10">
                             <div className="flex gap-4">
                                 <div className="shrink-0 w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-brand-yellow premium-shadow">
                                     <Users size={24} />

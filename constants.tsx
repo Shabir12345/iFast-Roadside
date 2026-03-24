@@ -1,8 +1,8 @@
-import { Wrench, Battery, Car, Fuel, Key, Truck } from 'lucide-react';
+import { Disc, Battery, Fuel, Key, Truck } from 'lucide-react';
 import { ServiceItem, Testimonial } from './types';
 
 export const COMPANY_NAME = "iFAST Roadside & Mobile Tires";
-export const PHONE_NUMBER = "(555) 012-3456";
+export const PHONE_NUMBER = "+1 437-215-3468";
 export const EMAIL = "help@ifastroadside.com";
 
 export const SERVICES: ServiceItem[] = [
@@ -10,43 +10,31 @@ export const SERVICES: ServiceItem[] = [
     id: 'tire-change',
     title: 'Mobile Tire Service',
     description: 'Flat tire repair, replacement, and balancing at your location. We carry most standard sizes.',
-    icon: Wrench,
-    priceStart: '$75'
+    icon: Disc,
   },
   {
     id: 'jump-start',
     title: 'Battery Jump Start',
     description: 'Dead battery? We will come to you and get your vehicle started instantly.',
     icon: Battery,
-    priceStart: '$50'
   },
   {
     id: 'lockout',
     title: 'Car Lockout',
     description: 'Locked your keys inside? Our technicians use damage-free tools to unlock your door.',
     icon: Key,
-    priceStart: '$65'
   },
   {
     id: 'fuel',
     title: 'Fuel Delivery',
     description: 'Ran out of gas? We deliver up to 5 gallons of regular, premium, or diesel fuel.',
     icon: Fuel,
-    priceStart: '$45 + fuel cost'
   },
   {
     id: 'towing',
     title: 'Emergency Towing',
     description: 'Flatbed towing service for vehicles that cannot be repaired on the spot.',
     icon: Truck,
-    priceStart: '$95'
-  },
-  {
-    id: 'diagnostics',
-    title: 'On-Site Diagnostics',
-    description: 'Check engine light on? We can scan your vehicle\'s computer to identify issues.',
-    icon: Car,
-    priceStart: '$40'
   }
 ];
 

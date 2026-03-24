@@ -11,6 +11,7 @@ const Hero: React.FC = () => {
           src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=2072&auto=format&fit=crop"
           alt="Professional Roadside Assistance Mechanic"
           className="w-full h-full object-cover"
+          fetchPriority="high"
         />
         {/* Gradient to ensure text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/80 to-brand-dark/30"></div>

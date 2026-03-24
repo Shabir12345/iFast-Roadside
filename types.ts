@@ -5,7 +5,6 @@ export interface ServiceItem {
   title: string;
   description: string;
   icon: LucideIcon;
-  priceStart: string;
 }
 
 export interface Testimonial {
