@@ -412,7 +412,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoTitle: '24/7 Emergency Towing Service GTA | Flatbed Tow Trucks | iFAST',
     seoDescription: 'Reliable 24/7 emergency flatbed towing service across Toronto and the GTA. Safe, damage-free transport for accidents, breakdowns, and AWD cars. Fast ETA.',
     keywords: 'tow truck GTA, emergency towing Toronto, flatbed tow truck Mississauga, accident towing vehicle transport, AWD towing Brampton, luxury car towing Vaughan, motorcycle tow near me',
-    heroImage: 'https://images.unsplash.com/photo-1549419168-ca480eec9de9?q=80&w=1200&auto=format&fit=crop',
+    heroImage: '/roadside_technician_towing.png',
     blogSections: [
       {
         title: '24/7 Fast & Reliable Flatbed Towing Across the Greater Toronto Area',

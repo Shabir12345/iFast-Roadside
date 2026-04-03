@@ -111,3 +111,24 @@
         transform: translateY(0);
     }
 }
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.background-pattern {
+    background-image: 
+        radial-gradient(#0f172a 2px, transparent 2px),
+        radial-gradient(#0f172a 2px, transparent 2px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+}
