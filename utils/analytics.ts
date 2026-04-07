@@ -4,7 +4,7 @@ declare global {
   }
 }
 
-export const GTAG_ID = 'AW-XXXXXXXXXX'; // Replace with real ID
+export const GTAG_ID = 'AW-18054263913';
 
 /**
  * Tracks a Google Ads conversion event.
