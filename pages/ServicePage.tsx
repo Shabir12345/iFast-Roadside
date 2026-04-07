@@ -3,9 +3,10 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { SERVICES, PHONE_NUMBER } from '../constants';
 import { SERVICE_CONTENT } from '../data/serviceContent';
-import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle, Star, ShieldCheck, ThumbsUp } from 'lucide-react';
+import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle, Star, ShieldCheck, ThumbsUp, MapPin } from 'lucide-react';
 import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
+import { trackPhoneCall } from '../utils/analytics';
 
 const ServicePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -116,6 +117,7 @@ const ServicePage: React.FC = () => {
 
             <a
               href={`tel:${PHONE_NUMBER}`}
+              onClick={() => trackPhoneCall(`hero_call_${id}`)}
               className="group relative overflow-hidden flex items-center justify-center gap-4 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark px-8 py-5 rounded-2xl font-black text-xl lg:text-3xl transition-all duration-300 shadow-[0_0_40px_rgba(253,224,71,0.5)] hover:shadow-[0_0_60px_rgba(253,224,71,0.7)] transform hover:-translate-y-1 text-center"
             >
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
@@ -230,6 +232,7 @@ const ServicePage: React.FC = () => {
             </p>
             <a
               href={`tel:${PHONE_NUMBER}`}
+              onClick={() => trackPhoneCall(`footer_call_${id}`)}
               className="inline-flex items-center justify-center gap-4 bg-brand-dark hover:bg-gray-900 text-white px-10 py-6 rounded-2xl font-black text-2xl md:text-4xl transition-all duration-300 shadow-2xl transform hover:scale-105 active:scale-95"
             >
               <PhoneCall size={36} className="text-brand-yellow animate-bounce" />

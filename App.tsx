@@ -6,6 +6,7 @@ import ChatBot from './components/ChatBot';
 import StickyCall from './components/StickyCall';
 import Home from './pages/Home';
 import ServicePage from './pages/ServicePage';
+import EastGtaServiceAreaPage from './pages/EastGtaServiceAreaPage';
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/service/:id" element={<ServicePage />} />
+        <Route path="/service-area/east-gta" element={<EastGtaServiceAreaPage />} />
       </Routes>
       <Footer />
 

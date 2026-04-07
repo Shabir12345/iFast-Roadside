@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { Menu, X, PhoneCall, ChevronDown } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
+import { Menu, X, PhoneCall, ChevronDown, MapPin } from 'lucide-react';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICES } from '../constants';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const location = useLocation();
+  const isLandingPage = location.pathname === '/service-area/east-gta';
 
   return (
     <header className="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-sm text-white shadow-lg">
@@ -23,36 +26,56 @@ const Header: React.FC = () => {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide">
-          <div className="relative group">
-            <a href="/#services" className="flex items-center gap-1 hover:text-brand-yellow transition-colors duration-300 py-6">
-              Services <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
-            </a>
-            {/* Dropdown Menu */}
-            <div className="absolute top-full left-0 mt-0 w-64 bg-white text-gray-800 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden transform origin-top scale-y-95 group-hover:scale-y-100">
-              <div className="py-2">
-                {SERVICES.map((service) => {
-                  const Icon = service.icon;
-                  return (
-                    <a 
-                      key={service.id} 
-                      href={`/service/${service.id}`} 
-                      className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0"
-                    >
-                      <div className="bg-brand-yellow/20 text-brand-dark p-2 rounded-lg">
-                        <Icon size={18} />
-                      </div>
-                      <span className="font-semibold">{service.title}</span>
-                    </a>
-                  );
-                })}
+        {!isLandingPage && (
+          <nav className="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide">
+            <div className="relative group">
+              <a href="/#services" className="flex items-center gap-1 hover:text-brand-yellow transition-colors duration-300 py-6">
+                Services <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
+              </a>
+              {/* Dropdown Menu */}
+              <div className="absolute top-full left-0 mt-0 w-64 bg-white text-gray-800 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden transform origin-top scale-y-95 group-hover:scale-y-100">
+                <div className="py-2">
+                  {SERVICES.map((service) => {
+                    const Icon = service.icon;
+                    return (
+                      <a 
+                        key={service.id} 
+                        href={`/service/${service.id}`} 
+                        className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0"
+                      >
+                        <div className="bg-brand-yellow/20 text-brand-dark p-2 rounded-lg">
+                          <Icon size={18} />
+                        </div>
+                        <span className="font-semibold">{service.title}</span>
+                      </a>
+                    );
+                  })}
+                </div>
               </div>
             </div>
-          </div>
-          <a href="/#about" className="hover:text-brand-yellow transition-colors duration-300">About</a>
-          <a href="/#reviews" className="hover:text-brand-yellow transition-colors duration-300">Reviews</a>
-          <a href="/#contact" className="hover:text-brand-yellow transition-colors duration-300">Contact</a>
-        </nav>
+            <a href="/#about" className="hover:text-brand-yellow transition-colors duration-300">About</a>
+            <div className="relative group">
+              <a href="#" className="flex items-center gap-1 hover:text-brand-yellow transition-colors duration-300 py-6">
+                Service Area <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
+              </a>
+              <div className="absolute top-full left-0 mt-0 w-64 bg-white text-gray-800 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden transform origin-top scale-y-95 group-hover:scale-y-100">
+                <div className="py-2">
+                  <a 
+                    href="/service-area/east-gta" 
+                    className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0"
+                  >
+                    <div className="bg-brand-yellow/20 text-brand-dark p-2 rounded-lg">
+                      <MapPin size={18} />
+                    </div>
+                    <span className="font-semibold text-sm">East GTA <span className="block text-[10px] text-gray-500 font-normal">Pickering, Ajax, Whitby, Oshawa...</span></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="/#reviews" className="hover:text-brand-yellow transition-colors duration-300">Reviews</a>
+            <a href="/#contact" className="hover:text-brand-yellow transition-colors duration-300">Contact</a>
+          </nav>
+        )}
 
         {/* CTA Button */}
         <div className="hidden md:flex">
@@ -67,18 +90,20 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {!isLandingPage && (
+          <button
+            className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        )}
       </div>
 
       {/* Mobile Nav Dropdown */}
-      {isOpen && (
+      {isOpen && !isLandingPage && (
         <div className="md:hidden bg-brand-dark border-t border-gray-700 absolute w-full shadow-xl">
           <div className="flex flex-col p-4 space-y-2">
             <div>

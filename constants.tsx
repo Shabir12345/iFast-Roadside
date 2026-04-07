@@ -42,22 +42,22 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
     name: "Sarah Jenkins",
-    role: "Local Commuter",
-    content: "I got a flat on the highway at 10 PM. iFAST was there in 20 minutes and had me back on the road in no time. Lifesavers!",
+    role: "Pickering Resident",
+    content: "I got a flat on the 401 near Pickering at 10 PM. iFAST was there in 20 minutes and had me back on the road in no time. Lifesavers!",
     rating: 5
   },
   {
     id: 2,
     name: "Mike Ross",
-    role: "Delivery Driver",
-    content: "Professional and quick. The mobile tire service saved me a trip to the shop and allowed me to finish my route.",
+    role: "Oshawa Delivery Driver",
+    content: "Professional and quick. I was stuck in a driveway in Oshawa and their mobile tire service saved me a trip to the shop. Highly recommend!",
     rating: 5
   },
   {
     id: 3,
     name: "Emily Chen",
-    role: "Student",
-    content: "Locked my keys in the car before an exam. They arrived so fast and were very affordable compared to others.",
-    rating: 4
+    role: "Scarborough Student",
+    content: "Locked my keys in the car near UT Scarborough. They arrived so fast and were very affordable compared to the other quotes I got.",
+    rating: 5
   }
 ];

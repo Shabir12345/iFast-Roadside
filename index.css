@@ -132,3 +132,14 @@
     background-size: 32px 32px;
     background-position: 0 0, 16px 16px;
 }
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -39,14 +39,12 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Service Areas</h4>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
-              <li>Metro Center</li>
-              <li>North Heights</li>
-              <li>East Suburbs</li>
-              <li>West Valley</li>
-              <li>South Junction</li>
-              <li>Harbor Point</li>
-              <li>Tech District</li>
-              <li>Airport Region</li>
+              <li>Pickering</li>
+              <li>Ajax</li>
+              <li>Whitby</li>
+              <li>Oshawa</li>
+              <li>Scarborough</li>
+              <li>East GTA</li>
             </ul>
           </div>
 

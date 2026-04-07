@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Clock, MapPin, ShieldCheck } from 'lucide-react';
 import { PHONE_NUMBER } from '../constants';
+import { trackPhoneCall } from '../utils/analytics';
 
 const Hero: React.FC = () => {
   return (
@@ -39,6 +40,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
             <a
               href={`tel:${PHONE_NUMBER}`}
+              onClick={() => trackPhoneCall('home_hero_call')}
               className="w-full sm:w-auto px-8 py-4 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark font-bold text-lg rounded-xl shadow-lg shadow-brand-yellow/20 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-1"
             >
               Call Now: {PHONE_NUMBER}
@@ -75,8 +77,8 @@ const Hero: React.FC = () => {
                 <MapPin size={24} />
               </div>
               <div>
-                <h3 className="text-white font-bold">Wide Coverage</h3>
-                <p className="text-gray-400 text-sm">Greater Metro Area</p>
+                <h3 className="text-white font-bold text-sm sm:text-base">East GTA Coverage</h3>
+                <p className="text-gray-400 text-[10px] sm:text-xs">Pickering, Ajax, Whitby, Oshawa, Scarborough</p>
               </div>
             </div>
           </div>
