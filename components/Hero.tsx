@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-white mb-6 tracking-tight leading-[1.1]">
-            Stranded? <br />
+            <span className="text-brand-yellow">iFAST Roadside.</span> <br />
             <span className="text-gradient">
               We'll Get You Moving.
             </span>
