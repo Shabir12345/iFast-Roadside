@@ -14,9 +14,10 @@ export const GTAG_ID = 'AW-18054263913';
 export const trackConversion = (action: string, label?: string) => {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
     window.gtag('event', 'conversion', {
-      'send_to': `${GTAG_ID}/${label || action}`,
+      'send_to': `AW-18054263913/hHrJCPzimZgcEOno-KBD`,
+      'transaction_id': '',
       'event_callback': () => {
-        console.log(`Conversion tracked: ${action}`);
+        console.log(`Conversion tracked: ${action} with label ${label || 'default'}`);
       }
     });
   } else {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
 import { COMPANY_NAME, PHONE_NUMBER, EMAIL } from '../constants';
+import { trackPhoneCall } from '../utils/analytics';
 
 const Footer: React.FC = () => {
   return (
@@ -53,7 +54,13 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone className="text-brand-yellow shrink-0" size={18} />
-                <a href={`tel:${PHONE_NUMBER}`} className="hover:text-white transition-colors">{PHONE_NUMBER}</a>
+                <a 
+                  href={`tel:${PHONE_NUMBER}`} 
+                  onClick={() => trackPhoneCall('footer_contact_call')}
+                  className="hover:text-white transition-colors"
+                >
+                  {PHONE_NUMBER}
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="text-brand-yellow shrink-0" size={18} />

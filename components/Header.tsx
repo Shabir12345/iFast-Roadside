@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Menu, X, PhoneCall, ChevronDown, MapPin } from 'lucide-react';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICES } from '../constants';
+import { trackPhoneCall } from '../utils/analytics';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,6 +82,7 @@ const Header: React.FC = () => {
         <div className="hidden md:flex">
           <a
             href={`tel:${PHONE_NUMBER}`}
+            onClick={() => trackPhoneCall('header_desktop_call')}
             className="flex items-center gap-2 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark px-6 py-2.5 rounded-full font-bold transition-all duration-300 premium-shadow-hover"
             aria-label={`Call us at ${PHONE_NUMBER}`}
           >
@@ -142,6 +144,7 @@ const Header: React.FC = () => {
             <div className="pt-4 pb-2">
               <a
                   href={`tel:${PHONE_NUMBER}`}
+                  onClick={() => trackPhoneCall('header_mobile_call')}
                   className="flex items-center justify-center gap-2 bg-brand-yellow text-brand-dark py-3 rounded-lg font-bold"
               >
                   <PhoneCall size={20} />
