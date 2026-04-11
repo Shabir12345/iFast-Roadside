@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Clock, MapPin, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Clock, MapPin, ShieldCheck, PhoneCall, Star } from 'lucide-react';
 import { PHONE_NUMBER } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
 
@@ -20,9 +20,21 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center md:text-left">
-          <div className="inline-flex items-center gap-2 bg-brand-yellow/10 text-brand-yellow px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6 border border-brand-yellow/20 backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-brand-yellow animate-pulse"></span>
-            24/7 Emergency Service
+          <div className="flex flex-wrap gap-3 justify-center md:justify-start items-center mb-6">
+            <div className="inline-flex items-center gap-2 bg-brand-yellow/10 text-brand-yellow px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-yellow/20 backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-brand-yellow animate-pulse"></span>
+              24/7 Emergency Service
+            </div>
+            <div className="inline-flex items-center gap-1.5 text-white bg-white/10 px-3 py-1.5 rounded-full text-xs font-bold border border-white/20 backdrop-blur-sm">
+               <div className="flex text-yellow-400">
+                  <Star size={14} fill="currentColor" />
+                  <Star size={14} fill="currentColor" />
+                  <Star size={14} fill="currentColor" />
+                  <Star size={14} fill="currentColor" />
+                  <Star size={14} fill="currentColor" />
+               </div>
+               <span className="ml-1">4.9/5 Google Rated</span>
+            </div>
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-white mb-6 tracking-tight leading-[1.1]">
@@ -41,8 +53,10 @@ const Hero: React.FC = () => {
             <a
               href={`tel:${PHONE_NUMBER}`}
               onClick={() => trackPhoneCall('home_hero_call')}
-              className="w-full sm:w-auto px-8 py-4 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark font-bold text-lg rounded-xl shadow-lg shadow-brand-yellow/20 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-1"
+              className="w-full sm:w-auto px-8 py-4 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark font-black text-xl rounded-xl shadow-[0_0_20px_rgba(251,191,36,0.3)] transition-all flex items-center justify-center gap-3 transform hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(251,191,36,0.5)] animate-pulse"
+              style={{ animationDuration: '2s' }}
             >
+              <PhoneCall size={24} fill="currentColor" />
               Call Now: {PHONE_NUMBER}
             </a>
             <a

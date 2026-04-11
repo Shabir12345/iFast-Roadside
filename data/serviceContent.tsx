@@ -1,16 +1,20 @@
 import React from 'react';
 import { PHONE_NUMBER, COMPANY_NAME } from '../constants';
 import { PhoneCall } from 'lucide-react';
+import { trackPhoneCall } from '../utils/analytics';
 
-const CallNowButton = () => (
-  <div className="my-6">
+const CallNowButton = ({ source = 'service_content_inline' }: { source?: string }) => (
+  <div className="my-6 text-center sm:text-left">
     <a
       href={`tel:${PHONE_NUMBER}`}
-      className="inline-flex items-center justify-center gap-2 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 premium-shadow"
+      onClick={() => trackPhoneCall(source)}
+      className="inline-flex items-center justify-center gap-2 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 premium-shadow-hover animate-pulse"
+      style={{ animationDuration: '2s' }}
     >
       <PhoneCall size={20} />
-      Call Now 📞
+      Call Now For Quick Help
     </a>
+    <p className="text-xs text-gray-500 mt-2">✨ Average arrival time: 15-30 minutes</p>
   </div>
 );
 

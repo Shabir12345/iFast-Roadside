@@ -145,9 +145,10 @@ const Header: React.FC = () => {
               <a
                   href={`tel:${PHONE_NUMBER}`}
                   onClick={() => trackPhoneCall('header_mobile_call')}
-                  className="flex items-center justify-center gap-2 bg-brand-yellow text-brand-dark py-3 rounded-lg font-bold"
+                  className="flex items-center justify-center gap-2 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark py-3.5 rounded-lg font-black text-lg transition-all active:scale-95 shadow-[0_0_15px_rgba(251,191,36,0.3)] animate-pulse"
+                  style={{ animationDuration: '2s' }}
               >
-                  <PhoneCall size={20} />
+                  <PhoneCall size={22} fill="currentColor" />
                   Call {PHONE_NUMBER}
               </a>
             </div>

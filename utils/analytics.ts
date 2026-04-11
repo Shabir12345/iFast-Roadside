@@ -13,11 +13,16 @@ export const GTAG_ID = 'AW-18054263913';
  */
 export const trackConversion = (action: string, label?: string) => {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    // Generate a unique transaction ID per conversion event.
+    // Google requires this to be non-empty; for phone calls we use a
+    // timestamp + random suffix to ensure uniqueness and prevent double-counting.
+    const transactionId = `call_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+
     window.gtag('event', 'conversion', {
       'send_to': `AW-18054263913/hHrJCPzimZgcEOno-KBD`,
-      'transaction_id': '',
+      'transaction_id': transactionId,
       'event_callback': () => {
-        console.log(`Conversion tracked: ${action} with label ${label || 'default'}`);
+        console.log(`Conversion tracked: ${action} | label: ${label || 'default'} | txn: ${transactionId}`);
       }
     });
   } else {
