@@ -35,13 +35,13 @@ const Home: React.FC = () => {
   return (
     <main>
       <Helmet>
-        <title>iFAST Roadside & Mobile Tires | 24/7 Service GTA</title>
-        <meta name="description" content="Fast, reliable 24/7 roadside assistance and mobile tire service across the Greater Metro Area. Arriving in 30 minutes or less on average." />
-        <link rel="canonical" href="https://ifastroadside.com/" />
-        <meta property="og:title" content="iFAST Roadside & Mobile Tires" />
-        <meta property="og:description" content="Fast, reliable 24/7 roadside assistance and mobile tire service across the Greater Metro Area." />
+        <title>iFAST Roadside Assistance & Mobile Tires | Scarborough · Pickering · Ajax · Whitby · Oshawa 24/7</title>
+        <meta name="description" content="24/7 local roadside assistance and mobile tire service across Scarborough, Pickering, Ajax, Whitby, and Oshawa. Flat tire repair, jump start, lockout, fuel delivery, towing. 4.9★ / 94+ reviews. 15-30 min arrival. Call +1 437-215-3468." />
+        <link rel="canonical" href="https://ifastroadside.ca/" />
+        <meta property="og:title" content="iFAST Roadside Assistance — East GTA 24/7 Local Service" />
+        <meta property="og:description" content="Local 24/7 roadside assistance across Scarborough, Pickering, Ajax, Whitby, Oshawa. Mobile tire, jump start, lockout, fuel, towing. 4.9★ / 94+ reviews." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ifastroadside.com/" />
+        <meta property="og:url" content="https://ifastroadside.ca/" />
       </Helmet>
       <Hero />
       <About />

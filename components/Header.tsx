@@ -61,15 +61,33 @@ const Header: React.FC = () => {
               </a>
               <div className="absolute top-full left-0 mt-0 w-64 bg-white text-gray-800 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden transform origin-top scale-y-95 group-hover:scale-y-100">
                 <div className="py-2">
-                  <a 
-                    href="/service-area/east-gta" 
-                    className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0"
+                  <a
+                    href="/service-area/east-gta"
+                    className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50"
                   >
                     <div className="bg-brand-yellow/20 text-brand-dark p-2 rounded-lg">
                       <MapPin size={18} />
                     </div>
-                    <span className="font-semibold text-sm">East GTA <span className="block text-[10px] text-gray-500 font-normal">Pickering, Ajax, Whitby, Oshawa...</span></span>
+                    <span className="font-semibold text-sm">East GTA Overview</span>
                   </a>
+                  {[
+                    { id: 'scarborough', name: 'Scarborough' },
+                    { id: 'pickering', name: 'Pickering' },
+                    { id: 'ajax', name: 'Ajax' },
+                    { id: 'whitby', name: 'Whitby' },
+                    { id: 'oshawa', name: 'Oshawa' }
+                  ].map(city => (
+                    <a
+                      key={city.id}
+                      href={`/areas/${city.id}`}
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0"
+                    >
+                      <div className="bg-brand-yellow/10 text-brand-dark p-2 rounded-lg">
+                        <MapPin size={16} />
+                      </div>
+                      <span className="font-semibold text-sm">{city.name}</span>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>

@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { SERVICES, PHONE_NUMBER } from '../constants';
 import { SERVICE_CONTENT } from '../data/serviceContent';
 import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle, Star, ShieldCheck, ThumbsUp, MapPin } from 'lucide-react';
+import { CITY_CONTENT } from '../data/cityContent';
 import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
 import { trackPhoneCall } from '../utils/analytics';
@@ -69,11 +70,11 @@ const ServicePage: React.FC = () => {
         <title>{contentData.seoTitle}</title>
         <meta name="description" content={contentData.seoDescription} />
         <meta name="keywords" content={contentData.keywords} />
-        <link rel="canonical" href={`https://ifastroadside.com/service/${id}`} />
+        <link rel="canonical" href={`https://ifastroadside.ca/service/${id}`} />
         <meta property="og:title" content={contentData.seoTitle} />
         <meta property="og:description" content={contentData.seoDescription} />
-        <meta property="og:image" content={`https://ifastroadside.com${contentData.heroImage}`} />
-        <meta property="og:url" content={`https://ifastroadside.com/service/${id}`} />
+        <meta property="og:image" content={`https://ifastroadside.ca${contentData.heroImage}`} />
+        <meta property="og:url" content={`https://ifastroadside.ca/service/${id}`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
@@ -216,6 +217,27 @@ const ServicePage: React.FC = () => {
                </div>
              ))}
            </div>
+        </div>
+      </div>
+
+      {/* City cross-links for internal linking & local SEO */}
+      <div className="container mx-auto px-4 pb-16">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black text-brand-dark mb-8 text-center">{title} — Pick Your City</h2>
+          <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">Local details, ETAs, and pricing for {title.toLowerCase()} in each East GTA city we cover.</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {Object.values(CITY_CONTENT).map((c) => (
+              <Link
+                key={c.id}
+                to={`/service/${id}/${c.id}`}
+                className="group bg-white p-6 rounded-2xl premium-shadow border border-gray-100 hover:border-brand-yellow transition-all text-center"
+              >
+                <MapPin className="mx-auto text-brand-yellow mb-3" size={24} />
+                <h3 className="font-black text-brand-dark mb-1">{c.name}</h3>
+                <p className="text-xs text-gray-500">ETA {c.responseTime}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 

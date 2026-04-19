@@ -3,7 +3,7 @@ import { ServiceItem, Testimonial } from './types';
 
 export const COMPANY_NAME = "iFAST Roadside & Mobile Tires";
 export const PHONE_NUMBER = "+1 437-215-3468";
-export const EMAIL = "help@ifastroadside.com";
+export const EMAIL = "help@ifastroadside.ca";
 
 export const SERVICES: ServiceItem[] = [
   {

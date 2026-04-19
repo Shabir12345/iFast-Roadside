@@ -32,7 +32,7 @@ const EastGtaServiceAreaPage: React.FC = () => {
       <Helmet>
         <title>24/7 Roadside Assistance East GTA | Pickering, Ajax, Whitby, Oshawa</title>
         <meta name="description" content="Exclusive roadside assistance and mobile tire service for the East GTA. Serving Pickering, Ajax, Whitby, Oshawa, and Scarborough. Fast 15-30 min ETA." />
-        <link rel="canonical" href="https://ifastroadside.com/service-area/east-gta" />
+        <link rel="canonical" href="https://ifastroadside.ca/service-area/east-gta" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>

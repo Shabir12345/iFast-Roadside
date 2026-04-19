@@ -1,38 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ifastroadside.com/</loc>
+    <loc>https://ifastroadside.ca/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ifastroadside.com/service/tire-change</loc>
+    <loc>https://ifastroadside.ca/service/tire-change</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ifastroadside.com/service/jump-start</loc>
+    <loc>https://ifastroadside.ca/service/jump-start</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ifastroadside.com/service/lockout</loc>
+    <loc>https://ifastroadside.ca/service/lockout</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ifastroadside.com/service/fuel</loc>
+    <loc>https://ifastroadside.ca/service/fuel</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ifastroadside.com/service/towing</loc>
+    <loc>https://ifastroadside.ca/service/towing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ifastroadside.com/service-area/east-gta</loc>
+    <loc>https://ifastroadside.ca/service-area/east-gta</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://ifastroadside.ca/areas/scarborough</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ifastroadside.ca/areas/pickering</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ifastroadside.ca/areas/ajax</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ifastroadside.ca/areas/whitby</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ifastroadside.ca/areas/oshawa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Service × City combo pages -->
+  <url><loc>https://ifastroadside.ca/service/tire-change/scarborough</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/tire-change/pickering</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/tire-change/ajax</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/tire-change/whitby</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/tire-change/oshawa</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <url><loc>https://ifastroadside.ca/service/jump-start/scarborough</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/jump-start/pickering</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/jump-start/ajax</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/jump-start/whitby</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/jump-start/oshawa</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <url><loc>https://ifastroadside.ca/service/lockout/scarborough</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/lockout/pickering</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/lockout/ajax</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/lockout/whitby</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/lockout/oshawa</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <url><loc>https://ifastroadside.ca/service/fuel/scarborough</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/fuel/pickering</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/fuel/ajax</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/fuel/whitby</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/fuel/oshawa</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <url><loc>https://ifastroadside.ca/service/towing/scarborough</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/towing/pickering</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/towing/ajax</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/towing/whitby</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/towing/oshawa</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
 </urlset>

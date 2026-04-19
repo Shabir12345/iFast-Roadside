@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ifastroadside.com/sitemap.xml
+Sitemap: https://ifastroadside.ca/sitemap.xml

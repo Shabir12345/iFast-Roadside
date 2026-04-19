@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 
-const apiKey = (import.meta as any).env?.VITE_GEMINI_API_KEY || '';
-const ai = apiKey ? new GoogleGenAI(apiKey) : null;
+const apiKey = process.env.GEMINI_API_KEY || '';
+const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
 
 const SYSTEM_INSTRUCTION = `
 You are the AI Dispatch Assistant for "iFAST Roadside & Mobile Tires".

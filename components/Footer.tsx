@@ -40,12 +40,12 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Service Areas</h4>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
-              <li>Pickering</li>
-              <li>Ajax</li>
-              <li>Whitby</li>
-              <li>Oshawa</li>
-              <li>Scarborough</li>
-              <li>East GTA</li>
+              <li><a href="/areas/scarborough" className="hover:text-brand-yellow transition-colors">Scarborough</a></li>
+              <li><a href="/areas/pickering" className="hover:text-brand-yellow transition-colors">Pickering</a></li>
+              <li><a href="/areas/ajax" className="hover:text-brand-yellow transition-colors">Ajax</a></li>
+              <li><a href="/areas/whitby" className="hover:text-brand-yellow transition-colors">Whitby</a></li>
+              <li><a href="/areas/oshawa" className="hover:text-brand-yellow transition-colors">Oshawa</a></li>
+              <li><a href="/service-area/east-gta" className="hover:text-brand-yellow transition-colors">East GTA</a></li>
             </ul>
           </div>
 
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="text-brand-yellow shrink-0" size={18} />
-                <span className="text-xs">Greater Metro Area & Surrounding Suburbs</span>
+                <span className="text-xs">Scarborough · Pickering · Ajax · Whitby · Oshawa</span>
               </li>
             </ul>
           </div>
