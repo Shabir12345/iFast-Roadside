@@ -3,24 +3,24 @@ import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 
 const FAQS = [
     {
-        question: "How fast can you reach my location?",
-        answer: "On average, our technicians arrive within 30 minutes. However, arrival times can vary based on traffic, weather conditions, and your exact location in the Greater Metro Area."
+        question: "How fast can you reach me in an emergency?",
+        answer: "Our average emergency arrival time is just 30 minutes across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Because we use localized rapid-response vans rather than heavy tow trucks, we cut through GTA traffic significantly faster."
     },
     {
-        question: "Do you offer services 24/7?",
-        answer: "Yes! We operate 24 hours a day, 7 days a week, including holidays. Emergency roadside help is always just a phone call away."
+        question: "Are there any hidden hook-up fees or late night charges?",
+        answer: "No. The roadside assistance industry is notorious for hidden fees, which is why we built iFAST on absolute transparency. You will receive a clear, upfront quote for your mobile tire, jump start, or towing service before we ever dispatch a truck."
     },
     {
-        question: "What tire sizes do you carry?",
-        answer: "We carry most standard passenger vehicle, SUV, and light truck tire sizes. For specific or rare sizes, we recommend calling ahead so we can ensure we have your exact match on the mobile unit."
+        question: "Can you jump start my car in an underground condo garage?",
+        answer: "Yes! Traditional tow trucks cannot clear the height restrictions of underground condo garages in the GTA. Our agile service vans and portable anti-surge lithium jump packs allow us to jump start your dead battery in the tightest parking stalks."
     },
     {
-        question: "Do you accept insurance or roadside club memberships?",
-        answer: "We provide detailed digital receipts that you can submit to your insurance provider or roadside assistance club for reimbursement. We accept all major credit cards, debit cards, and digital payments."
+        question: "Do you carry brand new tires if mine blew out on the highway?",
+        answer: "While standard service mounts your existing spare tire, our mobile tire units do carry common new tire sizes. If you let dispatch know your tire size over the phone, we can often bring and mount a brand new tire directly on the side of the road."
     },
     {
-        question: "Is my vehicle safe during a lockout service?",
-        answer: "Absolutely. Our technicians use professional, damage-free tools and techniques specifically designed to unlock vehicles without harming the door seals, paint, or locking mechanism."
+        question: "Is it safe to wait in my car on the shoulder of the 401?",
+        answer: "If you are broken down on a high-speed highway like the 401 or 407, pull as far onto the shoulder as safely possible, turn on your hazard lights, and remain buckled inside your vehicle. Do not attempt to change a tire yourself. Our strobe-equipped trucks will act as a safety buffer when we arrive."
     }
 ];
 

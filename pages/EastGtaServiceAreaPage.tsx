@@ -77,13 +77,13 @@ const EastGtaServiceAreaPage: React.FC = () => {
             <a
               href={`tel:${PHONE_NUMBER}`}
               onClick={() => trackPhoneCall('east_gta_hero_call')}
-              className="group relative overflow-hidden flex items-center justify-center gap-4 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark px-8 py-5 rounded-2xl font-black text-xl lg:text-3xl transition-all duration-300 shadow-[0_0_40px_rgba(253,224,71,0.5)] hover:shadow-[0_0_60px_rgba(253,224,71,0.7)] transform hover:-translate-y-1 text-center"
+              className="group relative overflow-hidden flex items-center justify-center gap-4 bg-brand-yellow hover:bg-brand-yellowHover text-white px-8 py-5 rounded-2xl font-black text-xl lg:text-3xl transition-all duration-300 shadow-[0_10px_30px_rgba(255,90,31,0.35)] hover:shadow-[0_15px_40px_rgba(255,90,31,0.5)] transform hover:-translate-y-1 text-center w-full sm:w-auto"
             >
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-              <div className="bg-brand-dark text-brand-yellow p-2 rounded-full group-hover:scale-110 transition-transform duration-300">
-                <PhoneCall size={32} />
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+              <div className="bg-white/20 p-2 rounded-full group-hover:scale-110 transition-transform duration-300">
+                <PhoneCall size={32} fill="currentColor" />
               </div>
-              <span>Click for East GTA Dispatch</span>
+              <span className="tracking-wide">Click for East GTA Dispatch</span>
             </a>
             
             <div className="mt-8 flex flex-wrap items-center gap-6 text-sm font-semibold text-gray-500">
@@ -110,7 +110,7 @@ const EastGtaServiceAreaPage: React.FC = () => {
                     </div>
                     <div className="hidden sm:block">
                        <div className="flex text-brand-yellow mb-1"><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /></div>
-                       <div className="text-sm font-bold text-brand-dark">500+ East End Reviews</div>
+                       <div className="text-sm font-bold text-brand-dark">90+ East End Reviews</div>
                     </div>
                 </div>
                 <div className="text-right border-l-2 border-gray-100 pl-4 md:pl-6">
@@ -152,9 +152,11 @@ const EastGtaServiceAreaPage: React.FC = () => {
             <a
               href={`tel:${PHONE_NUMBER}`}
               onClick={() => trackPhoneCall('east_gta_footer_call')}
-              className="inline-flex items-center justify-center gap-4 bg-brand-dark hover:bg-gray-900 text-white px-10 py-6 rounded-2xl font-black text-2xl md:text-4xl transition-all duration-300 shadow-2xl transform hover:scale-105 active:scale-95"
+              className="group inline-flex flex-col sm:flex-row items-center justify-center gap-4 bg-brand-dark hover:bg-gray-900 text-white px-10 py-6 rounded-2xl font-black text-2xl md:text-4xl transition-all duration-300 shadow-[0_10px_35px_rgba(11,30,54,0.4)] transform hover:-translate-y-1"
             >
-              <PhoneCall size={36} className="text-brand-yellow animate-bounce" />
+              <div className="flex items-center gap-3 text-brand-yellow group-hover:text-white transition-colors">
+                <PhoneCall size={36} fill="currentColor" className="animate-bounce" />
+              </div>
               {PHONE_NUMBER}
             </a>
          </div>

@@ -1,9 +1,9 @@
 @layer base {
     :root {
-        --brand-dark: #0f172a;
-        --brand-yellow: #fbbf24;
-        --brand-yellow-hover: #d97706;
-        --brand-gray: #334155;
+        --brand-dark: #0B1E36;
+        --brand-yellow: #FF5A1F;
+        --brand-yellow-hover: #E04812;
+        --brand-gray: #475569;
     }
 
     html {
@@ -45,7 +45,7 @@
 }
 
 .text-gradient {
-    background: linear-gradient(to right, #fbbf24, #f97316);
+    background: linear-gradient(to right, #FF5A1F, #FF8A4C);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

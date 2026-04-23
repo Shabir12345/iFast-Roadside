@@ -4,18 +4,18 @@ import { PhoneCall, MapPin, Wrench, CheckCircle2 } from 'lucide-react';
 const STEPS = [
     {
         icon: PhoneCall,
-        title: "Request Help",
-        description: "Call our emergency line or use our chat for an instant dispatch."
+        title: "Tap to Request Help",
+        description: "Call or chat instantly. We pinpoint your GPS location without you needing to guess the nearest intersection."
     },
     {
         icon: Wrench,
-        title: "Professional Service",
-        description: "Our certified specialist arrives and resolves your issue on the spot."
+        title: "Rapid GPS Dispatch",
+        description: "You get immediate confirmation. The closest fully-equipped safety vehicle is routed to you in under 30 minutes."
     },
     {
         icon: CheckCircle2,
-        title: "Back on the Road",
-        description: "Secure payment and you're back on your way safely."
+        title: "Safely On Your Way",
+        description: "Our certified tech secures your vehicle, fixes the issue damage-free, and takes secure mobile payment."
     }
 ];
 
@@ -24,8 +24,8 @@ const Process: React.FC = () => {
         <section id="process" className="py-20 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-20">
-                    <h2 className="text-3xl md:text-5xl font-black text-brand-dark mb-4">How It Works</h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">Getting you back on the road is a simple, 3-step process designed for speed and safety.</p>
+                    <h2 className="text-3xl md:text-5xl font-black text-brand-dark mb-4">Back On The Road In 3 Simple Steps</h2>
+                    <p className="text-gray-600 max-w-2xl mx-auto">We've eliminated the stress and waiting game. Getting help is now fast, trackable, and professional.</p>
                 </div>
 
                 <div className="relative">

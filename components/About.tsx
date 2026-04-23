@@ -43,11 +43,11 @@ const About: React.FC = () => {
                             Our Mission
                         </div>
                         <h2 className="text-4xl md:text-5xl font-black text-brand-dark mb-8 leading-tight">
-                            Premium Roadside Care <br />
-                            <span className="text-gradient">For Modern Drivers.</span>
+                            Your Safety Is Our Mission, <br />
+                            <span className="text-gradient">Not An Afterthought.</span>
                         </h2>
                         <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                            At {COMPANY_NAME}, we believe roadside assistance shouldn't be a stressful waiting game. We've combined expert mechanical skill with modern technology to provide the fastest, most reliable mobile services in the region.
+                            Being stranded on the side of the 401 or stuck in a freezing parking lot is stressful enough without wondering <em>if</em> help will show up. At {COMPANY_NAME}, we redesigned roadside assistance. We skip the massive flatbed wait times by deploying agile, specialized service vans that cut through GTA traffic. Fast GPS dispatch. Friendly certified technicians. Getting you back to your life securely.
                         </p>
 
                         <div className="flex flex-col gap-6 mb-10">
@@ -56,8 +56,8 @@ const About: React.FC = () => {
                                     <Users size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-brand-dark mb-1">Expert Team</h4>
-                                    <p className="text-gray-500 text-sm">Our techs are vetted, licensed, and highly experienced.</p>
+                                    <h4 className="font-bold text-brand-dark mb-1">Vetted Professionals</h4>
+                                    <p className="text-gray-500 text-sm">No shady operators. Our teams are licensed, insured, and safety-trained.</p>
                                 </div>
                             </div>
                         </div>
