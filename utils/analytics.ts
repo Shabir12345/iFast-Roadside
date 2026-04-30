@@ -19,7 +19,7 @@ export const trackConversion = (action: string, label?: string) => {
     const transactionId = `call_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
 
     window.gtag('event', 'conversion', {
-      'send_to': `AW-18054263913/hHrJCPzimZgcEOno-KBD`,
+      'send_to': `AW-18054263913/3WFRCOmMsqUcEOno-KBD`,
       'transaction_id': transactionId,
       'event_callback': () => {
         console.log(`Conversion tracked: ${action} | label: ${label || 'default'} | txn: ${transactionId}`);
