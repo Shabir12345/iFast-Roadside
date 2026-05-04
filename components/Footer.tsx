@@ -33,6 +33,7 @@ const Footer: React.FC = () => {
               <li><a href="/#services" className="hover:text-brand-yellow transition-colors">Services</a></li>
               <li><a href="/#about" className="hover:text-brand-yellow transition-colors">About Us</a></li>
               <li><a href="/#reviews" className="hover:text-brand-yellow transition-colors">Reviews</a></li>
+              <li><a href="/blog" className="hover:text-brand-yellow transition-colors">Blog & Tips</a></li>
             </ul>
           </div>
 

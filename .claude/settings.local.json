@@ -4,7 +4,10 @@
       "Bash(npx tsc *)",
       "Bash(npx vite *)",
       "WebSearch",
-      "Bash(dir \"G:\\\\\\\\Other computers\\\\\\\\My Laptop \\(1\\)\\\\\\\\FREEDOM\\\\\\\\AI\\\\\\\\Clients\\\\\\\\iFast Roadside\\\\\\\\pages\\\\\\\\\")"
+      "Bash(dir \"G:\\\\\\\\Other computers\\\\\\\\My Laptop \\(1\\)\\\\\\\\FREEDOM\\\\\\\\AI\\\\\\\\Clients\\\\\\\\iFast Roadside\\\\\\\\pages\\\\\\\\\")",
+      "Bash(where playwright *)",
+      "Bash(Start-Process powershell *)",
+      "Bash(powershell.exe *)"
     ]
   }
 }
