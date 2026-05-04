@@ -7,7 +7,10 @@
       "Bash(dir \"G:\\\\\\\\Other computers\\\\\\\\My Laptop \\(1\\)\\\\\\\\FREEDOM\\\\\\\\AI\\\\\\\\Clients\\\\\\\\iFast Roadside\\\\\\\\pages\\\\\\\\\")",
       "Bash(where playwright *)",
       "Bash(Start-Process powershell *)",
-      "Bash(powershell.exe *)"
+      "Bash(powershell.exe *)",
+      "Bash(playwright *)",
+      "Read(//c/Users/khati/AppData/Local/ms-playwright//**)",
+      "Bash(dir \"C:/Users/khati/AppData/Local/ms-playwright/\")"
     ]
   }
 }
