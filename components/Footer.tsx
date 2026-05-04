@@ -1,6 +1,5 @@
-import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
-import { COMPANY_NAME, PHONE_NUMBER, EMAIL } from '../constants';
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
+import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
 
 const Footer: React.FC = () => {
@@ -17,7 +16,7 @@ const Footer: React.FC = () => {
               />
             </a>
             <p className="max-w-md mb-6">
-              Your trusted partner for 24/7 roadside assistance and mobile tire services.
+              Your trusted partner for {BUSINESS_HOURS} roadside assistance and mobile tire services.
               Licensed, insured, and ready to help when you need it most.
             </p>
             <div className="flex gap-4">
@@ -30,10 +29,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Quick Links</h4>
             <ul className="space-y-2">
+              <li><a href="/mobile-mechanic" className="hover:text-brand-yellow font-bold text-white transition-colors">Mobile Mechanic</a></li>
               <li><a href="/#services" className="hover:text-brand-yellow transition-colors">Services</a></li>
               <li><a href="/#about" className="hover:text-brand-yellow transition-colors">About Us</a></li>
               <li><a href="/#reviews" className="hover:text-brand-yellow transition-colors">Reviews</a></li>
-              <li><a href="#" className="hover:text-brand-yellow transition-colors">Privacy Policy</a></li>
             </ul>
           </div>
 
@@ -67,8 +66,15 @@ const Footer: React.FC = () => {
                 <a href={`mailto:${EMAIL}`} className="hover:text-white transition-colors">{EMAIL}</a>
               </li>
               <li className="flex items-start gap-3">
+                <Clock className="text-brand-yellow shrink-0" size={18} />
+                <span className="text-sm font-bold text-gray-200">{BUSINESS_HOURS}</span>
+              </li>
+              <li className="flex items-start gap-3">
                 <MapPin className="text-brand-yellow shrink-0" size={18} />
-                <span className="text-xs">Scarborough · Pickering · Ajax · Whitby · Oshawa</span>
+                <div className="flex flex-col">
+                  <span className="text-xs text-white font-bold">{ADDRESS}</span>
+                  <span className="text-[10px] uppercase tracking-tighter">Scarborough · Pickering · Ajax · Whitby · Oshawa</span>
+                </div>
               </li>
             </ul>
           </div>

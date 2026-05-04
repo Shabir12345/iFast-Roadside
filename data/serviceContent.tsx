@@ -35,6 +35,90 @@ export interface ServiceContent {
 }
 
 export const SERVICE_CONTENT: Record<string, ServiceContent> = {
+  'mobile-mechanic': {
+    id: 'mobile-mechanic',
+    seoTitle: '24/7 Mobile Mechanic East GTA | Emergency On-Site Car Repair Pickering, Ajax, Oshawa',
+    seoDescription: 'Need a mechanic that comes to you? iFAST Roadside provides 24/7 mobile mechanic services across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Expert diagnostics, on-site repairs, and emergency service. Call now.',
+    keywords: 'mobile mechanic Pickering, emergency car repair Ajax, on-site mechanic Oshawa, mobile auto repair Whitby, 24/7 mechanic Scarborough, mobile engine diagnostics East GTA',
+    heroImage: '/mobile_mechanic_hero.png',
+    blogSections: [
+      {
+        title: 'Professional Mobile Mechanic Services Across the East GTA',
+        content: (
+          <>
+            <p className="mb-4">
+              Is your car making a strange knocking sound? Engine light flashing? Or maybe it just won't start in your driveway? <strong>{COMPANY_NAME}</strong> brings a fully equipped mobile auto repair shop directly to your home, office, or roadside location. We serve Pickering, Ajax, Whitby, Oshawa, and Scarborough 24 hours a day, 7 days a week. Our certified mobile mechanics carry advanced diagnostic computers and professional-grade tools to solve your automotive issues on-site, saving you the high cost and hassle of a tow truck.
+            </p>
+            <p className="mb-4">
+              From complex electrical troubleshooting in Ajax to emergency brake repairs in Pickering, we handle a wide range of mechanical issues without you ever having to leave your house. We provide transparent, up-front quotes and perform all work with the highest level of precision and care. No more waiting in greasy repair shop lobbies—just fast, expert service that fits your busy schedule.
+            </p>
+            <CallNowButton />
+          </>
+        )
+      },
+      {
+        title: 'Why Choose a Mobile Mechanic? Speed, Savings, and Safety',
+        content: (
+          <>
+            <p className="mb-4">
+              Traditional repair shops require you to arrange a tow, wait days for a diagnosis, and find alternative transportation. A mobile mechanic eliminates those bottlenecks entirely.
+            </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6">
+              <li><strong>On-Site Diagnostics</strong>: We use the same high-end scanners as dealerships to pinpoint exactly why your check engine light is on or why your car is in "limp mode."</li>
+              <li><strong>Zero Towing Fees</strong>: Why pay $150+ just to get your car to a shop? We come to you, saving you money from the very start.</li>
+              <li><strong>Transparent Service</strong>: You can watch our mechanics work and ask questions. We show you exactly what's wrong and explain the fix in plain English.</li>
+              <li><strong>Same-Day Repairs</strong>: For many common issues like sensors, batteries, starters, and alternators, we can often complete the repair the same day we arrive.</li>
+              <li><strong>Emergency 24/7 Response</strong>: Mechanical failures don't follow a 9-to-5 schedule. We are available around the clock to get you back on the road.</li>
+            </ul>
+            <p className="font-semibold text-lg text-brand-dark mb-4">
+              Don't let a breakdown ruin your week. Call iFAST for the most reliable mobile mechanic service in the East GTA.
+            </p>
+            <CallNowButton />
+          </>
+        )
+      },
+      {
+        title: 'Common Mobile Auto Repairs We Handle On-Site',
+        content: (
+          <>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">1. Emergency No-Start Diagnostics</h3>
+            <p className="mb-4 text-gray-700">
+              If your car won't turn over, it could be a dozen different things—a failed starter, a seized alternator, a bad fuel pump, or a security system glitch. Our mechanics perform systematic testing to find the root cause immediately. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: car won't start Pickering, mobile starter replacement Ajax, alternator repair Oshawa.</span>
+            </p>
+            <CallNowButton />
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">2. Brake System Repairs</h3>
+            <p className="mb-4 text-gray-700">
+              Squealing brakes or a soft pedal? We can replace pads, rotors, and even handle seized calipers or broken brake lines right in your driveway. Safe braking is non-negotiable, and we ensure your system is factory-spec before we leave. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: mobile brake repair Whitby, brake pad replacement Ajax, emergency brake service Scarborough.</span>
+            </p>
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">3. Belt & Hose Replacements</h3>
+            <p className="mb-4 text-gray-700">
+              A snapped serpentine belt or a burst coolant hose will leave you stranded instantly. We carry a wide range of emergency parts to fix leaks and restore drive systems on-site. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: serpentine belt repair Pickering, coolant leak fix Oshawa, mobile hose replacement Ajax.</span>
+            </p>
+            <CallNowButton />
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">4. Sensor & Electrical Troubleshooting</h3>
+            <p className="mb-4 text-gray-700">
+              Modern cars are full of sensors (O2, MAF, Crankshaft, Camshaft) that can cause poor idling or stalling. Our digital tools read live data to identify the specific failing component without the "parts cannon" guesswork. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: check engine light diagnostic Ajax, mobile electrical repair Whitby, sensor replacement Pickering.</span>
+            </p>
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'What can a mobile mechanic actually fix at my house?', answer: 'We can handle about 80% of common repairs on-site, including starters, alternators, batteries, brakes, belts, hoses, sensors, and most electrical issues. Major engine or transmission overhauls still require a shop, but we handle the rest.' },
+      { question: 'How much does a mobile mechanic cost in the East GTA?', answer: 'Our pricing is very competitive with local shops, and you save the cost of a tow. We provide a transparent diagnostic fee and a firm quote for parts and labor before any work begins.' },
+      { question: 'Are your mobile mechanics certified?', answer: 'Yes, all our technicians are fully certified with years of experience in both shop and field environments. We use professional-grade equipment and follow manufacturer-specific repair procedures.' },
+      { question: 'Do you offer a warranty on mobile repairs?', answer: 'Absolutely. We stand behind our work with a comprehensive warranty on both parts and labor, giving you peace of mind that your repair is done right.' },
+      { question: 'Can you work on my car in a condo or apartment parking lot?', answer: 'In most cases, yes. We are experienced in working in tight spaces and low-clearance garages across Scarborough and Pickering. As long as we have enough room to safely access the vehicle, we can do the job.' },
+      { question: 'How fast can you arrive for an emergency repair?', answer: 'We aim for a 30-60 minute arrival time for emergency diagnostic calls in Pickering, Ajax, and Whitby. We are available 24/7 for urgent mechanical issues.' },
+    ]
+  },
   'tire-change': {
     id: 'tire-change',
     seoTitle: '24/7 Mobile Tire Service & Flat Tire Repair East GTA | Pickering, Ajax, Oshawa',

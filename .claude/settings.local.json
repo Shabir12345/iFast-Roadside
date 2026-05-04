@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(npx tsc *)",
-      "Bash(npx vite *)"
+      "Bash(npx vite *)",
+      "WebSearch",
+      "Bash(dir \"G:\\\\\\\\Other computers\\\\\\\\My Laptop \\(1\\)\\\\\\\\FREEDOM\\\\\\\\AI\\\\\\\\Clients\\\\\\\\iFast Roadside\\\\\\\\pages\\\\\\\\\")"
     ]
   }
 }

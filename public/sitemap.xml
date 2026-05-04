@@ -6,6 +6,16 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://ifastroadside.ca/mobile-mechanic</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://ifastroadside.ca/service/mobile-mechanic</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://ifastroadside.ca/service/tire-change</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -62,6 +72,12 @@
   </url>
 
   <!-- Service × City combo pages -->
+  <url><loc>https://ifastroadside.ca/service/mobile-mechanic/scarborough</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/mobile-mechanic/pickering</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/mobile-mechanic/ajax</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/mobile-mechanic/whitby</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ifastroadside.ca/service/mobile-mechanic/oshawa</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
   <url><loc>https://ifastroadside.ca/service/tire-change/scarborough</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://ifastroadside.ca/service/tire-change/pickering</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://ifastroadside.ca/service/tire-change/ajax</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
