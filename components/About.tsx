@@ -1,6 +1,6 @@
 import React from 'react';
-import { Users, Award, Zap } from 'lucide-react';
-import { COMPANY_NAME } from '../constants';
+import { Users, Award, Zap, MapPin } from 'lucide-react';
+import { COMPANY_NAME, ADDRESS } from '../constants';
 
 const About: React.FC = () => {
     return (
@@ -47,7 +47,10 @@ const About: React.FC = () => {
                             <span className="text-gradient">Not An Afterthought.</span>
                         </h2>
                         <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                            Being stranded on the side of the 401 or stuck in a freezing parking lot is stressful enough without wondering <em>if</em> help will show up. At {COMPANY_NAME}, we redesigned roadside assistance. We skip the massive flatbed wait times by deploying agile, specialized service vans that cut through GTA traffic. Fast GPS dispatch. Friendly certified technicians. Getting you back to your life securely.
+                            Being stranded on the side of the 401 or stuck in a freezing parking lot is stressful enough without wondering <em>if</em> help will show up. 
+                            Based at <strong>{ADDRESS}</strong> in the heart of Scarborough, <strong>{COMPANY_NAME}</strong> was built to solve this problem. 
+                            We redesigned roadside assistance to skip the massive flatbed wait times by deploying agile, specialized service vans that cut through GTA traffic. 
+                            Fast GPS dispatch. Friendly certified technicians. Getting you back to your life securely.
                         </p>
 
                         <div className="flex flex-col gap-6 mb-10">

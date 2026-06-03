@@ -1,6 +1,5 @@
-import React from 'react';
 import { ArrowRight, Clock, MapPin, ShieldCheck, PhoneCall, Star, CheckCircle2 } from 'lucide-react';
-import { PHONE_NUMBER } from '../constants';
+import { PHONE_NUMBER, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
 
 const Hero: React.FC = () => {
@@ -27,7 +26,7 @@ const Hero: React.FC = () => {
                     <Star size={14} fill="currentColor" />
                     <Star size={14} fill="currentColor" />
                  </div>
-                 <span className="ml-1 tracking-tight">4.9/5 Google Rated</span>
+                 <span className="ml-1 tracking-tight">{GOOGLE_RATING}/5 ({GOOGLE_REVIEWS_COUNT} Reviews)</span>
               </div>
             </div>
 

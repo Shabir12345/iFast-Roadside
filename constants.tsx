@@ -1,11 +1,21 @@
-import { Disc, Battery, Fuel, Key, Truck } from 'lucide-react';
+import { Disc, Battery, Fuel, Key, Truck, Wrench } from 'lucide-react';
 import { ServiceItem, Testimonial } from './types';
 
-export const COMPANY_NAME = "iFAST Roadside & Mobile Tires";
+export const COMPANY_NAME = "iFAST Roadside Assistance";
 export const PHONE_NUMBER = "+1 437-215-3468";
 export const EMAIL = "help@ifastroadside.ca";
+export const ADDRESS = "20 Antrim Crescent, Scarborough, ON M1P 4N3";
+export const BUSINESS_HOURS = "Open 24 hours";
+export const GOOGLE_RATING = 4.9;
+export const GOOGLE_REVIEWS_COUNT = 94;
 
 export const SERVICES: ServiceItem[] = [
+  {
+    id: 'mobile-mechanic',
+    title: 'Mobile Mechanic',
+    description: 'Vehicle won\'t start or making strange noises? Our certified mechanics come to your home or office to diagnose and repair your car on-site. Professional grade tools and diagnostics.',
+    icon: Wrench,
+  },
   {
     id: 'tire-change',
     title: 'Mobile Tire Service',

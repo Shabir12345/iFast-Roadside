@@ -42,6 +42,54 @@ const Home: React.FC = () => {
         <meta property="og:description" content="Stranded? Get rapid 24/7 roadside assistance across Scarborough, Pickering, Ajax, Whitby, and Oshawa. Mobile tire, jump start, lockout, fuel, and towing experts." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ifastroadside.ca/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How fast can you reach my location?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "On average, our technicians arrive within 30 minutes. However, arrival times can vary based on traffic, weather conditions, and your exact location in the Greater Metro Area."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer services 24/7?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! We operate 24 hours a day, 7 days a week, including holidays. Emergency roadside help is always just a phone call away."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What tire sizes do you carry?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We carry most standard passenger vehicle, SUV, and light truck tire sizes. For specific or rare sizes, we recommend calling ahead so we can ensure we have your exact match on the mobile unit."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you accept insurance or roadside club memberships?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We provide detailed digital receipts that you can submit to your insurance provider or roadside assistance club for reimbursement. We accept all major credit cards, debit cards, and digital payments."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is my vehicle safe during a lockout service?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolutely. Our technicians use professional, damage-free tools and techniques specifically designed to unlock vehicles without harming the door seals, paint, or locking mechanism."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       <Hero />
       <About />
