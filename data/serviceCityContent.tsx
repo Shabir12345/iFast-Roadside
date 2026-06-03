@@ -34,10 +34,250 @@ export interface ServiceCityContent {
   faqs: ServiceCityFaq[];
 }
 
-type ServiceId = 'tire-change' | 'jump-start' | 'lockout' | 'fuel' | 'towing';
+type ServiceId = 'mobile-mechanic' | 'tire-change' | 'jump-start' | 'lockout' | 'fuel' | 'towing';
 type CityId = 'scarborough' | 'pickering' | 'ajax' | 'whitby' | 'oshawa';
 
 export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityContent>> = {
+  /* =========================================================================
+     MOBILE MECHANIC
+     ========================================================================= */
+  'mobile-mechanic': {
+    scarborough: {
+      seoTitle: 'Mobile Mechanic Scarborough | 24/7 On-Site Auto Repair — iFAST Roadside',
+      seoDescription: 'Need a mechanic in Scarborough? iFAST provides 24/7 mobile mechanic services across Agincourt, Malvern, and the 401. Expert diagnostics and on-site repair. 20-30 min arrival. Call now.',
+      keywords: 'mobile mechanic Scarborough, on-site car repair Scarborough, emergency mechanic Scarborough, mobile auto repair Agincourt, car won\'t start Scarborough',
+      h1: 'Mobile Mechanic in Scarborough — 24/7 On-Site Auto Repair',
+      intro: (
+        <>
+          <p className="mb-4">
+            Stuck in your driveway in Agincourt or broken down near the STC? <strong>{COMPANY_NAME}</strong> dispatches expert mobile mechanics directly from our Scarborough base at 20 Antrim Crescent. We typically reach any Scarborough location in <strong>15-25 minutes</strong>, equipped with advanced diagnostic tools to solve your automotive issues on the spot.
+          </p>
+          <p className="mb-4">
+            Whether it's a failed starter, a snapped belt, or a mysterious electrical issue, our Scarborough-based mechanics handle it all without the need for an expensive tow. We bring the shop to you, anywhere in Scarborough.
+          </p>
+          <InlineCall source="sc_mechanic_intro" />
+        </>
+      ),
+      localScenario: (
+        <>
+          <p className="mb-4">
+            Scarborough's stop-and-go traffic on Kennedy and Markham Road is brutal on cooling systems and brakes. We often handle emergency radiator hose repairs and brake service for commuters who can't afford to wait for a traditional shop.
+          </p>
+          <p className="mb-4">
+            If you're in a residential pocket like Guildwood or Rouge, we'll perform the diagnosis and repair right in your driveway, keeping you out of the elements while we work.
+          </p>
+        </>
+      ),
+      uniqueAngle: (
+        <p className="mb-4">
+          Being based in Scarborough, our response times for mechanical diagnostics are the fastest in the city. We often have a technician available to start your repair while others are still on the phone with a tow truck.
+        </p>
+      ),
+      priceNote: 'Scarborough mobile mechanic calls start at a flat local diagnostic rate. Parts and labor are quoted after the initial inspection.',
+      faqs: [
+        {
+          question: 'Can you fix my car on-site in Scarborough?',
+          answer: 'Yes! We handle starters, alternators, brakes, batteries, sensors, and belt repairs right where you are. If it\'s a major engine or transmission job, we\'ll diagnose it and help arrange a tow to a trusted local shop.'
+        },
+        {
+          question: 'How fast can a mechanic reach me in Agincourt?',
+          answer: 'Since we are based right near Agincourt, our ETAs are typically 15-20 minutes. We are the fastest mobile mechanic option in North Scarborough.'
+        },
+        {
+          question: 'Do you work in Scarborough condo parking garages?',
+          answer: 'Yes. Our mobile units are designed to navigate low-clearance garages, and our mechanics are experienced in working in tight parking stalls.'
+        }
+      ]
+    },
+    pickering: {
+      seoTitle: 'Mobile Mechanic Pickering | 24/7 On-Site Car Repair — iFAST Roadside',
+      seoDescription: 'Expert mobile mechanic in Pickering. 24/7 emergency auto repair, diagnostics, and on-site service across Bay Ridges, Amberlea, and Liverpool. 20-30 min arrival. Call now.',
+      keywords: 'mobile mechanic Pickering, on-site car repair Pickering, emergency mechanic Pickering, mobile auto repair Bay Ridges, car won\'t start Pickering',
+      h1: 'Mobile Mechanic in Pickering — 24/7 Emergency Auto Repair',
+      intro: (
+        <>
+          <p className="mb-4">
+            Mechanical failure in Pickering? <strong>{COMPANY_NAME}</strong> provides 24/7 mobile mechanic services across Bay Ridges, Amberlea, Liverpool, and the 401 corridor. Our technicians typically arrive in <strong>20-30 minutes</strong>, ready to diagnose and repair your vehicle on-site.
+          </p>
+          <p className="mb-4">
+            Skip the tow truck and the long wait at the dealership. Our Pickering mobile mechanics handle everything from brake repairs to sensor replacements directly in your driveway or workplace parking lot.
+          </p>
+          <InlineCall source="pk_mechanic_intro" />
+        </>
+      ),
+      localScenario: (
+        <>
+          <p className="mb-4">
+            Pickering commuters often face no-start issues at the GO station or in their driveways before work. We prioritize these "commuter emergencies" to get you back on schedule as fast as possible.
+          </p>
+          <p className="mb-4">
+            Whether you're at Pickering Town Centre or home in Dunbarton, we bring professional-grade tools to solve your car troubles without the hassle of a shop visit.
+          </p>
+        </>
+      ),
+      uniqueAngle: (
+        <p className="mb-4">
+          We offer specialized early-morning diagnostic dispatches in Pickering for residents who discover a mechanical issue right as they're leaving for their morning commute.
+        </p>
+      ),
+      priceNote: 'Standard East GTA rates apply for all Pickering mobile mechanic calls. No hidden distance fees.',
+      faqs: [
+        {
+          question: 'What is your typical arrival time in Pickering?',
+          answer: 'We usually reach Pickering locations in 20-30 minutes. During rush hour, we utilize our knowledge of local backroads to maintain fast ETAs.'
+        },
+        {
+          question: 'Can you replace a starter on-site in Pickering?',
+          answer: 'Yes, starter and alternator replacements are common on-site repairs we handle in Pickering driveways and parking lots.'
+        },
+        {
+          question: 'Do you offer 24/7 service in Pickering?',
+          answer: 'Yes, our mobile mechanics are on standby 24/7 for emergency diagnostics and repairs across Pickering.'
+        }
+      ]
+    },
+    ajax: {
+      seoTitle: 'Mobile Mechanic Ajax | 24/7 Emergency Auto Repair — iFAST Roadside',
+      seoDescription: 'Need a mechanic in Ajax? iFAST offers 24/7 mobile mechanic services across Harwood, Salem, and Pickering Village. On-site diagnostics and repair. 25-35 min arrival.',
+      keywords: 'mobile mechanic Ajax, on-site car repair Ajax, emergency mechanic Ajax, mobile auto repair Harwood, car diagnostics Ajax',
+      h1: 'Mobile Mechanic in Ajax — On-Site Car Repair & Diagnostics',
+      intro: (
+        <>
+          <p className="mb-4">
+            Don't let a mechanical breakdown stop you in Ajax. <strong>{COMPANY_NAME}</strong> dispatches certified mobile mechanics to Harwood, Salem, Pickering Village, and Audley with a <strong>25-35 minute</strong> ETA. We perform full engine diagnostics and on-site repairs 24/7.
+          </p>
+          <p className="mb-4">
+            Our Ajax mobile mechanics are equipped to handle electrical troubleshooting, brake service, and cooling system repairs right where you are. We save you time, money, and the stress of a tow.
+          </p>
+          <InlineCall source="aj_mechanic_intro" />
+        </>
+      ),
+      localScenario: (
+        <>
+          <p className="mb-4">
+            Ajax subdivisions are perfect for on-site repairs. We often work in driveways throughout north Ajax, providing a cleaner and more convenient alternative to traditional shop visits.
+          </p>
+          <p className="mb-4">
+            If your car fails at the Ajax GO or near Ajax Downs, we'll meet you at the parking spot and begin the diagnosis immediately.
+          </p>
+        </>
+      ),
+      uniqueAngle: (
+        <p className="mb-4">
+          We specialize in "driveway diagnostics" for Ajax residents, providing a dealership-level scan and expert advice without the dealership price tag or wait time.
+        </p>
+      ),
+      priceNote: 'Ajax is within our core East GTA service zone. Diagnostic fees are flat-rate across all Ajax neighborhoods.',
+      faqs: [
+        {
+          question: 'Can you fix a coolant leak on-site in Ajax?',
+          answer: 'Yes, we can pressure test your cooling system and replace hoses or radiators on-site in most Ajax locations.'
+        },
+        {
+          question: 'How do I book a mobile mechanic in Ajax?',
+          answer: 'Just call our dispatch line. We\'ll get your location and vehicle details and have a mechanic on the way in minutes.'
+        },
+        {
+          question: 'Are your mechanics licensed for work in Ajax?',
+          answer: 'Yes, all our technicians are fully certified and insured for mobile automotive repair in Ajax and the surrounding areas.'
+        }
+      ]
+    },
+    whitby: {
+      seoTitle: 'Mobile Mechanic Whitby & Brooklin | 24/7 Auto Repair — iFAST Roadside',
+      seoDescription: 'Expert mobile mechanic serving Whitby and Brooklin. 24/7 on-site car repair, diagnostics, and emergency service. 30-40 min arrival. Call now.',
+      keywords: 'mobile mechanic Whitby, on-site car repair Whitby, emergency mechanic Brooklin, mobile auto repair Whitby, car won\'t start Brooklin',
+      h1: 'Mobile Mechanic in Whitby — On-Site Repair for Whitby & Brooklin',
+      intro: (
+        <>
+          <p className="mb-4">
+            Mechanical trouble in Whitby or Brooklin? <strong>{COMPANY_NAME}</strong> brings 24/7 mobile mechanic services to your door. From Port Whitby to the residential streets of Brooklin, our mechanics provide expert diagnostics and on-site repairs with a <strong>30-40 minute</strong> ETA.
+          </p>
+          <p className="mb-4">
+            We handle the "no-start" issues, the strange noises, and the warning lights that traditional shops make you wait days for. Our Whitby mobile mechanics get you back on the road fast.
+          </p>
+          <InlineCall source="wh_mechanic_intro" />
+        </>
+      ),
+      localScenario: (
+        <>
+          <p className="mb-4">
+            Whitby's diverse geography—from the lake to the 407—requires a versatile mobile team. We often handle emergency belt and battery issues for drivers stuck on the 412 or 407.
+          </p>
+          <p className="mb-4">
+            Brooklin residents love the convenience of our driveway service, avoiding the trek south to find a reliable mechanic shop.
+          </p>
+        </>
+      ),
+      uniqueAngle: (
+        <p className="mb-4">
+          We are one of the few mobile mechanic services that regularly services Brooklin with the same 24/7 availability as downtown Whitby.
+        </p>
+      ),
+      priceNote: 'Standard flat-rate diagnostic fees apply to all Whitby and Brooklin mobile mechanic calls.',
+      faqs: [
+        {
+          question: 'Do you service Brooklin for mechanical repairs?',
+          answer: 'Yes! Brooklin is a core part of our Whitby service area. We offer 24/7 mobile mechanic support there.'
+        },
+        {
+          question: 'Can you diagnose a check engine light on-site in Whitby?',
+          answer: 'Absolutely. We use professional-grade scanners to read codes and perform live data analysis to find the exact cause of the light.'
+        },
+        {
+          question: 'What if my car needs a part you don\'t have?',
+          answer: 'We have accounts with all major parts suppliers in the East GTA and can typically source and deliver the required part to your location the same day.'
+        }
+      ]
+    },
+    oshawa: {
+      seoTitle: 'Mobile Mechanic Oshawa | 24/7 Emergency On-Site Repair — iFAST Roadside',
+      seoDescription: 'Reliable mobile mechanic in Oshawa. 24/7 on-site auto repair, diagnostics, and emergency service across Downtown, Samac, and UOIT. 35-50 min arrival. Call now.',
+      keywords: 'mobile mechanic Oshawa, on-site car repair Oshawa, emergency mechanic Oshawa, mobile auto repair UOIT, Durham College mechanic',
+      h1: 'Mobile Mechanic in Oshawa — 24/7 Honest-ETA Auto Repair',
+      intro: (
+        <>
+          <p className="mb-4">
+            Stuck in Oshawa with a mechanical failure? <strong>{COMPANY_NAME}</strong> dispatches certified mobile mechanics from our Scarborough base with an honest <strong>35-50 minute</strong> ETA. We provide expert diagnostics and on-site repairs for all vehicle makes and models in Oshawa 24/7.
+          </p>
+          <p className="mb-4">
+            Whether you're a student at UOIT or a commuter in Vanier, our Oshawa mobile mechanics bring the tools and expertise to fix your car without the need for a tow.
+          </p>
+          <InlineCall source="os_mechanic_intro" />
+        </>
+      ),
+      localScenario: (
+        <>
+          <p className="mb-4">
+            Oshawa's large student population often deals with older vehicles that need frequent attention. We provide affordable, on-site maintenance and emergency repairs right at student residences.
+          </p>
+          <p className="mb-4">
+            If you're broken down near the GM plant or at the Oshawa Centre, our mechanics will meet you and provide a clear, honest diagnosis of the issue.
+          </p>
+        </>
+      ),
+      uniqueAngle: (
+        <p className="mb-4">
+          We pride ourselves on providing Oshawa residents with the most transparent and reliable mobile mechanic service, featuring up-front pricing and honest arrival times.
+        </p>
+      ),
+      priceNote: 'Oshawa calls have a small distance adjustment on the diagnostic fee, which is always quoted upfront.',
+      faqs: [
+        {
+          question: 'Is it worth calling a mobile mechanic in Oshawa?',
+          answer: 'Absolutely. You save the cost of a tow and get an immediate diagnosis. For many common issues, we\'ll have you running again in the time it would take just to get a tow truck to arrive.'
+        },
+        {
+          question: 'Can you work on my car at UOIT / Durham College?',
+          answer: 'Yes, we frequently service student vehicles on-site at UOIT and Durham College residences.'
+        },
+        {
+          question: 'Do you handle emergency brake repairs in Oshawa?',
+          answer: 'Yes, we can replace brake pads, rotors, and lines on-site anywhere in Oshawa 24/7.'
+        }
+      ]
+    }
+  },
   /* =========================================================================
      MOBILE TIRE SERVICE
      ========================================================================= */

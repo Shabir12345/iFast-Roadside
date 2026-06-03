@@ -9,6 +9,9 @@ import ServicePage from './pages/ServicePage';
 import ServiceCityPage from './pages/ServiceCityPage';
 import EastGtaServiceAreaPage from './pages/EastGtaServiceAreaPage';
 import CityPage from './pages/CityPage';
+import MobileMechanicLanding from './pages/MobileMechanicLanding';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 const App: React.FC = () => {
   return (
@@ -16,10 +19,13 @@ const App: React.FC = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/mobile-mechanic" element={<MobileMechanicLanding />} />
         <Route path="/service/:id" element={<ServicePage />} />
         <Route path="/service/:id/:city" element={<ServiceCityPage />} />
         <Route path="/service-area/east-gta" element={<EastGtaServiceAreaPage />} />
         <Route path="/areas/:city" element={<CityPage />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
       <Footer />
 

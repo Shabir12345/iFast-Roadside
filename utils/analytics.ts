@@ -5,6 +5,7 @@ declare global {
 }
 
 export const GTAG_ID = 'AW-18054263913';
+export const GTAG_ID_2 = 'AW-18177365102';
 
 /**
  * Tracks a Google Ads conversion event.
@@ -19,11 +20,16 @@ export const trackConversion = (action: string, label?: string) => {
     const transactionId = `call_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
 
     window.gtag('event', 'conversion', {
-      'send_to': `AW-18054263913/hHrJCPzimZgcEOno-KBD`,
+      'send_to': `AW-18054263913/3WFRCOmMsqUcEOno-KBD`,
       'transaction_id': transactionId,
       'event_callback': () => {
         console.log(`Conversion tracked: ${action} | label: ${label || 'default'} | txn: ${transactionId}`);
       }
+    });
+
+    window.gtag('event', 'conversion', {
+      'send_to': 'AW-18177365102/QOiKCIjwrrMcEO6o0ttD',
+      'transaction_id': transactionId,
     });
   } else {
     console.warn('Google Tag (gtag) not initialized. Click tracked but not sent.');
