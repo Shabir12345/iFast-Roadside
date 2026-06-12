@@ -5,6 +5,8 @@ export interface ServiceItem {
   title: string;
   description: string;
   icon: LucideIcon;
+  /** If set, this is a sub-service shown under the parent's card rather than as its own top-level card. */
+  parent?: string;
 }
 
 export interface Testimonial {

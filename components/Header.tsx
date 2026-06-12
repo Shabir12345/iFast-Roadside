@@ -37,7 +37,7 @@ const Header: React.FC = () => {
               {/* Dropdown Menu */}
               <div className="absolute top-full left-0 mt-0 w-64 bg-white text-gray-800 rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden transform origin-top scale-y-95 group-hover:scale-y-100">
                 <div className="py-2">
-                  {SERVICES.map((service) => {
+                  {SERVICES.filter(s => !s.parent).map((service) => {
                     const Icon = service.icon;
                     return (
                       <a
@@ -126,7 +126,7 @@ const Header: React.FC = () => {
               {/* Mobile Services Sub-menu */}
               {isServicesOpen && (
                 <div className="pl-4 mt-2 mb-2 space-y-2 border-l-2 border-brand-yellow/30 bg-gray-50 rounded-lg p-2">
-                  {SERVICES.map((service) => (
+                  {SERVICES.filter(s => !s.parent).map((service) => (
                     <a
                       key={service.id}
                       href={`/service/${service.id}`}

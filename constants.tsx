@@ -1,11 +1,11 @@
-import { Disc, Battery, Fuel, Key, Truck, Wrench } from 'lucide-react';
+import { Disc, Battery, Fuel, Key, Truck, Wrench, RefreshCw, CircleDot, Gauge, BatteryCharging } from 'lucide-react';
 import { ServiceItem, Testimonial } from './types';
 
 export const COMPANY_NAME = "iFAST Roadside Assistance";
 export const PHONE_NUMBER = "+1 437-215-3468";
 export const EMAIL = "help@ifastroadside.ca";
 export const ADDRESS = "20 Antrim Crescent, Scarborough, ON M1P 4N3";
-export const BUSINESS_HOURS = "Open 24 hours";
+export const BUSINESS_HOURS = "24/7";
 export const GOOGLE_RATING = 4.9;
 export const GOOGLE_REVIEWS_COUNT = 94;
 
@@ -45,6 +45,43 @@ export const SERVICES: ServiceItem[] = [
     title: 'Emergency Towing',
     description: 'Major breakdown or accident? Our modern flatbeds ensure your AWD or luxury vehicle is transported securely without drivetrain damage.',
     icon: Truck,
+  },
+  // --- Tire sub-services (grouped under the Mobile Tire Service card) ---
+  {
+    id: 'flat-tire-repair',
+    title: 'Flat Tire Repair',
+    description: 'Nail or screw in your tread? We dismount, patch-and-plug from the inside, re-balance, and reinstall — a permanent, MTO-approved fix done at your location.',
+    icon: Wrench,
+    parent: 'tire-change',
+  },
+  {
+    id: 'spare-tire-change',
+    title: 'Spare Tire Change',
+    description: 'Got a spare but stuck on the shoulder? We safely jack your vehicle, swap your flat for your spare or donut, and torque every lug to spec so you can drive on.',
+    icon: RefreshCw,
+    parent: 'tire-change',
+  },
+  {
+    id: 'tire-installation',
+    title: 'New & Used Tire Installation',
+    description: 'No spare? We bring new or quality used tires in your size to your driveway or roadside, then mount, balance, and install them on-site — no shop visit needed.',
+    icon: CircleDot,
+    parent: 'tire-change',
+  },
+  // --- Battery sub-services (grouped under the Battery Jump Start card) ---
+  {
+    id: 'battery-diagnostic',
+    title: 'Battery Diagnostic',
+    description: 'Car cranking slow or dying repeatedly? We test your battery, alternator, and charging system on-site so you know if you need a boost, a charge, or a replacement.',
+    icon: Gauge,
+    parent: 'jump-start',
+  },
+  {
+    id: 'battery-replacement',
+    title: 'Battery Replacement',
+    description: 'Battery beyond saving? We deliver and install the correct new battery for your vehicle right where you are, and safely recycle the old one — no towing required.',
+    icon: BatteryCharging,
+    parent: 'jump-start',
   }
 ];
 

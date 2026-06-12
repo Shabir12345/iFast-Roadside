@@ -590,5 +590,392 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       { question: 'What if a "chaser" truck shows up in Ajax or Pickering?', answer: 'You have the legal right to choose your tow company. Command them to step away and wait for iFAST\'s licensed professionals to arrive for a safe, honest experience.' },
       { question: 'Can you get my car out of a low Scarborough underground garage?', answer: 'Yes. We use specialized low-profile extraction units to pull your car out of tight Scarborough garages and then transfer it to a flatbed for safe transport.' },
     ]
+  },
+  'flat-tire-repair': {
+    id: 'flat-tire-repair',
+    seoTitle: '24/7 Mobile Flat Tire Repair East GTA | Patch & Plug Pickering, Ajax, Oshawa',
+    seoDescription: 'Nail or screw in your tire? iFAST Roadside performs permanent mobile flat tire repairs (internal patch-and-plug) across Pickering, Ajax, Whitby, Oshawa, and Scarborough. 30-min response. Call now.',
+    keywords: 'flat tire repair Pickering, mobile tire patch Ajax, nail in tire repair Oshawa, tire plug service Whitby, puncture repair Scarborough, fix flat tire on site East GTA',
+    heroImage: '/flat_tire_repair_hero.jpg',
+    blogSections: [
+      {
+        title: '24/7 Mobile Flat Tire Repair Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
+        content: (
+          <>
+            <p className="mb-4">
+              Picked up a nail in a construction zone? Watching your tire pressure light flicker on as the tread slowly hisses? You don't always need a brand-new tire—you need a proper repair. <strong>{COMPANY_NAME}</strong> brings a fully equipped mobile tire shop directly to your driveway, office lot, or roadside. We operate 24 hours a day, 7 days a week, reaching you in <strong>under 30 minutes on average</strong> with computerized balancers, dismounting machines, and Ministry-approved patching materials.
+            </p>
+            <p className="mb-4">
+              If the puncture sits safely within the center tread zone, we perform a permanent internal patch-and-plug: we remove the wheel, dismount the tire from the rim, install a vulcanized mushroom patch from the inside, re-mount, re-balance, and reinstall it torqued to spec. No tow truck, no dirty waiting room—just a safe, lasting repair done right where you are in Pickering, Ajax, Whitby, or Oshawa.
+            </p>
+            <CallNowButton source="service_content_flat-tire-repair_intro" />
+          </>
+        )
+      },
+      {
+        title: 'Why a Proper Patch-and-Plug Beats a Can of Sealant',
+        content: (
+          <>
+            <p className="mb-4">
+              Those aerosol "fix-a-flat" cans and exterior string plugs are temporary at best—and they often coat your TPMS sensor in sticky goo, leading to expensive replacements. A proper internal repair is the only method approved for long-term highway safety.
+            </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6">
+              <li><strong>Permanent Internal Patch</strong>: We patch the puncture from the inside of the tire, sealing the steel belts so moisture can't rust them out from within.</li>
+              <li><strong>Computerized Re-Balancing</strong>: Every repaired tire is re-balanced on our onboard digital balancer to eliminate highway steering-wheel vibration.</li>
+              <li><strong>TPMS Light Reset</strong>: We carry the scanners to reset your Tire Pressure Monitoring System dashboard warning after the repair.</li>
+              <li><strong>Honest Assessment</strong>: If the puncture is on the sidewall or shoulder—where repairs are unsafe—we'll tell you straight and offer on-site tire installation instead.</li>
+            </ul>
+            <p className="font-semibold text-lg text-brand-dark mb-4">
+              Stop driving on a slow leak that's quietly destroying your tire. One call to iFAST gets it repaired the safe, permanent way.
+            </p>
+            <CallNowButton source="service_content_flat-tire-repair_why" />
+          </>
+        )
+      },
+      {
+        title: 'What We Can (and Can\'t) Repair On-Site',
+        content: (
+          <>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">1. Tread-Zone Punctures (Nails & Screws)</h3>
+            <p className="mb-4 text-gray-700">
+              The most common flat we fix. If a nail, screw, or bolt punctured the central tread, we plug and patch it from the inside for a permanent seal—usually in under 30 minutes once we're on-site. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: nail in tire repair Pickering, screw in tire fix Ajax, tread puncture patch Oshawa.</span>
+            </p>
+            <CallNowButton source="service_content_flat-tire-repair_tread" />
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">2. Slow Leaks & Bead Seal Issues</h3>
+            <p className="mb-4 text-gray-700">
+              Losing a few PSI every week with no obvious nail? It's often a corroded rim bead or a leaking valve stem. We dismount the tire, clean and reseal the bead, replace the valve stem, and get you holding pressure again. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: slow tire leak repair Whitby, valve stem replacement Ajax, rim bead leak fix Scarborough.</span>
+            </p>
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">3. When Repair Isn't Safe — Sidewall & Shoulder Damage</h3>
+            <p className="mb-4 text-gray-700">
+              Punctures on the sidewall or outer shoulder, gashes, or damage from driving on a flat cannot be safely repaired. We'll show you exactly why and install a new or quality used tire on the spot so you're never stuck. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: sidewall damage tire Pickering, blown tire replacement Oshawa, unrepairable tire mobile Ajax.</span>
+            </p>
+            <CallNowButton source="service_content_flat-tire-repair_unsafe" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'How much does a mobile flat tire repair cost in the East GTA?', answer: 'Our mobile patch-and-plug is priced competitively with shop repairs—and you save the cost and hassle of a tow or a trip to the shop. We give you a firm quote over the phone before we dispatch.' },
+      { question: 'Can every flat tire be repaired?', answer: 'No. We can permanently repair punctures within the center tread zone. Damage on the sidewall, the outer shoulder, or from driving on a flat is not safely repairable—in those cases we offer on-site new or used tire installation instead.' },
+      { question: 'How long does a mobile tire repair take?', answer: 'Once our technician is on-site, a standard tread puncture repair takes roughly 20–30 minutes, including dismounting, patching, re-balancing, and reinstalling the wheel.' },
+      { question: 'Will you reset my tire pressure (TPMS) light after the repair?', answer: 'Yes. We carry the scanners needed to reset your TPMS dashboard warning so you drive away with no lingering warning lights.' },
+      { question: 'Do I need to re-torque my wheel after a repair?', answer: 'Yes. For safety, lug nuts should be re-torqued after driving roughly 100 km (60 miles) to ensure they stay properly seated.' },
+      { question: 'Can you repair a flat in my condo or office parking lot?', answer: 'Absolutely. We bring the full shop to you—driveway, underground condo garage, or office lot anywhere in Pickering, Ajax, Whitby, Oshawa, or Scarborough.' },
+    ]
+  },
+  'spare-tire-change': {
+    id: 'spare-tire-change',
+    seoTitle: '24/7 Spare Tire Change Service East GTA | Pickering, Ajax, Oshawa',
+    seoDescription: 'Have a spare but stuck roadside? iFAST Roadside safely installs your spare or donut across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Fast 30-min response. Call now.',
+    keywords: 'spare tire change Pickering, install spare tire Ajax, donut tire change Oshawa, roadside spare swap Whitby, flat tire spare service Scarborough, change tire to spare East GTA',
+    heroImage: '/spare_tire_change_hero.jpg',
+    blogSections: [
+      {
+        title: '24/7 Mobile Spare Tire Change Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
+        content: (
+          <>
+            <p className="mb-4">
+              You've got a spare in the trunk, but changing it yourself on the shoulder of the 401 with transport trucks roaring past—or in a freezing driveway with a seized lug nut—is dangerous and exhausting. <strong>{COMPANY_NAME}</strong> dispatches a technician to do it for you safely. We reach you in <strong>under 30 minutes on average</strong>, fully equipped with low-profile hydraulic jacks, impact wrenches, and calibrated torque tools.
+            </p>
+            <p className="mb-4">
+              We safely lift your vehicle using non-marring pinch-weld blocks, remove the flat, mount your full-size spare or temporary donut, and torque every lug nut to your manufacturer's exact specification. Our trucks arrive with high-visibility strobe lighting to secure the scene. No struggling with a flimsy trunk wrench—just a fast, professional swap so you can get moving.
+            </p>
+            <CallNowButton source="service_content_spare-tire-change_intro" />
+          </>
+        )
+      },
+      {
+        title: 'Why Call a Pro Instead of Changing It Yourself',
+        content: (
+          <>
+            <p className="mb-4">
+              Roadside tire changes cause serious injuries every year—from cars slipping off cheap scissor jacks to drivers struck on the shoulder. It's not worth the risk when help is minutes away.
+            </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6">
+              <li><strong>Safe Lifting</strong>: We use professional low-profile jacks and proper lift points, never the unstable factory scissor jack on uneven ground.</li>
+              <li><strong>Seized & Stripped Lug Nuts</strong>: Over-torqued or rusted bolts that won't budge with the trunk wrench? Our impact wrenches and extractor sockets break them free without damaging your rims.</li>
+              <li><strong>Proper Torque</strong>: Under- or over-tightened lugs are a safety hazard. We torque to spec so your wheel stays secure.</li>
+              <li><strong>Roadside Safety Buffer</strong>: Our strobe-lit units shield you from traffic while we work—so you never have to crouch beside a live lane.</li>
+            </ul>
+            <p className="font-semibold text-lg text-brand-dark mb-4">
+              Stay safe in your seat. One call to iFAST and we'll have your spare on and you back on the road.
+            </p>
+            <CallNowButton source="service_content_spare-tire-change_why" />
+          </>
+        )
+      },
+      {
+        title: 'Spare Tire Situations We Handle Daily',
+        content: (
+          <>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">1. Highway Shoulder Emergencies</h3>
+            <p className="mb-4 text-gray-700">
+              A blowout on the 401, 407, or DVP is no place to kneel beside traffic. Our strobe-equipped units arrive fast, create a visible buffer zone, and swap your spare on quickly and safely. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: highway spare tire change Pickering, 401 flat tire help Ajax, roadside spare swap Oshawa.</span>
+            </p>
+            <CallNowButton source="service_content_spare-tire-change_highway" />
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">2. Driveway & Parking Lot Swaps</h3>
+            <p className="mb-4 text-gray-700">
+              Discovered a flat in your driveway or a mall parking lot? We come to you so you don't have to risk driving on it and ruining the rim. Quick, clean, and done at your convenience. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: spare tire install at home Whitby, parking lot tire change Ajax, mobile spare swap Scarborough.</span>
+            </p>
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">3. Donut Spares & "Where's My Spare?" Surprises</h3>
+            <p className="mb-4 text-gray-700">
+              We'll install your temporary donut and advise you on safe speed and distance limits. And if you open the trunk to find no spare at all—many newer cars don't have one—we can bring a new or used tire to mount on-site instead. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: donut spare install Pickering, no spare tire help Oshawa, temporary spare change Ajax.</span>
+            </p>
+            <CallNowButton source="service_content_spare-tire-change_donut" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'How fast can you change my spare in Pickering or Ajax?', answer: 'Our average arrival across the East GTA is under 30 minutes. We route the closest local unit straight to your GPS location.' },
+      { question: 'What if my lug nuts are seized or I lost my wheel lock key?', answer: 'No problem. We carry heavy-duty impact wrenches and extractor sockets to break free seized, rusted, or stripped lug nuts—and remove locking wheel nuts even without the key—without damaging your rims.' },
+      { question: 'How far can I drive on a donut spare?', answer: 'Temporary donut spares are generally rated for short distances (about 80 km) and reduced speed (under 80 km/h). We\'ll advise you, and we can also bring a full tire to install if you have farther to go.' },
+      { question: 'What if I don\'t have a spare tire at all?', answer: 'Many newer vehicles ship without one. If you have no spare, we can deliver and install a new or quality used tire in your size right on the spot—just give us the size off your door jamb or tire sidewall.' },
+      { question: 'Do you re-torque the wheel after installing the spare?', answer: 'Yes, we torque every lug to your manufacturer\'s spec. We also recommend a re-torque after about 100 km of driving for safety.' },
+      { question: 'Can you change a spare in an underground garage?', answer: 'Yes. Our low-clearance vans reach vehicles in underground condo and office garages throughout Scarborough and the East GTA.' },
+    ]
+  },
+  'tire-installation': {
+    id: 'tire-installation',
+    seoTitle: '24/7 Mobile New & Used Tire Installation East GTA | On-Site Pickering, Ajax, Oshawa',
+    seoDescription: 'No spare? iFAST Roadside delivers and installs new or quality used tires on-site across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Mount, balance, install. Call now.',
+    keywords: 'mobile tire installation Pickering, new tire delivery Ajax, used tire install Oshawa, on-site tire mounting Whitby, tire replacement at home Scarborough, buy and install tire East GTA',
+    heroImage: '/tire_installation_hero.jpg',
+    blogSections: [
+      {
+        title: '24/7 Mobile New & Used Tire Installation Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
+        content: (
+          <>
+            <p className="mb-4">
+              Blew a tire with no spare in the trunk? Tread worn down to the wear bars? <strong>{COMPANY_NAME}</strong> brings the tire shop to you—new or quality used tires in your size, delivered and installed on-site. We reach you in <strong>under 30 minutes on average</strong> for emergencies, carrying mounting machines, computerized balancers, and TPMS scanners in every van.
+            </p>
+            <p className="mb-4">
+              Just give us the size off your sidewall or door jamb (e.g. 225/65R17). We source the right tire, bring it to your driveway, office, or roadside, then mount it, balance it on our onboard digital balancer, install it, and reset your TPMS light. No towing to a shop, no waiting room, no juggling a rental—you stay put while we get you rolling on fresh rubber.
+            </p>
+            <CallNowButton source="service_content_tire-installation_intro" />
+          </>
+        )
+      },
+      {
+        title: 'Why On-Site Tire Installation Beats the Shop',
+        content: (
+          <>
+            <p className="mb-4">
+              The old way means towing your car to a shop, waiting hours for an appointment, and arranging a ride. Mobile installation removes every one of those bottlenecks.
+            </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6">
+              <li><strong>New or Used Options</strong>: Need premium long-life rubber or a budget-friendly quality used tire to get through the season? We carry both and quote you honestly.</li>
+              <li><strong>Full Mount & Balance On-Site</strong>: Our vans carry the same mounting and computerized balancing gear as a brick-and-mortar shop—no compromise on the job quality.</li>
+              <li><strong>No Tow Required</strong>: Why pay $150+ to tow a car just for a tire? We come to you, saving that cost from the start.</li>
+              <li><strong>TPMS Reset Included</strong>: We reset your Tire Pressure Monitoring System so you drive away with a clean dashboard.</li>
+              <li><strong>Seasonal Swaps Too</strong>: We also install your stored winter or all-season set right in your driveway—skip the spring and fall shop lineups.</li>
+            </ul>
+            <p className="font-semibold text-lg text-brand-dark mb-4">
+              Stop Googling "tire shop near me open now." One call to iFAST puts a fresh tire on your car wherever you are.
+            </p>
+            <CallNowButton source="service_content_tire-installation_why" />
+          </>
+        )
+      },
+      {
+        title: 'Complete On-Site Tire Installation Solutions',
+        content: (
+          <>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">1. Emergency New Tire (No Spare Available)</h3>
+            <p className="mb-4 text-gray-700">
+              Stranded after a blowout with no spare? Tell us your tire size over the phone. We bring a matching new tire to your location, mount and balance it, and have you back on the road—no tow, no wait. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: emergency tire installation Pickering, new tire delivery roadside Ajax, no spare tire help Oshawa.</span>
+            </p>
+            <CallNowButton source="service_content_tire-installation_emergency" />
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">2. Quality Used Tire Installation (Budget Option)</h3>
+            <p className="mb-4 text-gray-700">
+              Need a cost-effective fix to get through to your next paycheck or the end of the season? We carry inspected, quality used tires with plenty of safe tread left, installed on-site at a fraction of new-tire cost. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: used tire install Whitby, cheap tire replacement Ajax, budget tire mobile Scarborough.</span>
+            </p>
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">3. Seasonal & Full-Set Installation at Home</h3>
+            <p className="mb-4 text-gray-700">
+              Swapping winters to all-seasons, or installing a full new set you bought online? We come to your driveway or office lot, mount and balance every wheel, and torque to spec—no shop queue required. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: mobile winter tire install Pickering, full set tire installation Oshawa, seasonal tire swap at home Ajax.</span>
+            </p>
+            <CallNowButton source="service_content_tire-installation_seasonal" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'Do you bring the tire, or do I need to supply it?', answer: 'Both options work. Give us your tire size and we\'ll source and bring a new or quality used tire. Or, if you already bought tires online or have a stored set, we\'ll come mount and balance them at your location.' },
+      { question: 'What tire size do you need from me?', answer: 'The size printed on your tire sidewall or driver\'s door jamb—for example 225/65R17. Read it to us over the phone and we\'ll match it.' },
+      { question: 'Can you really mount and balance a tire on-site?', answer: 'Yes. Our vans carry the same mounting machines and computerized balancers as a physical shop, so the installation quality is identical—done in your driveway or roadside.' },
+      { question: 'How much does mobile tire installation cost in the East GTA?', answer: 'It depends on whether you choose new or used tires and your size, but you save the tow and the shop trip. We give you a firm all-in quote over the phone before dispatch.' },
+      { question: 'Do you install used tires safely?', answer: 'Yes. Every used tire we carry is inspected for tread depth, age, and internal damage before installation. If we wouldn\'t put it on our own car, we won\'t put it on yours.' },
+      { question: 'Will you reset my TPMS light after installation?', answer: 'Yes, we carry the scanners to reset your Tire Pressure Monitoring System so you leave with no warning lights on the dash.' },
+    ]
+  },
+  'battery-diagnostic': {
+    id: 'battery-diagnostic',
+    seoTitle: '24/7 Mobile Car Battery Diagnostic East GTA | Pickering, Ajax, Oshawa',
+    seoDescription: 'Car cranking slow or dying repeatedly? iFAST Roadside tests your battery, alternator, and charging system on-site across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Call now.',
+    keywords: 'car battery test Pickering, battery diagnostic Ajax, alternator test Oshawa, charging system check Whitby, mobile battery testing Scarborough, why car keeps dying East GTA',
+    heroImage: '/battery_diagnostic_hero.jpg',
+    blogSections: [
+      {
+        title: '24/7 Mobile Battery & Charging System Diagnostics Across the East GTA',
+        content: (
+          <>
+            <p className="mb-4">
+              Is your car cranking slowly every morning? Did it die twice this week even after a jump? Dashboard battery light flickering? Before you waste money replacing the wrong part, find out what's actually wrong. <strong>{COMPANY_NAME}</strong> brings professional diagnostic equipment directly to your vehicle—any hour, any weather. Our technicians reach you in <strong>under 30 minutes on average</strong> with conductance battery testers and multimeters to read your system live.
+            </p>
+            <p className="mb-4">
+              A dead car is usually one of three things: a worn-out battery, a failing alternator that isn't recharging it, or a parasitic drain quietly draining it overnight. We test all three on-site—battery state of health, alternator output, and parasitic draw—so you get a clear answer instead of a guess. Whether you're in a Scarborough condo garage, an Ajax commuter lot, or your own Oshawa driveway, we tell you exactly what you need before you spend a dollar.
+            </p>
+            <CallNowButton source="service_content_battery-diagnostic_intro" />
+          </>
+        )
+      },
+      {
+        title: 'Why a Proper Diagnostic Saves You Money',
+        content: (
+          <>
+            <p className="mb-4">
+              The most expensive mistake drivers make is "parts-cannon" guessing—buying a new battery when the real culprit is the alternator, then breaking down again days later. A proper test ends the guesswork.
+            </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6">
+              <li><strong>Battery State-of-Health Test</strong>: We measure your battery's actual cold-cranking amps against its rating to see if it's genuinely worn out or just discharged.</li>
+              <li><strong>Alternator Output Check</strong>: We verify your alternator is charging at the correct voltage under load—a failing one will kill even a brand-new battery.</li>
+              <li><strong>Parasitic Drain Detection</strong>: If something is draining your battery while parked (a stuck relay, aftermarket accessory, or faulty module), we measure the draw to track it down.</li>
+              <li><strong>Clear, Honest Recommendation</strong>: You get a plain-English verdict—boost, charge, replace the battery, or address the alternator—with an up-front quote for any fix.</li>
+            </ul>
+            <p className="font-semibold text-lg text-brand-dark mb-4">
+              Stop replacing parts and hoping. One call to iFAST tells you exactly why your car keeps dying.
+            </p>
+            <CallNowButton source="service_content_battery-diagnostic_why" />
+          </>
+        )
+      },
+      {
+        title: 'Common Battery Problems We Diagnose On-Site',
+        content: (
+          <>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">1. "It Keeps Dying" — Repeated No-Starts</h3>
+            <p className="mb-4 text-gray-700">
+              Jumped it yesterday and it's dead again today? That points to either a battery that no longer holds charge or an alternator that isn't recharging it while you drive. We test both to pinpoint the real cause. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: car keeps dying Pickering, battery won't hold charge Ajax, repeated dead battery Oshawa.</span>
+            </p>
+            <CallNowButton source="service_content_battery-diagnostic_dying" />
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">2. Slow Cranking & Hard Cold-Weather Starts</h3>
+            <p className="mb-4 text-gray-700">
+              Ontario winters expose weak batteries. If your engine cranks slowly when it's cold, we'll measure the actual cold-cranking amps remaining so you know whether it'll survive the season or strand you. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: slow cranking battery Whitby, weak battery cold weather Ajax, winter battery test Scarborough.</span>
+            </p>
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">3. Phantom Drains & Warning Lights</h3>
+            <p className="mb-4 text-gray-700">
+              Battery or charging warning light on the dash, or a battery that's flat after sitting a few days? We perform a parasitic draw test to find what's pulling power when the car is off, and check your charging voltage. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: parasitic battery drain Pickering, battery warning light Oshawa, charging system check Ajax.</span>
+            </p>
+            <CallNowButton source="service_content_battery-diagnostic_drain" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'How do I know if it\'s my battery or my alternator?', answer: 'That\'s exactly what our diagnostic answers. We test the battery\'s state of health and the alternator\'s charging output separately, so you know whether you need a new battery, alternator work, or just a charge.' },
+      { question: 'How fast can you reach me in Pickering or Ajax for a battery test?', answer: 'Our average arrival across the East GTA is under 30 minutes. We dispatch the nearest local unit straight to your location.' },
+      { question: 'Can you test my battery in an underground condo garage?', answer: 'Yes. Our portable testing equipment lets us check your battery and charging system right in your parking stall in any Scarborough or East GTA garage.' },
+      { question: 'What is a parasitic drain?', answer: 'It\'s when something keeps drawing power after the car is off—a stuck relay, aftermarket accessory, or faulty module—slowly flattening the battery overnight. We measure the draw to help track it down.' },
+      { question: 'If the test shows I need a new battery, can you install it right away?', answer: 'Yes. If your battery has failed, our technician can supply and install the correct replacement on the spot and recycle your old one—no second trip needed.' },
+      { question: 'Will the diagnostic damage my car\'s electronics?', answer: 'No. We use professional conductance testers and multimeters that read your system safely without sending any harmful current into your vehicle\'s electronics.' },
+    ]
+  },
+  'battery-replacement': {
+    id: 'battery-replacement',
+    seoTitle: '24/7 Mobile Car Battery Replacement East GTA | Pickering, Ajax, Oshawa',
+    seoDescription: 'Battery beyond saving? iFAST Roadside delivers and installs the correct new car battery on-site across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Old battery recycled free. Call now.',
+    keywords: 'car battery replacement Pickering, mobile battery install Ajax, new car battery delivery Oshawa, battery installation at home Whitby, replace dead battery Scarborough, car battery service East GTA',
+    heroImage: '/battery_replacement_hero.jpg',
+    blogSections: [
+      {
+        title: '24/7 Mobile Car Battery Replacement Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
+        content: (
+          <>
+            <p className="mb-4">
+              When a battery is truly worn out, no jump start will keep it alive—you need a new one. <strong>{COMPANY_NAME}</strong> delivers and installs the correct replacement battery for your exact vehicle, right where you are. No towing to a shop, no waiting in line, no lugging a heavy battery yourself. Our technicians reach you in <strong>under 30 minutes on average</strong>, any hour, any weather across the East GTA.
+            </p>
+            <p className="mb-4">
+              We bring a quality battery matched to your make, model, and engine, install it on-site, clean and protect the terminals, confirm your charging system is working, and recycle your old battery free of charge. Whether you're stranded in an Ajax parking lot, a Scarborough condo garage, or your own Oshawa driveway, we get you started on a fresh battery and back to your day.
+            </p>
+            <CallNowButton source="service_content_battery-replacement_intro" />
+          </>
+        )
+      },
+      {
+        title: 'Why Mobile Battery Replacement Beats the Shop',
+        content: (
+          <>
+            <p className="mb-4">
+              A dead battery means the car can't drive itself to a shop—so the "go buy one" advice ignores that you're already stranded. We solve the whole problem in one visit.
+            </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6">
+              <li><strong>Right Battery, First Time</strong>: We match the correct group size, cold-cranking amps, and terminal layout for your specific vehicle—no guessing in a parts-store aisle.</li>
+              <li><strong>Professional On-Site Install</strong>: We safely disconnect, swap, and reconnect, then clean and grease the terminals to prevent future corrosion. On vehicles that need it, we preserve your settings during the swap.</li>
+              <li><strong>Free Old-Battery Recycling</strong>: We haul away and properly recycle your old lead-acid battery at no charge—no environmental hassle for you.</li>
+              <li><strong>Charging System Verified</strong>: After installing, we confirm your alternator is charging properly so the new battery won't suffer the same fate.</li>
+              <li><strong>Warranty-Backed Batteries</strong>: The batteries we install come with a manufacturer warranty for peace of mind.</li>
+            </ul>
+            <p className="font-semibold text-lg text-brand-dark mb-4">
+              Don't wrestle a dead battery in a freezing parking lot. One call to iFAST and we'll deliver, install, and recycle—done in minutes.
+            </p>
+            <CallNowButton source="service_content_battery-replacement_why" />
+          </>
+        )
+      },
+      {
+        title: 'On-Site Battery Replacement for Every Situation',
+        content: (
+          <>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">1. Stranded With a Dead Battery — No Jump Will Hold</h3>
+            <p className="mb-4 text-gray-700">
+              If your battery won't hold a charge even after a boost, a jump is just a temporary band-aid. We bring the right replacement to your location and install it on the spot so you're not stuck again an hour later. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: dead battery replacement Pickering, battery won't hold charge Ajax, emergency battery install Oshawa.</span>
+            </p>
+            <CallNowButton source="service_content_battery-replacement_dead" />
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">2. Planned Replacement Before It Fails</h3>
+            <p className="mb-4 text-gray-700">
+              Battery testing weak or 4–5 years old heading into winter? Replace it on your schedule, at home or the office, before it leaves you stranded on the coldest morning of the year. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: battery replacement at home Whitby, proactive battery change Ajax, mobile battery service Scarborough.</span>
+            </p>
+
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">3. Underground Garages & Tight Spots</h3>
+            <p className="mb-4 text-gray-700">
+              Car dead on the P4 level where a tow truck can't reach? Our portable service comes right to your stall—we carry the battery down and install it without needing to move your vehicle. <br/>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: underground garage battery replacement Scarborough, condo parking battery install Ajax, low clearance battery service Whitby.</span>
+            </p>
+            <CallNowButton source="service_content_battery-replacement_garage" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'How do you know which battery my car needs?', answer: 'We match the correct group size, cold-cranking amps, and terminal configuration to your year, make, model, and engine. Just give us those details over the phone and we\'ll bring the right one.' },
+      { question: 'How fast can you replace my battery in the East GTA?', answer: 'Our average arrival in Pickering, Ajax, Whitby, Oshawa, and Scarborough is under 30 minutes, and the install itself usually takes 15–20 minutes on-site.' },
+      { question: 'Do you take away my old battery?', answer: 'Yes. We haul away and properly recycle your old lead-acid battery free of charge—no environmental fees or disposal hassle for you.' },
+      { question: 'Will I lose my radio presets or settings when you swap the battery?', answer: 'On vehicles where it matters, our technician uses a memory-saver to preserve your settings during the swap. We\'ll let you know if your vehicle needs anything reset.' },
+      { question: 'Do the batteries come with a warranty?', answer: 'Yes. The batteries we install carry a manufacturer warranty. Keep your receipt and we\'ll help if you ever need to claim it.' },
+      { question: 'What if a replacement doesn\'t fix the problem?', answer: 'Before installing, we verify your charging system so the new battery won\'t be drained by a bad alternator. If the issue turns out to be elsewhere, we\'ll diagnose it and tell you exactly what\'s going on.' },
+    ]
   }
 };

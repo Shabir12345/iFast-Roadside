@@ -258,7 +258,7 @@ const CityPage: React.FC = () => {
         <div className="max-w-5xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-black text-brand-dark mb-8 text-center">Services we provide in {content.name}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {SERVICES.map(service => {
+            {SERVICES.filter(s => !s.parent).map(service => {
               const Icon = service.icon;
               return (
                 <Link
