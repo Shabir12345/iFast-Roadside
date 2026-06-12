@@ -1,3 +1,6 @@
+# MCP config (machine-specific paths + client-secret location)
+.mcp.json
+
 # Logs
 logs
 *.log
@@ -22,3 +25,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+dist-server

@@ -42,6 +42,11 @@ const Home: React.FC = () => {
         <meta property="og:description" content="Stranded? Get rapid 24/7 roadside assistance across Scarborough, Pickering, Ajax, Whitby, and Oshawa. Mobile tire, jump start, lockout, fuel, and towing experts." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ifastroadside.ca/" />
+        <meta property="og:image" content="https://www.ifastroadside.ca/logo.png" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="iFAST Roadside Assistance — 24/7 Rapid Response in East GTA" />
+        <meta property="twitter:description" content="Stranded? Get rapid 24/7 roadside assistance across Scarborough, Pickering, Ajax, Whitby, and Oshawa. Mobile tire, jump start, lockout, fuel, and towing experts." />
+        <meta property="twitter:image" content="https://www.ifastroadside.ca/logo.png" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
