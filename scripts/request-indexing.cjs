@@ -100,12 +100,13 @@ async function requestIndexing(page, url) {
   const inspectUrl = GSC_INSPECT_BASE + encodeURIComponent(url);
   console.log(`\n[${new Date().toLocaleTimeString()}] Inspecting: ${url}`);
 
-  await page.goto(inspectUrl, { waitUntil: 'networkidle', timeout: 30000 });
+  await page.goto(inspectUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
 
   // Wait for the page to fully load and show inspection results
   try {
-    // The URL inspection result panel takes a moment to load
-    await page.waitForTimeout(3000);
+    // Wait for the inspection result panel ("URL is/is not on Google") — can take 10-20s
+    await page.waitForSelector('text=/URL is (on|not on) Google/i', { timeout: 45000 }).catch(() => {});
+    await page.waitForTimeout(2000);
 
     // Look for "Request Indexing" button
     const requestBtn = page.getByRole('button', { name: /request indexing/i });
@@ -177,15 +178,24 @@ async function main() {
   const page = browser.pages()[0] || await browser.newPage();
 
   // Navigate to Search Console to trigger login if needed
-  await page.goto('https://search.google.com/search-console/welcome', { waitUntil: 'networkidle' });
+  await page.goto('https://search.google.com/search-console/welcome', { waitUntil: 'domcontentloaded' });
+  await page.waitForTimeout(3000);
 
-  // Give user time to log in if not already authenticated
-  const isLoggedIn = await page.url().then(u => !u.includes('accounts.google.com')).catch(() => false);
-
-  if (!isLoggedIn) {
+  // Wait until the user is logged in (poll instead of a fixed sleep)
+  if (page.url().includes('accounts.google.com')) {
     console.log('⚠ Please log in to Google in the browser window that just opened.');
-    console.log('  Waiting 45 seconds for you to complete login...\n');
-    await sleep(45000);
+    console.log('  Waiting up to 3 minutes for you to complete login...\n');
+    for (let waited = 0; waited < 180000; waited += 5000) {
+      await sleep(5000);
+      if (!page.url().includes('accounts.google.com')) break;
+    }
+    if (page.url().includes('accounts.google.com')) {
+      console.log('✗ Still not logged in after 3 minutes — exiting. Run the script again.');
+      await browser.close();
+      process.exit(1);
+    }
+    console.log('✓ Login detected! Starting in 3 seconds...\n');
+    await sleep(3000);
   } else {
     console.log('✓ Already logged in! Starting in 3 seconds...\n');
     await sleep(3000);
