@@ -156,7 +156,16 @@ async function requestIndexing(page, url) {
       }
     }
 
-    await box.click();
+    // Clear any leftover dialog from the previous URL, then focus the box
+    const leftover = page.getByRole('button', { name: /got it|ok|done/i }).first();
+    if (await leftover.isVisible().catch(() => false)) await leftover.click().catch(() => {});
+    try {
+      await box.click({ timeout: 10000 });
+    } catch {
+      await page.keyboard.press('Escape').catch(() => {});
+      await page.waitForTimeout(1000);
+      await box.click({ timeout: 15000 });
+    }
     await box.fill(url);
     await page.keyboard.press('Enter');
 
@@ -178,22 +187,28 @@ async function requestIndexing(page, url) {
       console.log('  → Clicking "Request Indexing"... (Google live-tests the URL, takes 1-2 min)');
       await requestBtn.click();
 
-      // Google runs a live test before registering the request. Navigating
-      // away during the test cancels it silently, so wait (up to 3 min) for
-      // the confirmation dialog / "Indexing requested" text before moving on.
+      // Google shows a "Submitting request" dialog while it live-tests the
+      // URL (can take minutes). Wait it out — navigating away cancels the
+      // request, and the open dialog blocks every later click.
       let confirmed = false;
-      for (let waited = 0; waited < 180000; waited += 3000) {
+      for (let waited = 0; waited < 300000; waited += 3000) {
         await page.waitForTimeout(3000);
         const text = await page.locator('body').innerText().catch(() => '');
         if (/quota exceeded/i.test(text)) throw new Error('DAILY_QUOTA_EXCEEDED');
         if (/indexing requested|already requested/i.test(text)) { confirmed = true; break; }
         const gotItNow = page.getByRole('button', { name: /got it/i });
         if (await gotItNow.isVisible().catch(() => false)) { confirmed = true; break; }
-        if (!/testing|requesting/i.test(text)) break; // dialog gone, nothing pending
+        // keep waiting while the dialog shows Submitting/Testing/Requesting
+        if (!/submitting|testing|requesting/i.test(text)) break;
       }
 
-      const gotItBtn = page.getByRole('button', { name: /got it/i });
-      if (await gotItBtn.isVisible().catch(() => false)) await gotItBtn.click();
+      // Dismiss whatever dialog is up so it can't block the next URL
+      const gotItBtn = page.getByRole('button', { name: /got it|ok|done/i }).first();
+      if (await gotItBtn.isVisible().catch(() => false)) {
+        await gotItBtn.click().catch(() => {});
+      } else if (!confirmed) {
+        await page.keyboard.press('Escape').catch(() => {});
+      }
 
       if (confirmed) {
         console.log('  ✓ Indexing requested successfully');
@@ -219,7 +234,7 @@ async function requestIndexing(page, url) {
             const text = await page.locator('body').innerText().catch(() => '');
             if (/quota exceeded/i.test(text)) throw new Error('DAILY_QUOTA_EXCEEDED');
             if (/indexing requested|already requested/i.test(text)) break;
-            if (!/testing|requesting/i.test(text)) break;
+            if (!/submitting|testing|requesting/i.test(text)) break;
           }
           const gotIt2 = page.getByRole('button', { name: /got it/i });
           if (await gotIt2.isVisible().catch(() => false)) await gotIt2.click();
