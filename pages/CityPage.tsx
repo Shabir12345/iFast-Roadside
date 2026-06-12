@@ -29,7 +29,7 @@ const CityPage: React.FC = () => {
     );
   }
 
-  const canonical = `https://ifastroadside.ca/areas/${content.id}`;
+  const canonical = `https://www.ifastroadside.ca/areas/${content.id}`;
 
   const localBusinessLd = {
     '@context': 'https://schema.org',
@@ -38,7 +38,7 @@ const CityPage: React.FC = () => {
     'description': content.seoDescription,
     'telephone': PHONE_NUMBER,
     'url': canonical,
-    'image': `https://ifastroadside.ca${content.heroImage}`,
+    'image': `https://www.ifastroadside.ca${content.heroImage}`,
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': '20 Antrim Crescent',
@@ -78,8 +78,8 @@ const CityPage: React.FC = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     'itemListElement': [
-      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://ifastroadside.ca/' },
-      { '@type': 'ListItem', 'position': 2, 'name': 'Service Areas', 'item': 'https://ifastroadside.ca/service-area/east-gta' },
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.ifastroadside.ca/' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Service Areas', 'item': 'https://www.ifastroadside.ca/service-area/east-gta' },
       { '@type': 'ListItem', 'position': 3, 'name': content.name, 'item': canonical }
     ]
   };
@@ -105,7 +105,7 @@ const CityPage: React.FC = () => {
         <meta property="og:title" content={content.seoTitle} />
         <meta property="og:description" content={content.seoDescription} />
         <meta property="og:url" content={canonical} />
-        <meta property="og:image" content={`https://ifastroadside.ca${content.heroImage}`} />
+        <meta property="og:image" content={`https://www.ifastroadside.ca${content.heroImage}`} />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(localBusinessLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>

@@ -3,10 +3,10 @@
 const playwright = require('C:/Users/khati/AppData/Roaming/npm/node_modules/playwright');
 
 const BLOG_URLS = [
-  'https://ifastroadside.ca/blog/flat-tire-on-401-east-gta',
-  'https://ifastroadside.ca/blog/winter-roadside-emergencies-ontario-guide',
-  'https://ifastroadside.ca/blog/caa-vs-independent-roadside-assistance-ontario',
-  'https://ifastroadside.ca/blog/mobile-mechanic-cost-ontario-pricing-guide',
+  'https://www.ifastroadside.ca/blog/flat-tire-on-401-east-gta',
+  'https://www.ifastroadside.ca/blog/winter-roadside-emergencies-ontario-guide',
+  'https://www.ifastroadside.ca/blog/caa-vs-independent-roadside-assistance-ontario',
+  'https://www.ifastroadside.ca/blog/mobile-mechanic-cost-ontario-pricing-guide',
 ];
 
 const SEARCH_CONSOLE_BASE = 'https://search.google.com/search-console';

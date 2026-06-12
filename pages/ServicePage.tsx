@@ -70,11 +70,11 @@ const ServicePage: React.FC = () => {
         <title>{contentData.seoTitle}</title>
         <meta name="description" content={contentData.seoDescription} />
         <meta name="keywords" content={contentData.keywords} />
-        <link rel="canonical" href={`https://ifastroadside.ca/service/${id}`} />
+        <link rel="canonical" href={`https://www.ifastroadside.ca/service/${id}`} />
         <meta property="og:title" content={contentData.seoTitle} />
         <meta property="og:description" content={contentData.seoDescription} />
-        <meta property="og:image" content={`https://ifastroadside.ca${contentData.heroImage}`} />
-        <meta property="og:url" content={`https://ifastroadside.ca/service/${id}`} />
+        <meta property="og:image" content={`https://www.ifastroadside.ca${contentData.heroImage}`} />
+        <meta property="og:url" content={`https://www.ifastroadside.ca/service/${id}`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>

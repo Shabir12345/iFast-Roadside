@@ -19,7 +19,7 @@ const Blog: React.FC = () => {
     '@type': 'Blog',
     name: 'iFAST Roadside Blog',
     description: 'Expert roadside assistance tips, seasonal driving guides, and East GTA auto service advice from iFAST Roadside & Mobile Tires.',
-    url: 'https://ifastroadside.ca/blog',
+    url: 'https://www.ifastroadside.ca/blog',
     publisher: {
       '@type': 'LocalBusiness',
       name: 'iFAST Roadside & Mobile Tires',
@@ -33,10 +33,10 @@ const Blog: React.FC = () => {
         <title>Roadside Tips & Guides | iFAST Roadside Blog — East GTA</title>
         <meta name="description" content="Expert roadside emergency guides, seasonal driving tips, and honest auto service advice from East GTA's fastest mobile roadside team. Serving Pickering, Ajax, Whitby, Oshawa, Scarborough." />
         <meta name="keywords" content="roadside tips East GTA, flat tire guide Ontario, winter car emergency, mobile mechanic advice, roadside assistance blog Pickering" />
-        <link rel="canonical" href="https://ifastroadside.ca/blog" />
+        <link rel="canonical" href="https://www.ifastroadside.ca/blog" />
         <meta property="og:title" content="Roadside Tips & Guides | iFAST Roadside Blog" />
         <meta property="og:description" content="Expert roadside emergency guides and honest auto advice for East GTA drivers." />
-        <meta property="og:url" content="https://ifastroadside.ca/blog" />
+        <meta property="og:url" content="https://www.ifastroadside.ca/blog" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>

@@ -37,11 +37,11 @@ const Home: React.FC = () => {
       <Helmet>
         <title>iFAST Roadside Assistance | 24/7 Fast Towing & Mobile Tires East GTA</title>
         <meta name="description" content="Stranded? Get rapid 24/7 roadside assistance and mobile tire repair across Scarborough, Pickering, Ajax, Whitby, and Oshawa. 30-min ETA. Safe, damage-free service. No hidden fees. Call now." />
-        <link rel="canonical" href="https://ifastroadside.ca/" />
+        <link rel="canonical" href="https://www.ifastroadside.ca/" />
         <meta property="og:title" content="iFAST Roadside Assistance — 24/7 Rapid Response in East GTA" />
         <meta property="og:description" content="Stranded? Get rapid 24/7 roadside assistance across Scarborough, Pickering, Ajax, Whitby, and Oshawa. Mobile tire, jump start, lockout, fuel, and towing experts." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ifastroadside.ca/" />
+        <meta property="og:url" content="https://www.ifastroadside.ca/" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

@@ -41,7 +41,7 @@ const BlogPost: React.FC = () => {
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.seoDescription,
-    image: `https://ifastroadside.ca${post.heroImage}`,
+    image: `https://www.ifastroadside.ca${post.heroImage}`,
     datePublished: post.publishDate,
     author: {
       '@type': 'Organization',
@@ -51,11 +51,11 @@ const BlogPost: React.FC = () => {
       '@type': 'LocalBusiness',
       name: 'iFAST Roadside & Mobile Tires',
       telephone: PHONE_NUMBER,
-      url: 'https://ifastroadside.ca',
+      url: 'https://www.ifastroadside.ca',
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://ifastroadside.ca/blog/${post.slug}`,
+      '@id': `https://www.ifastroadside.ca/blog/${post.slug}`,
     },
     keywords: post.keywords,
   };
@@ -79,11 +79,11 @@ const BlogPost: React.FC = () => {
         <title>{post.seoTitle}</title>
         <meta name="description" content={post.seoDescription} />
         <meta name="keywords" content={post.keywords} />
-        <link rel="canonical" href={`https://ifastroadside.ca/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://www.ifastroadside.ca/blog/${post.slug}`} />
         <meta property="og:title" content={post.seoTitle} />
         <meta property="og:description" content={post.seoDescription} />
-        <meta property="og:image" content={`https://ifastroadside.ca${post.heroImage}`} />
-        <meta property="og:url" content={`https://ifastroadside.ca/blog/${post.slug}`} />
+        <meta property="og:image" content={`https://www.ifastroadside.ca${post.heroImage}`} />
+        <meta property="og:url" content={`https://www.ifastroadside.ca/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content={post.publishDate} />
         <meta name="twitter:card" content="summary_large_image" />

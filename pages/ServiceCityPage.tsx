@@ -33,9 +33,9 @@ const ServiceCityPage: React.FC = () => {
   }
 
   const Icon = service.icon;
-  const canonical = `https://ifastroadside.ca/service/${id}/${city}`;
-  const serviceUrl = `https://ifastroadside.ca/service/${id}`;
-  const cityUrl = `https://ifastroadside.ca/areas/${city}`;
+  const canonical = `https://www.ifastroadside.ca/service/${id}/${city}`;
+  const serviceUrl = `https://www.ifastroadside.ca/service/${id}`;
+  const cityUrl = `https://www.ifastroadside.ca/areas/${city}`;
 
   const serviceLd = {
     '@context': 'https://schema.org',
@@ -74,7 +74,7 @@ const ServiceCityPage: React.FC = () => {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     'itemListElement': [
-      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://ifastroadside.ca/' },
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.ifastroadside.ca/' },
       { '@type': 'ListItem', 'position': 2, 'name': service.title, 'item': serviceUrl },
       { '@type': 'ListItem', 'position': 3, 'name': `${service.title} in ${cityData.name}`, 'item': canonical }
     ]
@@ -103,7 +103,7 @@ const ServiceCityPage: React.FC = () => {
         <meta property="og:title" content={combo.seoTitle} />
         <meta property="og:description" content={combo.seoDescription} />
         <meta property="og:url" content={canonical} />
-        <meta property="og:image" content={`https://ifastroadside.ca${cityData.heroImage}`} />
+        <meta property="og:image" content={`https://www.ifastroadside.ca${cityData.heroImage}`} />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(serviceLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>

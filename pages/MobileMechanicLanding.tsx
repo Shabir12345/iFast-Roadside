@@ -88,11 +88,11 @@ const MobileMechanicLanding: React.FC = () => {
         <title>{contentData.seoTitle}</title>
         <meta name="description" content={contentData.seoDescription} />
         <meta name="keywords" content={contentData.keywords} />
-        <link rel="canonical" href="https://ifastroadside.ca/mobile-mechanic" />
+        <link rel="canonical" href="https://www.ifastroadside.ca/mobile-mechanic" />
         <meta property="og:title" content={contentData.seoTitle} />
         <meta property="og:description" content={contentData.seoDescription} />
-        <meta property="og:image" content="https://ifastroadside.ca/mobile_mechanic_hero.jpg" />
-        <meta property="og:url" content="https://ifastroadside.ca/mobile-mechanic" />
+        <meta property="og:image" content="https://www.ifastroadside.ca/mobile_mechanic_hero.jpg" />
+        <meta property="og:url" content="https://www.ifastroadside.ca/mobile-mechanic" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
