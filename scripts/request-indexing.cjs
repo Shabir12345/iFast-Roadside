@@ -106,14 +106,20 @@ async function isGoogle404(page) {
          text.includes("That's an error");
 }
 
+function overviewUrl() {
+  return `https://search.google.com/search-console?resource_id=${RESOURCE_ID}&authuser=${encodeURIComponent(AUTH_USER)}`;
+}
+
 async function detectAuthuser(page) {
   const candidates = process.env.GSC_ACCOUNT
     ? [process.env.GSC_ACCOUNT, 0, 1, 2, 3, 4, 5]
     : [0, 1, 2, 3, 4, 5];
   for (const au of candidates) {
-    const probe = `https://search.google.com/search-console/inspect?resource_id=${RESOURCE_ID}&authuser=${encodeURIComponent(au)}&id=${encodeURIComponent('https://www.ifastroadside.ca/')}`;
+    // Probe the property overview page — the inspect deep-link 404s until the
+    // property has been opened once in the session, so it's a bad access test.
+    const probe = `https://search.google.com/search-console?resource_id=${RESOURCE_ID}&authuser=${encodeURIComponent(au)}`;
     await page.goto(probe, { waitUntil: 'domcontentloaded', timeout: 60000 }).catch(() => {});
-    await page.waitForTimeout(4000);
+    await page.waitForTimeout(5000);
     if (page.url().includes('accounts.google.com')) continue; // slot not logged in
     if (!(await isGoogle404(page))) {
       console.log(`✓ Found working Google session: authuser=${au}`);
@@ -130,44 +136,70 @@ function sleep(ms) {
 }
 
 async function requestIndexing(page, url) {
-  const inspectUrl = inspectUrlFor(url);
   console.log(`\n[${new Date().toLocaleTimeString()}] Inspecting: ${url}`);
 
-  await page.goto(inspectUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
-
-  // Wait for the page to fully load and show inspection results
   try {
-    // Bail out clearly if Google serves its 404 page (wrong account / no access)
-    if (await isGoogle404(page)) {
-      throw new Error(
-        `Google returned 404 — authuser=${AUTH_USER} lost access mid-run. ` +
-        'Rerun the script to re-detect the session.'
-      );
+    // Drive the "Inspect any URL" box at the top of the GSC UI — the
+    // /search-console/inspect deep-link 404s no matter the account, so
+    // we type into the search box exactly like a human would.
+    let box = page.locator('input[aria-label*="Inspect" i]').first();
+    if (!(await box.isVisible().catch(() => false))) {
+      await page.goto(overviewUrl(), { waitUntil: 'domcontentloaded', timeout: 60000 });
+      await page.waitForTimeout(5000);
+      box = page.locator('input[aria-label*="Inspect" i]').first();
+      if (!(await box.isVisible().catch(() => false))) {
+        box = page.locator('header input, input[placeholder*="Inspect" i]').first();
+      }
+      if (!(await box.isVisible().catch(() => false))) {
+        await page.screenshot({ path: `scripts/no-searchbox-${Date.now()}.png` }).catch(() => {});
+        throw new Error('could not find the "Inspect any URL" search box');
+      }
     }
 
+    await box.click();
+    await box.fill(url);
+    await page.keyboard.press('Enter');
+
     // Wait for the inspection result panel ("URL is/is not on Google") — can take 10-20s
-    await page.waitForSelector('text=/URL is (on|not on) Google/i', { timeout: 45000 }).catch(() => {});
+    await page.waitForSelector('text=/URL is (on|not on) Google/i', { timeout: 60000 }).catch(() => {});
     await page.waitForTimeout(2000);
+
+    // Stop the whole run when the daily quota is reached
+    const verdictText = await page.locator('body').innerText().catch(() => '');
+    if (/quota exceeded/i.test(verdictText)) {
+      throw new Error('DAILY_QUOTA_EXCEEDED');
+    }
 
     // Look for "Request Indexing" button
     const requestBtn = page.getByRole('button', { name: /request indexing/i });
     const btnVisible = await requestBtn.isVisible().catch(() => false);
 
     if (btnVisible) {
-      console.log('  → Clicking "Request Indexing"...');
+      console.log('  → Clicking "Request Indexing"... (Google live-tests the URL, takes 1-2 min)');
       await requestBtn.click();
 
-      // Wait for the confirmation dialog
-      await page.waitForTimeout(2000);
+      // Google runs a live test before registering the request. Navigating
+      // away during the test cancels it silently, so wait (up to 3 min) for
+      // the confirmation dialog / "Indexing requested" text before moving on.
+      let confirmed = false;
+      for (let waited = 0; waited < 180000; waited += 3000) {
+        await page.waitForTimeout(3000);
+        const text = await page.locator('body').innerText().catch(() => '');
+        if (/quota exceeded/i.test(text)) throw new Error('DAILY_QUOTA_EXCEEDED');
+        if (/indexing requested|already requested/i.test(text)) { confirmed = true; break; }
+        const gotItNow = page.getByRole('button', { name: /got it/i });
+        if (await gotItNow.isVisible().catch(() => false)) { confirmed = true; break; }
+        if (!/testing|requesting/i.test(text)) break; // dialog gone, nothing pending
+      }
 
-      // Confirm if a dialog appears (e.g. "Requesting indexing…" or "Got it")
       const gotItBtn = page.getByRole('button', { name: /got it/i });
-      const gotItVisible = await gotItBtn.isVisible().catch(() => false);
-      if (gotItVisible) {
-        await gotItBtn.click();
+      if (await gotItBtn.isVisible().catch(() => false)) await gotItBtn.click();
+
+      if (confirmed) {
         console.log('  ✓ Indexing requested successfully');
       } else {
-        console.log('  ✓ Request submitted (no confirmation dialog appeared)');
+        console.log('  ⚠ No confirmation seen — request may not have registered');
+        await page.screenshot({ path: `scripts/noconfirm-${Date.now()}.png` }).catch(() => {});
       }
     } else {
       // Check if already indexed or URL is in a different state
@@ -181,7 +213,14 @@ async function requestIndexing(page, url) {
         const retryBtn = page.getByRole('button', { name: /request indexing/i });
         if (await retryBtn.isVisible().catch(() => false)) {
           await retryBtn.click();
-          await page.waitForTimeout(1500);
+          // Same live-test wait as the primary path
+          for (let waited = 0; waited < 180000; waited += 3000) {
+            await page.waitForTimeout(3000);
+            const text = await page.locator('body').innerText().catch(() => '');
+            if (/quota exceeded/i.test(text)) throw new Error('DAILY_QUOTA_EXCEEDED');
+            if (/indexing requested|already requested/i.test(text)) break;
+            if (!/testing|requesting/i.test(text)) break;
+          }
           const gotIt2 = page.getByRole('button', { name: /got it/i });
           if (await gotIt2.isVisible().catch(() => false)) await gotIt2.click();
           console.log('  ✓ Indexing requested');
@@ -192,7 +231,7 @@ async function requestIndexing(page, url) {
       }
     }
   } catch (err) {
-    if (err.message.includes('Google returned 404')) throw err; // abort the whole run
+    if (err.message === 'DAILY_QUOTA_EXCEEDED') throw err;
     console.log(`  ✗ Error: ${err.message}`);
     await page.screenshot({ path: `scripts/error-${Date.now()}.png` }).catch(() => {});
   }
@@ -273,13 +312,15 @@ async function main() {
       await requestIndexing(page, url);
       results.success.push(url);
     } catch (err) {
+      if (err.message === 'DAILY_QUOTA_EXCEEDED') {
+        console.log('\n⚠ Google\'s daily "Request Indexing" quota is used up.');
+        console.log('  Remaining URLs will be picked up from the sitemap, or rerun');
+        console.log('  this script tomorrow to request them explicitly.');
+        results.failed.push(...URLS.slice(i));
+        break;
+      }
       console.log(`  ✗ Fatal error for ${url}: ${err.message}`);
       results.failed.push(url);
-      if (err.message.includes('Google returned 404')) {
-        console.log('\nAborting — fix the account access problem and rerun.');
-        await browser.close().catch(() => {});
-        process.exit(1);
-      }
     }
 
     if (i < URLS.length - 1) {
