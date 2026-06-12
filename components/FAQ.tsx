@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { ChevronDown, ChevronUp, PhoneCall } from 'lucide-react';
+import { PHONE_NUMBER } from '../constants';
+import { trackPhoneCall } from '../utils/analytics';
 
 const FAQS = [
     {
@@ -12,7 +14,7 @@ const FAQS = [
     },
     {
         question: "Can you jump start my car in an underground condo garage?",
-        answer: "Yes! Traditional tow trucks cannot clear the height restrictions of underground condo garages in the GTA. Our agile service vans and portable anti-surge lithium jump packs allow us to jump start your dead battery in the tightest parking stalks."
+        answer: "Yes! Traditional tow trucks cannot clear the height restrictions of underground condo garages in the GTA. Our agile service vans and portable anti-surge lithium jump packs allow us to jump start your dead battery in the tightest parking stalls."
     },
     {
         question: "Do you carry brand new tires if mine blew out on the highway?",
@@ -66,16 +68,13 @@ const FAQ: React.FC = () => {
 
                     <div className="mt-12 p-6 bg-brand-dark rounded-3xl text-center text-white glass-morphism border-none">
                         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                            <div className="flex -space-x-2">
-                                {[1, 2, 3].map(i => (
-                                    <div key={i} className="w-10 h-10 rounded-full border-2 border-brand-dark bg-gray-700 flex items-center justify-center text-[10px] font-bold">
-                                        User
-                                    </div>
-                                ))}
-                            </div>
-                            <p className="text-sm font-medium">Still have questions? Our AI assistant and human dispatchers are ready to help.</p>
-                            <a href="#contact" className="px-6 py-2 bg-brand-yellow text-brand-dark rounded-full font-bold text-sm hover:bg-brand-yellowHover transition-colors">
-                                Contact Us
+                            <p className="text-sm font-medium">Still have questions? A live dispatcher can answer them right now — 24/7.</p>
+                            <a
+                                href={`tel:${PHONE_NUMBER}`}
+                                onClick={() => trackPhoneCall('faq_call_home')}
+                                className="inline-flex items-center gap-2 px-6 py-2 bg-brand-yellow text-brand-dark rounded-full font-bold text-sm hover:bg-brand-yellowHover transition-colors"
+                            >
+                                <PhoneCall size={16} /> Call {PHONE_NUMBER}
                             </a>
                         </div>
                     </div>

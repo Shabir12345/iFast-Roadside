@@ -1,6 +1,7 @@
 import React from 'react';
-import { Users, Award, Zap, MapPin } from 'lucide-react';
-import { COMPANY_NAME, ADDRESS } from '../constants';
+import { Users, Zap, PhoneCall, BadgeDollarSign, Wrench } from 'lucide-react';
+import { COMPANY_NAME, ADDRESS, PHONE_NUMBER, GOOGLE_RATING } from '../constants';
+import { trackPhoneCall } from '../utils/analytics';
 
 const About: React.FC = () => {
     return (
@@ -17,8 +18,8 @@ const About: React.FC = () => {
                                     loading="lazy"
                                 />
                                 <div className="bg-brand-yellow p-8 rounded-3xl shadow-xl animate-float">
-                                    <div className="text-4xl font-black text-brand-dark mb-1">10k+</div>
-                                    <div className="text-brand-dark font-bold text-sm uppercase tracking-wider">Drivers Assisted</div>
+                                    <div className="text-4xl font-black text-brand-dark mb-1">{GOOGLE_RATING}★</div>
+                                    <div className="text-brand-dark font-bold text-sm uppercase tracking-wider">Google Rating</div>
                                 </div>
                             </div>
                             <div className="space-y-4 pt-8">
@@ -47,10 +48,8 @@ const About: React.FC = () => {
                             <span className="text-gradient">Not An Afterthought.</span>
                         </h2>
                         <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                            Being stranded on the side of the 401 or stuck in a freezing parking lot is stressful enough without wondering <em>if</em> help will show up. 
-                            Based at <strong>{ADDRESS}</strong> in the heart of Scarborough, <strong>{COMPANY_NAME}</strong> was built to solve this problem. 
-                            We redesigned roadside assistance to skip the massive flatbed wait times by deploying agile, specialized service vans that cut through GTA traffic. 
-                            Fast GPS dispatch. Friendly certified technicians. Getting you back to your life securely.
+                            Being stranded on the side of the 401 or stuck in a freezing parking lot is stressful enough without wondering <em>if</em> help will show up.
+                            Big tow companies make you wait for a flatbed. <strong>{COMPANY_NAME}</strong>, based at <strong>{ADDRESS}</strong>, sends fast, fully-equipped service vans from our Scarborough home base — so most calls are fixed on the spot, no tow needed.
                         </p>
 
                         <div className="flex flex-col gap-6 mb-10">
@@ -63,11 +62,33 @@ const About: React.FC = () => {
                                     <p className="text-gray-500 text-sm">No shady operators. Our teams are licensed, insured, and safety-trained.</p>
                                 </div>
                             </div>
+                            <div className="flex gap-4">
+                                <div className="shrink-0 w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-brand-yellow premium-shadow">
+                                    <BadgeDollarSign size={24} />
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-brand-dark mb-1">Upfront Pricing</h4>
+                                    <p className="text-gray-500 text-sm">You get a clear quote on the phone before we dispatch. No hook-up fees, no late-night surcharges.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-4">
+                                <div className="shrink-0 w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-brand-yellow premium-shadow">
+                                    <Wrench size={24} />
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-brand-dark mb-1">Fixed On-Site, Not Towed</h4>
+                                    <p className="text-gray-500 text-sm">Tires, batteries, lockouts, and fuel are handled right where you're stuck — towing is the backup plan, not the default.</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <button className="px-10 py-4 bg-brand-dark text-white rounded-2xl font-bold premium-shadow-hover hover:bg-gray-800 transition-all flex items-center gap-3">
-                            Learn More About Us <Award size={20} className="text-brand-yellow" />
-                        </button>
+                        <a
+                            href={`tel:${PHONE_NUMBER}`}
+                            onClick={() => trackPhoneCall('about_call_home')}
+                            className="px-10 py-4 bg-brand-dark text-white rounded-2xl font-bold premium-shadow-hover hover:bg-gray-800 transition-all inline-flex items-center gap-3 w-fit"
+                        >
+                            Talk to a Live Dispatcher <PhoneCall size={20} className="text-brand-yellow" />
+                        </a>
                     </div>
                 </div>
             </div>

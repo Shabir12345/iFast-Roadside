@@ -20,7 +20,6 @@ import {
   Settings
 } from 'lucide-react';
 import Process from '../components/Process';
-import Testimonials from '../components/Testimonials';
 import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
 
@@ -267,9 +266,6 @@ const MobileMechanicLanding: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Testimonials */}
-      <Testimonials />
 
       {/* Local SEO Section */}
       <section className="py-20 bg-brand-dark text-white rounded-[4rem] mx-4 mb-20 overflow-hidden relative">

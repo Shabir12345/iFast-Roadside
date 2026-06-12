@@ -1,6 +1,7 @@
-import React from 'react';
-import { Star } from 'lucide-react';
+import React, { useState } from 'react';
+import { Star, ChevronDown } from 'lucide-react';
 import { GOOGLE_REVIEWS, GOOGLE_REVIEWS_URL, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
+import { GoogleReview } from '../types';
 
 // Multicolor Google "G" mark (lucide has no brand logo).
 const GoogleG: React.FC<{ className?: string }> = ({ className }) => (
@@ -19,6 +20,52 @@ const Stars: React.FC<{ rating: number; size?: number }> = ({ rating, size = 16 
     ))}
   </div>
 );
+
+// Roughly 3 clamped lines; anything longer gets a "Read more" toggle.
+const CLAMP_THRESHOLD = 160;
+
+const ReviewCard: React.FC<{ review: GoogleReview }> = ({ review }) => {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = review.content.length > CLAMP_THRESHOLD;
+
+  return (
+    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-[0_8px_30px_rgba(11,30,54,0.06)] flex flex-col">
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <div className="w-11 h-11 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-lg">
+            {review.name.charAt(0)}
+          </div>
+          <div>
+            <h3 className="font-bold text-brand-dark leading-tight">{review.name}</h3>
+            <span className="text-xs text-gray-400">{review.timeAgo}</span>
+          </div>
+        </div>
+        <GoogleG className="w-5 h-5 flex-shrink-0" />
+      </div>
+      <Stars rating={review.rating} />
+      <p
+        className="text-gray-600 text-sm leading-relaxed mt-3"
+        style={
+          isLong && !expanded
+            ? { display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }
+            : undefined
+        }
+      >
+        {review.content}
+      </p>
+      {isLong && (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-brand-dark hover:text-brand-yellow transition-colors self-start"
+          aria-expanded={expanded}
+        >
+          {expanded ? 'Show less' : 'Read more'}
+          <ChevronDown size={16} className={`transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`} />
+        </button>
+      )}
+    </div>
+  );
+};
 
 const GoogleReviews: React.FC = () => {
   return (
@@ -41,30 +88,14 @@ const GoogleReviews: React.FC = () => {
           </div>
         </div>
 
-        {/* Review cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {/* Review cards (hidden until real GBP reviews are added in constants.tsx) */}
+        {GOOGLE_REVIEWS.length > 0 && (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto items-start">
           {GOOGLE_REVIEWS.slice(0, 3).map((review) => (
-            <div
-              key={review.id}
-              className="bg-white rounded-2xl p-6 border border-gray-100 shadow-[0_8px_30px_rgba(11,30,54,0.06)] flex flex-col"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-lg">
-                    {review.name.charAt(0)}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-brand-dark leading-tight">{review.name}</h3>
-                    <span className="text-xs text-gray-400">{review.timeAgo}</span>
-                  </div>
-                </div>
-                <GoogleG className="w-5 h-5 flex-shrink-0" />
-              </div>
-              <Stars rating={review.rating} />
-              <p className="text-gray-600 text-sm leading-relaxed mt-3">{review.content}</p>
-            </div>
+            <ReviewCard key={review.id} review={review} />
           ))}
         </div>
+        )}
 
         {/* CTA button → Google reviews panel */}
         <div className="flex justify-center mt-10">
@@ -77,7 +108,7 @@ const GoogleReviews: React.FC = () => {
             <span className="bg-white rounded-full p-1.5 group-hover:scale-110 transition-transform">
               <GoogleG className="w-5 h-5" />
             </span>
-            Check Out All Our Reviews
+            Read All Our Reviews on Google
           </a>
         </div>
       </div>

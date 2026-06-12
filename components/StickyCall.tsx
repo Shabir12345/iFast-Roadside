@@ -12,7 +12,7 @@ const StickyCall: React.FC = () => {
            Live Dispatch: Online
         </div>
         <div className="flex items-center gap-1 text-white text-[11px] font-bold uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded backdrop-blur-sm">
-           <Clock size={12} className="text-brand-yellow" /> <span>ETA: 15-30 Mins</span>
+           <Clock size={12} className="text-brand-yellow" /> <span>Avg ETA: ~30 Mins</span>
         </div>
       </div>
       <a 

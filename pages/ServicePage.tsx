@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { SERVICES, PHONE_NUMBER } from '../constants';
+import { SERVICES, PHONE_NUMBER, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { SERVICE_CONTENT } from '../data/serviceContent';
 import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle2, Star, ShieldCheck, MapPin, Camera, Zap } from 'lucide-react';
 import { CITY_CONTENT } from '../data/cityContent';
 import Process from '../components/Process';
-import Testimonials from '../components/Testimonials';
 import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
 
@@ -46,10 +45,10 @@ const ServicePage: React.FC = () => {
       "telephone": PHONE_NUMBER
     },
     "description": contentData.seoDescription,
-    "areaServed": {
+    "areaServed": ["Scarborough", "Pickering", "Ajax", "Whitby", "Oshawa"].map(city => ({
       "@type": "City",
-      "name": "Greater Metro Area"
-    }
+      "name": city
+    }))
   };
 
   const faqJsonLd = {
@@ -99,12 +98,12 @@ const ServicePage: React.FC = () => {
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-dark mb-6 leading-[1.05] tracking-tight">
-              Emergency <br className="hidden sm:block" />
-              <span className="text-brand-yellow drop-shadow-sm block mt-1">{title}</span>
+              {title} <br className="hidden sm:block" />
+              <span className="text-brand-yellow drop-shadow-sm block mt-1">At Your Location in ~30 Min</span>
             </h1>
             
             <p className="text-lg text-gray-500 mb-8 leading-relaxed max-w-lg font-medium">
-              {description} Our certified emergency experts are on standby to get you back on the road instantly with <span className="font-bold text-gray-800">zero hassle</span>.
+              {description} Call now and a live dispatcher will give you an <span className="font-bold text-gray-800">upfront price and a real ETA</span> before we send a unit.
             </p>
             
             <div className="space-y-4 mb-10 bg-gray-50 p-6 rounded-2xl border border-gray-100">
@@ -118,7 +117,7 @@ const ServicePage: React.FC = () => {
               </div>
               <div className="flex items-center gap-3 text-base font-bold text-brand-dark">
                  <CheckCircle2 className="text-green-500 flex-shrink-0" size={22} /> 
-                 <span>Top Rated Mobile Mechanics</span>
+                 <span>Licensed &amp; Insured Technicians</span>
               </div>
             </div>
 
@@ -157,16 +156,11 @@ const ServicePage: React.FC = () => {
              {/* Floating Trust Card */}
              <div className="absolute bottom-6 left-6 right-6 lg:bottom-12 lg:left-12 lg:right-12 bg-white rounded-2xl p-5 md:p-6 flex items-center justify-between shadow-[0_20px_40px_rgba(0,0,0,0.2)] border-b-4 border-brand-yellow">
                 <div className="flex items-center gap-4">
-                    <div className="flex -space-x-4">
-                        {[1, 2, 3].map((i) => (
-                            <img key={i} src={`https://i.pravatar.cc/100?img=${10+i}`} alt="customer" className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white object-cover shadow-sm bg-gray-200" />
-                        ))}
-                    </div>
                     <div>
                        <div className="flex text-yellow-500 mb-1">
                           {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                        </div>
-                       <div className="text-xs md:text-sm font-bold text-brand-dark">90+ Verified Reviews</div>
+                       <div className="text-xs md:text-sm font-bold text-brand-dark">{GOOGLE_RATING}/5 · {GOOGLE_REVIEWS_COUNT}+ Google Reviews</div>
                     </div>
                 </div>
                 <div className="text-right border-l border-gray-100 pl-4 md:pl-6">
@@ -277,11 +271,6 @@ const ServicePage: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Trust Elements at Bottom */}
-      <div className="mb-20">
-        <Testimonials />
       </div>
 
       {/* Massive Conversion Footer CTA */}

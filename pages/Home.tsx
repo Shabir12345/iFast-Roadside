@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import GoogleReviews from '../components/GoogleReviews';
 import Services from '../components/Services';
-import Testimonials from '../components/Testimonials';
 import About from '../components/About';
 import Process from '../components/Process';
 import FAQ from '../components/FAQ';
@@ -53,7 +52,7 @@ const Home: React.FC = () => {
                 "name": "How fast can you reach my location?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "On average, our technicians arrive within 30 minutes. However, arrival times can vary based on traffic, weather conditions, and your exact location in the Greater Metro Area."
+                  "text": "On average, our technicians arrive within 30 minutes. However, arrival times can vary based on traffic, weather conditions, and your exact location in the East GTA."
                 }
               },
               {
@@ -97,7 +96,6 @@ const Home: React.FC = () => {
       <About />
       <Services />
       <Process />
-      <Testimonials />
       <FAQ />
     </main>
   );

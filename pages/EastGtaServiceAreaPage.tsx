@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { PhoneCall, ShieldCheck, ThumbsUp, Clock, CheckCircle, Star, MapPin } from 'lucide-react';
 import { PHONE_NUMBER } from '../constants';
 import Process from '../components/Process';
-import Testimonials from '../components/Testimonials';
 import GoogleReviews from '../components/GoogleReviews';
 import Services from '../components/Services';
 import { trackPhoneCall } from '../utils/analytics';
@@ -60,7 +59,7 @@ const EastGtaServiceAreaPage: React.FC = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-lg font-medium">
-              Stuck in <strong className="text-brand-dark">Pickering, Ajax, Whitby, Oshawa, or Scarborough</strong>? Our local units are stationed across the East side to get to you instantly. Don't wait hours for an out-of-town tow.
+              Stuck in <strong className="text-brand-dark">Pickering, Ajax, Whitby, Oshawa, or Scarborough</strong>? Our local units are stationed across the East side and typically reach you in about 30 minutes. Don't wait hours for an out-of-town tow.
             </p>
             
             <div className="space-y-4 mb-10">
@@ -142,8 +141,6 @@ const EastGtaServiceAreaPage: React.FC = () => {
       <div className="container mx-auto px-4 py-20">
           <Process />
       </div>
-
-      <Testimonials />
 
       {/* Massive Bottom CTA */}
       <div className="bg-brand-yellow py-20 relative overflow-hidden">

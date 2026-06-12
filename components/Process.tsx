@@ -4,18 +4,18 @@ import { PhoneCall, MapPin, Wrench, CheckCircle2 } from 'lucide-react';
 const STEPS = [
     {
         icon: PhoneCall,
-        title: "Tap to Request Help",
-        description: "Call or chat instantly. We pinpoint your GPS location without you needing to guess the nearest intersection."
+        title: "Call for Help",
+        description: "Tell dispatch what happened and where you are — a highway exit, plaza, or nearby business is enough. You'll get an upfront price before we roll."
     },
     {
         icon: Wrench,
-        title: "Rapid GPS Dispatch",
-        description: "You get immediate confirmation. The closest fully-equipped safety vehicle is routed to you in under 30 minutes."
+        title: "Rapid Dispatch",
+        description: "The closest fully-equipped service van is routed to you with a real ETA — typically around 30 minutes across the East GTA."
     },
     {
         icon: CheckCircle2,
         title: "Safely On Your Way",
-        description: "Our certified tech secures your vehicle, fixes the issue damage-free, and takes secure mobile payment."
+        description: "Our tech secures your vehicle, fixes the issue damage-free, and takes secure mobile payment."
     }
 ];
 
@@ -25,7 +25,7 @@ const Process: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="text-center mb-20">
                     <h2 className="text-3xl md:text-5xl font-black text-brand-dark mb-4">Back On The Road In 3 Simple Steps</h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">We've eliminated the stress and waiting game. Getting help is now fast, trackable, and professional.</p>
+                    <p className="text-gray-600 max-w-2xl mx-auto">No waiting game, no surprise bill. Getting help is fast, upfront, and professional.</p>
                 </div>
 
                 <div className="relative">

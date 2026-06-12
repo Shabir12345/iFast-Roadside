@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
 
@@ -19,11 +19,7 @@ const Footer: React.FC = () => {
               Your trusted partner for {BUSINESS_HOURS} roadside assistance and mobile tire services.
               Licensed, insured, and ready to help when you need it most.
             </p>
-            <div className="flex gap-4">
-              <a href="#" aria-label="Follow us on Facebook" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-yellow hover:text-brand-dark transition-colors"><Facebook size={20} /></a>
-              <a href="#" aria-label="Follow us on Instagram" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-yellow hover:text-brand-dark transition-colors"><Instagram size={20} /></a>
-              <a href="#" aria-label="Follow us on Twitter" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-yellow hover:text-brand-dark transition-colors"><Twitter size={20} /></a>
-            </div>
+            {/* Social icons removed until real profiles exist — dead "#" links erode trust. */}
           </div>
 
           <div>

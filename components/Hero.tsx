@@ -31,24 +31,24 @@ const Hero: React.FC = () => {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-black text-brand-dark mb-6 tracking-tight leading-[1]">
-              Stranded? Panic Over. <br className="hidden sm:block" />
-              <span className="text-brand-yellow drop-shadow-sm">Help Is On The Way.</span>
+              Stranded in the East GTA? <br className="hidden sm:block" />
+              <span className="text-brand-yellow drop-shadow-sm">Help Arrives in ~30 Minutes.</span>
             </h1>
 
             <p className="text-gray-600 text-lg md:text-xl font-medium mb-8 max-w-xl leading-relaxed">
-              Don't wait hours in the cold for a traditional tow truck. We dispatch 24/7 rapid-response roadside mechanics across the East GTA. Average ETA: 30 minutes.
+              24/7 roadside assistance and mobile tire service across Scarborough, Pickering, Ajax, Whitby &amp; Oshawa. Call now — you'll get an upfront price and a real ETA before we dispatch.
             </p>
 
             {/* Trust Checkmarks */}
             <div className="flex flex-col sm:flex-row gap-4 mb-10 justify-center lg:justify-start">
               <div className="flex items-center gap-2 text-sm font-bold text-gray-700">
-                <CheckCircle2 size={18} className="text-green-500" /> Safety-First Response
+                <CheckCircle2 size={18} className="text-green-500" /> Upfront Price Before Dispatch
               </div>
               <div className="flex items-center gap-2 text-sm font-bold text-gray-700">
-                <CheckCircle2 size={18} className="text-green-500" /> No Hidden Fees
+                <CheckCircle2 size={18} className="text-green-500" /> Damage-Free Service
               </div>
               <div className="flex items-center gap-2 text-sm font-bold text-gray-700">
-                <CheckCircle2 size={18} className="text-green-500" /> Damage-Free
+                <CheckCircle2 size={18} className="text-green-500" /> Licensed &amp; Insured
               </div>
             </div>
 
