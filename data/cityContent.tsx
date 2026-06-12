@@ -60,7 +60,7 @@ export const CITY_CONTENT: Record<string, CityContent> = {
     seoTitle: '24/7 Roadside Assistance Scarborough | Mobile Tire, Jump Start, Lockout — iFAST',
     seoDescription: 'Scarborough\'s local 24/7 roadside assistance. Mobile tire repair, battery boost, car lockout, fuel delivery, and towing across Agincourt, Malvern, Woburn, and the 401. 4.9★ / 94+ reviews. Call now.',
     keywords: 'roadside assistance Scarborough, mobile tire repair Scarborough, flat tire Scarborough, jump start Scarborough, car lockout Scarborough, towing Scarborough, 24 hour roadside Scarborough, battery boost Agincourt, flat tire Malvern',
-    heroImage: '/roadside_technician_towing.png',
+    heroImage: '/roadside_technician_towing.jpg',
     responseTime: '15-25 minutes',
     tagline: 'Your Scarborough home base — fastest response in the East End',
     introParagraph: (
@@ -130,7 +130,7 @@ export const CITY_CONTENT: Record<string, CityContent> = {
     seoTitle: '24/7 Roadside Assistance Pickering | Mobile Tire, Jump Start, Lockout — iFAST',
     seoDescription: 'Local 24/7 roadside assistance in Pickering. Mobile tire repair, battery boost, car lockout, fuel delivery, and towing across Bay Ridges, Amberlea, Liverpool, and the 401 corridor. 4.9★ rated. Call now.',
     keywords: 'roadside assistance Pickering, mobile tire repair Pickering, flat tire Pickering, jump start Pickering, car lockout Pickering, towing Pickering, 24 hour roadside Pickering, battery boost Bay Ridges, flat tire 401 Pickering',
-    heroImage: '/tire_service_hero_1773847732052.png',
+    heroImage: '/tire_service_hero.jpg',
     responseTime: '20-30 minutes',
     tagline: 'Pickering\'s trusted East GTA roadside team — fast response along the 401 corridor',
     introParagraph: (
@@ -200,7 +200,7 @@ export const CITY_CONTENT: Record<string, CityContent> = {
     seoTitle: '24/7 Roadside Assistance Ajax | Mobile Tire, Jump Start, Lockout — iFAST',
     seoDescription: 'Fast 24/7 roadside assistance in Ajax. Mobile tire repair, jump starts, car lockouts, fuel delivery, and towing across Harwood, Pickering Village, Audley, and the 401. 4.9★ rated. Call now.',
     keywords: 'roadside assistance Ajax, mobile tire repair Ajax, flat tire Ajax, jump start Ajax, car lockout Ajax, towing Ajax, 24 hour roadside Ajax, battery boost Harwood, flat tire 401 Ajax',
-    heroImage: '/roadside_assistance_help.png',
+    heroImage: '/roadside_assistance_help.jpg',
     responseTime: '25-35 minutes',
     tagline: 'Ajax roadside assistance from a team that actually knows Harwood, Salem, and Westney',
     introParagraph: (
@@ -270,7 +270,7 @@ export const CITY_CONTENT: Record<string, CityContent> = {
     seoTitle: '24/7 Roadside Assistance Whitby | Mobile Tire, Jump Start, Lockout — iFAST',
     seoDescription: 'Local 24/7 roadside assistance in Whitby and Brooklin. Mobile tire repair, jump starts, car lockouts, fuel delivery, and towing across Port Whitby, Downtown, and the 401/412 corridor. 4.9★ rated.',
     keywords: 'roadside assistance Whitby, mobile tire repair Whitby, flat tire Whitby, jump start Whitby, car lockout Whitby, towing Whitby, roadside Brooklin, 24 hour roadside Whitby, 412 flat tire',
-    heroImage: '/jump_start_hero_1773847771517.png',
+    heroImage: '/jump_start_hero.jpg',
     responseTime: '30-40 minutes',
     tagline: 'Whitby and Brooklin roadside help — covering the 401, 412, and everywhere between',
     introParagraph: (
@@ -340,7 +340,7 @@ export const CITY_CONTENT: Record<string, CityContent> = {
     seoTitle: '24/7 Roadside Assistance Oshawa | Mobile Tire, Jump Start, Lockout — iFAST',
     seoDescription: '24/7 roadside assistance and mobile tire service in Oshawa. Flat tire repair, jump starts, car lockouts, fuel delivery, and emergency towing across Downtown, Samac, Vanier, and the 401/407/412. 4.9★ rated.',
     keywords: 'roadside assistance Oshawa, mobile tire repair Oshawa, flat tire Oshawa, jump start Oshawa, car lockout Oshawa, towing Oshawa, 24 hour roadside Oshawa, UOIT roadside, Durham College roadside, 401 Oshawa breakdown',
-    heroImage: '/fuel_delivery_hero_1773847948357.png',
+    heroImage: '/fuel_delivery_hero.jpg',
     responseTime: '35-50 minutes',
     tagline: 'Oshawa roadside coverage — we come to you, even at the east edge of our zone',
     introParagraph: (

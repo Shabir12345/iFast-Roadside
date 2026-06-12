@@ -12,7 +12,7 @@ const About: React.FC = () => {
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-4">
                                 <img
-                                    src="/roadside_assistance_help.png"
+                                    src="/roadside_assistance_help.jpg"
                                     alt="Roadside Assistance Help"
                                     className="rounded-3xl shadow-lg w-full h-64 object-cover"
                                     loading="lazy"
@@ -29,7 +29,7 @@ const About: React.FC = () => {
                                     <div className="text-gray-400 text-xs uppercase tracking-widest mt-1">Availability</div>
                                 </div>
                                 <img
-                                    src="/roadside_technician_towing.png"
+                                    src="/roadside_technician_towing.jpg"
                                     alt="Professional Roadside Service"
                                     className="rounded-3xl shadow-lg w-full h-64 object-cover"
                                     loading="lazy"

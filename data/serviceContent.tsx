@@ -40,7 +40,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoTitle: '24/7 Mobile Mechanic East GTA | Emergency On-Site Car Repair Pickering, Ajax, Oshawa',
     seoDescription: 'Need a mechanic that comes to you? iFAST Roadside provides 24/7 mobile mechanic services across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Expert diagnostics, on-site repairs, and emergency service. Call now.',
     keywords: 'mobile mechanic Pickering, emergency car repair Ajax, on-site mechanic Oshawa, mobile auto repair Whitby, 24/7 mechanic Scarborough, mobile engine diagnostics East GTA',
-    heroImage: '/mobile_mechanic_hero.png',
+    heroImage: '/mobile_mechanic_hero.jpg',
     blogSections: [
       {
         title: 'Professional Mobile Mechanic Services Across the East GTA',
@@ -124,7 +124,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoTitle: '24/7 Mobile Tire Service & Flat Tire Repair East GTA | Pickering, Ajax, Oshawa',
     seoDescription: '24/7 Mobile Flat Tire Change Service Across the East GTA. Serving Pickering, Ajax, Whitby, Oshawa, and Scarborough. Rapid 30-min response. Call now for emergency tire repair.',
     keywords: 'flat tire change Pickering, mobile tire service Ajax, emergency flat tire repair Oshawa, onsite tire repair Whitby, 24/7 flat tire change Scarborough, mobile tire swap East GTA',
-    heroImage: '/tire_service_hero_1773847732052.png',
+    heroImage: '/tire_service_hero.jpg',
     blogSections: [
       {
         title: '24/7 Mobile Flat Tire Service Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
@@ -225,7 +225,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoTitle: '24/7 Car Battery Jump Start East GTA | Pickering, Ajax, Oshawa',
     seoDescription: 'Dead battery? iFAST Roadside provides rapid 24/7 battery jump start services across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Safe, anti-surge boosters. Fast local dispatch.',
     keywords: 'car battery jump start Pickering, dead battery service Ajax, mobile jump start Oshawa, onsite battery boost Whitby, 24/7 jump start Scarborough, car won\'t start East GTA',
-    heroImage: '/jump_start_hero_1773847771517.png',
+    heroImage: '/jump_start_hero.jpg',
     blogSections: [
       {
         title: '24/7 Mobile Battery Jump Start Service Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
@@ -317,7 +317,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoTitle: '24/7 Car Lockout Service East GTA | Pickering, Ajax, Oshawa',
     seoDescription: 'Locked your keys in your car? iFAST Roadside offers 100% damage-free 24/7 car lockout services across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Fast local dispatch.',
     keywords: 'car lockout service Pickering, keys locked in car Ajax, unlock car door Oshawa, mobile auto locksmith Whitby, emergency vehicle unlock Scarborough, keys locked in trunk East GTA',
-    heroImage: '/car_lockout_hero_1773847808494.png',
+    heroImage: '/car_lockout_hero.jpg',
     blogSections: [
       {
         title: '24/7 Emergency Car Lockout Service Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
@@ -408,7 +408,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoTitle: '24/7 Emergency Fuel Delivery East GTA | Pickering, Ajax, Oshawa',
     seoDescription: 'Ran out of gas? iFAST Roadside provides rapid 24/7 emergency fuel delivery (regular, premium, diesel, DEF) across Pickering, Ajax, Whitby, Oshawa, and Scarborough.',
     keywords: 'emergency fuel delivery Pickering, ran out of gas Ajax, roadside gas delivery Oshawa, diesel delivery Whitby, 24/7 fuel service Scarborough, highway 401 gas delivery East GTA',
-    heroImage: '/fuel_delivery_hero_1773847948357.png',
+    heroImage: '/fuel_delivery_hero.jpg',
     blogSections: [
       {
         title: '24/7 Mobile Emergency Fuel Delivery Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
@@ -499,7 +499,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoTitle: '24/7 Emergency Towing Service East GTA | Pickering, Ajax, Oshawa',
     seoDescription: 'Reliable 24/7 emergency flatbed towing service across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Safe, damage-free transport for accidents and breakdowns.',
     keywords: 'tow truck Pickering, emergency towing Ajax, flatbed tow truck Oshawa, accident towing Whitby, AWD towing Scarborough, luxury car towing East GTA',
-    heroImage: '/roadside_technician_towing.png',
+    heroImage: '/roadside_technician_towing.jpg',
     blogSections: [
       {
         title: '24/7 Fast & Reliable Flatbed Towing Across the East GTA (Pickering, Ajax, Whitby)',

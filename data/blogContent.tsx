@@ -59,7 +59,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Emergency Tips',
     publishDate: '2026-05-04',
     readTime: '7 min read',
-    heroImage: '/tire_service_hero_1773847732052.png',
+    heroImage: '/tire_service_hero.jpg',
     heroImageAlt: 'Mobile tire service technician responding to flat tire on Ontario highway',
     sections: [
       {
@@ -225,7 +225,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Seasonal Guide',
     publishDate: '2026-05-04',
     readTime: '9 min read',
-    heroImage: '/mobile_mechanic_hero.png',
+    heroImage: '/mobile_mechanic_hero.jpg',
     heroImageAlt: 'Roadside technician helping driver during Ontario winter emergency',
     sections: [
       {
@@ -411,7 +411,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Buyer\'s Guide',
     publishDate: '2026-05-04',
     readTime: '8 min read',
-    heroImage: '/mobile_mechanic_hero.png',
+    heroImage: '/mobile_mechanic_hero.jpg',
     heroImageAlt: 'Driver comparing roadside assistance options on phone while waiting beside car',
     sections: [
       {
@@ -613,7 +613,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Pricing Guide',
     publishDate: '2026-05-04',
     readTime: '7 min read',
-    heroImage: '/mobile_mechanic_hero.png',
+    heroImage: '/mobile_mechanic_hero.jpg',
     heroImageAlt: 'Mobile mechanic working on car in driveway in East GTA Ontario',
     sections: [
       {

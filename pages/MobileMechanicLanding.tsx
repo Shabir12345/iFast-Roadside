@@ -91,7 +91,7 @@ const MobileMechanicLanding: React.FC = () => {
         <link rel="canonical" href="https://ifastroadside.ca/mobile-mechanic" />
         <meta property="og:title" content={contentData.seoTitle} />
         <meta property="og:description" content={contentData.seoDescription} />
-        <meta property="og:image" content="https://ifastroadside.ca/mobile_mechanic_hero.png" />
+        <meta property="og:image" content="https://ifastroadside.ca/mobile_mechanic_hero.jpg" />
         <meta property="og:url" content="https://ifastroadside.ca/mobile-mechanic" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
@@ -165,7 +165,7 @@ const MobileMechanicLanding: React.FC = () => {
             <div className="w-full lg:w-1/2 relative">
               <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
                 <img 
-                  src="/mobile_mechanic_hero.png" 
+                  src="/mobile_mechanic_hero.jpg"
                   alt="Professional Mobile Mechanic at work" 
                   className="w-full h-full object-cover aspect-square md:aspect-video lg:aspect-square"
                 />
