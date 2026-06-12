@@ -88,7 +88,13 @@ const URLS = [
   'https://www.ifastroadside.ca/service/towing/oshawa',
 ];
 
-const GSC_INSPECT_BASE = 'https://search.google.com/search-console/inspect?resource_id=sc-domain%3Aifastroadside.ca&id=';
+// Pin the Google account that has Search Console access. Without this the
+// inspect URLs open under the browser's default account and Google returns
+// a bare 404 if that account lacks access to the property.
+// Override with: set GSC_ACCOUNT=you@example.com before running.
+const AUTH_USER = process.env.GSC_ACCOUNT || 'shabir@nextscaledigital.com';
+
+const GSC_INSPECT_BASE = `https://search.google.com/search-console/inspect?resource_id=sc-domain%3Aifastroadside.ca&authuser=${encodeURIComponent(AUTH_USER)}&id=`;
 
 const DELAY_BETWEEN = 4000; // ms between requests (be polite to Google's UI)
 
@@ -104,6 +110,16 @@ async function requestIndexing(page, url) {
 
   // Wait for the page to fully load and show inspection results
   try {
+    // Bail out clearly if Google serves its 404 page (wrong account / no access)
+    const bodyText = await page.locator('body').innerText().catch(() => '');
+    if (bodyText.includes("That's an error") && bodyText.includes('404')) {
+      throw new Error(
+        `Google returned 404 — the account "${AUTH_USER}" is not logged in or has no ` +
+        'access to this Search Console property. Log in with the right account, or run ' +
+        'with GSC_ACCOUNT=correct@email.com'
+      );
+    }
+
     // Wait for the inspection result panel ("URL is/is not on Google") — can take 10-20s
     await page.waitForSelector('text=/URL is (on|not on) Google/i', { timeout: 45000 }).catch(() => {});
     await page.waitForTimeout(2000);
@@ -151,6 +167,7 @@ async function requestIndexing(page, url) {
       }
     }
   } catch (err) {
+    if (err.message.includes('Google returned 404')) throw err; // abort the whole run
     console.log(`  ✗ Error: ${err.message}`);
     await page.screenshot({ path: `scripts/error-${Date.now()}.png` }).catch(() => {});
   }
@@ -214,6 +231,11 @@ async function main() {
     } catch (err) {
       console.log(`  ✗ Fatal error for ${url}: ${err.message}`);
       results.failed.push(url);
+      if (err.message.includes('Google returned 404')) {
+        console.log('\nAborting — fix the account access problem and rerun.');
+        await browser.close().catch(() => {});
+        process.exit(1);
+      }
     }
 
     if (i < URLS.length - 1) {
