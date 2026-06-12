@@ -4,6 +4,7 @@ import { PhoneCall, ShieldCheck, ThumbsUp, Clock, CheckCircle, Star, MapPin } fr
 import { PHONE_NUMBER } from '../constants';
 import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
+import GoogleReviews from '../components/GoogleReviews';
 import Services from '../components/Services';
 import { trackPhoneCall } from '../utils/analytics';
 
@@ -121,6 +122,9 @@ const EastGtaServiceAreaPage: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Google Reviews — social proof right under the hero */}
+      <GoogleReviews />
 
       {/* Services Map (Using generic services component but context is set via layout) */}
       <div className="bg-white py-16 mb-8 mt-16 premium-shadow border-y border-gray-100">

@@ -5,6 +5,7 @@ import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle, Star, ShieldChec
 import { PHONE_NUMBER, COMPANY_NAME, SERVICES } from '../constants';
 import { CITY_CONTENT } from '../data/cityContent';
 import Process from '../components/Process';
+import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
 
 const CityPage: React.FC = () => {
@@ -207,6 +208,9 @@ const CityPage: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Google Reviews — social proof right under the hero */}
+      <GoogleReviews />
 
       {/* Intro / local angle */}
       <div className="container mx-auto px-4 mt-8 mb-16">

@@ -7,6 +7,7 @@ import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle2, Star, ShieldChe
 import { CITY_CONTENT } from '../data/cityContent';
 import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
+import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
 
 const ServicePage: React.FC = () => {
@@ -187,6 +188,9 @@ const ServicePage: React.FC = () => {
            <div className="flex items-center gap-2"><Camera className="text-brand-dark" size={24} /> 100% Damage Free</div>
         </div>
       </div>
+
+      {/* Google Reviews — high up so social proof is one of the first things seen */}
+      <GoogleReviews />
 
       {/* Process Section natively integrated */}
       <Process />

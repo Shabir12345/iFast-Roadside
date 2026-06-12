@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { PHONE_NUMBER, COMPANY_NAME } from '../constants';
+import { PHONE_NUMBER, COMPANY_NAME, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { SERVICE_CONTENT } from '../data/serviceContent';
 import { CITY_CONTENT } from '../data/cityContent';
 import { 
@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
+import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
 
 const MobileMechanicLanding: React.FC = () => {
@@ -193,6 +194,9 @@ const MobileMechanicLanding: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Google Reviews — social proof right under the hero */}
+      <GoogleReviews />
 
       {/* Features / Services Grid */}
       <section className="py-20 bg-gray-50">

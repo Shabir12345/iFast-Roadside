@@ -6,6 +6,7 @@ import { SERVICES, PHONE_NUMBER, COMPANY_NAME } from '../constants';
 import { CITY_CONTENT } from '../data/cityContent';
 import { SERVICE_CITY_CONTENT } from '../data/serviceCityContent';
 import Process from '../components/Process';
+import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
 
 const ServiceCityPage: React.FC = () => {
@@ -217,6 +218,9 @@ const ServiceCityPage: React.FC = () => {
            <div className="flex items-center gap-2"><Camera className="text-brand-dark" size={24} /> Damage-Free Methods</div>
         </div>
       </div>
+
+      {/* Google Reviews — social proof right under the hero */}
+      <GoogleReviews />
 
       {/* Content Blocks (Clear, readable, high contrast text) */}
       <div className="container mx-auto px-4 mb-20">

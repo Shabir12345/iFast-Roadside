@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
+import GoogleReviews from '../components/GoogleReviews';
 import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
 import About from '../components/About';
@@ -92,6 +93,7 @@ const Home: React.FC = () => {
         </script>
       </Helmet>
       <Hero />
+      <GoogleReviews />
       <About />
       <Services />
       <Process />

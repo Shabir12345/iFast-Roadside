@@ -17,6 +17,15 @@ export interface Testimonial {
   rating: number;
 }
 
+export interface GoogleReview {
+  id: number;
+  name: string;
+  /** Relative time string shown under the name, e.g. "2 weeks ago". */
+  timeAgo: string;
+  content: string;
+  rating: number;
+}
+
 export interface ChatMessage {
   role: 'user' | 'model';
   text: string;

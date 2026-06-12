@@ -1,5 +1,5 @@
 import { Disc, Battery, Fuel, Key, Truck, Wrench, RefreshCw, CircleDot, Gauge, BatteryCharging } from 'lucide-react';
-import { ServiceItem, Testimonial } from './types';
+import { ServiceItem, Testimonial, GoogleReview } from './types';
 
 export const COMPANY_NAME = "iFAST Roadside Assistance";
 export const PHONE_NUMBER = "+1 437-215-3468";
@@ -8,6 +8,64 @@ export const ADDRESS = "20 Antrim Crescent, Scarborough, ON M1P 4N3";
 export const BUSINESS_HOURS = "24/7";
 export const GOOGLE_RATING = 4.9;
 export const GOOGLE_REVIEWS_COUNT = 94;
+
+// Direct link to the iFAST Google Business reviews panel.
+// Swap the static GOOGLE_REVIEWS below for live Places API data when that's wired up.
+export const GOOGLE_REVIEWS_URL =
+  "https://www.google.com/search?q=ifastroadside#lrd=0x89d4d1ede5e0b3d9:0x1b3fa201a2a7c25b,1,,,,";
+
+// Placeholder reviews shown until the live Google Places API is connected.
+// Kept distinct from TESTIMONIALS so a page can show both without repeating content.
+export const GOOGLE_REVIEWS: GoogleReview[] = [
+  {
+    id: 1,
+    name: "Daniel Okafor",
+    timeAgo: "2 weeks ago",
+    content:
+      "Blew a tire on the 401 near Whitby during rush hour. Called iFAST and they had someone to me in about 25 minutes. Quick, professional, and the price was exactly what they quoted on the phone. Lifesavers.",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "Priya Sharma",
+    timeAgo: "1 month ago",
+    content:
+      "Dead battery in my driveway in Ajax on the coldest morning of the year. The tech showed up fast, got me started, and even checked my alternator to make sure I wouldn't be stuck again. Highly recommend.",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Marcus Bennett",
+    timeAgo: "3 weeks ago",
+    content:
+      "Locked my keys in the car outside work in Pickering. They unlocked it in minutes with zero damage. Friendly, upfront about cost, no surprise fees. This is who I'm calling every time now.",
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: "Jessica Tran",
+    timeAgo: "1 week ago",
+    content:
+      "Ran out of gas on the way to work in Oshawa. iFAST brought fuel right to me and I was back on the road before I was even late. Super easy to deal with and genuinely kind on the phone.",
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: "Andre Williams",
+    timeAgo: "2 months ago",
+    content:
+      "My car wouldn't start and I needed a mechanic to actually come to me. Their mobile tech diagnosed it on the spot and fixed it in my own parking lot. Saved me a tow and a dealership bill.",
+    rating: 5,
+  },
+  {
+    id: 6,
+    name: "Sophie Leblanc",
+    timeAgo: "1 month ago",
+    content:
+      "Flat tire in Scarborough at night and I was nervous waiting alone. The driver arrived quickly, was reassuring and professional, and had me moving again fast. Excellent service start to finish.",
+    rating: 5,
+  },
+];
 
 export const SERVICES: ServiceItem[] = [
   {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import { TESTIMONIALS } from '../constants';
+import { TESTIMONIALS, GOOGLE_REVIEWS_URL } from '../constants';
 
 const Testimonials: React.FC = () => {
   return (
@@ -40,6 +40,17 @@ const Testimonials: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <a
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark px-8 py-4 rounded-2xl font-black text-base md:text-lg transition-all duration-300 shadow-lg transform hover:-translate-y-1"
+          >
+            Check Out All Our Reviews
+          </a>
         </div>
       </div>
     </section>
