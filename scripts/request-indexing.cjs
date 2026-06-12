@@ -88,13 +88,40 @@ const URLS = [
   'https://www.ifastroadside.ca/service/towing/oshawa',
 ];
 
-// Pin the Google account that has Search Console access. Without this the
-// inspect URLs open under the browser's default account and Google returns
-// a bare 404 if that account lacks access to the property.
-// Override with: set GSC_ACCOUNT=you@example.com before running.
-const AUTH_USER = process.env.GSC_ACCOUNT || 'shabir@nextscaledigital.com';
+// GSC serves a bare Google 404 when the session account picked by `authuser`
+// has no access to the property. The right slot depends on login order, so we
+// auto-detect it at startup by probing authuser=0..5 (plus GSC_ACCOUNT if set).
+const RESOURCE_ID = 'sc-domain%3Aifastroadside.ca';
+let AUTH_USER = null; // resolved in main()
 
-const GSC_INSPECT_BASE = `https://search.google.com/search-console/inspect?resource_id=sc-domain%3Aifastroadside.ca&authuser=${encodeURIComponent(AUTH_USER)}&id=`;
+function inspectUrlFor(url) {
+  return `https://search.google.com/search-console/inspect?resource_id=${RESOURCE_ID}&authuser=${encodeURIComponent(AUTH_USER)}&id=${encodeURIComponent(url)}`;
+}
+
+async function isGoogle404(page) {
+  const text = await page.locator('body').innerText().catch(() => '');
+  // Note: Google renders a curly apostrophe in "That’s an error"
+  return text.includes('requested URL was not found') ||
+         text.includes('That’s an error') ||
+         text.includes("That's an error");
+}
+
+async function detectAuthuser(page) {
+  const candidates = process.env.GSC_ACCOUNT
+    ? [process.env.GSC_ACCOUNT, 0, 1, 2, 3, 4, 5]
+    : [0, 1, 2, 3, 4, 5];
+  for (const au of candidates) {
+    const probe = `https://search.google.com/search-console/inspect?resource_id=${RESOURCE_ID}&authuser=${encodeURIComponent(au)}&id=${encodeURIComponent('https://www.ifastroadside.ca/')}`;
+    await page.goto(probe, { waitUntil: 'domcontentloaded', timeout: 60000 }).catch(() => {});
+    await page.waitForTimeout(4000);
+    if (page.url().includes('accounts.google.com')) continue; // slot not logged in
+    if (!(await isGoogle404(page))) {
+      console.log(`✓ Found working Google session: authuser=${au}`);
+      return au;
+    }
+  }
+  return null;
+}
 
 const DELAY_BETWEEN = 4000; // ms between requests (be polite to Google's UI)
 
@@ -103,7 +130,7 @@ function sleep(ms) {
 }
 
 async function requestIndexing(page, url) {
-  const inspectUrl = GSC_INSPECT_BASE + encodeURIComponent(url);
+  const inspectUrl = inspectUrlFor(url);
   console.log(`\n[${new Date().toLocaleTimeString()}] Inspecting: ${url}`);
 
   await page.goto(inspectUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
@@ -111,12 +138,10 @@ async function requestIndexing(page, url) {
   // Wait for the page to fully load and show inspection results
   try {
     // Bail out clearly if Google serves its 404 page (wrong account / no access)
-    const bodyText = await page.locator('body').innerText().catch(() => '');
-    if (bodyText.includes("That's an error") && bodyText.includes('404')) {
+    if (await isGoogle404(page)) {
       throw new Error(
-        `Google returned 404 — the account "${AUTH_USER}" is not logged in or has no ` +
-        'access to this Search Console property. Log in with the right account, or run ' +
-        'with GSC_ACCOUNT=correct@email.com'
+        `Google returned 404 — authuser=${AUTH_USER} lost access mid-run. ` +
+        'Rerun the script to re-detect the session.'
       );
     }
 
@@ -211,12 +236,31 @@ async function main() {
       await browser.close();
       process.exit(1);
     }
-    console.log('✓ Login detected! Starting in 3 seconds...\n');
-    await sleep(3000);
+    console.log('✓ Login detected!\n');
   } else {
-    console.log('✓ Already logged in! Starting in 3 seconds...\n');
-    await sleep(3000);
+    console.log('✓ Already logged in!\n');
   }
+
+  // Find which Google session slot actually has Search Console access.
+  console.log('Detecting which signed-in account has access to the property...');
+  AUTH_USER = await detectAuthuser(page);
+
+  if (AUTH_USER === null) {
+    console.log('\n⚠ None of the signed-in accounts can open this Search Console property.');
+    console.log('  In the browser window: log in (or add an account) with the Google');
+    console.log('  account you normally use to open Search Console for ifastroadside.ca.');
+    console.log('  I will re-check every 30 seconds for up to 5 minutes...\n');
+    for (let waited = 0; waited < 300000 && AUTH_USER === null; waited += 30000) {
+      await sleep(30000);
+      AUTH_USER = await detectAuthuser(page);
+    }
+    if (AUTH_USER === null) {
+      console.log('✗ Still no account with access — exiting. Add the right account and rerun.');
+      await browser.close();
+      process.exit(1);
+    }
+  }
+  console.log(`Starting submissions using authuser=${AUTH_USER}...\n`);
 
   // Process each URL
   const results = { success: [], skipped: [], failed: [] };
