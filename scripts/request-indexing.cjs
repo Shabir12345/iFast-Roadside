@@ -30,6 +30,18 @@ const URLS = [
   'https://www.ifastroadside.ca/service/lockout',
   'https://www.ifastroadside.ca/service/fuel',
   'https://www.ifastroadside.ca/service/towing',
+  'https://www.ifastroadside.ca/service/flat-tire-repair',
+  'https://www.ifastroadside.ca/service/spare-tire-change',
+  'https://www.ifastroadside.ca/service/tire-installation',
+  'https://www.ifastroadside.ca/service/battery-diagnostic',
+  'https://www.ifastroadside.ca/service/battery-replacement',
+
+  // Blog
+  'https://www.ifastroadside.ca/blog',
+  'https://www.ifastroadside.ca/blog/flat-tire-on-401-east-gta',
+  'https://www.ifastroadside.ca/blog/winter-roadside-emergencies-ontario-guide',
+  'https://www.ifastroadside.ca/blog/caa-vs-independent-roadside-assistance-ontario',
+  'https://www.ifastroadside.ca/blog/mobile-mechanic-cost-ontario-pricing-guide',
 
   // City pages
   'https://www.ifastroadside.ca/areas/scarborough',
