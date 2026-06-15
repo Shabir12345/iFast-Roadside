@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle2, Star, ShieldCheck, MapPin, Camera, Zap } from 'lucide-react';
+import { PhoneCall, ArrowLeft, Clock, CheckCircle2, Star, ShieldCheck, MapPin, Camera, Zap } from 'lucide-react';
 import { SERVICES, PHONE_NUMBER, COMPANY_NAME } from '../constants';
 import { CITY_CONTENT } from '../data/cityContent';
 import { SERVICE_CITY_CONTENT } from '../data/serviceCityContent';
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
+import BlockRenderer from '../components/blocks/BlockRenderer';
+import { faqJsonLd, howToJsonLd, itemListJsonLd } from '../utils/schema';
 
 const ServiceCityPage: React.FC = () => {
   const { id, city } = useParams<{ id: string; city: string }>();
   const service = SERVICES.find(s => s.id === id);
   const cityData = city ? CITY_CONTENT[city] : null;
   const combo = id && city ? (SERVICE_CITY_CONTENT as any)[id]?.[city] : null;
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id, city]);
@@ -41,8 +41,8 @@ const ServiceCityPage: React.FC = () => {
     '@context': 'https://schema.org',
     '@type': 'Service',
     'serviceType': service.title,
-    'name': combo.h1,
-    'description': combo.seoDescription,
+    'name': combo.meta.h1,
+    'description': combo.meta.seoDescription,
     'url': canonical,
     'provider': {
       '@type': 'LocalBusiness',
@@ -80,34 +80,30 @@ const ServiceCityPage: React.FC = () => {
     ]
   };
 
-  const faqLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': combo.faqs.map((f: any) => ({
-      '@type': 'Question',
-      'name': f.question,
-      'acceptedAnswer': { '@type': 'Answer', 'text': f.answer }
-    }))
-  };
+  const faqLd = faqJsonLd(combo.blocks);
+  const howToLd = howToJsonLd(combo.blocks, combo.meta.h1);
+  const itemListLd = itemListJsonLd(combo.blocks);
 
   const otherServices = SERVICES.filter(s => s.id !== id);
 
   return (
     <div className="bg-white min-h-screen pt-24 pb-0 font-sans">
       <Helmet>
-        <title>{combo.seoTitle}</title>
-        <meta name="description" content={combo.seoDescription} />
-        <meta name="keywords" content={combo.keywords} />
+        <title>{combo.meta.seoTitle}</title>
+        <meta name="description" content={combo.meta.seoDescription} />
+        <meta name="keywords" content={combo.meta.keywords} />
         <link rel="canonical" href={canonical} />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content={combo.seoTitle} />
-        <meta property="og:description" content={combo.seoDescription} />
+        <meta property="og:title" content={combo.meta.seoTitle} />
+        <meta property="og:description" content={combo.meta.seoDescription} />
         <meta property="og:url" content={canonical} />
-        <meta property="og:image" content={`https://www.ifastroadside.ca${cityData.heroImage}`} />
+        <meta property="og:image" content={`https://www.ifastroadside.ca${combo.hero.image}`} />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(serviceLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
+        {faqLd && <script type="application/ld+json">{JSON.stringify(faqLd)}</script>}
+        {howToLd && <script type="application/ld+json">{JSON.stringify(howToLd)}</script>}
+        {itemListLd && <script type="application/ld+json">{JSON.stringify(itemListLd)}</script>}
       </Helmet>
 
       <div className="container mx-auto px-4">
@@ -130,7 +126,7 @@ const ServiceCityPage: React.FC = () => {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-dark mb-6 leading-[1.05] tracking-tight">
-              {combo.h1}
+              {combo.meta.h1}
             </h1>
 
             <p className="text-lg text-gray-500 mb-8 leading-relaxed max-w-lg font-medium">
@@ -172,12 +168,15 @@ const ServiceCityPage: React.FC = () => {
           {/* Image & Trust Stats Half */}
           <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-[600px] bg-gray-100">
             <img
-              src={cityData.heroImage}
+              src={combo.hero.image}
               alt={`${service.title} in ${cityData.name}`}
               className="absolute inset-0 w-full h-full object-cover lg:object-center"
             />
             {/* Subtle overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent"></div>
+            {combo.hero.credit && (
+              <span className="absolute bottom-1 right-2 text-[10px] text-white/60 z-10">{combo.hero.credit}</span>
+            )}
 
             {/* Icon Pin */}
             <div className="absolute top-6 right-6 w-14 h-14 bg-white/90 backdrop-blur-sm text-brand-yellow rounded-2xl flex items-center justify-center shadow-lg transform rotate-3">
@@ -222,74 +221,16 @@ const ServiceCityPage: React.FC = () => {
       {/* Google Reviews — social proof right under the hero */}
       <GoogleReviews />
 
-      {/* Content Blocks (Clear, readable, high contrast text) */}
+      {/* Content Blocks */}
       <div className="container mx-auto px-4 mb-20">
         <article className="max-w-4xl mx-auto">
-          <div className="prose prose-lg md:prose-xl prose-headings:text-brand-dark prose-p:text-gray-600 focus:outline-none">
-            
-            <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight relative pb-4 after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1.5 after:bg-brand-yellow after:rounded-full">
-              {service.title} in {cityData.name} — How We Work
-            </h2>
-            <div className="leading-relaxed mb-12">{combo.intro}</div>
-
-            <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight relative pb-4 after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1.5 after:bg-brand-yellow after:rounded-full">
-              Local {cityData.name} Context
-            </h2>
-            <div className="leading-relaxed mb-12">{combo.localScenario}</div>
-
-            <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight relative pb-4 after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1.5 after:bg-brand-yellow after:rounded-full">
-              What's Different About {service.title} Here
-            </h2>
-            <div className="leading-relaxed mb-12">{combo.uniqueAngle}</div>
-
-          </div>
-
-          <div className="mt-12 bg-white rounded-3xl p-8 border border-gray-200 shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex flex-col md:flex-row gap-6 items-center">
-            <div className="bg-green-50 p-4 rounded-full">
-              <ShieldCheck size={40} className="text-green-600" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-brand-dark mb-2">Transparent Pricing Structure</h3>
-              <p className="text-gray-600 text-lg m-0 leading-relaxed">{combo.priceNote}</p>
-            </div>
-          </div>
+          <BlockRenderer blocks={combo.blocks} />
         </article>
       </div>
 
       <Process />
 
       <div className="container mx-auto px-4 py-20">
-        {/* FAQ Section - Clean White Style */}
-        <div className="bg-brand-dark text-white p-8 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(11,30,54,0.15)] max-w-4xl mx-auto mb-24 relative overflow-hidden">
-          {/* Subtle brand decor */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-brand-yellow opacity-10 rounded-full blur-[80px]"></div>
-          
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-10 text-center relative z-10 tracking-tight">
-            {service.title} FAQs in {cityData.name}
-          </h2>
-          
-          <div className="space-y-4 relative z-10">
-            {combo.faqs.map((faq: any, index: number) => (
-              <div key={index} className="border border-white/10 bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden">
-                <button
-                  className="w-full px-6 py-6 flex items-center justify-between text-left cursor-pointer focus:outline-none hover:bg-white/10 transition-colors"
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  type="button"
-                >
-                  <span className="font-bold text-lg pr-4">{faq.question}</span>
-                  <ChevronDown
-                    className={`text-brand-yellow transition-transform duration-300 flex-shrink-0 ${openFaq === index ? 'rotate-180' : ''}`}
-                    size={24}
-                  />
-                </button>
-                <div className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openFaq === index ? 'max-h-96 pb-6 opacity-100' : 'max-h-0 pb-0 opacity-0'}`}>
-                  <p className="text-white/70 leading-relaxed">{faq.answer}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Cross-links Section */}
         <div className="max-w-5xl mx-auto mb-16">
           <h2 className="text-2xl md:text-3xl font-black text-brand-dark mb-8 text-center tracking-tight">
