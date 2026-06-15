@@ -1,3 +1,4 @@
+import React from 'react';
 import { ArrowRight, Clock, MapPin, ShieldCheck, PhoneCall, Star, CheckCircle2 } from 'lucide-react';
 import { PHONE_NUMBER, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';

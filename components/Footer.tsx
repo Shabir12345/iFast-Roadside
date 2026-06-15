@@ -1,3 +1,4 @@
+import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
