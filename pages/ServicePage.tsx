@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { SERVICES, PHONE_NUMBER, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { SERVICE_CONTENT } from '../data/serviceContent';
-import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle2, Star, ShieldCheck, MapPin, Camera, Zap } from 'lucide-react';
+import { PhoneCall, ArrowLeft, Clock, CheckCircle2, Star, ShieldCheck, MapPin, Camera, Zap } from 'lucide-react';
 import { CITY_CONTENT } from '../data/cityContent';
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
+import BlockRenderer from '../components/blocks/BlockRenderer';
+import { faqJsonLd, howToJsonLd, itemListJsonLd } from '../utils/schema';
 
 const ServicePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const service = SERVICES.find(s => s.id === id);
-  const contentData = id ? SERVICE_CONTENT[id] : null;
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const contentData = id ? (SERVICE_CONTENT as any)[id] : null;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -44,41 +45,35 @@ const ServicePage: React.FC = () => {
       "name": "iFAST Roadside & Mobile Tires",
       "telephone": PHONE_NUMBER
     },
-    "description": contentData.seoDescription,
+    "description": contentData.meta.seoDescription,
     "areaServed": ["Scarborough", "Pickering", "Ajax", "Whitby", "Oshawa"].map(city => ({
       "@type": "City",
       "name": city
     }))
   };
 
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": contentData.faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
+  const faqLd = faqJsonLd(contentData.blocks);
+  const howToLd = howToJsonLd(contentData.blocks, contentData.meta.h1);
+  const itemListLd = itemListJsonLd(contentData.blocks);
 
   return (
     <div className="bg-white min-h-screen pt-24 pb-0 font-sans">
       <Helmet>
-        <title>{contentData.seoTitle}</title>
-        <meta name="description" content={contentData.seoDescription} />
-        <meta name="keywords" content={contentData.keywords} />
+        <title>{contentData.meta.seoTitle}</title>
+        <meta name="description" content={contentData.meta.seoDescription} />
+        <meta name="keywords" content={contentData.meta.keywords} />
         <link rel="canonical" href={`https://www.ifastroadside.ca/service/${id}`} />
-        <meta property="og:title" content={contentData.seoTitle} />
-        <meta property="og:description" content={contentData.seoDescription} />
-        <meta property="og:image" content={`https://www.ifastroadside.ca${contentData.heroImage}`} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={contentData.meta.seoTitle} />
+        <meta property="og:description" content={contentData.meta.seoDescription} />
+        <meta property="og:image" content={`https://www.ifastroadside.ca${contentData.hero.image}`} />
         <meta property="og:url" content={`https://www.ifastroadside.ca/service/${id}`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+        {faqLd && <script type="application/ld+json">{JSON.stringify(faqLd)}</script>}
+        {howToLd && <script type="application/ld+json">{JSON.stringify(howToLd)}</script>}
+        {itemListLd && <script type="application/ld+json">{JSON.stringify(itemListLd)}</script>}
       </Helmet>
 
       <div className="container mx-auto px-4">
@@ -98,8 +93,7 @@ const ServicePage: React.FC = () => {
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-dark mb-6 leading-[1.05] tracking-tight">
-              {title} <br className="hidden sm:block" />
-              <span className="text-brand-yellow drop-shadow-sm block mt-1">At Your Location in ~30 Min</span>
+              {contentData.meta.h1}
             </h1>
             
             <p className="text-lg text-gray-500 mb-8 leading-relaxed max-w-lg font-medium">
@@ -140,13 +134,16 @@ const ServicePage: React.FC = () => {
           
           {/* Image & Trust Stats Half */}
           <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-[600px] bg-gray-100">
-             <img 
-               src={contentData.heroImage} 
+             <img
+               src={contentData.hero.image}
                alt={`${title} service professional`}
                className="absolute inset-0 w-full h-full object-cover lg:object-center"
              />
              {/* Subtle overlay gradient */}
              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/20 to-transparent"></div>
+             {contentData.hero.credit && (
+               <span className="absolute bottom-1 right-2 text-[10px] text-white/60 z-10">{contentData.hero.credit}</span>
+             )}
              
              {/* Service Icon Badge */}
              <div className="absolute top-6 right-6 w-14 h-14 bg-white/90 backdrop-blur-sm text-brand-yellow rounded-2xl flex items-center justify-center shadow-lg transform rotate-3">
@@ -190,68 +187,12 @@ const ServicePage: React.FC = () => {
       <Process />
 
       <div className="container mx-auto px-4 mt-8 mb-20">
-        {/* Service Details (Blog-style content for SEO) */}
         <article className="max-w-4xl mx-auto">
-          <div className="prose prose-lg md:prose-xl prose-headings:text-brand-dark prose-p:text-gray-600 focus:outline-none">
-             {contentData.blogSections.map((section, idx) => (
-               <div key={idx} className="mb-12">
-                 <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight relative pb-4 after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1.5 after:bg-brand-yellow after:rounded-full">
-                  {section.title}
-                 </h2>
-                 <div className="leading-relaxed">
-                   {section.content}
-                 </div>
-               </div>
-             ))}
-          </div>
-
-          <div className="mt-12 bg-white rounded-3xl p-8 border border-gray-200 shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex flex-col md:flex-row gap-6 items-center">
-            <div className="bg-green-50 p-4 rounded-full">
-              <ShieldCheck size={40} className="text-green-600" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-brand-dark mb-2">Our {title} Promise</h3>
-              <p className="text-gray-600 text-lg m-0 leading-relaxed">No matter where you are stranded, we promise transparent pricing up front before any work begins, paired with safety-first handling of your vehicle.</p>
-            </div>
-          </div>
+          <BlockRenderer blocks={contentData.blocks} />
         </article>
       </div>
 
       <div className="container mx-auto px-4 py-16">
-        {/* specific Service FAQ - Clean White/Navy Style */}
-        <div className="bg-brand-dark text-white p-8 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(11,30,54,0.15)] max-w-4xl mx-auto mb-20 relative overflow-hidden">
-           {/* Subtle brand decor */}
-           <div className="absolute top-0 right-0 w-64 h-64 bg-brand-yellow opacity-10 rounded-full blur-[80px]"></div>
-           <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-yellow opacity-5 rounded-full blur-[80px]"></div>
-           
-           <h2 className="text-3xl md:text-4xl font-black text-white mb-10 text-center relative z-10 tracking-tight">
-             {title} FAQs
-           </h2>
-           
-           <div className="space-y-4 relative z-10">
-             {contentData.faqs.map((faq, index) => (
-               <div key={index} className="border border-white/10 bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden">
-                 <button
-                   className="w-full px-6 py-6 flex items-center justify-between text-left cursor-pointer focus:outline-none hover:bg-white/10 transition-colors"
-                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                   type="button"
-                 >
-                   <span className="font-bold text-lg pr-4">{faq.question}</span>
-                   <ChevronDown 
-                     className={`text-brand-yellow transition-transform duration-300 flex-shrink-0 ${openFaq === index ? 'rotate-180' : ''}`} 
-                     size={24} 
-                   />
-                 </button>
-                 <div 
-                   className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openFaq === index ? 'max-h-96 pb-6 opacity-100' : 'max-h-0 pb-0 opacity-0'}`}
-                 >
-                   <p className="text-white/70 leading-relaxed">{faq.answer}</p>
-                 </div>
-               </div>
-             ))}
-           </div>
-        </div>
-
         {/* City cross-links for internal linking & local SEO */}
         <div className="max-w-5xl mx-auto mb-16">
           <h2 className="text-2xl md:text-3xl font-black text-brand-dark mb-8 text-center tracking-tight">Need {title} in a Specific City?</h2>
