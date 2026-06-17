@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Star, ChevronDown } from 'lucide-react';
-import { GOOGLE_REVIEWS, GOOGLE_REVIEWS_URL } from '../constants';
+import { GOOGLE_REVIEWS } from '../constants';
 import { GoogleReview } from '../types';
 
 // Featurable live-reviews widget. Auto-syncs from the Google Business Profile,
@@ -123,21 +123,6 @@ const GoogleReviews: React.FC = () => {
           ))}
         </div>
         )}
-
-        {/* CTA button → Google reviews panel */}
-        <div className="flex justify-center mt-10">
-          <a
-            href={GOOGLE_REVIEWS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 bg-brand-dark hover:bg-gray-900 text-white px-8 py-4 rounded-2xl font-black text-base md:text-lg transition-all duration-300 shadow-[0_10px_30px_rgba(11,30,54,0.2)] transform hover:-translate-y-1"
-          >
-            <span className="bg-white rounded-full p-1.5 group-hover:scale-110 transition-transform">
-              <GoogleG className="w-5 h-5" />
-            </span>
-            Read All Our Reviews on Google
-          </a>
-        </div>
       </div>
     </section>
   );
