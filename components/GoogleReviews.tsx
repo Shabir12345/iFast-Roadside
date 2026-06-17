@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Star, ChevronDown } from 'lucide-react';
-import { GOOGLE_REVIEWS, GOOGLE_REVIEWS_URL, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
+import { GOOGLE_REVIEWS, GOOGLE_REVIEWS_URL } from '../constants';
 import { GoogleReview } from '../types';
 
 // Featurable live-reviews widget. Auto-syncs from the Google Business Profile,
@@ -107,24 +107,8 @@ const GoogleReviews: React.FC = () => {
   return (
     <section id="google-reviews" className="bg-white py-16 border-y border-gray-100">
       <div className="container mx-auto px-4">
-        {/* Header: aggregate rating + Google branding */}
-        <div className="flex flex-col items-center text-center mb-12">
-          <div className="flex items-center gap-3 mb-4">
-            <GoogleG className="w-8 h-8" />
-            <span className="text-2xl md:text-3xl font-black text-brand-dark tracking-tight">Google Reviews</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="text-4xl md:text-5xl font-black text-brand-dark leading-none">{GOOGLE_RATING}</span>
-            <div className="flex flex-col items-start">
-              <Stars rating={5} size={20} />
-              <span className="text-sm font-semibold text-gray-500 mt-1">
-                Based on {GOOGLE_REVIEWS_COUNT}+ Google reviews
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Live Google reviews via Featurable — auto-updates, no code changes. */}
+        {/* Live Google reviews via Featurable — auto-updates, no code changes.
+            The widget renders its own rating header, so we don't duplicate it. */}
         {!widgetFailed && (
           <div className="max-w-6xl mx-auto min-h-[260px]">
             <div id={FEATURABLE_WIDGET_ID} data-featurable-async />
