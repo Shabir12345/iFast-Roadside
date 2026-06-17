@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Star, ChevronDown } from 'lucide-react';
 import { GOOGLE_REVIEWS, GOOGLE_REVIEWS_URL, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { GoogleReview } from '../types';
+
+// Featurable live-reviews widget. Auto-syncs from the Google Business Profile,
+// so new reviews appear here with no code changes. If it fails to load, we fall
+// back to the static GOOGLE_REVIEWS cards below so visitors always see proof.
+const FEATURABLE_WIDGET_ID = 'featurable-9ff590b7-3128-4d17-a845-bc80f70b5313';
+const FEATURABLE_SCRIPT_SRC = 'https://featurable.com/assets/bundle.js';
 
 // Multicolor Google "G" mark (lucide has no brand logo).
 const GoogleG: React.FC<{ className?: string }> = ({ className }) => (
@@ -68,6 +74,36 @@ const ReviewCard: React.FC<{ review: GoogleReview }> = ({ review }) => {
 };
 
 const GoogleReviews: React.FC = () => {
+  // false = try the live widget; true = the widget failed, show static cards.
+  const [widgetFailed, setWidgetFailed] = useState(false);
+
+  useEffect(() => {
+    // Re-inject the loader on every mount. Dynamically-created <script> elements
+    // always execute when appended, so this re-scans the widget div on each
+    // client-side route change (Home -> /service/:id) where the same component
+    // remounts but the bundle wouldn't otherwise re-run.
+    setWidgetFailed(false);
+    const script = document.createElement('script');
+    script.src = FEATURABLE_SCRIPT_SRC;
+    script.async = true;
+    script.charset = 'UTF-8';
+    script.onerror = () => setWidgetFailed(true);
+    document.body.appendChild(script);
+
+    // If the widget hasn't rendered anything after a grace period, fall back.
+    const timer = window.setTimeout(() => {
+      const el = document.getElementById(FEATURABLE_WIDGET_ID);
+      if (!el || el.childElementCount === 0) {
+        setWidgetFailed(true);
+      }
+    }, 8000);
+
+    return () => {
+      window.clearTimeout(timer);
+      script.remove();
+    };
+  }, []);
+
   return (
     <section id="google-reviews" className="bg-white py-16 border-y border-gray-100">
       <div className="container mx-auto px-4">
@@ -88,8 +124,15 @@ const GoogleReviews: React.FC = () => {
           </div>
         </div>
 
-        {/* Review cards (hidden until real GBP reviews are added in constants.tsx) */}
-        {GOOGLE_REVIEWS.length > 0 && (
+        {/* Live Google reviews via Featurable — auto-updates, no code changes. */}
+        {!widgetFailed && (
+          <div className="max-w-6xl mx-auto min-h-[260px]">
+            <div id={FEATURABLE_WIDGET_ID} data-featurable-async />
+          </div>
+        )}
+
+        {/* Fallback: static cards, shown only if the live widget fails to load. */}
+        {widgetFailed && GOOGLE_REVIEWS.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto items-start">
           {GOOGLE_REVIEWS.slice(0, 3).map((review) => (
             <ReviewCard key={review.id} review={review} />
