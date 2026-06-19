@@ -18,8 +18,10 @@ const Header: React.FC = () => {
         <a href="/" aria-label={`${COMPANY_NAME} Home`} className="relative flex items-center h-16 sm:h-20">
           <div className="absolute top-1/2 -translate-y-1/2 left-0 transition-all duration-300 transform hover:scale-105 z-10 w-40 sm:w-56 md:w-64">
             <img
-              src="/logo.png"
+              src="/logo.webp"
               alt={`${COMPANY_NAME} Logo`}
+              width={800}
+              height={533}
               className="h-24 sm:h-32 md:h-40 w-auto object-contain filter drop-shadow-[0_4px_6px_rgba(0,0,0,0.1)]"
             />
           </div>

@@ -79,8 +79,10 @@ const Hero: React.FC = () => {
               {/* Premium Image Container */}
               <div className="rounded-[2.5rem] overflow-hidden border-8 border-white shadow-[0_20px_50px_rgba(11,30,54,0.15)] relative transform lg:-rotate-2 transition-transform hover:rotate-0 duration-500">
                 <img
-                  src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=2072&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=70&w=1000&auto=format&fit=crop"
                   alt="Professional Roadside Assistance Mechanic"
+                  width={800}
+                  height={1000}
                   className="w-full h-full object-cover aspect-[4/5] object-center"
                   fetchPriority="high"
                 />
@@ -94,7 +96,7 @@ const Hero: React.FC = () => {
                   <Clock size={28} />
                 </div>
                 <div>
-                  <h3 className="font-black text-brand-dark text-lg leading-none mb-1">Fast ETA</h3>
+                  <div className="font-black text-brand-dark text-lg leading-none mb-1">Fast ETA</div>
                   <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider">Arriving Shortly</p>
                 </div>
               </div>
@@ -105,7 +107,7 @@ const Hero: React.FC = () => {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-sm">GTA Coverage</h3>
+                  <div className="font-bold text-sm">GTA Coverage</div>
                   <p className="text-white/60 text-[10px] uppercase">East area focus</p>
                 </div>
               </div>

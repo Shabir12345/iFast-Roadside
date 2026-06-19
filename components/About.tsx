@@ -12,8 +12,10 @@ const About: React.FC = () => {
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-4">
                                 <img
-                                    src="/roadside_assistance_help.jpg"
+                                    src="/roadside_assistance_help.webp"
                                     alt="Roadside Assistance Help"
+                                    width={760}
+                                    height={512}
                                     className="rounded-3xl shadow-lg w-full h-64 object-cover"
                                     loading="lazy"
                                 />
@@ -29,8 +31,10 @@ const About: React.FC = () => {
                                     <div className="text-gray-400 text-xs uppercase tracking-widest mt-1">Availability</div>
                                 </div>
                                 <img
-                                    src="/roadside_technician_towing.jpg"
+                                    src="/roadside_technician_towing.webp"
                                     alt="Professional Roadside Service"
+                                    width={760}
+                                    height={512}
                                     className="rounded-3xl shadow-lg w-full h-64 object-cover"
                                     loading="lazy"
                                 />
@@ -58,7 +62,7 @@ const About: React.FC = () => {
                                     <Users size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-brand-dark mb-1">Vetted Professionals</h4>
+                                    <h3 className="font-bold text-brand-dark mb-1">Vetted Professionals</h3>
                                     <p className="text-gray-500 text-sm">No shady operators. Our teams are licensed, insured, and safety-trained.</p>
                                 </div>
                             </div>
@@ -67,7 +71,7 @@ const About: React.FC = () => {
                                     <BadgeDollarSign size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-brand-dark mb-1">Upfront Pricing</h4>
+                                    <h3 className="font-bold text-brand-dark mb-1">Upfront Pricing</h3>
                                     <p className="text-gray-500 text-sm">You get a clear quote on the phone before we dispatch. No hook-up fees, no late-night surcharges.</p>
                                 </div>
                             </div>
@@ -76,7 +80,7 @@ const About: React.FC = () => {
                                     <Wrench size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-brand-dark mb-1">Fixed On-Site, Not Towed</h4>
+                                    <h3 className="font-bold text-brand-dark mb-1">Fixed On-Site, Not Towed</h3>
                                     <p className="text-gray-500 text-sm">Tires, batteries, lockouts, and fuel are handled right where you're stuck — towing is the backup plan, not the default.</p>
                                 </div>
                             </div>

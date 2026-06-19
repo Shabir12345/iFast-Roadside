@@ -9,10 +9,12 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1 md:col-span-2">
             <a href="/" aria-label={`${COMPANY_NAME} Home`} className="inline-block mb-8 transform hover:scale-105 transition-transform duration-300">
-              <img 
-                src="/logo.png" 
-                alt={`${COMPANY_NAME} Logo`} 
-                className="h-48 sm:h-64 md:h-80 w-auto object-contain filter drop-shadow-[0_0_20px_rgba(255,185,0,0.2)]" 
+              <img
+                src="/logo.webp"
+                alt={`${COMPANY_NAME} Logo`}
+                width={800}
+                height={533}
+                className="h-48 sm:h-64 md:h-80 w-auto object-contain filter drop-shadow-[0_0_20px_rgba(255,185,0,0.2)]"
               />
             </a>
             <p className="max-w-md mb-6">
@@ -23,30 +25,30 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="/mobile-mechanic" className="hover:text-brand-yellow font-bold text-white transition-colors">Mobile Mechanic</a></li>
-              <li><a href="/#services" className="hover:text-brand-yellow transition-colors">Services</a></li>
-              <li><a href="/#about" className="hover:text-brand-yellow transition-colors">About Us</a></li>
-              <li><a href="/#reviews" className="hover:text-brand-yellow transition-colors">Reviews</a></li>
-              <li><a href="/blog" className="hover:text-brand-yellow transition-colors">Blog & Tips</a></li>
+            <h2 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Quick Links</h2>
+            <ul className="space-y-1">
+              <li><a href="/mobile-mechanic" className="inline-block py-1.5 hover:text-brand-yellow font-bold text-white transition-colors">Mobile Mechanic</a></li>
+              <li><a href="/#services" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Services</a></li>
+              <li><a href="/#about" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">About Us</a></li>
+              <li><a href="/#reviews" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Reviews</a></li>
+              <li><a href="/blog" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Blog & Tips</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Service Areas</h4>
-            <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
-              <li><a href="/areas/scarborough" className="hover:text-brand-yellow transition-colors">Scarborough</a></li>
-              <li><a href="/areas/pickering" className="hover:text-brand-yellow transition-colors">Pickering</a></li>
-              <li><a href="/areas/ajax" className="hover:text-brand-yellow transition-colors">Ajax</a></li>
-              <li><a href="/areas/whitby" className="hover:text-brand-yellow transition-colors">Whitby</a></li>
-              <li><a href="/areas/oshawa" className="hover:text-brand-yellow transition-colors">Oshawa</a></li>
-              <li><a href="/service-area/east-gta" className="hover:text-brand-yellow transition-colors">East GTA</a></li>
+            <h2 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Service Areas</h2>
+            <ul className="grid grid-cols-2 gap-x-4 text-xs">
+              <li><a href="/areas/scarborough" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Scarborough</a></li>
+              <li><a href="/areas/pickering" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Pickering</a></li>
+              <li><a href="/areas/ajax" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Ajax</a></li>
+              <li><a href="/areas/whitby" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Whitby</a></li>
+              <li><a href="/areas/oshawa" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Oshawa</a></li>
+              <li><a href="/service-area/east-gta" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">East GTA</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Contact Us</h4>
+            <h2 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Contact Us</h2>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone className="text-brand-yellow shrink-0" size={18} />

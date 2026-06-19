@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
     :root {
         --brand-dark: #0B1E36;
@@ -20,6 +24,16 @@
         background-color: rgba(251, 191, 36, 0.3);
         color: #0f172a;
     }
+}
+
+/* Hide scrollbar (used by the chat panel). */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .glass-morphism {
