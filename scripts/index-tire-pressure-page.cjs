@@ -1,16 +1,14 @@
-// Automates Google Search Console URL Inspection to request indexing
-// for all 4 blog posts. Uses the globally installed Playwright.
-// v3: Uses the user's Chrome profile (persistent context) so Google session
-//     is already authenticated — no manual login required.
+// Focused Google Search Console "Request Indexing" for the single new
+// tire-pressure Scarborough story page. Mirrors index-blog-posts.cjs (uses
+// your real Chrome profile so the Google session is already authenticated).
+//
+// Usage (close Chrome first so Playwright can use the profile):
+//   node scripts/index-tire-pressure-page.cjs
 const playwright = require('C:/Users/khati/AppData/Roaming/npm/node_modules/playwright');
 const path = require('path');
 const fs = require('fs');
 
 const BLOG_URLS = [
-  'https://www.ifastroadside.ca/blog/flat-tire-on-401-east-gta',
-  'https://www.ifastroadside.ca/blog/winter-roadside-emergencies-ontario-guide',
-  'https://www.ifastroadside.ca/blog/caa-vs-independent-roadside-assistance-ontario',
-  'https://www.ifastroadside.ca/blog/mobile-mechanic-cost-ontario-pricing-guide',
   'https://www.ifastroadside.ca/blog/correct-tire-pressure-scarborough',
 ];
 
@@ -23,7 +21,6 @@ if (!fs.existsSync(SCREENSHOTS_DIR)) fs.mkdirSync(SCREENSHOTS_DIR, { recursive: 
 async function waitForRequestIndexingButton(page, timeoutMs = 20000) {
   const deadline = Date.now() + timeoutMs;
   while (Date.now() < deadline) {
-    // All known ways GSC renders the Request Indexing button/link
     const candidates = [
       page.getByRole('button', { name: /request indexing/i }),
       page.getByRole('link',   { name: /request indexing/i }),
@@ -48,7 +45,6 @@ async function requestIndexingForUrl(page, url) {
   const slug = url.split('/').pop();
   const encodedUrl = encodeURIComponent(url);
 
-  // Try both resource_id formats
   const inspectUrls = [
     `${SEARCH_CONSOLE_BASE}/inspect?resource_id=https%3A%2F%2Fifastroadside.ca%2F&id=${encodedUrl}`,
     `${SEARCH_CONSOLE_BASE}/inspect?resource_id=sc-domain%3Aifastroadside.ca&id=${encodedUrl}`,
@@ -58,16 +54,11 @@ async function requestIndexingForUrl(page, url) {
   for (const inspectUrl of inspectUrls) {
     try {
       await page.goto(inspectUrl, { waitUntil: 'networkidle', timeout: 25000 });
-      const currentUrl = page.url();
-      if (currentUrl.includes('search-console/inspect')) {
-        onInspectPage = true;
-        break;
-      }
+      if (page.url().includes('search-console/inspect')) { onInspectPage = true; break; }
     } catch (_) {}
   }
 
   if (!onInspectPage) {
-    // Fall back: use the URL inspection search bar on the overview page
     console.log('   ↩️  Direct inspect URL redirected — using GSC search bar...');
     await page.goto(`${SEARCH_CONSOLE_BASE}/`, { waitUntil: 'networkidle', timeout: 20000 });
     const inspectInput = page.locator('input[aria-label*="Inspect"], input[placeholder*="Inspect"], [role="combobox"]').first();
@@ -84,81 +75,56 @@ async function requestIndexingForUrl(page, url) {
     return;
   }
 
-  // Wait for GSC inspection to finish (it runs a live crawl simulation)
   console.log('   ⏳ Waiting for inspection to complete...');
-  // GSC shows a spinner; wait for it to disappear or the result panel to appear
   await page.waitForFunction(
     () => !document.querySelector('[aria-label="Loading"]') && !document.querySelector('.spinner'),
     { timeout: 25000 }
   ).catch(() => {});
   await page.waitForTimeout(4000);
 
-  // Screenshot for debugging
   const screenshotPath = path.join(SCREENSHOTS_DIR, `${slug}.png`);
   await page.screenshot({ path: screenshotPath, fullPage: false });
   console.log(`   📸 Screenshot: ${screenshotPath}`);
 
-  // Find and click "Request Indexing"
   const btn = await waitForRequestIndexingButton(page, 15000);
   if (!btn) {
-    // Print page text near "request" for diagnosis
-    const textSamples = await page.evaluate(() => {
-      const all = [...document.querySelectorAll('button, [role="button"], a, span, div')]
-        .filter(el => /request/i.test(el.textContent || el.getAttribute('aria-label') || ''))
-        .map(el => `<${el.tagName.toLowerCase()} role="${el.getAttribute('role') || ''}">"${(el.textContent || '').trim().substring(0, 70)}"`)
-        .slice(0, 10);
-      return all;
-    });
-    console.log('   ⚠️  "Request Indexing" button not found on page.');
-    if (textSamples.length) {
-      console.log('   Elements with "request" text:', textSamples.join(', '));
-    } else {
-      const title = await page.title();
-      console.log(`   Page title: "${title}" — may be a login wall or wrong property.`);
-    }
+    console.log('   ⚠️  "Request Indexing" button not found (page may already be queued/indexed).');
     return;
   }
 
   const btnText = await btn.innerText().catch(() => '');
   console.log(`   🎯 Found button: "${btnText.trim()}"`);
   await btn.click({ timeout: 5000 });
-  console.log('   ✅ Clicked "Request Indexing"!');
+  console.log('   ✅ Clicked "Request Indexing"! (Google live-tests the URL, ~1-2 min)');
 
-  // Wait for and dismiss the confirmation/status dialog
-  await page.waitForTimeout(6000);
-  const dismissSelectors = [
-    page.getByRole('button', { name: /got it|ok|close|done/i }),
-    page.getByText('GOT IT', { exact: true }),
-    page.getByText('Got it', { exact: true }),
-    page.locator('[aria-label="Close"]'),
-  ];
-  for (const loc of dismissSelectors) {
-    try {
-      if (await loc.first().isVisible({ timeout: 2000 })) {
-        await loc.first().click();
-        console.log('   ✅ Dismissed confirmation');
-        break;
-      }
-    } catch (_) {}
+  // Wait out the "Submitting request" dialog, then dismiss.
+  let confirmed = false;
+  for (let waited = 0; waited < 180000; waited += 3000) {
+    await page.waitForTimeout(3000);
+    const text = await page.locator('body').innerText().catch(() => '');
+    if (/quota exceeded/i.test(text)) { console.log('   ⚠️  Daily quota exceeded.'); break; }
+    if (/indexing requested|already requested/i.test(text)) { confirmed = true; break; }
+    if (await page.getByRole('button', { name: /got it/i }).isVisible().catch(() => false)) { confirmed = true; break; }
+    if (!/submitting|testing|requesting/i.test(text)) break;
   }
+
+  const dismiss = page.getByRole('button', { name: /got it|ok|close|done/i }).first();
+  if (await dismiss.isVisible({ timeout: 2000 }).catch(() => false)) await dismiss.click().catch(() => {});
 
   await page.waitForTimeout(1500);
   const finalPath = path.join(SCREENSHOTS_DIR, `${slug}-done.png`);
   await page.screenshot({ path: finalPath });
-  console.log(`   🎉 Done! Final screenshot: ${finalPath}`);
+  console.log(`   ${confirmed ? '🎉 Indexing requested' : 'ℹ️  Finished (verify screenshot)'}: ${finalPath}`);
 }
 
 (async () => {
   console.log('━'.repeat(60));
-  console.log('  iFAST Blog Indexing Script v3');
+  console.log('  iFAST — Request Indexing: tire-pressure Scarborough page');
   console.log('  Using your Chrome profile for auth');
   console.log('━'.repeat(60));
-  console.log('\n⚠️  NOTE: If Chrome is currently open, please close it first');
-  console.log('   so Playwright can access your saved Google session.\n');
+  console.log('\n⚠️  If Chrome is open, close it first so Playwright can use your session.\n');
 
   let context;
-
-  // Try persistent context with real Chrome profile (avoids manual login)
   try {
     console.log('🔑 Attempting to use your Chrome profile...');
     context = await playwright.chromium.launchPersistentContext(CHROME_PROFILE, {
@@ -172,61 +138,35 @@ async function requestIndexingForUrl(page, url) {
   } catch (profileErr) {
     console.log(`   ⚠️  Could not use Chrome profile (${profileErr.message.split('\n')[0]})`);
     console.log('   Falling back to fresh Chromium — you will need to log in manually.\n');
-
-    const browser = await playwright.chromium.launch({
-      headless: false,
-      args: ['--start-maximized'],
-      slowMo: 200,
-    });
+    const browser = await playwright.chromium.launch({ headless: false, args: ['--start-maximized'], slowMo: 200 });
     context = await browser.newContext({ viewport: null });
   }
 
   const page = await context.newPage();
-
-  // Navigate to Search Console and verify we're logged in
   console.log('🌐 Opening Google Search Console...');
   await page.goto(`${SEARCH_CONSOLE_BASE}/`, { waitUntil: 'domcontentloaded', timeout: 20000 });
 
-  // Check for login wall
   const isLoggedIn = await page.locator('[aria-label*="Google Account"], [data-email], .property-row, [data-view-type="overview"]')
-    .isVisible({ timeout: 6000 })
-    .catch(() => false);
-
+    .isVisible({ timeout: 6000 }).catch(() => false);
   if (!isLoggedIn) {
     const onLoginPage = page.url().includes('accounts.google.com') || await page.locator('input[type="email"]').isVisible({ timeout: 3000 }).catch(() => false);
     if (onLoginPage) {
-      console.log('\n━'.repeat(60));
-      console.log('  ACTION REQUIRED');
-      console.log('  A Chrome window has opened on your screen.');
-      console.log('  Please log into Google Search Console and');
-      console.log('  navigate to the ifastroadside.ca property.');
-      console.log('  The script will auto-continue.');
-      console.log('━'.repeat(60) + '\n');
-      // Wait up to 3 minutes for user to log in and reach GSC dashboard
-      await page.waitForURL(
-        (u) => u.includes('search-console') && !u.includes('accounts.google'),
-        { timeout: 180000 }
-      ).catch(() => console.log('Timed out waiting for login — trying to proceed...'));
+      console.log('\n  ACTION REQUIRED: log into Google Search Console in the open window.');
+      console.log('  The script will auto-continue once you reach the dashboard.\n');
+      await page.waitForURL((u) => u.includes('search-console') && !u.includes('accounts.google'), { timeout: 180000 })
+        .catch(() => console.log('Timed out waiting for login — trying to proceed...'));
       await page.waitForTimeout(3000);
     }
   } else {
     console.log('✅ Logged in to Search Console.\n');
   }
 
-  // Process all 4 URLs
   for (const url of BLOG_URLS) {
     await requestIndexingForUrl(page, url);
   }
 
   console.log('\n' + '━'.repeat(60));
-  console.log('  ✅ All 4 URLs processed!');
-  console.log(`  Screenshots saved to: ${SCREENSHOTS_DIR}`);
-  console.log('');
-  console.log('  NOTE: Make sure the blog is deployed to Vercel');
-  console.log('  (push to main) so Google can actually crawl the');
-  console.log('  pages when it processes these indexing requests.');
-  console.log('━'.repeat(60));
-  console.log('\nBrowser staying open — close manually when done.\n');
-
+  console.log('  ✅ Done. Browser staying open — close it manually when satisfied.');
+  console.log('━'.repeat(60) + '\n');
   await new Promise(() => {});
 })();

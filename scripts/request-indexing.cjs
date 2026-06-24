@@ -42,6 +42,7 @@ const URLS = [
   'https://www.ifastroadside.ca/blog/winter-roadside-emergencies-ontario-guide',
   'https://www.ifastroadside.ca/blog/caa-vs-independent-roadside-assistance-ontario',
   'https://www.ifastroadside.ca/blog/mobile-mechanic-cost-ontario-pricing-guide',
+  'https://www.ifastroadside.ca/blog/correct-tire-pressure-scarborough',
 
   // City pages
   'https://www.ifastroadside.ca/areas/scarborough',
