@@ -1,5 +1,5 @@
 import React from 'react';
-import { PhoneCall, CheckCircle2, AlertTriangle, Clock, DollarSign, ThumbsUp, ThumbsDown } from 'lucide-react';
+import { PhoneCall, CheckCircle2, AlertTriangle, Clock, DollarSign, ThumbsUp, ThumbsDown, Star, Gauge, ShieldCheck } from 'lucide-react';
 import { PHONE_NUMBER, COMPANY_NAME } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
 
@@ -776,6 +776,179 @@ export const BLOG_POSTS: BlogPost[] = [
       { question: 'Are your mechanics certified?', answer: 'Yes. All iFAST technicians are fully certified with professional-grade diagnostic equipment and years of field experience. We follow manufacturer-specific repair procedures and use proper torque specs.' },
       { question: 'Do you warranty your work?', answer: 'Yes. All parts and labor performed by iFAST are covered by a comprehensive warranty. If something goes wrong with a repair we performed, we make it right.' },
       { question: 'Is a mobile mechanic more expensive than a regular shop?', answer: 'On paper, labor rates are comparable. But when you factor in the cost of a tow truck ($150–$300), a rental car or Uber for the day, and the time you lose waiting for an appointment, mobile service is usually equal to or cheaper than a shop for most common repairs. For emergency situations, there\'s no comparison.' },
+    ]
+  },
+
+  /* ============================================================
+     POST 5: CORRECT TIRE PRESSURE — SCARBOROUGH CUSTOMER STORY
+     ============================================================ */
+  {
+    slug: 'correct-tire-pressure-scarborough',
+    title: 'Correct Tire Pressure Saved This Scarborough Mom: The 72 PSI Story',
+    excerpt: 'A driver at a Scarborough gas station pumped her tires to a dangerous 72 PSI — with her child in the back seat. Here\'s the true story of how our technician Fayaz stepped in, what correct tire pressure actually is, and why overinflated tires are so dangerous.',
+    seoTitle: 'Correct Tire Pressure Saved This Scarborough Mom | What PSI Your Tires Need — iFAST',
+    seoDescription: 'A Scarborough driver pumped her tires to a dangerous 72 PSI with her child in the car. Here\'s what correct tire pressure actually is, why overinflated tires are dangerous, and how iFAST mobile tire service helps across Scarborough & East GTA.',
+    keywords: 'correct tire pressure, what PSI should my tires be, overinflated tires danger, tire pressure check Scarborough, mobile tire service Scarborough, tire pressure help near me, too much air in tires, tire safety Scarborough, mobile tire service East GTA, recommended tire pressure',
+    category: 'Emergency Tips',
+    publishDate: '2026-06-24',
+    readTime: '6 min read',
+    heroImage: '/tire_service_hero.jpg',
+    heroImageAlt: 'iFAST technician checking and correcting tire pressure for a driver in Scarborough',
+    sections: [
+      {
+        content: (
+          <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
+            It was a quiet weekend at a gas station near <strong>Finch and Kennedy in Scarborough</strong> when our technician <strong>Fayaz</strong> noticed something that made him stop. A woman was fighting with the air pump at the side of the lot, a young child buckled in the back seat of her car. When Fayaz walked over to help and checked her tires, his stomach dropped: <strong className="text-red-600">72 PSI</strong> — more than double what most cars are built to run. She had no idea she\'d done anything wrong, and she was about to drive her child home on four tires inflated like rock-hard balloons. This is the story of how a two-minute conversation may have prevented a blowout — and everything you need to know about <strong>{COMPANY_NAME}</strong>-approved correct tire pressure so it never happens to you.
+          </p>
+        )
+      },
+      {
+        heading: '72 PSI Is a Loaded Gun: What Over-Inflation Actually Does',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              A tire stamped to run around 35 PSI that\'s been pumped to 72 is carrying roughly <strong>double its designed pressure</strong>. That isn\'t a small mistake you can shrug off — it changes how the tire behaves in every situation that matters:
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              {[
+                { icon: '💥', title: 'Blowout risk skyrockets', desc: 'An over-pressurized tire is rigid and brittle. Add a hot summer highway and a pothole, and you\'re inviting a sudden blowout at speed.' },
+                { icon: '🛑', title: 'Less grip, longer stops', desc: 'Over-inflated tires bulge in the middle and ride on the center of the tread only. Less rubber on the road means reduced traction and longer stopping distances.' },
+                { icon: '🎢', title: 'Harsh, twitchy handling', desc: 'Every bump becomes a bounce. The car skips over road seams and feels nervous at highway speed — exactly when you want it planted.' },
+                { icon: '🪙', title: 'You burn money on rubber', desc: 'That center-only contact wears the middle of the tread out fast, killing the tire long before its time and costing you a premature replacement.' },
+              ].map(r => (
+                <div key={r.title} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
+                  <span className="text-2xl mb-2 block">{r.icon}</span>
+                  <p className="font-bold text-brand-dark text-sm mb-1">{r.title}</p>
+                  <p className="text-gray-600 text-xs">{r.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-2">
+              <div className="flex gap-3">
+                <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
+                <p className="text-amber-900 text-sm font-medium">
+                  Now picture all of that with a child in the back seat on a summer afternoon. That\'s the situation Fayaz walked into.
+                </p>
+              </div>
+            </div>
+          </>
+        )
+      },
+      {
+        heading: 'So What Should Your Tires Be? (The Number Almost Everyone Gets Wrong)',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Here\'s the part Fayaz explained to her, and the part most drivers get wrong: the big number molded into the tire\'s sidewall is the <strong>maximum</strong> pressure the tire can physically hold — it is <em>not</em> the pressure your car wants. Inflate to that number and you\'ve done exactly what she did.
+            </p>
+            <div className="bg-brand-dark text-white rounded-2xl p-6 mb-6 flex flex-col sm:flex-row gap-5 items-start">
+              <div className="bg-brand-yellow/20 p-3 rounded-xl flex-shrink-0">
+                <Gauge className="text-brand-yellow" size={28} />
+              </div>
+              <div>
+                <p className="font-black text-brand-yellow mb-2">Where the real number lives</p>
+                <ul className="space-y-2 text-sm text-white/85">
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>The sticker inside your <strong>driver\'s-side door jamb</strong> (and your owner\'s manual) lists your car\'s recommended PSI.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>For most cars and SUVs in the GTA, that\'s between <strong>30 and 35 PSI</strong>.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>Check them <strong>cold</strong> — before you\'ve driven — because driving heats the air and inflates the reading.</span></li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-gray-700 mb-4">
+              That\'s it. No guessing, no matching the sidewall number, no eyeballing it. The door-jamb sticker is the single source of truth for correct tire pressure on your specific vehicle.
+            </p>
+            <BlogCTA source="blog_tirepressure_mid1" />
+          </>
+        )
+      },
+      {
+        heading: 'What Happened in That Scarborough Parking Lot',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Fayaz didn\'t just bleed the pressure down and walk off. He let each tire down to the exact number on her door jamb, then walked her through how to read it herself and how to use the gauge so she\'d never be guessing again. By the time he was done, she understood <em>why</em> 72 PSI was dangerous and exactly how to keep her tires right.
+            </p>
+            <p className="mb-4 text-gray-700">
+              Then he made sure she and her little one were safe to drive home — on four tires that would actually grip the road. No charge for the kindness, no catch. Just the right thing to do for a stranger who needed a hand.
+            </p>
+            <div className="bg-brand-dark/5 border border-brand-dark/10 rounded-xl p-5 flex gap-3">
+              <ShieldCheck className="text-brand-dark flex-shrink-0 mt-0.5" size={22} />
+              <p className="text-gray-700 text-sm">
+                This is the kind of thing our team does every day across the East GTA. Sometimes it\'s a 401 blowout at midnight. Sometimes it\'s a mom at a gas pump who didn\'t know the sidewall number isn\'t the target. Either way, the goal is the same: get you back on the road, safely.
+              </p>
+            </div>
+          </>
+        )
+      },
+      {
+        heading: 'Selena\'s 5-Star Review',
+        content: (
+          <>
+            <p className="mb-5 text-gray-700">
+              A couple of days later, Selena left us this on Google. We didn\'t ask for it — and it\'s the kind of thing that means the most:
+            </p>
+            <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-xl">S</div>
+                  <div>
+                    <p className="font-bold text-brand-dark leading-tight">Selena Alleyne</p>
+                    <span className="text-xs text-gray-400">Verified Google review</span>
+                  </div>
+                </div>
+                <svg viewBox="0 0 48 48" className="w-6 h-6 flex-shrink-0" aria-hidden="true">
+                  <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z" />
+                  <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z" />
+                  <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.97 21.97 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z" />
+                  <path fill="#EA4335" d="M24 9.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 3.18 29.93 1 24 1 15.4 1 7.96 5.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z" />
+                </svg>
+              </div>
+              <div className="flex gap-0.5 text-brand-yellow mb-3">
+                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
+              </div>
+              <p className="text-gray-700 leading-relaxed italic">
+                &ldquo;I had a great experience with Fayaz this past weekend. I accidentally put too much air in my tires at a gas station, and he kindly stepped in to help me fix the issue. He took the time to make sure everything was safe and explained what he was doing, which I really appreciated. It\'s not often you come across someone who is both knowledgeable and genuinely willing to help a stranger without hesitation. His professionalism and kindness really stood out. I highly recommend Fayaz if you\'re looking for someone reliable and trustworthy. Thanks again for your help!&rdquo;
+              </p>
+            </div>
+            <BlogCTA source="blog_tirepressure_mid2" />
+          </>
+        )
+      },
+      {
+        heading: 'Tire Pressure Help & Mobile Tire Service Across Scarborough',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Not sure what pressure your tires should be? Warning light glowing on the dash? A slow leak you keep topping up at the gas station? That\'s exactly what we do. {COMPANY_NAME} runs <strong>mobile tire service across Scarborough</strong> and the East GTA — we come to you, check and correct your pressure, repair or replace flat tires on-site, and reset your TPMS light before we leave. No tow, no waiting room.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-3 mb-6">
+              {[
+                { city: 'Scarborough', note: 'Finch, Kennedy & the 401' },
+                { city: 'Pickering', note: 'Hwy 401 corridor' },
+                { city: 'Ajax', note: 'Durham Region' },
+                { city: 'Whitby', note: 'Durham Region' },
+                { city: 'Oshawa', note: 'Hwy 401 & 407' },
+                { city: 'East GTA', note: '15–30 min ETA' },
+              ].map(c => (
+                <div key={c.city} className="bg-brand-dark text-white p-4 rounded-xl text-center">
+                  <p className="font-black text-brand-yellow">{c.city}</p>
+                  <p className="text-xs text-white/60">{c.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-700">
+              Whether it\'s a tire pressure check, a flat repair, a seasonal swap, or a full installation, our mobile tire team brings the shop to your driveway, your office, or the side of the road.
+            </p>
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'What PSI should my tires be?', answer: 'Check the sticker inside your driver\'s-side door jamb or your owner\'s manual. Most cars and SUVs run between 30 and 35 PSI. Never use the maximum number on the tire sidewall as your target — that\'s the ceiling the tire can hold, not the pressure your car is designed for.' },
+      { question: 'Can overinflated tires explode or blow out?', answer: 'Yes. Significant over-inflation — like 72 PSI on a tire built for around 35 — makes the tire rigid and far more likely to blow out, especially in summer heat or at highway speed. Bring it back down to the recommended pressure as soon as you can.' },
+      { question: 'Is it safe to drive with 70 PSI in my tires?', answer: 'No. That is roughly double the recommended pressure for most vehicles. It reduces grip, lengthens your stopping distance, and dramatically raises blowout risk. Let the tires down to the door-jamb spec before driving any real distance.' },
+      { question: 'Where can I get my tire pressure checked in Scarborough?', answer: 'iFAST offers mobile tire service across Scarborough and the East GTA — we come to your location to check and correct tire pressure, repair flats, and reset your TPMS light. Call +1 437-215-3468 and we typically arrive in 15–30 minutes.' },
+      { question: 'Does iFAST do mobile tire service in Scarborough?', answer: 'Yes. We cover Scarborough, Pickering, Ajax, Whitby, and Oshawa with on-site tire repair, replacement, pressure correction, and seasonal swaps — no tow required, typically arriving in 15–30 minutes.' },
     ]
   }
 ];

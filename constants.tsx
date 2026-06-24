@@ -60,6 +60,14 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
       "I had a screw in my tire I contact them both over the phone and then sent some photos to ensure they could fix the tire at my house.",
     rating: 5,
   },
+  {
+    id: 6,
+    name: "Selena Alleyne",
+    timeAgo: "1 day ago",
+    content:
+      "I had a great experience with Fayaz this past weekend. I accidentally put too much air in my tires at a gas station, and he kindly stepped in to help me fix the issue. He took the time to make sure everything was safe and explained what he was doing, which I really appreciated. It's not often you come across someone who is both knowledgeable and genuinely willing to help a stranger without hesitation. His professionalism and kindness really stood out. I highly recommend Fayaz if you're looking for someone reliable and trustworthy. Thanks again for your help!",
+    rating: 5,
+  },
 ];
 
 export const SERVICES: ServiceItem[] = [
