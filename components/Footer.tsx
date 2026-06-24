@@ -1,13 +1,13 @@
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS } from '../constants';
+import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
 
 const Footer: React.FC = () => {
   return (
     <footer id="contact" className="bg-black text-gray-400 py-12 border-t border-gray-900">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          <div className="col-span-1 md:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+          <div className="col-span-1 md:col-span-2 lg:col-span-2">
             <a href="/" aria-label={`${COMPANY_NAME} Home`} className="inline-block mb-8 transform hover:scale-105 transition-transform duration-300">
               <img
                 src="/logo.webp"
@@ -22,6 +22,17 @@ const Footer: React.FC = () => {
               Licensed, insured, and ready to help when you need it most.
             </p>
             {/* Social icons removed until real profiles exist — dead "#" links erode trust. */}
+          </div>
+
+          <div>
+            <h2 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Services</h2>
+            <ul className="space-y-1 text-sm">
+              {SERVICES.filter(s => !s.parent).map(service => (
+                <li key={service.id}>
+                  <a href={`/service/${service.id}`} className="inline-block py-1.5 hover:text-brand-yellow transition-colors">{service.title}</a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>
