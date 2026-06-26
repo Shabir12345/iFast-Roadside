@@ -2,12 +2,36 @@
 
 **Synthesis date:** 2026-06-24. Sources: `docs/research/review-mining.md` (47 real Google reviews, all 5-star), `docs/research/competitor-recon.md` (Sparky X, Williams Towing, Towing Toronto), `data/cityContent.tsx` (real per-city highways/neighborhoods/landmarks/ETAs).
 
+> ## ⚠️ STRATEGY UPDATE — 2026-06-26 (SUPERSEDES all pricing guidance below)
+>
+> Client decision: **publish NO numeric prices on any page.** The site shows no
+> prices today and that stays true — customers **call for a fast, no-obligation
+> quote.** This overrides every "Starts at $X", "lead-in price", "value wedge vs
+> Sparky X $120", price teaser, and `Offer`/price schema instruction anywhere in
+> this brief. Wherever a section says to put a price on the page, instead:
+> - Lead the differentiator on **speed/ETA + named owner-tech Safi + real "fair
+>   price" review quotes (customer words, never our own numbers) + 24/7 +
+>   damage-free + East-GTA local detail.**
+> - Replace the "Transparent pricing" section with a **"No-surprises promise":**
+>   *we give you the price on the call before we dispatch — no hidden fees, no
+>   out-of-zone surcharge — call for a fast quote.* (No figures.)
+> - Schema: emit `Service` + `FAQPage` + `aggregateRating` only. **No `Offer`
+>   with a price.**
+> - FAQ "what does it cost" answers: pivot to "we quote you up front on the call,
+>   and our reviews consistently call our pricing fair" — no dollar amounts.
+> - The "fair price" *perception* is carried entirely by verbatim review quotes
+>   (e.g. Amin Qazizada "almost half the price"), which are the customer's words.
+>
+> **Review count:** the real Google total is now **146** 5-star reviews (client-
+> confirmed 2026-06-26). Use **146** wherever a count is cited; reconcile the old
+> "94" literals to 146. Rating stays **5.0/4.9★** per the live feed.
+
 This is the single source the content tasks build from. Every page (hub + city combo) follows the **9-section blueprint**:
 
 1. **Hero** — service + city, honest ETA, call CTA.
 2. **How it actually works** — the real on-site process, step by step.
 3. **Real local scenario / connection element.**
-4. **Transparent pricing.**
+4. **No-surprises promise** — free quote on the call before dispatch; no prices on-page (see 2026-06-26 strategy update).
 5. **Why it beats the alternatives** — on-site vs tow-to-shop; vs CAA membership + wait.
 6. **Trust block** — service-matched real review quotes (verbatim, with author) + licensed/insured + damage-free.
 7. **Local detail** — highways / neighborhoods / landmarks.
@@ -21,13 +45,14 @@ This is the single source the content tasks build from. Every page (hub + city c
 - **Quote ONLY real reviews** from `review-mining.md`, verbatim, with the real author name. Never invent a quote, a customer story, or a "John from Pickering."
 - **Real per-service review counts:** tire-change **9** (rich), jump-start **2**, lockout **2**, **fuel 0**, trust-pool **34**. Where a service is thin, fill social proof with **trust-pool quotes** + operational detail + the competitor gap. Do NOT pad a thin service with fabricated testimonials.
 - **ZERO of 47 reviews name any city.** For city combos, NEVER write or imply that a reviewer was in that city. The review supplies the *story* (speed / nail-in-tire / fair price); the *city specificity* comes only from real local detail in `cityContent.tsx` (neighborhoods, highways, landmarks). Keep these two streams separate. A safe attribution label is "— [Name], verified Google review" with NO city tacked on.
-- **Pricing rule (site-wide):** always "**Starts at $X**" — never an exact or final price. Official numbers (verbatim):
-  - Mobile Tire Change: **Starts at $75**
-  - Jump Start / Boost: **Starts at $50**
-  - Lockout: **Starts at $65**
-  - Fuel: **Starts at $45 + fuel cost**
-  - Phone: **+1 437-215-3468**
-- **Aggregate rating for schema:** the live review feed is 5-star across 47 reviews. Use the real Featurable feed's current count/value at render time (see `components/GoogleReviews.tsx`); do not hardcode an invented number. Existing `cityContent.tsx` copy references "4.9★ / 94+ reviews" — reconcile to the real live number before shipping; do not introduce a new fabricated figure in this brief.
+- **Pricing rule (site-wide) — UPDATED 2026-06-26:** publish **NO numeric prices**
+  on any page (supersedes the old "Starts at $X" guidance). The only number on the
+  page is the phone: **+1 437-215-3468**. CTA everywhere = **"Call for a fast,
+  no-obligation quote."** Price *perception* comes only from verbatim "fair price"
+  review quotes, never from us stating a figure.
+- **Aggregate rating for schema:** the live Featurable feed is 5-star. For cited
+  counts use the client-confirmed total **146** (2026-06-26), and reconcile the old
+  "94" literals in `cityContent.tsx` / JSON-LD to 146. Rating **4.9–5.0★**.
 
 ---
 
@@ -90,12 +115,12 @@ Every page must clear these or it loses to Sparky X / Williams / Towing Toronto.
 
 # SERVICE 1 — MOBILE TIRE CHANGE (PILOT — most complete)
 
-**This is the pilot page. It sets the quality bar. 9 real reviews = the only service that can carry the trust block on its own quotes.** Value-versus-Sparky-X is the central wedge: Sparky X charges **$120+HST**; iFAST **starts at $75**, and "fair price" is the single most-repeated phrase in the entire review set. Lead the whole page on honest pricing.
+**This is the pilot page. It sets the quality bar. 9 real reviews = the only service that can carry the trust block on its own quotes.** Lead the page on **speed + named owner-tech Safi + the "fair price" reputation carried by real review quotes** (customer words — we publish no price ourselves; see 2026-06-26 strategy update). "Fair price" is the single most-repeated phrase in the entire review set, so the *perception* of value comes through verbatim quotes, not a number.
 
 ### §1 — Hero (hub + each city)
 - Service + city, honest ETA (city ETA from `cityContent.tsx`: Scarborough 15-25, Pickering 20-30, Ajax 25-35), call CTA to +1 437-215-3468.
 - Relief line: skip the shop lineup, skip the tow — we change it in your driveway / on the shoulder.
-- Price teaser in hero subhead: "Mobile tire service starts at $75 — about half what the shop-tow route costs."
+- Value line in hero subhead (no price): "Mobile tire service that comes to you — fast, fair, and done where your car already is. Call for a quick quote."
 
 ### §2 — How it actually works (real on-site process — lock these steps)
 1. **You call and describe the tire** — make/model/year, where the car is, and what happened (flat on the highway, nail you can see, slow leak you noticed this morning). Dispatch confirms whether the matching tire/size is on the van and gives a live ETA before you hang up.
@@ -108,11 +133,17 @@ Every page must clear these or it loses to Sparky X / Williams / Towing Toronto.
 - **Honest framing:** the recurring real-review story is a nail/screw puncture discovered at a bad time (morning before work, late night, while traveling). Use that *human situation* generically, then attach city detail from `cityContent.tsx`. Do NOT claim the reviewer was in the city.
 - Per-city scenario hooks are in the city detail blocks below.
 
-### §4 — Transparent pricing (lock this line verbatim)
-> **Mobile tire service starts at $75** for a spare-tire install or a standard plug/patch. If the tire needs full replacement, we confirm the tire and quote it before we start — no surprises, no "out of zone" highway surcharge. (For comparison, the nearest mobile competitor lists $120+HST for a tire change.)
+### §4 — No-surprises promise (no price on page)
+> We give you the price **on the call, before we dispatch** — so you know exactly
+> what you're paying before the van rolls. No hidden fees, no "out of zone"
+> highway surcharge, no surprises when we arrive. Customers consistently call our
+> pricing fair (see the reviews below). **Call +1 437-215-3468 for a fast,
+> no-obligation quote.**
 
-- Encode the $75 floor as `Offer` schema (Sparky X does this for tires; matching it is a low-effort win — competitor-recon §5).
-- Optional multi-vehicle/fleet line: ask dispatch for fleet rates (table-stakes — Sparky X charges +$85/extra vehicle; we frame ours as "ask for a fleet rate").
+- Do **not** put a dollar figure on the page. The "fair price" perception is
+  carried entirely by the verbatim review quotes in §6.
+- Optional multi-vehicle/fleet line (no number): "Got more than one vehicle? Ask
+  dispatch about fleet rates."
 
 ### §5 — Why it beats the alternatives
 - **vs. tow-to-shop:** A tow + shop tire job means waiting for a flatbed, riding to a shop, then waiting in line — often $100+ just for the tow before any tire work. We do the whole thing where your car already is, usually under 45 min from arrival.
@@ -141,7 +172,7 @@ Pull from per-city blocks below.
 ### §8 — Service-specific FAQ (6–8 Qs, draft answers — seeded from review-mining FAQ seeds + competitor table-stakes)
 1. **How fast can you get to me for a flat tire?** — Typical arrival is 15–35 minutes depending on where you are in the East GTA (Scarborough fastest, Oshawa the longest honest range). Real reviews cite arrivals of 10–20 minutes — including a midnight flat. We give you a live ETA on the call. *(seed: multiple 10–20 min reviews)*
 2. **Do you come out at night or after hours?** — Yes, 24/7. Reviewers have called us at midnight and 10:30 p.m. for flats and we came. *(seed: after-hours reviews)*
-3. **How much does it cost to fix a flat or patch a nail/screw puncture?** — Mobile tire service starts at $75. A plug/patch of a tread puncture is the fastest and cheapest fix; a full replacement is quoted before we start. We're known for fair pricing — one customer was quoted "almost half" what other shops wanted. *(seed: price-comparison review)*
+3. **How much does it cost to fix a flat or patch a nail/screw puncture?** — We give you the exact price on the call before we dispatch, so there are no surprises. A plug/patch of a tread puncture is the fastest, most affordable fix; a full replacement is quoted before we start. Customers consistently describe our pricing as fair — one was quoted "almost half" what other shops wanted. Call +1 437-215-3468 for a quick quote. *(seed: price-comparison review; no figure published per 2026-06-26 strategy)*
 4. **Can you find a slow leak or a screw that isn't obviously leaking?** — Yes. We locate the puncture even when it's a slow leak you can barely see — one customer's screw was found and the tire repaired in under half an hour, late at night. *(seed: 吴千红 slow-leak case)*
 5. **What if the tire problem comes back after a repair — will you come back?** — Yes. One reviewer's tire developed a *separate* issue two days later; we came back within 20 minutes and fixed it. We stand behind the work. *(seed: Hayoung repeat-visit)*
 6. **Do you carry the tools and a tire if I don't have a spare?** — Yes — that's the whole point of mobile service. We carry common 15"–20" sizes, a plug-patch kit, and a balancer. If your exact size isn't on the van, we plug/patch the original or install your spare and pre-order your tire. *(seed: Mohammad Badakhash "didn't have the right tools")*
@@ -149,7 +180,7 @@ Pull from per-city blocks below.
 8. **Do you handle EVs / Teslas?** — Yes, we change and repair tires on EVs and Teslas; tell dispatch the model so we bring the right jack points/equipment. *(table-stakes: EV/Tesla)*
 
 ### §9 — Schema
-`Service` (name "Mobile Tire Change," provider iFAST, areaServed = the city), paired `Offer` (price floor $75, priceCurrency CAD, "starts at"), `FAQPage` from the FAQ above, and real `aggregateRating` from the live Featurable feed (5.0; count from feed). This out-transparents all three competitors: real per-page review markup tied to the actual feed (competitor-recon §5 gap #1).
+`Service` (name "Mobile Tire Change," provider iFAST, areaServed = the city), `FAQPage` from the FAQ above, and real `aggregateRating` (ratingValue 4.9–5.0, reviewCount **146**). **No `Offer`/price node** (no published pricing per 2026-06-26 strategy). Real per-page review markup tied to the actual review total still beats the competitors on trust signals (competitor-recon §5 gap #1).
 
 ---
 
