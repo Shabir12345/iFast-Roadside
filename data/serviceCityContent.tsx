@@ -283,49 +283,61 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
      ========================================================================= */
   'tire-change': {
     scarborough: {
-      seoTitle: 'Mobile Tire Service & Flat Tire Repair Scarborough — 24/7 On-Site | iFAST',
-      seoDescription: 'Flat tire in Scarborough? iFAST brings mobile tire service to you across Agincourt, Malvern, Woburn, and the 401. 15-25 min ETA. 4.9★ / 94+ reviews. Call now.',
-      keywords: 'mobile tire service Scarborough, flat tire repair Scarborough, emergency tire change Scarborough, mobile tire Agincourt, flat tire Malvern, 401 flat tire Scarborough, on-site tire swap Scarborough',
-      h1: 'Mobile Tire Service in Scarborough — 24/7 Flat Tire Repair',
+      seoTitle: 'Mobile Tire Change Scarborough | 24/7 Flat Tire Repair — iFAST',
+      seoDescription: 'Flat tire in Scarborough? iFAST brings the tire shop to your driveway or the 401 shoulder — Agincourt, Malvern, Woburn. 15-25 min, 24/7. Call for a quote.',
+      keywords: 'mobile tire change Scarborough, flat tire repair Scarborough, emergency tire change Scarborough, mobile tire Agincourt, flat tire Malvern, 401 flat tire Scarborough, nail in tire Scarborough',
+      h1: 'Mobile Tire Change in Scarborough — 24/7 Flat Tire Repair',
       intro: (
         <>
           <p className="mb-4">
-            A flat tire in Scarborough rarely happens at a convenient spot — it's usually the 401 shoulder at rush hour, a Kennedy Road pothole, or a driveway in Agincourt at 2 AM. <strong>{COMPANY_NAME}</strong> dispatches from 20 Antrim Crescent (M1P 4N3), so when you call, a fully-stocked mobile tire van is typically <strong>15-25 minutes</strong> from anywhere in Scarborough. We handle plug repairs, full tire replacement, seasonal swaps, and emergency spare installs — all without a tow to a shop.
+            A flat never picks a good moment — a nail you find before work in Agincourt, a slow leak gone soft overnight in Woburn, or pressure dropping on the 401 eastbound at rush hour. <strong>{COMPANY_NAME}</strong> brings the tire shop to wherever your car already is, so you skip the lineup and skip the tow. We're based right here at <strong>20 Antrim Crescent (M1P 4N3)</strong>, which gives Scarborough the tightest arrival times in the East End — typically <strong>15-25 minutes</strong>, 24/7.
           </p>
           <p className="mb-4">
-            Our vans carry common 15" through 20" sizes for sedans, SUVs, and light trucks, a computerized balancer, and a full patch-plug kit. If we have your size on board, you're back on the road in under 45 minutes from the time we arrive.
+            Our vans carry a plug-patch kit, common 15"–20" sizes for sedans, SUVs, and light trucks, and a computerized balancer — so a tread puncture gets plugged on the spot, and a tire that can't be saved gets a real replacement, not a donut. Most flats are done in under 45 minutes from arrival. <strong>Call {PHONE_NUMBER} for a fast, no-obligation quote.</strong>
           </p>
-          <InlineCall source="sc_tire_intro" />
+          <InlineCall source="service_city_tire-change_scarborough_intro" />
         </>
       ),
       localScenario: (
         <>
           <p className="mb-4">
-            Scarborough's trouble spots for flats are predictable: the 401 eastbound merge at Markham Road where debris collects, the Kennedy-Sheppard construction zone, and the back roads around Morningside that chew through sidewalls in winter. We position our Scarborough unit to reach the 401 corridor in under 20 minutes — faster than any downtown-dispatched competitor.
+            Being our home base, Scarborough gets the fastest response we run. The trouble spots are predictable: the 401 eastbound merge at Markham Road where transport debris collects, the Kennedy-Sheppard construction zone, and the Morningside back roads that chew through sidewalls in winter. For highway shoulder work, the technician sets high-viz strobes and cones and secures the scene before touching the vehicle.
           </p>
           <p className="mb-4">
-            If you're in a residential pocket like Cliffside, Birchmount, or Guildwood, we'll come to your driveway and swap the tire while you stay inside. No need to move the car, no need to wait at a shop.
+            For residential calls in Cliffside, Birchmount, Guildwood, Malvern, or Rouge, we come to your driveway, the condo lot, or the parking spot at Scarborough Town Centre — no need to move the car. The recurring story in our reviews is a nail or screw found at the worst possible time, and that's exactly the call we take here every day.
           </p>
         </>
       ),
       uniqueAngle: (
-        <p className="mb-4">
-          Scarborough is our home base, so our ETAs here are the tightest in the East GTA. We also keep extra winter-rated tires in common Scarborough sizes (Honda Civic, Toyota Corolla, CR-V, RAV4, F-150) on the van November through March because demand here spikes during cold snaps.
-        </p>
+        <>
+          <p className="mb-4">
+            {COMPANY_NAME} is owner-operated, and the name you'll see across our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who answers the phone and does the work himself. One Scarborough-area review captures how a tire call goes:
+          </p>
+          <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
+            "Best Service and fast service my car Tire got flat and I called them They came in 10 minutes and they repair it in 5 minutes and they charge me fair price..." <strong>— Sha Zahim, verified Google review</strong>
+          </p>
+          <p className="mb-4">
+            We're licensed and insured, we work damage-free, and we keep winter-rated common sizes on the van from November through March because demand here spikes during cold snaps.
+          </p>
+        </>
       ),
-      priceNote: 'Scarborough mobile tire calls start at a flat local-zone rate. No hidden "out of zone" fees since you\'re in our home city.',
+      priceNote: 'We give you the price up front on the call, before the van rolls — no hidden distance or after-hours fees, and no "out of zone" surcharge in our home city. Customers consistently call our pricing fair. Call for a fast, no-obligation quote.',
       faqs: [
         {
-          question: 'Do you carry tires for my car on the Scarborough van?',
-          answer: 'We stock most common sedan, SUV, and light-truck sizes (15"-20"). Call with your make, model, and year and we\'ll confirm stock before rolling. If we don\'t have your exact tire, we can plug/patch the original or install a spare on-site and pre-order your tire for a follow-up visit.'
+          question: 'Do you carry a tire for my car on the Scarborough van?',
+          answer: 'We stock most common sedan, SUV, and light-truck sizes (15"–20"). Call with your make, model, and year and we\'ll confirm stock before we roll. If we don\'t have your exact tire, we can plug or patch the original or mount your spare on-site and pre-order the tire for a quick follow-up visit.'
+        },
+        {
+          question: 'How fast can you reach me for a flat in Scarborough?',
+          answer: 'Typically 15-25 minutes anywhere in Scarborough, since we dispatch from 20 Antrim Crescent. Agincourt, Wexford, and Bendale see even faster arrivals. Real reviews cite 10-minute arrivals, including a midnight flat. We give you a live ETA on the call.'
         },
         {
           question: 'Can you come to my driveway on a Scarborough side street?',
-          answer: 'Yes. We service driveways across Agincourt, Malvern, Woburn, Cliffside, Birchmount, Rouge, and everywhere in between. No need to move the vehicle — we bring the shop to you.'
+          answer: 'Yes. We service driveways across Agincourt, Malvern, Woburn, Cliffside, Birchmount, Rouge, and everywhere in between — plus condo lots, workplace parking, and GO stations. No need to move the vehicle; we bring the shop to you.'
         },
         {
-          question: 'How fast can you reach the 401 in Scarborough?',
-          answer: 'Typical ETA to the 401 anywhere between the DVP and Morningside is 15-25 minutes. For highway shoulder work we roll with high-viz strobes and cones before anyone touches the vehicle.'
+          question: 'What does it cost to fix a flat or patch a nail in Scarborough?',
+          answer: 'We give you the exact price on the call before we dispatch, so there are no surprises. A plug or patch of a tread puncture is the fastest fix, and a full replacement is quoted before we start. Customers consistently describe our pricing as fair — one driver was quoted "almost half" what other shops wanted. Call ' + PHONE_NUMBER + ' for a quick quote.'
         }
       ]
     },
@@ -377,49 +389,61 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
       ]
     },
     ajax: {
-      seoTitle: 'Mobile Tire Service Ajax | Flat Tire Repair 24/7 — iFAST Roadside',
-      seoDescription: 'Mobile tire repair and on-site tire change in Ajax. Harwood, Salem, Audley, Pickering Village, and the 401 corridor. 25-35 min arrival. Call iFAST Roadside.',
-      keywords: 'mobile tire service Ajax, flat tire repair Ajax, tire change Ajax, mobile tire Harwood, 401 flat tire Ajax, emergency tire Ajax',
-      h1: 'Mobile Tire Service in Ajax — On-Site Flat Tire Repair',
+      seoTitle: 'Mobile Tire Change Ajax | 24/7 Flat Tire Repair — iFAST Roadside',
+      seoDescription: 'Flat tire in Ajax? iFAST brings mobile tire repair to your driveway or the 401 shoulder — Harwood, Salem, Pickering Village. 25-35 min, 24/7. Call for a quote.',
+      keywords: 'mobile tire change Ajax, flat tire repair Ajax, tire change Ajax, mobile tire Harwood, 401 flat tire Ajax, nail in tire Ajax, on-site tire Ajax',
+      h1: 'Mobile Tire Change in Ajax — On-Site Flat Tire Repair',
       intro: (
         <>
           <p className="mb-4">
-            Flat tire in Ajax means you shouldn't have to limp it to a shop on a donut. <strong>{COMPANY_NAME}</strong> dispatches a mobile tire unit to you anywhere in Ajax — Harwood, Salem, Pickering Village, Audley, Westney — with a typical ETA of <strong>25-35 minutes</strong>. Plug repairs, full replacements, seasonal swaps, and spare installs all happen at your location.
+            A flat in Ajax shouldn't mean nursing a donut to a shop across town. <strong>{COMPANY_NAME}</strong> brings the tire shop to wherever your car already is — a driveway in Pickering Village, the Ajax GO lot, or the 401 shoulder near Westney — so you skip the tow entirely. Our typical Ajax arrival is <strong>25-35 minutes</strong>, 24/7, and we'll always give you a real ETA on the call.
           </p>
           <p className="mb-4">
-            Ajax drivers hit a lot of flats on the 401 eastbound near Westney and Salem, on Harwood during the winter freeze-thaw, and in the construction corridors around Audley Road. We know those spots and get there fast.
+            The van arrives stocked with a plug-patch kit, common 15"–20" sizes for sedans, SUVs, and light trucks, and a computerized balancer. A tread puncture gets plugged on the spot; a tire that can't be saved gets a real replacement and is balanced before you drive off. <strong>Call {PHONE_NUMBER} for a fast, no-obligation quote.</strong>
           </p>
-          <InlineCall source="aj_tire_intro" />
+          <InlineCall source="service_city_tire-change_ajax_intro" />
         </>
       ),
       localScenario: (
         <>
           <p className="mb-4">
-            Ajax has two big tire-trouble patterns: the 401 shoulders near the Harwood and Salem interchanges (debris from transports), and the suburban streets of north Ajax where seasonal potholes develop quickly on roads like Rossland and Kingston. Our Ajax calls often come from the GO Station parking lot, the Ajax Downs area, and driveways throughout Pickering Village.
+            Ajax is a city of newer subdivisions — Nottingham, Audley, Discovery Bay, Riverside — where there's often no corner tire shop nearby. We fill that gap so you don't have to tow to Whitby or Pickering. Flats here cluster on the 401 eastbound near Westney and Salem (transport debris) and on Harwood's freeze-thaw potholes through the winter and spring.
           </p>
           <p className="mb-4">
-            If you're stuck at the Ajax-Pickering GO station or along Bayly, we'll come straight to the parking spot — no need to move the vehicle. Our techs carry everything needed to plug, patch, or replace a tire curbside.
+            Whether you're stuck in a Central Ajax driveway, at the Durham Centre, or on the shoulder by the Ajax GO Station, we come straight to the spot. The most common call we get is a nail or screw found at a bad time — and a stocked van with the right tools turns that from a lost afternoon into a quick fix.
           </p>
         </>
       ),
       uniqueAngle: (
-        <p className="mb-4">
-          Ajax has a lot of newer subdivisions where residents don't have a "corner tire shop" nearby. We fill that gap — bringing the tools and tires to your driveway so you don't have to arrange a tow to Whitby or Pickering.
-        </p>
+        <>
+          <p className="mb-4">
+            {COMPANY_NAME} is owner-operated, and the name across our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who picks up the phone and does the work himself. One review sums up the no-tools, fast-fix situation we handle constantly:
+          </p>
+          <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
+            "I got a flat tire yesterday and didn't have the right tools with me... From the moment I called until the technician arrived and changed the tire, it took less than 20 minutes!" <strong>— Mohammad Badakhash, verified Google review</strong>
+          </p>
+          <p className="mb-4">
+            We're licensed and insured, we work damage-free, and that's the whole point of mobile service — you don't need a spare, a jack, or a lug wrench. We carry it all and bring it to your door.
+          </p>
+        </>
       ),
-      priceNote: 'Ajax is inside our East GTA zone — no extra distance fees. Flat patches are typically the cheapest option when the tire is salvageable.',
+      priceNote: 'We give you the price up front on the call, before the van rolls — no hidden distance fees, no after-hours premium, no "out of zone" surcharge in Ajax. Customers consistently call our pricing fair. Call for a fast, no-obligation quote.',
       faqs: [
         {
-          question: 'How long will I wait for mobile tire service in Ajax?',
-          answer: 'Typical ETA across Ajax is 25-35 minutes from call to arrival. North Ajax and the 401 corridor are usually on the faster end; far south Ajax (lakefront) slightly longer.'
+          question: 'How fast can you reach me for a flat in Ajax?',
+          answer: 'Typical Ajax arrival is 25-35 minutes from call to van on-site. Pickering Village and west Ajax tend to be on the faster end since they\'re closer to our Scarborough base; Audley and north Ajax add a few minutes. We give you a live ETA when you call.'
+        },
+        {
+          question: 'Do you carry the tools and a tire if I don\'t have a spare?',
+          answer: 'Yes — that\'s the whole point of mobile service. We carry common 15"–20" sizes, a plug-patch kit, and a computerized balancer. If your exact size isn\'t on the van, we plug or patch the original, mount your spare, or pre-order your tire so you\'re not stranded.'
         },
         {
           question: 'Do you work in Ajax subdivision driveways?',
-          answer: 'Yes. We service every neighborhood from Pickering Village to Audley. If your driveway is wide enough for a minivan, we can do the work there.'
+          answer: 'Yes. We service every neighborhood from Pickering Village to Audley, Nottingham, Discovery Bay, and Riverside, plus the Ajax GO and Durham Centre lots. If your driveway fits a van, we can do the work there.'
         },
         {
-          question: 'Can you do winter tire changeovers in Ajax?',
-          answer: 'Yes — we offer seasonal winter-to-summer (and back) tire swaps on-site. Book before the October/April rush for best availability.'
+          question: 'What does a flat repair or tire change cost in Ajax?',
+          answer: 'We give you the exact price on the call before we dispatch, so there are no surprises when we arrive. A plug or patch of a tread puncture is the fastest, and a full replacement is quoted before we start. Customers consistently describe our pricing as fair. Call ' + PHONE_NUMBER + ' for a quick quote.'
         }
       ]
     },
@@ -524,96 +548,120 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
      ========================================================================= */
   'jump-start': {
     scarborough: {
-      seoTitle: 'Battery Jump Start Scarborough | 24/7 Boost Service — iFAST Roadside',
-      seoDescription: 'Dead battery in Scarborough? iFAST delivers 24/7 jump start and battery boost across Agincourt, Malvern, Woburn, and the 401. 15-25 min arrival. Call now.',
-      keywords: 'jump start Scarborough, car battery boost Scarborough, dead battery Scarborough, battery jump Agincourt, jump start Malvern, 24 hour jump start Scarborough',
-      h1: 'Battery Jump Start in Scarborough — 24/7 Boost Service',
+      seoTitle: 'Car Battery Jump Start Scarborough | 24/7 Boost — iFAST',
+      seoDescription: 'Dead battery in Scarborough? iFAST delivers 24/7 jump start and battery boost across Agincourt, Malvern, Woburn, and the 401. 15-25 min arrival. Call for a quote.',
+      keywords: 'jump start Scarborough, car battery boost Scarborough, dead battery Scarborough, battery jump Agincourt, jump start Malvern, 24 hour jump start Scarborough, car won\'t start Scarborough',
+      h1: 'Car Battery Jump Start in Scarborough — 24/7 Boost Service',
       intro: (
         <>
           <p className="mb-4">
-            Dead battery in Scarborough? <strong>{COMPANY_NAME}</strong> dispatches from 20 Antrim Crescent (M1P 4N3), so a certified technician with a commercial-grade jump pack is typically <strong>15-25 minutes</strong> from anywhere in Scarborough. We boost cars, trucks, SUVs, and vans — even stubborn deeply-discharged batteries that cheap booster cables won't touch.
+            Turn the key in Agincourt and hear a click, slow crank, or nothing at all? <strong>{COMPANY_NAME}</strong> dispatches from our home base at <strong>20 Antrim Crescent (M1P 4N3)</strong>, so a technician with a commercial jump pack is typically <strong>15-25 minutes</strong> from anywhere in Scarborough — the fastest boost ETA in the East GTA. We start cars, trucks, SUVs, and vans, including deeply-discharged batteries that another car's cables won't touch.
           </p>
           <p className="mb-4">
-            Scarborough winters are hard on batteries: overnight temperatures of -15°C drain cold-soaked batteries by 30-40%, and any battery over 4 years old is at serious risk of a no-start in January. We see the most jump start calls here in December and February mornings.
+            We don't just boost and leave. We load-test the battery on the spot — about 60 seconds — so you know whether it will hold or whether it's failing. If it's done, we tell you straight and can often install a replacement the same visit, no tow. <strong>Call {PHONE_NUMBER} for a fast, no-obligation quote.</strong>
           </p>
-          <InlineCall source="sc_jump_intro" />
+          <InlineCall source="service_city_jump-start_scarborough_intro" />
         </>
       ),
       localScenario: (
         <>
           <p className="mb-4">
-            Typical Scarborough jump start calls: Agincourt Mall parking, STC parking, driveways throughout Malvern and Woburn, the GO station at Kennedy, and the big box lots along Progress Avenue. We also do a lot of industrial park calls during early morning shifts when cars sat overnight in the cold.
+            As our home base, Scarborough gets the fastest response we run — and the calls spike December through February. Overnight cold-soaked batteries no-start in driveways across Malvern and Woburn, in the industrial-park lots along Progress Avenue where cars sat through a cold night, and in the big lots at Scarborough Town Centre, Agincourt Mall, and the Kennedy GO commuter lot.
           </p>
           <p className="mb-4">
-            If your battery is toast (not just discharged), we'll tell you honestly after the boost — a load test takes 60 seconds and tells us whether a jump will hold or whether you need replacement.
+            Batteries lose roughly 30% of their cranking power at -15°C, so any battery past about four years old is a real no-start risk in a Scarborough cold snap. We keep common replacement batteries on the van through winter, so a boost that reveals a dead battery often becomes a same-visit fix instead of a tow.
           </p>
         </>
       ),
       uniqueAngle: (
-        <p className="mb-4">
-          We keep a range of common replacement batteries on the Scarborough van during winter — so if your boost reveals a failing battery, we can often install a new one the same visit without a tow.
-        </p>
+        <>
+          <p className="mb-4">
+            {COMPANY_NAME} is owner-operated, and the name behind our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who answers and does the work himself. Two of our battery reviews lead with the same thing: fast arrival and an honest, upfront price.
+          </p>
+          <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
+            "My mom had an issue with a car battery and was stuck in a parking lot—they got there quickly and were super helpful. They spoke us through possible solutions and were super transparent about how much they charge. Very reliable!" <strong>— Shanthuru Kalaiselvan, verified Google review</strong>
+          </p>
+          <p className="mb-4">
+            We're licensed and insured, our procedure is safe for modern electronics, hybrids, and EV 12V auxiliaries, and we walk you through what we find before any paid work — exactly what that review describes.
+          </p>
+        </>
       ),
-      priceNote: 'Scarborough jump start is a flat local rate. Battery replacement (if needed) is quoted separately with your approval before installation.',
+      priceNote: 'We give you the price up front on the call, before we dispatch — no hidden distance or after-hours fees in our home city. If the battery is dead beyond a boost, we load-test, tell you honestly, and quote a replacement before installing anything — you approve first. Call for a fast, no-obligation quote.',
       faqs: [
         {
-          question: 'How cold is too cold for my battery?',
-          answer: 'Batteries lose ~30% of cranking power at -15°C and ~50% at -30°C. Any battery over 4 years old is at high risk of a no-start during Scarborough cold snaps. A failing battery shows early signs — slow cranking, dim lights, clicking.'
+          question: 'How fast can you reach me for a dead battery in Scarborough?',
+          answer: 'Typically 15-25 minutes anywhere in Scarborough, since we dispatch from 20 Antrim Crescent. Agincourt and the north end see the fastest arrivals. A real customer called us at 2am and we arrived in 15 minutes. We give you a live ETA on the call.'
         },
         {
-          question: 'Can you boost a completely dead battery?',
-          answer: 'Yes. Our commercial jump packs deliver up to 2000 amps — far more than retail booster cables. Deeply discharged batteries that won\'t accept a charge from another car\'s cables will start on our equipment.'
+          question: 'How cold is too cold for my battery?',
+          answer: 'Batteries lose roughly 30% of cranking power at -15°C and about 50% at -30°C. Any battery over four years old is at high risk of a no-start during a Scarborough cold snap. Early warning signs are slow cranking, dim dash lights, and clicking.'
+        },
+        {
+          question: 'Will you tell me the price and what\'s wrong before you start?',
+          answer: 'Yes. We give you the price on the call before we dispatch, and we walk you through what we find before any paid work — reviewers specifically call out how transparent we are. If the battery needs replacing, you approve the quote before we install anything.'
         },
         {
           question: 'Will jumping my car damage it?',
-          answer: 'Not when done properly. Our techs are trained in modern jump procedures to protect vehicle electronics (including hybrids and EVs with 12V auxiliaries). We use polarity-protected clamps and never reverse-polarity.'
+          answer: 'No, done properly. We use polarity-protected clamps and procedures that are safe for modern electronics, hybrids, and EV 12V auxiliary batteries. Our commercial pack delivers far more than retail cables and can start deeply-discharged batteries.'
         }
       ]
     },
     pickering: {
-      seoTitle: 'Battery Jump Start Pickering | 24/7 Boost Service — iFAST Roadside',
-      seoDescription: 'Dead battery in Pickering? 24/7 jump start and battery boost across Bay Ridges, Amberlea, Liverpool, Pickering Town Centre. 20-30 min arrival. Call iFAST.',
-      keywords: 'jump start Pickering, car battery boost Pickering, dead battery Pickering, jump start Bay Ridges, 24 hour battery Pickering, Pickering GO battery',
-      h1: 'Battery Jump Start in Pickering — 24/7 Mobile Boost',
+      seoTitle: 'Car Battery Jump Start Pickering | 24/7 Boost — iFAST Roadside',
+      seoDescription: 'Dead battery in Pickering? iFAST brings 24/7 jump start and battery boost to Bay Ridges, Amberlea, Liverpool, and the Pickering GO lot. 20-30 min. Call for a quote.',
+      keywords: 'jump start Pickering, car battery boost Pickering, dead battery Pickering, jump start Bay Ridges, 24 hour battery Pickering, Pickering GO battery, car won\'t start Pickering',
+      h1: 'Car Battery Jump Start in Pickering — 24/7 Mobile Boost',
       intro: (
         <>
           <p className="mb-4">
-            Car won't start in Pickering? <strong>{COMPANY_NAME}</strong> brings 24/7 mobile jump start service to your driveway, parking lot, or roadside anywhere in the city. Typical ETA is <strong>20-30 minutes</strong> with a commercial jump pack that handles deeply-discharged batteries cheap cables can't.
+            Car won't start in Pickering? Clicks, a slow crank, or dash lights but no turnover usually means the battery. <strong>{COMPANY_NAME}</strong> brings a commercial jump pack to your driveway, parking lot, or the roadside anywhere in the city — Bay Ridges, Amberlea, Liverpool, West Shore — with a typical <strong>20-30 minute</strong> ETA, 24/7. It starts deeply-discharged batteries that another car's cables won't.
           </p>
           <p className="mb-4">
-            Pickering commuters get hit especially hard on cold Monday mornings after cars sat through a weekend in sub-zero temperatures. If you're running late and the engine won't turn over, calling us beats trying to flag down a neighbor with cables.
+            We boost, then load-test on the spot — about 60 seconds — so you know whether the battery will hold through the next cold night or whether it's failing. If it's done, we tell you straight and can often replace it the same visit, no tow. <strong>Call {PHONE_NUMBER} for a fast, no-obligation quote.</strong>
           </p>
-          <InlineCall source="pk_jump_intro" />
+          <InlineCall source="service_city_jump-start_pickering_intro" />
         </>
       ),
       localScenario: (
         <>
           <p className="mb-4">
-            Pickering jump start patterns: driveways in Bay Ridges, Amberlea, and Liverpool; the Pickering GO station commuter lot (regular Monday morning calls); Pickering Town Centre parking; and commercial zones along Brock Road. We reach highway shoulder calls on the 401 in under 25 minutes.
+            Pickering is commuter country, and the classic no-start here is a cold Monday morning after a car has sat through a sub-zero weekend. We get a recurring run of these from the Pickering GO commuter lot, and from driveways across Bay Ridges, Amberlea, and Dunbarton where the daily driver won't turn over before the 401 run into the city.
           </p>
           <p className="mb-4">
-            Our techs test the battery after boosting, so you know whether it will survive the next cold night or whether replacement is needed. Replacing at the roadside is faster than a shop visit and lets you get to work.
+            That's why we lean on early-morning dispatch in Pickering — call as soon as you find the battery dead and we can usually have you moving before rush hour locks up the 401. We also take highway shoulder calls along the 401 eastbound and boosts at the Pickering Town Centre and Casino Resort lots.
           </p>
         </>
       ),
       uniqueAngle: (
-        <p className="mb-4">
-          We prioritize early-morning Pickering boost calls because commuters are racing the clock. A 6 AM dispatch will usually have you moving by 6:45 — before the 401 locks up.
-        </p>
+        <>
+          <p className="mb-4">
+            {COMPANY_NAME} is owner-operated, and the name behind our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who answers the phone and does the work himself, even in the middle of the night. One battery review captures exactly that:
+          </p>
+          <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
+            "Called him around 2am and he arrived in 15 minutes, my car won't start, it needs a battery powered" <strong>— oyindamola aworele, verified Google review</strong>
+          </p>
+          <p className="mb-4">
+            We're licensed and insured, our boost is safe for modern electronics, hybrids, and EV 12V auxiliaries, and we run 24/7 — the late call and the early-commute call both get answered.
+          </p>
+        </>
       ),
-      priceNote: 'Pickering is in our standard East GTA zone — no extra fees. Jump starts are a flat rate regardless of neighborhood.',
+      priceNote: 'We give you the price up front on the call, before we dispatch — no hidden distance or after-hours fees, no out-of-zone surcharge in Pickering. If the battery is dead beyond a boost, we load-test, tell you honestly, and quote a replacement before installing anything — you approve first. Call for a fast, no-obligation quote.',
       faqs: [
         {
           question: 'Do you do early-morning jump starts in Pickering?',
-          answer: 'Yes, 24/7. We run early-morning (5-7 AM) dispatch specifically for Pickering commuters. Call as soon as you realize the battery\'s dead — we\'ll get you moving before rush hour traffic builds.'
+          answer: 'Yes, 24/7. We run early-morning dispatch specifically for Pickering commuters. Call the moment you realize the battery is dead and we can usually have you moving before the 401 fills up — a real customer called at 2am and we arrived in 15 minutes.'
         },
         {
-          question: 'What if my battery won\'t hold a jump?',
-          answer: 'If the battery is toast, we\'ll tell you right after the boost. We can typically install a replacement battery on-site — no need for a tow to a shop.'
+          question: 'My car won\'t start — is it the battery?',
+          answer: 'Often yes — a slow crank, clicking, or dim lights with no start is the classic battery signature. We boost it and load-test on the spot to confirm whether it\'s the battery, the alternator, or something else, so you\'re not guessing.'
         },
         {
-          question: 'Can you jump hybrids like a Prius or RAV4 Hybrid in Pickering?',
-          answer: 'Yes. Hybrids have a separate 12V auxiliary battery that handles starting and electronics — we jump that battery the same way we jump a conventional car. We\'ve done hundreds.'
+          question: 'Can you jump a hybrid or EV in Pickering?',
+          answer: 'Yes. Hybrids and EVs have a separate 12V auxiliary battery that handles starting and electronics; we boost that the same way we boost a conventional car, using procedures safe for the vehicle\'s electronics. Tell dispatch the model when you call.'
+        },
+        {
+          question: 'Will you tell me the price before you start?',
+          answer: 'Yes. We quote you up front on the call, and we walk you through what we find before any paid work — our reviews specifically call out how transparent we are. If the battery needs replacing, you approve the price before we install. Call ' + PHONE_NUMBER + ' for a quote.'
         }
       ]
     },
@@ -766,95 +814,119 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
   'lockout': {
     scarborough: {
       seoTitle: 'Car Lockout Service Scarborough | 24/7 Damage-Free Unlock — iFAST',
-      seoDescription: 'Locked keys in your car in Scarborough? 24/7 damage-free car lockout service. 15-25 min arrival across Agincourt, Malvern, Woburn, STC. Call iFAST.',
-      keywords: 'car lockout Scarborough, locked keys in car Scarborough, car unlock Scarborough, 24 hour lockout Scarborough, car lockout Agincourt, car lockout STC',
+      seoDescription: 'Locked out in Scarborough? iFAST opens your car damage-free, 24/7, no membership — Agincourt, Malvern, STC, Kennedy. 15-25 min arrival. Call for a quote.',
+      keywords: 'car lockout Scarborough, locked keys in car Scarborough, car unlock Scarborough, 24 hour lockout Scarborough, car lockout Agincourt, damage-free unlock Scarborough',
       h1: 'Car Lockout Service in Scarborough — 24/7 Damage-Free Unlock',
       intro: (
         <>
           <p className="mb-4">
-            Locked your keys in the car in Scarborough? <strong>{COMPANY_NAME}</strong> dispatches a certified lockout technician with damage-free unlock tools from 20 Antrim Crescent. Typical ETA anywhere in Scarborough is <strong>15-25 minutes</strong>, and most unlocks are done in under 5 minutes once we arrive — without scratching paint or breaking windows.
+            Keys sitting on the seat at Scarborough Town Centre, or locked in the car in your own Agincourt driveway? <strong>{COMPANY_NAME}</strong> comes to wherever you are and opens the car without a scratch. We dispatch from our home base at <strong>20 Antrim Crescent (M1P 4N3)</strong>, so Scarborough gets our fastest arrivals — typically <strong>15-25 minutes</strong>, any hour, day or night.
           </p>
           <p className="mb-4">
-            We use airbag wedges, long-reach tools, and modern slim-jim variants rated for current vehicle door designs. We won't work on your car unless we're sure we can open it damage-free.
+            Every unlock is done with damage-free tools — an air wedge plus a long-reach tool rated for modern door designs, never an old slim-jim that can tear the wiring inside the door. There's no membership to buy and nothing to sign up for; you pay only for the unlock. <strong>Call {PHONE_NUMBER} for a fast, no-obligation quote.</strong>
           </p>
-          <InlineCall source="sc_lock_intro" />
+          <InlineCall source="service_city_lockout_scarborough_intro" />
         </>
       ),
       localScenario: (
         <>
           <p className="mb-4">
-            Scarborough lockout hotspots: Scarborough Town Centre parking, Agincourt Mall, gym parking at LA Fitness and Goodlife across the east end, gas stations along Kingston Road, and residential driveways throughout Malvern, Woburn, and Cliffside. Weekends see triple the lockout calls of weekdays.
+            As our home base, Scarborough gets the tightest lockout ETAs we run. The calls cluster where people park, lock up, and walk away — the big lots at Scarborough Town Centre, Agincourt Mall, the gym and community-centre parking (where locker-room key mix-ups happen), Kennedy Station, and residential driveways across Malvern, Woburn, and Cliffside.
           </p>
           <p className="mb-4">
-            If your keys are visibly inside the vehicle and you have ID matching the registration, we can unlock on the spot. We verify ownership before unlocking — for your protection and ours.
+            We work these jobs discreetly — no loud sirens, no tow-truck spectacle outside your building. Before we open anything, we check photo ID against the registration so no one but the owner walks away with the car. Most unlocks take only a few minutes once we arrive.
           </p>
         </>
       ),
       uniqueAngle: (
-        <p className="mb-4">
-          Many Scarborough parking-lot lockouts happen at gyms, mosques, and community centers where locker-room key mix-ups are common. We work discreetly in those lots — no loud sirens, no tow truck drama.
-        </p>
+        <>
+          <p className="mb-4">
+            {COMPANY_NAME} is owner-operated, and the name behind our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who answers and does the work himself. For lockouts, customers lead with two things: fast arrival and a fair price.
+          </p>
+          <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
+            "Got locked out of my car and the guy was there in a flash and got it sorted out. Genuine rates as well." <strong>— Uddhav Reen, verified Google review</strong>
+          </p>
+          <p className="mb-4">
+            We're licensed and insured, we guarantee a <strong>damage-free unlock</strong>, and there's no membership required — you call the one time you need us and pay only for the unlock.
+          </p>
+        </>
       ),
-      priceNote: 'Scarborough lockout is a flat local rate — no hourly billing, no "difficulty surcharge" for common vehicles.',
+      priceNote: 'We give you the price up front on the call, before we dispatch — flat, with no hourly billing, no "difficulty surcharge" for a common vehicle, no after-hours premium, and no membership. Customers consistently call our rates fair. Call for a fast, no-obligation quote.',
       faqs: [
         {
+          question: 'How fast can you reach me for a lockout in Scarborough?',
+          answer: 'Typically 15-25 minutes anywhere in Scarborough, since we dispatch from 20 Antrim Crescent — our home base. Customers describe us arriving "fast" and "there in a flash." We give you a live ETA when you call rather than an optimistic guess.'
+        },
+        {
           question: 'Will unlocking my car damage the door or window?',
-          answer: 'No. We use damage-free airbag wedge + long-reach tools designed for modern vehicles. We carry insurance on every unlock; if something goes wrong (very rare), we cover it.'
+          answer: 'No. We use damage-free air-wedge and long-reach tools designed for modern vehicles — no old slim-jims, no broken glass, no torn weatherstripping. We\'re insured on every unlock, and if a car can\'t be opened safely without damage, we won\'t force it.'
         },
         {
-          question: 'Can you open any car in Scarborough?',
-          answer: 'We handle almost all consumer vehicles — sedans, SUVs, light trucks, vans. For very new high-end vehicles with anti-tow/anti-theft features we\'ll confirm compatibility on the phone before dispatch.'
+          question: 'Do I need a membership, and what will it cost?',
+          answer: 'No membership — you pay once, for the unlock. We give you the price on the call before we dispatch, with no hourly billing, no difficulty surcharge for a common vehicle, and no after-hours premium. Reviewers call our rates "fair" and "genuine." Call ' + PHONE_NUMBER + ' for a quote.'
         },
         {
-          question: 'What if my child or pet is locked in the car?',
-          answer: 'Call 911 first if the child/pet is in distress or it\'s hot/cold out. Then call us — we\'ll dispatch immediately, but emergency services take priority for child/pet safety.'
+          question: 'What if my child or pet is locked inside?',
+          answer: 'Call 911 first if they\'re in any distress — heat, cold, or panic. Then call us and we dispatch immediately as priority and head straight to you while you\'re on with emergency services.'
         }
       ]
     },
     pickering: {
       seoTitle: 'Car Lockout Service Pickering | 24/7 Damage-Free Unlock — iFAST',
-      seoDescription: 'Locked out of your car in Pickering? 24/7 damage-free car lockout across Bay Ridges, Pickering Town Centre, GO Station. 20-30 min arrival. Call iFAST.',
-      keywords: 'car lockout Pickering, locked keys in car Pickering, car unlock Pickering, 24 hour lockout Pickering, Pickering Town Centre lockout',
+      seoDescription: 'Locked out in Pickering? iFAST opens your car damage-free, 24/7, no membership — Bay Ridges, Town Centre, Pickering GO. 20-30 min arrival. Call for a quote.',
+      keywords: 'car lockout Pickering, locked keys in car Pickering, car unlock Pickering, 24 hour lockout Pickering, Pickering GO lockout, damage-free unlock Pickering',
       h1: 'Car Lockout Service in Pickering — 24/7 Mobile Unlock',
       intro: (
         <>
           <p className="mb-4">
-            Locked keys in the car in Pickering? <strong>{COMPANY_NAME}</strong> rolls a mobile lockout unit to you anywhere in the city with a <strong>20-30 minute</strong> typical ETA. We carry damage-free airbag wedge and long-reach tools — most Pickering unlocks are complete within 5 minutes of arrival.
+            Door swung shut with the keys still inside — at the Pickering GO lot, the Town Centre, or your own driveway in Amberlea? <strong>{COMPANY_NAME}</strong> comes to wherever you are and opens the car without a scratch, with a typical <strong>20-30 minute</strong> ETA across the city, 24/7. No membership, nothing to sign up for — you pay only for the unlock.
           </p>
           <p className="mb-4">
-            We verify you're the owner (ID + registration) before unlocking, which protects both of us. After that, you're back in the car and on your way.
+            We open it damage-free with an air wedge and a long-reach tool rated for modern door designs — no old slim-jims, no broken glass, no torn weatherstripping. Most unlocks take only a few minutes once we arrive. <strong>Call {PHONE_NUMBER} for a fast, no-obligation quote.</strong>
           </p>
-          <InlineCall source="pk_lock_intro" />
+          <InlineCall source="service_city_lockout_pickering_intro" />
         </>
       ),
       localScenario: (
         <>
           <p className="mb-4">
-            Most common Pickering lockout spots: Pickering Town Centre parking lots, Pickering GO Station commuter lot, Bay Ridges waterfront parking, the plazas along Brock Road and Kingston Road, and residential driveways throughout Amberlea and Liverpool. Gym and grocery store lockouts spike on weekends.
+            Pickering is commuter country, and the recurring lockout here is the morning rush — keys locked at the Pickering GO Station while the train pulls in. We get those same-address calls week after week and know how to work around transit flow to reach you fast. The Pickering Town Centre lots and the Frenchman's Bay trail parking are the other regular spots.
           </p>
           <p className="mb-4">
-            If you're stuck at Frenchman's Bay or at a Beachfront trail parking lot, we'll come straight to you — no need to walk somewhere else to wait.
+            Out in the neighborhoods — Bay Ridges, Liverpool, West Shore, Rosebank, Dunbarton — it's usually a fob locked in the car on a quick trip. Before we open anything, we check photo ID against the registration so no one but the owner walks away with the car. Quiet, discreet work, no tow-truck drama.
           </p>
         </>
       ),
       uniqueAngle: (
-        <p className="mb-4">
-          Pickering commuters often lock keys in the car at the GO station in the morning — which means we get several same-address calls each week. We know the lot, the staff, and how to work around transit security without friction.
-        </p>
+        <>
+          <p className="mb-4">
+            {COMPANY_NAME} is owner-operated, and the name behind our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who answers and does the work himself. For lockouts, two customers said it best, and both led with the same thing:
+          </p>
+          <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
+            "Had myself locked out of my car, called this company arrived fast and fair price." <strong>— Heng Tho, verified Google review</strong>
+          </p>
+          <p className="mb-4">
+            We're licensed and insured, we guarantee a <strong>damage-free unlock</strong>, and there's no membership — you call the one time you need us and pay only for the unlock.
+          </p>
+        </>
       ),
-      priceNote: 'Pickering lockout is a flat East GTA rate — no surge, no "after-hours" premium.',
+      priceNote: 'We give you the price up front on the call, before we dispatch — flat, with no hourly billing, no after-hours premium, no "difficulty surcharge," and no membership. Customers consistently call our rates fair and genuine. Call for a fast, no-obligation quote.',
       faqs: [
         {
           question: 'Can you unlock my car at the Pickering GO Station?',
-          answer: 'Yes — this is one of our most common Pickering call types. We have experience working with transit staff on-site.'
+          answer: 'Yes — it\'s one of our most common Pickering calls, especially during the morning commuter rush. We know the lot and how to reach you without holding up transit flow. We give you a live ETA when you call.'
+        },
+        {
+          question: 'Will unlocking my car damage the door or window?',
+          answer: 'No. We use damage-free air-wedge and long-reach tools designed for modern vehicles — no old slim-jims, no broken glass, no torn weatherstripping. We\'re insured on every unlock, and if a car can\'t be opened safely without damage, we won\'t force it.'
+        },
+        {
+          question: 'Do I need a membership, and what will it cost?',
+          answer: 'No membership — you pay once, for the unlock. We give you the price on the call before we dispatch, with no after-hours premium and no surcharge for a common vehicle. Reviewers describe our rates as "fair" and "genuine." Call ' + PHONE_NUMBER + ' for a quote.'
         },
         {
           question: 'What ID do you need before unlocking?',
-          answer: 'Photo ID that matches the vehicle registration or a match to the person listed on rental/corporate documents. This protects you from someone claiming your car.'
-        },
-        {
-          question: 'Do you replace broken car keys in Pickering?',
-          answer: 'Our core service is lockout — getting you into the car. For key replacement/programming, we can refer a local auto locksmith who handles cutting and fob programming.'
+          answer: 'Photo ID that matches the vehicle registration, or rental and corporate documents for those vehicles. It takes a moment and it protects you from anyone else ever claiming your car.'
         }
       ]
     },
@@ -1053,49 +1125,61 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
       ]
     },
     pickering: {
-      seoTitle: 'Fuel Delivery Pickering | 24/7 Emergency Gas — iFAST Roadside',
-      seoDescription: 'Out of gas in Pickering? 24/7 mobile fuel delivery across Bay Ridges, Amberlea, Liverpool, Pickering Town Centre, and the 401. 20-30 min arrival.',
-      keywords: 'fuel delivery Pickering, emergency gas delivery Pickering, out of gas Pickering, 401 fuel delivery Pickering, diesel delivery Pickering',
+      seoTitle: 'Emergency Fuel Delivery Pickering | 24/7 Out of Gas Help — iFAST',
+      seoDescription: 'Out of gas in Pickering? iFAST brings fuel to your driveway or the 401 shoulder, 24/7 — Bay Ridges, Brock Rd, Whites Rd. Cheaper than a tow. Call for a quote.',
+      keywords: 'fuel delivery Pickering, emergency gas delivery Pickering, out of gas Pickering, 401 fuel delivery Pickering, diesel delivery Pickering, ran out of gas Pickering',
       h1: 'Emergency Fuel Delivery in Pickering — 24/7 Gas & Diesel',
       intro: (
         <>
           <p className="mb-4">
-            Ran dry in Pickering? <strong>{COMPANY_NAME}</strong> brings regular, premium, or diesel to your location within a typical <strong>20-30 minutes</strong>. Standard delivery is 5 gallons (~19 L) — enough to get you to the nearest station. We use approved fuel transport containers, not red jugs from the hardware store.
+            Coasting onto the shoulder in Pickering with a dead tank? <strong>{COMPANY_NAME}</strong> brings fuel directly to you — on the 401 shoulder, in a parking lot, or in your driveway — so you don't have to walk a busy road with a jerry can or pay for a tow you don't need. Tell us regular, premium, or diesel and we'll confirm it on the call. Our typical Pickering ETA is <strong>20-30 minutes</strong>, 24/7.
           </p>
           <p className="mb-4">
-            Most Pickering fuel calls come from the 401 eastbound between Whites and Brock, the Pickering Town Centre parking area, and driveways where a commuter misjudged reserves. We work all of them.
+            We arrive with sealed, approved fuel containers and deliver enough to comfortably reach the nearest open station — the goal is to get you moving, not to fill the tank on the shoulder. On a highway shoulder, the technician sets high-viz strobes and cones first. It's almost always faster and cheaper than waiting on a flatbed. <strong>Call {PHONE_NUMBER} for a fast, no-obligation quote.</strong>
           </p>
-          <InlineCall source="pk_fuel_intro" />
+          <InlineCall source="service_city_fuel_pickering_intro" />
         </>
       ),
       localScenario: (
         <>
           <p className="mb-4">
-            Typical Pickering fuel delivery spots: the 401 eastbound shoulder, Bayly Street in both directions, Brock Road commuter routes, and waterfront/marina parking at Bay Ridges. Winter commuters running the tank low before a cold overnight are frequent callers.
+            The classic Pickering out-of-gas call is a commuter on the 401 eastbound who passes the last convenient station and runs dry on the long stretch toward the Brock Road and Whites Road exits. We get those highway-shoulder calls first because the safety risk is highest there, arriving with strobes and cones before anything else.
           </p>
           <p className="mb-4">
-            If you're on the 401 near Pickering, call as soon as you pull over — we get to highway calls first because safety risk is highest there.
+            The other regular spots are Brock Road and Bayly Street commuter routes, Kingston Road late at night when nearby pumps have closed, and driveways across Bay Ridges, Amberlea, and Liverpool where a daily driver was run down to fumes overnight. For diesel that ran completely dry, the technician helps prime the line so the engine restarts cleanly instead of just cranking on air.
           </p>
         </>
       ),
       uniqueAngle: (
-        <p className="mb-4">
-          Pickering has multiple closed gas stations along Kingston Road at night — a detail that catches commuters off-guard when they try to refuel after 11 PM. We're the backstop when the pumps are dark.
-        </p>
+        <>
+          <p className="mb-4">
+            We'll be straight with you: the reviews below are general {COMPANY_NAME} reviews, not fuel-delivery reviews specifically. Drivers who've called us for tires, batteries, and lockouts describe the same way we operate — fast, fair, and professional — and that's exactly how a fuel call runs too. The owner-technician, <strong>Safi</strong>, is the name behind our 146 five-star Google reviews.
+          </p>
+          <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
+            "Excellent service! Fast response time, professional staff, and very reasonable pricing. They arrived quickly and helped me get back on the road without any hassle." <strong>— fazlollah masror, verified Google review</strong>
+          </p>
+          <p className="mb-4">
+            On a fuel call, what we can promise for real is what those reviews describe: a fast response with a live ETA, an all-in price before we roll, shoulder-safe delivery with strobes and cones, and gas or diesel confirmed on the call. We're licensed, insured, and highway-shoulder authorized.
+          </p>
+        </>
       ),
-      priceNote: 'Flat service fee plus fuel cost. Market-plus pricing quoted before dispatch — no surprises.',
+      priceNote: 'We give you the all-in price up front on the call, before we dispatch — no hidden distance or after-hours fees, and no out-of-zone surcharge in Pickering. The amount of fuel is set by design: enough to comfortably reach the nearest open station. Call for a fast, no-obligation quote.',
       faqs: [
         {
-          question: 'What if I need diesel in Pickering?',
-          answer: 'We carry both gas and diesel. Tell us when you call so the right fuel arrives.'
+          question: 'How much fuel do you bring to a Pickering call?',
+          answer: 'Enough to comfortably reach the nearest open station — the goal is to get you moving, not to fill the tank on the shoulder. If you know the nearest station is unusually far, tell dispatch and we\'ll bring extra.'
         },
         {
           question: 'Can you deliver on the 401 shoulder in Pickering?',
-          answer: 'Yes — highway fuel delivery is a core service. We deploy safety cones and strobes before approaching the vehicle.'
+          answer: 'Yes — we\'re set up for shoulder delivery on the major East GTA corridors, including the 401 and 407 through Pickering. We arrive with high-viz strobes and cones and secure the scene before delivering. Call as soon as you\'ve pulled over safely.'
         },
         {
-          question: 'Is 5 gallons enough to get to a gas station?',
-          answer: 'Yes — 5 gallons (~19L) is typically enough for 40-70 km of normal driving, well beyond the nearest Pickering gas station.'
+          question: 'Gas and diesel both?',
+          answer: 'Yes. Tell dispatch which one you need when you call. For diesel that ran completely dry, the technician primes the fuel line after delivery so the engine restarts cleanly.'
+        },
+        {
+          question: 'What does fuel delivery cost in Pickering, and is it cheaper than a tow?',
+          answer: 'We give you the all-in number on the call before we dispatch — the delivery and the fuel itself — with no hidden fees. It\'s almost always cheaper than a tow to a station, since you drive yourself out instead of paying for a flatbed. Call ' + PHONE_NUMBER + ' for a quick quote.'
         }
       ]
     },
