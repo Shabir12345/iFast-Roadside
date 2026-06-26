@@ -90,7 +90,10 @@ const ServiceCityPage: React.FC = () => {
     }))
   };
 
-  const otherServices = SERVICES.filter(s => s.id !== id);
+  // Only cross-link to top-level services. Sub-services (s.parent set) have no
+  // SERVICE_CITY_CONTENT[id][city] entry, so linking them here produced 25 dead
+  // "Page Not Found" combo URLs (e.g. /service/flat-tire-repair/pickering).
+  const otherServices = SERVICES.filter(s => s.id !== id && !s.parent);
 
   return (
     <div className="bg-white min-h-screen pt-24 pb-0 font-sans">
