@@ -374,184 +374,324 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'lockout': {
     id: 'lockout',
-    seoTitle: '24/7 Car Lockout Service East GTA | Pickering, Ajax, Oshawa',
-    seoDescription: 'Locked your keys in your car? iFAST Roadside offers 100% damage-free 24/7 car lockout services across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Fast local dispatch.',
-    keywords: 'car lockout service Pickering, keys locked in car Ajax, unlock car door Oshawa, mobile auto locksmith Whitby, emergency vehicle unlock Scarborough, keys locked in trunk East GTA',
+    seoTitle: 'Car Lockout Service East GTA | 24/7 Damage-Free Unlock',
+    seoDescription: 'Locked out in the East GTA? iFAST unlocks your car damage-free — Scarborough, Pickering, Ajax, Whitby, Oshawa. 24/7, fast, no membership. Call for a fast quote.',
+    keywords: 'car lockout service East GTA, keys locked in car Scarborough, unlock car door Pickering, car lockout Ajax, damage-free vehicle unlock Whitby, 24/7 lockout Oshawa, keys locked in trunk East GTA, no membership car unlock near me',
     heroImage: '/car_lockout_hero.jpg',
     blogSections: [
       {
-        title: '24/7 Emergency Car Lockout Service Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
+        title: 'Locked Out of Your Car? We Come to You — Damage-Free, 24/7',
         content: (
           <>
             <p className="mb-4">
-              Keys stranded in the cup holder while the doors are locked? Trunk closed with your smart fob buried inside a gym bag? Have an infant buckled in while the keys sit on the front seat? <strong>{COMPANY_NAME}</strong> provides rapid, 100% damage-free vehicle unlocking services—any hour, any day. Our highly trained lockout technicians reach you in <strong>under 30 minutes on average</strong>, equipped with professional, non-marring automotive entry tools designed to bypass complex door geometry.
+              It happens in a second. The door swings shut with the keys still in the cup holder, or your fob is buried in a gym bag in the trunk, or you're standing in a cold parking lot watching your keys sit on the front seat. <strong>{COMPANY_NAME}</strong> comes to wherever you are in the East GTA — a mall lot, a gym, a GO station, your own driveway — and opens your car without a scratch, any hour of the day or night.
             </p>
             <p className="mb-4">
-              From busy, sprawling shopping mall parking lots in Pickering Town Centre to quiet residential streets in Whitby and Oshawa, we handle every single vehicle lockout with absolute precision. We strictly avoid the risks of scratched exterior clear-coat paint, torn internal weather stripping, or broken window glass. We get you back into the driver's seat securely, smoothly, and incredibly affordably.
+              We cover Scarborough, Pickering, Ajax, Whitby, and Oshawa around the clock. Every unlock is done with damage-free tools designed for modern door geometry — no old slim-jims, no broken glass, no torn weatherstripping. There's no membership to buy and nothing to sign up for; you call when you need us and you pay only for the unlock.
             </p>
-            <CallNowButton />
+            <p className="mb-4">
+              Fast, fair, and done where your car already is. <strong>Call {PHONE_NUMBER} for a fast, no-obligation quote.</strong>
+            </p>
+            <CallNowButton source="service_content_lockout_intro" />
           </>
         )
       },
       {
-        title: 'Why Hire Professional Lockout Techs? Key Benefits',
+        title: 'How a Damage-Free Unlock Actually Works',
         content: (
           <>
             <p className="mb-4">
-              Trying to violently force a wire hanger or a crude metal jimmy down your window sill will inevitably destroy the physical linkage connecting your inner door handle to the lock actuator. Replacing a shattered window or a severed wiring harness costs exponentially more than professional entry.
+              No mystery, no forcing, no gambling with your door. Here's exactly what happens from the moment you call.
             </p>
             <ul className="list-disc pl-5 space-y-3 mb-6">
-              <li><strong>Ultra-Rapid 30-Minute Dispatch</strong>: Lockouts are stressful and dangerous in extreme weather. We prioritize lockout dispatches to get to your location instantly.</li>
-              <li><strong>100% Damage-Free Guarantee</strong>: We use specialized Teflon-coated structural tools and precisely calibrated pneumatic wedge systems to crack the door gap safely.</li>
-              <li><strong>Specialists for All Vehicle Makes & Models</strong>: We possess the tactical training to bypass high-security deadbolts on German luxury cars (BMW, Audi, Mercedes), deeply recessed locks on modern SUVs, and fully flush electronic pull handles (Tesla).</li>
-              <li><strong>Safe Trunk Access Experts</strong>: Accessing a locked trunk without breaking a taillight requires intricate cabin bypass techniques that our technicians perform daily.</li>
+              <li><strong>1. You call and tell us the situation.</strong> Give us the make, model, and year, where you are, and confirm the keys are locked inside — not lost. Dispatch gives you a live ETA before you hang up.</li>
+              <li><strong>2. The technician arrives with damage-free tools.</strong> An air wedge plus a long-reach tool rated for modern door designs — purpose-built equipment, not a coat hanger or an old slim-jim that can tear the wiring and linkage inside the door.</li>
+              <li><strong>3. We verify the car is yours.</strong> Photo ID matched against the registration, or rental and corporate documents. It takes a moment and it protects you from anyone ever claiming your vehicle.</li>
+              <li><strong>4. We open it damage-free.</strong> Most unlocks are done within a few minutes — no scratched paint, no broken window, no damaged weatherstripping. If a vehicle can't be opened safely without damage, we won't force it; we'll tell you straight and talk through the options.</li>
+              <li><strong>5. You're back in.</strong> No membership, no paperwork, no tow-truck drama — you pay only for the unlock and you're on your way.</li>
             </ul>
-            <p className="font-semibold text-lg text-brand-dark mb-4">
-              Stop Googling "how to unlock a car door with a shoelace" or a coat hanger. One immediate call to iFAST delivers the region's safest 24/7 lockout response.
-            </p>
-            <CallNowButton />
+            <CallNowButton source="service_content_lockout_how" />
           </>
         )
       },
       {
-        title: 'Complete Vehicle Entry Solutions for Any Scenario',
+        title: 'The No-Surprises Promise',
         content: (
           <>
-            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">1. Emergency Cabin Unlocking (Keys in Ignition)</h3>
-            <p className="mb-4 text-gray-700">
-              Left your car running in a "Park and Ride" lot with the keys inside? We treat running-vehicle lockouts as immediate high-priority dispatches to prevent excessive fuel burn and carbon monoxide risks. Our multi-piece long-reach tools manipulate internal unlock actuator buttons without touching any internal electrical wiring. <br/>
-              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: emergency car unlock Pickering, keys locked in car running Ajax, mobile vehicle unlock Oshawa.</span>
+            <p className="mb-4">
+              We give you the price <strong>on the call, before we dispatch</strong> — so you know exactly what the unlock costs before anyone rolls out. No hourly billing, no "difficulty surcharge" for a common vehicle, no after-hours premium sprung on you when we arrive, and no membership required. You pay once, for the unlock, and that's it.
             </p>
-            <CallNowButton />
-
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">2. Child or Pet Locked Inside (Code Red Dispatch)</h3>
-            <p className="mb-4 text-gray-700">
-              If an infant, young child, or pet is accidentally locked inside a vehicle—especially during sweltering GTA summer days or freezing winter nights—inform our dispatcher instantly. We push these to extreme priority "Code Red" dispatch status. <em>Please note: If the occupant appears distressed or the interior temperature is life-threatening, we will implore you to call 911 immediately while we simultaneously race to your location.</em> <br/>
-              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: locked baby in car unlock Ajax, emergency pet rescue auto lockout Pickering, fast vehicle door unlocking Whitby.</span>
+            <p className="mb-4">
+              That's the part our customers keep coming back to. The two reviewers below booked us for a lockout and both led with the same thing — we came fast and the price was fair. We'll let their words speak for it. <strong>Call {PHONE_NUMBER} for a fast, no-obligation quote.</strong>
             </p>
-
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">3. Commercial Fleet & Ride-Share Unlocking</h3>
-            <p className="mb-4 text-gray-700">
-              Rideshare drivers (Uber/Lyft), courier delivery vans, and commercial fleet operators lose income for every minute they are locked out of their workstation. Our aggressive GTA coverage zone ensures that commercial drivers get back into their cabs and back onto their lucrative routes instantly. <br/>
-              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: commercial vehicle lockout Oshawa, delivery van unlock Whitby, fast auto locksmith Ajax.</span>
-            </p>
-            <CallNowButton />
+            <CallNowButton source="service_content_lockout_promise" />
           </>
         )
       },
       {
-        title: `About ${COMPANY_NAME} – Your Keys Delivered Safely`,
+        title: 'Why This Beats the Alternatives',
+        content: (
+          <>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">vs. breaking a window yourself</h3>
+            <p className="mb-4 text-gray-700">
+              A smashed window costs far more than the unlock, takes days to replace, and leaves your car exposed in the meantime. A coat hanger or a flat metal bar jammed down the window slot can shred the lock linkage and wiring inside the door — turning a quick lockout into a real repair bill. A damage-free unlock avoids all of it.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">vs. a CAA membership</h3>
+            <p className="mb-4 text-gray-700">
+              CAA is an annual membership plus a dispatch wait, whether you lock yourself out once a decade or never. We're pay-per-call — nothing to join, nothing to renew. You call the one time you actually need us, get a live ETA, and pay only for the unlock.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">vs. waiting it out or flagging a stranger</h3>
+            <p className="mb-4 text-gray-700">
+              Standing in a parking lot hoping someone walks by with a tool isn't a plan, and the "tricks" you'll find online tend to damage the door or simply don't work on a modern car. One call puts a technician with the right gear on the way, with an ETA you can count on.
+            </p>
+            <CallNowButton source="service_content_lockout_why" />
+          </>
+        )
+      },
+      {
+        title: 'Real Customers, Real Reviews — and the Technician Behind Them',
         content: (
           <>
             <p className="mb-4">
-              We started the {COMPANY_NAME} roadside network specifically to solve the incredibly helpless feeling of staring at your car keys through a sheet of glass. Most standard towing companies in the East End view lockouts as annoying secondary calls, forcing you to wait hours while they handle collisions.
+              {COMPANY_NAME} is owner-operated, and the name behind our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who answers the phone and does the work himself. For lockouts, two customers said it best:
             </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6">
+              <li>"Had myself locked out of my car, called this company arrived fast and fair price." <strong>— Heng Tho</strong></li>
+              <li>"Got locked out of my car and the guy was there in a flash and got it sorted out. Genuine rates as well." <strong>— Uddhav Reen</strong></li>
+            </ul>
             <p className="mb-4">
-              By utilizing smaller, considerably faster urban dispatch vehicles, our dedicated East GTA lockout technicians cut through local Pickering gridlock and Scarborough traffic circles to ensure you are never left standing outside your immobilized vehicle for long.
+              The same two themes — fast arrival, fair pricing — run through the rest of our reviews too, across every service we offer:
             </p>
-            <CallNowButton />
+            <ul className="list-disc pl-5 space-y-3 mb-6">
+              <li>"Amazing! customer service was the best I've experienced and very fair priced. Shoutout to Safi, such a professional!" <strong>— D Fraser</strong></li>
+              <li>"Fair prices !!! Fast service, Seamless experience, SAFI is indeed an amazing technician (owner of the company) to deal with..." <strong>— Salimudin Ahmadi</strong></li>
+            </ul>
+            <p className="mb-4">
+              Our trust is built on what we can promise you for real: a <strong>damage-free unlock</strong>, fast arrival with a live ETA, 24/7 availability, no membership, and an owner who stands behind every job personally.
+            </p>
+            <CallNowButton source="service_content_lockout_trust" />
+          </>
+        )
+      },
+      {
+        title: 'Local Lockout Service Across the East GTA',
+        content: (
+          <>
+            <p className="mb-4">
+              We're based in Scarborough at <strong>20 Antrim Crescent (M1P 4N3)</strong>, which gives us the tightest arrival times in the East End. Lockouts cluster in the same places everywhere — the lots where people park, lock up, and walk away.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">Scarborough — 15–25 min (home base, fastest)</h3>
+            <p className="mb-4 text-gray-700">
+              From Agincourt and Malvern to Woburn, Cliffside, and Guildwood, we're minutes away. The recurring call spots are the big lots — Scarborough Town Centre, Agincourt Mall, gym and community-centre parking (where locker-room key mix-ups happen), and Kennedy Station. Quiet, discreet work, no tow-truck spectacle outside your building.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Pickering — 20–30 min</h3>
+            <p className="mb-4 text-gray-700">
+              Bay Ridges, Amberlea, Liverpool, West Shore, Rosebank, Dunbarton — commuter country. The Pickering GO Station is a recurring morning lockout: keys locked during the rush, train pulling in. We also get calls from the Pickering Town Centre and the Frenchman's Bay trail lots. Tell dispatch your exact spot and we'll find you.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Ajax — 25–35 min</h3>
+            <p className="mb-4 text-gray-700">
+              Pickering Village, Central Ajax, Nottingham, Audley, Discovery Bay — newer subdivisions where the nearest locksmith isn't around the corner. The Ajax GO Station, Ajax Pickering Hospital lot, and the Durham Centre are common call spots, and we know the layouts so we can reach you without blocking the lane.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Whitby & Oshawa</h3>
+            <p className="mb-4 text-gray-700">
+              We cover Whitby — Downtown, Port Whitby, and Brooklin up north — and Oshawa, from Downtown and Samac through the Ontario Tech and Durham College campus lots. Oshawa is the longest honest range in our zone, and we'll always give you a real ETA on the call rather than an optimistic guess.
+            </p>
+            <CallNowButton source="service_content_lockout_local" />
+          </>
+        )
+      },
+      {
+        title: 'Lockout Situations We Handle Every Day',
+        content: (
+          <>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">Keys locked inside — including a running car</h3>
+            <p className="mb-4 text-gray-700">
+              The most common call: keys on the seat, in the cup holder, or in the ignition with the doors locked. If the car is running, tell dispatch so we prioritize it. Our long-reach tools work the internal unlock without touching the wiring inside the door.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Keys or fob locked in the trunk</h3>
+            <p className="mb-4 text-gray-700">
+              Fob in a bag, bag in the trunk, lid closed. We open the cabin damage-free first, then use the internal trunk release or fold-down seats to get you back to your keys — no broken taillight, no pried lid.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Child or pet locked inside</h3>
+            <p className="mb-4 text-gray-700">
+              If a child or pet is locked in and in any distress — heat, cold, or panic — <strong>call 911 first</strong>, then call us. We treat these as immediate priority dispatch and head straight to you while you're on with emergency services.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Frozen locks and winter lockouts</h3>
+            <p className="mb-4 text-gray-700">
+              East GTA winters seize locks and handles solid. Frozen-lock calls are routine for us from December through March, and we carry what's needed to deal with them without forcing anything.
+            </p>
+            <CallNowButton source="service_content_lockout_services" />
           </>
         )
       }
     ],
     faqs: [
-      { question: 'Will unlocking my car damage my door or window in Whitby?', answer: 'Absolutely not. We guarantee 100% damage-free entry. We use soft, non-marring Teflon tools and pneumatic wedges to safely flex the door frame just enough to actuate the lock without harming your clear-coat or weather stripping.' },
-      { question: 'How quickly can a lockout tech reach me in Oshawa or Pickering?', answer: 'Our average arrival time in the East GTA is 30 minutes or less. We treat lockouts as high-priority security issues and dispatch our local nomadic units immediately.' },
-      { question: 'What if my car alarm goes off during the unlock in Ajax?', answer: 'This is normal for modern security systems. Once the door is open, you simply use your fob or ignition key to silence the alarm. Our technicians handle this safely every day.' },
-      { question: 'Do you require proof of ownership in Scarborough?', answer: 'Yes. To prevent auto theft, we verify your Driver\'s License against the vehicle registration or insurance once the car is safely opened.' },
-      { question: 'Can you bypass high-security locks on luxury cars in the East End?', answer: 'Yes. We are trained on complex double-deadlock systems (BMW, Audi, Mercedes) and electronic handles (Tesla) to ensure a seamless entry without damage.' },
-      { question: 'I locked my keys in my trunk in Whitby. Can you help?', answer: 'Yes. Trunk access is complex but achievable. We can unlock the main cabin and use specialized long-reach tools to trigger the internal trunk release or fold down seats to retrieve your fob.' },
+      { question: 'I\'m locked out — how fast can you get to me?', answer: 'We give you a live ETA when you call, typically 15 to 35 minutes across the East GTA, with Scarborough — our home base — on the fast end and Oshawa the longest honest range. Customers describe us arriving "fast" and "there in a flash." We give you a real ETA on the call rather than an optimistic guess.' },
+      { question: 'Will unlocking my car damage the door or window?', answer: 'No. We use damage-free air-wedge and long-reach tools designed for modern vehicles — no old slim-jims, no broken glass, no torn weatherstripping. If a car cannot be opened safely without damage, we will not force it; we will tell you straight and talk through the options.' },
+      { question: 'What does a car lockout cost?', answer: 'We give you the price on the call before we dispatch, so there are no surprises — no hourly billing, no difficulty surcharge for a common vehicle, no after-hours premium, and no membership. Customers consistently call our pricing fair, with two lockout reviewers describing our rates as "fair" and "genuine." Call ' + PHONE_NUMBER + ' for a fast, no-obligation quote.' },
+      { question: 'Do I need a membership?', answer: 'No. There is nothing to join and nothing to renew. You call when you need us and you pay only for the unlock, one time.' },
+      { question: 'What ID do you need?', answer: 'Photo ID that matches the vehicle registration, or rental and corporate documents for those vehicles. It takes a moment and it protects you from anyone else ever claiming your car.' },
+      { question: 'What if my child or pet is locked inside?', answer: 'Call 911 first if they are in any distress — heat, cold, or panic. Then call us and we dispatch immediately as priority and head straight to you while you are on with emergency services.' },
+      { question: 'My lock is frozen — can you still help?', answer: 'Yes. Frozen locks and handles are common across the East GTA from December through March, and we carry what is needed to deal with them without forcing anything.' },
+      { question: 'Can you open any car?', answer: 'Almost all consumer vehicles. For very new high-end models with extra anti-theft features, tell dispatch the make and model when you call so we can confirm compatibility before we head out.' },
     ]
   },
   'fuel': {
     id: 'fuel',
-    seoTitle: '24/7 Emergency Fuel Delivery East GTA | Pickering, Ajax, Oshawa',
-    seoDescription: 'Ran out of gas? iFAST Roadside provides rapid 24/7 emergency fuel delivery (regular, premium, diesel, DEF) across Pickering, Ajax, Whitby, Oshawa, and Scarborough.',
-    keywords: 'emergency fuel delivery Pickering, ran out of gas Ajax, roadside gas delivery Oshawa, diesel delivery Whitby, 24/7 fuel service Scarborough, highway 401 gas delivery East GTA',
+    seoTitle: 'Emergency Fuel Delivery East GTA | 24/7 Out of Gas Help',
+    seoDescription: 'Out of gas in the East GTA? iFAST brings fuel to you — Scarborough, Pickering, Ajax, Whitby, Oshawa. 24/7, shoulder-safe, cheaper than a tow. Call for a fast quote.',
+    keywords: 'emergency fuel delivery East GTA, ran out of gas Scarborough, roadside gas delivery Pickering, out of gas Ajax, diesel delivery Whitby, 24/7 fuel service Oshawa, highway 401 out of gas East GTA, gas brought to you near me',
     heroImage: '/fuel_delivery_hero.jpg',
     blogSections: [
       {
-        title: '24/7 Mobile Emergency Fuel Delivery Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
+        title: 'Out of Gas? We Bring Fuel to You — 24/7, Cheaper Than a Tow',
         content: (
           <>
             <p className="mb-4">
-              Did the gas gauge drop drastically faster than expected while idling on the 401? Stuck completely immobilized on the precarious shoulder near Whitby or Oshawa with a bone-dry tank? <strong>{COMPANY_NAME}</strong> effectively brings the gas station pump directly to your exact GPS coordinates. We safely deliver enough high-quality, station-fresh fuel straight to your vehicle—any hour, any day, across the entire East GTA—to get you moving again.
+              The gauge drops faster than you thought, the engine sputters, and suddenly you're coasting onto the shoulder with a dead tank. <strong>{COMPANY_NAME}</strong> brings fuel directly to you — on the highway shoulder, in a parking lot, or wherever you've stopped — so you don't have to walk down a busy road with a jerry can or pay for a tow you don't need. We deliver enough to get you to the nearest station and back on your way.
             </p>
             <p className="mb-4">
-              Abandoning your car to walk miles down the gravel shoulder of a busy highway near Ajax or Pickering with a cheap plastic jerry can is incredibly dangerous and highly discouraged. Stay safely locked inside your vehicle. Our professionally certified roadside technicians race to you in <strong>under 30 minutes on average</strong> carrying customized supplies of 87 Octane Regular, 91/93 Premium Unleaded, Ultra-Low Sulfur Diesel, and even commercial-grade Diesel Exhaust Fluid (DEF).
+              We cover Scarborough, Pickering, Ajax, Whitby, and Oshawa around the clock. Tell us regular, premium, or diesel and we'll confirm what we're bringing on the call. On a highway shoulder, the technician arrives with high-visibility strobes and cones and secures the scene before anything else. It's almost always faster and cheaper than waiting on a flatbed.
             </p>
-            <CallNowButton />
+            <p className="mb-4">
+              Stay safe with your vehicle and let us come to you. <strong>Call {PHONE_NUMBER} for a fast, no-obligation quote.</strong>
+            </p>
+            <CallNowButton source="service_content_fuel_intro" />
           </>
         )
       },
       {
-        title: 'Why Choose iFAST Fuel Delivery? Critical Safety & Convenience',
+        title: 'How Emergency Fuel Delivery Actually Works',
         content: (
           <>
             <p className="mb-4">
-              Transporting highly combustible automotive fuels in generic, unvented containers inside the trunk of an Uber or a friend\'s car is a severe fire hazard and technically illegal under Ontario transport laws. We serve the East End with commercial-grade, DOT-approved and fully vented steel containers to transport fuel safely.
+              No guesswork and no surprises. Here's exactly what happens from the moment you call to the moment you're rolling again.
             </p>
             <ul className="list-disc pl-5 space-y-3 mb-6">
-              <li><strong>Lightning-Fast 30-Minute Highway Response</strong>: Out-of-gas scenarios on major GTA highways are classified as extreme safety hazards. We prioritize these dispatch tickets instantly.</li>
-              <li><strong>Zero Contamination Guarantee</strong>: We exclusively pump fresh fuel daily from premium top-tier stations (Shell/Petro-Canada/Esso). We never store stale, phased-separated gas in our vans.</li>
-              <li><strong>Safe Diesel Priming Assistance</strong>: Diesel engines that run completely dry often ingest air into the high-pressure fuel injectors. Our techs can guide you through the manual priming sequence to bleed the air and ensure your diesel engine actually restarts.</li>
-              <li><strong>Multi-Grade Selection</strong>: We don\'t just dump cheap 87 into a turbocharged luxury car engine avoiding catastrophic engine knock. We deliver the exact Octane your manufacturer demands.</li>
+              <li><strong>1. You call and tell us where you are.</strong> The highway and nearest exit or marker, or the lot you're in, your vehicle, and whether you need <strong>regular, premium, or diesel</strong>. Dispatch gives you a live ETA before you hang up.</li>
+              <li><strong>2. The technician arrives with sealed, approved fuel containers.</strong> Enough to get you to the nearest open station — the goal is to get you moving, not to fill the tank on the shoulder.</li>
+              <li><strong>3. We secure the scene first.</strong> On a highway shoulder, high-viz strobes and cones go up before anything else, creating a buffer between you and passing traffic.</li>
+              <li><strong>4. We deliver the fuel.</strong> We pour the fuel into your tank. For diesel that ran completely dry, the technician helps prime the line so the engine restarts cleanly instead of just cranking on air.</li>
+              <li><strong>5. You drive to the nearest station.</strong> We deliver enough to comfortably reach it — by design, that's both safer and cheaper than trying to fill up roadside.</li>
             </ul>
-            <p className="font-semibold text-lg text-brand-dark mb-4">
-              Stop panicking about a blinking empty light. One fast call to iFAST legally and safely delivers the region's fastest emergency petrol resupply.
-            </p>
-            <CallNowButton />
+            <CallNowButton source="service_content_fuel_how" />
           </>
         )
       },
       {
-        title: 'Complete Roadside Fuel Solutions for Every Vehicle',
+        title: 'The No-Surprises Promise',
         content: (
           <>
-            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">1. High-Speed Highway Emergency Gas Delivery</h3>
-            <p className="mb-4 text-gray-700">
-              Running out of gas on the express lanes of the 401, 404, or QEW is utterly terrifying. Transport trucks are flying past just inches from your mirror. We dispatch our brightest strobe-equipped service vehicles immediately to your live GPS pin, creating a high-visibility buffer zone behind your car while we rapidly pour 2 to 5 gallons directly into your filler neck. <br/>
-              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: highway gas delivery East GTA, out of gas on 401 Whitby, emergency roadside fuel Oshawa.</span>
+            <p className="mb-4">
+              We give you the price <strong>on the call, before we dispatch</strong> — the all-in number, so you know exactly what you're paying before anyone rolls out. No hidden fees, no "out of zone" highway surcharge, and any after-hours note is stated upfront before we head your way, never sprung on you on the shoulder.
             </p>
-            <CallNowButton />
-
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">2. Commercial Truck Diesel & DEF Fluid Top-Offs</h3>
-            <p className="mb-4 text-gray-700">
-              Commercial heavy-duty drivers and modern diesel pickup truck owners (Powerstroke, Duramax, Cummins) aren't left stranded. If your truck has violently entered "Limp Mode" restricted speed because the Diesel Exhaust Fluid (DEF) tank ran dry, we dispatch tech units carrying multi-gallon jugs of DEF alongside Ultra-Low Sulfur Diesel to get your payload back underway. <br/>
-              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: roadside diesel delivery Pickering, DEF delivery service Ajax, commercial truck out of gas Oshawa.</span>
+            <p className="mb-4">
+              The amount of fuel is set by design too: enough to comfortably reach the nearest open station, not a full tank poured roadside. If you know the nearest station is unusually far, tell dispatch and we'll bring extra. <strong>Call {PHONE_NUMBER} for a fast, no-obligation quote.</strong>
             </p>
-
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">3. Premium 91/94 Octane Exotic Car Resupply</h3>
-            <p className="mb-4 text-gray-700">
-              Most generic tow companies only carry 87 Octane. Putting 87 into a finely tuned Porsche, BMW M-series, or tuned JDM sports car can trigger severe engine timing retardation and cylinder knock. Inform our dispatchers of your vehicle type, and we will purposefully run to the station to fill our safe-cans with premium 91 or 94 Octane specifically for your engine. <br/>
-              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: premium gas delivery Scarborough, luxury car out of gas Pickering, high octane emergency fuel Ajax.</span>
-            </p>
-            <CallNowButton />
+            <CallNowButton source="service_content_fuel_promise" />
           </>
         )
       },
       {
-        title: `About ${COMPANY_NAME} – Rapid Fuel Logistics`,
+        title: 'Why This Beats the Alternatives',
+        content: (
+          <>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">vs. a tow to a station</h3>
+            <p className="mb-4 text-gray-700">
+              A tow to the nearest gas station costs far more than a fuel drop, ties up a flatbed you don't need, and still leaves you to fill up and sort out your own ride. We bring the fuel to you and you drive yourself out — almost always faster and cheaper than the tow.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">vs. walking to a station with a jerry can</h3>
+            <p className="mb-4 text-gray-700">
+              Walking a highway shoulder to a station and back is genuinely dangerous, and most people don't carry an approved can anyway. We're set up for shoulder delivery on the major East GTA corridors and arrive with strobes and cones, so you stay safely with your vehicle while we handle it.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">vs. a CAA membership</h3>
+            <p className="mb-4 text-gray-700">
+              CAA is an annual membership plus a dispatch wait, whether you ever run dry or not. We're pay-per-call — nothing to join — with a live ETA and an all-in price you get before we roll. You call the one time you actually need fuel.
+            </p>
+            <CallNowButton source="service_content_fuel_why" />
+          </>
+        )
+      },
+      {
+        title: 'Why Drivers Trust Us — Honest About the Reviews',
         content: (
           <>
             <p className="mb-4">
-              A stranded vehicle representing a concrete roadblock without power steering or power brakes is a massive collision risk to the GTA public. We expressly built our bespoke fuel delivery protocol around absolute speed, spatial awareness, and customer safety. 
+              We'll be straight with you: the reviews below are general iFAST reviews, not fuel-delivery reviews specifically. People who've called us for tires, batteries, and lockouts say the same things about how we operate — fast, fair, and professional — and that's exactly how a fuel call runs too. {COMPANY_NAME} is owner-operated, and the owner-technician, <strong>Safi</strong>, is the name behind our 146 five-star Google reviews:
             </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6">
+              <li>"Excellent service! Fast response time, professional staff, and very reasonable pricing. They arrived quickly and helped me get back on the road without any hassle." <strong>— fazlollah masror</strong></li>
+              <li>"Fast response, great service, and very professional. They arrived within 10 minutes and fixed everything quickly, even in the heat." <strong>— Qwer</strong></li>
+              <li>"Fair prices !!! Fast service, Seamless experience, SAFI is indeed an amazing technician (owner of the company) to deal with..." <strong>— Salimudin Ahmadi</strong></li>
+            </ul>
             <p className="mb-4">
-              While legacy tow trucks force you to wait in danger for a $150 hook-up, our agile sprint-vans slice seamlessly through downtown gridlock and suburban traffic to refuel your tank, charge a fraction of the cost, and get you safely accelerating back into the flow of traffic.
+              On a fuel call, what we can promise you for real is what those reviews describe: a fast response with a live ETA, an all-in price before we roll, shoulder-safe delivery with strobes and cones, regular, premium, or diesel confirmed on the call, and an owner who stands behind the job. As we earn fuel-specific reviews, we'll add them here.
             </p>
-            <CallNowButton />
+            <CallNowButton source="service_content_fuel_trust" />
+          </>
+        )
+      },
+      {
+        title: 'Local Fuel Delivery Across the East GTA',
+        content: (
+          <>
+            <p className="mb-4">
+              We're based in Scarborough at <strong>20 Antrim Crescent (M1P 4N3)</strong>, right on the 401 corridor, which is where most out-of-gas calls happen. We work these highways every day and know where the stations thin out.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">Scarborough — 15–25 min (home base, fastest)</h3>
+            <p className="mb-4 text-gray-700">
+              From the 401 and Kingston Road through Agincourt, Malvern, and Guildwood, we're minutes away. The 401 eastbound stretches and the DVP merge are the usual out-of-gas spots, and we arrive with strobes and cones to secure the shoulder before delivering.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Pickering — 20–30 min</h3>
+            <p className="mb-4 text-gray-700">
+              The classic Pickering call is a commuter running the 401 eastbound past the last convenient station before the Whites Road and Brock Road stretch — the gauge hits empty right where the stations thin out. We cover the 401, the 407, and the Brock Road and Whites Road arterials, plus Bay Ridges, Amberlea, and Liverpool.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Ajax — 25–35 min</h3>
+            <p className="mb-4 text-gray-700">
+              Out of gas on the 401 near Westney or Salem, or stranded on Harwood or Bayly? We come to you across Pickering Village, Central Ajax, and the waterfront, on the highway shoulder or in a lot, with the scene secured first.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Whitby & Oshawa</h3>
+            <p className="mb-4 text-gray-700">
+              We cover the 401, 407, and 412 through Whitby — including the quieter 412, where there are fewer passing drivers if you run dry — and out to Oshawa along Simcoe and Ritson. Oshawa is the longest honest range in our zone, and we'll always give you a real ETA on the call rather than an optimistic guess.
+            </p>
+            <CallNowButton source="service_content_fuel_local" />
+          </>
+        )
+      },
+      {
+        title: 'Fuel Situations We Handle Every Day',
+        content: (
+          <>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">Out of gas on the highway shoulder</h3>
+            <p className="mb-4 text-gray-700">
+              Stranded on the 401, 407, or 412 with trucks flying past is no place to be on foot. We're set up for shoulder delivery on the major East GTA corridors, arrive with high-viz strobes and cones, and secure the scene before delivering. Stay buckled in with your hazards on until we have the buffer up.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Regular and premium gas</h3>
+            <p className="mb-4 text-gray-700">
+              Tell dispatch what your vehicle takes and we confirm regular or premium on the call before we head out, so you get the right fuel for your engine — not whatever happened to be on the truck.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Diesel that ran dry</h3>
+            <p className="mb-4 text-gray-700">
+              A diesel that runs completely empty pulls air into the fuel system and won't simply restart once you add fuel. We bring diesel and help prime the line after delivery so the engine catches cleanly. Let dispatch know it's a diesel when you call.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Parking lots and driveways</h3>
+            <p className="mb-4 text-gray-700">
+              Coasted into a lot or made it home on fumes and can't get back out? We come to mall lots, GO stations, workplace parking, and driveways across the East GTA — wherever the car has stopped, no need to move it.
+            </p>
+            <CallNowButton source="service_content_fuel_services" />
           </>
         )
       }
     ],
     faqs: [
-      { question: 'How much gas do you bring to my location in Pickering or Ajax?', answer: 'We typically deliver 10 to 20 liters (2.5 to 5.5 gallons), which is more than enough to get you to the nearest major station in Pickering, Ajax, or Oshawa.' },
-      { question: 'Can you bring Premium 91 or 94 Octane to Whitby or Scarborough?', answer: 'Absolutely. We strictly provide the correct octane for your engine. Tell our dispatchers your requirements, and we will fill fresh from a top-tier station before arriving.' },
-      { question: 'Do you deliver Diesel or DEF fluid in the East GTA?', answer: 'Yes! We carry dedicated, uncontaminated containers for Ultra-Low Sulfur Diesel and DEF to support both passenger cars and commercial trucks in our service area.' },
-      { question: 'What should I do while waiting on the 401 shoulder in Oshawa?', answer: 'Stay inside your vehicle with your seatbelt buckled and hazard lights on. Do not exit the car. Our strobe-equipped unit will arrive within 30 minutes to provide a safety buffer.' },
-      { question: 'What if my car won\'t start even with fresh fuel?', answer: 'If your fuel pump has failed from running dry, we can immediately arrange for a flatbed tow to a local East GTA mechanic.' },
-      { question: 'Can you refuel my car in a Scarborough underground garage?', answer: 'Yes. Our low-profile vans and secure canisters allow us to refuel vehicles safely in any parking structure in Scarborough or the surrounding suburbs.' },
+      { question: 'How much fuel do you bring?', answer: 'Enough to comfortably reach the nearest open station — the goal is to get you moving again, not to fill the tank on the shoulder, which is both safer and cheaper. If you know the nearest station is unusually far, tell dispatch and we will bring extra.' },
+      { question: 'What does fuel delivery cost?', answer: 'We give you the all-in price on the call before we dispatch, so there are no surprises — no hidden fees and no out-of-zone highway surcharge, with any after-hours note stated upfront. Customers consistently describe our pricing as fair. Call ' + PHONE_NUMBER + ' for a fast, no-obligation quote.' },
+      { question: 'Do you bring gas and diesel?', answer: 'Yes — regular, premium, or diesel. Tell dispatch what your vehicle takes when you call so we confirm and bring the right fuel. For diesel that ran completely dry, we help prime the fuel line after delivery so the engine restarts cleanly.' },
+      { question: 'Can you come to me on the highway shoulder?', answer: 'Yes. We are set up for shoulder delivery on the major East GTA corridors — the 401, 407, and 412, plus local arterials. We arrive with high-visibility strobes and cones and secure the scene before delivering. Stay in your vehicle with hazards on until we have the buffer up.' },
+      { question: 'Is this cheaper than a tow?', answer: 'Almost always. A tow to a station plus your own ride out costs far more than a fuel drop, and you would still have to fill up once you got there. We bring the fuel to you and you drive yourself out.' },
+      { question: 'How fast can you get to me?', answer: 'We give you a live ETA on the call based on your exact location and current traffic — typically 15 to 35 minutes across the East GTA, with Scarborough on the fast end and Oshawa the longest honest range.' },
+      { question: 'Do I need to be with the vehicle?', answer: 'Yes — stay safely with the vehicle, or in a safe spot nearby if you are on a shoulder, so we can confirm it is yours and deliver the fuel. Keep your hazards on and stay buckled in until we have the scene secured.' },
+      { question: 'What if I run out again before reaching a station?', answer: 'We deliver enough to comfortably reach the nearest open station. If you know the closest one is unusually far, mention it to dispatch when you call and we will bring extra so you are covered.' },
     ]
   },
   'towing': {
