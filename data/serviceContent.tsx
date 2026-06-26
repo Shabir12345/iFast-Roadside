@@ -121,103 +121,163 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'tire-change': {
     id: 'tire-change',
-    seoTitle: '24/7 Mobile Tire Service & Flat Tire Repair East GTA | Pickering, Ajax, Oshawa',
-    seoDescription: '24/7 Mobile Flat Tire Change Service Across the East GTA. Serving Pickering, Ajax, Whitby, Oshawa, and Scarborough. Rapid 30-min response. Call now for emergency tire repair.',
-    keywords: 'flat tire change Pickering, mobile tire service Ajax, emergency flat tire repair Oshawa, onsite tire repair Whitby, 24/7 flat tire change Scarborough, mobile tire swap East GTA',
+    seoTitle: 'Mobile Tire Change East GTA | 24/7 Flat Tire Repair That Comes to You',
+    seoDescription: 'Flat tire in the East GTA? iFAST brings the tire shop to your driveway or the shoulder — Scarborough, Pickering, Ajax, Whitby, Oshawa. 24/7, fast, damage-free. Call for a quote.',
+    keywords: 'mobile tire change East GTA, flat tire repair Scarborough, mobile tire service Pickering, flat tire change Ajax, nail in tire repair Whitby, 24/7 mobile tire Oshawa, roadside tire change near me, mobile tire swap East GTA',
     heroImage: '/tire_service_hero.jpg',
     blogSections: [
       {
-        title: '24/7 Mobile Flat Tire Service Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
+        title: 'Mobile Tire Change That Comes to You — Skip the Shop, Skip the Tow',
         content: (
           <>
             <p className="mb-4">
-              Whether you're dealing with a sudden highway blowout, a slow leak you discovered in your driveway, or you need a seasonal winter-to-summer tire swap, <strong>{COMPANY_NAME}</strong> rolls a fully equipped tire shop directly to your location. We operate 24 hours a day, 7 days a week, 365 days a year. Our certified roadside technicians reach you in <strong>under 30 minutes on average</strong>, carrying state-of-the-art mounting tools, premium new tires, computerized balancers, and heavy-duty patching equipment.
+              A flat never happens at a good time. You find a nail in the morning before work, you lose pressure on the 401 on the way home, or you walk out to a tire that's gone soft overnight. <strong>{COMPANY_NAME}</strong> brings the tire shop to where your car already is — your driveway, a condo lot, the office parking lot, a GO station, or the highway shoulder — so you skip the lineup at the shop and skip the tow truck entirely.
             </p>
             <p className="mb-4">
-              From the bustling traffic on the 401 near Whitby to the quiet residential suburbs of Pickering and Ajax, we handle every step of the tire replacement process on-site. We perform safe wheel removal using low-profile, non-marring jacks, precise lug nut torqueing to manufacturer specifications, digital air pressure checks, and safe lifting of your vehicle. There are no expensive tow trucks required and no dirty waiting rooms—just fast, dependable mobile flat-tire changes that keep your busy schedule intact.
+              We cover the East GTA — Scarborough, Pickering, Ajax, Whitby, and Oshawa — 24 hours a day. Our vans carry plug-patch kits, common 15"–20" tire sizes for sedans, SUVs, and light trucks, a computerized balancer, and spare-install gear, so most flats are fixed on the spot in a single visit. The service comes to you, the work gets done where you're standing, and you're back on the road — usually under 45 minutes from arrival.
             </p>
-            <CallNowButton />
+            <p className="mb-4">
+              Mobile tire service that comes to you — fast, fair, and done where your car already is. <strong>Call {PHONE_NUMBER} for a fast, no-obligation quote.</strong>
+            </p>
+            <CallNowButton source="service_content_tire-change_intro" />
           </>
         )
       },
       {
-        title: 'Why Choose Mobile Tire Repair? Key Benefits',
+        title: 'How a Mobile Tire Change Actually Works',
         content: (
           <>
             <p className="mb-4">
-              Driving on a flat tire—even for a few hundred feet—can permanently destroy the tire\'s internal steel belts and severely damage your expensive alloy rims. Calling a mobile tire technician is the safest and most cost-effective choice.
+              No mystery, no runaround. Here's exactly what happens from the moment you call to the moment you're driving again.
             </p>
             <ul className="list-disc pl-5 space-y-3 mb-6">
-              <li><strong>Rapid 30-Minute GPS Dispatch</strong>: We route the closest mobile unit directly to your live phone location for lightning-fast emergency flat tire repair in the East GTA.</li>
-              <li><strong>Complete On-Site Replacements</strong>: Unlike generic roadside assistance that just slaps on your temporary "donut" spare, our vans carry standard inventory to replace destroyed tires completely.</li>
-              <li><strong>Computerized Wheel Balancing</strong>: A replaced tire must be balanced. Our vans feature onboard digital balancers to prevent highway steering wheel vibration.</li>
-              <li><strong>TPMS Sensor Resetting</strong>: We carry the digital scanners required to reset your car\'s Tire Pressure Monitoring System dashboard light after a repair.</li>
-              <li><strong>Damage-Free Lifting</strong>: We use specialized pinch-weld rubber blocks and low-profile hydraulic jacks suitable for luxury sedans, lowered sports cars, and heavy-duty SUVs.</li>
+              <li><strong>1. You call and describe the tire.</strong> Give us your make, model, and year, where the car is, and what happened — a blowout on the highway, a nail you can see, a slow leak you noticed this morning. Dispatch confirms whether the matching tire and size is on the van and gives you a live ETA before you hang up.</li>
+              <li><strong>2. The van arrives stocked.</strong> Plug-patch kit, common 15"–20" sizes, a computerized balancer, and spare-install gear. If you're on a highway shoulder, the technician sets up high-viz strobes and cones and secures the scene <em>before</em> touching the vehicle.</li>
+              <li><strong>3. We diagnose the tire.</strong> We locate the puncture and check whether it's in the tread or the sidewall. A nail or screw in the tread can be plugged or patched on the spot; sidewall damage can't be repaired safely and needs a replacement.</li>
+              <li><strong>4. We fix it on-site.</strong> We plug or patch the puncture, mount your spare, or install a replacement tire from the van and balance it — whatever the situation calls for.</li>
+              <li><strong>5. We confirm and re-check.</strong> We set the pressure to spec, confirm the repair holds, and you're back on the road — typically under 45 minutes from arrival.</li>
             </ul>
-            <p className="font-semibold text-lg text-brand-dark mb-4">
-              Stop Googling "flat tire change near me." One call to iFAST delivers the region's most trusted 24/7 complete mobile tire replacement—anytime, anywhere in Pickering, Ajax, or Oshawa.
-            </p>
-            <CallNowButton />
+            <CallNowButton source="service_content_tire-change_how" />
           </>
         )
       },
       {
-        title: 'Complete Mobile Tire Change Solutions — Emergency & Convenience',
+        title: 'The No-Surprises Promise',
         content: (
           <>
-            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">1. Emergency Roadside Flat Tire Change – 24/7 East GTA</h3>
-            <p className="mb-4 text-gray-700">
-              Stuck on the shoulder of the 401, the DVP, or a dark downtown side street? Changing a passenger-side tire while transport trucks fly past is incredibly dangerous. Our rapid-response units arrive fully illuminated with high-viz strobe lights to secure the scene. We quickly jack the vehicle safely and swap your flat tire with your spare, or mount a new tire directly on the shoulder—no tow truck, no agonizing wait. <br/>
-              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: emergency flat tire change Pickering, roadside flat tire repair Ajax, 401 flat tire help Oshawa, tire blowout repair Whitby.</span>
+            <p className="mb-4">
+              We give you the price <strong>on the call, before we dispatch</strong> — so you know exactly what you're paying before the van rolls. No hidden fees. No "out of zone" highway surcharge. No surprise when we arrive. You call, you get a clear quote, you decide.
             </p>
-            <CallNowButton />
-
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">2. Puncture Repair (Plugs & Internal Patches)</h3>
-            <p className="mb-4 text-gray-700">
-              Ran over a nail in a construction zone? If the puncture is located safely within the center tread zone of the tire (and not on the sidewall), you don't need a brand new tire. Our technicians will remove the wheel, dismount the tire from the rim, apply a permanent vulcanized mushroom patch from the inside, re-mount it, balance it, and reinstall it. This is the only permanent, Ministry of Transportation-approved method for fixing a flat.<br/>
-              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: mobile tire plug Pickering, patch flat tire Ajax, nail in tire repair mobile Whitby.</span>
+            <p className="mb-4">
+              That's the part our customers keep coming back to in their reviews — they consistently describe our pricing as fair, and one driver who'd been quoted "ridiculous prices" elsewhere found us at "almost half" the price. We'll let their words below speak for that. Got more than one vehicle? Ask dispatch about fleet rates.
             </p>
-
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">3. At-Home & Workplace Seasonal Swaps</h3>
-            <p className="mb-4 text-gray-700">
-              Skip the chaotic tire shop queues every Spring and Fall. We bring our mounting and balancing gear directly to your driveway, condo garage, or office parking lot in Brampton, Vaughan, or Markham. Perfect for commuters or busy families. You can literally sit at your desk working while we swap your winter tires to all-seasons right in the parking lot! <br/>
-              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: mobile tire swap at home Oshawa, onsite tire change Pickering, driveway seasonal tire change Ajax, winter tire installation mobile Whitby.</span>
-            </p>
-            <CallNowButton />
-
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">4. Stripped Lug Nut & Locking Wheel Nut Removal</h3>
-            <p className="mb-4 text-gray-700">
-              Lost the special key for your locking lug nuts? Or did a previous mechanic over-torque the bolts, leaving them stripped and impossible to remove with the standard trunk wrench? Our vans are equipped with heavy-duty impact wrenches, exact-fit extractor sockets, and the torque required to safely break free seized bolts without damaging your rims. <br/>
-              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: locking wheel nut removal mobile Pickering, stripped lug nut extraction Oshawa.</span>
-            </p>
-            <CallNowButton />
+            <CallNowButton source="service_content_tire-change_promise" />
           </>
         )
       },
       {
-        title: `About ${COMPANY_NAME} – Our Mission to Protect Drivers`,
+        title: 'Why This Beats the Alternatives',
+        content: (
+          <>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">vs. a tow to the shop</h3>
+            <p className="mb-4 text-gray-700">
+              A tow-and-shop tire job means waiting for a flatbed, riding to a shop, and then waiting in line once you get there — and the tow alone often costs more than the entire mobile tire job before any tire work even starts. We do the whole thing where your car already is, usually under 45 minutes from arrival. No flatbed, no shop lobby, no lost afternoon.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">vs. driving on the donut</h3>
+            <p className="mb-4 text-gray-700">
+              That temporary spare is an 80 km/h, roughly 80 km band-aid — and limping along on it risks a second failure on the side of a busy road. We install a real, full-size tire on the spot so you're not nursing a donut across the East GTA hoping it holds.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">vs. a CAA membership</h3>
+            <p className="mb-4 text-gray-700">
+              CAA is an annual membership plus a dispatch wait, and the tow still ends at a shop where the real work happens. We're pay-per-call — no membership — we give you a live ETA, and we finish the job on-site. As one customer put it after comparing quotes, other places were "quoting me ridiculous prices to change 1 tire" and iFAST was "almost half of the price."
+            </p>
+            <CallNowButton source="service_content_tire-change_why" />
+          </>
+        )
+      },
+      {
+        title: `Real Customers, Real Reviews — and the Technician Behind Them`,
         content: (
           <>
             <p className="mb-4">
-              A terrifying winter blow-out on Highway 401 showed our founders just how long, cold, and legally risky roadside waits can be. Sitting in a freezing car waiting three hours for a massive heavy-duty tow truck—just to get a simple spare tire put on—made absolutely no sense. We realized the Greater Toronto Area needed a faster, highly-specialized, agile service for minor roadside emergencies.
+              {COMPANY_NAME} is owner-operated, and the name you'll see again and again in our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who shows up, talks you through the problem, and does the work himself. You're not calling a faceless dispatch line; you're calling the person who answers and the person who fixes your tire. Here's what East GTA drivers say, in their own words:
             </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6">
+              <li>"Amazing service had a flat tire showed up in 15 min at midnight, I would highly recommend this company for all your roadside emergency needs……." <strong>— Sayed walidullah Nawid</strong></li>
+              <li>"Superfast service! I was driving suddenly I had a nail in my tire. I was losing tire pressure like crazy. Called iFast and SAFI came quickly. Saved my day. I had an interview tomorrow and iFast relived me from my stress!" <strong>— Riaz Rahman</strong></li>
+              <li>"Fair prices for the service indeed... they were quoting me ridiculous prices to change 1 tire and when I called IFASTROADSIDE they quoted me fairly almost half of the price... SAFI did amazing job and is a great communicator, Highly Recommended !!!" <strong>— Amin Qazizada</strong></li>
+              <li>"Best Service and fast service my car Tire got flat and I called them They came in 10 minutes and they repair it in 5 minutes and they charge me fair price..." <strong>— Sha Zahim</strong></li>
+              <li>"Safi was super helpful and fair. I woke up in the morning to go to work and my tire was flat... turns out there was a nail in my tire. Got it fixed fast and I was on the road!" <strong>— Shabir Majeed</strong></li>
+              <li>"I got a flat tire yesterday and didn't have the right tools with me... From the moment I called until the technician arrived and changed the tire, it took less than 20 minutes!" <strong>— Mohammad Badakhash</strong></li>
+            </ul>
             <p className="mb-4">
-              Today, {COMPANY_NAME} has grown into a premier 24/7 rapid-response network. By utilizing specialized cargo vans rather than massive flatbeds, our technicians cut through gridlock in Scarborough, navigate residential areas in Pickering and Ajax, and reach stranded families in Whitby and Oshawa in record time. Our focus is crystal clear: arrive fast, do the job safely with professional tools, and get you back to your life.
+              And when something needs a second look, we come back. One customer's tire started losing air again two days after the first repair — for a completely different reason — and as they put it, "I called them, and they arrived within 20 minutes... made sure everything was safe before leaving." <strong>— Hayoung.</strong> We're licensed and insured, we work damage-free, and we stand behind what we do.
             </p>
-            <CallNowButton />
+            <CallNowButton source="service_content_tire-change_trust" />
+          </>
+        )
+      },
+      {
+        title: 'Local Mobile Tire Service Across the East GTA',
+        content: (
+          <>
+            <p className="mb-4">
+              We're based in Scarborough at <strong>20 Antrim Crescent (M1P 4N3)</strong>, which gives us the tightest arrival times in the East End. We know where flats happen here, because we work these roads every day.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">Scarborough — 15–25 min (home base, fastest)</h3>
+            <p className="mb-4 text-gray-700">
+              From Agincourt and Malvern to Woburn, Cliffside, Birchmount, and Guildwood — we're minutes away. The trouble spots we see most are the 401 eastbound merge at Markham Road (transport debris), the Kennedy and Sheppard construction zones, and the Morningside back roads in winter. We keep winter-rated common sizes on the van from November through March.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Pickering — 20–30 min</h3>
+            <p className="mb-4 text-gray-700">
+              Bay Ridges, Amberlea, Liverpool, Brock Ridge, West Shore, Rosebank, Dunbarton — commuter country. The 401 eastbound stretch between Whites Road and Brock Road is the construction-debris flat hotspot, so we run early-morning dispatch (5–8 AM) to get commuters moving before rush hour locks up. Stuck at the Pickering GO lot? We come to you there too.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Ajax — 25–35 min</h3>
+            <p className="mb-4 text-gray-700">
+              Pickering Village, Central Ajax, Nottingham, Audley, Discovery Bay, Riverside — newer subdivisions where there's often no corner tire shop nearby. We fill that gap so you don't have to tow to Whitby or Pickering. Flats cluster on the 401 eastbound near Westney and Salem (transport debris) and on Harwood's freeze-thaw potholes.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Whitby & Oshawa</h3>
+            <p className="mb-4 text-gray-700">
+              We serve Whitby and Oshawa too, from the 401 corridor through the residential cores. Oshawa is the longest honest range in our zone, and we'll always give you a real ETA on the call rather than an optimistic guess — so you can plan around it.
+            </p>
+            <CallNowButton source="service_content_tire-change_local" />
+          </>
+        )
+      },
+      {
+        title: 'What We Fix On-Site',
+        content: (
+          <>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">Nail & screw punctures (plug / patch)</h3>
+            <p className="mb-4 text-gray-700">
+              The most common call we get. If the puncture is in the tread — a nail, a screw, a piece of construction debris — and not in the sidewall, we plug or patch it on the spot, set the pressure, and you keep your tire. We take these calls around the clock — a screw in a front tire late at night, picked up at 10:30 p.m. and fixed in under half an hour, is a routine one for us.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Slow leaks you can barely see</h3>
+            <p className="mb-4 text-gray-700">
+              A tire that's soft every morning but never obviously flat is usually a small puncture or a leaking valve. We locate it, confirm the source, and fix it — you don't have to keep topping it up at the gas station and hoping.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Spare installs & full replacements</h3>
+            <p className="mb-4 text-gray-700">
+              No spare, or a tire too damaged to repair? We mount your spare or install a replacement from the van and balance it with our onboard computerized balancer. Sidewall damage and blowouts get a real tire, not a temporary donut.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Driveways, work lots, GO stations — and EVs</h3>
+            <p className="mb-4 text-gray-700">
+              We come to driveways, condo lots, workplace parking, GO stations, and mall lots — wherever the car already is, no need to move it. We also change and repair tires on EVs and Teslas; just tell dispatch the model so we bring the right jack points and equipment.
+            </p>
+            <CallNowButton source="service_content_tire-change_services" />
           </>
         )
       }
     ],
     faqs: [
-      { question: 'How fast can your flat tire change East GTA team really reach me?', answer: 'Our average response time in Pickering, Ajax, Whitby, and Oshawa is under 30 minutes. By positioning local mobile units across the East End, we ensure lightning-fast emergency flat tire repair.' },
-      { question: 'Do you offer 24/7 mobile tire service in Scarborough and Oshawa?', answer: 'Yes! We run our mobile tire response units 24/7 across the entire East GTA, including Scarborough, Pickering, Whitby, and Oshawa. We always have technicians local to these areas on call.' },
-      { question: 'Can you repair a punctured tire in my Ajax or Whitby driveway?', answer: 'Absolutely. We bring the tire shop to you. If the puncture is safely located within the center tread zone, we will perform a permanent internal patch-and-plug repair right in your driveway or at the roadside.' },
-      { question: 'My tire blew out on the 401 near Whitby. Do you carry new tires?', answer: 'Yes! While our base service involves installing your spare, we also stock common tire sizes. If you don\'t have a spare, provide your tire size over the phone and we will bring a brand new tire to mount and balance on-site.' },
-      { question: 'Which exact areas fall under your East GTA tire service zone?', answer: 'We primarily serve Pickering, Ajax, Whitby, Oshawa, and Scarborough. Our local focus ensures we beat the wait times of larger, city-wide companies.' },
-      { question: 'Can you change a tire in an underground garage in Scarborough?', answer: 'Yes! Our mobile tire vans are designed with low roof clearances to navigate underground parking structures in Scarborough and surrounding areas, providing service right in your parking stall.' },
-      { question: 'What payment methods do you accept in the East End?', answer: 'Our technicians carry secure mobile terminals. We accept all major credit cards, Debit, Apple Pay, and Google Pay directly at your vehicle in Pickering, Ajax, or anywhere we serve.' },
-      { question: 'Do I need to re-torque my wheels after you change the tire?', answer: 'Yes. For safety, lug nuts should be re-torqued after driving approximately 100 kilometers (60 miles) to ensure they are properly seated.' },
+      { question: 'How fast can you get to me for a flat tire?', answer: 'It depends on distance and traffic: arrivals run from about 15 minutes in Scarborough — our home base — out to roughly 45 to 50 minutes for the far edge of Oshawa, with Pickering, Ajax, and Whitby in between. Real reviews cite arrivals of 10 to 20 minutes for closer calls, including a midnight flat. Either way, we give you a live ETA on the call so you know exactly when to expect us.' },
+      { question: 'Do you come out at night or after hours?', answer: 'Yes, we run 24/7. Customers have called us at midnight and at 10:30 p.m. for flats and we came out and fixed them. A flat does not wait for business hours, and neither do we.' },
+      { question: 'How much does it cost to fix a flat or patch a nail or screw puncture?', answer: 'We give you the exact price on the call before we dispatch, so there are no surprises when we arrive. A plug or patch of a tread puncture is the fastest fix, and a full replacement is quoted before we start any work. Customers consistently describe our pricing as fair — one driver was quoted "almost half" what other shops wanted. Call +1 437-215-3468 for a quick, no-obligation quote.' },
+      { question: 'Can you find a slow leak or a screw that is not obviously leaking?', answer: 'Yes. We locate the puncture even when it is a slow leak you can barely see. One customer had a screw in the front tire that was hard to spot, and we found it and repaired the tire in under half an hour, late at night.' },
+      { question: 'What if the tire problem comes back after a repair — will you come back?', answer: 'Yes. One reviewer\'s tire developed a completely separate issue two days after the first repair; we came back within 20 minutes and fixed it, and made sure everything was safe before leaving. We stand behind our work.' },
+      { question: 'Do you carry the tools and a tire if I do not have a spare?', answer: 'Yes — that is the whole point of mobile service. We carry common 15" to 20" sizes, a plug-patch kit, and a computerized balancer. If your exact size is not on the van, we plug or patch the original, install your spare, or pre-order your tire so you are not stranded.' },
+      { question: 'Can you do it in my driveway, at work, or at the GO station?', answer: 'Yes. Driveways, condo lots, workplace parking, GO stations, and mall lots across Scarborough, Pickering, Ajax, Whitby, and Oshawa — we come to wherever the car already is. There is no need to move it.' },
+      { question: 'Do you handle EVs and Teslas?', answer: 'Yes, we change and repair tires on EVs and Teslas. Just tell dispatch the model when you call so we bring the right jack points and equipment for your vehicle.' },
     ]
   },
   'jump-start': {
