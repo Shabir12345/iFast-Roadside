@@ -1,5 +1,5 @@
 import React from 'react';
-import { PhoneCall, CheckCircle2, AlertTriangle, Clock, DollarSign, ThumbsUp, ThumbsDown, Star, Gauge, ShieldCheck } from 'lucide-react';
+import { PhoneCall, CheckCircle2, AlertTriangle, Clock, DollarSign, ThumbsUp, ThumbsDown, Star, Gauge, ShieldCheck, BatteryCharging, KeyRound, Snowflake } from 'lucide-react';
 import { PHONE_NUMBER, COMPANY_NAME } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
 
@@ -949,6 +949,397 @@ export const BLOG_POSTS: BlogPost[] = [
       { question: 'Is it safe to drive with 70 PSI in my tires?', answer: 'No. That is roughly double the recommended pressure for most vehicles. It reduces grip, lengthens your stopping distance, and dramatically raises blowout risk. Let the tires down to the door-jamb spec before driving any real distance.' },
       { question: 'Where can I get my tire pressure checked in Scarborough?', answer: 'iFAST offers mobile tire service across Scarborough and the East GTA — we come to your location to check and correct tire pressure, repair flats, and reset your TPMS light. Call +1 437-215-3468 and we typically arrive in 15–30 minutes.' },
       { question: 'Does iFAST do mobile tire service in Scarborough?', answer: 'Yes. We cover Scarborough, Pickering, Ajax, Whitby, and Oshawa with on-site tire repair, replacement, pressure correction, and seasonal swaps — no tow required, typically arriving in 15–30 minutes.' },
+    ]
+  },
+
+  /* ============================================================
+     POST 6: DEAD BATTERY — BOOST OR REPLACE (2 A.M. CALL)
+     ============================================================ */
+  {
+    slug: 'dead-car-battery-boost-or-replace-east-gta',
+    title: 'The 2 A.M. Phone Call: Does Your Dead Battery Need a Boost — or Is It Done?',
+    excerpt: 'A real customer called us at 2 a.m. because his car wouldn\'t start — we were there in 15 minutes. Here\'s the decision our technicians make in the first 30 seconds of every dead-battery call: boost it, or replace it. And how you can read the signs yourself.',
+    seoTitle: 'Dead Car Battery: Boost or Replace? How the Pros Decide | iFAST East GTA',
+    seoDescription: 'Car won\'t start in Pickering, Ajax, Whitby, Oshawa or Scarborough? Learn how roadside technicians decide between a battery boost and a replacement — the sounds, the signs, and why winter boosts are sometimes just a band-aid. 24/7 mobile battery service.',
+    keywords: 'dead car battery, battery boost near me, boost or replace car battery, car won\'t start, battery boost service East GTA, jump start Scarborough, battery replacement Pickering, car battery dead winter Ontario, mobile battery service, 24 hour battery boost',
+    category: 'Emergency Tips',
+    publishDate: '2026-07-03',
+    readTime: '7 min read',
+    heroImage: '/jump_start_hero.jpg',
+    heroImageAlt: 'iFAST technician boosting a dead car battery at night in the East GTA',
+    sections: [
+      {
+        content: (
+          <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
+            The phone rang at <strong>2 a.m.</strong> A driver, stranded — car completely dead, not going anywhere. Fifteen minutes later our technician was standing in front of his open hood. That call ended like most of them do: engine running, driver back on the road. But here's what most people never see — the <strong>30-second decision</strong> the technician makes before touching a single cable: <em>does this battery need a boost, or is it done?</em> Get that call wrong and you're stranded again on Thursday. This is how <strong>{COMPANY_NAME}</strong> actually makes it — and how you can read the same signs yourself.
+          </p>
+        )
+      },
+      {
+        heading: 'The First 30 Seconds: What the Sound of Your Car Is Telling Us',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Before we test anything, we ask you to turn the key one more time — because the sound your car makes is the first diagnostic. There are really only three sounds, and each one points somewhere different:
+            </p>
+            <ol className="list-none space-y-4 mb-6">
+              {[
+                { num: '01', title: 'Rapid clicking — like a machine gun', desc: 'The classic dead battery. There\'s enough power to snap the starter relay but not enough to turn the engine. Good news: this usually boosts cleanly.' },
+                { num: '02', title: 'A slow, groaning crank — "rrr… rrr… rrr"', desc: 'The battery is dying, not dead. It might catch this time — but a battery that groans on a mild day will not survive the next cold snap. This is the sound of a battery on borrowed time.' },
+                { num: '03', title: 'One click, or total silence', desc: 'Could be a deeply dead battery — or a corroded connection or a failed starter. This is where a technician who tests before boosting saves you from buying a battery you didn\'t need.' },
+              ].map(s => (
+                <li key={s.num} className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                  <span className="text-3xl font-black text-brand-yellow/50 leading-none">{s.num}</span>
+                  <div>
+                    <p className="font-bold text-brand-dark">{s.title}</p>
+                    <p className="text-gray-600 text-sm mt-1">{s.desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <p className="text-gray-700 mb-2">
+              One more tell before we even pop the hood: your dash lights and headlights. Bright lights with a no-start points away from the battery. Dim, flickering, or dead lights point straight at it.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Boost or Replace? The Honest Answer Nobody Puts on a Flyer',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Here's the part that matters: <strong>a boost starts your car — it doesn't fix why it died.</strong> Sometimes the "why" is innocent. Sometimes the boost is just a band-aid on a battery that's already finished. This is the actual decision tree we run on your driveway:
+            </p>
+            <div className="grid md:grid-cols-2 gap-5 mb-6">
+              <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <ThumbsUp className="text-green-600" size={22} />
+                  <p className="font-black text-green-800">A boost is probably all you need if…</p>
+                </div>
+                <ul className="space-y-2 text-sm text-green-900">
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /><span>You left the headlights, an interior light, or the hazards on overnight — there's a clear, one-time reason it drained.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /><span>The battery is under about 3 years old.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /><span>The car sat unused for a couple of weeks (batteries self-drain, especially with modern electronics sipping power).</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /><span>After the boost, it starts strong on its own the next morning.</span></li>
+                </ul>
+              </div>
+              <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <ThumbsDown className="text-red-600" size={22} />
+                  <p className="font-black text-red-800">The battery is telling you it's done if…</p>
+                </div>
+                <ul className="space-y-2 text-sm text-red-900">
+                  <li className="flex gap-2"><AlertTriangle size={16} className="text-red-600 flex-shrink-0 mt-0.5" /><span>This is your <strong>second boost in a month</strong>. A healthy battery doesn't need rescuing twice.</span></li>
+                  <li className="flex gap-2"><AlertTriangle size={16} className="text-red-600 flex-shrink-0 mt-0.5" /><span>It's 4–5+ years old. In our climate, that's a full career.</span></li>
+                  <li className="flex gap-2"><AlertTriangle size={16} className="text-red-600 flex-shrink-0 mt-0.5" /><span>It cranks slowly even on a warm afternoon — weak warm means dead cold.</span></li>
+                  <li className="flex gap-2"><AlertTriangle size={16} className="text-red-600 flex-shrink-0 mt-0.5" /><span>The case looks swollen or the terminals are heavily corroded — physical damage doesn't recover.</span></li>
+                </ul>
+              </div>
+            </div>
+            <div className="bg-brand-dark text-white rounded-2xl p-6 mb-2 flex flex-col sm:flex-row gap-5 items-start">
+              <div className="bg-brand-yellow/20 p-3 rounded-xl flex-shrink-0">
+                <BatteryCharging className="text-brand-yellow" size={28} />
+              </div>
+              <div>
+                <p className="font-black text-brand-yellow mb-2">Why we test before we sell</p>
+                <p className="text-sm text-white/85">
+                  Our technicians carry a battery tester, and it runs <em>before</em> any recommendation. If the test says your battery is healthy and you just left a light on, you get a boost and a handshake — not a sales pitch. If it's genuinely failing, we can usually replace it on the spot so you're not doing this again next week.
+                </p>
+              </div>
+            </div>
+          </>
+        )
+      },
+      {
+        heading: 'Why the East GTA Kills Batteries in July and Buries Them in January',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Here's the counterintuitive part: <strong>summer heat does the damage, winter just reveals it.</strong> Heat evaporates the electrolyte inside the battery and quietly corrodes the plates all summer long. Then the first −15°C morning arrives and two things happen at once:
+            </p>
+            <ul className="list-disc pl-6 space-y-3 mb-6 text-gray-700">
+              <li>A cold battery can only deliver a fraction of its normal cranking power — at −18°C, roughly <strong>half</strong> of what it delivers on a mild day.</li>
+              <li>Meanwhile the engine needs <em>more</em> power than usual to turn over, because the oil inside it has thickened like syrup.</li>
+            </ul>
+            <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-6">
+              <div className="flex gap-3">
+                <Snowflake className="text-blue-500 flex-shrink-0 mt-0.5" size={20} />
+                <p className="text-blue-900 text-sm font-medium">
+                  Weaker supply meets bigger demand — that's why the first real cold snap of the year is our busiest morning for boost calls across Pickering, Ajax, Whitby, Oshawa, and Scarborough. The batteries didn't die that morning. They died in August. Nobody noticed until January.
+                </p>
+              </div>
+            </div>
+            <p className="text-gray-700 mb-4">
+              There's a third East GTA-specific killer: <strong>short commutes</strong>. If your daily drive is 10 minutes of stop-and-go, your alternator never fully recharges what the starter took out. The battery loses a little ground every day — until one morning there's nothing left to lose.
+            </p>
+            <BlogCTA source="blog_battery_mid1" />
+          </>
+        )
+      },
+      {
+        heading: 'The Parking-Lot Call That Sums Up How We Work',
+        content: (
+          <>
+            <p className="mb-5 text-gray-700">
+              Not every dead battery is a 2 a.m. highway drama. Sometimes it's your mom, stuck in a parking lot, calling you because the car won't start and she doesn't know who to trust. This Google review — word for word — is exactly the situation:
+            </p>
+            <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-xl">S</div>
+                  <div>
+                    <p className="font-bold text-brand-dark leading-tight">Shanthuru Kalaiselvan</p>
+                    <span className="text-xs text-gray-400">Verified Google review</span>
+                  </div>
+                </div>
+                <svg viewBox="0 0 48 48" className="w-6 h-6 flex-shrink-0" aria-hidden="true">
+                  <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z" />
+                  <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z" />
+                  <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.97 21.97 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z" />
+                  <path fill="#EA4335" d="M24 9.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 3.18 29.93 1 24 1 15.4 1 7.96 5.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z" />
+                </svg>
+              </div>
+              <div className="flex gap-0.5 text-brand-yellow mb-3">
+                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
+              </div>
+              <p className="text-gray-700 leading-relaxed italic">
+                &ldquo;My mom had an issue with a car battery and was stuck in a parking lot—they got there quickly and were super helpful. They spoke us through possible solutions and were super transparent about how much they charge. Very reliable!&rdquo;
+              </p>
+            </div>
+            <p className="text-gray-700 mb-4">
+              Notice what he highlights: not just speed, but that we <strong>talked the family through the options</strong> and were upfront about cost <em>before</em> doing the work. That's the boost-or-replace conversation, happening exactly the way it should — with you making the call, fully informed.
+            </p>
+            <p className="mb-1 text-gray-700">
+              And the 2 a.m. driver from the top of this story? His review, verbatim: <em>&ldquo;Called him around 2am and he arrived in 15 minutes&rdquo;</em> — that's oyindamola a., five stars. The clock doesn't decide whether we pick up. We're 24/7 because batteries don't die at convenient times.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Dead Battery Anywhere in the East GTA? Here\'s What Happens When You Call',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              One call to {COMPANY_NAME} and a technician heads your way — driveway, parking lot, roadside, office garage. On arrival: we test the battery first, tell you honestly whether it's a <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">boost</a> or a <a href="/service/battery-replacement" className="text-brand-yellow font-bold hover:underline">replacement</a>, and do the work on the spot. No tow, no waiting room, no membership required.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-3 mb-6">
+              {[
+                { city: 'Scarborough', note: 'Kennedy, Finch & the 401' },
+                { city: 'Pickering', note: 'Hwy 401 corridor' },
+                { city: 'Ajax', note: 'Durham Region' },
+                { city: 'Whitby', note: 'Durham Region' },
+                { city: 'Oshawa', note: 'Hwy 401 & 407' },
+                { city: 'East GTA', note: '15–30 min ETA' },
+              ].map(c => (
+                <div key={c.city} className="bg-brand-dark text-white p-4 rounded-xl text-center">
+                  <p className="font-black text-brand-yellow">{c.city}</p>
+                  <p className="text-xs text-white/60">{c.note}</p>
+                </div>
+              ))}
+            </div>
+            <BlogCTA source="blog_battery_mid2" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'My car won\'t start — how do I know if it\'s the battery?', answer: 'Listen to the sound when you turn the key. Rapid clicking almost always means a dead battery. A slow, groaning crank means the battery is dying. One click or total silence could be the battery, a corroded connection, or the starter — which is why iFAST technicians test the battery before recommending anything.' },
+      { question: 'Should I boost my car battery or replace it?', answer: 'Boost it if there\'s a clear one-time cause (lights left on, car sat unused) and the battery is under about 3 years old. Replace it if this is your second boost in a month, the battery is 4–5+ years old, it cranks slowly even in warm weather, or the case is swollen. A boost starts the car — it doesn\'t fix a battery that\'s reached the end of its life.' },
+      { question: 'Do you really come out at 2 a.m. for a dead battery?', answer: 'Yes — iFAST runs 24/7 across Pickering, Ajax, Whitby, Oshawa, and Scarborough. One of our five-star reviews is from a driver who called around 2 a.m. and had a technician on site in 15 minutes.' },
+      { question: 'How long does a battery boost take?', answer: 'The boost itself takes a few minutes once we arrive, and we typically reach you in 15–30 minutes anywhere in the East GTA. We also test the battery so you know whether it will hold a charge or needs replacing soon.' },
+      { question: 'Why did my car battery die in winter?', answer: 'Cold weather is usually the trigger, not the cause. Summer heat degrades the battery internally; then the first cold snap cuts its cranking power roughly in half while the engine demands more power to turn over thickened oil. Batteries that were quietly weakened all summer fail on the first −15°C morning.' },
+      { question: 'Will you tell me the price before doing the work?', answer: 'Yes. We walk you through what we found, your options, and the cost before any work starts — customers regularly mention our transparency in reviews. You decide, fully informed, before we touch the car.' },
+    ]
+  },
+
+  /* ============================================================
+     POST 7: CAR LOCKOUT — THE COAT HANGER'S TRUE COST
+     ============================================================ */
+  {
+    slug: 'locked-out-of-car-what-not-to-do-east-gta',
+    title: 'Locked Out of Your Car? What That Coat Hanger Trick Actually Costs',
+    excerpt: 'YouTube says a coat hanger and two minutes will get you back in your car. Your door\'s weatherstripping, paint, and wiring say otherwise. Here\'s the damage math on DIY lockout tricks — and how a professional gets you in without leaving a mark.',
+    seoTitle: 'Locked Out of Your Car? The Real Cost of DIY Tricks | iFAST East GTA Lockout Service',
+    seoDescription: 'Locked out of your car in Pickering, Ajax, Whitby, Oshawa or Scarborough? Before you try the coat hanger trick, read the damage math — torn seals, scratched paint, snagged wiring. 24/7 damage-free car lockout service, 15–30 min response.',
+    keywords: 'locked out of car, car lockout service, 24/7 car unlocking Toronto, unlock car door service, keys locked in car, keys locked in trunk, car lockout Scarborough, auto lockout East GTA, locked keys in car Pickering, car unlocking service near me',
+    category: 'Emergency Tips',
+    publishDate: '2026-07-03',
+    readTime: '6 min read',
+    heroImage: '/car_lockout_hero.jpg',
+    heroImageAlt: 'iFAST technician unlocking a car door without damage in the East GTA',
+    sections: [
+      {
+        content: (
+          <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
+            You can see them. Right there. Your keys, sitting on the driver's seat, on the wrong side of a locked door. And somewhere in the back of your mind, a YouTube video is whispering: <em>coat hanger, two minutes, easy.</em> Before you straighten that hanger, here's the math nobody shows you in the video: the parts of your door you're about to fight with — the weatherstripping, the paint along the glass, the wiring inside the panel — cost <strong>many times more to repair than a professional lockout call costs</strong>. This is the damage math, from the people who open cars for a living across the East GTA.
+          </p>
+        )
+      },
+      {
+        heading: 'The Damage Math: What Those YouTube Tricks Actually Break',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Every DIY unlock trick works the same way: force something into a gap that was never designed to have anything forced into it. Here's what each trick really risks:
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              {[
+                { icon: '🧥', title: 'The coat hanger', desc: 'Slides down between the glass and the weatherstripping — tearing the rubber seal, scratching a line into the glass or paint, and snagging any wiring or linkage rods it finds inside the door.' },
+                { icon: '🚪', title: 'The wedge + rod', desc: 'Prying the door frame open far enough to reach in can permanently bend it. A bent frame never seals right again: wind noise at highway speed, water leaks in every rainstorm.' },
+                { icon: '🪛', title: 'The slim jim', desc: 'Made for cars from the 1990s. Modern doors pack airbag sensors, lock actuators, and wiring harnesses exactly where a slim jim slides. One wrong hook and you\'re into real electrical repair.' },
+                { icon: '🧱', title: 'The "just break the small window"', desc: 'The most honest trick — at least you know the cost up front. It\'s glass replacement, plus vacuuming cubes of glass out of your seats and vents for a month.' },
+              ].map(r => (
+                <div key={r.title} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
+                  <span className="text-2xl mb-2 block">{r.icon}</span>
+                  <p className="font-bold text-brand-dark text-sm mb-1">{r.title}</p>
+                  <p className="text-gray-600 text-xs">{r.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-2">
+              <div className="flex gap-3">
+                <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
+                <p className="text-amber-900 text-sm font-medium">
+                  The common thread: the repair bill for a torn seal, scratched panel, or snagged wire runs to <strong>hundreds of dollars</strong> — several professional lockout calls' worth — and that's if it goes <em>mostly</em> right. The video never shows attempt number four.
+                </p>
+              </div>
+            </div>
+          </>
+        )
+      },
+      {
+        heading: 'How a Pro Opens Your Car Without Leaving a Mark',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              The difference between DIY and professional isn't courage — it's purpose-built tools and repetition. Here's what actually happens when our technician reaches your car:
+            </p>
+            <ol className="list-none space-y-4 mb-6">
+              {[
+                { num: '01', title: 'A protective wedge goes in first', desc: 'An inflatable or soft-polymer wedge creates a small, controlled gap at the top of the door — spreading pressure evenly so nothing bends and no paint gets touched.' },
+                { num: '02', title: 'A long-reach tool does the finger-work', desc: 'A coated rod reaches through the gap to press the unlock button or lift the handle — the same motion your hand would make, just from outside.' },
+                { num: '03', title: 'The wedge comes out, the seal closes', desc: 'The door returns to exactly its original shape. No bent frame, no torn rubber, no evidence anyone was ever locked out.' },
+              ].map(s => (
+                <li key={s.num} className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                  <span className="text-3xl font-black text-brand-yellow/50 leading-none">{s.num}</span>
+                  <div>
+                    <p className="font-bold text-brand-dark">{s.title}</p>
+                    <p className="text-gray-600 text-sm mt-1">{s.desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <div className="bg-brand-dark text-white rounded-2xl p-6 mb-2 flex flex-col sm:flex-row gap-5 items-start">
+              <div className="bg-brand-yellow/20 p-3 rounded-xl flex-shrink-0">
+                <KeyRound className="text-brand-yellow" size={28} />
+              </div>
+              <div>
+                <p className="font-black text-brand-yellow mb-2">The whole thing usually takes minutes</p>
+                <p className="text-sm text-white/85">
+                  Most lockouts are open within minutes of our technician arriving — no drilling, no broken glass, no damage. Keyless and smart-key cars are opened the same careful way; the tech just targets the door's mechanical backup instead of the electronics.
+                </p>
+              </div>
+            </div>
+          </>
+        )
+      },
+      {
+        heading: 'The Three Lockouts That Panic People Most',
+        content: (
+          <>
+            <ul className="list-none space-y-4 mb-6">
+              <li className="bg-gray-50 p-5 rounded-xl">
+                <p className="font-bold text-brand-dark mb-1">🧳 Keys locked in the trunk</p>
+                <p className="text-gray-600 text-sm">Feels worse than it is. On almost every modern car, once we open the cabin the trunk release button or folding rear seats get us to your keys. One unlock solves both.</p>
+              </li>
+              <li className="bg-gray-50 p-5 rounded-xl">
+                <p className="font-bold text-brand-dark mb-1">🔥 Engine running in the driveway</p>
+                <p className="text-gray-600 text-sm">You started the car to warm it up, stepped out, and the door locked behind you. It's burning fuel and it's a theft magnet — call right away and stay with the vehicle until we arrive.</p>
+              </li>
+              <li className="bg-red-50 border border-red-200 p-5 rounded-xl">
+                <p className="font-bold text-red-800 mb-1">🚨 A child or pet locked inside</p>
+                <p className="text-red-900 text-sm"><strong>Call 911 first. Always.</strong> On a warm day the inside of a car heats to dangerous levels in minutes, and first responders will not hesitate to break a window — nor should you. Property is replaceable. Call us second, or don't call us at all: 911 comes first, every time.</p>
+              </li>
+            </ul>
+            <BlogCTA source="blog_lockout_mid1" />
+          </>
+        )
+      },
+      {
+        heading: 'What Locked-Out Drivers Actually Say',
+        content: (
+          <>
+            <p className="mb-5 text-gray-700">
+              Two of our Google reviews, word for word, from drivers who were exactly where you might be right now:
+            </p>
+            <div className="grid md:grid-cols-2 gap-5 mb-6">
+              {[
+                { initial: 'H', name: 'Heng Tho', quote: 'Had myself locked out of my car, called this company arrived fast and fair price.' },
+                { initial: 'U', name: 'Uddhav Reen', quote: 'Got locked out of my car and the guy was there in a flash and got it sorted out. Genuine rates as well.' },
+              ].map(r => (
+                <div key={r.name} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)]">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-11 h-11 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-lg">{r.initial}</div>
+                      <div>
+                        <p className="font-bold text-brand-dark leading-tight">{r.name}</p>
+                        <span className="text-xs text-gray-400">Verified Google review</span>
+                      </div>
+                    </div>
+                    <svg viewBox="0 0 48 48" className="w-5 h-5 flex-shrink-0" aria-hidden="true">
+                      <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z" />
+                      <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z" />
+                      <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.97 21.97 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z" />
+                      <path fill="#EA4335" d="M24 9.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 3.18 29.93 1 24 1 15.4 1 7.96 5.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z" />
+                    </svg>
+                  </div>
+                  <div className="flex gap-0.5 text-brand-yellow mb-3">
+                    {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
+                  </div>
+                  <p className="text-gray-700 text-sm leading-relaxed italic">&ldquo;{r.quote}&rdquo;</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-700">
+              &ldquo;Fast&rdquo; and &ldquo;fair price&rdquo; — both reviews, independently. That's the whole promise: we get there quickly, open the car without damage, and the number we quote is the number you pay.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Locked Out Anywhere in the East GTA? We\'re Already Close',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              {COMPANY_NAME} runs 24/7 <a href="/service/lockout" className="text-brand-yellow font-bold hover:underline">car lockout service</a> across the East GTA — no membership, no callback queue, no &ldquo;next available appointment Tuesday.&rdquo; A technician heads your way the moment you call, typically arriving in 15–30 minutes.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-3 mb-6">
+              {[
+                { city: 'Scarborough', note: 'Kennedy, Finch & the 401' },
+                { city: 'Pickering', note: 'Hwy 401 corridor' },
+                { city: 'Ajax', note: 'Durham Region' },
+                { city: 'Whitby', note: 'Durham Region' },
+                { city: 'Oshawa', note: 'Hwy 401 & 407' },
+                { city: 'East GTA', note: '15–30 min ETA' },
+              ].map(c => (
+                <div key={c.city} className="bg-brand-dark text-white p-4 rounded-xl text-center">
+                  <p className="font-black text-brand-yellow">{c.city}</p>
+                  <p className="text-xs text-white/60">{c.note}</p>
+                </div>
+              ))}
+            </div>
+            <BlogCTA source="blog_lockout_mid2" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'I\'m locked out of my car — how fast can you get here?', answer: 'iFAST typically arrives in 15–30 minutes anywhere in Pickering, Ajax, Whitby, Oshawa, or Scarborough, 24/7. Customers describe it as "fast" and "there in a flash" in their Google reviews.' },
+      { question: 'Will unlocking my car damage the door or paint?', answer: 'No. Professional lockout tools — a protective wedge and a coated long-reach tool — open the door without bending the frame, tearing the weatherstripping, or touching the paint. That\'s the key difference from DIY tricks like coat hangers and slim jims, which regularly cause hundreds of dollars in damage.' },
+      { question: 'My keys are locked in the trunk — can you still get them?', answer: 'Yes. On most modern vehicles, once the cabin is open we can reach the keys through the interior trunk release or the folding rear seats. One damage-free unlock solves the whole problem.' },
+      { question: 'What should I do if my child or pet is locked in the car?', answer: 'Call 911 first — always. A car\'s interior heats to dangerous temperatures within minutes on a warm day, and first responders will break a window if needed, which is exactly the right call. Property is replaceable.' },
+      { question: 'Can you unlock keyless and smart-key cars?', answer: 'Yes. Push-button-start and keyless vehicles are opened the same careful, damage-free way — the technician works with the door\'s mechanical mechanism rather than the electronics.' },
+      { question: 'How much does a car lockout service cost in the East GTA?', answer: 'We quote you the price up front on the phone before a technician is dispatched, and the number we quote is the number you pay. Reviewers consistently describe our lockout pricing as "fair" and "genuine rates" — and it\'s a fraction of what repairing coat-hanger damage costs.' },
     ]
   }
 ];

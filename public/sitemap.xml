@@ -152,6 +152,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.ifastroadside.ca/blog/dead-car-battery-boost-or-replace-east-gta</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ifastroadside.ca/blog/locked-out-of-car-what-not-to-do-east-gta</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Service × City combo pages -->
   <url><loc>https://www.ifastroadside.ca/service/mobile-mechanic/scarborough</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
