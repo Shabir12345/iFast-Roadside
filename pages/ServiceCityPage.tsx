@@ -9,6 +9,24 @@ import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
 
+// Thin, templated service×city combos deliberately kept OUT of Google's index
+// (noindex, follow) so crawl budget concentrates on the rebuilt "money" pages
+// and the 7 E-E-A-T combos. These pages still work and still pass link equity —
+// they're just not candidates for indexing yet.
+//
+// TO RE-ENABLE A PAGE: rebuild its content to the E-E-A-T standard, then DELETE
+// its `"service/city"` line below. Removing it flips the page back to
+// index,follow on the next deploy. Reverse these one at a time when ready.
+// (Tracked as an open task — see the money-page rebuild follow-up.)
+const NOINDEX_COMBOS = new Set<string>([
+  'mobile-mechanic/scarborough', 'mobile-mechanic/pickering', 'mobile-mechanic/ajax', 'mobile-mechanic/whitby', 'mobile-mechanic/oshawa',
+  'tire-change/pickering', 'tire-change/whitby', 'tire-change/oshawa',
+  'jump-start/ajax', 'jump-start/whitby', 'jump-start/oshawa',
+  'lockout/ajax', 'lockout/whitby', 'lockout/oshawa',
+  'fuel/scarborough', 'fuel/ajax', 'fuel/whitby', 'fuel/oshawa',
+  'towing/scarborough', 'towing/pickering', 'towing/ajax', 'towing/whitby', 'towing/oshawa',
+]);
+
 const ServiceCityPage: React.FC = () => {
   const { id, city } = useParams<{ id: string; city: string }>();
   const service = SERVICES.find(s => s.id === id);
@@ -34,6 +52,7 @@ const ServiceCityPage: React.FC = () => {
 
   const Icon = service.icon;
   const canonical = `https://www.ifastroadside.ca/service/${id}/${city}`;
+  const isNoindex = NOINDEX_COMBOS.has(`${id}/${city}`);
   const serviceUrl = `https://www.ifastroadside.ca/service/${id}`;
   const cityUrl = `https://www.ifastroadside.ca/areas/${city}`;
 
@@ -102,7 +121,7 @@ const ServiceCityPage: React.FC = () => {
         <meta name="description" content={combo.seoDescription} />
         <meta name="keywords" content={combo.keywords} />
         <link rel="canonical" href={canonical} />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content={isNoindex ? 'noindex, follow' : 'index, follow'} />
         <meta property="og:title" content={combo.seoTitle} />
         <meta property="og:description" content={combo.seoDescription} />
         <meta property="og:url" content={canonical} />
