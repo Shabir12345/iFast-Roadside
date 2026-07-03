@@ -16,8 +16,26 @@ const { chromium } = require('playwright');
 const path = require('path');
 const os = require('os');
 
-// All pages to index — highest priority first
+// All pages to index — highest priority first.
+// Google's manual "Request Indexing" quota is ~10-12 URLs/day, and the script
+// stops when the quota is hit, so the pages that matter most must come FIRST.
+// The PRIORITY block below is the money-page set rebuilt 2026-07-02 that is not
+// yet indexed (tire-change hub was "unknown to Google"; lockout/fuel/combos were
+// "discovered, not indexed"). Request these before anything else.
 const URLS = [
+  // ── PRIORITY: rebuilt money pages, not yet indexed (2026-07-02) ──
+  'https://www.ifastroadside.ca/service/tire-change',
+  'https://www.ifastroadside.ca/service/lockout',
+  'https://www.ifastroadside.ca/service/fuel',
+  'https://www.ifastroadside.ca/service/mobile-mechanic',
+  'https://www.ifastroadside.ca/service/tire-change/scarborough',
+  'https://www.ifastroadside.ca/service/tire-change/ajax',
+  'https://www.ifastroadside.ca/service/jump-start/pickering',
+  'https://www.ifastroadside.ca/service/jump-start/scarborough',
+  'https://www.ifastroadside.ca/service/lockout/pickering',
+  'https://www.ifastroadside.ca/service/lockout/scarborough',
+  'https://www.ifastroadside.ca/service/fuel/pickering',
+
   // Core pages
   'https://www.ifastroadside.ca/',
   'https://www.ifastroadside.ca/mobile-mechanic',
