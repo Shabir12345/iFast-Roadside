@@ -39,6 +39,7 @@ const URLS = [
   // ── New blog posts (published 2026-07-03, not yet known to Google) ──
   'https://www.ifastroadside.ca/blog/dead-car-battery-boost-or-replace-east-gta',
   'https://www.ifastroadside.ca/blog/locked-out-of-car-what-not-to-do-east-gta',
+  'https://www.ifastroadside.ca/blog/tire-patch-repair-scarborough',
 
   // Core pages
   'https://www.ifastroadside.ca/',

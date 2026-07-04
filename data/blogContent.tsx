@@ -1341,6 +1341,180 @@ export const BLOG_POSTS: BlogPost[] = [
       { question: 'Can you unlock keyless and smart-key cars?', answer: 'Yes. Push-button-start and keyless vehicles are opened the same careful, damage-free way — the technician works with the door\'s mechanical mechanism rather than the electronics.' },
       { question: 'How much does a car lockout service cost in the East GTA?', answer: 'We quote you the price up front on the phone before a technician is dispatched, and the number we quote is the number you pay. Reviewers consistently describe our lockout pricing as "fair" and "genuine rates" — and it\'s a fraction of what repairing coat-hanger damage costs.' },
     ]
+  },
+
+  /* ============================================================
+     POST 8: TIRE PATCH AT PORT UNION & KINGSTON — SCARBOROUGH CUSTOMER STORY
+     ============================================================ */
+  {
+    slug: 'tire-patch-repair-scarborough',
+    title: 'Flat Tire at Port Union & Kingston: The On-the-Spot Tire Patch That Got a Scarborough Driver Rolling Again',
+    excerpt: 'A driver picked up a puncture near Port Union and Kingston Road in Scarborough. Instead of a tow truck and a lost afternoon, one call brought the tire shop to him — the flat was found, patched, and back on the road in no time. Here is the real story, plus how to know if your own flat can be patched.',
+    seoTitle: 'Tire Patch Scarborough | Mobile Flat Tire Repair at Port Union & Kingston Rd — iFAST',
+    seoDescription: 'Flat tire in Scarborough? This driver got a puncture near Port Union & Kingston Rd — iFAST arrived fast and patched it on the spot, no tow needed. Learn when a tire can be patched vs replaced, and how mobile tire patch service works across the East GTA.',
+    keywords: 'tire patch Scarborough, tire patch near me, mobile tire repair Scarborough, flat tire repair Port Union, tire puncture repair Scarborough, can my tire be patched, tire patch or replace, mobile tire patch service, flat tire help East GTA, tire repair Kingston Rd Scarborough',
+    category: 'Emergency Tips',
+    publishDate: '2026-07-03',
+    readTime: '6 min read',
+    heroImage: '/flat_tire_repair_hero.jpg',
+    heroImageAlt: 'iFAST technician patching a punctured tire on-site for a driver in Scarborough',
+    sections: [
+      {
+        content: (
+          <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
+            When Kuruvilla Abraham found his tire going flat near <strong>Port Union Road and Kingston Road in Scarborough</strong>, he had the same two options every driver dreads: wrestle with a spare on the shoulder of a busy road, or wait on a tow truck to drag the car to a shop and eat the rest of his day. He picked a third option — he called <strong>{COMPANY_NAME}</strong>. Our technician headed straight to him, found the puncture, and <strong>patched the tire on the spot</strong>. No tow, no waiting room, no lost afternoon. His five-star review afterwards was short and to the point: <em>&ldquo;Came in short time and fix. Nice guy.&rdquo;</em> This is how a mobile tire patch works — and how to tell whether your own flat can be saved the same way.
+          </p>
+        )
+      },
+      {
+        heading: 'Can Your Flat Be Patched? The 60-Second Check',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Not every flat means a new tire — far from it. Most punctures picked up on GTA roads are small nails and screws sitting in the tread, and a properly patched tire is a <strong>permanent repair</strong> for that puncture. Here is the quick rule of thumb our technicians use:
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              {[
+                { icon: '✅', title: 'Puncture in the tread', desc: 'A nail or screw in the flat face of the tire — the part that touches the road — is patch territory. This is the most common flat we see, and it is exactly what we fixed at Port Union.' },
+                { icon: '✅', title: 'Hole under 6 mm', desc: 'Roughly the diameter of a pencil. Standard nails and screws fall well inside this limit, which is why most punctures are repairable.' },
+                { icon: '❌', title: 'Sidewall or shoulder damage', desc: 'The sidewall flexes with every rotation — no patch can hold there safely. A sidewall puncture, bubble, or gash means the tire is done.' },
+                { icon: '❌', title: 'Driven flat for a distance', desc: 'Driving on a fully flat tire grinds and overheats the internal structure. Even a small puncture can become an unrepairable tire if the car kept rolling on it.' },
+              ].map(r => (
+                <div key={r.title} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
+                  <span className="text-2xl mb-2 block">{r.icon}</span>
+                  <p className="font-bold text-brand-dark text-sm mb-1">{r.title}</p>
+                  <p className="text-gray-600 text-xs">{r.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-2">
+              <div className="flex gap-3">
+                <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
+                <p className="text-amber-900 text-sm font-medium">
+                  Losing air? Pull over somewhere safe and stop driving on it. The single biggest thing that turns a $40 fix into a full tire replacement is rolling on a flat — the tire destroys itself from the inside in a couple of kilometres.
+                </p>
+              </div>
+            </div>
+            <BlogCTA source="blog_tirepatch_mid1" />
+          </>
+        )
+      },
+      {
+        heading: 'What Happened at Port Union & Kingston',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Kuruvilla called with a flat near the Port Union and Kingston Road intersection — the busy east Scarborough corridor where West Hill meets the 401. Our technician was dispatched immediately and, in Kuruvilla&rsquo;s own words, came in a short time.
+            </p>
+            <p className="mb-4 text-gray-700">
+              On-site, the repair followed the same process we use on every patchable flat: find the puncture, confirm it sits in the tread and is small enough to repair safely, then seal it properly and get the pressure back to the number on the door jamb — not just &ldquo;looks about right.&rdquo;
+            </p>
+            <div className="bg-brand-dark text-white rounded-2xl p-6 mb-6 flex flex-col sm:flex-row gap-5 items-start">
+              <div className="bg-brand-yellow/20 p-3 rounded-xl flex-shrink-0">
+                <ShieldCheck className="text-brand-yellow" size={28} />
+              </div>
+              <div>
+                <p className="font-black text-brand-yellow mb-2">Patch vs. plug — why it matters</p>
+                <ul className="space-y-2 text-sm text-white/85">
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>A <strong>string plug</strong> jammed in from the outside is a roadside band-aid — fine to limp to a shop, not a permanent fix.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>A <strong>proper patch</strong> seals the puncture and restores the tire&rsquo;s inner liner — the repair tire makers and safety standards actually endorse.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>Done right, a patched tire runs out the rest of its normal life. You should never have to think about that puncture again.</span></li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-gray-700">
+              Minutes later, Kuruvilla was back on the road on his own tire — no spare, no tow, no shop visit. That is the entire point of <a href="/service/flat-tire-repair" className="text-brand-yellow font-bold hover:underline">mobile flat tire repair</a>: the shop comes to you.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Kuruvilla\'s 5-Star Review',
+        content: (
+          <>
+            <p className="mb-5 text-gray-700">
+              After the repair, Kuruvilla left us this on Google — along with a photo he took of our mobile tire unit at the scene:
+            </p>
+            <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-xl">K</div>
+                  <div>
+                    <p className="font-bold text-brand-dark leading-tight">Kuruvilla Abraham</p>
+                    <span className="text-xs text-gray-400">Verified Google review</span>
+                  </div>
+                </div>
+                <svg viewBox="0 0 48 48" className="w-6 h-6 flex-shrink-0" aria-hidden="true">
+                  <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z" />
+                  <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z" />
+                  <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.97 21.97 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z" />
+                  <path fill="#EA4335" d="M24 9.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 3.18 29.93 1 24 1 15.4 1 7.96 5.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z" />
+                </svg>
+              </div>
+              <div className="flex gap-0.5 text-brand-yellow mb-3">
+                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
+              </div>
+              <p className="text-gray-700 leading-relaxed italic">
+                &ldquo;Came in short time and fix . Nice guy&rdquo;
+              </p>
+            </div>
+            <p className="text-gray-700 mb-4">
+              Eight words. That is what good roadside service should look like from the driver&rsquo;s side — nothing dramatic to report, because the problem simply got handled.
+            </p>
+            <BlogCTA source="blog_tirepatch_mid2" />
+          </>
+        )
+      },
+      {
+        heading: 'A Patch Today, New Tires Whenever You Need Them',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              One more detail from this call-out worth sharing: before we left, Kuruvilla kept our number — his tires are getting on in kilometres, and when the time comes to replace them he wants the same thing to happen: <strong>the tire shop comes to him</strong>. That is our <a href="/service/tire-installation" className="text-brand-yellow font-bold hover:underline">mobile tire installation</a> service — we source the right tires for your vehicle, bring them to your driveway or workplace, and install them on-site.
+            </p>
+            <p className="mb-4 text-gray-700">
+              A patch and a plan. The patch fixes today&rsquo;s puncture permanently; knowing who to call means the next tire problem — flat, seasonal swap, or full replacement — never costs you a day at a shop counter.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Tire Patch & Flat Repair Across Scarborough and the East GTA',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Nail in your tire? Slow leak you keep topping up? Flat in a parking lot? {COMPANY_NAME} runs <strong>24/7 mobile tire patch and flat repair across Scarborough</strong> — Port Union, West Hill, Kingston Road, the 401 corridor — and the whole East GTA. We come to you, repair the tire on-site when it is safe to do so, and get you rolling in a single visit.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-3 mb-6">
+              {[
+                { city: 'Scarborough', note: 'Port Union, Kingston Rd & the 401' },
+                { city: 'Pickering', note: 'Hwy 401 corridor' },
+                { city: 'Ajax', note: 'Durham Region' },
+                { city: 'Whitby', note: 'Durham Region' },
+                { city: 'Oshawa', note: 'Hwy 401 & 407' },
+                { city: 'East GTA', note: '15–30 min ETA' },
+              ].map(c => (
+                <div key={c.city} className="bg-brand-dark text-white p-4 rounded-xl text-center">
+                  <p className="font-black text-brand-yellow">{c.city}</p>
+                  <p className="text-xs text-white/60">{c.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-700">
+              And if the tire is beyond saving, we handle that too — <a href="/service/spare-tire-change" className="text-brand-yellow font-bold hover:underline">spare tire changes</a> on the spot, or <a href="/service/tire-installation" className="text-brand-yellow font-bold hover:underline">new tires delivered and installed</a> at your location.
+            </p>
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'Can a punctured tire be patched?', answer: 'Usually, yes. If the puncture is in the tread (the flat part that touches the road), is smaller than about 6 mm — a standard nail or screw — and the tire wasn\'t driven on while flat, a proper patch is a safe, permanent repair. Sidewall damage or a puncture on the tire\'s shoulder cannot be patched safely and means replacement.' },
+      { question: 'How long does a mobile tire patch take in Scarborough?', answer: 'iFAST typically arrives in 15–30 minutes anywhere in Scarborough and the East GTA, and the patch itself usually takes about 30 minutes on-site. Most drivers are back on the road within the hour — like our customer at Port Union and Kingston Rd.' },
+      { question: 'Is a patched tire safe to drive on?', answer: 'Yes. A professional patch seals the puncture and restores the tire\'s inner liner, and is considered a permanent repair for that puncture. A patched tire done right will safely run out the rest of its normal tread life.' },
+      { question: 'What\'s the difference between a tire patch and a plug?', answer: 'A string plug is pushed into the hole from the outside — it\'s a temporary roadside fix, good enough to get you to a proper repair. A patch seals the puncture from inside the tire, which is the repair method tire manufacturers endorse as permanent. iFAST repairs flats properly so you don\'t have to think about that puncture again.' },
+      { question: 'Do you come to my location for a flat tire in Scarborough?', answer: 'Yes. iFAST is a mobile service — we patch and repair flat tires at your home, workplace, parking lot, or roadside across Scarborough (including Port Union, West Hill, and the Kingston Rd corridor), Pickering, Ajax, Whitby, and Oshawa, 24/7. Call +1 437-215-3468.' },
+      { question: 'What if my tire can\'t be patched?', answer: 'If the damage is in the sidewall, too large, or the tire was driven flat, we\'ll tell you straight and give you options on the spot: install your spare so you\'re mobile again, or arrange mobile tire installation — we source new tires and install them at your location, no shop visit needed.' },
+    ]
   }
 ];
 
