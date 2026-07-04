@@ -1,5 +1,5 @@
 import React from 'react';
-import { PhoneCall, CheckCircle2, AlertTriangle, Clock, DollarSign, ThumbsUp, ThumbsDown, Star, Gauge, ShieldCheck, BatteryCharging, KeyRound, Snowflake } from 'lucide-react';
+import { PhoneCall, CheckCircle2, AlertTriangle, Clock, DollarSign, ThumbsUp, ThumbsDown, Star, Gauge, ShieldCheck, BatteryCharging, KeyRound, Snowflake, MapPin, Wrench } from 'lucide-react';
 import { PHONE_NUMBER, COMPANY_NAME } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
 
@@ -1361,41 +1361,27 @@ export const BLOG_POSTS: BlogPost[] = [
     sections: [
       {
         content: (
-          <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
-            When Kuruvilla Abraham found his tire going flat near <strong>Port Union Road and Kingston Road in Scarborough</strong>, he had the same two options every driver dreads: wrestle with a spare on the shoulder of a busy road, or wait on a tow truck to drag the car to a shop and eat the rest of his day. He picked a third option — he called <strong>{COMPANY_NAME}</strong>. Our technician headed straight to him, found the puncture, and <strong>patched the tire on the spot</strong>. No tow, no waiting room, no lost afternoon. His five-star review afterwards was short and to the point: <em>&ldquo;Came in short time and fix. Nice guy.&rdquo;</em> This is how a mobile tire patch works — and how to tell whether your own flat can be saved the same way.
-          </p>
-        )
-      },
-      {
-        heading: 'Can Your Flat Be Patched? The 60-Second Check',
-        content: (
           <>
-            <p className="mb-4 text-gray-700">
-              Not every flat means a new tire — far from it. Most punctures picked up on GTA roads are small nails and screws sitting in the tread, and a properly patched tire is a <strong>permanent repair</strong> for that puncture. Here is the quick rule of thumb our technicians use:
+            <p className="text-xl text-gray-600 font-medium leading-relaxed mb-6">
+              A flat tire near <strong>Port Union Road and Kingston Road in Scarborough</strong> usually means one of two bad afternoons: wrestling a spare on the shoulder of a busy road, or waiting on a tow to a shop. Kuruvilla Abraham got a third kind — he made one call to <strong>{COMPANY_NAME}</strong>, and the tire was patched on the spot.
             </p>
-            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200 mb-6">
               {[
-                { icon: '✅', title: 'Puncture in the tread', desc: 'A nail or screw in the flat face of the tire — the part that touches the road — is patch territory. This is the most common flat we see, and it is exactly what we fixed at Port Union.' },
-                { icon: '✅', title: 'Hole under 6 mm', desc: 'Roughly the diameter of a pencil. Standard nails and screws fall well inside this limit, which is why most punctures are repairable.' },
-                { icon: '❌', title: 'Sidewall or shoulder damage', desc: 'The sidewall flexes with every rotation — no patch can hold there safely. A sidewall puncture, bubble, or gash means the tire is done.' },
-                { icon: '❌', title: 'Driven flat for a distance', desc: 'Driving on a fully flat tire grinds and overheats the internal structure. Even a small puncture can become an unrepairable tire if the car kept rolling on it.' },
-              ].map(r => (
-                <div key={r.title} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
-                  <span className="text-2xl mb-2 block">{r.icon}</span>
-                  <p className="font-bold text-brand-dark text-sm mb-1">{r.title}</p>
-                  <p className="text-gray-600 text-xs">{r.desc}</p>
+                { icon: <MapPin size={18} />, label: 'Location', value: 'Port Union & Kingston Rd' },
+                { icon: <Wrench size={18} />, label: 'The problem', value: 'Punctured tire' },
+                { icon: <Clock size={18} />, label: 'The fix', value: 'On-the-spot patch' },
+                { icon: <Star size={18} />, label: 'The verdict', value: '5-star review' },
+              ].map(f => (
+                <div key={f.label} className="bg-white p-4 flex flex-col items-start gap-1">
+                  <span className="text-brand-yellow mb-1">{f.icon}</span>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-gray-400">{f.label}</span>
+                  <span className="text-sm font-bold text-brand-dark leading-snug">{f.value}</span>
                 </div>
               ))}
             </div>
-            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-2">
-              <div className="flex gap-3">
-                <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
-                <p className="text-amber-900 text-sm font-medium">
-                  Losing air? Pull over somewhere safe and stop driving on it. The single biggest thing that turns a $40 fix into a full tire replacement is rolling on a flat — the tire destroys itself from the inside in a couple of kilometres.
-                </p>
-              </div>
-            </div>
-            <BlogCTA source="blog_tirepatch_mid1" />
+            <p className="mb-4 text-gray-700">
+              Here is what happened on that call-out, the review Kuruvilla left afterwards, and how to tell whether your own flat can be saved the same way.
+            </p>
           </>
         )
       },
@@ -1404,7 +1390,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Kuruvilla called with a flat near the Port Union and Kingston Road intersection — the busy east Scarborough corridor where West Hill meets the 401. Our technician was dispatched immediately and, in Kuruvilla&rsquo;s own words, came in a short time.
+              The call came in from the Port Union and Kingston Road intersection — the busy east Scarborough corridor where West Hill meets the 401. A technician was dispatched immediately and, in Kuruvilla&rsquo;s own words, came in a short time.
             </p>
             <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
               <iframe
@@ -1485,7 +1471,39 @@ export const BLOG_POSTS: BlogPost[] = [
                 Check Out Our Other Google Reviews
               </a>
             </div>
-            <BlogCTA source="blog_tirepatch_mid2" />
+          </>
+        )
+      },
+      {
+        heading: 'Can Your Flat Be Patched? The 60-Second Check',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Kuruvilla&rsquo;s flat could be patched — but how do you know if yours can? Not every flat means a new tire; far from it. Most punctures picked up on GTA roads are small nails and screws sitting in the tread, and a properly patched tire is a <strong>permanent repair</strong> for that puncture. Here is the quick rule of thumb our technicians use:
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              {[
+                { icon: '✅', title: 'Puncture in the tread', desc: 'A nail or screw in the flat face of the tire — the part that touches the road — is patch territory. This is the most common flat we see, and it is exactly what we fixed at Port Union.' },
+                { icon: '✅', title: 'Hole under 6 mm', desc: 'Roughly the diameter of a pencil. Standard nails and screws fall well inside this limit, which is why most punctures are repairable.' },
+                { icon: '❌', title: 'Sidewall or shoulder damage', desc: 'The sidewall flexes with every rotation — no patch can hold there safely. A sidewall puncture, bubble, or gash means the tire is done.' },
+                { icon: '❌', title: 'Driven flat for a distance', desc: 'Driving on a fully flat tire grinds and overheats the internal structure. Even a small puncture can become an unrepairable tire if the car kept rolling on it.' },
+              ].map(r => (
+                <div key={r.title} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
+                  <span className="text-2xl mb-2 block">{r.icon}</span>
+                  <p className="font-bold text-brand-dark text-sm mb-1">{r.title}</p>
+                  <p className="text-gray-600 text-xs">{r.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-2">
+              <div className="flex gap-3">
+                <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
+                <p className="text-amber-900 text-sm font-medium">
+                  Losing air? Pull over somewhere safe and stop driving on it. The single biggest thing that turns a $40 fix into a full tire replacement is rolling on a flat — the tire destroys itself from the inside in a couple of kilometres.
+                </p>
+              </div>
+            </div>
+            <BlogCTA source="blog_tirepatch_mid1" />
           </>
         )
       },
@@ -1527,6 +1545,7 @@ export const BLOG_POSTS: BlogPost[] = [
             <p className="text-gray-700">
               And if the tire is beyond saving, we handle that too — <a href="/service/spare-tire-change" className="text-brand-yellow font-bold hover:underline">spare tire changes</a> on the spot, or <a href="/service/tire-installation" className="text-brand-yellow font-bold hover:underline">new tires delivered and installed</a> at your location.
             </p>
+            <BlogCTA source="blog_tirepatch_mid2" />
           </>
         )
       }

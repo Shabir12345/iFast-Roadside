@@ -111,7 +111,7 @@ const BlogPost: React.FC = () => {
               {post.title}
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-sm font-bold text-gray-400 mb-8">
-              <span className="flex items-center gap-1.5"><Calendar size={14} /> {new Date(post.publishDate).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <span className="flex items-center gap-1.5"><Calendar size={14} /> {new Date(post.publishDate).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}</span>
               <span className="flex items-center gap-1.5"><Clock size={14} /> {post.readTime}</span>
               <span className="text-gray-300">·</span>
               <span className="text-brand-dark">iFAST Roadside Team</span>
