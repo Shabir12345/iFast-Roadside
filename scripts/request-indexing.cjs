@@ -40,6 +40,7 @@ const URLS = [
   'https://www.ifastroadside.ca/blog/dead-car-battery-boost-or-replace-east-gta',
   'https://www.ifastroadside.ca/blog/locked-out-of-car-what-not-to-do-east-gta',
   'https://www.ifastroadside.ca/blog/tire-patch-repair-scarborough',
+  'https://www.ifastroadside.ca/blog/battery-boost-ajax',
 
   // Core pages
   'https://www.ifastroadside.ca/',
