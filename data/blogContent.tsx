@@ -1778,6 +1778,229 @@ export const BLOG_POSTS: BlogPost[] = [
       { question: 'Is there a warranty on a replacement battery?', answer: 'Yes — the new battery we installed in this story came with a two-year warranty. Warranty terms depend on the battery your vehicle needs; we\'ll confirm the coverage before any work starts.' },
       { question: 'Is a jump start safe for my car\'s electronics?', answer: 'Done properly, yes. iFAST uses surge-protected, microprocessor-controlled booster packs rather than cables off a stranger\'s running car, which protects your vehicle\'s ECU and sensitive electronics from voltage spikes. It\'s the safest way to boost a modern vehicle.' },
     ]
+  },
+
+  /* ============================================================
+     POST 10: PRE-PURCHASE INSPECTION IN AJAX (CUSTOMER STORY — IFEYINWA BLESSING)
+     ============================================================ */
+  {
+    slug: 'pre-purchase-car-inspection-ajax',
+    title: 'Buying a Used Car in Ajax? Ifeyinwa Had Us Inspect It First — Here\'s Why That Was the Smartest Money She Spent',
+    excerpt: 'Before paying for a used car in Ajax, Ifeyinwa called iFAST for a mobile pre-purchase inspection. Our mechanic came to the car, went through it end to end, and gave her the transparent picture she needed to buy with confidence. Here is the real story — and what a pre-purchase inspection catches that a test drive never will.',
+    seoTitle: 'Pre-Purchase Car Inspection Ajax | Mobile Used Car Check — iFAST',
+    seoDescription: 'Buying a used car in Ajax or Durham Region? iFAST brings the pre-purchase inspection to the car — engine, brakes, tires, diagnostics and an honest verdict before you pay. Read how one Ajax buyer used it to purchase with 100% confidence.',
+    keywords: 'pre-purchase car inspection Ajax, used car inspection Ajax, mobile car inspection Ajax, pre purchase inspection near me, used car inspection Durham Region, mobile mechanic Ajax, buy used car inspection Ontario, car inspection before buying Ajax, vehicle inspection Pickering Whitby Oshawa',
+    category: 'Buyer\'s Guide',
+    publishDate: '2026-07-04',
+    readTime: '6 min read',
+    heroImage: '/mobile_mechanic_hero.jpg',
+    heroImageAlt: 'iFAST mobile mechanic performing a pre-purchase inspection on a used car in Ajax',
+    sections: [
+      {
+        content: (
+          <>
+            <p className="text-xl text-gray-600 font-medium leading-relaxed mb-6">
+              Ifeyinwa Blessing was about to buy a used car in <strong>Ajax</strong> — and before any money changed hands, she did the one thing most buyers skip: she called <strong>{COMPANY_NAME}</strong> for a <strong>pre-purchase inspection</strong>. Our mechanic came to the car, went through it end to end, and gave her the straight, transparent picture of exactly what she was buying.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200 mb-6">
+              {[
+                { icon: <MapPin size={18} />, label: 'Location', value: 'Ajax, Durham Region' },
+                { icon: <Gauge size={18} />, label: 'The request', value: 'Pre-purchase inspection' },
+                { icon: <Wrench size={18} />, label: 'The fix', value: 'On-site used-car check' },
+                { icon: <Star size={18} />, label: 'The verdict', value: '5-star review' },
+              ].map(f => (
+                <div key={f.label} className="bg-white p-4 flex flex-col items-start gap-1">
+                  <span className="text-brand-yellow mb-1">{f.icon}</span>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-gray-400">{f.label}</span>
+                  <span className="text-sm font-bold text-brand-dark leading-snug">{f.value}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mb-4 text-gray-700">
+              Here is how the inspection went, the review Ifeyinwa left afterwards, and why a couple hundred dollars of inspection routinely saves used-car buyers thousands.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'What Happened in Ajax',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Ifeyinwa had found a car she was serious about. The problem every used-car buyer faces at that moment is the same: the seller says it runs great, the test drive feels fine, and you have no way of knowing what's hiding under the hood, under the paint, or in the computer. So instead of guessing, she booked a <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> to meet the car in Ajax.
+            </p>
+            <p className="mb-4 text-gray-700">
+              That's the part people love about a mobile pre-purchase inspection: <strong>the car doesn't have to go anywhere</strong>. No convincing a seller to drive to a shop, no arranging plates and insurance for a car you don't own yet. The mechanic comes to the driveway, parking lot, or dealership — tools, diagnostic scanner and all.
+            </p>
+            <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
+              <iframe
+                src="https://www.google.com/maps?q=Ajax,+ON&z=12&output=embed"
+                title="Map of Ajax, Ontario, where iFAST performed this mobile pre-purchase car inspection"
+                className="w-full h-72 md:h-80 block border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+              <p className="text-xs text-gray-500 text-center py-2 px-3 bg-gray-50">
+                Ajax, Ontario — where this mobile pre-purchase inspection took place
+              </p>
+            </div>
+            <p className="mb-4 text-gray-700">
+              On-site, our technician worked through the same checklist we bring to every pre-purchase call: engine start-up and idle behaviour, a diagnostic scan for stored trouble codes, fluid levels and condition, battery health, brakes, tires, suspension, lights, and the visual tells of past accident repair. Then came the part Ifeyinwa singled out in her review — the <strong>transparent</strong> walkthrough of what he found:
+            </p>
+            <div className="bg-brand-dark text-white rounded-2xl p-6 mb-6 flex flex-col sm:flex-row gap-5 items-start">
+              <div className="bg-brand-yellow/20 p-3 rounded-xl flex-shrink-0">
+                <ShieldCheck className="text-brand-yellow" size={28} />
+              </div>
+              <div>
+                <p className="font-black text-brand-yellow mb-2">Transparent means the whole picture</p>
+                <ul className="space-y-2 text-sm text-white/85">
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>What's genuinely good</strong> about the car — so you know what you're paying for.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>What needs attention</strong> — now, soon, and eventually — in plain language, not mechanic-speak.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>No stake in the sale.</strong> We don't work for the seller and we're not trying to win repair work. The only job is telling the buyer the truth.</span></li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-gray-700">
+              Ifeyinwa got what every used-car buyer actually needs before handing over money: an independent expert's verdict, delivered at the car, with nothing held back. She walked away 100% sure of her decision — her words, not ours.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Ifeyinwa\'s 5-Star Review',
+        content: (
+          <>
+            <p className="mb-5 text-gray-700">
+              After the inspection, Ifeyinwa left us this on Google:
+            </p>
+            <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-xl">I</div>
+                  <div>
+                    <p className="font-bold text-brand-dark leading-tight">Ifeyinwa Blessing</p>
+                    <span className="text-xs text-gray-400">Verified Google review</span>
+                  </div>
+                </div>
+                <svg viewBox="0 0 48 48" className="w-6 h-6 flex-shrink-0" aria-hidden="true">
+                  <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z" />
+                  <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z" />
+                  <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.97 21.97 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z" />
+                  <path fill="#EA4335" d="M24 9.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 3.18 29.93 1 24 1 15.4 1 7.96 5.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z" />
+                </svg>
+              </div>
+              <div className="flex gap-0.5 text-brand-yellow mb-3">
+                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
+              </div>
+              <p className="text-gray-700 leading-relaxed italic">
+                &ldquo;He is reliable, trustworthy and transparent. I am 100% satisfied&rdquo;
+              </p>
+            </div>
+            <p className="text-gray-700 mb-4">
+              Reliable. Trustworthy. Transparent. When someone is deciding whether to trust a stranger's opinion on the biggest purchase of their month — maybe their year — those are exactly the three words the job depends on.
+            </p>
+            <div className="text-center mb-6">
+              <a
+                href="https://search.google.com/local/reviews?placeid=ChIJ2bPg5e3R1IkRW8KnogGiPxs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border-2 border-brand-dark text-brand-dark px-6 py-3 rounded-xl font-bold hover:bg-brand-dark hover:text-white transition-all duration-300"
+              >
+                <Star size={18} fill="currentColor" className="text-brand-yellow" />
+                Check Out Our Other Google Reviews
+              </a>
+            </div>
+          </>
+        )
+      },
+      {
+        heading: 'Why You Should Never Buy a Used Car Without an Inspection',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Ifeyinwa's instinct was right, and here is the uncomfortable reason why: in Ontario, most private used-car sales are effectively <strong>as-is</strong>. Once you've paid and signed, whatever is wrong with the car is your problem. A seller's Safety Standards Certificate proves the car met minimum safety requirements on the day it was tested — it says nothing about a tired transmission, a head gasket starting to weep, or four tires that all need replacing next spring.
+            </p>
+            <p className="mb-4 text-gray-700">
+              A pre-purchase inspection exists to catch exactly the things a test drive and a walk-around can't:
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              {[
+                { icon: '🔍', title: 'Hidden accident history', desc: 'Overspray, misaligned panels, non-factory welds and fresh undercoating tell a story the ad never will. Structural repair can knock thousands off what a car is worth.' },
+                { icon: '💻', title: 'Codes the seller cleared', desc: 'A diagnostic scan reads what the engine computer remembers — including trouble codes and readiness monitors that reveal a warning light was recently reset for the sale.' },
+                { icon: '🛞', title: 'The next $2,000 in wear items', desc: 'Brakes at 20%, tires near the wear bars, a battery on its last winter. None of it fails the test drive — all of it lands on your credit card in the first six months.' },
+                { icon: '💧', title: 'Leaks, rust and neglect', desc: 'Fluid condition and slow leaks show how the car was maintained, not just how it runs today. Ten minutes under a car tells the truth about ten years of ownership.' },
+              ].map(r => (
+                <div key={r.title} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
+                  <span className="text-2xl mb-2 block">{r.icon}</span>
+                  <p className="font-bold text-brand-dark text-sm mb-1">{r.title}</p>
+                  <p className="text-gray-600 text-xs">{r.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-2">
+              <div className="flex gap-3">
+                <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
+                <p className="text-amber-900 text-sm font-medium">
+                  Whatever the inspection finds, you win. A clean report buys you confidence, like it did for Ifeyinwa. A list of problems buys you leverage to negotiate the price down — or the best reason you'll ever get to walk away before it becomes your problem.
+                </p>
+              </div>
+            </div>
+            <BlogCTA source="blog_prepurchase_mid1" />
+          </>
+        )
+      },
+      {
+        heading: 'After You Buy: A Mechanic Who Still Comes to You',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              The relationship doesn't end when the plates go on. The same <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic service</a> that inspected the car before you bought it can maintain it afterwards — diagnostics when a warning light comes on, <a href="/service/battery-diagnostic" className="text-brand-yellow font-bold hover:underline">battery testing</a> before winter, and repairs done in your own driveway instead of a shop waiting room.
+            </p>
+            <p className="mb-4 text-gray-700">
+              And because we're a roadside company first, the number you saved for the inspection is the same one that answers at 2 a.m. if that new-to-you car ever leaves you stranded — <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">boosts</a>, <a href="/service/flat-tire-repair" className="text-brand-yellow font-bold hover:underline">flat tires</a>, lockouts, the lot. Most buyers we inspect for keep the number. Ifeyinwa did.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Pre-Purchase Inspections Across Ajax & the East GTA',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Found a used car in Ajax, Pickering, or anywhere in Durham Region? {COMPANY_NAME} brings the <strong>pre-purchase inspection to the car</strong> — private sellers' driveways, dealership lots, workplace parking garages. You get an independent, transparent verdict before you pay, usually bookable within a day.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-3 mb-6">
+              {[
+                { city: 'Ajax', note: 'Where this story happened' },
+                { city: 'Pickering', note: 'Hwy 401 corridor' },
+                { city: 'Whitby', note: 'Durham Region' },
+                { city: 'Oshawa', note: 'Hwy 401 & 407' },
+                { city: 'Scarborough', note: 'Kingston Rd & the 401' },
+                { city: 'East GTA', note: 'We come to the car' },
+              ].map(c => (
+                <div key={c.city} className="bg-brand-dark text-white p-4 rounded-xl text-center">
+                  <p className="font-black text-brand-yellow">{c.city}</p>
+                  <p className="text-xs text-white/60">{c.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-700">
+              One phone call books it: tell us where the car is and when the seller is available, and a certified <a href="/service/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> meets you there. Buy the car knowing exactly what you're getting — the way Ifeyinwa did.
+            </p>
+            <BlogCTA source="blog_prepurchase_mid2" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'Do you come to the seller\'s location for a pre-purchase inspection in Ajax?', answer: 'Yes — that\'s the whole point of a mobile pre-purchase inspection. iFAST meets the car wherever it is: a private seller\'s driveway, a dealership lot, or a parking garage, anywhere in Ajax, Pickering, Whitby, Oshawa, or Scarborough. The car never has to move, so you don\'t need plates, insurance, or the seller\'s cooperation to get it to a shop.' },
+      { question: 'What does a pre-purchase car inspection cover?', answer: 'Our mechanic checks the engine\'s start-up and running behaviour, runs a diagnostic scan for stored and cleared trouble codes, and inspects fluids, battery health, brakes, tires, suspension, steering, lights, and visible signs of accident repair or rust. You get a plain-language verdict: what\'s good, what needs work soon, and whether we\'d be comfortable buying the car.' },
+      { question: 'How long does a pre-purchase inspection take?', answer: 'Plan for roughly 45 to 90 minutes at the car, depending on the vehicle and what we find. Most sellers are fine with it — and a seller who refuses to allow an inspection is telling you something important about the car.' },
+      { question: 'How much does a mobile pre-purchase inspection cost in Ajax?', answer: 'It depends on the vehicle and location, so call +1 437-215-3468 for an exact quote — the price is confirmed up front before we book anything. Weigh it against the downside: buyers who skip the inspection routinely inherit thousands of dollars in repairs that a one-hour check would have caught.' },
+      { question: 'Can you inspect a car the same day I call?', answer: 'Often, yes. We run 24/7 across the East GTA, and pre-purchase inspections can usually be scheduled the same day or next day — useful when a good car is priced to sell and other buyers are circling. Call as soon as you\'re serious about a vehicle and we\'ll work around the seller\'s availability.' },
+      { question: 'What should I do if the inspection finds problems?', answer: 'Use the report as leverage. Minor wear items (brakes, tires, a tired battery) are normal on a used car and justify negotiating the price down by their repair cost. Structural damage, transmission issues, or evidence of hidden accident repair are usually walk-away findings. Either way, you\'re deciding with the facts instead of the seller\'s word.' },
+    ]
   }
 ];
 

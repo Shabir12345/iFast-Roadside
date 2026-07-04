@@ -41,6 +41,7 @@ const URLS = [
   'https://www.ifastroadside.ca/blog/locked-out-of-car-what-not-to-do-east-gta',
   'https://www.ifastroadside.ca/blog/tire-patch-repair-scarborough',
   'https://www.ifastroadside.ca/blog/battery-boost-ajax',
+  'https://www.ifastroadside.ca/blog/pre-purchase-car-inspection-ajax',
 
   // Core pages
   'https://www.ifastroadside.ca/',

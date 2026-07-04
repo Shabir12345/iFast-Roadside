@@ -75,6 +75,13 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
     content: "On time and very helpful.",
     rating: 5,
   },
+  {
+    id: 8,
+    name: "Ifeyinwa Blessing",
+    timeAgo: "1 day ago",
+    content: "He is reliable, trustworthy and transparent. I am 100% satisfied",
+    rating: 5,
+  },
 ];
 
 export const SERVICES: ServiceItem[] = [
