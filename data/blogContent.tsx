@@ -2001,6 +2001,202 @@ export const BLOG_POSTS: BlogPost[] = [
       { question: 'Can you inspect a car the same day I call?', answer: 'Often, yes. We run 24/7 across the East GTA, and pre-purchase inspections can usually be scheduled the same day or next day — useful when a good car is priced to sell and other buyers are circling. Call as soon as you\'re serious about a vehicle and we\'ll work around the seller\'s availability.' },
       { question: 'What should I do if the inspection finds problems?', answer: 'Use the report as leverage. Minor wear items (brakes, tires, a tired battery) are normal on a used car and justify negotiating the price down by their repair cost. Structural damage, transmission issues, or evidence of hidden accident repair are usually walk-away findings. Either way, you\'re deciding with the facts instead of the seller\'s word.' },
     ]
+  },
+
+  /* ============================================================
+     POST 11: EXHAUST HEAT SHIELD — PICKERING CUSTOMER STORY (Chris Moitalta)
+     ============================================================ */
+  {
+    slug: 'exhaust-heat-shield-repair-pickering',
+    title: 'That Rattle Under Your Car? Chris in Pickering Had a Broken Exhaust Heat Shield — Here\'s the Fix',
+    excerpt: 'A broken exhaust heat shield was hanging under Chris\'s car in Pickering — the kind of problem that sounds terrifying and fixes fast. Our mobile mechanic came to him, removed the broken shield safely, and had him back to a quiet car the same visit. Here is the real story, and what that rattling under your car actually means.',
+    seoTitle: 'Exhaust Heat Shield Rattle Pickering | Mobile Fix — iFAST',
+    seoDescription: 'Rattling or scraping noise under your car in Pickering? A rusted exhaust heat shield is the usual culprit. iFAST\'s mobile mechanic comes to you and removes or secures the broken shield on the spot — read how we fixed it for one Pickering driver.',
+    keywords: 'exhaust heat shield rattle Pickering, heat shield repair Pickering, rattling noise under car Pickering, exhaust heat shield removal, metal dragging under car, loose heat shield fix, mobile mechanic Pickering, mobile exhaust repair Durham Region, heat shield fell off can I drive',
+    category: 'Emergency Tips',
+    publishDate: '2026-07-04',
+    readTime: '5 min read',
+    heroImage: '/mobile_mechanic_hero.jpg',
+    heroImageAlt: 'iFAST mobile mechanic working under a car to remove a broken exhaust heat shield in Pickering',
+    sections: [
+      {
+        content: (
+          <>
+            <p className="text-xl text-gray-600 font-medium leading-relaxed mb-6">
+              Chris Moitalta's car developed the noise every driver dreads — something metal, loose, and rattling underneath. In <strong>Pickering</strong>, that sound usually has one very common cause: a rusted-out <strong>exhaust heat shield</strong>. Chris's had broken and was hanging under the car. One call to <strong>{COMPANY_NAME}</strong>, and our mobile mechanic came to him, removed the broken shield safely, and confirmed the rest of the exhaust was solid.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200 mb-6">
+              {[
+                { icon: <MapPin size={18} />, label: 'Location', value: 'Pickering, ON' },
+                { icon: <AlertTriangle size={18} />, label: 'The problem', value: 'Broken heat shield hanging' },
+                { icon: <Wrench size={18} />, label: 'The fix', value: 'Removed safely on-site' },
+                { icon: <Star size={18} />, label: 'The verdict', value: '5-star review' },
+              ].map(f => (
+                <div key={f.label} className="bg-white p-4 flex flex-col items-start gap-1">
+                  <span className="text-brand-yellow mb-1">{f.icon}</span>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-gray-400">{f.label}</span>
+                  <span className="text-sm font-bold text-brand-dark leading-snug">{f.value}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mb-4 text-gray-700">
+              Here is how the call went, the review Chris left afterwards, and what to do if your car has started making the same noise.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'What Happened in Pickering',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              A broken heat shield announces itself. At idle it buzzes like a loose panel; over bumps it clanks; and once it breaks free and starts hanging, you can hear — sometimes feel — metal moving around under the floor. It sounds like the exhaust is falling off the car. Chris did the right thing: instead of driving it around Pickering hoping the noise would go away, he called a <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> to come take a look where the car sat.
+            </p>
+            <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
+              <iframe
+                src="https://www.google.com/maps?q=Pickering,+ON&z=12&output=embed"
+                title="Map of Pickering, Ontario, where iFAST removed this broken exhaust heat shield"
+                className="w-full h-72 md:h-80 block border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+              <p className="text-xs text-gray-500 text-center py-2 px-3 bg-gray-50">
+                Pickering, Ontario — where this mobile heat shield call took place
+              </p>
+            </div>
+            <p className="mb-4 text-gray-700">
+              On-site, our technician ran the same checks we bring to every underbody noise call: find the actual source of the rattle, inspect the exhaust hangers and connections, and confirm nothing else has shaken loose. The diagnosis matched the sound — the heat shield cover had broken and was hanging on, rusted past the point of being reattached.
+            </p>
+            <p className="mb-4 text-gray-700">
+              The fix was straightforward and done on the spot: <strong>remove the broken shield cleanly</strong>, make sure no sharp or loose metal was left behind, and verify the exhaust itself — pipes, hangers, muffler — was still mounted tight. No shop appointment, no leaving the car anywhere, no more noise.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Chris\'s 5-Star Review',
+        content: (
+          <>
+            <p className="mb-5 text-gray-700">
+              After the visit, Chris left us this on Google:
+            </p>
+            <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-xl">C</div>
+                  <div>
+                    <p className="font-bold text-brand-dark leading-tight">Chris Moitalta</p>
+                    <span className="text-xs text-gray-400">Verified Google review</span>
+                  </div>
+                </div>
+                <svg viewBox="0 0 48 48" className="w-6 h-6 flex-shrink-0" aria-hidden="true">
+                  <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z" />
+                  <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z" />
+                  <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.97 21.97 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z" />
+                  <path fill="#EA4335" d="M24 9.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 3.18 29.93 1 24 1 15.4 1 7.96 5.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z" />
+                </svg>
+              </div>
+              <div className="flex gap-0.5 text-brand-yellow mb-3">
+                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
+              </div>
+              <p className="text-gray-700 leading-relaxed italic">
+                &ldquo;Best mobile tire service in pickering very reliable&rdquo;
+              </p>
+            </div>
+            <p className="text-gray-700 mb-4">
+              Notice what Chris called us: a <em>tire</em> service — even though this was an exhaust job. That's how most of Pickering knows us, and it's the part we love about this review. Whatever the problem turns out to be — a flat, a dead battery, or a heat shield hanging under the car — it's the same number, the same truck, and the same &ldquo;very reliable&rdquo;.
+            </p>
+            <div className="text-center mb-6">
+              <a
+                href="https://search.google.com/local/reviews?placeid=ChIJ2bPg5e3R1IkRW8KnogGiPxs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border-2 border-brand-dark text-brand-dark px-6 py-3 rounded-xl font-bold hover:bg-brand-dark hover:text-white transition-all duration-300"
+              >
+                <Star size={18} fill="currentColor" className="text-brand-yellow" />
+                Check Out Our Other Google Reviews
+              </a>
+            </div>
+          </>
+        )
+      },
+      {
+        heading: 'What Is an Exhaust Heat Shield — and Can You Drive With It Hanging?',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              A heat shield is a thin layer of stamped metal that sits between the hot parts of your exhaust — manifold, catalytic converter, muffler — and everything that shouldn't get cooked by them: the floor of the cabin, fuel and brake lines, plastic trim, and whatever the car is parked over. It matters more than it looks like it should. A catalytic converter runs hot enough to scorch dry grass under a parked car.
+            </p>
+            <p className="mb-4 text-gray-700">
+              The reason they fail in Ontario is simple: <strong>road salt</strong>. The shield itself is thin metal, and the small spot welds and clamps holding it on rust through years before the exhaust does. When a few of those welds let go, the shield starts buzzing. When enough let go, it breaks and hangs — which is exactly what happened on Chris's car.
+            </p>
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-4">
+              <div className="flex gap-3">
+                <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
+                <p className="text-amber-900 text-sm font-medium">
+                  A rattling shield is an annoyance. A <strong>hanging</strong> one is a real problem: it can drag, catch on road debris, contact hot exhaust parts, or drop onto the road at speed. If yours is hanging low or scraping, don't put the fix off — and if it's dragging on the pavement, stop driving and call.
+                </p>
+              </div>
+            </div>
+            <p className="mb-4 text-gray-700">
+              As for the fix — honesty matters here. When a shield has rusted to the point of breaking, welding the old one back on is rarely worth anyone's money. The standard fix is to <strong>remove the broken section cleanly</strong> and check whether the area it protected still needs coverage; where it does, a replacement shield or a proper clamp-on repair is the answer. That call gets made under your actual car, not over the phone — which is why we come look before quoting anything.
+            </p>
+            <BlogCTA source="blog_heatshield_mid1" />
+          </>
+        )
+      },
+      {
+        heading: 'More Than Tires: A Mechanic Who Comes to You',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Chris's review calls us a tire service, and tires are how a lot of Durham Region first finds us. But the same <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic service</a> that pulled a broken heat shield off his car handles the rest of the small-but-urgent list too: diagnostics when a warning light comes on, <a href="/service/battery-diagnostic" className="text-brand-yellow font-bold hover:underline">battery testing</a> and replacement in your driveway, and the roadside classics — <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">boosts</a>, <a href="/service/flat-tire-repair" className="text-brand-yellow font-bold hover:underline">flat tires</a>, lockouts — at 2 a.m. if that's when it happens.
+            </p>
+            <p className="mb-4 text-gray-700">
+              The pattern is the same every time: you describe the problem, we come to the car, and the price is confirmed before any work starts.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Exhaust & Underbody Fixes Across Pickering and the East GTA',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Hearing a rattle, buzz, or scrape from under your car in Pickering or anywhere in the East GTA? {COMPANY_NAME} comes to your driveway, workplace, or roadside spot, finds the source, and fixes what can be fixed on-site — usually within 15 to 30 minutes of your call.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-3 mb-6">
+              {[
+                { city: 'Pickering', note: 'Where this story happened' },
+                { city: 'Ajax', note: 'Hwy 401 corridor' },
+                { city: 'Whitby', note: 'Durham Region' },
+                { city: 'Oshawa', note: 'Hwy 401 & 407' },
+                { city: 'Scarborough', note: 'Kingston Rd & the 401' },
+                { city: 'East GTA', note: 'We come to you' },
+              ].map(c => (
+                <div key={c.city} className="bg-brand-dark text-white p-4 rounded-xl text-center">
+                  <p className="font-black text-brand-yellow">{c.city}</p>
+                  <p className="text-xs text-white/60">{c.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-700">
+              One call does it: tell us what you're hearing and where the car is, and a <a href="/service/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> meets you there — the way it worked for Chris.
+            </p>
+            <BlogCTA source="blog_heatshield_mid2" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'Can I drive with a loose or hanging heat shield?', answer: 'A shield that\'s only rattling is safe to drive short-term, but book the fix — the rust that loosened it only gets worse. A shield that\'s hanging low is different: it can drag, catch debris, or drop onto the road. And if it\'s actually scraping the pavement, stop driving and call +1 437-215-3468 — we come to the car, so there\'s no need to risk the drive.' },
+      { question: 'What does a rattling noise under my car mean?', answer: 'The most common cause by far — especially on cars that have seen a few Ontario winters — is a rusted exhaust heat shield vibrating against the exhaust. Classic signs: a metallic buzz at idle or at certain RPMs that changes when the engine revs. Loose exhaust hangers and road debris caught underneath are the other usual suspects. A mobile mechanic can confirm the source at your location in minutes.' },
+      { question: 'Do you remove or replace broken heat shields?', answer: 'It depends on the shield\'s condition and what it protects. A shield that\'s rusted through and broken, like the one on this Pickering call, is removed cleanly and safely. If the area it covered still needs heat protection — near fuel lines or the cabin floor, for example — we\'ll tell you straight and recommend a replacement or clamp-on repair. The decision is made under your actual car, and the price is confirmed before any work starts.' },
+      { question: 'Do you fix heat shield and exhaust rattles in Pickering?', answer: 'Yes — Pickering is core coverage for iFAST, along with Ajax, Whitby, Oshawa, Scarborough, and the rest of the East GTA. We come to your driveway, workplace, or wherever the car is, 24/7, typically arriving within 15 to 30 minutes.' },
+      { question: 'How much does it cost to fix a rattling heat shield?', answer: 'Removing a broken shield is one of the more affordable mobile mechanic calls — but the exact price depends on the vehicle and what we find underneath, so call +1 437-215-3468 for a quote. The price is confirmed up front before we book anything, and there\'s no shop drop-off or towing cost because the fix happens at your car.' },
+      { question: 'How long does the fix take?', answer: 'Most broken heat shield calls are diagnosed and fixed in a single short visit — the inspection, the removal, and a check of the surrounding exhaust components all happen on the spot. You keep your day; the car never has to go anywhere.' },
+    ]
   }
 ];
 

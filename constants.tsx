@@ -82,6 +82,13 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
     content: "He is reliable, trustworthy and transparent. I am 100% satisfied",
     rating: 5,
   },
+  {
+    id: 9,
+    name: "Chris Moitalta",
+    timeAgo: "1 hour ago",
+    content: "Best mobile tire service in pickering very reliable",
+    rating: 5,
+  },
 ];
 
 export const SERVICES: ServiceItem[] = [
