@@ -1406,6 +1406,19 @@ export const BLOG_POSTS: BlogPost[] = [
             <p className="mb-4 text-gray-700">
               Kuruvilla called with a flat near the Port Union and Kingston Road intersection — the busy east Scarborough corridor where West Hill meets the 401. Our technician was dispatched immediately and, in Kuruvilla&rsquo;s own words, came in a short time.
             </p>
+            <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
+              <iframe
+                src="https://www.google.com/maps?q=Port+Union+Rd+%26+Kingston+Rd,+Scarborough,+ON&z=14&output=embed"
+                title="Map of Port Union Rd and Kingston Rd in Scarborough, where iFAST patched the tire on-site"
+                className="w-full h-72 md:h-80 block border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+              <p className="text-xs text-gray-500 text-center py-2 px-3 bg-gray-50">
+                Port Union Rd &amp; Kingston Rd, Scarborough — where this mobile tire patch happened
+              </p>
+            </div>
             <p className="mb-4 text-gray-700">
               On-site, the repair followed the same process we use on every patchable flat: find the puncture, confirm it sits in the tread and is small enough to repair safely, then seal it properly and get the pressure back to the number on the door jamb — not just &ldquo;looks about right.&rdquo;
             </p>
