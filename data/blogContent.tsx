@@ -1558,6 +1558,226 @@ export const BLOG_POSTS: BlogPost[] = [
       { question: 'Do you come to my location for a flat tire in Scarborough?', answer: 'Yes. iFAST is a mobile service — we patch and repair flat tires at your home, workplace, parking lot, or roadside across Scarborough (including Port Union, West Hill, and the Kingston Rd corridor), Pickering, Ajax, Whitby, and Oshawa, 24/7. Call +1 437-215-3468.' },
       { question: 'What if my tire can\'t be patched?', answer: 'If the damage is in the sidewall, too large, or the tire was driven flat, we\'ll tell you straight and give you options on the spot: install your spare so you\'re mobile again, or arrange mobile tire installation — we source new tires and install them at your location, no shop visit needed.' },
     ]
+  },
+
+  /* ============================================================
+     POST 9: BATTERY BOOST IN AJAX (CUSTOMER STORY — SREE V GOPI)
+     ============================================================ */
+  {
+    slug: 'battery-boost-ajax',
+    title: 'Dead Battery at Taunton & Salem: The Ajax Boost Call That Turned Into a Driveway Battery Replacement',
+    excerpt: 'A driver\'s battery died near Taunton and Salem in Ajax. One call brought a boost to his car, honest advice with zero pressure — and later that same day, he called back to have a new battery installed in his own driveway. Here is the real story, plus how to tell if your battery needs a boost or a replacement.',
+    seoTitle: 'Battery Boost Ajax | 24/7 Car Jump Start at Taunton & Salem — iFAST',
+    seoDescription: 'Dead battery in Ajax? This driver got stranded near Taunton Rd & Salem Rd — iFAST boosted his car on the spot, then replaced his battery at home the same day. Learn when a boost is enough vs when your battery is done, and how mobile battery service works across the East GTA.',
+    keywords: 'battery boost Ajax, car jump start Ajax, dead battery Ajax, jump start near me, mobile battery replacement Ajax, battery boost Taunton Salem, car won\'t start Ajax, battery replacement at home Ajax, 24/7 jump start Durham Region, roadside assistance Ajax',
+    category: 'Emergency Tips',
+    publishDate: '2026-07-04',
+    readTime: '6 min read',
+    heroImage: '/jump_start_hero.jpg',
+    heroImageAlt: 'iFAST technician boosting a dead car battery for a stranded driver in Ajax',
+    sections: [
+      {
+        content: (
+          <>
+            <p className="text-xl text-gray-600 font-medium leading-relaxed mb-6">
+              A dead battery near <strong>Taunton Road and Salem Road in Ajax</strong> means you're not going anywhere — no crank, no dash lights, no plan. Sree V Gopi made one call to <strong>{COMPANY_NAME}</strong>, got boosted on the spot, and was driving again in minutes. Then came the part we're most proud of: later that same day, he called back — this time to his house.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200 mb-6">
+              {[
+                { icon: <MapPin size={18} />, label: 'Location', value: 'Taunton & Salem, Ajax' },
+                { icon: <BatteryCharging size={18} />, label: 'The problem', value: 'Dead battery' },
+                { icon: <Wrench size={18} />, label: 'The fix', value: 'Boost + new battery' },
+                { icon: <Star size={18} />, label: 'The verdict', value: '5-star review' },
+              ].map(f => (
+                <div key={f.label} className="bg-white p-4 flex flex-col items-start gap-1">
+                  <span className="text-brand-yellow mb-1">{f.icon}</span>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-gray-400">{f.label}</span>
+                  <span className="text-sm font-bold text-brand-dark leading-snug">{f.value}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mb-4 text-gray-700">
+              Here is what happened on that call-out, the review Sree left afterwards, and how to tell whether your own battery needs a quick boost — or has reached the end of the road.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'What Happened at Taunton & Salem',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              The call came in from the Taunton and Salem intersection in north Ajax — a battery that had given up and a driver who needed to get moving. A technician was dispatched right away, hooked up a surge-protected booster pack, and had the engine running shortly after arriving.
+            </p>
+            <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
+              <iframe
+                src="https://www.google.com/maps?q=Taunton+Rd+%26+Salem+Rd,+Ajax,+ON&z=14&output=embed"
+                title="Map of Taunton Rd and Salem Rd in Ajax, where iFAST boosted the dead battery on-site"
+                className="w-full h-72 md:h-80 block border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+              <p className="text-xs text-gray-500 text-center py-2 px-3 bg-gray-50">
+                Taunton Rd &amp; Salem Rd, Ajax — where this battery boost happened
+              </p>
+            </div>
+            <p className="mb-4 text-gray-700">
+              But a boost only gets you started — it doesn't tell you <em>why</em> the battery died. So before leaving, our technician gave Sree the straight version of what he was looking at:
+            </p>
+            <div className="bg-brand-dark text-white rounded-2xl p-6 mb-6 flex flex-col sm:flex-row gap-5 items-start">
+              <div className="bg-brand-yellow/20 p-3 rounded-xl flex-shrink-0">
+                <ShieldCheck className="text-brand-yellow" size={28} />
+              </div>
+              <div>
+                <p className="font-black text-brand-yellow mb-2">The advice we gave — no pressure attached</p>
+                <ul className="space-y-2 text-sm text-white/85">
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>For right now:</strong> drive for 30 minutes straight, or let the engine run for about 45 — that gives the alternator time to put a real charge back into the battery.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>For soon:</strong> the battery is on its way out and will need replacing. If you can do it now, great — if not, it doesn't have to happen today.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>No upsell, no scare tactics.</strong> Just what the battery actually needs, so the driver can decide on his own schedule and budget.</span></li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-gray-700">
+              Minutes after the call, Sree was back on the road — no tow, no waiting on a friend with cables. That is exactly what our <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">24/7 battery jump start service</a> is built for.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Sree\'s 5-Star Review',
+        content: (
+          <>
+            <p className="mb-5 text-gray-700">
+              After the boost, Sree left us this on Google:
+            </p>
+            <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold text-xl">S</div>
+                  <div>
+                    <p className="font-bold text-brand-dark leading-tight">Sree V Gopi</p>
+                    <span className="text-xs text-gray-400">Verified Google review</span>
+                  </div>
+                </div>
+                <svg viewBox="0 0 48 48" className="w-6 h-6 flex-shrink-0" aria-hidden="true">
+                  <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z" />
+                  <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z" />
+                  <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34A21.97 21.97 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z" />
+                  <path fill="#EA4335" d="M24 9.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 3.18 29.93 1 24 1 15.4 1 7.96 5.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z" />
+                </svg>
+              </div>
+              <div className="flex gap-0.5 text-brand-yellow mb-3">
+                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
+              </div>
+              <p className="text-gray-700 leading-relaxed italic">
+                &ldquo;On time and very helpful.&rdquo;
+              </p>
+            </div>
+            <p className="text-gray-700 mb-4">
+              Five words that cover the two things that actually matter when your car won't start: we showed up when we said we would, and we fixed the problem.
+            </p>
+            <div className="text-center mb-6">
+              <a
+                href="https://search.google.com/local/reviews?placeid=ChIJ2bPg5e3R1IkRW8KnogGiPxs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border-2 border-brand-dark text-brand-dark px-6 py-3 rounded-xl font-bold hover:bg-brand-dark hover:text-white transition-all duration-300"
+              >
+                <Star size={18} fill="currentColor" className="text-brand-yellow" />
+                Check Out Our Other Google Reviews
+              </a>
+            </div>
+          </>
+        )
+      },
+      {
+        heading: 'Will a Boost Fix It — or Is Your Battery Done?',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Sree's car started with one boost — but his battery still needed replacing. That combination confuses a lot of drivers, so here is the honest breakdown. A boost solves a <strong>charge</strong> problem: lights left on, a long stretch of short trips, a car that sat for weeks. It cannot solve a <strong>battery</strong> problem: an aging battery that no longer holds the charge your alternator gives it. The quick signs our technicians look for:
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              {[
+                { icon: '✅', title: 'One-off cause, healthy battery', desc: 'Dome light left on, doors not fully closed, a week of 5-minute drives. A boost plus a proper 30–45 minute recharge usually ends the story.' },
+                { icon: '✅', title: 'Battery under 3–4 years old', desc: 'Most car batteries live 3–5 years in Ontario. A younger battery that dies once from a known cause is normally fine after a boost.' },
+                { icon: '❌', title: 'Slow crank, dim lights, repeat boosts', desc: 'If the engine cranks slower every week or this is your second boost this month, the battery is no longer holding charge — replacement territory.' },
+                { icon: '❌', title: '4+ Ontario winters on the clock', desc: 'Deep cold kills weak batteries. A battery heading into its fifth winter that already needed a boost is living on borrowed time.' },
+              ].map(r => (
+                <div key={r.title} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
+                  <span className="text-2xl mb-2 block">{r.icon}</span>
+                  <p className="font-bold text-brand-dark text-sm mb-1">{r.title}</p>
+                  <p className="text-gray-600 text-xs">{r.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-2">
+              <div className="flex gap-3">
+                <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
+                <p className="text-amber-900 text-sm font-medium">
+                  After any boost, don't just drive around the corner and park. The battery needs 30+ minutes of continuous driving to take on real charge — shut the engine off too early and you'll be calling for another boost tomorrow morning.
+                </p>
+              </div>
+            </div>
+            <BlogCTA source="blog_batteryboost_mid1" />
+          </>
+        )
+      },
+      {
+        heading: 'The Same-Day Call-Back: A New Battery in His Driveway',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Here is the part of this story we like best. Remember the advice at the roadside — <em>the battery will need replacing, but it doesn't have to be today</em>? Later that same day, Sree called back: &ldquo;I think you should change my battery before it goes bad.&rdquo; No breakdown this time, no stress — just a driver getting ahead of the next one.
+            </p>
+            <p className="mb-4 text-gray-700">
+              So we came to his house in Ajax and did the <a href="/service/battery-replacement" className="text-brand-yellow font-bold hover:underline">battery replacement</a> right in his driveway — correct battery for his vehicle, installed on-site, old battery taken away for recycling, and a <strong>two-year warranty</strong> on the new one. Total shop visits required: zero.
+            </p>
+            <p className="mb-4 text-gray-700">
+              That is the pattern we see all the time: the boost handles today's emergency, and because nobody pressured him at the roadside, the customer comes back on his own terms for the permanent fix.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Battery Boost & Replacement Across Ajax and the East GTA',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Car won't start in a driveway, a commuter lot, or on the side of Taunton Road? {COMPANY_NAME} runs <strong>24/7 battery boost and jump start service across Ajax</strong> — Taunton, Salem, Westney, the 401 corridor — and the whole East GTA. We come to you with surge-protected boosters that are safe for modern vehicle electronics, and if the battery is done, we can replace it on the spot.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-3 mb-6">
+              {[
+                { city: 'Ajax', note: 'Taunton, Salem & the 401' },
+                { city: 'Pickering', note: 'Hwy 401 corridor' },
+                { city: 'Whitby', note: 'Durham Region' },
+                { city: 'Oshawa', note: 'Hwy 401 & 407' },
+                { city: 'Scarborough', note: 'Kingston Rd & the 401' },
+                { city: 'East GTA', note: '15–30 min ETA' },
+              ].map(c => (
+                <div key={c.city} className="bg-brand-dark text-white p-4 rounded-xl text-center">
+                  <p className="font-black text-brand-yellow">{c.city}</p>
+                  <p className="text-xs text-white/60">{c.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-700">
+              Not sure whether your battery can be saved? We test it at your location — <a href="/service/battery-diagnostic" className="text-brand-yellow font-bold hover:underline">on-site battery diagnostics</a> tell you exactly where it stands, and <a href="/service/battery-replacement" className="text-brand-yellow font-bold hover:underline">mobile battery replacement</a> handles the rest without a tow or a shop counter.
+            </p>
+            <BlogCTA source="blog_batteryboost_mid2" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'How fast can you boost a dead battery in Ajax?', answer: 'iFAST typically arrives in 15–30 minutes anywhere in Ajax and the East GTA — including busy corridors like Taunton Rd and Salem Rd. The boost itself takes only a few minutes once we\'re on-site, so most drivers are moving again within the half hour.' },
+      { question: 'Will my battery recharge itself after a boost?', answer: 'Partially, yes — if you let it. After a boost, drive for at least 30 minutes continuously (or let the engine run for about 45) so the alternator can put real charge back into the battery. But a boost only restores charge; if the battery itself is worn out, it will die again and needs replacement.' },
+      { question: 'How do I know if I need a boost or a new battery?', answer: 'A one-time death with a clear cause (lights left on, short trips, car sat unused) usually just needs a boost. Slow cranking, dim lights, a battery over 3–4 years old, or needing more than one boost in a short period all point to replacement. When we boost your car, we\'ll tell you honestly which side of the line your battery is on — with no pressure to buy anything that day.' },
+      { question: 'Do you replace car batteries at my home in Ajax?', answer: 'Yes. iFAST does mobile battery replacement at your home, workplace, or roadside across Ajax, Pickering, Whitby, Oshawa, and Scarborough. We bring the correct battery for your vehicle, install it on-site, and take the old one away for recycling — exactly what we did for this customer in his own driveway.' },
+      { question: 'Is there a warranty on a replacement battery?', answer: 'Yes — the new battery we installed in this story came with a two-year warranty. Warranty terms depend on the battery your vehicle needs; we\'ll confirm the coverage before any work starts.' },
+      { question: 'Is a jump start safe for my car\'s electronics?', answer: 'Done properly, yes. iFAST uses surge-protected, microprocessor-controlled booster packs rather than cables off a stranger\'s running car, which protects your vehicle\'s ECU and sensitive electronics from voltage spikes. It\'s the safest way to boost a modern vehicle.' },
+    ]
   }
 ];
 

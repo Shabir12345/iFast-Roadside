@@ -68,6 +68,13 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
       "I had a great experience with Fayaz this past weekend. I accidentally put too much air in my tires at a gas station, and he kindly stepped in to help me fix the issue. He took the time to make sure everything was safe and explained what he was doing, which I really appreciated. It's not often you come across someone who is both knowledgeable and genuinely willing to help a stranger without hesitation. His professionalism and kindness really stood out. I highly recommend Fayaz if you're looking for someone reliable and trustworthy. Thanks again for your help!",
     rating: 5,
   },
+  {
+    id: 7,
+    name: "Sree V Gopi",
+    timeAgo: "12 hours ago",
+    content: "On time and very helpful.",
+    rating: 5,
+  },
 ];
 
 export const SERVICES: ServiceItem[] = [
