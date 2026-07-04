@@ -1461,6 +1461,17 @@ export const BLOG_POSTS: BlogPost[] = [
             <p className="text-gray-700 mb-4">
               Eight words. That is what good roadside service should look like from the driver&rsquo;s side — nothing dramatic to report, because the problem simply got handled.
             </p>
+            <div className="text-center mb-6">
+              <a
+                href="https://search.google.com/local/reviews?placeid=ChIJ2bPg5e3R1IkRW8KnogGiPxs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border-2 border-brand-dark text-brand-dark px-6 py-3 rounded-xl font-bold hover:bg-brand-dark hover:text-white transition-all duration-300"
+              >
+                <Star size={18} fill="currentColor" className="text-brand-yellow" />
+                Check Out Our Other Google Reviews
+              </a>
+            </div>
             <BlogCTA source="blog_tirepatch_mid2" />
           </>
         )
