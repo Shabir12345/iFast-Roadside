@@ -1,8 +1,10 @@
 import { ArrowRight, Clock, MapPin, ShieldCheck, PhoneCall, Star, CheckCircle2 } from 'lucide-react';
-import { PHONE_NUMBER, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
+import { PHONE_NUMBER } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
+import { useGoogleReviewStats } from '../hooks/useGoogleReviewStats';
 
 const Hero: React.FC = () => {
+  const { count: reviewsCount, rating } = useGoogleReviewStats();
   return (
     <section className="relative bg-white pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden border-b border-gray-100">
       {/* Background Decor Elements */}
@@ -26,7 +28,7 @@ const Hero: React.FC = () => {
                     <Star size={14} fill="currentColor" />
                     <Star size={14} fill="currentColor" />
                  </div>
-                 <span className="ml-1 tracking-tight">{GOOGLE_RATING}/5 ({GOOGLE_REVIEWS_COUNT} Reviews)</span>
+                 <span className="ml-1 tracking-tight">{rating}/5 ({reviewsCount} Reviews)</span>
               </div>
             </div>
 

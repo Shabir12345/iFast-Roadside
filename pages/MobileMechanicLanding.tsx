@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { PHONE_NUMBER, COMPANY_NAME, GOOGLE_REVIEWS_COUNT } from '../constants';
+import { PHONE_NUMBER, COMPANY_NAME } from '../constants';
 import { SERVICE_CONTENT } from '../data/serviceContent';
 import { CITY_CONTENT } from '../data/cityContent';
 import { 
@@ -22,11 +22,13 @@ import {
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
+import { useGoogleReviewStats } from '../hooks/useGoogleReviewStats';
 
 const MobileMechanicLanding: React.FC = () => {
   const serviceId = 'mobile-mechanic';
   const contentData = SERVICE_CONTENT[serviceId];
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { count: reviewsCount } = useGoogleReviewStats();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -135,7 +137,7 @@ const MobileMechanicLanding: React.FC = () => {
                     <div className="flex text-yellow-500">
                       {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                     </div>
-                    <p className="text-xs font-bold text-gray-500">{GOOGLE_REVIEWS_COUNT}+ Happy Clients</p>
+                    <p className="text-xs font-bold text-gray-500">{reviewsCount}+ Happy Clients</p>
                   </div>
                 </div>
               </div>

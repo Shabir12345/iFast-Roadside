@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { SERVICES, PHONE_NUMBER, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
+import { SERVICES, PHONE_NUMBER } from '../constants';
 import { SERVICE_CONTENT } from '../data/serviceContent';
 import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle2, Star, ShieldCheck, MapPin, Camera, Zap } from 'lucide-react';
 import { CITY_CONTENT } from '../data/cityContent';
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
+import { useGoogleReviewStats } from '../hooks/useGoogleReviewStats';
 
 const ServicePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const service = SERVICES.find(s => s.id === id);
   const contentData = id ? SERVICE_CONTENT[id] : null;
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { count: reviewsCount, rating } = useGoogleReviewStats();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -160,7 +162,7 @@ const ServicePage: React.FC = () => {
                        <div className="flex text-yellow-500 mb-1">
                           {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                        </div>
-                       <div className="text-xs md:text-sm font-bold text-brand-dark">{GOOGLE_RATING}/5 · {GOOGLE_REVIEWS_COUNT}+ Google Reviews</div>
+                       <div className="text-xs md:text-sm font-bold text-brand-dark">{rating}/5 · {reviewsCount}+ Google Reviews</div>
                     </div>
                 </div>
                 <div className="text-right border-l border-gray-100 pl-4 md:pl-6">
