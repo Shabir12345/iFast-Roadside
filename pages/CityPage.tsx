@@ -260,7 +260,16 @@ const CityPage: React.FC = () => {
 
         {/* Services in this city */}
         <div className="max-w-5xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-black text-brand-dark mb-8 text-center">Services we provide in {content.name}</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-brand-dark mb-4 text-center">Services we provide in {content.name}</h2>
+          <p className="text-gray-600 text-lg text-center max-w-3xl mx-auto mb-8">
+            {content.name} drivers rely on us for{' '}
+            <Link to="/service/mobile-mechanic" className="text-brand-dark font-semibold underline decoration-brand-yellow decoration-2 underline-offset-2 hover:text-brand-yellow transition-colors">on-site mobile mechanic repairs</Link>,{' '}
+            <Link to="/service/tire-change" className="text-brand-dark font-semibold underline decoration-brand-yellow decoration-2 underline-offset-2 hover:text-brand-yellow transition-colors">mobile tire service</Link>,{' '}
+            <Link to="/service/jump-start" className="text-brand-dark font-semibold underline decoration-brand-yellow decoration-2 underline-offset-2 hover:text-brand-yellow transition-colors">battery jump starts</Link>,{' '}
+            <Link to="/service/lockout" className="text-brand-dark font-semibold underline decoration-brand-yellow decoration-2 underline-offset-2 hover:text-brand-yellow transition-colors">car lockouts</Link>,{' '}
+            <Link to="/service/fuel" className="text-brand-dark font-semibold underline decoration-brand-yellow decoration-2 underline-offset-2 hover:text-brand-yellow transition-colors">emergency fuel delivery</Link>, and{' '}
+            <Link to="/service/towing" className="text-brand-dark font-semibold underline decoration-brand-yellow decoration-2 underline-offset-2 hover:text-brand-yellow transition-colors">flatbed towing</Link>. Tap any service below for {content.name}-specific details.
+          </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.filter(s => !s.parent).map(service => {
               const Icon = service.icon;

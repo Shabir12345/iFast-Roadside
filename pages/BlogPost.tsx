@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Clock, ArrowLeft, ChevronDown, Calendar, ArrowRight, PhoneCall } from 'lucide-react';
-import { BLOG_POSTS, getBlogPost } from '../data/blogContent';
-import { PHONE_NUMBER } from '../constants';
+import { BLOG_POSTS, getBlogPost, BLOG_RELATED_SERVICES } from '../data/blogContent';
+import { PHONE_NUMBER, SERVICES } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
 
 const categoryColors: Record<string, string> = {
@@ -35,6 +35,9 @@ const BlogPost: React.FC = () => {
   }
 
   const relatedPosts = BLOG_POSTS.filter(p => p.slug !== post.slug).slice(0, 2);
+  const relatedServices = (BLOG_RELATED_SERVICES[post.slug ?? ''] ?? [])
+    .map(id => SERVICES.find(s => s.id === id))
+    .filter((s): s is typeof SERVICES[number] => Boolean(s));
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -182,6 +185,37 @@ const BlogPost: React.FC = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {/* Related Services — descriptive internal links to the money pages */}
+          {relatedServices.length > 0 && (
+            <div className="mb-16">
+              <h2 className="text-2xl font-black text-brand-dark mb-2 tracking-tight">Related Services</h2>
+              <p className="text-gray-500 mb-6">Need a hand right now? These are the iFAST services most relevant to this guide across the East GTA.</p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {relatedServices.map(service => {
+                  const Icon = service.icon;
+                  return (
+                    <Link
+                      key={service.id}
+                      to={`/service/${service.id}`}
+                      className="group flex items-start gap-4 bg-gray-50 rounded-2xl p-5 border border-gray-100 hover:border-brand-yellow/40 hover:bg-white hover:shadow-md transition-all"
+                    >
+                      <div className="w-11 h-11 flex-shrink-0 bg-brand-yellow/20 text-brand-dark rounded-xl flex items-center justify-center group-hover:bg-brand-yellow transition-colors">
+                        <Icon size={22} />
+                      </div>
+                      <div>
+                        <h3 className="text-base font-black text-brand-dark group-hover:text-brand-yellow transition-colors leading-snug flex items-center gap-1">
+                          {service.title} in the East GTA
+                          <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all" />
+                        </h3>
+                        <p className="text-sm text-gray-500 mt-1 line-clamp-2">{service.description}</p>
+                      </div>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           )}
