@@ -189,40 +189,18 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Service × City combo pages -->
-  <url><loc>https://www.ifastroadside.ca/service/mobile-mechanic/scarborough</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/mobile-mechanic/pickering</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/mobile-mechanic/ajax</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/mobile-mechanic/whitby</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/mobile-mechanic/oshawa</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-
+  <!-- Service × City combo pages (indexable only). The 23 noindex,follow combos
+       are intentionally excluded — listing a noindexed URL here is a mixed
+       signal. They are still prerendered via NOINDEX_COMBOS in scripts/prerender.mjs.
+       Re-add a combo here when it is rebuilt to the E-E-A-T standard. -->
   <url><loc>https://www.ifastroadside.ca/service/tire-change/scarborough</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/tire-change/pickering</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://www.ifastroadside.ca/service/tire-change/ajax</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/tire-change/whitby</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/tire-change/oshawa</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 
   <url><loc>https://www.ifastroadside.ca/service/jump-start/scarborough</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://www.ifastroadside.ca/service/jump-start/pickering</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/jump-start/ajax</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/jump-start/whitby</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/jump-start/oshawa</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 
   <url><loc>https://www.ifastroadside.ca/service/lockout/scarborough</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://www.ifastroadside.ca/service/lockout/pickering</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/lockout/ajax</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/lockout/whitby</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/lockout/oshawa</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 
-  <url><loc>https://www.ifastroadside.ca/service/fuel/scarborough</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://www.ifastroadside.ca/service/fuel/pickering</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/fuel/ajax</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/fuel/whitby</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/fuel/oshawa</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-
-  <url><loc>https://www.ifastroadside.ca/service/towing/scarborough</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/towing/pickering</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/towing/ajax</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/towing/whitby</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/towing/oshawa</loc><lastmod>2026-06-12</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 </urlset>

@@ -2202,3 +2202,22 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export const getBlogPost = (slug: string): BlogPost | undefined =>
   BLOG_POSTS.find(p => p.slug === slug);
+
+// Maps each blog post to the service pages it should link to. Drives the
+// "Related Services" block on every post — descriptive internal links that
+// point crawl signals at the top-level /service/* money pages (which were
+// stuck at "Discovered — currently not indexed"). Values are SERVICES ids
+// from constants.tsx. Keep 2–3 genuinely relevant services per post.
+export const BLOG_RELATED_SERVICES: Record<string, string[]> = {
+  'flat-tire-on-401-east-gta': ['tire-change', 'flat-tire-repair', 'towing'],
+  'winter-roadside-emergencies-ontario-guide': ['jump-start', 'towing', 'tire-change'],
+  'caa-vs-independent-roadside-assistance-ontario': ['towing', 'jump-start', 'lockout'],
+  'mobile-mechanic-cost-ontario-pricing-guide': ['mobile-mechanic', 'battery-diagnostic'],
+  'correct-tire-pressure-scarborough': ['tire-change', 'flat-tire-repair', 'tire-installation'],
+  'dead-car-battery-boost-or-replace-east-gta': ['jump-start', 'battery-replacement', 'battery-diagnostic'],
+  'locked-out-of-car-what-not-to-do-east-gta': ['lockout'],
+  'tire-patch-repair-scarborough': ['flat-tire-repair', 'tire-change'],
+  'battery-boost-ajax': ['jump-start', 'battery-replacement'],
+  'pre-purchase-car-inspection-ajax': ['mobile-mechanic'],
+  'exhaust-heat-shield-repair-pickering': ['mobile-mechanic', 'towing'],
+};
