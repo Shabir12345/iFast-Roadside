@@ -33,12 +33,12 @@ const Hero: React.FC = () => {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-black text-brand-dark mb-6 tracking-tight leading-[1]">
-              Stranded in the East GTA? <br className="hidden sm:block" />
+              Stranded anywhere in the GTA? <br className="hidden sm:block" />
               <span className="text-brand-yellow drop-shadow-sm">Help Arrives in ~30 Minutes.</span>
             </h1>
 
             <p className="text-gray-600 text-lg md:text-xl font-medium mb-8 max-w-xl leading-relaxed">
-              24/7 roadside assistance and mobile tire service across Scarborough, Pickering, Ajax, Whitby &amp; Oshawa. Call now — you'll get an upfront price and a real ETA before we dispatch.
+              24/7 roadside assistance and mobile tire service across the Greater Toronto Area — from Scarborough &amp; Durham to Toronto, York &amp; Peel. Call now — you'll get an upfront price and a real ETA before we dispatch.
             </p>
 
             {/* Trust Checkmarks */}
@@ -109,8 +109,8 @@ const Hero: React.FC = () => {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <div className="font-bold text-sm">GTA Coverage</div>
-                  <p className="text-white/60 text-[10px] uppercase">East area focus</p>
+                  <div className="font-bold text-sm">GTA-Wide Coverage</div>
+                  <p className="text-white/60 text-[10px] uppercase">Units across the GTA</p>
                 </div>
               </div>
             </div>

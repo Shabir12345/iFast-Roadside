@@ -17,7 +17,7 @@ const EastGtaServiceAreaPage: React.FC = () => {
     "@type": "LocalBusiness",
     "name": "iFAST Roadside & Mobile Tires - East GTA",
     "telephone": PHONE_NUMBER,
-    "description": "Fast, reliable 24/7 roadside assistance exclusively for the East GTA including Pickering, Ajax, Whitby, Oshawa, and Scarborough.",
+    "description": "Fast, reliable 24/7 roadside assistance across the Greater Toronto Area, with our fastest response and home base in the East GTA — Pickering, Ajax, Whitby, Oshawa, and Scarborough.",
     "areaServed": [
       { "@type": "City", "name": "Pickering" },
       { "@type": "City", "name": "Ajax" },
@@ -31,7 +31,7 @@ const EastGtaServiceAreaPage: React.FC = () => {
     <div className="bg-gray-50 min-h-screen pt-24 pb-0">
       <Helmet>
         <title>24/7 Roadside Assistance East GTA | Pickering, Ajax, Whitby, Oshawa</title>
-        <meta name="description" content="Exclusive roadside assistance and mobile tire service for the East GTA. Serving Pickering, Ajax, Whitby, Oshawa, and Scarborough. Fast 15-30 min ETA." />
+        <meta name="description" content="The East GTA is our home base and fastest-response zone — Pickering, Ajax, Whitby, Oshawa, and Scarborough, with 15-30 min ETAs. Part of our GTA-wide 24/7 roadside and mobile tire coverage." />
         <link rel="canonical" href="https://www.ifastroadside.ca/service-area/east-gta" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
@@ -42,8 +42,8 @@ const EastGtaServiceAreaPage: React.FC = () => {
         <div className="bg-brand-dark text-white p-3 rounded-xl mb-8 flex flex-col sm:flex-row items-center justify-center gap-3 text-sm font-semibold max-w-4xl mx-auto border border-gray-800 shadow-lg text-center backdrop-blur-sm bg-opacity-95 animate-[reveal_0.5s_ease-out]">
           <MapPin size={20} className="text-brand-yellow flex-shrink-0" />
           <span>
-            <span className="text-brand-yellow font-black uppercase tracking-wide mr-1">East GTA Exclusive:</span>
-            We only dispatch to <span className="underline decoration-brand-yellow decoration-2 underline-offset-2">Pickering, Ajax, Whitby, Oshawa, and Scarborough</span>. We do not serve Toronto or West End.
+            <span className="text-brand-yellow font-black uppercase tracking-wide mr-1">East GTA Home Base:</span>
+            Our fastest response is in <span className="underline decoration-brand-yellow decoration-2 underline-offset-2">Pickering, Ajax, Whitby, Oshawa, and Scarborough</span> — and we now cover the whole GTA, from Toronto to the West End.
           </span>
         </div>
 

@@ -18,7 +18,7 @@ const Blog: React.FC = () => {
     '@context': 'https://schema.org',
     '@type': 'Blog',
     name: 'iFAST Roadside Blog',
-    description: 'Expert roadside assistance tips, seasonal driving guides, and East GTA auto service advice from iFAST Roadside & Mobile Tires.',
+    description: 'Expert roadside assistance tips, seasonal driving guides, and GTA auto service advice from iFAST Roadside & Mobile Tires.',
     url: 'https://www.ifastroadside.ca/blog',
     publisher: {
       '@type': 'LocalBusiness',
@@ -30,12 +30,12 @@ const Blog: React.FC = () => {
   return (
     <div className="bg-white min-h-screen pt-24 pb-0 font-sans">
       <Helmet>
-        <title>Roadside Tips & Guides | iFAST Roadside Blog — East GTA</title>
-        <meta name="description" content="Expert roadside emergency guides, seasonal driving tips, and honest auto service advice from East GTA's fastest mobile roadside team. Serving Pickering, Ajax, Whitby, Oshawa, Scarborough." />
-        <meta name="keywords" content="roadside tips East GTA, flat tire guide Ontario, winter car emergency, mobile mechanic advice, roadside assistance blog Pickering" />
+        <title>Roadside Tips & Guides | iFAST Roadside Blog — Greater Toronto Area</title>
+        <meta name="description" content="Expert roadside emergency guides, seasonal driving tips, and honest auto service advice from the GTA's fastest mobile roadside team. Serving Toronto, Scarborough, Mississauga, Brampton, Markham, and Durham." />
+        <meta name="keywords" content="roadside tips GTA, flat tire guide Ontario, winter car emergency, mobile mechanic advice, roadside assistance blog Toronto" />
         <link rel="canonical" href="https://www.ifastroadside.ca/blog" />
         <meta property="og:title" content="Roadside Tips & Guides | iFAST Roadside Blog" />
-        <meta property="og:description" content="Expert roadside emergency guides and honest auto advice for East GTA drivers." />
+        <meta property="og:description" content="Expert roadside emergency guides and honest auto advice for GTA drivers." />
         <meta property="og:url" content="https://www.ifastroadside.ca/blog" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
@@ -49,14 +49,14 @@ const Blog: React.FC = () => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-brand-yellow/20 text-brand-yellow px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-5">
               <span className="w-2 h-2 rounded-full bg-brand-yellow animate-pulse"></span>
-              East GTA Roadside Resource Hub
+              GTA Roadside Resource Hub
             </div>
             <h1 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight leading-tight">
               Driver Guides &<br />
               <span className="text-brand-yellow">Emergency Tips</span>
             </h1>
             <p className="text-white/70 text-lg font-medium max-w-xl">
-              Real advice from the team that responds to roadside emergencies across Pickering, Ajax, Whitby, Oshawa, and Scarborough every day.
+              Real advice from the team that responds to roadside emergencies across the Greater Toronto Area every day.
             </p>
           </div>
         </div>
@@ -160,7 +160,7 @@ const Blog: React.FC = () => {
           <div className="relative z-10">
             <p className="text-white/60 text-sm font-bold uppercase tracking-widest mb-3">Need help right now?</p>
             <h2 className="text-3xl md:text-4xl font-black text-white mb-2">Don't Google — Just Call.</h2>
-            <p className="text-white/60 mb-8 max-w-md mx-auto">iFAST responds across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Average arrival: 15–30 min.</p>
+            <p className="text-white/60 mb-8 max-w-md mx-auto">iFAST responds across the Greater Toronto Area. Average arrival: 15–30 min.</p>
             <a
               href={`tel:${PHONE_NUMBER}`}
               onClick={() => trackPhoneCall('blog_index_cta')}

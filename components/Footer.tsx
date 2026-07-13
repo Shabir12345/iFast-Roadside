@@ -18,8 +18,8 @@ const Footer: React.FC = () => {
               />
             </a>
             <p className="max-w-md mb-6">
-              Your trusted partner for {BUSINESS_HOURS} roadside assistance and mobile tire services.
-              Licensed, insured, and ready to help when you need it most.
+              Your trusted partner for {BUSINESS_HOURS} roadside assistance and mobile tire services
+              across the Greater Toronto Area. Licensed, insured, and ready to help when you need it most.
             </p>
             {/* Social icons removed until real profiles exist — dead "#" links erode trust. */}
           </div>
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
                 <MapPin className="text-brand-yellow shrink-0" size={18} />
                 <div className="flex flex-col">
                   <span className="text-xs text-white font-bold">{ADDRESS}</span>
-                  <span className="text-[10px] uppercase tracking-tighter">Scarborough · Pickering · Ajax · Whitby · Oshawa</span>
+                  <span className="text-[10px] uppercase tracking-tighter">Serving the Greater Toronto Area</span>
                 </div>
               </li>
             </ul>

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Marketing site for **iFAST Roadside & Mobile Tires** — a roadside assistance company serving the East GTA (Pickering, Ajax, Whitby, Oshawa, Scarborough). Phone `+1 437-215-3468`. The site's primary job is to convert paid-traffic visitors into phone calls, so call CTAs and Google Ads conversion tracking matter more than most features.
+Marketing site for **iFAST Roadside & Mobile Tires** — a roadside assistance company serving the whole Greater Toronto Area (units stationed GTA-wide across Toronto, Durham, York, and Peel), with its home base and fastest response in the East GTA (Scarborough, Pickering, Ajax, Whitby, Oshawa). Phone `+1 437-215-3468`. The site's primary job is to convert paid-traffic visitors into phone calls, so call CTAs and Google Ads conversion tracking matter more than most features.
 
 Deployed on Vercel (`vercel.json` rewrites all paths to `/` for SPA fallback). Canonical domain: `www.ifastroadside.ca` (the apex `ifastroadside.ca` 307-redirects to www via Vercel; all canonicals/sitemap/schema use www).
 
@@ -61,7 +61,7 @@ JSON-LD lives in two places:
 When editing business info (hours, service areas, address, phone), update both the `index.html` JSON-LD block and `constants.tsx`.
 
 ### Gemini ChatBot
-`services/geminiService.ts` wraps `@google/genai`. The `SYSTEM_INSTRUCTION` constant hardcodes service pricing ("starts at $X") and the East GTA focus — treat it as product copy, not config. If prices or service areas change, update this string too.
+`services/geminiService.ts` wraps `@google/genai`. The `SYSTEM_INSTRUCTION` constant hardcodes service pricing ("starts at $X") and the GTA-wide service area (home base in the East GTA) — treat it as product copy, not config. If prices or service areas change, update this string too.
 
 **Env var wiring is inconsistent and worth knowing:**
 - `.env.local` defines `GEMINI_API_KEY`

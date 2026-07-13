@@ -193,7 +193,7 @@ const BlogPost: React.FC = () => {
           {relatedServices.length > 0 && (
             <div className="mb-16">
               <h2 className="text-2xl font-black text-brand-dark mb-2 tracking-tight">Related Services</h2>
-              <p className="text-gray-500 mb-6">Need a hand right now? These are the iFAST services most relevant to this guide across the East GTA.</p>
+              <p className="text-gray-500 mb-6">Need a hand right now? These are the iFAST services most relevant to this guide across the Greater Toronto Area.</p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {relatedServices.map(service => {
                   const Icon = service.icon;
@@ -208,7 +208,7 @@ const BlogPost: React.FC = () => {
                       </div>
                       <div>
                         <h3 className="text-base font-black text-brand-dark group-hover:text-brand-yellow transition-colors leading-snug flex items-center gap-1">
-                          {service.title} in the East GTA
+                          {service.title} across the GTA
                           <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all" />
                         </h3>
                         <p className="text-sm text-gray-500 mt-1 line-clamp-2">{service.description}</p>
@@ -254,7 +254,7 @@ const BlogPost: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 text-brand-yellow font-bold text-sm tracking-widest uppercase mb-4">
             <span className="w-2 h-2 rounded-full bg-brand-yellow animate-pulse"></span>
-            Available 24/7 — East GTA
+            Available 24/7 — GTA-Wide
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight">Stranded Right Now?</h2>
           <p className="text-lg text-white/70 mb-10 max-w-xl mx-auto font-medium">

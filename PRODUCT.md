@@ -6,7 +6,7 @@ brand
 
 ## Users
 
-Stranded drivers in the East GTA (Pickering, Ajax, Whitby, Oshawa, Scarborough) — most arrive from Google Ads or local search on a phone, at the roadside, often stressed and in a hurry (flat tire, dead battery, lockout). Secondary: researchers comparing roadside options before an emergency happens.
+Stranded drivers across the Greater Toronto Area (Toronto/Scarborough, Durham, York, and Peel — home base and fastest response in the East GTA) — most arrive from Google Ads or local search on a phone, at the roadside, often stressed and in a hurry (flat tire, dead battery, lockout). Secondary: researchers comparing roadside options before an emergency happens.
 
 ## Product Purpose
 

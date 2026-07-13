@@ -10,7 +10,7 @@ const STEPS = [
     {
         icon: Wrench,
         title: "Rapid Dispatch",
-        description: "The closest fully-equipped service van is routed to you with a real ETA — typically around 30 minutes across the East GTA."
+        description: "The closest fully-equipped service van is routed to you with a real ETA — typically around 30 minutes across the Greater Toronto Area."
     },
     {
         icon: CheckCircle2,

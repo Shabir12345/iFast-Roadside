@@ -35,17 +35,17 @@ const Home: React.FC = () => {
   return (
     <main>
       <Helmet>
-        <title>iFAST Roadside Assistance | 24/7 Fast Towing & Mobile Tires East GTA</title>
-        <meta name="description" content="Stranded? Get rapid 24/7 roadside assistance and mobile tire repair across Scarborough, Pickering, Ajax, Whitby, and Oshawa. 30-min ETA. Safe, damage-free service. No hidden fees. Call now." />
+        <title>iFAST Roadside Assistance | 24/7 Fast Towing & Mobile Tires Across the GTA</title>
+        <meta name="description" content="Stranded? Get rapid 24/7 roadside assistance and mobile tire repair across the Greater Toronto Area — Toronto, Scarborough, Mississauga, Brampton, Markham, Vaughan, and Durham. 30-min ETA. Safe, damage-free service. No hidden fees. Call now." />
         <link rel="canonical" href="https://www.ifastroadside.ca/" />
-        <meta property="og:title" content="iFAST Roadside Assistance — 24/7 Rapid Response in East GTA" />
-        <meta property="og:description" content="Stranded? Get rapid 24/7 roadside assistance across Scarborough, Pickering, Ajax, Whitby, and Oshawa. Mobile tire, jump start, lockout, fuel, and towing experts." />
+        <meta property="og:title" content="iFAST Roadside Assistance — 24/7 Rapid Response Across the GTA" />
+        <meta property="og:description" content="Stranded? Get rapid 24/7 roadside assistance across the Greater Toronto Area. Mobile tire, jump start, lockout, fuel, and towing experts." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ifastroadside.ca/" />
         <meta property="og:image" content="https://www.ifastroadside.ca/logo.png" />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="iFAST Roadside Assistance — 24/7 Rapid Response in East GTA" />
-        <meta property="twitter:description" content="Stranded? Get rapid 24/7 roadside assistance across Scarborough, Pickering, Ajax, Whitby, and Oshawa. Mobile tire, jump start, lockout, fuel, and towing experts." />
+        <meta property="twitter:title" content="iFAST Roadside Assistance — 24/7 Rapid Response Across the GTA" />
+        <meta property="twitter:description" content="Stranded? Get rapid 24/7 roadside assistance across the Greater Toronto Area. Mobile tire, jump start, lockout, fuel, and towing experts." />
         <meta property="twitter:image" content="https://www.ifastroadside.ca/logo.png" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
                 "name": "How fast can you reach my location?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "On average, our technicians arrive within 30 minutes. However, arrival times can vary based on traffic, weather conditions, and your exact location in the East GTA."
+                  "text": "On average, our technicians arrive within 30 minutes. However, arrival times can vary based on traffic, weather conditions, and your exact location across the Greater Toronto Area."
                 }
               },
               {

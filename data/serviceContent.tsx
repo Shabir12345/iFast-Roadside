@@ -37,13 +37,13 @@ export interface ServiceContent {
 export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   'mobile-mechanic': {
     id: 'mobile-mechanic',
-    seoTitle: '24/7 Mobile Mechanic East GTA | Emergency On-Site Car Repair Pickering, Ajax, Oshawa',
+    seoTitle: '24/7 Mobile Mechanic GTA | Emergency On-Site Car Repair Pickering, Ajax, Oshawa',
     seoDescription: 'Need a mechanic that comes to you? iFAST Roadside provides 24/7 mobile mechanic services across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Expert diagnostics, on-site repairs, and emergency service. Call now.',
-    keywords: 'mobile mechanic Pickering, emergency car repair Ajax, on-site mechanic Oshawa, mobile auto repair Whitby, 24/7 mechanic Scarborough, mobile engine diagnostics East GTA',
+    keywords: 'mobile mechanic Pickering, emergency car repair Ajax, on-site mechanic Oshawa, mobile auto repair Whitby, 24/7 mechanic Scarborough, mobile engine diagnostics GTA',
     heroImage: '/mobile_mechanic_hero.jpg',
     blogSections: [
       {
-        title: 'Professional Mobile Mechanic Services Across the East GTA',
+        title: 'Professional Mobile Mechanic Services Across the Greater Toronto Area',
         content: (
           <>
             <p className="mb-4">
@@ -71,7 +71,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
               <li><strong>Emergency 24/7 Response</strong>: Mechanical failures don't follow a 9-to-5 schedule. We are available around the clock to get you back on the road.</li>
             </ul>
             <p className="font-semibold text-lg text-brand-dark mb-4">
-              Don't let a breakdown ruin your week. Call iFAST for the most reliable mobile mechanic service in the East GTA.
+              Don't let a breakdown ruin your week. Call iFAST for the most reliable mobile mechanic service in the Greater Toronto Area.
             </p>
             <CallNowButton />
           </>
@@ -112,7 +112,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     ],
     faqs: [
       { question: 'What can a mobile mechanic actually fix at my house?', answer: 'We can handle about 80% of common repairs on-site, including starters, alternators, batteries, brakes, belts, hoses, sensors, and most electrical issues. Major engine or transmission overhauls still require a shop, but we handle the rest.' },
-      { question: 'How much does a mobile mechanic cost in the East GTA?', answer: 'Our pricing is very competitive with local shops, and you save the cost of a tow. We provide a transparent diagnostic fee and a firm quote for parts and labor before any work begins.' },
+      { question: 'How much does a mobile mechanic cost in the Greater Toronto Area?', answer: 'Our pricing is very competitive with local shops, and you save the cost of a tow. We provide a transparent diagnostic fee and a firm quote for parts and labor before any work begins.' },
       { question: 'Are your mobile mechanics certified?', answer: 'Yes, all our technicians are fully certified with years of experience in both shop and field environments. We use professional-grade equipment and follow manufacturer-specific repair procedures.' },
       { question: 'Do you offer a warranty on mobile repairs?', answer: 'Absolutely. We stand behind our work with a comprehensive warranty on both parts and labor, giving you peace of mind that your repair is done right.' },
       { question: 'Can you work on my car in a condo or apartment parking lot?', answer: 'In most cases, yes. We are experienced in working in tight spaces and low-clearance garages across Scarborough and Pickering. As long as we have enough room to safely access the vehicle, we can do the job.' },
@@ -121,9 +121,9 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'tire-change': {
     id: 'tire-change',
-    seoTitle: 'Mobile Tire Change East GTA | 24/7 Flat Tire Repair That Comes to You',
-    seoDescription: 'Flat tire in the East GTA? iFAST brings the tire shop to your driveway or the shoulder — Scarborough, Pickering, Ajax, Whitby, Oshawa. 24/7, fast, damage-free. Call for a quote.',
-    keywords: 'mobile tire change East GTA, flat tire repair Scarborough, mobile tire service Pickering, flat tire change Ajax, nail in tire repair Whitby, 24/7 mobile tire Oshawa, roadside tire change near me, mobile tire swap East GTA',
+    seoTitle: 'Mobile Tire Change GTA | 24/7 Flat Tire Repair That Comes to You',
+    seoDescription: 'Flat tire in the Greater Toronto Area? iFAST brings the tire shop to your driveway or the shoulder — Scarborough, Pickering, Ajax, Whitby, Oshawa. 24/7, fast, damage-free. Call for a quote.',
+    keywords: 'mobile tire change GTA, flat tire repair Scarborough, mobile tire service Pickering, flat tire change Ajax, nail in tire repair Whitby, 24/7 mobile tire Oshawa, roadside tire change near me, mobile tire swap GTA',
     heroImage: '/tire_service_hero.jpg',
     blogSections: [
       {
@@ -134,7 +134,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
               A flat never happens at a good time. You find a nail in the morning before work, you lose pressure on the 401 on the way home, or you walk out to a tire that's gone soft overnight. <strong>{COMPANY_NAME}</strong> brings the tire shop to where your car already is — your driveway, a condo lot, the office parking lot, a GO station, or the highway shoulder — so you skip the lineup at the shop and skip the tow truck entirely.
             </p>
             <p className="mb-4">
-              We cover the East GTA — Scarborough, Pickering, Ajax, Whitby, and Oshawa — 24 hours a day. Our vans carry plug-patch kits, common 15"–20" tire sizes for sedans, SUVs, and light trucks, a computerized balancer, and spare-install gear, so most flats are fixed on the spot in a single visit. The service comes to you, the work gets done where you're standing, and you're back on the road — usually under 45 minutes from arrival.
+              We cover the Greater Toronto Area — Scarborough, Pickering, Ajax, Whitby, and Oshawa — 24 hours a day. Our vans carry plug-patch kits, common 15"–20" tire sizes for sedans, SUVs, and light trucks, a computerized balancer, and spare-install gear, so most flats are fixed on the spot in a single visit. The service comes to you, the work gets done where you're standing, and you're back on the road — usually under 45 minutes from arrival.
             </p>
             <p className="mb-4">
               Mobile tire service that comes to you — fast, fair, and done where your car already is. <strong>Call {PHONE_NUMBER} for a fast, no-obligation quote.</strong>
@@ -185,7 +185,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
             </p>
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">vs. driving on the donut</h3>
             <p className="mb-4 text-gray-700">
-              That temporary spare is an 80 km/h, roughly 80 km band-aid — and limping along on it risks a second failure on the side of a busy road. We install a real, full-size tire on the spot so you're not nursing a donut across the East GTA hoping it holds.
+              That temporary spare is an 80 km/h, roughly 80 km band-aid — and limping along on it risks a second failure on the side of a busy road. We install a real, full-size tire on the spot so you're not nursing a donut across the Greater Toronto Area hoping it holds.
             </p>
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">vs. a CAA membership</h3>
             <p className="mb-4 text-gray-700">
@@ -200,7 +200,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         content: (
           <>
             <p className="mb-4">
-              {COMPANY_NAME} is owner-operated, and the name you'll see again and again in our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who shows up, talks you through the problem, and does the work himself. You're not calling a faceless dispatch line; you're calling the person who answers and the person who fixes your tire. Here's what East GTA drivers say, in their own words:
+              {COMPANY_NAME} is owner-operated, and the name you'll see again and again in our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who shows up, talks you through the problem, and does the work himself. You're not calling a faceless dispatch line; you're calling the person who answers and the person who fixes your tire. Here's what GTA drivers say, in their own words:
             </p>
             <ul className="list-disc pl-5 space-y-3 mb-6">
               <li>"Amazing service had a flat tire showed up in 15 min at midnight, I would highly recommend this company for all your roadside emergency needs……." <strong>— Sayed walidullah Nawid</strong></li>
@@ -218,7 +218,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         )
       },
       {
-        title: 'Local Mobile Tire Service Across the East GTA',
+        title: 'Local Mobile Tire Service Across the Greater Toronto Area',
         content: (
           <>
             <p className="mb-4">
@@ -282,13 +282,13 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'jump-start': {
     id: 'jump-start',
-    seoTitle: '24/7 Car Battery Jump Start East GTA | Pickering, Ajax, Oshawa',
+    seoTitle: '24/7 Car Battery Jump Start GTA | Pickering, Ajax, Oshawa',
     seoDescription: 'Dead battery? iFAST Roadside provides rapid 24/7 battery jump start services across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Safe, anti-surge boosters. Fast local dispatch.',
-    keywords: 'car battery jump start Pickering, dead battery service Ajax, mobile jump start Oshawa, onsite battery boost Whitby, 24/7 jump start Scarborough, car won\'t start East GTA',
+    keywords: 'car battery jump start Pickering, dead battery service Ajax, mobile jump start Oshawa, onsite battery boost Whitby, 24/7 jump start Scarborough, car won\'t start GTA',
     heroImage: '/jump_start_hero.jpg',
     blogSections: [
       {
-        title: '24/7 Mobile Battery Jump Start Service Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
+        title: '24/7 Mobile Battery Jump Start Service Across the Greater Toronto Area (Pickering, Ajax, Whitby, Oshawa)',
         content: (
           <>
             <p className="mb-4">
@@ -352,7 +352,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         content: (
           <>
             <p className="mb-4">
-              After witnessing hundreds of East GTA drivers waiting two to three hours for heavy tow companies just to get a simple two-minute battery jump, we knew the system was broken. Tow trucks prioritize high-paying collision calls over minor battery boosts. We built iFAST specifically to solve this delay.
+              After witnessing hundreds of GTA drivers waiting two to three hours for heavy tow companies just to get a simple two-minute battery jump, we knew the system was broken. Tow trucks prioritize high-paying collision calls over minor battery boosts. We built iFAST specifically to solve this delay.
             </p>
             <p className="mb-4">
               Today, {COMPANY_NAME} operates a massive fleet of rapid-response service vehicles across Scarborough, Pickering, Ajax, Whitby, Oshawa, and beyond. We do not dispatch massive tow trucks for battery jumps; we dispatch agile, specialized vans that navigate through gridlock faster. Our sole mission is to completely minimize your downtime through unprecedented speed, extreme professionalism, and clinically safe procedures.
@@ -363,20 +363,20 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       }
     ],
     faqs: [
-      { question: 'How fast can a jump start tech reach me in Pickering or Ajax?', answer: 'We average under 30 minutes across the East GTA. By routing our local Pickering and Ajax units straight to your GPS pin, we consistently beat traditional tow truck ETAs.' },
+      { question: 'How fast can a jump start tech reach me in Pickering or Ajax?', answer: 'We average under 30 minutes across the Greater Toronto Area. By routing our local Pickering and Ajax units straight to your GPS pin, we consistently beat traditional tow truck ETAs.' },
       { question: 'Is it safe to jump start my car with your professional equipment?', answer: 'Yes. Unlike consumer cables, we use computerized, surge-protecting jump boxes that monitor voltage output to prevent damage to your vehicle\'s electronics.' },
       { question: 'What if my car won\'t start after a boost in Whitby or Oshawa?', answer: 'If your battery is completely dead or you have a failed starter, our technician will provide a diagnostic and can assist in dispatching a flatbed tow truck to a local Whitby or Oshawa mechanic.' },
       { question: 'How long should I leave my car running after a jump start?', answer: 'We recommend driving for 30 to 45 minutes to allow the alternator sufficient time to recharge the battery.' },
       { question: 'Do you provide jump starts in Scarborough underground garages?', answer: 'Absolutely. Our portable jump packs allow us to reach your car in the tightest parallel spots or the deepest Scarborough condo garages without needing a second vehicle nose-to-nose.' },
       { question: 'Can jumping a dead battery ruin my alternator?', answer: 'If the battery is defective, it can strain the alternator. Our technicians perform a quick read-out to advise if you need a replacement rather than just a boost.' },
-      { question: 'What payment methods do you take in the East GTA?', answer: 'We accept all major Credit Cards, Interac Debit, Apple Pay, and Google Pay right at the site of the vehicle in Pickering, Ajax, Whitby, and Oshawa.' },
+      { question: 'What payment methods do you take in the Greater Toronto Area?', answer: 'We accept all major Credit Cards, Interac Debit, Apple Pay, and Google Pay right at the site of the vehicle in Pickering, Ajax, Whitby, and Oshawa.' },
     ]
   },
   'lockout': {
     id: 'lockout',
-    seoTitle: 'Car Lockout Service East GTA | 24/7 Damage-Free Unlock',
-    seoDescription: 'Locked out in the East GTA? iFAST unlocks your car damage-free — Scarborough, Pickering, Ajax, Whitby, Oshawa. 24/7, fast, no membership. Call for a fast quote.',
-    keywords: 'car lockout service East GTA, keys locked in car Scarborough, unlock car door Pickering, car lockout Ajax, damage-free vehicle unlock Whitby, 24/7 lockout Oshawa, keys locked in trunk East GTA, no membership car unlock near me',
+    seoTitle: 'Car Lockout Service GTA | 24/7 Damage-Free Unlock',
+    seoDescription: 'Locked out in the Greater Toronto Area? iFAST unlocks your car damage-free — Scarborough, Pickering, Ajax, Whitby, Oshawa. 24/7, fast, no membership. Call for a fast quote.',
+    keywords: 'car lockout service GTA, keys locked in car Scarborough, unlock car door Pickering, car lockout Ajax, damage-free vehicle unlock Whitby, 24/7 lockout Oshawa, keys locked in trunk GTA, no membership car unlock near me',
     heroImage: '/car_lockout_hero.jpg',
     blogSections: [
       {
@@ -384,7 +384,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         content: (
           <>
             <p className="mb-4">
-              It happens in a second. The door swings shut with the keys still in the cup holder, or your fob is buried in a gym bag in the trunk, or you're standing in a cold parking lot watching your keys sit on the front seat. <strong>{COMPANY_NAME}</strong> comes to wherever you are in the East GTA — a mall lot, a gym, a GO station, your own driveway — and opens your car without a scratch, any hour of the day or night.
+              It happens in a second. The door swings shut with the keys still in the cup holder, or your fob is buried in a gym bag in the trunk, or you're standing in a cold parking lot watching your keys sit on the front seat. <strong>{COMPANY_NAME}</strong> comes to wherever you are in the Greater Toronto Area — a mall lot, a gym, a GO station, your own driveway — and opens your car without a scratch, any hour of the day or night.
             </p>
             <p className="mb-4">
               We cover Scarborough, Pickering, Ajax, Whitby, and Oshawa around the clock. Every unlock is done with damage-free tools designed for modern door geometry — no old slim-jims, no broken glass, no torn weatherstripping. There's no membership to buy and nothing to sign up for; you call when you need us and you pay only for the unlock.
@@ -474,7 +474,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         )
       },
       {
-        title: 'Local Lockout Service Across the East GTA',
+        title: 'Local Lockout Service Across the Greater Toronto Area',
         content: (
           <>
             <p className="mb-4">
@@ -518,7 +518,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
             </p>
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Frozen locks and winter lockouts</h3>
             <p className="mb-4 text-gray-700">
-              East GTA winters seize locks and handles solid. Frozen-lock calls are routine for us from December through March, and we carry what's needed to deal with them without forcing anything.
+              GTA winters seize locks and handles solid. Frozen-lock calls are routine for us from December through March, and we carry what's needed to deal with them without forcing anything.
             </p>
             <CallNowButton source="service_content_lockout_services" />
           </>
@@ -526,21 +526,21 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       }
     ],
     faqs: [
-      { question: 'I\'m locked out — how fast can you get to me?', answer: 'We give you a live ETA when you call, typically 15 to 35 minutes across the East GTA, with Scarborough — our home base — on the fast end and Oshawa the longest honest range. Customers describe us arriving "fast" and "there in a flash." We give you a real ETA on the call rather than an optimistic guess.' },
+      { question: 'I\'m locked out — how fast can you get to me?', answer: 'We give you a live ETA when you call, typically 15 to 35 minutes across the Greater Toronto Area, with Scarborough — our home base — on the fast end and Oshawa the longest honest range. Customers describe us arriving "fast" and "there in a flash." We give you a real ETA on the call rather than an optimistic guess.' },
       { question: 'Will unlocking my car damage the door or window?', answer: 'No. We use damage-free air-wedge and long-reach tools designed for modern vehicles — no old slim-jims, no broken glass, no torn weatherstripping. If a car cannot be opened safely without damage, we will not force it; we will tell you straight and talk through the options.' },
       { question: 'What does a car lockout cost?', answer: 'We give you the price on the call before we dispatch, so there are no surprises — no hourly billing, no difficulty surcharge for a common vehicle, no after-hours premium, and no membership. Customers consistently call our pricing fair, with two lockout reviewers describing our rates as "fair" and "genuine." Call ' + PHONE_NUMBER + ' for a fast, no-obligation quote.' },
       { question: 'Do I need a membership?', answer: 'No. There is nothing to join and nothing to renew. You call when you need us and you pay only for the unlock, one time.' },
       { question: 'What ID do you need?', answer: 'Photo ID that matches the vehicle registration, or rental and corporate documents for those vehicles. It takes a moment and it protects you from anyone else ever claiming your car.' },
       { question: 'What if my child or pet is locked inside?', answer: 'Call 911 first if they are in any distress — heat, cold, or panic. Then call us and we dispatch immediately as priority and head straight to you while you are on with emergency services.' },
-      { question: 'My lock is frozen — can you still help?', answer: 'Yes. Frozen locks and handles are common across the East GTA from December through March, and we carry what is needed to deal with them without forcing anything.' },
+      { question: 'My lock is frozen — can you still help?', answer: 'Yes. Frozen locks and handles are common across the Greater Toronto Area from December through March, and we carry what is needed to deal with them without forcing anything.' },
       { question: 'Can you open any car?', answer: 'Almost all consumer vehicles. For very new high-end models with extra anti-theft features, tell dispatch the make and model when you call so we can confirm compatibility before we head out.' },
     ]
   },
   'fuel': {
     id: 'fuel',
-    seoTitle: 'Emergency Fuel Delivery East GTA | 24/7 Out of Gas Help',
-    seoDescription: 'Out of gas in the East GTA? iFAST brings fuel to you — Scarborough, Pickering, Ajax, Whitby, Oshawa. 24/7, shoulder-safe, cheaper than a tow. Call for a fast quote.',
-    keywords: 'emergency fuel delivery East GTA, ran out of gas Scarborough, roadside gas delivery Pickering, out of gas Ajax, diesel delivery Whitby, 24/7 fuel service Oshawa, highway 401 out of gas East GTA, gas brought to you near me',
+    seoTitle: 'Emergency Fuel Delivery GTA | 24/7 Out of Gas Help',
+    seoDescription: 'Out of gas in the Greater Toronto Area? iFAST brings fuel to you — Scarborough, Pickering, Ajax, Whitby, Oshawa. 24/7, shoulder-safe, cheaper than a tow. Call for a fast quote.',
+    keywords: 'emergency fuel delivery GTA, ran out of gas Scarborough, roadside gas delivery Pickering, out of gas Ajax, diesel delivery Whitby, 24/7 fuel service Oshawa, highway 401 out of gas GTA, gas brought to you near me',
     heroImage: '/fuel_delivery_hero.jpg',
     blogSections: [
       {
@@ -602,7 +602,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
             </p>
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">vs. walking to a station with a jerry can</h3>
             <p className="mb-4 text-gray-700">
-              Walking a highway shoulder to a station and back is genuinely dangerous, and most people don't carry an approved can anyway. We're set up for shoulder delivery on the major East GTA corridors and arrive with strobes and cones, so you stay safely with your vehicle while we handle it.
+              Walking a highway shoulder to a station and back is genuinely dangerous, and most people don't carry an approved can anyway. We're set up for shoulder delivery on the major GTA corridors and arrive with strobes and cones, so you stay safely with your vehicle while we handle it.
             </p>
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">vs. a CAA membership</h3>
             <p className="mb-4 text-gray-700">
@@ -632,7 +632,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         )
       },
       {
-        title: 'Local Fuel Delivery Across the East GTA',
+        title: 'Local Fuel Delivery Across the Greater Toronto Area',
         content: (
           <>
             <p className="mb-4">
@@ -664,7 +664,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
           <>
             <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">Out of gas on the highway shoulder</h3>
             <p className="mb-4 text-gray-700">
-              Stranded on the 401, 407, or 412 with trucks flying past is no place to be on foot. We're set up for shoulder delivery on the major East GTA corridors, arrive with high-viz strobes and cones, and secure the scene before delivering. Stay buckled in with your hazards on until we have the buffer up.
+              Stranded on the 401, 407, or 412 with trucks flying past is no place to be on foot. We're set up for shoulder delivery on the major GTA corridors, arrive with high-viz strobes and cones, and secure the scene before delivering. Stay buckled in with your hazards on until we have the buffer up.
             </p>
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Regular and premium gas</h3>
             <p className="mb-4 text-gray-700">
@@ -676,7 +676,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
             </p>
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Parking lots and driveways</h3>
             <p className="mb-4 text-gray-700">
-              Coasted into a lot or made it home on fumes and can't get back out? We come to mall lots, GO stations, workplace parking, and driveways across the East GTA — wherever the car has stopped, no need to move it.
+              Coasted into a lot or made it home on fumes and can't get back out? We come to mall lots, GO stations, workplace parking, and driveways across the Greater Toronto Area — wherever the car has stopped, no need to move it.
             </p>
             <CallNowButton source="service_content_fuel_services" />
           </>
@@ -687,26 +687,26 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       { question: 'How much fuel do you bring?', answer: 'Enough to comfortably reach the nearest open station — the goal is to get you moving again, not to fill the tank on the shoulder, which is both safer and cheaper. If you know the nearest station is unusually far, tell dispatch and we will bring extra.' },
       { question: 'What does fuel delivery cost?', answer: 'We give you the all-in price on the call before we dispatch, so there are no surprises — no hidden fees and no out-of-zone highway surcharge, with any after-hours note stated upfront. Customers consistently describe our pricing as fair. Call ' + PHONE_NUMBER + ' for a fast, no-obligation quote.' },
       { question: 'Do you bring gas and diesel?', answer: 'Yes — regular, premium, or diesel. Tell dispatch what your vehicle takes when you call so we confirm and bring the right fuel. For diesel that ran completely dry, we help prime the fuel line after delivery so the engine restarts cleanly.' },
-      { question: 'Can you come to me on the highway shoulder?', answer: 'Yes. We are set up for shoulder delivery on the major East GTA corridors — the 401, 407, and 412, plus local arterials. We arrive with high-visibility strobes and cones and secure the scene before delivering. Stay in your vehicle with hazards on until we have the buffer up.' },
+      { question: 'Can you come to me on the highway shoulder?', answer: 'Yes. We are set up for shoulder delivery on the major GTA corridors — the 401, 407, and 412, plus local arterials. We arrive with high-visibility strobes and cones and secure the scene before delivering. Stay in your vehicle with hazards on until we have the buffer up.' },
       { question: 'Is this cheaper than a tow?', answer: 'Almost always. A tow to a station plus your own ride out costs far more than a fuel drop, and you would still have to fill up once you got there. We bring the fuel to you and you drive yourself out.' },
-      { question: 'How fast can you get to me?', answer: 'We give you a live ETA on the call based on your exact location and current traffic — typically 15 to 35 minutes across the East GTA, with Scarborough on the fast end and Oshawa the longest honest range.' },
+      { question: 'How fast can you get to me?', answer: 'We give you a live ETA on the call based on your exact location and current traffic — typically 15 to 35 minutes across the Greater Toronto Area, with Scarborough on the fast end and Oshawa the longest honest range.' },
       { question: 'Do I need to be with the vehicle?', answer: 'Yes — stay safely with the vehicle, or in a safe spot nearby if you are on a shoulder, so we can confirm it is yours and deliver the fuel. Keep your hazards on and stay buckled in until we have the scene secured.' },
       { question: 'What if I run out again before reaching a station?', answer: 'We deliver enough to comfortably reach the nearest open station. If you know the closest one is unusually far, mention it to dispatch when you call and we will bring extra so you are covered.' },
     ]
   },
   'towing': {
     id: 'towing',
-    seoTitle: '24/7 Emergency Towing Service East GTA | Pickering, Ajax, Oshawa',
+    seoTitle: '24/7 Emergency Towing Service GTA | Pickering, Ajax, Oshawa',
     seoDescription: 'Reliable 24/7 emergency flatbed towing service across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Safe, damage-free transport for accidents and breakdowns.',
-    keywords: 'tow truck Pickering, emergency towing Ajax, flatbed tow truck Oshawa, accident towing Whitby, AWD towing Scarborough, luxury car towing East GTA',
+    keywords: 'tow truck Pickering, emergency towing Ajax, flatbed tow truck Oshawa, accident towing Whitby, AWD towing Scarborough, luxury car towing GTA',
     heroImage: '/roadside_technician_towing.jpg',
     blogSections: [
       {
-        title: '24/7 Fast & Reliable Flatbed Towing Across the East GTA (Pickering, Ajax, Whitby)',
+        title: '24/7 Fast & Reliable Flatbed Towing Across the Greater Toronto Area (Pickering, Ajax, Whitby)',
         content: (
           <>
             <p className="mb-4">
-              Experiencing a catastrophic internal engine failure? Suffered a major collision in an intersection? When a simple roadside repair simply isn't feasible, <strong>{COMPANY_NAME}</strong> provides elite, 100% damage-free flatbed towing services operating aggressively across the East GTA. Our heavy-duty hydraulic flatbed trucks are fueled and active 24/7, ready to safely winch your immobilized vehicle from danger and securely transport it to your driveway, a licensed mechanic, or directly to a regional Collision Reporting Centre in Pickering or Oshawa.
+              Experiencing a catastrophic internal engine failure? Suffered a major collision in an intersection? When a simple roadside repair simply isn't feasible, <strong>{COMPANY_NAME}</strong> provides elite, 100% damage-free flatbed towing services operating aggressively across the Greater Toronto Area. Our heavy-duty hydraulic flatbed trucks are fueled and active 24/7, ready to safely winch your immobilized vehicle from danger and securely transport it to your driveway, a licensed mechanic, or directly to a regional Collision Reporting Centre in Pickering or Oshawa.
             </p>
             <p className="mb-4">
               Unlike legacy towing companies that stubbornly rely on outdated "wheel-lift" wreckers which violently drag your bumper along the pavement, we exclusively utilize modern, low-approach-angle flatbed rollback trucks. This methodology ensures that your delicate drivetrain, finely-tuned suspension, and specialized AWD transmission are perfectly preserved. From low-clearance exotic sports cars in Scarborough to fully loaded commercial vans broken down in Whitby, we treat your asset with white-glove logistical care.
@@ -749,7 +749,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">2. AWD & High-End Luxury Vehicle Transport</h3>
             <p className="mb-4 text-gray-700">
               Audi Quattro, BMW xDrive, Mercedes 4MATIC, and Subaru Symmetrical AWD systems strictly mandate that all four wheels remain suspended off the pavement during transport. Our flatbeds ensure zero rotational force enters the transmission, keeping your warranty entirely intact while we smoothly glide your luxury asset to the dealership. <br/>
-              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: flatbed towing East GTA, luxury car towing Scarborough, AWD safe tow truck Ajax, luxury transport Oshawa.</span>
+              <span className="text-sm text-gray-400 italic mt-1 block">Keywords: flatbed towing GTA, luxury car towing Scarborough, AWD safe tow truck Ajax, luxury transport Oshawa.</span>
             </p>
 
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">3. Specialized Winter Ditch Winch-Outs</h3>
@@ -772,7 +772,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         content: (
           <>
             <p className="mb-4">
-              The Ontario towing industry historically harbored a dismal reputation for hidden surprise fees, aggressive roadside intimidation tactics, and shoddy vehicle care. {COMPANY_NAME} was brutally forged to be the exact operational opposite. We established our extensive East GTA towing division on a rigid foundation of absolute corporate transparency.
+              The Ontario towing industry historically harbored a dismal reputation for hidden surprise fees, aggressive roadside intimidation tactics, and shoddy vehicle care. {COMPANY_NAME} was brutally forged to be the exact operational opposite. We established our extensive GTA towing division on a rigid foundation of absolute corporate transparency.
             </p>
             <p className="mb-4">
               When you summon us for a tow in Scarborough, Pickering, Ajax, Whitby, or Oshawa, you are digitally quoted a precise hook-up fee and a rigorously calculated per-kilometer rate up front. We employ fully licensed, deeply background-checked operators who pride themselves on being honest, reliable harborers of safety during your absolute worst driving moments.
@@ -783,23 +783,23 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       }
     ],
     faqs: [
-      { question: 'Why use a flatbed for towing in the East GTA?', answer: 'Flatbeds are the only safe way to transport modern AWD and luxury vehicles without destroying the transmission. We lift your car entirely off the ground, ensuring zero wear during the trip to Pickering, Ajax, or Oshawa.' },
+      { question: 'Why use a flatbed for towing in the Greater Toronto Area?', answer: 'Flatbeds are the only safe way to transport modern AWD and luxury vehicles without destroying the transmission. We lift your car entirely off the ground, ensuring zero wear during the trip to Pickering, Ajax, or Oshawa.' },
       { question: 'Will my insurance reimburse the tow from Scarborough or Whitby?', answer: 'Yes, most policies cover towing for accidents or breakdowns. We provide detailed digital receipts for easy reimbursement from your insurance provider.' },
       { question: 'Can I ride in the tow truck cab to my destination in Oshawa?', answer: 'Absolutely. Our trucks feature clean, climate-controlled "Super Cabs" that can comfortably seat up to two passengers.' },
-      { question: 'How is the final price calculated for an East End tow?', answer: 'We offer transparent pricing with a flat hook-up fee plus a per-kilometer rate. Call us for an exact quote to any destination in the East GTA.' },
+      { question: 'How is the final price calculated for an East End tow?', answer: 'We offer transparent pricing with a flat hook-up fee plus a per-kilometer rate. Call us for an exact quote to any destination in the Greater Toronto Area.' },
       { question: 'What if a "chaser" truck shows up in Ajax or Pickering?', answer: 'You have the legal right to choose your tow company. Command them to step away and wait for iFAST\'s licensed professionals to arrive for a safe, honest experience.' },
       { question: 'Can you get my car out of a low Scarborough underground garage?', answer: 'Yes. We use specialized low-profile extraction units to pull your car out of tight Scarborough garages and then transfer it to a flatbed for safe transport.' },
     ]
   },
   'flat-tire-repair': {
     id: 'flat-tire-repair',
-    seoTitle: '24/7 Mobile Flat Tire Repair East GTA | Patch & Plug Pickering, Ajax, Oshawa',
+    seoTitle: '24/7 Mobile Flat Tire Repair GTA | Patch & Plug Pickering, Ajax, Oshawa',
     seoDescription: 'Nail or screw in your tire? iFAST Roadside performs permanent mobile flat tire repairs (internal patch-and-plug) across Pickering, Ajax, Whitby, Oshawa, and Scarborough. 30-min response. Call now.',
-    keywords: 'flat tire repair Pickering, mobile tire patch Ajax, nail in tire repair Oshawa, tire plug service Whitby, puncture repair Scarborough, fix flat tire on site East GTA',
+    keywords: 'flat tire repair Pickering, mobile tire patch Ajax, nail in tire repair Oshawa, tire plug service Whitby, puncture repair Scarborough, fix flat tire on site GTA',
     heroImage: '/flat_tire_repair_hero.jpg',
     blogSections: [
       {
-        title: '24/7 Mobile Flat Tire Repair Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
+        title: '24/7 Mobile Flat Tire Repair Across the Greater Toronto Area (Pickering, Ajax, Whitby, Oshawa)',
         content: (
           <>
             <p className="mb-4">
@@ -860,7 +860,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       }
     ],
     faqs: [
-      { question: 'How much does a mobile flat tire repair cost in the East GTA?', answer: 'Our mobile patch-and-plug is priced competitively with shop repairs—and you save the cost and hassle of a tow or a trip to the shop. We give you a firm quote over the phone before we dispatch.' },
+      { question: 'How much does a mobile flat tire repair cost in the Greater Toronto Area?', answer: 'Our mobile patch-and-plug is priced competitively with shop repairs—and you save the cost and hassle of a tow or a trip to the shop. We give you a firm quote over the phone before we dispatch.' },
       { question: 'Can every flat tire be repaired?', answer: 'No. We can permanently repair punctures within the center tread zone. Damage on the sidewall, the outer shoulder, or from driving on a flat is not safely repairable—in those cases we offer on-site new or used tire installation instead.' },
       { question: 'How long does a mobile tire repair take?', answer: 'Once our technician is on-site, a standard tread puncture repair takes roughly 20–30 minutes, including dismounting, patching, re-balancing, and reinstalling the wheel.' },
       { question: 'Will you reset my tire pressure (TPMS) light after the repair?', answer: 'Yes. We carry the scanners needed to reset your TPMS dashboard warning so you drive away with no lingering warning lights.' },
@@ -870,13 +870,13 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'spare-tire-change': {
     id: 'spare-tire-change',
-    seoTitle: '24/7 Spare Tire Change Service East GTA | Pickering, Ajax, Oshawa',
+    seoTitle: '24/7 Spare Tire Change Service GTA | Pickering, Ajax, Oshawa',
     seoDescription: 'Have a spare but stuck roadside? iFAST Roadside safely installs your spare or donut across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Fast 30-min response. Call now.',
-    keywords: 'spare tire change Pickering, install spare tire Ajax, donut tire change Oshawa, roadside spare swap Whitby, flat tire spare service Scarborough, change tire to spare East GTA',
+    keywords: 'spare tire change Pickering, install spare tire Ajax, donut tire change Oshawa, roadside spare swap Whitby, flat tire spare service Scarborough, change tire to spare GTA',
     heroImage: '/spare_tire_change_hero.jpg',
     blogSections: [
       {
-        title: '24/7 Mobile Spare Tire Change Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
+        title: '24/7 Mobile Spare Tire Change Across the Greater Toronto Area (Pickering, Ajax, Whitby, Oshawa)',
         content: (
           <>
             <p className="mb-4">
@@ -937,23 +937,23 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       }
     ],
     faqs: [
-      { question: 'How fast can you change my spare in Pickering or Ajax?', answer: 'Our average arrival across the East GTA is under 30 minutes. We route the closest local unit straight to your GPS location.' },
+      { question: 'How fast can you change my spare in Pickering or Ajax?', answer: 'Our average arrival across the Greater Toronto Area is under 30 minutes. We route the closest local unit straight to your GPS location.' },
       { question: 'What if my lug nuts are seized or I lost my wheel lock key?', answer: 'No problem. We carry heavy-duty impact wrenches and extractor sockets to break free seized, rusted, or stripped lug nuts—and remove locking wheel nuts even without the key—without damaging your rims.' },
       { question: 'How far can I drive on a donut spare?', answer: 'Temporary donut spares are generally rated for short distances (about 80 km) and reduced speed (under 80 km/h). We\'ll advise you, and we can also bring a full tire to install if you have farther to go.' },
       { question: 'What if I don\'t have a spare tire at all?', answer: 'Many newer vehicles ship without one. If you have no spare, we can deliver and install a new or quality used tire in your size right on the spot—just give us the size off your door jamb or tire sidewall.' },
       { question: 'Do you re-torque the wheel after installing the spare?', answer: 'Yes, we torque every lug to your manufacturer\'s spec. We also recommend a re-torque after about 100 km of driving for safety.' },
-      { question: 'Can you change a spare in an underground garage?', answer: 'Yes. Our low-clearance vans reach vehicles in underground condo and office garages throughout Scarborough and the East GTA.' },
+      { question: 'Can you change a spare in an underground garage?', answer: 'Yes. Our low-clearance vans reach vehicles in underground condo and office garages throughout Scarborough and the Greater Toronto Area.' },
     ]
   },
   'tire-installation': {
     id: 'tire-installation',
-    seoTitle: '24/7 Mobile New & Used Tire Installation East GTA | On-Site Pickering, Ajax, Oshawa',
+    seoTitle: '24/7 Mobile New & Used Tire Installation GTA | On-Site Pickering, Ajax, Oshawa',
     seoDescription: 'No spare? iFAST Roadside delivers and installs new or quality used tires on-site across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Mount, balance, install. Call now.',
-    keywords: 'mobile tire installation Pickering, new tire delivery Ajax, used tire install Oshawa, on-site tire mounting Whitby, tire replacement at home Scarborough, buy and install tire East GTA',
+    keywords: 'mobile tire installation Pickering, new tire delivery Ajax, used tire install Oshawa, on-site tire mounting Whitby, tire replacement at home Scarborough, buy and install tire GTA',
     heroImage: '/tire_installation_hero.jpg',
     blogSections: [
       {
-        title: '24/7 Mobile New & Used Tire Installation Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
+        title: '24/7 Mobile New & Used Tire Installation Across the Greater Toronto Area (Pickering, Ajax, Whitby, Oshawa)',
         content: (
           <>
             <p className="mb-4">
@@ -1018,20 +1018,20 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       { question: 'Do you bring the tire, or do I need to supply it?', answer: 'Both options work. Give us your tire size and we\'ll source and bring a new or quality used tire. Or, if you already bought tires online or have a stored set, we\'ll come mount and balance them at your location.' },
       { question: 'What tire size do you need from me?', answer: 'The size printed on your tire sidewall or driver\'s door jamb—for example 225/65R17. Read it to us over the phone and we\'ll match it.' },
       { question: 'Can you really mount and balance a tire on-site?', answer: 'Yes. Our vans carry the same mounting machines and computerized balancers as a physical shop, so the installation quality is identical—done in your driveway or roadside.' },
-      { question: 'How much does mobile tire installation cost in the East GTA?', answer: 'It depends on whether you choose new or used tires and your size, but you save the tow and the shop trip. We give you a firm all-in quote over the phone before dispatch.' },
+      { question: 'How much does mobile tire installation cost in the Greater Toronto Area?', answer: 'It depends on whether you choose new or used tires and your size, but you save the tow and the shop trip. We give you a firm all-in quote over the phone before dispatch.' },
       { question: 'Do you install used tires safely?', answer: 'Yes. Every used tire we carry is inspected for tread depth, age, and internal damage before installation. If we wouldn\'t put it on our own car, we won\'t put it on yours.' },
       { question: 'Will you reset my TPMS light after installation?', answer: 'Yes, we carry the scanners to reset your Tire Pressure Monitoring System so you leave with no warning lights on the dash.' },
     ]
   },
   'battery-diagnostic': {
     id: 'battery-diagnostic',
-    seoTitle: '24/7 Mobile Car Battery Diagnostic East GTA | Pickering, Ajax, Oshawa',
+    seoTitle: '24/7 Mobile Car Battery Diagnostic GTA | Pickering, Ajax, Oshawa',
     seoDescription: 'Car cranking slow or dying repeatedly? iFAST Roadside tests your battery, alternator, and charging system on-site across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Call now.',
-    keywords: 'car battery test Pickering, battery diagnostic Ajax, alternator test Oshawa, charging system check Whitby, mobile battery testing Scarborough, why car keeps dying East GTA',
+    keywords: 'car battery test Pickering, battery diagnostic Ajax, alternator test Oshawa, charging system check Whitby, mobile battery testing Scarborough, why car keeps dying GTA',
     heroImage: '/battery_diagnostic_hero.jpg',
     blogSections: [
       {
-        title: '24/7 Mobile Battery & Charging System Diagnostics Across the East GTA',
+        title: '24/7 Mobile Battery & Charging System Diagnostics Across the Greater Toronto Area',
         content: (
           <>
             <p className="mb-4">
@@ -1093,8 +1093,8 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     ],
     faqs: [
       { question: 'How do I know if it\'s my battery or my alternator?', answer: 'That\'s exactly what our diagnostic answers. We test the battery\'s state of health and the alternator\'s charging output separately, so you know whether you need a new battery, alternator work, or just a charge.' },
-      { question: 'How fast can you reach me in Pickering or Ajax for a battery test?', answer: 'Our average arrival across the East GTA is under 30 minutes. We dispatch the nearest local unit straight to your location.' },
-      { question: 'Can you test my battery in an underground condo garage?', answer: 'Yes. Our portable testing equipment lets us check your battery and charging system right in your parking stall in any Scarborough or East GTA garage.' },
+      { question: 'How fast can you reach me in Pickering or Ajax for a battery test?', answer: 'Our average arrival across the Greater Toronto Area is under 30 minutes. We dispatch the nearest local unit straight to your location.' },
+      { question: 'Can you test my battery in an underground condo garage?', answer: 'Yes. Our portable testing equipment lets us check your battery and charging system right in your parking stall in any Scarborough or GTA garage.' },
       { question: 'What is a parasitic drain?', answer: 'It\'s when something keeps drawing power after the car is off—a stuck relay, aftermarket accessory, or faulty module—slowly flattening the battery overnight. We measure the draw to help track it down.' },
       { question: 'If the test shows I need a new battery, can you install it right away?', answer: 'Yes. If your battery has failed, our technician can supply and install the correct replacement on the spot and recycle your old one—no second trip needed.' },
       { question: 'Will the diagnostic damage my car\'s electronics?', answer: 'No. We use professional conductance testers and multimeters that read your system safely without sending any harmful current into your vehicle\'s electronics.' },
@@ -1102,17 +1102,17 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'battery-replacement': {
     id: 'battery-replacement',
-    seoTitle: '24/7 Mobile Car Battery Replacement East GTA | Pickering, Ajax, Oshawa',
+    seoTitle: '24/7 Mobile Car Battery Replacement GTA | Pickering, Ajax, Oshawa',
     seoDescription: 'Battery beyond saving? iFAST Roadside delivers and installs the correct new car battery on-site across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Old battery recycled free. Call now.',
-    keywords: 'car battery replacement Pickering, mobile battery install Ajax, new car battery delivery Oshawa, battery installation at home Whitby, replace dead battery Scarborough, car battery service East GTA',
+    keywords: 'car battery replacement Pickering, mobile battery install Ajax, new car battery delivery Oshawa, battery installation at home Whitby, replace dead battery Scarborough, car battery service GTA',
     heroImage: '/battery_replacement_hero.jpg',
     blogSections: [
       {
-        title: '24/7 Mobile Car Battery Replacement Across the East GTA (Pickering, Ajax, Whitby, Oshawa)',
+        title: '24/7 Mobile Car Battery Replacement Across the Greater Toronto Area (Pickering, Ajax, Whitby, Oshawa)',
         content: (
           <>
             <p className="mb-4">
-              When a battery is truly worn out, no jump start will keep it alive—you need a new one. <strong>{COMPANY_NAME}</strong> delivers and installs the correct replacement battery for your exact vehicle, right where you are. No towing to a shop, no waiting in line, no lugging a heavy battery yourself. Our technicians reach you in <strong>under 30 minutes on average</strong>, any hour, any weather across the East GTA.
+              When a battery is truly worn out, no jump start will keep it alive—you need a new one. <strong>{COMPANY_NAME}</strong> delivers and installs the correct replacement battery for your exact vehicle, right where you are. No towing to a shop, no waiting in line, no lugging a heavy battery yourself. Our technicians reach you in <strong>under 30 minutes on average</strong>, any hour, any weather across the Greater Toronto Area.
             </p>
             <p className="mb-4">
               We bring a quality battery matched to your make, model, and engine, install it on-site, clean and protect the terminals, confirm your charging system is working, and recycle your old battery free of charge. Whether you're stranded in an Ajax parking lot, a Scarborough condo garage, or your own Oshawa driveway, we get you started on a fresh battery and back to your day.
@@ -1171,7 +1171,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     ],
     faqs: [
       { question: 'How do you know which battery my car needs?', answer: 'We match the correct group size, cold-cranking amps, and terminal configuration to your year, make, model, and engine. Just give us those details over the phone and we\'ll bring the right one.' },
-      { question: 'How fast can you replace my battery in the East GTA?', answer: 'Our average arrival in Pickering, Ajax, Whitby, Oshawa, and Scarborough is under 30 minutes, and the install itself usually takes 15–20 minutes on-site.' },
+      { question: 'How fast can you replace my battery in the Greater Toronto Area?', answer: 'Our average arrival in Pickering, Ajax, Whitby, Oshawa, and Scarborough is under 30 minutes, and the install itself usually takes 15–20 minutes on-site.' },
       { question: 'Do you take away my old battery?', answer: 'Yes. We haul away and properly recycle your old lead-acid battery free of charge—no environmental fees or disposal hassle for you.' },
       { question: 'Will I lose my radio presets or settings when you swap the battery?', answer: 'On vehicles where it matters, our technician uses a memory-saver to preserve your settings during the swap. We\'ll let you know if your vehicle needs anything reset.' },
       { question: 'Do the batteries come with a warranty?', answer: 'Yes. The batteries we install carry a manufacturer warranty. Keep your receipt and we\'ll help if you ever need to claim it.' },

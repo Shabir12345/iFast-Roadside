@@ -71,7 +71,7 @@ const Header: React.FC = () => {
                     <div className="bg-brand-dark/5 text-brand-dark p-2 rounded-lg">
                       <MapPin size={18} />
                     </div>
-                    <span className="font-semibold text-sm">East GTA <span className="block text-[10px] text-gray-500 font-normal">Pickering, Ajax, Whitby, Oshawa...</span></span>
+                    <span className="font-semibold text-sm">GTA-Wide <span className="block text-[10px] text-gray-500 font-normal">Toronto, Durham, York &amp; Peel...</span></span>
                   </a>
                 </div>
               </div>

@@ -6,7 +6,7 @@ import { trackPhoneCall } from '../utils/analytics';
 const FAQS = [
     {
         question: "How fast can you reach me in an emergency?",
-        answer: "Our average emergency arrival time is just 30 minutes across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Because we use localized rapid-response vans rather than heavy tow trucks, we cut through GTA traffic significantly faster."
+        answer: "Our average emergency arrival time is about 30 minutes across the Greater Toronto Area, and even faster in our Scarborough / East-GTA home zone. Because we run localized rapid-response vans stationed across the GTA rather than heavy tow trucks, we cut through traffic significantly faster."
     },
     {
         question: "Are there any hidden hook-up fees or late night charges?",

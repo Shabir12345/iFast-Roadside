@@ -274,9 +274,9 @@ const MobileMechanicLanding: React.FC = () => {
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-yellow/10 rounded-full blur-[100px]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black mb-4">Servicing the Entire East GTA</h2>
+            <h2 className="text-3xl md:text-5xl font-black mb-4">Serving the Greater Toronto Area</h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
-              Our mobile units are strategically positioned for 30-minute response times across these cities.
+              Our mobile units are stationed across the GTA for fast response — with our tightest ETAs in these East-GTA cities.
             </p>
           </div>
 
