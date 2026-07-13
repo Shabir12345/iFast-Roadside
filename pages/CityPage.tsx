@@ -114,8 +114,8 @@ const CityPage: React.FC = () => {
 
       <div className="container mx-auto px-4">
         <div className="mb-6">
-          <Link to="/" className="text-gray-500 flex items-center gap-2 hover:text-brand-dark transition-colors">
-            <ArrowLeft size={16} /> Back to Home
+          <Link to="/" className="inline-flex items-center gap-2 py-2.5 min-h-[44px] text-gray-500 hover:text-brand-dark transition-colors">
+            <ArrowLeft size={18} /> Back to Home
           </Link>
         </div>
 

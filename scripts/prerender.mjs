@@ -53,7 +53,36 @@ const routes = [...new Set([
   ...NOINDEX_COMBOS.map((c) => `/service/${c}`),
 ])];
 
-const template = readFileSync(join(root, 'dist', 'index.html'), 'utf8');
+let template = readFileSync(join(root, 'dist', 'index.html'), 'utf8');
+
+// Sync the JSON-LD aggregateRating to the live Google/Featurable count at build
+// time (SEO audit t11) so the schema, the hero "X Reviews" badges, and the
+// reviews widget all show a single, accurate number instead of three drifting
+// ones. If the API is unreachable the build keeps the hardcoded fallback — this
+// must never fail the build.
+const FEATURABLE_API =
+  'https://api.featurable.com/v1/widgets/9ff590b7-3128-4d17-a845-bc80f70b5313';
+try {
+  const res = await fetch(FEATURABLE_API, { signal: AbortSignal.timeout(10000) });
+  if (res.ok) {
+    const data = await res.json();
+    const count = Number(data?.totalReviewCount);
+    const rating = Number(data?.averageRating);
+    if (Number.isFinite(count) && count > 0) {
+      template = template.replace(/("reviewCount":\s*")\d+(")/, `$1${count}$2`);
+      console.log(`✓ Synced schema reviewCount → ${count}`);
+    }
+    if (Number.isFinite(rating) && rating > 0) {
+      const r = (Math.round(rating * 10) / 10).toFixed(1);
+      template = template.replace(/("ratingValue":\s*")[\d.]+(")/, `$1${r}$2`);
+      console.log(`✓ Synced schema ratingValue → ${r}`);
+    }
+  } else {
+    console.warn(`⚠ Featurable API returned ${res.status}; keeping hardcoded review count.`);
+  }
+} catch (e) {
+  console.warn(`⚠ Could not fetch live review count (${e.message}); keeping hardcoded value.`);
+}
 
 const failures = [];
 for (const route of routes) {

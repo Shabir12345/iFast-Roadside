@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
                   width={800}
                   height={1000}
                   className="w-full h-full object-cover aspect-[4/5] object-center"
-                  fetchPriority="high"
+                  decoding="async"
                 />
                 {/* Gradient overlay for contrast if needed */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent"></div>
