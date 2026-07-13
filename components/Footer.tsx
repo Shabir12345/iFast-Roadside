@@ -55,6 +55,9 @@ const Footer: React.FC = () => {
               <li><a href="/areas/whitby" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Whitby</a></li>
               <li><a href="/areas/oshawa" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Oshawa</a></li>
               <li><a href="/service-area/east-gta" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">East GTA</a></li>
+              <li><a href="/service-area/toronto" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Toronto</a></li>
+              <li><a href="/service-area/west-gta" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">West GTA</a></li>
+              <li><a href="/service-area/york-region" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">York Region</a></li>
             </ul>
           </div>
 

@@ -7,7 +7,7 @@ import StickyCall from './components/StickyCall';
 import Home from './pages/Home';
 import ServicePage from './pages/ServicePage';
 import ServiceCityPage from './pages/ServiceCityPage';
-import EastGtaServiceAreaPage from './pages/EastGtaServiceAreaPage';
+import RegionServiceAreaPage from './pages/RegionServiceAreaPage';
 import CityPage from './pages/CityPage';
 import MobileMechanicLanding from './pages/MobileMechanicLanding';
 import Blog from './pages/Blog';
@@ -22,7 +22,7 @@ const App: React.FC = () => {
         <Route path="/mobile-mechanic" element={<MobileMechanicLanding />} />
         <Route path="/service/:id" element={<ServicePage />} />
         <Route path="/service/:id/:city" element={<ServiceCityPage />} />
-        <Route path="/service-area/east-gta" element={<EastGtaServiceAreaPage />} />
+        <Route path="/service-area/:region" element={<RegionServiceAreaPage />} />
         <Route path="/areas/:city" element={<CityPage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />

@@ -31,10 +31,11 @@ No test runner, linter, or formatter is configured. Type-checking happens implic
 ## Architecture
 
 ### Routing
-`App.tsx` defines three routes:
+Key routes in `App.tsx`:
 - `/` → `pages/Home.tsx` (hero + all marketing sections)
 - `/service/:id` → `pages/ServicePage.tsx` (one page per service, `:id` must match a `SERVICES[].id`)
-- `/service-area/east-gta` → `pages/EastGtaServiceAreaPage.tsx` (localized landing page)
+- `/service-area/:region` → `pages/RegionServiceAreaPage.tsx` (localized regional landing pages, driven by `REGION_CONTENT` in `data/regionContent.tsx`; `:region` must match a key like `east-gta`, `toronto`, `west-gta`, `york-region`. Unknown slugs redirect to `/service-area/east-gta`). `east-gta` is the home-base region and was the original standalone landing page.
+- `/areas/:city` → `pages/CityPage.tsx` (per-city pages, driven by `CITY_CONTENT`)
 
 `ChatBot` and `StickyCall` are global, rendered outside `<Routes>`.
 

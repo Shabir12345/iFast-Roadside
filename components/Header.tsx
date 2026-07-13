@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Menu, X, PhoneCall, ChevronDown, MapPin } from 'lucide-react';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICES } from '../constants';
+import { REGION_CONTENT } from '../data/regionContent';
 import { trackPhoneCall } from '../utils/analytics';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
-  const isLandingPage = location.pathname === '/service-area/east-gta';
+  const isLandingPage = location.pathname.startsWith('/service-area/');
 
   return (
     <header className="fixed w-full z-50 bg-white/95 border-b border-gray-100 backdrop-blur-md text-brand-dark shadow-sm">
@@ -62,17 +63,20 @@ const Header: React.FC = () => {
               <a href="#" className="flex items-center gap-1 hover:text-brand-yellow transition-colors duration-300 py-6">
                 Service Area <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
               </a>
-              <div className="absolute top-full left-0 mt-0 w-64 bg-white text-gray-800 rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden transform origin-top scale-y-95 group-hover:scale-y-100">
+              <div className="absolute top-full left-0 mt-0 w-72 bg-white text-gray-800 rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden transform origin-top scale-y-95 group-hover:scale-y-100">
                 <div className="py-2">
-                  <a
-                    href="/service-area/east-gta"
-                    className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0 hover:text-brand-yellow"
-                  >
-                    <div className="bg-brand-dark/5 text-brand-dark p-2 rounded-lg">
-                      <MapPin size={18} />
-                    </div>
-                    <span className="font-semibold text-sm">GTA-Wide <span className="block text-[10px] text-gray-500 font-normal">Toronto, Durham, York &amp; Peel...</span></span>
-                  </a>
+                  {Object.values(REGION_CONTENT).map((r) => (
+                    <a
+                      key={r.slug}
+                      href={`/service-area/${r.slug}`}
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0 hover:text-brand-yellow"
+                    >
+                      <div className="bg-brand-dark/5 text-brand-dark p-2 rounded-lg">
+                        <MapPin size={18} />
+                      </div>
+                      <span className="font-semibold text-sm">{r.name} <span className="block text-[10px] text-gray-500 font-normal">{r.citiesCovered.slice(0, 3).join(', ')}...</span></span>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
