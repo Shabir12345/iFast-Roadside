@@ -110,7 +110,7 @@ const GoogleReviews: React.FC = () => {
         {/* Live Google reviews via Featurable — auto-updates, no code changes.
             The widget renders its own rating header, so we don't duplicate it. */}
         {!widgetFailed && (
-          <div className="max-w-6xl mx-auto min-h-[260px]">
+          <div className="max-w-6xl mx-auto min-h-[520px] md:min-h-[420px]">
             <div id={FEATURABLE_WIDGET_ID} data-featurable-async />
           </div>
         )}

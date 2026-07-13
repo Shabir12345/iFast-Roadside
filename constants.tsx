@@ -9,7 +9,7 @@ export const BUSINESS_HOURS = "24/7";
 export const GOOGLE_RATING = 4.9;
 // Fallback review count used when the live Featurable count (useGoogleReviewStats)
 // can't be fetched. Keep roughly in step with the real Google count.
-export const GOOGLE_REVIEWS_COUNT = 180;
+export const GOOGLE_REVIEWS_COUNT = 195;
 
 // Direct link to the iFAST Google Business reviews panel.
 // Swap the static GOOGLE_REVIEWS below for live Places API data when that's wired up.
