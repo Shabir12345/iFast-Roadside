@@ -1260,6 +1260,9 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
             <p className="mb-4">
               And because we're a roadside company first, the number you call for the inspection is the same one that answers at 2 a.m. if that new-to-you car ever leaves you stranded — <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">boosts</a>, <a href="/service/flat-tire-repair" className="text-brand-yellow font-bold hover:underline">flat tires</a>, lockouts, and <a href="/service/towing" className="text-brand-yellow font-bold hover:underline">towing</a>.
             </p>
+            <p className="mb-4">
+              Want to see how this plays out in practice? Read <a href="/blog/pre-purchase-car-inspection-ajax" className="text-brand-yellow font-bold hover:underline">how an Ajax buyer had us inspect a used car before she paid for it</a> — a real customer, in her own words.
+            </p>
             <p className="font-semibold text-lg text-brand-dark mb-4">
               Spend a little before you buy, or a lot after. Call {PHONE_NUMBER} and we'll quote you on the spot.
             </p>
