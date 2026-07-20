@@ -16,7 +16,7 @@
 
 These apply to every task. They are business commitments, not style preferences.
 
-- **No price anywhere.** No dollar figure in page copy, FAQs, meta description, or the chatbot instruction. CTAs say "call for a quote." The pricing FAQ answers honestly ("we quote on the call once we know the vehicle and where it is"), it does not dodge.
+- **No iFAST price anywhere.** No stated or implied price for our inspection — not in page copy, FAQs, meta description, or the chatbot instruction. CTAs say "call for a quote." Clarified 2026-07-20 by the business owner: illustrative dollar figures that are plainly *not* our rate are allowed and intentional — the value of the used car being inspected ("a $4,000 commuter or a $40,000 SUV") and the cost of a seller's own code reader ("a $20 scanner"). The rule bans quoting **our** price, not the use of numbers. The pricing FAQ answers honestly ("we quote on the call once we know the vehicle and where it is"), it does not dodge.
 - **Deliverable is a verbal walkthrough plus OBD diagnostic scan results only.** Never promise a written report, PDF, photo report, emailed summary, or certificate.
 - **No Safety Standards Certificate (SSC) claims.** An Ontario SSC requires a licensed Motor Vehicle Inspection Station. State plainly in the FAQ that this service is not an SSC.
 - **Every phone CTA must call `trackPhoneCall(source)`.** In `data/serviceContent.tsx` this is handled by the local `CallNowButton` component — use it, do not hand-roll a `tel:` link. Source labels follow `service_content_pre-purchase-inspection_<section>`.
@@ -241,8 +241,10 @@ Expected: the file exists; the FAQPage count is at least 1; the title is the `se
 
 - [ ] **Step 4: Enforce the no-price constraint against the real output**
 
-Run: `grep -o '\$[0-9]\+' dist/service/pre-purchase-inspection/index.html`
-Expected: **no matches** (grep exits 1). Any hit is a Global Constraints violation — remove the figure before committing.
+The constraint bans quoting **iFAST's** price, not all numbers (see Global Constraints). So check the figures in context rather than counting dollar signs:
+
+Run: `grep -o '.\{60\}\$[0-9][^ ]*.\{60\}' dist/service/pre-purchase-inspection/index.html`
+Expected: exactly three hits, and every one is about the *car being inspected* or the *seller's own scanner* — the `$4,000` / `$40,000` vehicle-value pair and the `$20` code reader. **No hit may attach a figure to our inspection, our service, or our rate.** If one does, remove it before committing.
 
 - [ ] **Step 5: Commit**
 

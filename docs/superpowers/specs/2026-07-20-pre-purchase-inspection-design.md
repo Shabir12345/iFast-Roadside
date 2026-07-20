@@ -38,10 +38,15 @@ changes are required.
 These are firm. They come from the business owner and must not be softened or
 embellished during implementation.
 
-1. **No price anywhere.** No dollar figure in the page copy, the FAQs, the meta
-   description, or the chatbot. Every CTA is "call for a quote." The pricing FAQ
-   answers honestly — we quote on the call once we know the vehicle and location
-   — rather than dodging the question.
+1. **No iFAST price anywhere.** No stated or implied price for our inspection —
+   not in the page copy, the FAQs, the meta description, or the chatbot. Every
+   CTA is "call for a quote." Clarified 2026-07-20 by the business owner:
+   illustrative dollar figures that are plainly *not* our rate are allowed and
+   intentional — the value of the used car being inspected (a $4,000 commuter
+   or a $40,000 SUV) and the cost of a seller's own code reader (a $20
+   scanner). The rule bans quoting **our** price, not the use of numbers. The
+   pricing FAQ answers honestly — we quote on the call once we know the
+   vehicle and location — rather than dodging the question.
 2. **Deliverable is a verbal walkthrough plus OBD diagnostic scan results.**
    The customer gets an on-site plain-English verdict from the technician and
    the stored trouble codes read off the scanner. **Do not promise a written
@@ -137,4 +142,6 @@ No dollar figure, per copy commitment 1.
   new page and links to it.
 - `dist/service/pre-purchase-inspection/index.html` exists after the build and
   contains the `Service` and `FAQPage` JSON-LD.
-- No dollar figure appears anywhere in the new page's rendered HTML.
+- No iFAST price appears anywhere in the new page's rendered HTML (illustrative
+  figures for the car's value or a seller's scanner are fine, per copy
+  commitment 1).

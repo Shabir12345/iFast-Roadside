@@ -1181,7 +1181,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   'pre-purchase-inspection': {
     id: 'pre-purchase-inspection',
     seoTitle: 'Mobile Pre-Purchase Car Inspection GTA | Used Car Check Before You Buy',
-    seoDescription: 'Buying a used car in the GTA? iFAST sends a certified mobile mechanic to the car — engine, brakes, tires, suspension, and a full OBD diagnostic scan — with a straight verdict before you pay. Toronto, Scarborough, Pickering, Ajax, Whitby, Oshawa. Call for a quote.',
+    seoDescription: 'Buying a used car in the GTA? We send an independent mobile mechanic to the car for a full inspection and OBD scan — a straight verdict before you pay. Call for a quote.',
     keywords: 'pre purchase inspection Toronto, used car inspection GTA, mobile car inspection near me, pre purchase car inspection Scarborough, used car inspection Pickering, car inspection before buying Ontario, mobile mechanic inspection Ajax, independent used car inspection Whitby, vehicle inspection before buying Oshawa',
     heroImage: '/mobile_mechanic_hero.jpg',
     blogSections: [
@@ -1255,7 +1255,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
               We are not the seller, we are not the dealership's shop, and we don't get paid more if you buy the car. That's the entire value of the service. Our mechanic's only job is to tell you what's actually in front of you — including, more than once, "don't buy this one."
             </p>
             <p className="mb-4">
-              We work across the whole Greater Toronto Area, with our fastest availability in the East GTA — Scarborough, Pickering, Ajax, Whitby, and Oshawa. Tell us where the car is and when the seller is free, and we'll meet you there, usually within a day.
+              We work across the whole Greater Toronto Area, with our fastest availability in the East GTA — Scarborough, Pickering, Ajax, Whitby, and Oshawa. Tell us where the car is and when the seller is free, and we'll meet you there.
             </p>
             <p className="mb-4">
               And because we're a roadside company first, the number you call for the inspection is the same one that answers at 2 a.m. if that new-to-you car ever leaves you stranded — <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">boosts</a>, <a href="/service/flat-tire-repair" className="text-brand-yellow font-bold hover:underline">flat tires</a>, lockouts, and <a href="/service/towing" className="text-brand-yellow font-bold hover:underline">towing</a>.
