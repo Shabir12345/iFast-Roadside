@@ -1,4 +1,4 @@
-import { Disc, Battery, Fuel, Key, Truck, Wrench, RefreshCw, CircleDot, Gauge, BatteryCharging } from 'lucide-react';
+import { Disc, Battery, Fuel, Key, Truck, Wrench, RefreshCw, CircleDot, Gauge, BatteryCharging, ClipboardCheck } from 'lucide-react';
 import { ServiceItem, Testimonial, GoogleReview } from './types';
 
 export const COMPANY_NAME = "iFAST Roadside Assistance";
@@ -166,6 +166,14 @@ export const SERVICES: ServiceItem[] = [
     description: 'Battery beyond saving? We deliver and install the correct new battery for your vehicle right where you are, and safely recycle the old one — no towing required.',
     icon: BatteryCharging,
     parent: 'jump-start',
+  },
+  // --- Mobile mechanic sub-services ---
+  {
+    id: 'pre-purchase-inspection',
+    title: 'Pre-Purchase Car Inspection',
+    description: 'Buying a used car? Before you hand over the money, we send a certified mechanic to the car — private driveway, dealer lot, or parking garage — for a full inspection and diagnostic scan, plus an honest verdict on what you\'re actually buying.',
+    icon: ClipboardCheck,
+    parent: 'mobile-mechanic',
   }
 ];
 

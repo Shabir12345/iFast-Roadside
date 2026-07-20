@@ -254,7 +254,11 @@ const ServicePage: React.FC = () => {
            </div>
         </div>
 
-        {/* City cross-links for internal linking & local SEO */}
+        {/* City cross-links for internal linking & local SEO. Only render for top-level
+            services: sub-services (service.parent set) have no SERVICE_CITY_CONTENT[id][city]
+            entry, so linking them here produced dead "Page Not Found" combo URLs that still
+            returned HTTP 200 (a soft 404) — see the matching guard in ServiceCityPage.tsx. */}
+        {!service.parent && (
         <div className="max-w-5xl mx-auto mb-16">
           <h2 className="text-2xl md:text-3xl font-black text-brand-dark mb-8 text-center tracking-tight">Need {title} in a Specific City?</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -273,6 +277,7 @@ const ServicePage: React.FC = () => {
             ))}
           </div>
         </div>
+        )}
       </div>
 
       {/* Massive Conversion Footer CTA */}
