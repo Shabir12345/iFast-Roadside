@@ -26,7 +26,6 @@ No test runner, linter, or formatter is configured. Type-checking happens implic
 - **react-helmet-async** for per-page `<head>` / JSON-LD
 - **Tailwind via CDN** — loaded from `cdn.tailwindcss.com` in `index.html`. There is no PostCSS/Tailwind build step. The theme (including brand colors `brand-dark`, `brand-yellow`, `brand-yellowHover`, `brand-gray`) is configured inline in a `<script>` tag in `index.html`. `index.css` holds a few custom utilities and keyframes, not Tailwind source.
 - **Lucide React** for icons
-- **@google/genai** for the ChatBot (Gemini)
 
 ## Architecture
 
@@ -37,7 +36,7 @@ Key routes in `App.tsx`:
 - `/service-area/:region` → `pages/RegionServiceAreaPage.tsx` (localized regional landing pages, driven by `REGION_CONTENT` in `data/regionContent.tsx`; `:region` must match a key like `east-gta`, `toronto`, `west-gta`, `york-region`. Unknown slugs redirect to `/service-area/east-gta`). `east-gta` is the home-base region and was the original standalone landing page.
 - `/areas/:city` → `pages/CityPage.tsx` (per-city pages, driven by `CITY_CONTENT`)
 
-`ChatBot` and `StickyCall` are global, rendered outside `<Routes>`.
+`StickyCall` is global, rendered outside `<Routes>`.
 
 ### Service content is split across two files — keep them in sync
 A service exists in two places and both must be edited together:
@@ -61,15 +60,17 @@ JSON-LD lives in two places:
 
 When editing business info (hours, service areas, address, phone), update both the `index.html` JSON-LD block and `constants.tsx`.
 
-### Gemini ChatBot
-`services/geminiService.ts` wraps `@google/genai`. The `SYSTEM_INSTRUCTION` constant hardcodes service pricing ("starts at $X") and the GTA-wide service area (home base in the East GTA) — treat it as product copy, not config. If prices or service areas change, update this string too.
+### ChatBot (removed 2026-07-20)
+The site previously shipped a Gemini-backed `ChatBot` (`components/ChatBot.tsx` +
+`services/geminiService.ts`, wrapping `@google/genai`). It was removed because it
+wasn't in use. Along with it went the `@google/genai` dependency, the
+`process.env.API_KEY` / `process.env.GEMINI_API_KEY` defines in `vite.config.ts`,
+and the `@google/genai` importmap entry in `index.html`.
 
-**Env var wiring is inconsistent and worth knowing:**
-- `.env.local` defines `GEMINI_API_KEY`
-- `vite.config.ts` exposes it as `process.env.API_KEY` and `process.env.GEMINI_API_KEY` via `define`
-- But `services/geminiService.ts` reads `import.meta.env.VITE_GEMINI_API_KEY`
-
-These don't match, so the chatbot currently falls back to its "I'm offline" message. Fixing it means either renaming the env var to `VITE_GEMINI_API_KEY` or updating the service to read one of the `process.env.*` keys that `vite.config.ts` actually defines.
+If it's ever restored, pull the files from git history rather than rewriting
+them — `SYSTEM_INSTRUCTION` carried hand-tuned product copy (service pricing,
+per-district ETAs, condo-garage access rules) that took several passes to get
+right. `.env.local` still holds `GEMINI_API_KEY` and was intentionally left alone.
 
 ### Styling conventions
 - Brand colors come from the inline Tailwind config in `index.html` — use `bg-brand-yellow`, `text-brand-dark`, etc. Don't introduce raw hex for brand colors.

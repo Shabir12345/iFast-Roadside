@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ChatBot from './components/ChatBot';
 import StickyCall from './components/StickyCall';
 import Home from './pages/Home';
 import ServicePage from './pages/ServicePage';
@@ -30,7 +29,6 @@ const App: React.FC = () => {
       <Footer />
 
       {/* Floating Elements */}
-      <ChatBot />
       <StickyCall />
     </div>
   );
