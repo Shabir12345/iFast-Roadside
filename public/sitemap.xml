@@ -115,6 +115,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.ifastroadside.ca/areas/north-york</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.ifastroadside.ca/areas/pickering</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -227,4 +233,12 @@
   <url><loc>https://www.ifastroadside.ca/service/lockout/pickering</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
   <url><loc>https://www.ifastroadside.ca/service/fuel/pickering</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- North York wave 2a (2026-07-20). The four priority combos for the district.
+       fuel/north-york and towing/north-york are deliberately held in
+       NOINDEX_COMBOS until these four have been measured in GSC. -->
+  <url><loc>https://www.ifastroadside.ca/service/tire-change/north-york</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/jump-start/north-york</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/lockout/north-york</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/mobile-mechanic/north-york</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 </urlset>

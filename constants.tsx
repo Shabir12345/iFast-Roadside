@@ -1,15 +1,24 @@
 import { Disc, Battery, Fuel, Key, Truck, Wrench, RefreshCw, CircleDot, Gauge, BatteryCharging, ClipboardCheck } from 'lucide-react';
 import { ServiceItem, Testimonial, GoogleReview } from './types';
+import REVIEW_STATS from './data/reviewStats.json';
 
 export const COMPANY_NAME = "iFAST Roadside Assistance";
 export const PHONE_NUMBER = "+1 437-215-3468";
 export const EMAIL = "help@ifastroadside.ca";
 export const ADDRESS = "20 Antrim Crescent, Scarborough, ON M1P 4N3";
 export const BUSINESS_HOURS = "24/7";
-export const GOOGLE_RATING = 4.9;
-// Fallback review count used when the live Featurable count (useGoogleReviewStats)
-// can't be fetched. Keep roughly in step with the real Google count.
-export const GOOGLE_REVIEWS_COUNT = 195;
+// Single source of truth for every review claim on the site — JSON-LD
+// aggregateRating, the visible "X+ Google Reviews" badges, and body copy.
+//
+// data/reviewStats.json is refreshed from the live Featurable/Google count by
+// scripts/sync-reviews.mjs, which runs BEFORE `vite build` so the value is
+// compiled into the components and is therefore correct in prerendered SSR
+// HTML. Do not hardcode a review count anywhere else: the site previously
+// shipped four different numbers at once, two of them conflicting
+// aggregateRating values on the same URL, which breaks Google's review-snippet
+// policy. Import these instead.
+export const GOOGLE_RATING = REVIEW_STATS.rating;
+export const GOOGLE_REVIEWS_COUNT = REVIEW_STATS.count;
 
 // Direct link to the iFAST Google Business reviews panel.
 // Swap the static GOOGLE_REVIEWS below for live Places API data when that's wired up.

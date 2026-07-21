@@ -50,6 +50,7 @@ const Footer: React.FC = () => {
             <h2 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Service Areas</h2>
             <ul className="grid grid-cols-2 gap-x-4 text-xs">
               <li><a href="/areas/scarborough" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Scarborough</a></li>
+              <li><a href="/areas/north-york" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">North York</a></li>
               <li><a href="/areas/pickering" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Pickering</a></li>
               <li><a href="/areas/ajax" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Ajax</a></li>
               <li><a href="/areas/whitby" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Whitby</a></li>

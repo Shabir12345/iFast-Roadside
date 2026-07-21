@@ -1,5 +1,5 @@
 import React from 'react';
-import { PHONE_NUMBER, COMPANY_NAME } from '../constants';
+import { PHONE_NUMBER, COMPANY_NAME, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { PhoneCall } from 'lucide-react';
 import { trackPhoneCall } from '../utils/analytics';
 
@@ -200,7 +200,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         content: (
           <>
             <p className="mb-4">
-              {COMPANY_NAME} is owner-operated, and the name you'll see again and again in our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who shows up, talks you through the problem, and does the work himself. You're not calling a faceless dispatch line; you're calling the person who answers and the person who fixes your tire. Here's what GTA drivers say, in their own words:
+              {COMPANY_NAME} is owner-operated, and the name you'll see again and again in our {GOOGLE_REVIEWS_COUNT} Google reviews is <strong>Safi</strong> — the owner-technician who shows up, talks you through the problem, and does the work himself. You're not calling a faceless dispatch line; you're calling the person who answers and the person who fixes your tire. Here's what GTA drivers say, in their own words:
             </p>
             <ul className="list-disc pl-5 space-y-3 mb-6">
               <li>"Amazing service had a flat tire showed up in 15 min at midnight, I would highly recommend this company for all your roadside emergency needs……." <strong>— Sayed walidullah Nawid</strong></li>
@@ -453,7 +453,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         content: (
           <>
             <p className="mb-4">
-              {COMPANY_NAME} is owner-operated, and the name behind our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who answers the phone and does the work himself. For lockouts, two customers said it best:
+              {COMPANY_NAME} is owner-operated, and the name behind our {GOOGLE_REVIEWS_COUNT} Google reviews is <strong>Safi</strong> — the owner-technician who answers the phone and does the work himself. For lockouts, two customers said it best:
             </p>
             <ul className="list-disc pl-5 space-y-3 mb-6">
               <li>"Had myself locked out of my car, called this company arrived fast and fair price." <strong>— Heng Tho</strong></li>
@@ -617,7 +617,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
         content: (
           <>
             <p className="mb-4">
-              We'll be straight with you: the reviews below are general iFAST reviews, not fuel-delivery reviews specifically. People who've called us for tires, batteries, and lockouts say the same things about how we operate — fast, fair, and professional — and that's exactly how a fuel call runs too. {COMPANY_NAME} is owner-operated, and the owner-technician, <strong>Safi</strong>, is the name behind our 146 five-star Google reviews:
+              We'll be straight with you: the reviews below are general iFAST reviews, not fuel-delivery reviews specifically. People who've called us for tires, batteries, and lockouts say the same things about how we operate — fast, fair, and professional — and that's exactly how a fuel call runs too. {COMPANY_NAME} is owner-operated, and the owner-technician, <strong>Safi</strong>, is the name behind our {GOOGLE_REVIEWS_COUNT} Google reviews:
             </p>
             <ul className="list-disc pl-5 space-y-3 mb-6">
               <li>"Excellent service! Fast response time, professional staff, and very reasonable pricing. They arrived quickly and helped me get back on the road without any hassle." <strong>— fazlollah masror</strong></li>

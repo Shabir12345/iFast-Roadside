@@ -36,6 +36,12 @@ const NOINDEX_COMBOS = [
   'lockout/ajax', 'lockout/whitby', 'lockout/oshawa',
   'fuel/scarborough', 'fuel/ajax', 'fuel/whitby', 'fuel/oshawa',
   'towing/scarborough', 'towing/pickering', 'towing/ajax', 'towing/whitby', 'towing/oshawa',
+  // North York wave 2b: fuel and towing are the secondary services for this
+  // district. Written to the same standard as the rest, but held back from the
+  // sitemap until the four priority combos (tire-change, jump-start, lockout,
+  // mobile-mechanic) have been measured in GSC — shipping six new combos at
+  // once makes it impossible to tell which template is working.
+  'fuel/north-york', 'towing/north-york',
 ];
 
 const sitemap = readFileSync(join(root, 'public', 'sitemap.xml'), 'utf8');
@@ -60,29 +66,27 @@ let template = readFileSync(join(root, 'dist', 'index.html'), 'utf8');
 // reviews widget all show a single, accurate number instead of three drifting
 // ones. If the API is unreachable the build keeps the hardcoded fallback — this
 // must never fail the build.
-const FEATURABLE_API =
-  'https://api.featurable.com/v1/widgets/9ff590b7-3128-4d17-a845-bc80f70b5313';
-try {
-  const res = await fetch(FEATURABLE_API, { signal: AbortSignal.timeout(10000) });
-  if (res.ok) {
-    const data = await res.json();
-    const count = Number(data?.totalReviewCount);
-    const rating = Number(data?.averageRating);
-    if (Number.isFinite(count) && count > 0) {
-      template = template.replace(/("reviewCount":\s*")\d+(")/, `$1${count}$2`);
-      console.log(`✓ Synced schema reviewCount → ${count}`);
-    }
-    if (Number.isFinite(rating) && rating > 0) {
-      const r = (Math.round(rating * 10) / 10).toFixed(1);
-      template = template.replace(/("ratingValue":\s*")[\d.]+(")/, `$1${r}$2`);
-      console.log(`✓ Synced schema ratingValue → ${r}`);
-    }
-  } else {
-    console.warn(`⚠ Featurable API returned ${res.status}; keeping hardcoded review count.`);
-  }
-} catch (e) {
-  console.warn(`⚠ Could not fetch live review count (${e.message}); keeping hardcoded value.`);
-}
+// Read from data/reviewStats.json — the same file the React components compile
+// against (via constants.tsx). scripts/sync-reviews.mjs refreshes it from the
+// Featurable API before `vite build` runs.
+//
+// This deliberately does NOT fetch. It used to, and that was the bug: fetching
+// here patched only the static index.html template, while the SSR-rendered
+// component markup kept whatever number was hardcoded in the source. The site
+// shipped conflicting aggregateRating values on the same URL as a result.
+// Reading the one file guarantees the schema in index.html and the schema
+// emitted by components agree.
+const reviewStats = JSON.parse(
+  readFileSync(join(root, 'data', 'reviewStats.json'), 'utf8')
+);
+template = template.replace(/("reviewCount":\s*")\d+(")/, `$1${reviewStats.count}$2`);
+template = template.replace(
+  /("ratingValue":\s*")[\d.]+(")/,
+  `$1${reviewStats.rating.toFixed(1)}$2`
+);
+console.log(
+  `✓ Schema review stats: ${reviewStats.count} reviews, ${reviewStats.rating}★ (synced ${reviewStats.syncedAt})`
+);
 
 const failures = [];
 for (const route of routes) {

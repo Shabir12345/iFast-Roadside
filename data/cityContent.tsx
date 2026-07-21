@@ -1,6 +1,6 @@
 import React from 'react';
 import { PhoneCall } from 'lucide-react';
-import { PHONE_NUMBER, COMPANY_NAME } from '../constants';
+import { PHONE_NUMBER, COMPANY_NAME, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
 
 // TODO: Replace heroImage paths with real iFAST job-site photos when provided.
@@ -58,7 +58,7 @@ export const CITY_CONTENT: Record<string, CityContent> = {
     id: 'scarborough',
     name: 'Scarborough',
     seoTitle: '24/7 Roadside Assistance Scarborough | Mobile Tire, Jump Start, Lockout — iFAST',
-    seoDescription: 'Scarborough\'s local 24/7 roadside assistance. Mobile tire repair, battery boost, car lockout, fuel delivery, and towing across Agincourt, Malvern, Woburn, and the 401. 4.9★ / 94+ reviews. Call now.',
+    seoDescription: 'Scarborough\'s local 24/7 roadside assistance. Mobile tire repair, battery boost, car lockout, fuel delivery, and towing across Agincourt, Malvern, Woburn, and the 401. 4.9★ rated. Call now.',
     keywords: 'roadside assistance Scarborough, mobile tire repair Scarborough, flat tire Scarborough, jump start Scarborough, car lockout Scarborough, towing Scarborough, 24 hour roadside Scarborough, battery boost Agincourt, flat tire Malvern',
     heroImage: '/roadside_technician_towing.jpg',
     responseTime: '15-25 minutes',
@@ -66,7 +66,7 @@ export const CITY_CONTENT: Record<string, CityContent> = {
     introParagraph: (
       <>
         <p className="mb-4">
-          <strong>{COMPANY_NAME}</strong> is based right here in Scarborough at <strong>20 Antrim Crescent (M1P 4N3)</strong>, which means when you call us from anywhere in Scarborough — Agincourt, Malvern, Woburn, Cliffside, Birchmount, or Rouge — a fully-equipped mobile unit is typically only minutes away. We've been the East End's go-to 24/7 roadside team for flat tires, dead batteries, lockouts, fuel drops, and emergency tows, with over <strong>94 verified 5-star Google reviews</strong> from Scarborough drivers.
+          <strong>{COMPANY_NAME}</strong> is based right here in Scarborough at <strong>20 Antrim Crescent (M1P 4N3)</strong>, which means when you call us from anywhere in Scarborough — Agincourt, Malvern, Woburn, Cliffside, Birchmount, or Rouge — a fully-equipped mobile unit is typically only minutes away. We've been the East End's go-to 24/7 roadside team for flat tires, dead batteries, lockouts, fuel drops, and emergency tows, with over <strong>{GOOGLE_REVIEWS_COUNT}+ verified Google reviews</strong> from Scarborough drivers.
         </p>
         <p className="mb-4">
           Whether you're stuck on the 401 near Morningside, blew a tire on Kingston Road, or need a jump start in your driveway off Lawrence East, our Scarborough dispatchers route the closest unit to you in real time. Average arrival is <strong>15-25 minutes</strong> — faster than any fleet-based competitor dispatching from downtown or Brampton.
@@ -113,7 +113,7 @@ export const CITY_CONTENT: Record<string, CityContent> = {
         answer: 'Yes. We service residential garages, condo lots, and underground parking across Scarborough — Scarborough Town Centre, Kennedy Station condos, and everywhere in between. Our mobile vans are sized to fit standard P1/P2 levels. Just let dispatch know the building and level when you call.'
       },
       {
-        question: 'Are you the same team as the one with 94+ Google reviews?',
+        question: 'Are you the same team as the one with ' + GOOGLE_REVIEWS_COUNT + '+ Google reviews?',
         answer: 'Yes — iFAST Roadside Assistance with the 4.9-star rating at 20 Antrim Crescent. All reviews are from real Scarborough and East GTA drivers. Check us on Google if you want to verify before calling.'
       },
       {
@@ -136,7 +136,7 @@ export const CITY_CONTENT: Record<string, CityContent> = {
     introParagraph: (
       <>
         <p className="mb-4">
-          When you're stranded in <strong>Pickering</strong>, minutes matter. <strong>{COMPANY_NAME}</strong> dispatches from nearby Scarborough and positions mobile units along the 401 eastbound, so whether you're at the Pickering Town Centre, in a Bay Ridges driveway, or stuck near the GO Station, we typically reach you in <strong>20-30 minutes</strong>. We\'re the local go-to team for flat tires, jump starts, lockouts, fuel delivery, and emergency tows — with over <strong>94 verified 5-star Google reviews</strong>.
+          When you're stranded in <strong>Pickering</strong>, minutes matter. <strong>{COMPANY_NAME}</strong> dispatches from nearby Scarborough and positions mobile units along the 401 eastbound, so whether you're at the Pickering Town Centre, in a Bay Ridges driveway, or stuck near the GO Station, we typically reach you in <strong>20-30 minutes</strong>. We\'re the local go-to team for flat tires, jump starts, lockouts, fuel delivery, and emergency tows — with over <strong>{GOOGLE_REVIEWS_COUNT}+ verified Google reviews</strong>.
         </p>
         <p className="mb-4">
           Pickering is a commuter town, which means breakdowns often happen at the worst times — on the 401 during morning rush, in a GO parking lot late at night, or on a quiet residential street when the kids need school pickup. Our dispatchers understand the local geography: Whites Road, Liverpool, Brock, and the 401/407 interchange near Brock Road. We route the closest unit and give you a live ETA before you hang up.
@@ -209,7 +209,7 @@ export const CITY_CONTENT: Record<string, CityContent> = {
           <strong>{COMPANY_NAME}</strong> serves Ajax around the clock — from Pickering Village in the north, through the Harwood and Salem corridors, down to the Lake Ontario waterfront. When you call, a fully-equipped mobile unit dispatches from our Scarborough base and typically reaches you in <strong>25-35 minutes</strong>. We handle flat tires, dead batteries, lockouts, fuel drops, and emergency towing — all with transparent pricing and no "out of zone" fees for Ajax calls.
         </p>
         <p className="mb-4">
-          Ajax is growing fast, and so is the traffic on the 401 through town. A blown tire at Westney Road exit, a dead battery at the Audley Community Centre, or a lockout at the Ajax GO Station — we handle all of it with the same priority. Over <strong>94 verified 5-star Google reviews</strong> back us up.
+          Ajax is growing fast, and so is the traffic on the 401 through town. A blown tire at Westney Road exit, a dead battery at the Audley Community Centre, or a lockout at the Ajax GO Station — we handle all of it with the same priority. Over <strong>{GOOGLE_REVIEWS_COUNT}+ verified Google reviews</strong> back us up.
         </p>
         <CallNowButton source="ajax_intro" />
       </>
@@ -279,7 +279,7 @@ export const CITY_CONTENT: Record<string, CityContent> = {
           <strong>{COMPANY_NAME}</strong> serves all of Whitby, from <strong>Port Whitby on the lake to Brooklin up north</strong>, 24 hours a day. Whitby is one of the largest towns in Durham Region — nearly 140,000 residents — and it stretches across a huge area with multiple highways: the 401, the 407, and the 412 connector. Our mobile units reach most Whitby locations in <strong>30-40 minutes</strong>. We handle flat tires, dead batteries, lockouts, fuel delivery, and emergency tows.
         </p>
         <p className="mb-4">
-          Whether you\'re broken down at the Whitby GO Station, stranded on the 412 overpass, or stuck in a Brooklin driveway after a cold night, one call to our dispatchers puts a unit on the way. With <strong>94+ verified 5-star reviews</strong>, we\'re a trusted local name — not a faceless call center operating from out of town.
+          Whether you\'re broken down at the Whitby GO Station, stranded on the 412 overpass, or stuck in a Brooklin driveway after a cold night, one call to our dispatchers puts a unit on the way. With <strong>{GOOGLE_REVIEWS_COUNT}+ verified reviews</strong>, we\'re a trusted local name — not a faceless call center operating from out of town.
         </p>
         <CallNowButton source="whitby_intro" />
       </>
@@ -349,7 +349,7 @@ export const CITY_CONTENT: Record<string, CityContent> = {
           <strong>{COMPANY_NAME}</strong> is Oshawa\'s 24/7 roadside team for flat tires, dead batteries, lockouts, fuel delivery, and emergency towing. Oshawa sits at the eastern edge of our East GTA service zone, so our typical arrival is <strong>35-50 minutes</strong> — longer than closer cities, but we tell you honestly upfront. No other Scarborough-based mobile team routinely commits to Oshawa the way we do.
         </p>
         <p className="mb-4">
-          We cover Oshawa end-to-end: Downtown, Samac, Vanier, Donevan, Westmount, the UOIT/Durham College campus area, and the 401/407/412 highways that converge here. With <strong>94+ verified 5-star Google reviews</strong> — many from Oshawa residents — we\'re the trusted choice when closer options are unavailable or overcharging.
+          We cover Oshawa end-to-end: Downtown, Samac, Vanier, Donevan, Westmount, the UOIT/Durham College campus area, and the 401/407/412 highways that converge here. With <strong>{GOOGLE_REVIEWS_COUNT}+ verified Google reviews</strong> — many from Oshawa residents — we\'re the trusted choice when closer options are unavailable or overcharging.
         </p>
         <CallNowButton source="oshawa_intro" />
       </>
@@ -382,7 +382,7 @@ export const CITY_CONTENT: Record<string, CityContent> = {
     faqs: [
       {
         question: 'Do you really service Oshawa from Scarborough?',
-        answer: 'Yes. Our typical Oshawa ETA is 35-50 minutes depending on time of day and traffic. We tell you upfront — no surprise delays. If you need faster, call a downtown-Oshawa-based service; if you want a team with 94+ 5-star reviews and transparent pricing, we\'re worth the wait.'
+        answer: 'Yes. Our typical Oshawa ETA is 35-50 minutes depending on time of day and traffic. We tell you upfront — no surprise delays. If you need faster, call a downtown-Oshawa-based service; if you want a team with ' + GOOGLE_REVIEWS_COUNT + '+ reviews and transparent pricing, we\'re worth the wait.'
       },
       {
         question: 'What\'s the ETA to UOIT / Durham College area?',
@@ -402,5 +402,82 @@ export const CITY_CONTENT: Record<string, CityContent> = {
       }
     ],
     geo: { latitude: 43.8971, longitude: -78.8658 }
+  },
+
+  // North York — Toronto district, added 2026-07 as the first expansion outside
+  // the East GTA core. A dedicated unit is stationed here, which is what makes
+  // the 20-35 min ETA honest. Note the east/west split called out in
+  // `localAngle`: Don Mills / Victoria Village / Parkwoods border Scarborough
+  // and see the fastest arrivals; Downsview and the Jane-Finch corridor are the
+  // long end of the district. Keep that distinction in any future copy — it is
+  // the difference between an accurate promise and a one-star review.
+  'north-york': {
+    id: 'north-york',
+    name: 'North York',
+    seoTitle: '24/7 Roadside Assistance North York | Mobile Tire & Battery — iFAST',
+    seoDescription: 'North York\'s 24/7 mobile roadside team — flat tire, battery boost, lockout, fuel, and towing across Willowdale, Don Mills, and Downsview. Unit stationed locally, 20-35 min.',
+    keywords: 'roadside assistance North York, mobile tire repair North York, flat tire North York, jump start North York, car lockout North York, towing North York, 24 hour roadside North York, battery boost Willowdale, flat tire Don Mills, mobile mechanic Downsview',
+    heroImage: '/roadside_assistance_help.jpg',
+    responseTime: '20-35 minutes',
+    tagline: 'A unit stationed in North York — not dispatched across the city to reach you',
+    introParagraph: (
+      <>
+        <p className="mb-4">
+          <strong>{COMPANY_NAME}</strong> runs a mobile unit stationed in <strong>North York</strong>, so a flat on Sheppard, a dead battery in a Willowdale condo garage, or a lockout at Yorkdale gets a technician who is already in the district — not one fighting across the city from a downtown or 905 depot. Typical arrival is <strong>20-35 minutes</strong>, 24 hours a day.
+        </p>
+        <p className="mb-4">
+          North York is roughly the size of a mid-sized city on its own, running from the Humber in the west to the Don Valley in the east and from Eglinton up to Steeles. We cover all of it — Willowdale, Don Mills, Downsview, Bayview Village, York Mills, Lawrence Manor, Bathurst Manor, Newtonbrook, Flemingdon Park, Parkwoods, and the Jane &amp; Finch corridor — plus the 401, 404, 400, DVP, and Allen Road that cut through it.
+        </p>
+        <CallNowButton source="north_york_intro" />
+      </>
+    ),
+    localAngle: (
+      <>
+        <p className="mb-4">
+          Two things make North York breakdowns different from anywhere else we work. The first is vertical: the Yonge corridor from Sheppard to Finch is wall-to-wall condo towers, and a dead battery on P3 or P4 is a job most roadside operators quietly decline because their flatbed cannot physically get down there. Our service vans are sized for standard residential garage clearance, so we come to the parking spot rather than asking you to somehow get the car up to street level. Tell dispatch the building and the level when you call and we will confirm access before we roll.
+        </p>
+        <p className="mb-4">
+          The second is the highway geometry. The 401 through North York is the widest stretch of highway in North America, and the collector-express split around Yonge and Allen Road means a shoulder stop can leave you pinned between two live traffic streams with no real refuge. Allen Road has its own problem — short merges and no shoulder worth the name for much of its length. We arrive with high-visibility strobes and cones and secure the scene before anyone touches the vehicle, and on the worst stretches we will tell you honestly if the safer call is a tow rather than a roadside fix.
+        </p>
+        <p className="mb-4">
+          Response times do vary across the district and we would rather say so than over-promise. The eastern side — Don Mills, Parkwoods, Victoria Village, Henry Farm — is closest to our Scarborough home base as well as the North York unit, and typically sees the 20-minute end of the range. Willowdale, Bayview Village, and York Mills sit in the middle. Downsview, Humber Summit, and the Jane &amp; Finch corridor are the long end at 30-35 minutes, longer in a snowstorm or during the 401 afternoon crawl. You will get a real ETA on the phone before you commit.
+        </p>
+      </>
+    ),
+    highways: ['Highway 401', 'Highway 404', 'Highway 400', 'Don Valley Parkway (DVP)', 'Allen Road', 'Yonge Street', 'Sheppard Avenue', 'Finch Avenue', 'Steeles Avenue'],
+    neighborhoods: ['Willowdale', 'Don Mills', 'Downsview', 'Bayview Village', 'York Mills', 'Lawrence Manor', 'Bathurst Manor', 'Newtonbrook', 'Flemingdon Park', 'Parkwoods', 'Henry Farm', 'Victoria Village', 'Hoggs Hollow', 'Armour Heights', 'Jane & Finch'],
+    landmarks: ['Yorkdale Shopping Centre', 'Fairview Mall', 'Bayview Village Shopping Centre', 'York University (Keele Campus)', 'Downsview Park', 'Ontario Science Centre', 'Mel Lastman Square / North York Centre', 'Sunnybrook Health Sciences Centre', 'North York General Hospital', 'Humber River Hospital'],
+    // Intentionally empty until we have verified Google reviews from North York
+    // customers. Do NOT seed this with invented or borrowed testimonials —
+    // fabricated reviews are an E-E-A-T failure and a legal exposure. Backfill
+    // with real reviews that name the neighbourhood as they come in.
+    testimonials: [],
+    faqs: [
+      {
+        question: 'How fast can you reach me in North York?',
+        answer: 'Typically 20-35 minutes. We keep a unit stationed in North York rather than dispatching across the city. The eastern side — Don Mills, Parkwoods, Victoria Village, Henry Farm — usually sees the fast end of that range. Downsview, Humber Summit, and the Jane & Finch corridor are the long end. We give you a live ETA when you call at ' + PHONE_NUMBER + ' rather than a generic promise.'
+      },
+      {
+        question: 'Can you get into a condo parking garage on the Yonge corridor?',
+        answer: 'Yes — this is one of the most common calls we take in North York. Our service vans are sized for standard residential garage clearance (P1 through P4 in most buildings), so we come to your parking spot instead of asking you to move a car that will not start. Tell dispatch the building address and the level when you call and we will confirm access before we roll. Buildings with unusually low clearance are the one exception, and we will tell you on the phone rather than after we arrive.'
+      },
+      {
+        question: 'Do you cover the 401, 404, and the DVP through North York?',
+        answer: 'Yes, 24/7. The 401 through North York is the widest highway stretch in North America and the collector-express split near Yonge and Allen Road makes a shoulder stop genuinely dangerous. Pull as far right as you safely can, turn on your hazards, stay in the vehicle with your seatbelt on, and call us. We arrive with high-visibility strobes and cones and secure the scene before starting work. If the position is too exposed to work safely, we will tell you and recommend a tow instead.'
+      },
+      {
+        question: 'Is North York more expensive than your home area?',
+        answer: 'No. Our starting prices (tire from $75, jump start from $50, lockout from $65) are the same in North York as in Scarborough, and we do not add "out of zone" or travel surcharges. You get the price on the call before the van rolls. If a job needs extra parts or turns out to be more complex than described, we quote that before starting rather than after.'
+      },
+      {
+        question: 'Do you service the Yorkdale, Fairview, and Bayview Village parking lots?',
+        answer: 'Yes. Mall lots are a regular call for us — a battery that will not turn over after a few hours of shopping, or keys locked in the car at Yorkdale. We service all levels of multi-storey mall parking across North York, plus office lots, TTC commuter lots at Finch and Sheppard, and hospital parking at Sunnybrook, North York General, and Humber River.'
+      },
+      {
+        question: 'Are you the same team with the 4.9-star Google rating?',
+        answer: 'Yes — iFAST Roadside & Mobile Tires, owner-operated, based at 20 Antrim Crescent in Scarborough with a unit stationed in North York. Safi, the owner-technician, answers the phone and does the work. Our review history is on Google if you want to check before calling.'
+      }
+    ],
+    geo: { latitude: 43.7615, longitude: -79.4111 }
   }
 };

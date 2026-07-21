@@ -22,7 +22,6 @@ export interface RegionContent {
   h1Region: string;
   heroIntro: React.ReactNode;
   checkmarks: string[];
-  reviewBadge: string;
   responseTime: string;
   citiesCovered: string[];
   servicesHeading: string;
@@ -58,7 +57,6 @@ export const REGION_CONTENT: Record<string, RegionContent> = {
       </>
     ),
     checkmarks: ['Local East GTA Drivers', 'No Hidden "Out of Zone" Fees', '5-Star Rated Service'],
-    reviewBadge: '90+ East End Reviews',
     responseTime: '< 30 Mins',
     citiesCovered: ['Scarborough', 'Pickering', 'Ajax', 'Whitby', 'Oshawa'],
     servicesHeading: 'What we do in the East End',
@@ -99,7 +97,6 @@ export const REGION_CONTENT: Record<string, RegionContent> = {
       </>
     ),
     checkmarks: ['Condo & Parking-Garage Ready', 'No Hidden "Out of Zone" Fees', '5-Star Rated Service'],
-    reviewBadge: '90+ 5-Star Reviews',
     responseTime: '20-35 Mins',
     citiesCovered: ['Downtown Toronto', 'North York', 'Etobicoke', 'East York', 'York', 'Scarborough'],
     servicesHeading: 'What we do across Toronto',
@@ -140,7 +137,6 @@ export const REGION_CONTENT: Record<string, RegionContent> = {
       </>
     ),
     checkmarks: ['Highway-Safe (401/403/407/QEW)', 'Airport & Commuter Corridors', '5-Star Rated Service'],
-    reviewBadge: '90+ 5-Star Reviews',
     responseTime: '25-40 Mins',
     citiesCovered: ['Mississauga', 'Brampton', 'Oakville', 'Milton'],
     servicesHeading: 'What we do across the West GTA',
@@ -181,7 +177,6 @@ export const REGION_CONTENT: Record<string, RegionContent> = {
       </>
     ),
     checkmarks: ['Covers 404 / 407 / 400 & Hwy 7', 'New Subdivisions & Condo Lots', '5-Star Rated Service'],
-    reviewBadge: '90+ 5-Star Reviews',
     responseTime: '25-40 Mins',
     citiesCovered: ['Markham', 'Vaughan', 'Richmond Hill', 'Aurora', 'Newmarket'],
     servicesHeading: 'What we do across York Region',

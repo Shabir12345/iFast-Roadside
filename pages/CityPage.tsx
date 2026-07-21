@@ -2,11 +2,31 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle, Star, ShieldCheck, ThumbsUp, MapPin, Route, Camera, Circle } from 'lucide-react';
-import { PHONE_NUMBER, COMPANY_NAME, SERVICES } from '../constants';
+import { PHONE_NUMBER, COMPANY_NAME, SERVICES, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { CITY_CONTENT } from '../data/cityContent';
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
+
+// Where the unit that serves each city actually rolls from. Scarborough is the
+// home base (20 Antrim Cres) and North York has its own stationed unit; the
+// Durham cities are all served out of the East GTA hub. Anything not listed
+// falls back to the hub, so adding a city without an entry stays truthful.
+const DISPATCH_ORIGIN: Record<string, string> = {
+  scarborough: 'local base',
+  'north-york': 'stationed North York unit',
+};
+
+// Which region hub each city hangs off, for the breadcrumb trail. Scarborough
+// and North York are Toronto districts; the Durham cities sit under East GTA.
+// Getting this right matters — the breadcrumb is how Google reads the
+// Home > Region > City hierarchy, and pointing every city at East GTA (as this
+// did before North York was added) flattens it.
+const PARENT_REGION: Record<string, { slug: string; name: string }> = {
+  scarborough: { slug: 'toronto', name: 'Toronto' },
+  'north-york': { slug: 'toronto', name: 'Toronto' },
+};
+const DEFAULT_REGION = { slug: 'east-gta', name: 'East GTA' };
 
 const CityPage: React.FC = () => {
   const { city } = useParams<{ city: string }>();
@@ -30,6 +50,7 @@ const CityPage: React.FC = () => {
   }
 
   const canonical = `https://www.ifastroadside.ca/areas/${content.id}`;
+  const parentRegion = PARENT_REGION[content.id] ?? DEFAULT_REGION;
 
   const localBusinessLd = {
     '@context': 'https://schema.org',
@@ -63,8 +84,8 @@ const CityPage: React.FC = () => {
     },
     'aggregateRating': {
       '@type': 'AggregateRating',
-      'ratingValue': '4.9',
-      'reviewCount': '94'
+      'ratingValue': String(GOOGLE_RATING),
+      'reviewCount': String(GOOGLE_REVIEWS_COUNT)
     },
     'openingHoursSpecification': {
       '@type': 'OpeningHoursSpecification',
@@ -79,7 +100,7 @@ const CityPage: React.FC = () => {
     '@type': 'BreadcrumbList',
     'itemListElement': [
       { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://www.ifastroadside.ca/' },
-      { '@type': 'ListItem', 'position': 2, 'name': 'Service Areas', 'item': 'https://www.ifastroadside.ca/service-area/east-gta' },
+      { '@type': 'ListItem', 'position': 2, 'name': parentRegion.name, 'item': `https://www.ifastroadside.ca/service-area/${parentRegion.slug}` },
       { '@type': 'ListItem', 'position': 3, 'name': content.name, 'item': canonical }
     ]
   };
@@ -131,7 +152,7 @@ const CityPage: React.FC = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
-              {content.tagline}. Mobile tire repair, jump starts, lockouts, fuel delivery, and emergency towing — dispatched from our {content.name === 'Scarborough' ? 'local base' : 'East GTA hub'} in {content.responseTime}.
+              {content.tagline}. Mobile tire repair, jump starts, lockouts, fuel delivery, and emergency towing — dispatched from our {DISPATCH_ORIGIN[content.id] ?? 'East GTA hub'} in {content.responseTime}.
             </p>
 
             <div className="space-y-4 mb-10">
@@ -141,7 +162,7 @@ const CityPage: React.FC = () => {
               </div>
               <div className="flex items-center gap-3 text-base md:text-lg font-bold text-gray-800">
                 <CheckCircle className="text-green-500 flex-shrink-0" size={24} />
-                <span className="border-b-2 border-brand-yellow/30">4.9★ / 94+ Google Reviews</span>
+                <span className="border-b-2 border-brand-yellow/30">{GOOGLE_RATING}★ / {GOOGLE_REVIEWS_COUNT}+ Google Reviews</span>
               </div>
               <div className="flex items-center gap-3 text-base md:text-lg font-bold text-gray-800">
                 <CheckCircle className="text-green-500 flex-shrink-0" size={24} />
@@ -187,17 +208,19 @@ const CityPage: React.FC = () => {
             </div>
 
             <div className="absolute bottom-8 left-4 right-4 md:left-8 md:right-8 bg-white/95 backdrop-blur-md rounded-2xl p-5 md:p-6 flex items-center justify-between shadow-2xl border border-white/20">
+              {/* Real Google rating. This used to be a row of i.pravatar.cc
+                  placeholder faces labelled "<city> customer" next to a review
+                  count — fabricated trust signals sitting beside a review claim.
+                  The genuine rating is a stronger signal than stock portraits.
+                  Note the copy says "Google Reviews", not "<city> Area Reviews":
+                  the reviews are for the business, not for that district. */}
               <div className="flex items-center gap-4">
-                <div className="flex -space-x-4">
-                  {[1, 2, 3, 4].map((i) => (
-                    <img key={i} src={`https://i.pravatar.cc/100?img=${20 + i}`} alt={`${content.name} customer`} className="w-12 h-12 rounded-full border-2 border-white object-cover shadow-sm" />
-                  ))}
-                </div>
-                <div className="hidden sm:block">
+                <div className="text-4xl md:text-5xl font-black text-brand-dark leading-none">{GOOGLE_RATING}</div>
+                <div>
                   <div className="flex text-brand-yellow mb-1">
                     {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
                   </div>
-                  <div className="text-sm font-bold text-brand-dark">94+ {content.name} Area Reviews</div>
+                  <div className="text-sm font-bold text-brand-dark">{GOOGLE_REVIEWS_COUNT}+ Google Reviews</div>
                 </div>
               </div>
               <div className="text-right border-l-2 border-gray-100 pl-4 md:pl-6">
@@ -294,7 +317,11 @@ const CityPage: React.FC = () => {
       <Process />
 
       <div className="container mx-auto px-4 py-16">
-        {/* Local testimonials */}
+        {/* Local testimonials. Rendered only when we actually have verified
+            reviews for this city — a city page that has just launched carries an
+            empty array rather than invented quotes, and an empty heading with no
+            cards under it reads as broken. */}
+        {content.testimonials.length > 0 && (
         <div className="max-w-4xl mx-auto mb-20">
           <h2 className="text-3xl md:text-4xl font-black text-brand-dark mb-8 text-center">What {content.name} drivers say</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -312,6 +339,7 @@ const CityPage: React.FC = () => {
             ))}
           </div>
         </div>
+        )}
 
         {/* FAQ */}
         <div className="bg-brand-dark p-8 md:p-16 rounded-[3rem] premium-shadow border border-gray-800 text-white max-w-5xl mx-auto mb-20 relative overflow-hidden">

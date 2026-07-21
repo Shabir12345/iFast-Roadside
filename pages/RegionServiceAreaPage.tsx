@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { PhoneCall, ShieldCheck, ThumbsUp, Clock, CheckCircle, Star, MapPin } from 'lucide-react';
-import { PHONE_NUMBER } from '../constants';
+import { PHONE_NUMBER, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import Services from '../components/Services';
@@ -109,15 +109,13 @@ const RegionServiceAreaPage: React.FC = () => {
 
             {/* Floating Trust Badge on Image */}
             <div className="absolute bottom-8 left-4 right-4 md:left-8 md:right-8 bg-white/95 backdrop-blur-md rounded-2xl p-5 md:p-6 flex items-center justify-between shadow-2xl border border-white/20 transform hover:scale-[1.02] transition-transform">
+              {/* Real Google rating — replaced a row of i.pravatar.cc
+                  placeholder faces labelled "happy customer". See CityPage.tsx. */}
               <div className="flex items-center gap-4">
-                <div className="flex -space-x-4">
-                  {[1, 2, 3, 4].map((i) => (
-                    <img key={i} src={`https://i.pravatar.cc/100?img=${i + 40}`} alt="happy customer" className="w-12 h-12 rounded-full border-2 border-white object-cover shadow-sm transition-transform hover:z-10 hover:scale-110" />
-                  ))}
-                </div>
-                <div className="hidden sm:block">
+                <div className="text-4xl md:text-5xl font-black text-brand-dark leading-none">{GOOGLE_RATING}</div>
+                <div>
                   <div className="flex text-brand-yellow mb-1"><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /></div>
-                  <div className="text-sm font-bold text-brand-dark">{content.reviewBadge}</div>
+                  <div className="text-sm font-bold text-brand-dark">{GOOGLE_REVIEWS_COUNT}+ Google Reviews</div>
                 </div>
               </div>
               <div className="text-right border-l-2 border-gray-100 pl-4 md:pl-6">

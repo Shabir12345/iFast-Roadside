@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle2, Star, ShieldCheck, MapPin, Camera, Zap } from 'lucide-react';
-import { SERVICES, PHONE_NUMBER, COMPANY_NAME } from '../constants';
+import { SERVICES, PHONE_NUMBER, COMPANY_NAME, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { CITY_CONTENT } from '../data/cityContent';
 import { SERVICE_CITY_CONTENT } from '../data/serviceCityContent';
 import Process from '../components/Process';
@@ -25,6 +25,8 @@ const NOINDEX_COMBOS = new Set<string>([
   'lockout/ajax', 'lockout/whitby', 'lockout/oshawa',
   'fuel/scarborough', 'fuel/ajax', 'fuel/whitby', 'fuel/oshawa',
   'towing/scarborough', 'towing/pickering', 'towing/ajax', 'towing/whitby', 'towing/oshawa',
+  // North York wave 2b — see the matching note in scripts/prerender.mjs.
+  'fuel/north-york', 'towing/north-york',
 ]);
 
 const ServiceCityPage: React.FC = () => {
@@ -76,7 +78,7 @@ const ServiceCityPage: React.FC = () => {
         'addressCountry': 'CA'
       },
       'geo': { '@type': 'GeoCoordinates', 'latitude': 43.7290, 'longitude': -79.2790 },
-      'aggregateRating': { '@type': 'AggregateRating', 'ratingValue': '4.9', 'reviewCount': '94' }
+      'aggregateRating': { '@type': 'AggregateRating', 'ratingValue': String(GOOGLE_RATING), 'reviewCount': String(GOOGLE_REVIEWS_COUNT) }
     },
     'areaServed': {
       '@type': 'City',
@@ -208,17 +210,15 @@ const ServiceCityPage: React.FC = () => {
 
             {/* Floating Trust Card */}
             <div className="absolute bottom-6 left-6 right-6 lg:bottom-12 lg:left-12 lg:right-12 bg-white rounded-2xl p-5 md:p-6 flex items-center justify-between shadow-[0_20px_40px_rgba(0,0,0,0.2)] border-b-4 border-brand-yellow">
+              {/* Real Google rating — replaced a row of i.pravatar.cc
+                  placeholder faces labelled "customer". See CityPage.tsx. */}
               <div className="flex items-center gap-4">
-                <div className="flex -space-x-4">
-                  {[1, 2, 3].map((i) => (
-                    <img key={i} src={`https://i.pravatar.cc/100?img=${30 + i}`} alt="customer" className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white object-cover shadow-sm bg-gray-200" />
-                  ))}
-                </div>
+                <div className="text-3xl md:text-4xl font-black text-brand-dark leading-none">{GOOGLE_RATING}</div>
                 <div>
                   <div className="flex text-yellow-500 mb-1">
                     {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                   </div>
-                  <div className="text-xs md:text-sm font-bold text-brand-dark">{cityData.name} Ratings</div>
+                  <div className="text-xs md:text-sm font-bold text-brand-dark">{GOOGLE_REVIEWS_COUNT}+ Google Reviews</div>
                 </div>
               </div>
               <div className="text-right border-l border-gray-100 pl-4 md:pl-6">

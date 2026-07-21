@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { PHONE_NUMBER, COMPANY_NAME } from '../constants';
+import { PHONE_NUMBER, COMPANY_NAME, GOOGLE_RATING } from '../constants';
 import { SERVICE_CONTENT } from '../data/serviceContent';
 import { CITY_CONTENT } from '../data/cityContent';
 import { 
@@ -128,16 +128,14 @@ const MobileMechanicLanding: React.FC = () => {
                   Request Service Now
                 </a>
                 <div className="flex items-center gap-4 bg-gray-50 px-6 py-4 rounded-2xl border border-gray-100">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3].map(i => (
-                      <img key={i} src={`https://i.pravatar.cc/100?img=${20+i}`} className="w-10 h-10 rounded-full border-2 border-white" alt="Customer" />
-                    ))}
-                  </div>
+                  {/* Real Google rating — replaced a row of i.pravatar.cc
+                      placeholder faces labelled "Customer". See CityPage.tsx. */}
+                  <div className="text-3xl font-black text-brand-dark leading-none">{GOOGLE_RATING}</div>
                   <div>
                     <div className="flex text-yellow-500">
                       {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                     </div>
-                    <p className="text-xs font-bold text-gray-500">{reviewsCount}+ Happy Clients</p>
+                    <p className="text-xs font-bold text-gray-500">{reviewsCount}+ Google Reviews</p>
                   </div>
                 </div>
               </div>

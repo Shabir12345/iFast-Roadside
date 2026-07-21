@@ -1,6 +1,6 @@
 import React from 'react';
 import { PhoneCall } from 'lucide-react';
-import { PHONE_NUMBER, COMPANY_NAME } from '../constants';
+import { PHONE_NUMBER, COMPANY_NAME, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
 
 const InlineCall = ({ source }: { source: string }) => (
@@ -35,13 +35,76 @@ export interface ServiceCityContent {
 }
 
 type ServiceId = 'mobile-mechanic' | 'tire-change' | 'jump-start' | 'lockout' | 'fuel' | 'towing';
-type CityId = 'scarborough' | 'pickering' | 'ajax' | 'whitby' | 'oshawa';
+type CityId = 'scarborough' | 'pickering' | 'ajax' | 'whitby' | 'oshawa' | 'north-york';
 
 export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityContent>> = {
   /* =========================================================================
      MOBILE MECHANIC
      ========================================================================= */
   'mobile-mechanic': {
+    'north-york': {
+      seoTitle: 'Mobile Mechanic North York | Car Repair At Your Home — iFAST',
+      seoDescription: 'Mobile mechanic in North York — diagnostics, brakes, batteries, and pre-purchase inspections at your home, office, or condo garage. Willowdale, Don Mills, Downsview.',
+      keywords: 'mobile mechanic North York, car repair at home North York, mobile car repair Willowdale, mechanic comes to you North York, mobile diagnostics Don Mills, pre purchase inspection North York, mobile brake repair Downsview',
+      h1: 'Mobile Mechanic in North York — Repairs At Your Home or Office',
+      intro: (
+        <>
+          <p className="mb-4">
+            Most repairs that keep a car off the road do not actually need a hoist. Diagnostics, batteries, starters, alternators, brakes, belts, sensors, and pre-purchase inspections can all be done properly where the car is parked. <strong>{COMPANY_NAME}</strong> brings the tools and the diagnostic scanner to your driveway in Willowdale, your office lot at North York Centre, or your condo garage on the Yonge corridor — no drop-off, no shuttle, no day off work.
+          </p>
+          <p className="mb-4">
+            We run a unit stationed in North York, so scheduled work usually fits the same or next day and roadside diagnostics arrive in <strong>20-35 minutes</strong>. You get told what is actually wrong, what it will cost, and — importantly — whether it is something we can do on-site or something that genuinely needs a shop. <strong>Call {PHONE_NUMBER}.</strong>
+          </p>
+          <InlineCall source="service_city_mobile-mechanic_north-york_intro" />
+        </>
+      ),
+      localScenario: (
+        <>
+          <p className="mb-4">
+            The North York job that comes up more than any other is the pre-purchase inspection. This district has a dense private-sale market, and the pattern is always the same: a buyer meets a seller in a plaza lot off Sheppard or Finch, has forty minutes, and no way to get the car onto a hoist before handing over several thousand dollars. We meet you there, scan the computer for stored and pending fault codes, check the frame and underbody for accident repair, test the battery and charging system, and give you a straight read on whether to walk away. That inspection routinely saves people more than a year of repair bills.
+          </p>
+          <p className="mb-4">
+            The second pattern is condo residents with no driveway. If you live between Sheppard and Finch on Yonge, you have nowhere to leave a car for a mechanic and no way to be in two places while it is in a shop. We work in the parking spot. Our vans clear standard residential garage heights, so brake jobs, battery and starter replacement, and diagnostics happen on P2 while you are upstairs. Tell dispatch the building and level so we can confirm clearance first.
+          </p>
+          <p className="mb-4">
+            The rest is ordinary daily work across Don Mills, Bayview Village, York Mills, Lawrence Manor, Bathurst Manor, and Downsview: a check-engine light that needs reading before it becomes expensive, brakes that started grinding on the DVP, a car that cranks but will not catch in an office lot at 6pm.
+          </p>
+        </>
+      ),
+      uniqueAngle: (
+        <>
+          <p className="mb-4">
+            The value of a mobile mechanic is not only convenience — it is that you are standing there. When we pull a code or show you a worn pad, you see the actual part on your actual car, and you decide with the information in front of you rather than over the phone from a service advisor you have never met. Nothing gets done that you have not agreed to first.
+          </p>
+          <p className="mb-4">
+            We are also clear about our limits, which is the part that matters most. Engine internals, transmission work, exhaust welding, and anything needing a hoist or alignment rack belong in a shop, and we will tell you that instead of starting a job we cannot finish in a parking garage. {COMPANY_NAME} is owner-operated — <strong>Safi</strong> answers the phone, does the diagnosis, and does the repair, so nothing is lost between the person who quoted you and the person holding the wrench.
+          </p>
+        </>
+      ),
+      priceNote: 'Diagnostics and pre-purchase inspections are quoted as a flat fee on the call. Repairs are quoted after diagnosis and before any work starts — parts and labour separated so you can see what you are paying for. No "out of zone" charge for North York. If the honest answer is that the job needs a shop, we tell you and you pay for the diagnosis, not for a repair we could not complete.',
+      faqs: [
+        {
+          question: 'What repairs can you actually do on-site in North York?',
+          answer: 'Computer diagnostics and fault-code reading, battery and alternator and starter replacement, brake pads and rotors, belts and hoses, sensors, filters, fluid top-ups and changes, tire work, and full pre-purchase inspections. What we cannot do on-site is anything needing a hoist or an alignment rack — engine internals, transmission work, exhaust welding, suspension geometry. We will tell you which category your problem is in before dispatching.'
+        },
+        {
+          question: 'Can you do a pre-purchase inspection on a private sale?',
+          answer: 'Yes, and it is one of our most requested North York jobs. We meet you and the seller wherever the car is, usually within the window you have arranged. We scan for stored and pending codes, check the underbody and frame for accident repair and rust, test the battery and charging system, check brakes and tires, and give you a plain verdict. Bring us in before money changes hands — the inspection costs a fraction of what a bad private-sale car costs.'
+        },
+        {
+          question: 'Can you work on my car in a condo parking garage?',
+          answer: 'Yes. Our vans clear standard residential garage heights on P1 through P4 in most Yonge corridor buildings, which is what makes this practical for condo residents who have nowhere else to leave a car. Give dispatch the building address and parking level when you book so we can confirm clearance. Some buildings restrict maintenance work in the garage, so it is worth a quick check with your property manager for anything beyond a battery or a diagnostic.'
+        },
+        {
+          question: 'Is a mobile mechanic more expensive than a shop?',
+          answer: 'Generally no, and often less. We carry no bay rent or service-advisor overhead, and you save the hidden costs a shop visit adds — a day off work, a rental, or a tow to get the car there in the first place. Where a shop wins is on jobs needing a hoist, which is exactly why we tell you when your job is one of those rather than quoting you for something we should not be doing in a driveway.'
+        },
+        {
+          question: 'Do you need power or a specific kind of space?',
+          answer: 'No. The van is self-sufficient — our own power, lighting, and tools. We need a reasonably level parking spot with enough room to open the doors and work at the wheels. A driveway, an office lot, a condo parking space, or a plaza lot all work. We do not work on a live traffic lane; if the car is somewhere unsafe we will move it or tow it to somewhere it can be worked on properly.'
+        }
+      ]
+    },
     scarborough: {
       seoTitle: 'Mobile Mechanic Scarborough | 24/7 On-Site Auto Repair — iFAST Roadside',
       seoDescription: 'Need a mechanic in Scarborough? iFAST provides 24/7 mobile mechanic services across Agincourt, Malvern, and the 401. Expert diagnostics and on-site repair. 20-30 min arrival. Call now.',
@@ -282,6 +345,69 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
      MOBILE TIRE SERVICE
      ========================================================================= */
   'tire-change': {
+    'north-york': {
+      seoTitle: 'Mobile Tire Change North York | 24/7 Flat Tire Repair — iFAST',
+      seoDescription: 'Flat tire in North York? We come to your driveway, condo garage, or the 401 shoulder — Willowdale, Don Mills, Downsview, Yorkdale. 20-35 min, 24/7. Call for a quote.',
+      keywords: 'mobile tire change North York, flat tire repair North York, emergency tire change North York, mobile tire Willowdale, flat tire Don Mills, 401 flat tire North York, nail in tire Downsview, tire repair Yorkdale',
+      h1: 'Mobile Tire Change in North York — 24/7 Flat Tire Repair',
+      intro: (
+        <>
+          <p className="mb-4">
+            A flat in North York usually means one of three things: a nail picked up in a construction zone off Sheppard or Finch, a slow leak that finally went flat overnight in a condo garage, or a sidewall opened up by a pothole on Allen Road. <strong>{COMPANY_NAME}</strong> brings the tire shop to the car instead of making you limp it to a bay on a donut. We run a unit stationed in North York, so typical arrival is <strong>20-35 minutes</strong>, 24 hours a day.
+          </p>
+          <p className="mb-4">
+            The vans carry a plug-patch kit, common 15"–20" sizes for sedans, SUVs, and light trucks, and a computerized balancer. A tread puncture gets repaired on the spot; a tire that genuinely cannot be saved gets a real replacement rather than a spare that limits you to 80 km/h. Most jobs are finished inside 45 minutes of arrival. <strong>Call {PHONE_NUMBER} for a no-obligation quote.</strong>
+          </p>
+          <InlineCall source="service_city_tire-change_north-york_intro" />
+        </>
+      ),
+      localScenario: (
+        <>
+          <p className="mb-4">
+            The single most common North York tire call we take is in a condo garage on the Yonge corridor between Sheppard and Finch. A tire goes soft over a few days, the driver finds it flat on P2 or P3, and there is no realistic way to get the car to a shop. Most tire services cannot help — a flatbed will not clear the garage entrance. Our vans are sized for standard residential parking levels, so we work on the car where it is parked. Give dispatch the building and level when you call and we will confirm clearance before rolling.
+          </p>
+          <p className="mb-4">
+            The highway calls are a different job entirely. The 401 through North York is the widest stretch of highway on the continent, and the collector-express split near Yonge and Allen Road can leave a stopped car pinned between two live traffic streams. Allen Road itself has short merges and, for much of its run, no shoulder worth stopping on. On those calls we arrive with high-visibility strobes and cones and secure the scene before touching the wheel — and if the position is genuinely unsafe to work in, we will say so and recommend a short tow to a safe spot rather than put a technician and a customer next to moving traffic.
+          </p>
+          <p className="mb-4">
+            Everything else is ordinary and quick: driveways in Bayview Village and York Mills, the multi-storey lots at Yorkdale and Fairview, TTC commuter parking at Finch and Sheppard, and staff lots at Sunnybrook, North York General, and Humber River.
+          </p>
+        </>
+      ),
+      uniqueAngle: (
+        <>
+          <p className="mb-4">
+            {COMPANY_NAME} is owner-operated. <strong>Safi</strong>, the owner-technician, answers the phone and does the work — you are not routed through a call centre that subcontracts the job to whoever is cheapest that night. That matters most on the calls where the honest answer is not the profitable one: if your tire can be patched, we patch it rather than selling you a replacement.
+          </p>
+          <p className="mb-4">
+            Two North York specifics worth knowing. First, pothole season on Allen Road and the Downsview stretch of Sheppard does real sidewall damage, and sidewall damage cannot be safely repaired — we will tell you that on the phone so you know a replacement is likely before we arrive. Second, we keep winter-rated common sizes on the van from November through March, because a cold snap here reliably turns marginal tires into flat ones overnight.
+          </p>
+        </>
+      ),
+      priceNote: 'You get the price on the call, before the van rolls. Our North York rates are the same as our home area — no "out of zone" surcharge, no distance fee, no after-hours premium. If a tire turns out to need replacing rather than repairing, we quote that before starting the work, not after.',
+      faqs: [
+        {
+          question: 'Can you change a tire inside a North York condo parking garage?',
+          answer: 'Yes, and it is one of our most common calls here. Our service vans fit standard residential garage clearance on P1 through P4 in most Yonge corridor buildings, so we work on the car in its parking spot. Tell dispatch the building address and level when you call and we will confirm access before we roll. A small number of older buildings have unusually low clearance — we will tell you that on the phone rather than after arriving.'
+        },
+        {
+          question: 'How fast can you reach me for a flat in North York?',
+          answer: 'Typically 20-35 minutes, from a unit stationed in North York rather than dispatched across the city. Don Mills, Parkwoods, Victoria Village, and Henry Farm are usually at the fast end. Willowdale, Bayview Village, and York Mills sit in the middle. Downsview, Humber Summit, and the Jane & Finch corridor are the long end. You get a live ETA on the call.'
+        },
+        {
+          question: 'Do you carry a tire for my car on the North York van?',
+          answer: 'We stock most common sedan, SUV, and light-truck sizes from 15" to 20". Call with your make, model, and year and we will confirm before dispatch. If we do not have your exact tire, we can repair the original or mount your spare on-site and pre-order the correct tire for a quick follow-up.'
+        },
+        {
+          question: 'My tire was damaged by a pothole on Allen Road — can it be repaired?',
+          answer: 'It depends where the damage is. A puncture in the tread can almost always be plugged or patched. Damage to the sidewall cannot be safely repaired at any shop — the sidewall flexes constantly and a patch there will fail, often at speed. Pothole impacts tend to hit the sidewall, so replacement is more likely. We will assess it on-site and show you what we are looking at before quoting.'
+        },
+        {
+          question: 'Can you help on the 401 or the DVP through North York?',
+          answer: 'Yes, 24/7. Pull as far right as you safely can, put your hazards on, and stay in the vehicle with your seatbelt fastened while you call. We arrive with high-visibility strobes and cones and secure the scene before starting. On the most exposed stretches — the collector-express split near Yonge, or Allen Road where there is effectively no shoulder — we may recommend a short tow to a safe location instead of a roadside repair. That is a safety call, not an upsell.'
+        }
+      ]
+    },
     scarborough: {
       seoTitle: 'Mobile Tire Change Scarborough | 24/7 Flat Tire Repair — iFAST',
       seoDescription: 'Flat tire in Scarborough? iFAST brings the tire shop to your driveway or the 401 shoulder — Agincourt, Malvern, Woburn. 15-25 min, 24/7. Call for a quote.',
@@ -311,7 +437,7 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
       uniqueAngle: (
         <>
           <p className="mb-4">
-            {COMPANY_NAME} is owner-operated, and the name you'll see across our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who answers the phone and does the work himself. One Scarborough-area review captures how a tire call goes:
+            {COMPANY_NAME} is owner-operated, and the name you'll see across our {GOOGLE_REVIEWS_COUNT} Google reviews is <strong>Safi</strong> — the owner-technician who answers the phone and does the work himself. One Scarborough-area review captures how a tire call goes:
           </p>
           <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
             "Best Service and fast service my car Tire got flat and I called them They came in 10 minutes and they repair it in 5 minutes and they charge me fair price..." <strong>— Sha Zahim, verified Google review</strong>
@@ -417,7 +543,7 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
       uniqueAngle: (
         <>
           <p className="mb-4">
-            {COMPANY_NAME} is owner-operated, and the name across our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who picks up the phone and does the work himself. One review sums up the no-tools, fast-fix situation we handle constantly:
+            {COMPANY_NAME} is owner-operated, and the name across our {GOOGLE_REVIEWS_COUNT} Google reviews is <strong>Safi</strong> — the owner-technician who picks up the phone and does the work himself. One review sums up the no-tools, fast-fix situation we handle constantly:
           </p>
           <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
             "I got a flat tire yesterday and didn't have the right tools with me... From the moment I called until the technician arrived and changed the tire, it took less than 20 minutes!" <strong>— Mohammad Badakhash, verified Google review</strong>
@@ -547,6 +673,66 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
      JUMP START / BATTERY BOOST
      ========================================================================= */
   'jump-start': {
+    'north-york': {
+      seoTitle: 'Jump Start & Battery Boost North York | 24/7 Mobile — iFAST',
+      seoDescription: 'Dead battery in North York? Mobile boost and battery replacement in Willowdale, Don Mills, Downsview, Yorkdale — including condo garages. 20-35 min, 24/7. Call now.',
+      keywords: 'jump start North York, battery boost North York, car battery replacement North York, dead battery Willowdale, boost service Don Mills, battery Downsview, condo garage boost North York, 24 hour battery North York',
+      h1: 'Jump Start & Battery Boost in North York — 24/7 Mobile Service',
+      intro: (
+        <>
+          <p className="mb-4">
+            A dead battery is the most common call we take in North York, and the reason is structural: this district has more underground residential parking than anywhere else in the city outside downtown. Cars sit unused for days in cold garages, short trips never fully recharge the battery, and one cold morning it will not turn over. <strong>{COMPANY_NAME}</strong> runs a stationed North York unit, so a boost typically arrives in <strong>20-35 minutes</strong>, any hour.
+          </p>
+          <p className="mb-4">
+            We do not just jump it and leave. Every boost includes a charging-system test — we check whether the alternator is actually replacing the charge, because a car that needs a second boost the next morning did not have a battery problem, it had a charging problem. If the battery genuinely is finished, we carry common group sizes and can replace it on the spot. <strong>Call {PHONE_NUMBER}.</strong>
+          </p>
+          <InlineCall source="service_city_jump-start_north-york_intro" />
+        </>
+      ),
+      localScenario: (
+        <>
+          <p className="mb-4">
+            The Yonge corridor condo garages between Sheppard and Finch are where most of these calls come from, and they are exactly the calls that generic roadside services struggle with. A tow truck cannot get down to P3. CAA-style dispatch will often send one anyway and then tell you they cannot help once they arrive. Our vans clear standard residential garage heights, so we come to the parking spot. Have the building address and the level ready when you call and we will confirm access before dispatching rather than after.
+          </p>
+          <p className="mb-4">
+            The other reliable pattern is the commuter lots. Finch and Sheppard TTC parking, the GO lots, and the all-day office parking around North York Centre produce a steady stream of 6pm calls — the car sat for nine hours in the cold and will not start when everyone is trying to get home. Mall lots at Yorkdale, Fairview, and Bayview Village do the same on winter weekends. We handle all of them, and we handle hospital staff parking at Sunnybrook, North York General, and Humber River at shift change, which is its own predictable rush.
+          </p>
+        </>
+      ),
+      uniqueAngle: (
+        <>
+          <p className="mb-4">
+            The honest version of this service matters more than the fast version. Plenty of operators will boost a car, take the fee, and drive away knowing perfectly well the driver will be stranded again in twelve hours. We test the charging system on every call and tell you which of the three things is actually wrong: a battery at end of life, an alternator not charging, or a parasitic draw pulling the battery down overnight. Only the first is fixed by a new battery.
+          </p>
+          <p className="mb-4">
+            A North York-specific note on cold: batteries lose a large share of their cranking power below freezing, and a battery that is merely weak in October will be dead in January. If we boost you in the fall and the battery tests marginal, we will tell you — not to sell you something, but because a planned replacement in a warm garage is a much better experience than a dead car at Finch station in a February storm. {COMPANY_NAME} is owner-operated, and <strong>Safi</strong> does the work himself.
+          </p>
+        </>
+      ),
+      priceNote: 'Jump start starts at $50, quoted on the call before we dispatch. Battery replacement is quoted separately once we know the group size your vehicle takes. No "out of zone" fee for North York, no after-hours premium, and no charge for the charging-system test — it comes with the boost.',
+      faqs: [
+        {
+          question: 'Can you boost my car in an underground condo garage in North York?',
+          answer: 'Yes — this is the single most common battery call we get here, and it is the one most roadside services cannot actually do. Our vans clear standard residential garage heights on P1 through P4 in most Yonge corridor buildings, so we come to your parking spot. Give dispatch the building address and level when you call so we can confirm clearance before rolling. A few older buildings have unusually low ceilings and we will tell you on the phone if yours is one.'
+        },
+        {
+          question: 'How fast can you get to me in North York for a boost?',
+          answer: 'Typically 20-35 minutes from a unit stationed in the district. Don Mills, Parkwoods, Victoria Village, and Henry Farm are usually fastest. Downsview, Humber Summit, and Jane & Finch are the long end of the range. Winter mornings are our peak volume, so call as early as you can — you get a live ETA on the phone.'
+        },
+        {
+          question: 'My car needed a boost again the next day. What is wrong?',
+          answer: 'Almost certainly not the jump start. If a car dies again within a day, the battery is either at end of life, the alternator is not recharging it while you drive, or something is drawing power while the car is off. We test the charging system on every boost specifically so you find this out on the first call rather than the third. If we boosted you and it died again, call us back and we will diagnose it properly.'
+        },
+        {
+          question: 'Do you replace batteries on-site, or only boost?',
+          answer: 'Both. We carry common group sizes on the van and can replace a battery where your car is parked, including in a condo garage. Call with your make, model, and year and we will confirm we have the right battery before dispatch. We also dispose of the old battery properly, which is part of the job, not an extra.'
+        },
+        {
+          question: 'Is a boost safe for a modern car with sensitive electronics?',
+          answer: 'Yes, when it is done with proper equipment. We use professional jump packs with reverse-polarity and surge protection rather than clamping to another running vehicle, which is where most electrical damage on modern cars actually comes from. Hybrid and start-stop systems have their own requirements and we handle those regularly — mention the vehicle type when you call.'
+        }
+      ]
+    },
     scarborough: {
       seoTitle: 'Car Battery Jump Start Scarborough | 24/7 Boost — iFAST',
       seoDescription: 'Dead battery in Scarborough? iFAST delivers 24/7 jump start and battery boost across Agincourt, Malvern, Woburn, and the 401. 15-25 min arrival. Call for a quote.',
@@ -576,7 +762,7 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
       uniqueAngle: (
         <>
           <p className="mb-4">
-            {COMPANY_NAME} is owner-operated, and the name behind our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who answers and does the work himself. Two of our battery reviews lead with the same thing: fast arrival and an honest, upfront price.
+            {COMPANY_NAME} is owner-operated, and the name behind our {GOOGLE_REVIEWS_COUNT} Google reviews is <strong>Safi</strong> — the owner-technician who answers and does the work himself. Two of our battery reviews lead with the same thing: fast arrival and an honest, upfront price.
           </p>
           <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
             "My mom had an issue with a car battery and was stuck in a parking lot—they got there quickly and were super helpful. They spoke us through possible solutions and were super transparent about how much they charge. Very reliable!" <strong>— Shanthuru Kalaiselvan, verified Google review</strong>
@@ -635,7 +821,7 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
       uniqueAngle: (
         <>
           <p className="mb-4">
-            {COMPANY_NAME} is owner-operated, and the name behind our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who answers the phone and does the work himself, even in the middle of the night. One battery review captures exactly that:
+            {COMPANY_NAME} is owner-operated, and the name behind our {GOOGLE_REVIEWS_COUNT} Google reviews is <strong>Safi</strong> — the owner-technician who answers the phone and does the work himself, even in the middle of the night. One battery review captures exactly that:
           </p>
           <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
             "Called him around 2am and he arrived in 15 minutes, my car won't start, it needs a battery powered" <strong>— oyindamola aworele, verified Google review</strong>
@@ -812,6 +998,70 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
      CAR LOCKOUT
      ========================================================================= */
   'lockout': {
+    'north-york': {
+      seoTitle: 'Car Lockout Service North York | 24/7 Damage-Free Unlock — iFAST',
+      seoDescription: 'Locked out in North York? Damage-free car unlocking in Willowdale, Don Mills, Downsview, Yorkdale, and condo garages. 20-35 min, 24/7. Call for a quote.',
+      keywords: 'car lockout North York, locked keys in car North York, car unlock North York, 24/7 car unlocking North York, auto lockout Willowdale, car lockout Yorkdale, keys locked in car Don Mills, emergency unlock Downsview',
+      h1: 'Car Lockout Service in North York — 24/7 Damage-Free Unlocking',
+      intro: (
+        <>
+          <p className="mb-4">
+            Keys on the seat and the door already shut. It happens at Yorkdale with a trunk full of shopping, in a condo garage at midnight, at a Finch commuter lot with a train to catch, and in a driveway in Willowdale while the engine is still running. <strong>{COMPANY_NAME}</strong> unlocks it without damaging the door, the glass, or the weather seal — typically <strong>20-35 minutes</strong> from a unit stationed in North York, 24 hours a day.
+          </p>
+          <p className="mb-4">
+            We use professional wedge and long-reach tools, not a coat hanger and not a slim jim, which on any car built in the last two decades is a fast way to destroy the wiring and side-airbag hardware inside the door. Most vehicles are open in five to ten minutes once we are on scene. <strong>Call {PHONE_NUMBER} for a quote before we dispatch.</strong>
+          </p>
+          <InlineCall source="service_city_lockout_north-york_intro" />
+        </>
+      ),
+      localScenario: (
+        <>
+          <p className="mb-4">
+            North York lockouts cluster in three places. The mall lots — Yorkdale, Fairview, Bayview Village — generate the daytime calls, usually with the keys visible on the driver's seat and a car full of bags. The Yonge corridor condo garages generate the overnight ones, and those are the calls where access matters as much as the unlock: we need you to meet us at the elevator or buzz us in, because we cannot reach a car on P3 without getting into the building. Have the unit number ready and let dispatch know if there is a concierge.
+          </p>
+          <p className="mb-4">
+            The third is commuter parking — Finch and Sheppard TTC lots, GO parking, and the office lots around North York Centre. Those calls come in tight windows at either end of the day and we prioritise them accordingly. One situation we treat as urgent regardless of queue: a child or a pet locked in a vehicle. Tell dispatch immediately if that is the case and call 911 as well — we will roll the closest unit and we will not put you in a queue behind a shopping trip.
+          </p>
+        </>
+      ),
+      uniqueAngle: (
+        <>
+          <p className="mb-4">
+            There is a real difference between a roadside unlock and a locksmith, and being straight about it saves you money. We open locked vehicles. We do not cut or program new keys. If your key is genuinely lost or broken off in the lock rather than sitting inside the cabin, an automotive locksmith is the right call and we will tell you that on the phone rather than sending a van to a job we cannot finish.
+          </p>
+          <p className="mb-4">
+            We also ask for proof the car is yours before we open it. Ownership, insurance, or a licence matching the registration is normal and we ask every time. Anyone who opens a car without asking will do the same for the person stealing yours. {COMPANY_NAME} is owner-operated and insured, and <strong>Safi</strong> answers the phone and does the work — so the person quoting you is the person who shows up.
+          </p>
+        </>
+      ),
+      priceNote: 'Lockout starts at $65, quoted on the call before the van rolls. No "out of zone" fee for North York and no overnight premium — a 3am unlock in Downsview is priced the same as a 3pm one at Yorkdale. If the job turns out to need a locksmith rather than a roadside unlock, we tell you before dispatch, not after.',
+      faqs: [
+        {
+          question: 'Will unlocking my car cause any damage?',
+          answer: 'No. We use professional inflatable wedges and long-reach tools designed for the job, which is why we can work on modern vehicles without harming the door frame, glass, weather sealing, or the wiring and side-airbag components inside the door panel. The coat-hanger and slim-jim methods people try first are exactly what causes expensive damage on cars built in the last twenty years. We are insured, and we work damage-free.'
+        },
+        {
+          question: 'Can you reach my car if it is in a condo garage on the Yonge corridor?',
+          answer: 'Yes, but we need you to get us in. Unlike a boost or a tire change, a lockout means you are standing next to the car, so meet us at the lobby, the elevator, or the garage door. Let dispatch know the building, the parking level, and whether there is a concierge or a fob-only entry. We do these constantly between Sheppard and Finch — access is the only variable, and sorting it on the phone saves ten minutes on scene.'
+        },
+        {
+          question: 'How fast can you get to me in North York?',
+          answer: 'Typically 20-35 minutes from a stationed North York unit. Don Mills, Parkwoods, Victoria Village, and Henry Farm are usually fastest; Downsview, Humber Summit, and Jane & Finch are the long end. You get a live ETA on the call rather than a generic promise.'
+        },
+        {
+          question: 'My child or pet is locked in the car — what do I do?',
+          answer: 'Call 911 first, then call us at ' + PHONE_NUMBER + ' and say clearly that someone is inside the vehicle. We treat it as an emergency and roll the closest unit immediately rather than placing it in the normal queue. On a warm day a closed car heats up dangerously within minutes, so do not wait to see whether it resolves itself. Emergency services can also force entry if the situation deteriorates before anyone arrives.'
+        },
+        {
+          question: 'Do you make new keys if mine are lost?',
+          answer: 'No — we open locked vehicles, we do not cut or program keys. If your keys are inside the car, that is our job. If they are genuinely lost, stolen, or snapped off in the lock, you need an automotive locksmith who can cut and program a replacement transponder. We will tell you which one you need on the phone so you are not paying for a van that cannot solve your problem.'
+        },
+        {
+          question: 'Do you need to see proof the car is mine?',
+          answer: 'Yes, every time. Ownership, insurance, or a driver\'s licence matching the registration is standard before we open any vehicle. It takes a moment and it is the reason you should be uncomfortable with any service that does not ask — the same shortcut that gets you into your car quickly gets someone else into it just as quickly.'
+        }
+      ]
+    },
     scarborough: {
       seoTitle: 'Car Lockout Service Scarborough | 24/7 Damage-Free Unlock — iFAST',
       seoDescription: 'Locked out in Scarborough? iFAST opens your car damage-free, 24/7, no membership — Agincourt, Malvern, STC, Kennedy. 15-25 min arrival. Call for a quote.',
@@ -841,7 +1091,7 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
       uniqueAngle: (
         <>
           <p className="mb-4">
-            {COMPANY_NAME} is owner-operated, and the name behind our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who answers and does the work himself. For lockouts, customers lead with two things: fast arrival and a fair price.
+            {COMPANY_NAME} is owner-operated, and the name behind our {GOOGLE_REVIEWS_COUNT} Google reviews is <strong>Safi</strong> — the owner-technician who answers and does the work himself. For lockouts, customers lead with two things: fast arrival and a fair price.
           </p>
           <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
             "Got locked out of my car and the guy was there in a flash and got it sorted out. Genuine rates as well." <strong>— Uddhav Reen, verified Google review</strong>
@@ -900,7 +1150,7 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
       uniqueAngle: (
         <>
           <p className="mb-4">
-            {COMPANY_NAME} is owner-operated, and the name behind our 146 five-star Google reviews is <strong>Safi</strong> — the owner-technician who answers and does the work himself. For lockouts, two customers said it best, and both led with the same thing:
+            {COMPANY_NAME} is owner-operated, and the name behind our {GOOGLE_REVIEWS_COUNT} Google reviews is <strong>Safi</strong> — the owner-technician who answers and does the work himself. For lockouts, two customers said it best, and both led with the same thing:
           </p>
           <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
             "Had myself locked out of my car, called this company arrived fast and fair price." <strong>— Heng Tho, verified Google review</strong>
@@ -1077,6 +1327,66 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
      FUEL DELIVERY
      ========================================================================= */
   'fuel': {
+    'north-york': {
+      seoTitle: 'Emergency Fuel Delivery North York | Out of Gas 24/7 — iFAST',
+      seoDescription: 'Out of gas in North York? We bring fuel to you on the 401, 404, DVP, Allen Road, or in any lot — Willowdale, Don Mills, Downsview. 20-35 min, 24/7. Call now.',
+      keywords: 'fuel delivery North York, out of gas North York, emergency gas delivery North York, ran out of gas 401 North York, gas delivery Willowdale, fuel delivery Downsview, out of fuel DVP',
+      h1: 'Emergency Fuel Delivery in North York — 24/7',
+      intro: (
+        <>
+          <p className="mb-4">
+            Running dry in North York is rarely about forgetting to fill up — it is about the gauge being optimistic and the traffic being worse than expected. <strong>{COMPANY_NAME}</strong> brings fuel to wherever you have stopped, typically in <strong>20-35 minutes</strong> from a unit stationed in the district, 24 hours a day. We deliver enough to get you moving and to the nearest station comfortably.
+          </p>
+          <p className="mb-4">
+            Gasoline and diesel both, in approved containers. Tell us the fuel type when you call — putting the wrong one in is a far more expensive problem than the one you started with. <strong>Call {PHONE_NUMBER} and we will quote you before we roll.</strong>
+          </p>
+          <InlineCall source="service_city_fuel_north-york_intro" />
+        </>
+      ),
+      localScenario: (
+        <>
+          <p className="mb-4">
+            The 401 through North York is where most of these calls originate, and the geometry is the problem: on the collector-express split near Yonge and Allen Road, a car that runs dry can end up stopped between two live traffic streams with no usable shoulder. Allen Road is similar for much of its length. We arrive with high-visibility strobes and cones and secure the scene before opening a fuel container, and on the most exposed stops we will recommend a tow to a safe spot rather than a roadside fill.
+          </p>
+          <p className="mb-4">
+            The rest are straightforward — the DVP approach at Don Mills, the 404 north of Sheppard, and the ordinary residential and commercial stops across Willowdale, Bayview Village, Downsview, and the Jane & Finch corridor. Underground garages are the one place we cannot deliver fuel: containers and enclosed parking do not mix, and no reputable operator will do it. If your car is dry on P2, the fix is a tow up to street level.
+          </p>
+        </>
+      ),
+      uniqueAngle: (
+        <>
+          <p className="mb-4">
+            One thing worth knowing before you call anyone: if your car ran dry and then would not restart after refuelling, that is often not a fuel problem any more. Running a tank completely empty can pull debris into the fuel filter or leave air in the line, and diesels in particular usually need bleeding before they will catch. We carry what is needed to deal with that on-site rather than filling your tank, wishing you luck, and leaving you with a car that still will not start.
+          </p>
+          <p className="mb-4">
+            {COMPANY_NAME} is owner-operated and insured. <strong>Safi</strong> answers the phone and does the work, and you get the price before the van moves.
+          </p>
+        </>
+      ),
+      priceNote: 'Fuel delivery is quoted on the call — the service fee plus the fuel itself, stated before we dispatch. No "out of zone" surcharge for North York and no overnight premium.',
+      faqs: [
+        {
+          question: 'How much fuel do you bring?',
+          answer: 'Enough to get you running and comfortably to the nearest station — typically around 10 to 20 litres depending on the vehicle. We are not a mobile filling station; the goal is to get you off the shoulder and back in control. Tell us the vehicle and fuel type on the call and we will confirm exactly what we are bringing and what it costs.'
+        },
+        {
+          question: 'Do you deliver diesel as well as gasoline?',
+          answer: 'Yes, both, in approved containers. Please be certain which one your vehicle takes before we arrive — misfuelling is a genuinely expensive repair, far worse than the empty tank. If you are not sure, the fuel type is usually printed inside the filler flap and we can check it with you on the phone.'
+        },
+        {
+          question: 'Can you deliver fuel to my condo parking garage?',
+          answer: 'No, and you should be wary of anyone who says yes. Transporting and dispensing fuel containers inside enclosed underground parking is a fire risk and is not something any reputable operator will do. If your car is out of fuel in a garage, the correct fix is a short tow to street level, and we can handle that instead.'
+        },
+        {
+          question: 'My car will not start even after adding fuel — why?',
+          answer: 'Running a tank completely empty can draw sediment from the bottom of the tank into the fuel filter, and it leaves air in the fuel line. Diesel engines almost always need the system bled before they will restart. It is a common outcome and we come prepared for it, so we can usually resolve it on the same visit rather than leaving you with a full tank and a car that still will not run.'
+        },
+        {
+          question: 'I ran out on the 401 — what should I do while I wait?',
+          answer: 'Get as far right as you safely can, hazards on, and stay in the vehicle with your seatbelt fastened. Standing outside the car on a 401 shoulder is far more dangerous than sitting in it. Call us with your nearest exit or landmark and direction of travel. We arrive with strobes and cones and secure the scene first. If your stop is somewhere genuinely unsafe to work — the collector-express split, or Allen Road with no shoulder — we will tell you and recommend a tow instead.'
+        }
+      ]
+    },
     scarborough: {
       seoTitle: 'Fuel Delivery Scarborough | 24/7 Emergency Gas Delivery — iFAST',
       seoDescription: 'Ran out of gas in Scarborough? 24/7 emergency fuel delivery across Agincourt, Malvern, Woburn, and the 401. 15-25 min arrival. Call iFAST.',
@@ -1153,7 +1463,7 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
       uniqueAngle: (
         <>
           <p className="mb-4">
-            We'll be straight with you: the reviews below are general {COMPANY_NAME} reviews, not fuel-delivery reviews specifically. Drivers who've called us for tires, batteries, and lockouts describe the same way we operate — fast, fair, and professional — and that's exactly how a fuel call runs too. The owner-technician, <strong>Safi</strong>, is the name behind our 146 five-star Google reviews.
+            We'll be straight with you: the reviews below are general {COMPANY_NAME} reviews, not fuel-delivery reviews specifically. Drivers who've called us for tires, batteries, and lockouts describe the same way we operate — fast, fair, and professional — and that's exactly how a fuel call runs too. The owner-technician, <strong>Safi</strong>, is the name behind our {GOOGLE_REVIEWS_COUNT} Google reviews.
           </p>
           <p className="mb-4 border-l-4 border-brand-yellow pl-4 italic text-gray-700">
             "Excellent service! Fast response time, professional staff, and very reasonable pricing. They arrived quickly and helped me get back on the road without any hassle." <strong>— fazlollah masror, verified Google review</strong>
@@ -1330,6 +1640,66 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
      EMERGENCY TOWING
      ========================================================================= */
   'towing': {
+    'north-york': {
+      seoTitle: 'Towing North York | 24/7 Flatbed Tow Truck Service — iFAST',
+      seoDescription: 'Need a tow in North York? 24/7 flatbed towing from the 401, 404, DVP, Allen Road, and condo garages. Willowdale, Don Mills, Downsview. Quoted before dispatch.',
+      keywords: 'towing North York, tow truck North York, flatbed towing North York, 24 hour towing North York, emergency tow Willowdale, tow truck Downsview, accident tow North York, 401 towing North York',
+      h1: 'Towing in North York — 24/7 Flatbed Service',
+      intro: (
+        <>
+          <p className="mb-4">
+            Some jobs cannot be fixed where the car sits. A seized engine, a snapped belt, a wheel that will not turn, an accident, or a stop somewhere too dangerous to work — those need a tow. <strong>{COMPANY_NAME}</strong> runs flatbed towing across North York 24 hours a day, quoted before dispatch so you know the cost before you commit.
+          </p>
+          <p className="mb-4">
+            Flatbed rather than hook-and-chain matters more than most people realise: all-wheel-drive vehicles, lowered cars, and EVs can be damaged by a tow that leaves two wheels on the road. On a flatbed the car does not roll at all. <strong>Call {PHONE_NUMBER} with your location and destination for a quote.</strong>
+          </p>
+          <InlineCall source="service_city_towing_north-york_intro" />
+        </>
+      ),
+      localScenario: (
+        <>
+          <p className="mb-4">
+            The 401 through North York is the busiest and widest stretch of highway in the country, and the collector-express split near Yonge and Allen Road is where the difficult calls happen. A disabled car on the wrong side of that split has no usable shoulder and no safe refuge, and it is the one situation where we will push a tow over a roadside repair even when the mechanical fault is minor. The same applies to Allen Road, where there is effectively nowhere to stand.
+          </p>
+          <p className="mb-4">
+            The other North York specific is the condo garage. A flatbed cannot go down to P3 — no flatbed can. If your car needs to come out of an underground garage, that is a winch-and-dolly job to street level first and then a flatbed from there, and it takes longer and costs more than a street-level tow. We would rather explain that on the phone than surprise you with it on the invoice. Tell dispatch the building and level and we will quote the real job.
+          </p>
+        </>
+      ),
+      uniqueAngle: (
+        <>
+          <p className="mb-4">
+            Towing is the corner of this trade with the worst reputation, and it is earned. The pattern is a low quote on the phone, then charges for hookup, mileage, after-hours, and storage that appear once the car is already on the truck and you have no leverage. We quote the full job before dispatch — hookup and distance to your stated destination in one number.
+          </p>
+          <p className="mb-4">
+            We will also tell you when you do not need us. A large share of the cars we are called to tow can be fixed on the spot for a fraction of the cost, and because we run a full roadside and mobile mechanic operation rather than only trucks, we have no incentive to put a car on a flatbed that could have been back on the road in twenty minutes. {COMPANY_NAME} is owner-operated and insured — <strong>Safi</strong> answers the phone.
+          </p>
+        </>
+      ),
+      priceNote: 'Quoted before dispatch — hookup plus distance to your destination in a single number, not a low starting figure with charges added later. No after-hours premium. A tow out of an underground garage costs more than a street-level tow because it is a genuinely different job, and we tell you that on the call rather than on the bill.',
+      faqs: [
+        {
+          question: 'Can you tow my car out of an underground condo garage?',
+          answer: 'Yes, but it is a two-stage job and worth understanding before you book. No flatbed can drive down to P2 or P3 — the clearance does not exist. We winch and dolly the vehicle up to street level, then load it onto the flatbed there. It takes longer and costs more than a street-level tow. Tell dispatch the building and parking level when you call and we will quote the actual job rather than a number that changes when we arrive.'
+        },
+        {
+          question: 'Do you use a flatbed or a hook-and-chain truck?',
+          answer: 'Flatbed. On a flatbed the vehicle is fully off the ground and nothing rotates, which matters for all-wheel-drive vehicles, lowered or performance cars, and EVs — all of which can suffer real drivetrain damage from a tow that leaves two wheels turning on the road. It is also the right choice for accident-damaged vehicles where the suspension or steering may not be intact.'
+        },
+        {
+          question: 'How much does a tow in North York cost?',
+          answer: 'It depends on distance and where the car is, which is why we quote it on the call before dispatching rather than after loading. You will get hookup and mileage to your stated destination as one figure. What we will not do is quote low on the phone and add hookup, after-hours, and storage charges once your car is already on the truck — that practice is the reason this trade has the reputation it does.'
+        },
+        {
+          question: 'Where will you tow my car to?',
+          answer: 'Wherever you want it — your home, your own mechanic, a dealership, or a body shop. It is your vehicle and your choice. Be cautious with any tow operator who insists on taking your car to a specific yard or shop they happen to recommend, particularly after an accident; that arrangement rarely exists for your benefit. Tell us the destination when you call and it goes into the quote.'
+        },
+        {
+          question: 'Do I actually need a tow, or can it be fixed on the spot?',
+          answer: 'Often it can be fixed on the spot. Dead batteries, flat tires, lockouts, out-of-fuel, and a fair range of mechanical faults are roadside jobs. Because we run roadside service and mobile mechanic work alongside the trucks, we have no reason to tow something we could repair. Describe the symptoms on the call and we will tell you honestly which one it is — a tow is the answer when the car genuinely cannot be driven or where it stopped is too dangerous to work.'
+        }
+      ]
+    },
     scarborough: {
       seoTitle: 'Emergency Towing Scarborough | 24/7 Flatbed Tow Service — iFAST',
       seoDescription: '24/7 emergency towing in Scarborough. Flatbed tows across the 401, Kingston Rd, Agincourt, Malvern. Fast dispatch, honest pricing. Call iFAST.',
