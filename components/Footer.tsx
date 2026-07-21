@@ -1,5 +1,7 @@
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES } from '../constants';
+import { CITY_CONTENT } from '../data/cityContent';
+import { REGION_CONTENT } from '../data/regionContent';
 import { trackPhoneCall } from '../utils/analytics';
 
 const Footer: React.FC = () => {
@@ -48,17 +50,20 @@ const Footer: React.FC = () => {
 
           <div>
             <h2 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Service Areas</h2>
+            {/* Derived from the content maps rather than hand-listed, so a new
+                city or region appears here automatically. The hand-written
+                version silently missed every city added after it was written. */}
             <ul className="grid grid-cols-2 gap-x-4 text-xs">
-              <li><a href="/areas/scarborough" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Scarborough</a></li>
-              <li><a href="/areas/north-york" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">North York</a></li>
-              <li><a href="/areas/pickering" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Pickering</a></li>
-              <li><a href="/areas/ajax" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Ajax</a></li>
-              <li><a href="/areas/whitby" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Whitby</a></li>
-              <li><a href="/areas/oshawa" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Oshawa</a></li>
-              <li><a href="/service-area/east-gta" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">East GTA</a></li>
-              <li><a href="/service-area/toronto" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">Toronto</a></li>
-              <li><a href="/service-area/west-gta" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">West GTA</a></li>
-              <li><a href="/service-area/york-region" className="inline-block py-1.5 hover:text-brand-yellow transition-colors">York Region</a></li>
+              {Object.values(CITY_CONTENT).map((c) => (
+                <li key={c.id}>
+                  <a href={`/areas/${c.id}`} className="inline-block py-1.5 hover:text-brand-yellow transition-colors">{c.name}</a>
+                </li>
+              ))}
+              {Object.values(REGION_CONTENT).map((r) => (
+                <li key={r.slug}>
+                  <a href={`/service-area/${r.slug}`} className="inline-block py-1.5 hover:text-brand-yellow transition-colors">{r.name}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
