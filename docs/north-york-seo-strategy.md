@@ -234,6 +234,49 @@ Toronto; readability 20.4 avg words/sentence.
 
 ---
 
+## Open issue — /mobile-mechanic duplicate (investigated 2026-07-21, deliberately NOT fixed)
+
+`/mobile-mechanic` and `/service/mobile-mechanic` are near-duplicates:
+
+| | `/mobile-mechanic` | `/service/mobile-mechanic` |
+|---|---|---|
+| `<title>` | identical | identical |
+| `<meta description>` | identical | identical |
+| Words | 1,344 | 1,325 |
+| Body overlap | **76.1%** (trigram Jaccard) | |
+| Canonical | self | **self** |
+| Impressions / clicks (90d) | **1,070 / 17** | **0 / 0** |
+| GSC status | indexed, ranking | **"Discovered – currently not indexed"**, `last_crawled: null` |
+
+Both self-canonicalise, so Google gets no consolidation signal; it resolved the
+conflict by never crawling one of them. This is the **only** duplicate title or
+description pair on the site — all 72 pages were checked.
+
+**Decision: leave it.** Google already picked the correct winner. The unindexed
+page has no traffic to lose or gain, so the upside is housekeeping only. Against
+17 organic clicks per quarter, review generation and the North York rollout are
+worth far more attention.
+
+If it is ever revisited, `/mobile-mechanic` must be the survivor — never
+redirect a page with 1,070 impressions into one with zero. The minimal
+zero-risk version is: drop `/service/mobile-mechanic` from `sitemap.xml` and
+give it a distinct title/description. The canonical and 301 options solve a
+problem Google has already solved in our favour. **Revisit only if
+`/mobile-mechanic` starts losing position, or GSC flips which URL it shows.**
+
+Note: `/blog/mobile-mechanic-cost-ontario-pricing-guide` also ranks for mobile
+mechanic terms (`mobile mechanic hourly rate` pos 1, `how much does a mobile
+mechanic cost` pos 2). That is **not** cannibalisation — informational intent vs
+commercial. Leave it alone.
+
+**Unverified thread worth picking up:** the business reports strong mobile
+mechanic lead flow, but organic delivers only ~17 clicks/90 days to that page
+(97 sitewide). The leads are therefore almost certainly coming from Google
+Business Profile or Google Ads, not organic. Worth confirming which URL the Ads
+point at — if they land on `/service/mobile-mechanic`, paid traffic is running
+through the weaker page (irrelevant for indexing, relevant for Quality Score and
+conversion tracking).
+
 ## Known issues (still open)
 
 - ~~Chatbot is offline.~~ **Resolved by removal (2026-07-20).** The chatbot was removed at the owner's request as it wasn't in use, so the North York briefing added to `SYSTEM_INSTRUCTION` is gone with it. Note for the record: `CLAUDE.md` claimed the bot was broken by an env-var mismatch (`import.meta.env.VITE_GEMINI_API_KEY`), but the service actually read `process.env.GEMINI_API_KEY`, which `vite.config.ts` did define — so it was likely functional, and that doc note was stale. Recoverable from git history if it's ever wanted back.
