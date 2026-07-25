@@ -132,7 +132,7 @@ const Header: React.FC = () => {
             </div>
             <a href="/#reviews" className="hover:text-brand-yellow transition-colors duration-300">Reviews</a>
             <a href="/blog" className="hover:text-brand-yellow transition-colors duration-300">Blog</a>
-            <a href="/#contact" className="hover:text-brand-yellow transition-colors duration-300">Contact</a>
+            <a href="/contact" className="hover:text-brand-yellow transition-colors duration-300">Contact</a>
           </nav>
         )}
 
@@ -255,7 +255,7 @@ const Header: React.FC = () => {
             <a href="/#about" onClick={() => setIsOpen(false)} className="block py-2 text-gray-800 hover:text-brand-yellow font-bold">About</a>
             <a href="/#reviews" onClick={() => setIsOpen(false)} className="block py-2 text-gray-800 hover:text-brand-yellow font-bold">Reviews</a>
             <a href="/blog" onClick={() => setIsOpen(false)} className="block py-2 text-gray-800 hover:text-brand-yellow font-bold">Blog</a>
-            <a href="/#contact" onClick={() => setIsOpen(false)} className="block py-2 text-gray-800 hover:text-brand-yellow font-bold">Contact</a>
+            <a href="/contact" onClick={() => setIsOpen(false)} className="block py-2 text-gray-800 hover:text-brand-yellow font-bold">Contact</a>
 
             <div className="pt-6 pb-4">
               <a

@@ -11,6 +11,7 @@ import CityPage from './pages/CityPage';
 import MobileMechanicLanding from './pages/MobileMechanicLanding';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import ContactPage from './pages/ContactPage';
 
 const App: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const App: React.FC = () => {
         <Route path="/areas/:city" element={<CityPage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
 
