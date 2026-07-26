@@ -28,15 +28,28 @@ const URLS = [
   // ── PRIORITY: pages rebuilt with bespoke copy 2026-07-25 ──
   // These seven service pages were rebuilt on 2026-07-25 with hand-written hero,
   // feature and CTA copy plus fresh titles and descriptions, so their cached
-  // versions in Google's index are stale. Ordered by measured GSC demand. The
-  // manual quota is ~10-12 URLs/day, so this order is what actually ships.
-  'https://www.ifastroadside.ca/service/tire-change',
+  // versions in Google's index are stale. The manual quota is ~10-12 URLs/day,
+  // so this order is what actually ships.
+  //
+  // Ordered by EXPECTED YIELD, not by search demand. The two pages below are
+  // already indexed but were last crawled BEFORE the 2026-07-25 deploy
+  // (jump-start 07-12, spare-tire-change 07-04), so Google is still serving
+  // their old titles. Re-crawling them is the only thing that puts the new
+  // titles in front of searchers — which is the entire point of the rewrite.
   'https://www.ifastroadside.ca/service/jump-start',
+  'https://www.ifastroadside.ca/service/spare-tire-change',
+  //
+  // The five below are all "Discovered - currently not indexed, last crawled:
+  // Never". The identical request was made on 2026-07-02 and never landed, so
+  // expect little. Submitted anyway because it is free and within quota — but
+  // the real fix for these is crawl budget and internal link prominence, not
+  // another submission. See the crawl-wall analysis in
+  // docs/superpowers/specs/2026-07-25-service-page-differentiation-design.md
+  'https://www.ifastroadside.ca/service/tire-change',
   'https://www.ifastroadside.ca/service/battery-replacement',
   'https://www.ifastroadside.ca/service/battery-diagnostic',
   'https://www.ifastroadside.ca/service/flat-tire-repair',
   'https://www.ifastroadside.ca/service/tire-installation',
-  'https://www.ifastroadside.ca/service/spare-tire-change',
 
   // ── New blog posts (published 2026-07-03, not yet known to Google) ──
   'https://www.ifastroadside.ca/blog/dead-car-battery-boost-or-replace-east-gta',
