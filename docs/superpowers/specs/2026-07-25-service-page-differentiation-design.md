@@ -52,6 +52,41 @@ boilerplate. `ServicePage.tsx` wraps each service's unique content in identical 
 `ServicePage` actually renders *more* sections, and both read `blogSections` and `faqs` from
 the same `SERVICE_CONTENT` map.
 
+## Correction (2026-07-25, pre-flight): this is a CTR play, not a crawl fix
+
+A prior effort already tested the content-quality hypothesis on the same page.
+`docs/superpowers/specs/2026-06-24-money-service-page-rebuild-design.md` made
+`/service/tire-change` its **pilot page** and rebuilt its body to an E-E-A-T standard
+(commit `8a427a0`, 2026-06-26, +110 lines: real review quotes, local detail, transparent
+pricing). Indexing was requested 2026-07-02. Four weeks later the page is still
+`Discovered – currently not indexed`, **last crawled: Never**.
+
+`last_crawled: Never` means Google has never fetched the page. It therefore cannot have
+evaluated the rebuilt body copy, and it cannot evaluate the hero/CTA copy this spec adds —
+it has never seen either version. **An on-page change cannot explain a decision Google makes
+before downloading the page.** The "templated boilerplate suppresses crawling" claim earlier
+in this document is not supported by the evidence and should not be relied on.
+
+What the evidence does support: the refusal happens at crawl *scheduling*, on signals
+available without a fetch — host crawl budget, internal link prominence, site authority. The
+2026-07-02 request got `/service/fuel` crawled the next day but not tire-change or lockout,
+so the submission mechanism works and tire-change is specifically being rationed out.
+
+**Revised goal, agreed with the user 2026-07-25:** execute this work as a **click-through-rate
+play on the pages that are already indexed**, primarily `/service/jump-start` — indexed, ranking
+at position 4.3, converting 479 impressions into 3 clicks over 90 days. Hand-written,
+intent-matched hero and CTA copy is the direct fix for that. Success is measured in **clicks
+from the indexed pages**, not in tire-change becoming crawled.
+
+The tire-family copy (Task 4) still ships: it costs little, it is correct work regardless, and
+it means the page is ready if crawl-surface work later gets it fetched. But it is not expected
+to cause crawling on its own, and the Phase 1 kill-criterion below should be read in that light
+— failure to crawl tire-change by 2026-08-08 falsifies nothing that is still being claimed.
+
+The genuine crawl levers — pruning the 25 noindexed combo pages competing for a small site's
+crawl budget, and giving the priority services prominent non-boilerplate internal links — are
+deferred to a separate piece of work.
+
 ## Approach
 
 Extend `SERVICE_CONTENT` with **optional** per-service copy fields. `ServicePage` renders them
