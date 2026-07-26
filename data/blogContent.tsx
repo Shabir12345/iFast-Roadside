@@ -1986,7 +1986,7 @@ export const BLOG_POSTS: BlogPost[] = [
               ))}
             </div>
             <p className="text-gray-700">
-              One phone call books it: tell us where the car is and when the seller is available, and a certified <a href="/service/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> meets you there. Here's <a href="/service/pre-purchase-inspection" className="text-brand-yellow font-bold hover:underline">everything a pre-purchase inspection covers</a>. Buy the car knowing exactly what you're getting — the way Ifeyinwa did.
+              One phone call books it: tell us where the car is and when the seller is available, and a certified <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> meets you there. Here's <a href="/service/pre-purchase-inspection" className="text-brand-yellow font-bold hover:underline">everything a pre-purchase inspection covers</a>. Buy the car knowing exactly what you're getting — the way Ifeyinwa did.
             </p>
             <BlogCTA source="blog_prepurchase_mid2" />
           </>
@@ -2182,7 +2182,7 @@ export const BLOG_POSTS: BlogPost[] = [
               ))}
             </div>
             <p className="text-gray-700">
-              One call does it: tell us what you're hearing and where the car is, and a <a href="/service/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> meets you there — the way it worked for Chris.
+              One call does it: tell us what you're hearing and where the car is, and a <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> meets you there — the way it worked for Chris.
             </p>
             <BlogCTA source="blog_heatshield_mid2" />
           </>

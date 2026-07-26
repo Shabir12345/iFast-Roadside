@@ -7,6 +7,7 @@ import { CITY_CONTENT } from '../data/cityContent';
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
+import { serviceHref } from '../utils/serviceHref';
 
 // Where the unit that serves each city actually rolls from. Scarborough is the
 // home base (20 Antrim Cres) and North York has its own stationed unit; the
@@ -286,7 +287,7 @@ const CityPage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-black text-brand-dark mb-4 text-center">Services we provide in {content.name}</h2>
           <p className="text-gray-600 text-lg text-center max-w-3xl mx-auto mb-8">
             {content.name} drivers rely on us for{' '}
-            <Link to="/service/mobile-mechanic" className="text-brand-dark font-semibold underline decoration-brand-yellow decoration-2 underline-offset-2 hover:text-brand-yellow transition-colors">on-site mobile mechanic repairs</Link>,{' '}
+            <Link to={serviceHref('mobile-mechanic')} className="text-brand-dark font-semibold underline decoration-brand-yellow decoration-2 underline-offset-2 hover:text-brand-yellow transition-colors">on-site mobile mechanic repairs</Link>,{' '}
             <Link to="/service/tire-change" className="text-brand-dark font-semibold underline decoration-brand-yellow decoration-2 underline-offset-2 hover:text-brand-yellow transition-colors">mobile tire service</Link>,{' '}
             <Link to="/service/jump-start" className="text-brand-dark font-semibold underline decoration-brand-yellow decoration-2 underline-offset-2 hover:text-brand-yellow transition-colors">battery jump starts</Link>,{' '}
             <Link to="/service/lockout" className="text-brand-dark font-semibold underline decoration-brand-yellow decoration-2 underline-offset-2 hover:text-brand-yellow transition-colors">car lockouts</Link>,{' '}
