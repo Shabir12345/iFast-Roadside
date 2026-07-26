@@ -5,6 +5,7 @@ import { Clock, ArrowLeft, ChevronDown, Calendar, ArrowRight, PhoneCall } from '
 import { BLOG_POSTS, getBlogPost, BLOG_RELATED_SERVICES } from '../data/blogContent';
 import { PHONE_NUMBER, SERVICES } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
+import { serviceHref } from '../utils/serviceHref';
 
 const categoryColors: Record<string, string> = {
   'Emergency Tips': 'bg-red-100 text-red-700',
@@ -200,7 +201,7 @@ const BlogPost: React.FC = () => {
                   return (
                     <Link
                       key={service.id}
-                      to={`/service/${service.id}`}
+                      to={serviceHref(service.id)}
                       className="group flex items-start gap-4 bg-gray-50 rounded-2xl p-5 border border-gray-100 hover:border-brand-yellow/40 hover:bg-white hover:shadow-md transition-all"
                     >
                       <div className="w-11 h-11 flex-shrink-0 bg-brand-yellow/20 text-brand-dark rounded-xl flex items-center justify-center group-hover:bg-brand-yellow transition-colors">

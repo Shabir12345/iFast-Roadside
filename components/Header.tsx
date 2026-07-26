@@ -6,6 +6,7 @@ import { COMPANY_NAME, PHONE_NUMBER, SERVICES } from '../constants';
 import { REGION_CONTENT } from '../data/regionContent';
 import { CITY_CONTENT } from '../data/cityContent';
 import { trackPhoneCall } from '../utils/analytics';
+import { serviceHref } from '../utils/serviceHref';
 
 // Nav data is derived from the content maps, never hand-listed — that is why
 // adding a region used to appear in the nav automatically while adding a city
@@ -57,7 +58,7 @@ const Header: React.FC = () => {
                     return (
                       <div key={service.id} className="border-b border-gray-50 last:border-0">
                         <a
-                          href={`/service/${service.id}`}
+                          href={serviceHref(service.id)}
                           className="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition-colors hover:text-brand-yellow"
                         >
                           <div className="bg-brand-dark/5 text-brand-dark p-2 rounded-lg">
@@ -73,7 +74,7 @@ const Header: React.FC = () => {
                             {subs.map((sub) => (
                               <a
                                 key={sub.id}
-                                href={`/service/${sub.id}`}
+                                href={serviceHref(sub.id)}
                                 className="block pl-[3.75rem] pr-4 py-1.5 text-[13px] font-medium text-gray-500 hover:text-brand-yellow hover:bg-gray-50 transition-colors"
                               >
                                 {sub.title}
@@ -185,7 +186,7 @@ const Header: React.FC = () => {
                   {TOP_LEVEL_SERVICES.map((service) => (
                     <div key={service.id}>
                       <a
-                        href={`/service/${service.id}`}
+                        href={serviceHref(service.id)}
                         onClick={() => setIsOpen(false)}
                         className="block py-2 text-sm font-semibold text-gray-700 hover:text-brand-yellow transition-colors"
                       >
@@ -194,7 +195,7 @@ const Header: React.FC = () => {
                       {SUB_SERVICES(service.id).map((sub) => (
                         <a
                           key={sub.id}
-                          href={`/service/${sub.id}`}
+                          href={serviceHref(sub.id)}
                           onClick={() => setIsOpen(false)}
                           className="block pl-4 py-1.5 text-[13px] font-medium text-gray-500 hover:text-brand-yellow transition-colors"
                         >
