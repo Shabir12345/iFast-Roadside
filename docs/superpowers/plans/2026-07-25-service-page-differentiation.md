@@ -637,6 +637,15 @@ Sends every internal link straight to `/mobile-mechanic` instead of through the 
 **Files:**
 - Create: `utils/serviceHref.ts`
 - Modify: `components/Header.tsx` (two link sites, ~line 60 and ~line 188), `components/Footer.tsx:34`, `components/Services.tsx:25`, `pages/BlogPost.tsx:203`, `pages/ServiceCityPage.tsx:58` and `:142`
+- Modify (added after review — hardcoded literals, not `serviceHref()` call sites): `data/blogContent.tsx:1989`, `data/blogContent.tsx:2185`, `pages/CityPage.tsx:289`
+
+**Gap found in review:** the file list above originally covered only the dynamic
+`` `/service/${id}` `` template call sites. It missed three places that hardcode the string
+`"/service/mobile-mechanic"` directly — two in-body prose links inside blog post content and one
+in the city-page body. Those render as real `<a href>` links on 8 prerendered pages
+(`/areas/*` ×6, two blog posts), and after Task 7's 301 every one of them would bounce through
+a redirect — precisely what this task exists to prevent. Verify with an OCCURRENCE count, not
+`grep -c` (see the note in Step 8).
 
 **Interfaces:**
 - Consumes: nothing
@@ -747,13 +756,21 @@ Expected: PASS with no `Failed routes:` block.
 
 - [ ] **Step 8: Verify links now point at the canonical URL**
 
+**Use occurrence counts, not `grep -c`.** The prerender writes each page's body as ONE physical line, so `grep -c` reports at most `1` regardless of how many links a page has, and a line-based `diff` emits `NNcNN` / `---` markers that contain no URL. Both look like failures when nothing is wrong. Count with `grep -o … | wc -l`:
+
 ```bash
-grep -c 'href="/mobile-mechanic"' dist/index.html
-grep -c '/service/mobile-mechanic' dist/index.html
-grep -c '/service/mobile-mechanic' dist/service/mobile-mechanic/scarborough/index.html
+# Homepage: all mobile-mechanic links must be canonical, none pointing at the duplicate.
+printf "canonical: %s\n" "$(grep -o 'href="/mobile-mechanic"' dist/index.html | wc -l)"
+printf "duplicate: %s\n" "$(grep -o '/service/mobile-mechanic\b' dist/index.html | wc -l)"
+
+# Site-wide: no page may link to the bare duplicate URL. The trailing quote excludes
+# legitimate combo URLs like /service/mobile-mechanic/scarborough.
+# Only dist/service/mobile-mechanic/index.html may still match (its own canonical and
+# og:url) — Task 7 deletes that page outright.
+grep -rl '/service/mobile-mechanic"' dist --include=index.html
 ```
 
-Expected: first is `2` or more (header + footer + services grid); second is `0`; third is `0` — proving the combo page's breadcrumb and JSON-LD now reference the canonical URL.
+Expected: canonical is `4` or more; duplicate is `0`; and the third command lists **only** `dist/service/mobile-mechanic/index.html`. Any `/areas/*` or `/blog/*` page appearing there means a hardcoded literal was missed — see the gap note in this task's Files section.
 
 - [ ] **Step 9: Confirm the mobile-mechanic guardrail**
 
