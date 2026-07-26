@@ -96,16 +96,22 @@ const ServicePage: React.FC = () => {
           <div className="w-full lg:w-1/2 p-8 sm:p-12 lg:p-16 flex flex-col justify-center relative z-10">
             <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-green-200 mb-6 w-fit cursor-default">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-              Live Dispatch: Ready Now
+              {contentData.hero?.eyebrow ?? 'Live Dispatch: Ready Now'}
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-brand-dark mb-6 leading-[1.05] tracking-tight">
-              {title} <br className="hidden sm:block" />
-              <span className="text-brand-yellow drop-shadow-sm block mt-1">At Your Location in ~30 Min</span>
+              {contentData.hero?.h1 ?? title} <br className="hidden sm:block" />
+              <span className="text-brand-yellow drop-shadow-sm block mt-1">
+                {contentData.hero?.h1Accent ?? 'At Your Location in ~30 Min'}
+              </span>
             </h1>
-            
+
             <p className="text-lg text-gray-500 mb-8 leading-relaxed max-w-lg font-medium">
-              {description} Call now and a live dispatcher will give you an <span className="font-bold text-gray-800">upfront price and a real ETA</span> before we send a unit.
+              {contentData.hero?.intro ?? (
+                <>
+                  {description} Call now and a live dispatcher will give you an <span className="font-bold text-gray-800">upfront price and a real ETA</span> before we send a unit.
+                </>
+              )}
             </p>
             
             <div className="space-y-4 mb-10 bg-gray-50 p-6 rounded-2xl border border-gray-100">
@@ -184,6 +190,27 @@ const ServicePage: React.FC = () => {
            <div className="flex items-center gap-2"><Camera className="text-brand-dark" size={24} /> 100% Damage Free</div>
         </div>
       </div>
+
+      {/* Bespoke per-service feature grid. Rendered only for services that have
+          been given hand-written copy — see the spec referenced in
+          data/serviceContent.tsx. Services without `features` skip this entirely. */}
+      {contentData.features && contentData.features.length > 0 && (
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {contentData.features.map((feature, idx) => (
+                <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl hover:border-brand-yellow/30 transition-all duration-300 group">
+                  <div className={`${feature.color} text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <feature.icon size={28} />
+                  </div>
+                  <h3 className="text-xl font-bold text-brand-dark mb-3">{feature.title}</h3>
+                  <p className="text-gray-500 leading-relaxed text-sm">{feature.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Google Reviews — high up so social proof is one of the first things seen */}
       <GoogleReviews />
@@ -291,9 +318,11 @@ const ServicePage: React.FC = () => {
               Emergency Status: Online
             </div>
             
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">Need {title} Built on Trust?</h2>
+            <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
+              {contentData.cta?.heading ?? `Need ${title} Built on Trust?`}
+            </h2>
             <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto font-medium">
-               Stop waiting around. Our dispatcher will deploy the nearest active unit directly to your location. Secure your spot now.
+               {contentData.cta?.body ?? 'Stop waiting around. Our dispatcher will deploy the nearest active unit directly to your location. Secure your spot now.'}
             </p>
             <a
               href={`tel:${PHONE_NUMBER}`}
