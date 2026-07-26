@@ -15,6 +15,7 @@
 - **`/mobile-mechanic` URL, canonical tag, and its `public/sitemap.xml` entry must not be modified.**
 - **`SERVICE_CONTENT['mobile-mechanic']` must not be modified.** The three new fields are optional; this entry does not receive them.
 - **Hard gate:** `/mobile-mechanic`'s prerendered output must be unchanged before and after the entire change set. Task 1 captures the baseline; every task re-checks it via `bash scripts/check-mobile-mechanic-guardrail.sh`, which must print `GUARDRAIL PASS`. That script normalises Vite's content-hashed asset filenames — and only those — because Vite emits a single JS bundle whose hash appears in the `<script src>` tag of every prerendered page, so a literal byte-for-byte diff reports a difference on any runtime-code change even when `/mobile-mechanic` itself is untouched. Markup, text, meta tags and JSON-LD are all still compared exactly.
+- **Grepping prerendered HTML:** React's SSR renderer HTML-escapes apostrophes, so copy written as `We'll Have You Running` appears in `dist/` as `We&#x27;ll Have You Running`. Every `grep` assertion in this plan therefore uses an apostrophe-free substring. If you add a check, do the same — a literal apostrophe in the pattern returns 0 and looks like a failure when the copy is actually correct.
 - Brand colours come from the inline Tailwind config in `index.html` — use `bg-brand-yellow`, `text-brand-dark`, `bg-brand-dark`. Never raw hex for brand colours.
 - Every phone CTA must call `trackPhoneCall(source)` from `utils/analytics.ts` with a descriptive source label.
 - Sitemap priority values (spec §Indexation work): `0.9` tire-change and jump-start; `0.8` towing, lockout, battery-replacement, battery-diagnostic, flat-tire-repair, tire-installation, spare-tire-change; `0.7` fuel and pre-purchase-inspection; `/` stays `1.0`; `/mobile-mechanic` stays `0.95`.
@@ -471,7 +472,7 @@ Expected: PASS with no `Failed routes:` block.
 - [ ] **Step 7: Verify the bespoke copy is in the prerendered HTML, not just the client bundle**
 
 ```bash
-grep -c "We'll Change It Where You Stand" dist/service/tire-change/index.html
+grep -c "Change It Where You Stand" dist/service/tire-change/index.html
 grep -c "Stuck on a Flat Right Now?" dist/service/tire-change/index.html
 grep -c "Patched Properly, At Your Door" dist/service/flat-tire-repair/index.html
 grep -c "Need Mobile Tire Service Built on Trust?" dist/service/tire-change/index.html
@@ -598,10 +599,10 @@ Expected: PASS with no `Failed routes:` block.
 - [ ] **Step 5: Verify the bespoke copy reached the prerendered HTML**
 
 ```bash
-grep -c "We'll Have You Running" dist/service/jump-start/index.html
+grep -c "Have You Running" dist/service/jump-start/index.html
 grep -c "Dead Battery Right Now?" dist/service/jump-start/index.html
 grep -c "New One Fitted Where You Are" dist/service/battery-replacement/index.html
-grep -c "Let's Find Out Before You Buy" dist/service/battery-diagnostic/index.html
+grep -c "Find Out Before You Buy" dist/service/battery-diagnostic/index.html
 ```
 
 Expected: `1` for all four.
@@ -973,7 +974,7 @@ Wait for the Vercel deploy to finish, then:
 ```bash
 curl -sS -o /dev/null -w "%{http_code} -> %{redirect_url}\n" https://www.ifastroadside.ca/service/mobile-mechanic
 curl -sS -o /dev/null -w "%{http_code}\n" https://www.ifastroadside.ca/mobile-mechanic
-curl -sS https://www.ifastroadside.ca/service/tire-change | grep -c "We'll Change It Where You Stand"
+curl -sS https://www.ifastroadside.ca/service/tire-change | grep -c "Change It Where You Stand"
 ```
 
 Expected: `308 -> https://www.ifastroadside.ca/mobile-mechanic` (Vercel uses 308 for `permanent: true`, which Google treats as a permanent redirect), then `200`, then `1`.
