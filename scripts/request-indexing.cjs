@@ -23,18 +23,17 @@ const os = require('os');
 // yet indexed (tire-change hub was "unknown to Google"; lockout/fuel/combos were
 // "discovered, not indexed"). Request these before anything else.
 const URLS = [
-  // ── PRIORITY: rebuilt money pages, not yet indexed (2026-07-02) ──
+  // ── PRIORITY: pages rebuilt with bespoke copy 2026-07-25 ──
+  // Google declined to crawl these when they shared templated boilerplate; the
+  // hypothesis under test is that differentiated copy changes that. Ordered by
+  // measured GSC demand. Manual quota is ~10-12 URLs/day, so order matters.
   'https://www.ifastroadside.ca/service/tire-change',
-  'https://www.ifastroadside.ca/service/lockout',
-  'https://www.ifastroadside.ca/service/fuel',
-  'https://www.ifastroadside.ca/service/mobile-mechanic',
-  'https://www.ifastroadside.ca/service/tire-change/scarborough',
-  'https://www.ifastroadside.ca/service/tire-change/ajax',
-  'https://www.ifastroadside.ca/service/jump-start/pickering',
-  'https://www.ifastroadside.ca/service/jump-start/scarborough',
-  'https://www.ifastroadside.ca/service/lockout/pickering',
-  'https://www.ifastroadside.ca/service/lockout/scarborough',
-  'https://www.ifastroadside.ca/service/fuel/pickering',
+  'https://www.ifastroadside.ca/service/jump-start',
+  'https://www.ifastroadside.ca/service/battery-replacement',
+  'https://www.ifastroadside.ca/service/battery-diagnostic',
+  'https://www.ifastroadside.ca/service/flat-tire-repair',
+  'https://www.ifastroadside.ca/service/tire-installation',
+  'https://www.ifastroadside.ca/service/spare-tire-change',
 
   // ── New blog posts (published 2026-07-03, not yet known to Google) ──
   'https://www.ifastroadside.ca/blog/dead-car-battery-boost-or-replace-east-gta',
@@ -50,7 +49,6 @@ const URLS = [
   'https://www.ifastroadside.ca/service-area/east-gta',
 
   // Service pages
-  'https://www.ifastroadside.ca/service/mobile-mechanic',
   'https://www.ifastroadside.ca/service/tire-change',
   'https://www.ifastroadside.ca/service/jump-start',
   'https://www.ifastroadside.ca/service/lockout',
