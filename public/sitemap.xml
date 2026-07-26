@@ -13,20 +13,14 @@
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://www.ifastroadside.ca/service/mobile-mechanic</loc>
-    <lastmod>2026-06-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://www.ifastroadside.ca/service/tire-change</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.ifastroadside.ca/service/jump-start</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -34,55 +28,55 @@
     <loc>https://www.ifastroadside.ca/service/lockout</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ifastroadside.ca/service/fuel</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ifastroadside.ca/service/towing</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ifastroadside.ca/service/flat-tire-repair</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ifastroadside.ca/service/spare-tire-change</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ifastroadside.ca/service/tire-installation</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ifastroadside.ca/service/battery-diagnostic</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ifastroadside.ca/service/battery-replacement</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ifastroadside.ca/service/pre-purchase-inspection</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ifastroadside.ca/service-area/east-gta</loc>
@@ -229,22 +223,22 @@
        are intentionally excluded — listing a noindexed URL here is a mixed
        signal. They are still prerendered via NOINDEX_COMBOS in scripts/prerender.mjs.
        Re-add a combo here when it is rebuilt to the E-E-A-T standard. -->
-  <url><loc>https://www.ifastroadside.ca/service/tire-change/scarborough</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/tire-change/ajax</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/tire-change/scarborough</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/tire-change/ajax</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <url><loc>https://www.ifastroadside.ca/service/jump-start/scarborough</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/jump-start/pickering</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/jump-start/scarborough</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/jump-start/pickering</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <url><loc>https://www.ifastroadside.ca/service/lockout/scarborough</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/lockout/pickering</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/lockout/scarborough</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/lockout/pickering</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <url><loc>https://www.ifastroadside.ca/service/fuel/pickering</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/fuel/pickering</loc><lastmod>2026-07-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- North York wave 2a (2026-07-20). The four priority combos for the district.
        fuel/north-york and towing/north-york are deliberately held in
        NOINDEX_COMBOS until these four have been measured in GSC. -->
-  <url><loc>https://www.ifastroadside.ca/service/tire-change/north-york</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/jump-start/north-york</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/lockout/north-york</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.ifastroadside.ca/service/mobile-mechanic/north-york</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/tire-change/north-york</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/jump-start/north-york</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/lockout/north-york</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.ifastroadside.ca/service/mobile-mechanic/north-york</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

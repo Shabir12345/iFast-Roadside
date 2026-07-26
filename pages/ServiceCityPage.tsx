@@ -8,6 +8,7 @@ import { SERVICE_CITY_CONTENT } from '../data/serviceCityContent';
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
+import { serviceHref } from '../utils/serviceHref';
 
 // Thin, templated service×city combos deliberately kept OUT of Google's index
 // (noindex, follow) so crawl budget concentrates on the rebuilt "money" pages
@@ -55,7 +56,7 @@ const ServiceCityPage: React.FC = () => {
   const Icon = service.icon;
   const canonical = `https://www.ifastroadside.ca/service/${id}/${city}`;
   const isNoindex = NOINDEX_COMBOS.has(`${id}/${city}`);
-  const serviceUrl = `https://www.ifastroadside.ca/service/${id}`;
+  const serviceUrl = `https://www.ifastroadside.ca${serviceHref(id)}`;
   const cityUrl = `https://www.ifastroadside.ca/areas/${city}`;
 
   const serviceLd = {
@@ -139,7 +140,7 @@ const ServiceCityPage: React.FC = () => {
         <div className="mb-4 flex items-center gap-2 text-xs font-semibold text-gray-400 flex-wrap uppercase tracking-wider">
           <Link to="/" className="hover:text-brand-dark transition-colors">Home</Link>
           <span>/</span>
-          <Link to={`/service/${id}`} className="hover:text-brand-dark transition-colors">{service.title}</Link>
+          <Link to={serviceHref(id)} className="hover:text-brand-dark transition-colors">{service.title}</Link>
           <span>/</span>
           <span className="text-brand-yellow drop-shadow-sm">{cityData.name}</span>
         </div>

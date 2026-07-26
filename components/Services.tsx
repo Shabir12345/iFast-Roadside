@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SERVICES } from '../constants';
+import { serviceHref } from '../utils/serviceHref';
 
 const Services: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ const Services: React.FC = () => {
                 className="flex flex-col bg-white rounded-3xl p-8 transition-all premium-shadow-hover border border-gray-100 hover:border-brand-yellow/30 service-card-reveal"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <Link to={`/service/${service.id}`} className="block group">
+                <Link to={serviceHref(service.id)} className="block group">
                   <div className="w-16 h-16 bg-brand-dark text-white rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-yellow group-hover:text-brand-dark transition-all duration-300 transform group-hover:rotate-6">
                     <service.icon size={32} />
                   </div>
@@ -39,7 +40,7 @@ const Services: React.FC = () => {
                       {subServices.map(sub => (
                         <Link
                           key={sub.id}
-                          to={`/service/${sub.id}`}
+                          to={serviceHref(sub.id)}
                           className="inline-flex items-center gap-1.5 bg-gray-50 hover:bg-brand-yellow hover:text-brand-dark text-gray-700 text-sm font-semibold px-3 py-1.5 rounded-full border border-gray-100 transition-colors"
                         >
                           <sub.icon size={14} />

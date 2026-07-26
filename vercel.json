@@ -1,5 +1,12 @@
 {
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/service/mobile-mechanic",
+      "destination": "/mobile-mechanic",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

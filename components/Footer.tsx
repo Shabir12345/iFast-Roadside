@@ -3,6 +3,7 @@ import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES } 
 import { CITY_CONTENT } from '../data/cityContent';
 import { REGION_CONTENT } from '../data/regionContent';
 import { trackPhoneCall } from '../utils/analytics';
+import { serviceHref } from '../utils/serviceHref';
 
 const Footer: React.FC = () => {
   return (
@@ -31,7 +32,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-1 text-sm">
               {SERVICES.filter(s => !s.parent).map(service => (
                 <li key={service.id}>
-                  <a href={`/service/${service.id}`} className="inline-block py-1.5 hover:text-brand-yellow transition-colors">{service.title}</a>
+                  <a href={serviceHref(service.id)} className="inline-block py-1.5 hover:text-brand-yellow transition-colors">{service.title}</a>
                 </li>
               ))}
             </ul>
