@@ -996,6 +996,19 @@ curl -sS https://www.ifastroadside.ca/service/tire-change | grep -c "Change It W
 
 Expected: `308 -> https://www.ifastroadside.ca/mobile-mechanic` (Vercel uses 308 for `permanent: true`, which Google treats as a permanent redirect), then `200`, then `1`.
 
+- [ ] **Step 7b: Verify the redirect did NOT swallow the service-city combo pages**
+
+`/service/mobile-mechanic/<city>` is a different route (`ServiceCityPage`) with five prerendered, sitemap-listed pages. A `source` of `/service/mobile-mechanic` should match that path exactly and NOT its sub-paths — but if it over-matched, five real pages would 308 away to `/mobile-mechanic` and be dropped from the index. Confirm:
+
+```bash
+for c in scarborough pickering ajax whitby oshawa; do
+  printf "%-12s %s\n" "$c" \
+    "$(curl -sS -o /dev/null -w '%{http_code}' "https://www.ifastroadside.ca/service/mobile-mechanic/$c")"
+done
+```
+
+Expected: `200` for all five. Any `308` here means the redirect is over-matching — roll it back immediately and re-scope the `source`.
+
 - [ ] **Step 8: Submit the rebuilt pages for indexing**
 
 Close Chrome first — the script drives the user's real Chrome profile for an authenticated Google session.
