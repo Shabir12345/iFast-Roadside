@@ -1,6 +1,6 @@
 import React from 'react';
 import { PHONE_NUMBER, COMPANY_NAME, GOOGLE_REVIEWS_COUNT } from '../constants';
-import { PhoneCall } from 'lucide-react';
+import { PhoneCall, type LucideIcon } from 'lucide-react';
 import { trackPhoneCall } from '../utils/analytics';
 
 const CallNowButton = ({ source = 'service_content_inline' }: { source?: string }) => (
@@ -24,6 +24,30 @@ export interface ServiceContent {
   seoDescription: string;
   keywords: string;
   heroImage: string;
+  /**
+   * Optional hand-written hero copy. When absent, ServicePage falls back to its
+   * templated H1/intro. Present only on services rebuilt to break the
+   * near-duplicate boilerplate that was suppressing crawling — see
+   * docs/superpowers/specs/2026-07-25-service-page-differentiation-design.md
+   */
+  hero?: {
+    eyebrow: string;
+    h1: string;
+    h1Accent: string;
+    intro: string;
+  };
+  /** Optional bespoke feature grid. Section is omitted entirely when absent. */
+  features?: {
+    title: string;
+    desc: string;
+    icon: LucideIcon;
+    color: string;
+  }[];
+  /** Optional hand-written footer CTA. Falls back to the templated version. */
+  cta?: {
+    heading: string;
+    body: string;
+  };
   blogSections: {
     title: string;
     content: React.ReactNode;
