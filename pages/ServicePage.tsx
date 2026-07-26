@@ -197,6 +197,9 @@ const ServicePage: React.FC = () => {
       {contentData.features && contentData.features.length > 0 && (
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-black text-brand-dark mb-10 text-center tracking-tight">
+              {contentData.featuresHeading ?? `What’s Included With ${title}`}
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {contentData.features.map((feature, idx) => (
                 <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl hover:border-brand-yellow/30 transition-all duration-300 group">

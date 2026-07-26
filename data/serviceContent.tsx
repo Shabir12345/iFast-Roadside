@@ -26,8 +26,9 @@ export interface ServiceContent {
   heroImage: string;
   /**
    * Optional hand-written hero copy. When absent, ServicePage falls back to its
-   * templated H1/intro. Present only on services rebuilt to break the
-   * near-duplicate boilerplate that was suppressing crawling — see
+   * templated H1/intro. Present only on services given bespoke, intent-matched
+   * copy in place of ServicePage's shared boilerplate — a click-through and
+   * conversion play on pages that already rank. See
    * docs/superpowers/specs/2026-07-25-service-page-differentiation-design.md
    */
   hero?: {
@@ -43,6 +44,8 @@ export interface ServiceContent {
     icon: LucideIcon;
     color: string;
   }[];
+  /** Optional H2 above the bespoke feature grid. Only read when `features` is set. */
+  featuresHeading?: string;
   /** Optional hand-written footer CTA. Falls back to the templated version. */
   cta?: {
     heading: string;
@@ -145,16 +148,17 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'tire-change': {
     id: 'tire-change',
-    seoTitle: 'Mobile Tire Change GTA | 24/7 Flat Tire Repair That Comes to You',
-    seoDescription: 'Flat tire in the Greater Toronto Area? iFAST brings the tire shop to your driveway or the shoulder — Scarborough, Pickering, Ajax, Whitby, Oshawa. 24/7, fast, damage-free. Call for a quote.',
+    seoTitle: 'Mobile Tire Change GTA | We Come to You, 24/7',
+    seoDescription: 'Flat tire and nowhere to go? We bring the jack, torque wrench and a spare to your driveway or the shoulder — 24/7 across the GTA. Call for an upfront price.',
     keywords: 'mobile tire change GTA, flat tire repair Scarborough, mobile tire service Pickering, flat tire change Ajax, nail in tire repair Whitby, 24/7 mobile tire Oshawa, roadside tire change near me, mobile tire swap GTA',
     heroImage: '/tire_service_hero.jpg',
     hero: {
       eyebrow: 'Roadside Tire Emergency',
       h1: 'Flat Tire?',
-      h1Accent: "We'll Change It Where You Stand.",
-      intro: "Pulled over on the 401 with a shredded sidewall, or found the car sitting flat in the driveway this morning? We bring the jack, the impact gun and the torque wrench to you — no tow, no waiting room, no calling around for a shop that's still open.",
+      h1Accent: 'We’ll Change It Where You Stand.',
+      intro: 'Pulled over on the 401 with a shredded sidewall, or found the car sitting flat in the driveway this morning? We bring the jack, the impact gun and the torque wrench to you — no tow, no waiting room, no calling around for a shop that’s still open.',
     },
+    featuresHeading: 'Everything We Handle Roadside',
     features: [
       {
         title: 'Spare Fitted On-Site',
@@ -176,14 +180,14 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       },
       {
         title: 'Highway-Safe Response',
-        desc: 'Beacons and cones out before any work starts. We work shoulder-side jobs on the 401 daily.',
+        desc: 'Beacons and cones out before any work starts. We work shoulder-side jobs on the 401 regularly.',
         icon: ShieldCheck,
         color: 'bg-red-500',
       },
     ],
     cta: {
       heading: 'Stuck on a Flat Right Now?',
-      body: "Tell us the cross-street and we'll give you a real ETA and an upfront price before a unit rolls. Most GTA calls are on scene in under 30 minutes.",
+      body: 'Tell us the cross-street and we’ll give you a real ETA and an upfront price before a unit rolls. Most GTA calls are on scene in under 30 minutes.',
     },
     blogSections: [
       {
@@ -342,16 +346,17 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'jump-start': {
     id: 'jump-start',
-    seoTitle: '24/7 Car Battery Jump Start GTA | Pickering, Ajax, Oshawa',
-    seoDescription: 'Dead battery? iFAST Roadside provides rapid 24/7 battery jump start services across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Safe, anti-surge boosters. Fast local dispatch.',
+    seoTitle: 'Car Won’t Start? 24/7 Mobile Jump Start Across the GTA',
+    seoDescription: 'One click and then nothing? We bring commercial boost packs to your driveway or condo garage, then test whether the battery will hold. 24/7 GTA — call now.',
     keywords: 'car battery jump start Pickering, dead battery service Ajax, mobile jump start Oshawa, onsite battery boost Whitby, 24/7 jump start Scarborough, car won\'t start GTA',
     heroImage: '/jump_start_hero.jpg',
     hero: {
       eyebrow: 'Dead Battery Boost',
       h1: 'Car Won’t Start?',
-      h1Accent: "We'll Have You Running.",
-      intro: "Dash lights flicker, one click, then nothing. We carry commercial-grade boost packs that start everything from a Civic to a diesel pickup — and once you're running we test whether the battery will actually hold, so you're not stranded again tonight.",
+      h1Accent: 'We’ll Have You Running.',
+      intro: 'Dash lights flicker, one click, then nothing. We carry commercial-grade boost packs that start everything from a Civic to a diesel pickup — and once you’re running we test whether the battery will actually hold, so you’re not stranded again tonight.',
     },
+    featuresHeading: 'What We Do On Arrival',
     features: [
       {
         title: 'Boost in Minutes',
@@ -367,20 +372,20 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       },
       {
         title: 'Battery Swap On-Site',
-        desc: 'If it will not hold a charge, we can supply and fit a replacement right there.',
+        desc: 'If it won’t hold a charge, we can supply and fit a replacement right there.',
         icon: Wrench,
         color: 'bg-green-500',
       },
       {
         title: 'Underground & Condo Access',
-        desc: 'We work condo garages and tight parkades across the GTA every day — low clearance is not a problem.',
+        desc: 'We work condo garages and tight parkades across the GTA regularly — low clearance is not a problem.',
         icon: Clock,
         color: 'bg-brand-dark',
       },
     ],
     cta: {
       heading: 'Dead Battery Right Now?',
-      body: "Tell us where you're parked — driveway, office lot or underground garage — and we'll give you an ETA and an upfront price before a unit rolls.",
+      body: 'Tell us where you’re parked — driveway, office lot or underground garage — and we’ll give you an ETA and an upfront price before a unit rolls.',
     },
     blogSections: [
       {
@@ -889,19 +894,19 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'flat-tire-repair': {
     id: 'flat-tire-repair',
-    seoTitle: '24/7 Mobile Flat Tire Repair GTA | Patch & Plug Pickering, Ajax, Oshawa',
-    seoDescription: 'Nail or screw in your tire? iFAST Roadside performs permanent mobile flat tire repairs (internal patch-and-plug) across Pickering, Ajax, Whitby, Oshawa, and Scarborough. 30-min response. Call now.',
+    seoTitle: 'Mobile Flat Tire Repair GTA | Patch & Plug at Your Door',
+    seoDescription: 'Nail in your tire and losing air every morning? We come to you and fit a permanent internal patch-plug — no shop, no tow, no waiting room. Call for a price.',
     keywords: 'flat tire repair Pickering, mobile tire patch Ajax, nail in tire repair Oshawa, tire plug service Whitby, puncture repair Scarborough, fix flat tire on site GTA',
     heroImage: '/flat_tire_repair_hero.jpg',
     hero: {
       eyebrow: 'Puncture Repair On-Site',
       h1: 'Nail in Your Tire?',
       h1Accent: 'Patched Properly, At Your Door.',
-      intro: "A slow leak that needs topping up every second morning is a puncture, not bad luck. We come to you, pull the wheel, find the leak and fit a proper internal patch-plug — the repair a tire shop would do, done in your driveway.",
+      intro: 'A slow leak that needs topping up every second morning is a puncture, not bad luck. We come to you, pull the wheel, find the leak and fit a proper internal patch-plug — the repair a tire shop would do, done in your driveway.',
     },
     cta: {
       heading: 'Losing Air Every Morning?',
-      body: "Don't keep pumping it up and hoping. Call now for an upfront price on a permanent patch-plug repair at your home or workplace.",
+      body: 'Don’t keep pumping it up and hoping. Call now for an upfront price on a permanent patch-plug repair at your home or workplace.',
     },
     blogSections: [
       {
@@ -976,19 +981,19 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'spare-tire-change': {
     id: 'spare-tire-change',
-    seoTitle: '24/7 Spare Tire Change Service GTA | Pickering, Ajax, Oshawa',
-    seoDescription: 'Have a spare but stuck roadside? iFAST Roadside safely installs your spare or donut across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Fast 30-min response. Call now.',
+    seoTitle: 'Spare Tire Change GTA | Donut Fitted Roadside in Minutes',
+    seoDescription: 'Spare in the trunk but no jack and nowhere safe to kneel? We arrive with the proper gear, fit it in minutes and tell you how far it will get you. Call 24/7.',
     keywords: 'spare tire change Pickering, install spare tire Ajax, donut tire change Oshawa, roadside spare swap Whitby, flat tire spare service Scarborough, change tire to spare GTA',
     heroImage: '/spare_tire_change_hero.jpg',
     hero: {
       eyebrow: 'Spare Tire Swap',
       h1: 'Got a Spare?',
-      h1Accent: "We'll Get It On in Minutes.",
-      intro: "You have the donut in the trunk but no jack, no leverage on the wheel nuts, or nowhere safe to kneel down. We arrive with proper equipment, swap it safely and tell you exactly how far that spare will take you.",
+      h1Accent: 'We’ll Get It On in Minutes.',
+      intro: 'You have the donut in the trunk but no jack, no leverage on the wheel nuts, or nowhere safe to kneel down. We arrive with proper equipment, swap it safely and tell you exactly how far that spare will take you.',
     },
     cta: {
       heading: 'Spare in the Trunk, Car on the Ground?',
-      body: "Call now — this is one of the fastest jobs we do, and we'll check your spare's pressure before you drive off.",
+      body: 'Call now — this is one of the fastest jobs we do, and we’ll check your spare’s pressure before you drive off.',
     },
     blogSections: [
       {
@@ -1063,19 +1068,19 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'tire-installation': {
     id: 'tire-installation',
-    seoTitle: '24/7 Mobile New & Used Tire Installation GTA | On-Site Pickering, Ajax, Oshawa',
-    seoDescription: 'No spare? iFAST Roadside delivers and installs new or quality used tires on-site across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Mount, balance, install. Call now.',
+    seoTitle: 'Mobile Tire Installation GTA | Fitted on Your Driveway',
+    seoDescription: 'Need new tires but no time for the shop? We deliver new or quality used tires, mount and balance them at your home or office, and take the old set away.',
     keywords: 'mobile tire installation Pickering, new tire delivery Ajax, used tire install Oshawa, on-site tire mounting Whitby, tire replacement at home Scarborough, buy and install tire GTA',
     heroImage: '/tire_installation_hero.jpg',
     hero: {
       eyebrow: 'Mobile Tire Fitting',
       h1: 'New Tires,',
       h1Accent: 'Fitted On Your Driveway.',
-      intro: "Skip the appointment and the waiting room. We bring mounting and balancing to your home or office, fit new or used tires to your rims, torque everything to spec and take the old ones away with us.",
+      intro: 'Skip the appointment and the waiting room. We bring mounting and balancing to your home or office, fit new or used tires to your rims, torque everything to spec and take the old ones away with us.',
     },
     cta: {
       heading: 'Ready for a Fresh Set?',
-      body: 'Tell us your tire size and we will quote supply and fitting over the phone, then come to you at a time that suits.',
+      body: 'Tell us your tire size and we’ll quote supply and fitting over the phone, then come to you at a time that suits.',
     },
     blogSections: [
       {
@@ -1151,18 +1156,18 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'battery-diagnostic': {
     id: 'battery-diagnostic',
-    seoTitle: '24/7 Mobile Car Battery Diagnostic GTA | Pickering, Ajax, Oshawa',
-    seoDescription: 'Car cranking slow or dying repeatedly? iFAST Roadside tests your battery, alternator, and charging system on-site across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Call now.',
+    seoTitle: 'Battery or Alternator? Mobile Car Battery Testing, GTA',
+    seoDescription: 'Cranking slow or dying again and again? Before you buy parts we load-test the battery, measure alternator output and check for draw at your door. Call now.',
     keywords: 'car battery test Pickering, battery diagnostic Ajax, alternator test Oshawa, charging system check Whitby, mobile battery testing Scarborough, why car keeps dying GTA',
     heroImage: '/battery_diagnostic_hero.jpg',
     hero: {
       eyebrow: 'Charging System Testing',
       h1: 'Battery or Alternator?',
-      h1Accent: "Let's Find Out Before You Buy.",
-      intro: "Replacing a healthy battery when the alternator is the real fault is an expensive mistake. We load-test the battery, measure charging output and check for parasitic draw at your location, then tell you exactly which part is at fault.",
+      h1Accent: 'Let’s Find Out Before You Buy.',
+      intro: 'Replacing a healthy battery when the alternator is the real fault is an expensive mistake. We load-test the battery, measure charging output and check for parasitic draw at your location, then tell you exactly which part is at fault.',
     },
     cta: {
-      heading: 'Not Sure What Is Draining It?',
+      heading: 'Not Sure What’s Draining It?',
       body: 'Get a proper diagnosis before you spend money on parts. We test at your home or workplace and give you the numbers.',
     },
     blogSections: [
@@ -1238,19 +1243,19 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'battery-replacement': {
     id: 'battery-replacement',
-    seoTitle: '24/7 Mobile Car Battery Replacement GTA | Pickering, Ajax, Oshawa',
-    seoDescription: 'Battery beyond saving? iFAST Roadside delivers and installs the correct new car battery on-site across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Old battery recycled free. Call now.',
+    seoTitle: 'Car Battery Replacement GTA | Delivered and Fitted to You',
+    seoDescription: 'Boosting the same car every morning? We bring the right battery to your home or workplace, fit it and recycle the old one free. Call for a fitted price.',
     keywords: 'car battery replacement Pickering, mobile battery install Ajax, new car battery delivery Oshawa, battery installation at home Whitby, replace dead battery Scarborough, car battery service GTA',
     heroImage: '/battery_replacement_hero.jpg',
     hero: {
       eyebrow: 'Mobile Battery Replacement',
       h1: 'Battery Done?',
       h1Accent: 'New One Fitted Where You Are.',
-      intro: "A battery that needs a boost twice in one week is finished. We bring the right group size to your home or workplace, fit it, clean up the terminals and take the old one away for recycling — no shop appointment and no second tow.",
+      intro: 'A battery that needs a boost twice in one week is finished. We bring the right group size to your home or workplace, fit it, clean up the terminals and take the old one away for recycling — no shop appointment and no second tow.',
     },
     cta: {
       heading: 'Tired of Boosting It Every Morning?',
-      body: 'Call with your make and model and we will quote a supplied-and-fitted price over the phone, then come to you.',
+      body: 'Call with your make and model and we’ll quote a supplied-and-fitted price over the phone, then come to you.',
     },
     blogSections: [
       {

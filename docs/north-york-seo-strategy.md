@@ -236,6 +236,17 @@ Toronto; readability 20.4 avg words/sentence.
 
 ## Open issue — /mobile-mechanic duplicate (investigated 2026-07-21, deliberately NOT fixed)
 
+> **RESOLVED 2026-07-25 — this section is kept for the record only; do not act on it.**
+> The duplicate was fixed on the `service-page-differentiation` branch: internal links
+> now point at the canonical `/mobile-mechanic` via `utils/serviceHref.ts`, and
+> `/service/mobile-mechanic` 301s to it (`vercel.json`). `/mobile-mechanic` is the
+> survivor exactly as this section required — its page component, title, description,
+> canonical and sitemap entry (priority 0.95) were left untouched. The Google Ads
+> landing-page question below is therefore moot for indexing, but the 301 means any ad
+> still pointing at `/service/mobile-mechanic` now takes a redirect hop — worth checking
+> in the Ads UI. See
+> `docs/superpowers/specs/2026-07-25-service-page-differentiation-design.md`.
+
 `/mobile-mechanic` and `/service/mobile-mechanic` are near-duplicates:
 
 | | `/mobile-mechanic` | `/service/mobile-mechanic` |

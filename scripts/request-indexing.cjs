@@ -6,10 +6,12 @@
  * Google once; then it iterates through all URLs automatically.
  *
  * Usage:
- *   node scripts/request-indexing.js
+ *   node scripts/request-indexing.cjs
  *
- * Google limits indexing requests to ~200/day per property.
- * This script covers all 44 pages which is well within the limit.
+ * Google limits indexing requests to ~200/day per property, but the manual
+ * "Request Indexing" button is rationed far harder (~10-12/day). This script
+ * covers 60 unique pages, so expect it to run out of quota partway through —
+ * that is why the list is ordered by priority rather than by site structure.
  */
 
 const { chromium } = require('playwright');
@@ -24,9 +26,10 @@ const os = require('os');
 // "discovered, not indexed"). Request these before anything else.
 const URLS = [
   // ── PRIORITY: pages rebuilt with bespoke copy 2026-07-25 ──
-  // Google declined to crawl these when they shared templated boilerplate; the
-  // hypothesis under test is that differentiated copy changes that. Ordered by
-  // measured GSC demand. Manual quota is ~10-12 URLs/day, so order matters.
+  // These seven service pages were rebuilt on 2026-07-25 with hand-written hero,
+  // feature and CTA copy plus fresh titles and descriptions, so their cached
+  // versions in Google's index are stale. Ordered by measured GSC demand. The
+  // manual quota is ~10-12 URLs/day, so this order is what actually ships.
   'https://www.ifastroadside.ca/service/tire-change',
   'https://www.ifastroadside.ca/service/jump-start',
   'https://www.ifastroadside.ca/service/battery-replacement',
@@ -48,17 +51,10 @@ const URLS = [
   'https://www.ifastroadside.ca/mobile-mechanic',
   'https://www.ifastroadside.ca/service-area/east-gta',
 
-  // Service pages
-  'https://www.ifastroadside.ca/service/tire-change',
-  'https://www.ifastroadside.ca/service/jump-start',
+  // Service pages (the other seven service hubs are in the PRIORITY block above)
   'https://www.ifastroadside.ca/service/lockout',
   'https://www.ifastroadside.ca/service/fuel',
   'https://www.ifastroadside.ca/service/towing',
-  'https://www.ifastroadside.ca/service/flat-tire-repair',
-  'https://www.ifastroadside.ca/service/spare-tire-change',
-  'https://www.ifastroadside.ca/service/tire-installation',
-  'https://www.ifastroadside.ca/service/battery-diagnostic',
-  'https://www.ifastroadside.ca/service/battery-replacement',
 
   // Blog
   'https://www.ifastroadside.ca/blog',
