@@ -21,10 +21,15 @@ const os = require('os');
 // All pages to index — highest priority first.
 // Google's manual "Request Indexing" quota is ~10-12 URLs/day, and the script
 // stops when the quota is hit, so the pages that matter most must come FIRST.
-// The PRIORITY block below is the money-page set rebuilt 2026-07-02 that is not
-// yet indexed (tire-change hub was "unknown to Google"; lockout/fuel/combos were
-// "discovered, not indexed"). Request these before anything else.
-const URLS = [
+// By default this script submits ONLY the PRIORITY_URLS below — the pages whose
+// content actually changed and that are worth spending the quota on. Google's
+// manual "Request Indexing" quota is roughly 10-12 URLs/day, so submitting the
+// whole site burns the budget on pages that are already indexed and unchanged,
+// and pushes the ones that matter past the cutoff.
+//
+// Pass --all to submit every URL (rarely what you want):
+//   node scripts/request-indexing.cjs --all
+const PRIORITY_URLS = [
   // ── PRIORITY: pages rebuilt with bespoke copy 2026-07-25 ──
   // These seven service pages were rebuilt on 2026-07-25 with hand-written hero,
   // feature and CTA copy plus fresh titles and descriptions, so their cached
@@ -50,7 +55,11 @@ const URLS = [
   'https://www.ifastroadside.ca/service/battery-diagnostic',
   'https://www.ifastroadside.ca/service/flat-tire-repair',
   'https://www.ifastroadside.ca/service/tire-installation',
+];
 
+// Everything else. Only submitted with --all. These are mostly already indexed
+// and unchanged, so re-requesting them wastes the daily quota.
+const OTHER_URLS = [
   // ── New blog posts (published 2026-07-03, not yet known to Google) ──
   'https://www.ifastroadside.ca/blog/dead-car-battery-boost-or-replace-east-gta',
   'https://www.ifastroadside.ca/blog/locked-out-of-car-what-not-to-do-east-gta',
@@ -121,6 +130,15 @@ const URLS = [
   'https://www.ifastroadside.ca/service/towing/whitby',
   'https://www.ifastroadside.ca/service/towing/oshawa',
 ];
+
+const SUBMIT_ALL = process.argv.includes('--all');
+const URLS = SUBMIT_ALL ? [...PRIORITY_URLS, ...OTHER_URLS] : PRIORITY_URLS;
+
+console.log(
+  SUBMIT_ALL
+    ? `Mode: --all — submitting all ${URLS.length} URLs. This will exceed the ~10-12/day quota.`
+    : `Mode: priority only — submitting ${URLS.length} rebuilt pages. Pass --all to submit everything.`
+);
 
 // GSC serves a bare Google 404 when the session account picked by `authuser`
 // has no access to the property. The right slot depends on login order, so we
