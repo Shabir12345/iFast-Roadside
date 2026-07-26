@@ -346,6 +346,42 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoDescription: 'Dead battery? iFAST Roadside provides rapid 24/7 battery jump start services across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Safe, anti-surge boosters. Fast local dispatch.',
     keywords: 'car battery jump start Pickering, dead battery service Ajax, mobile jump start Oshawa, onsite battery boost Whitby, 24/7 jump start Scarborough, car won\'t start GTA',
     heroImage: '/jump_start_hero.jpg',
+    hero: {
+      eyebrow: 'Dead Battery Boost',
+      h1: 'Car Won’t Start?',
+      h1Accent: "We'll Have You Running.",
+      intro: "Dash lights flicker, one click, then nothing. We carry commercial-grade boost packs that start everything from a Civic to a diesel pickup — and once you're running we test whether the battery will actually hold, so you're not stranded again tonight.",
+    },
+    features: [
+      {
+        title: 'Boost in Minutes',
+        desc: 'Professional jump packs, not jumper cables and a stranger’s bumper. Safe for modern vehicle electronics.',
+        icon: Zap,
+        color: 'bg-yellow-500',
+      },
+      {
+        title: 'Charge System Test',
+        desc: 'We test the battery and alternator on the spot so you know whether this happens again tomorrow.',
+        icon: Gauge,
+        color: 'bg-blue-500',
+      },
+      {
+        title: 'Battery Swap On-Site',
+        desc: 'If it will not hold a charge, we can supply and fit a replacement right there.',
+        icon: Wrench,
+        color: 'bg-green-500',
+      },
+      {
+        title: 'Underground & Condo Access',
+        desc: 'We work condo garages and tight parkades across the GTA every day — low clearance is not a problem.',
+        icon: Clock,
+        color: 'bg-brand-dark',
+      },
+    ],
+    cta: {
+      heading: 'Dead Battery Right Now?',
+      body: "Tell us where you're parked — driveway, office lot or underground garage — and we'll give you an ETA and an upfront price before a unit rolls.",
+    },
     blogSections: [
       {
         title: '24/7 Mobile Battery Jump Start Service Across the Greater Toronto Area (Pickering, Ajax, Whitby, Oshawa)',
@@ -1119,6 +1155,16 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoDescription: 'Car cranking slow or dying repeatedly? iFAST Roadside tests your battery, alternator, and charging system on-site across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Call now.',
     keywords: 'car battery test Pickering, battery diagnostic Ajax, alternator test Oshawa, charging system check Whitby, mobile battery testing Scarborough, why car keeps dying GTA',
     heroImage: '/battery_diagnostic_hero.jpg',
+    hero: {
+      eyebrow: 'Charging System Testing',
+      h1: 'Battery or Alternator?',
+      h1Accent: "Let's Find Out Before You Buy.",
+      intro: "Replacing a healthy battery when the alternator is the real fault is an expensive mistake. We load-test the battery, measure charging output and check for parasitic draw at your location, then tell you exactly which part is at fault.",
+    },
+    cta: {
+      heading: 'Not Sure What Is Draining It?',
+      body: 'Get a proper diagnosis before you spend money on parts. We test at your home or workplace and give you the numbers.',
+    },
     blogSections: [
       {
         title: '24/7 Mobile Battery & Charging System Diagnostics Across the Greater Toronto Area',
@@ -1196,6 +1242,16 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoDescription: 'Battery beyond saving? iFAST Roadside delivers and installs the correct new car battery on-site across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Old battery recycled free. Call now.',
     keywords: 'car battery replacement Pickering, mobile battery install Ajax, new car battery delivery Oshawa, battery installation at home Whitby, replace dead battery Scarborough, car battery service GTA',
     heroImage: '/battery_replacement_hero.jpg',
+    hero: {
+      eyebrow: 'Mobile Battery Replacement',
+      h1: 'Battery Done?',
+      h1Accent: 'New One Fitted Where You Are.',
+      intro: "A battery that needs a boost twice in one week is finished. We bring the right group size to your home or workplace, fit it, clean up the terminals and take the old one away for recycling — no shop appointment and no second tow.",
+    },
+    cta: {
+      heading: 'Tired of Boosting It Every Morning?',
+      body: 'Call with your make and model and we will quote a supplied-and-fitted price over the phone, then come to you.',
+    },
     blogSections: [
       {
         title: '24/7 Mobile Car Battery Replacement Across the Greater Toronto Area (Pickering, Ajax, Whitby, Oshawa)',
