@@ -1,6 +1,6 @@
 import React from 'react';
 import { PHONE_NUMBER, COMPANY_NAME, GOOGLE_REVIEWS_COUNT } from '../constants';
-import { PhoneCall, type LucideIcon } from 'lucide-react';
+import { PhoneCall, type LucideIcon, Disc3, Gauge, Wrench, ShieldCheck, Zap, Clock, CircleDot } from 'lucide-react';
 import { trackPhoneCall } from '../utils/analytics';
 
 const CallNowButton = ({ source = 'service_content_inline' }: { source?: string }) => (
@@ -149,6 +149,42 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoDescription: 'Flat tire in the Greater Toronto Area? iFAST brings the tire shop to your driveway or the shoulder — Scarborough, Pickering, Ajax, Whitby, Oshawa. 24/7, fast, damage-free. Call for a quote.',
     keywords: 'mobile tire change GTA, flat tire repair Scarborough, mobile tire service Pickering, flat tire change Ajax, nail in tire repair Whitby, 24/7 mobile tire Oshawa, roadside tire change near me, mobile tire swap GTA',
     heroImage: '/tire_service_hero.jpg',
+    hero: {
+      eyebrow: 'Roadside Tire Emergency',
+      h1: 'Flat Tire?',
+      h1Accent: "We'll Change It Where You Stand.",
+      intro: "Pulled over on the 401 with a shredded sidewall, or found the car sitting flat in the driveway this morning? We bring the jack, the impact gun and the torque wrench to you — no tow, no waiting room, no calling around for a shop that's still open.",
+    },
+    features: [
+      {
+        title: 'Spare Fitted On-Site',
+        desc: 'We mount your spare properly and torque it to spec — including locking wheel nuts and seized bolts.',
+        icon: Disc3,
+        color: 'bg-brand-dark',
+      },
+      {
+        title: 'No Spare? No Problem',
+        desc: 'We carry common sizes in the van and can supply and fit a replacement tire on the spot.',
+        icon: CircleDot,
+        color: 'bg-blue-500',
+      },
+      {
+        title: 'Pressure & Safety Check',
+        desc: 'Every tire we touch gets checked for correct pressure and safe tread before we leave.',
+        icon: Gauge,
+        color: 'bg-green-500',
+      },
+      {
+        title: 'Highway-Safe Response',
+        desc: 'Beacons and cones out before any work starts. We work shoulder-side jobs on the 401 daily.',
+        icon: ShieldCheck,
+        color: 'bg-red-500',
+      },
+    ],
+    cta: {
+      heading: 'Stuck on a Flat Right Now?',
+      body: "Tell us the cross-street and we'll give you a real ETA and an upfront price before a unit rolls. Most GTA calls are on scene in under 30 minutes.",
+    },
     blogSections: [
       {
         title: 'Mobile Tire Change That Comes to You — Skip the Shop, Skip the Tow',
@@ -821,6 +857,16 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoDescription: 'Nail or screw in your tire? iFAST Roadside performs permanent mobile flat tire repairs (internal patch-and-plug) across Pickering, Ajax, Whitby, Oshawa, and Scarborough. 30-min response. Call now.',
     keywords: 'flat tire repair Pickering, mobile tire patch Ajax, nail in tire repair Oshawa, tire plug service Whitby, puncture repair Scarborough, fix flat tire on site GTA',
     heroImage: '/flat_tire_repair_hero.jpg',
+    hero: {
+      eyebrow: 'Puncture Repair On-Site',
+      h1: 'Nail in Your Tire?',
+      h1Accent: 'Patched Properly, At Your Door.',
+      intro: "A slow leak that needs topping up every second morning is a puncture, not bad luck. We come to you, pull the wheel, find the leak and fit a proper internal patch-plug — the repair a tire shop would do, done in your driveway.",
+    },
+    cta: {
+      heading: 'Losing Air Every Morning?',
+      body: "Don't keep pumping it up and hoping. Call now for an upfront price on a permanent patch-plug repair at your home or workplace.",
+    },
     blogSections: [
       {
         title: '24/7 Mobile Flat Tire Repair Across the Greater Toronto Area (Pickering, Ajax, Whitby, Oshawa)',
@@ -898,6 +944,16 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoDescription: 'Have a spare but stuck roadside? iFAST Roadside safely installs your spare or donut across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Fast 30-min response. Call now.',
     keywords: 'spare tire change Pickering, install spare tire Ajax, donut tire change Oshawa, roadside spare swap Whitby, flat tire spare service Scarborough, change tire to spare GTA',
     heroImage: '/spare_tire_change_hero.jpg',
+    hero: {
+      eyebrow: 'Spare Tire Swap',
+      h1: 'Got a Spare?',
+      h1Accent: "We'll Get It On in Minutes.",
+      intro: "You have the donut in the trunk but no jack, no leverage on the wheel nuts, or nowhere safe to kneel down. We arrive with proper equipment, swap it safely and tell you exactly how far that spare will take you.",
+    },
+    cta: {
+      heading: 'Spare in the Trunk, Car on the Ground?',
+      body: "Call now — this is one of the fastest jobs we do, and we'll check your spare's pressure before you drive off.",
+    },
     blogSections: [
       {
         title: '24/7 Mobile Spare Tire Change Across the Greater Toronto Area (Pickering, Ajax, Whitby, Oshawa)',
@@ -975,6 +1031,16 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
     seoDescription: 'No spare? iFAST Roadside delivers and installs new or quality used tires on-site across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Mount, balance, install. Call now.',
     keywords: 'mobile tire installation Pickering, new tire delivery Ajax, used tire install Oshawa, on-site tire mounting Whitby, tire replacement at home Scarborough, buy and install tire GTA',
     heroImage: '/tire_installation_hero.jpg',
+    hero: {
+      eyebrow: 'Mobile Tire Fitting',
+      h1: 'New Tires,',
+      h1Accent: 'Fitted On Your Driveway.',
+      intro: "Skip the appointment and the waiting room. We bring mounting and balancing to your home or office, fit new or used tires to your rims, torque everything to spec and take the old ones away with us.",
+    },
+    cta: {
+      heading: 'Ready for a Fresh Set?',
+      body: 'Tell us your tire size and we will quote supply and fitting over the phone, then come to you at a time that suits.',
+    },
     blogSections: [
       {
         title: '24/7 Mobile New & Used Tire Installation Across the Greater Toronto Area (Pickering, Ajax, Whitby, Oshawa)',
