@@ -131,8 +131,20 @@ be reconsidered rather than executed.
   `/service/${id}` for everything else. Apply in `Header.tsx`, `Footer.tsx`, `Services.tsx`,
   and `BlogPost.tsx`. This routes existing internal links to the canonical page directly instead
   of through a 301, and increases the internal link count to `/mobile-mechanic`.
-- Replace the blanket all-services list in `BlogPost.tsx` (line ~203) with a curated topical
-  mapping, so each post links contextually to its matching service rather than to all twelve.
+
+**Correction (2026-07-25, after implementation review):** an earlier draft of this spec called
+for replacing a "blanket all-services list" in `BlogPost.tsx` with a curated topical mapping.
+That was wrong — `BLOG_RELATED_SERVICES` (`data/blogContent.tsx:2211`) is already exactly that
+curated per-slug mapping, and `BlogPost.tsx:38` already consumes it. No work is needed here
+beyond applying `serviceHref()`.
+
+This correction strengthens the diagnosis rather than weakening it. `/service/tire-change`
+already receives contextual in-body links from four blog posts
+(`flat-tire-on-401-east-gta`, `winter-roadside-emergencies-ontario-guide`,
+`correct-tire-pressure-scarborough`, `tire-patch-repair-scarborough`), three of which are
+themselves indexed and earning impressions — and Google has still never crawled it. Contextual
+internal linking is therefore **already in place and already insufficient**. Copy
+differentiation is the remaining untried lever, which is what Phase 1 tests.
 
 ## Guardrails on /mobile-mechanic
 
