@@ -14,7 +14,7 @@
 - **`pages/MobileMechanicLanding.tsx` must not be modified.**
 - **`/mobile-mechanic` URL, canonical tag, and its `public/sitemap.xml` entry must not be modified.**
 - **`SERVICE_CONTENT['mobile-mechanic']` must not be modified.** The three new fields are optional; this entry does not receive them.
-- **Hard gate:** `dist/mobile-mechanic/index.html` must be byte-identical before and after the entire change set. Task 1 captures the baseline; Task 8 asserts it.
+- **Hard gate:** `/mobile-mechanic`'s prerendered output must be unchanged before and after the entire change set. Task 1 captures the baseline; every task re-checks it via `bash scripts/check-mobile-mechanic-guardrail.sh`, which must print `GUARDRAIL PASS`. That script normalises Vite's content-hashed asset filenames — and only those — because Vite emits a single JS bundle whose hash appears in the `<script src>` tag of every prerendered page, so a literal byte-for-byte diff reports a difference on any runtime-code change even when `/mobile-mechanic` itself is untouched. Markup, text, meta tags and JSON-LD are all still compared exactly.
 - Brand colours come from the inline Tailwind config in `index.html` — use `bg-brand-yellow`, `text-brand-dark`, `bg-brand-dark`. Never raw hex for brand colours.
 - Every phone CTA must call `trackPhoneCall(source)` from `utils/analytics.ts` with a descriptive source label.
 - Sitemap priority values (spec §Indexation work): `0.9` tire-change and jump-start; `0.8` towing, lockout, battery-replacement, battery-diagnostic, flat-tire-repair, tire-installation, spare-tire-change; `0.7` fuel and pre-purchase-inspection; `/` stays `1.0`; `/mobile-mechanic` stays `0.95`.
@@ -162,10 +162,10 @@ Expected: PASS, no TypeScript errors, no `Failed routes:` block.
 - [ ] **Step 4: Confirm no page output changed**
 
 ```bash
-diff dist/mobile-mechanic/index.html .mobile-mechanic-baseline.html && echo IDENTICAL
+bash scripts/check-mobile-mechanic-guardrail.sh
 ```
 
-Expected: prints `IDENTICAL`.
+Expected: prints `GUARDRAIL PASS`.
 
 - [ ] **Step 5: Commit**
 
@@ -330,10 +330,10 @@ Expected: `1` — the fallback still renders.
 - [ ] **Step 7: Confirm the mobile-mechanic guardrail still holds**
 
 ```bash
-diff dist/mobile-mechanic/index.html .mobile-mechanic-baseline.html && echo IDENTICAL
+bash scripts/check-mobile-mechanic-guardrail.sh
 ```
 
-Expected: prints `IDENTICAL`.
+Expected: prints `GUARDRAIL PASS`.
 
 - [ ] **Step 8: Commit**
 
@@ -482,10 +482,10 @@ Expected: `1`, `1`, `1`, then `0` — the last one proves the old templated CTA 
 - [ ] **Step 8: Confirm the mobile-mechanic guardrail still holds**
 
 ```bash
-diff dist/mobile-mechanic/index.html .mobile-mechanic-baseline.html && echo IDENTICAL
+bash scripts/check-mobile-mechanic-guardrail.sh
 ```
 
-Expected: prints `IDENTICAL`.
+Expected: prints `GUARDRAIL PASS`.
 
 - [ ] **Step 9: Commit**
 
@@ -609,10 +609,10 @@ Expected: `1` for all four.
 - [ ] **Step 6: Confirm the mobile-mechanic guardrail still holds**
 
 ```bash
-diff dist/mobile-mechanic/index.html .mobile-mechanic-baseline.html && echo IDENTICAL
+bash scripts/check-mobile-mechanic-guardrail.sh
 ```
 
-Expected: prints `IDENTICAL`.
+Expected: prints `GUARDRAIL PASS`.
 
 - [ ] **Step 7: Commit**
 
@@ -759,10 +759,14 @@ Expected: first is `2` or more (header + footer + services grid); second is `0`;
 Note: `/mobile-mechanic`'s own page contains the header and footer, so its internal links change too. This is the one expected, intended diff. Verify it is *only* that:
 
 ```bash
-diff dist/mobile-mechanic/index.html .mobile-mechanic-baseline.html | grep -v 'mobile-mechanic' | head -20
+diff <(sed -E 's/-[A-Za-z0-9_-]{8}\.(js|css)/-HASH.\1/g' dist/mobile-mechanic/index.html) \
+     <(sed -E 's/-[A-Za-z0-9_-]{8}\.(js|css)/-HASH.\1/g' .mobile-mechanic-baseline.html) \
+  | grep -v 'mobile-mechanic' | head -20
 ```
 
 Expected: no output — every differing line mentions `mobile-mechanic`, i.e. only the link targets changed. If any unrelated line appears, STOP and investigate.
+
+(The `sed` normalises Vite's content-hashed asset filenames, exactly as `scripts/check-mobile-mechanic-guardrail.sh` does. Without it the `<script src>` line differs on every build that touches runtime code, and it does not contain the string `mobile-mechanic`, so it would slip past the `grep -v` and look like a real regression.)
 
 Then refresh the baseline for the remaining tasks:
 
@@ -863,10 +867,10 @@ Expected: `sitemap OK, 47 urls`.
 - [ ] **Step 7: Confirm the mobile-mechanic guardrail**
 
 ```bash
-diff dist/mobile-mechanic/index.html .mobile-mechanic-baseline.html && echo IDENTICAL
+bash scripts/check-mobile-mechanic-guardrail.sh
 ```
 
-Expected: prints `IDENTICAL` (baseline was refreshed in Task 6).
+Expected: prints `GUARDRAIL PASS` (baseline was refreshed in Task 6).
 
 - [ ] **Step 8: Commit**
 
@@ -908,7 +912,7 @@ Expected: PASS, `Prerendered (N-1)/(N-1) routes.` using the `N` recorded in Task
 - [ ] **Step 2: Run the full guardrail diff**
 
 ```bash
-diff dist/mobile-mechanic/index.html .mobile-mechanic-baseline.html && echo "GUARDRAIL PASS"
+bash scripts/check-mobile-mechanic-guardrail.sh
 ```
 
 Expected: `GUARDRAIL PASS`. If this fails, do not deploy — investigate first.
