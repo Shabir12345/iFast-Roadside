@@ -866,13 +866,18 @@ Expected: PASS with no `Failed routes:` block, and the prerender count is exactl
 
 - [ ] **Step 5: Verify the duplicate is gone and the canonical survives**
 
+The directory `dist/service/mobile-mechanic/` does NOT disappear — it still holds the six `<city>` combo pages. Only its own `index.html` goes. Likewise the sitemap still legitimately contains `/service/mobile-mechanic/north-york`, so a loose `grep -c "service/mobile-mechanic"` will not be `0`. Assert on the exact bare URL:
+
 ```bash
-test ! -d dist/service/mobile-mechanic && echo "duplicate removed"
+test ! -f dist/service/mobile-mechanic/index.html && echo "duplicate removed"
 test -f dist/mobile-mechanic/index.html && echo "canonical intact"
-grep -c "service/mobile-mechanic" public/sitemap.xml
+ls dist/service/mobile-mechanic/          # combo pages must all survive
+grep -c '<loc>https://www.ifastroadside.ca/service/mobile-mechanic</loc>' public/sitemap.xml
 ```
 
-Expected: `duplicate removed`, `canonical intact`, then `0`.
+Expected: `duplicate removed`, `canonical intact`, a listing of the six city directories (ajax, north-york, oshawa, pickering, scarborough, whitby), then `0`.
+
+Note: `grep -c` exits non-zero when the count is `0`, so do not chain that last command with `&&` — it will look like a failure when it is the result you want.
 
 - [ ] **Step 6: Validate the sitemap is still well-formed XML**
 
