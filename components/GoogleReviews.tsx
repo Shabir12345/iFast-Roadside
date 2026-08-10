@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Star, ChevronDown } from 'lucide-react';
 import { GOOGLE_REVIEWS } from '../constants';
 import { GoogleReview } from '../types';
@@ -76,12 +76,46 @@ const ReviewCard: React.FC<{ review: GoogleReview }> = ({ review }) => {
 const GoogleReviews: React.FC = () => {
   // false = try the live widget; true = the widget failed, show static cards.
   const [widgetFailed, setWidgetFailed] = useState(false);
+  // The widget is only mounted once this section approaches the viewport.
+  const [activated, setActivated] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Defer activation until the section is close to being seen.
+  //
+  // Featurable's bundle costs ~1.1s of main-thread CPU and pulls ~25 reviewer
+  // avatars from lh3.googleusercontent.com. Loading that during page load was
+  // the single largest contributor to Total Blocking Time, and none of it is
+  // visible until the visitor scrolls past the fold. The 600px rootMargin means
+  // it is already rendered by the time it is actually on screen.
+  useEffect(() => {
+    // No IntersectionObserver (or a very old browser): just load it.
+    if (typeof IntersectionObserver === 'undefined') {
+      setActivated(true);
+      return;
+    }
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setActivated(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '600px 0px' }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
-    // Re-inject the loader on every mount. Dynamically-created <script> elements
-    // always execute when appended, so this re-scans the widget div on each
-    // client-side route change (Home -> /service/:id) where the same component
-    // remounts but the bundle wouldn't otherwise re-run.
+    if (!activated) return;
+
+    // Re-inject the loader on every activation. Dynamically-created <script>
+    // elements always execute when appended, so this re-scans the widget div on
+    // each client-side route change (Home -> /service/:id) where the same
+    // component remounts but the bundle wouldn't otherwise re-run.
     setWidgetFailed(false);
     const script = document.createElement('script');
     script.src = FEATURABLE_SCRIPT_SRC;
@@ -102,16 +136,20 @@ const GoogleReviews: React.FC = () => {
       window.clearTimeout(timer);
       script.remove();
     };
-  }, []);
+  }, [activated]);
 
   return (
-    <section id="google-reviews" className="bg-white py-16 border-y border-gray-100">
+    <section ref={sectionRef} id="google-reviews" className="bg-white py-16 border-y border-gray-100">
       <div className="container mx-auto px-4">
         {/* Live Google reviews via Featurable — auto-updates, no code changes.
-            The widget renders its own rating header, so we don't duplicate it. */}
+            The widget renders its own rating header, so we don't duplicate it.
+
+            The sizing wrapper renders whether or not the widget has been
+            activated, so the space is reserved from first paint and filling it
+            later costs no layout shift. */}
         {!widgetFailed && (
           <div className="max-w-6xl mx-auto min-h-[520px] md:min-h-[420px]">
-            <div id={FEATURABLE_WIDGET_ID} data-featurable-async />
+            {activated && <div id={FEATURABLE_WIDGET_ID} data-featurable-async />}
           </div>
         )}
 

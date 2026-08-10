@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
+import { onIdle } from '../utils/onIdle';
 
 // Live Google review stats, pulled from the same Featurable widget that powers
 // the reviews section (components/GoogleReviews.tsx). This keeps the "X Reviews"
@@ -60,11 +61,24 @@ export const useGoogleReviewStats = (): GoogleReviewStats => {
 
   useEffect(() => {
     let alive = true;
-    fetchStats().then((s) => {
-      if (alive) setStats(s);
-    });
+
+    // Deferred to idle rather than fired on mount. FALLBACK is not a guess —
+    // scripts/sync-reviews.mjs refreshes data/reviewStats.json from this same
+    // API before every build, so the badge already renders the right number and
+    // this request only catches reviews left since the last deploy. Running it
+    // during load put a third-party origin on the critical path for a number
+    // that was, in almost every case, about to be identical.
+    const start = () => {
+      fetchStats().then((s) => {
+        if (alive) setStats(s);
+      });
+    };
+
+    const cancel = onIdle(start, 4000);
+
     return () => {
       alive = false;
+      cancel();
     };
   }, []);
 

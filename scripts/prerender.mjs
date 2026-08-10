@@ -24,9 +24,13 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const { render } = await import(
+const { render, warmup } = await import(
   pathToFileURL(join(root, 'dist-server', 'entry-server.js')).href
 );
+
+// Routes are code-split (utils/lazyRoute). renderToString cannot render a lazy
+// component, so every route module has to be resolved before the render loop.
+await warmup();
 
 // Kept in sync with NOINDEX_COMBOS in pages/ServiceCityPage.tsx.
 const NOINDEX_COMBOS = [
@@ -60,6 +64,27 @@ const routes = [...new Set([
 ])];
 
 let template = readFileSync(join(root, 'dist', 'index.html'), 'utf8');
+
+// Inline the stylesheet instead of linking it.
+//
+// The bundled CSS is ~9.5 KiB over the wire but sat on the critical path as a
+// render-blocking request, costing ~150ms before first paint. Since every route
+// is prerendered to its own HTML file, folding the CSS into <head> removes that
+// round trip entirely. The trade is that the CSS is no longer cached across
+// pages — acceptable here because the site's traffic is overwhelmingly
+// single-page visits from paid search.
+//
+// If this ever stops matching (Vite changing its emitted <link> shape), the
+// build fails loudly rather than silently shipping unstyled pages.
+const cssLink = template.match(/<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/);
+if (!cssLink) {
+  console.error('Could not find the emitted stylesheet <link> in dist/index.html — aborting.');
+  process.exit(1);
+}
+const cssHref = cssLink[1];
+const css = readFileSync(join(root, 'dist', cssHref.replace(/^\//, '')), 'utf8');
+template = template.replace(cssLink[0], `<style>${css}</style>`);
+console.log(`✓ Inlined ${cssHref} (${(css.length / 1024).toFixed(1)} KiB raw)`);
 
 // Sync the JSON-LD aggregateRating to the live Google/Featurable count at build
 // time (SEO audit t11) so the schema, the hero "X Reviews" badges, and the

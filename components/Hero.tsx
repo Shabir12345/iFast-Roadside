@@ -1,3 +1,4 @@
+import type React from 'react';
 import { ArrowRight, Clock, MapPin, ShieldCheck, PhoneCall, Star, CheckCircle2 } from 'lucide-react';
 import { PHONE_NUMBER } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
@@ -80,12 +81,20 @@ const Hero: React.FC = () => {
             <div className="relative w-full max-w-lg">
               {/* Premium Image Container */}
               <div className="rounded-[2.5rem] overflow-hidden border-8 border-white shadow-[0_20px_50px_rgba(11,30,54,0.15)] relative transform lg:-rotate-2 transition-transform hover:rotate-0 duration-500">
+                {/* Self-hosted (was hotlinked from images.unsplash.com, which put
+                    a third-party origin on the critical path). Pre-cropped to
+                    4:5 by scripts/optimize-images.mjs, so width/height match the
+                    file exactly and reserve the right box before it decodes.
+                    loading="lazy" is safe here: this sits below the fold on
+                    mobile, and on desktop it is inside the initial viewport, so
+                    the browser fetches it immediately anyway. */}
                 <img
-                  src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=70&w=1000&auto=format&fit=crop"
+                  src="/hero_roadside_technician.webp"
                   alt="Professional Roadside Assistance Mechanic"
-                  width={800}
-                  height={1000}
+                  width={1024}
+                  height={1280}
                   className="w-full h-full object-cover aspect-[4/5] object-center"
+                  loading="lazy"
                   decoding="async"
                 />
                 {/* Gradient overlay for contrast if needed */}

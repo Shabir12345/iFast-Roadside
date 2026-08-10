@@ -1,3 +1,4 @@
+import type React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES } from '../constants';
 import { CITY_CONTENT } from '../data/cityContent';

@@ -24,8 +24,9 @@ No test runner, linter, or formatter is configured. Type-checking happens implic
 - **React 19** + **TypeScript** + **Vite 6**
 - **React Router v7** (`BrowserRouter` in `index.tsx`)
 - **react-helmet-async** for per-page `<head>` / JSON-LD
-- **Tailwind via CDN** — loaded from `cdn.tailwindcss.com` in `index.html`. There is no PostCSS/Tailwind build step. The theme (including brand colors `brand-dark`, `brand-yellow`, `brand-yellowHover`, `brand-gray`) is configured inline in a `<script>` tag in `index.html`. `index.css` holds a few custom utilities and keyframes, not Tailwind source.
+- **Tailwind, compiled** — real PostCSS build (`postcss.config.js` + `tailwind.config.js`), not the CDN script. Brand colors (`brand-dark`, `brand-yellow`, `brand-yellowHover`, `brand-gray`) are defined in `tailwind.config.js`; `index.css` holds the `@tailwind` directives plus custom utilities, keyframes, and the `@font-face` blocks.
 - **Lucide React** for icons
+- **Inter, self-hosted** — `public/fonts/*.woff2`, declared in `index.css` and preloaded in `index.html`. Not fetched from Google Fonts: that cost a render-blocking request on a third-party origin. The variable font covers weights 100-900, which matters because the site uses `font-black` (900) and `font-medium` (500).
 
 ## Architecture
 
@@ -37,6 +38,33 @@ Key routes in `App.tsx`:
 - `/areas/:city` → `pages/CityPage.tsx` (per-city pages, driven by `CITY_CONTENT`)
 
 `StickyCall` is global, rendered outside `<Routes>`.
+
+Routes live in the `ROUTES` array in `App.tsx` — that array is the single source
+of truth, feeding both `<Routes>` and the preloading below. Add a route there,
+not as a loose `<Route>`.
+
+### Route code splitting — three rules that must hold together
+Page components are lazily imported through `lazyRoute()` (`utils/lazyRoute.tsx`)
+so a visitor only downloads the content data for the page they landed on. The
+heavy files (`data/blogContent.tsx`, `data/serviceContent.tsx`,
+`data/serviceCityContent.tsx`) are JSX, so importing them *executes* — building
+every element tree — which is why they must stay off other routes.
+
+Three things depend on each other; breaking any one breaks the build or the page:
+
+1. `entry-server.tsx` exports `warmup()`, and `scripts/prerender.mjs` awaits it
+   before rendering. `renderToString` cannot render a `React.lazy` component —
+   it throws instead of suspending — so every route must be resolved first.
+2. `index.tsx` awaits `preloadMatchingRoute(location.pathname)` before mounting.
+   Do not remove this. React does not preserve prerendered HTML for a Suspense
+   boundary that suspends on mount; it renders the boundary empty, which
+   collapses the document and moves the footer a full viewport (measured CLS of
+   1.0 when this was missing).
+3. `index.tsx` uses `createRoot`, not `hydrateRoot`. Hydration currently fails
+   with React error #418 on every route except `/` because react-helmet-async v3
+   under React 19 renders `<title>`/`<meta>`/`<link>`/JSON-LD into the component
+   tree instead of into `helmetContext`, so `renderToString` emits them inside
+   `#root`. Fixing that is a prerequisite for hydrating (see SEO note below).
 
 ### Service content is split across two files — keep them in sync
 A service exists in two places and both must be edited together:
@@ -60,6 +88,23 @@ JSON-LD lives in two places:
 
 When editing business info (hours, service areas, address, phone), update both the `index.html` JSON-LD block and `constants.tsx`.
 
+**Known issue — per-page `<head>` tags are emitted inside `<body>`.** Under
+React 19, react-helmet-async v3 no longer populates `helmetContext`, so the
+`head` string that `scripts/prerender.mjs` injects into `</head>` is empty and
+the real `<title>`, `<meta name="description">`, `rel="canonical"` and page
+JSON-LD are serialised inside `#root` instead. Verified on production, not just
+locally. Titles and descriptions still work (`document.title` resolves by tree
+order regardless of parent), which is why Lighthouse SEO still scores 100 — but
+**Google only honours `rel="canonical"` in `<head>`**, so per-page canonicals are
+currently inert. Fixing this also unblocks `hydrateRoot`.
+
+### Images
+`public/*.webp` are generated — never hand-edit them. Sources live in
+`assets-src/` (kept out of `public/`, which is copied verbatim into `dist/`), and
+`node scripts/optimize-images.mjs` regenerates the outputs. If you change an
+image's dimensions there, update the matching `width`/`height` props on the
+`<img>`, and the `<link rel="preload">` in `index.html` if it is the logo.
+
 ### ChatBot (removed 2026-07-20)
 The site previously shipped a Gemini-backed `ChatBot` (`components/ChatBot.tsx` +
 `services/geminiService.ts`, wrapping `@google/genai`). It was removed because it
@@ -73,9 +118,15 @@ per-district ETAs, condo-garage access rules) that took several passes to get
 right. `.env.local` still holds `GEMINI_API_KEY` and was intentionally left alone.
 
 ### Styling conventions
-- Brand colors come from the inline Tailwind config in `index.html` — use `bg-brand-yellow`, `text-brand-dark`, etc. Don't introduce raw hex for brand colors.
+- Brand colors come from `tailwind.config.js` — use `bg-brand-yellow`, `text-brand-dark`, etc. Don't introduce raw hex for brand colors.
 - Heavy use of `premium-shadow`, `premium-shadow-hover`, and `background-pattern` utilities — these are defined in `index.css`, not Tailwind.
 - The site leans on big, punchy CTAs (yellow-on-dark, oversized type, pulse/shimmer animations). When adding sections, match the existing weight and spacing — sober / understated doesn't fit the conversion-optimized tone.
 
 ## Deployment
 Vercel auto-deploys from `main`. `vercel.json` rewrites everything to `/` so React Router handles client-side routing. If you add a new top-level route, no config change is needed.
+
+`scripts/prerender.mjs` inlines the compiled stylesheet into each page's
+`<head>` rather than linking it, so there is no render-blocking CSS request. It
+aborts the build if it cannot find Vite's emitted `<link rel="stylesheet">` —
+that guard exists so a Vite upgrade fails loudly instead of shipping 72 unstyled
+pages.

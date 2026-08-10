@@ -28,3 +28,6 @@ dist-ssr
 dist-server
 
 .mobile-mechanic-baseline.html
+
+# Impeccable design-hook caches (regenerated locally; must not ship in public/)
+.impeccable/
