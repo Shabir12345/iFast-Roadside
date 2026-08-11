@@ -40,12 +40,13 @@ const NOINDEX_COMBOS = [
   'lockout/ajax', 'lockout/whitby', 'lockout/oshawa',
   'fuel/scarborough', 'fuel/ajax', 'fuel/whitby', 'fuel/oshawa',
   'towing/scarborough', 'towing/pickering', 'towing/ajax', 'towing/whitby', 'towing/oshawa',
-  // North York wave 2b: fuel and towing are the secondary services for this
-  // district. Written to the same standard as the rest, but held back from the
-  // sitemap until the four priority combos (tire-change, jump-start, lockout,
-  // mobile-mechanic) have been measured in GSC — shipping six new combos at
-  // once makes it impossible to tell which template is working.
-  'fuel/north-york', 'towing/north-york',
+  // North York wave 2b RELEASED 2026-08-11. The gate above was "measure the four
+  // priority combos first" — done: mobile-mechanic/north-york sits at position 8.7
+  // (34 impressions), jump-start/north-york at 4.2, and the /areas/north-york hub
+  // at 4.7 on 95 impressions. Those are the only page-one positions on the site,
+  // so the district template is working and the secondary combos can follow.
+  // (tire-change/north-york is still "Discovered - never crawled" — unrelated to
+  // the noindex tag, it is the site-wide crawl-demand problem.)
 ];
 
 const sitemap = readFileSync(join(root, 'public', 'sitemap.xml'), 'utf8');
