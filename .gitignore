@@ -31,3 +31,6 @@ dist-server
 
 # Impeccable design-hook caches (regenerated locally; must not ship in public/)
 .impeccable/
+
+# Automation debug screenshots
+scripts/*.png
