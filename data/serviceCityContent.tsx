@@ -77,7 +77,7 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
             The value of a mobile mechanic is not only convenience — it is that you are standing there. When we pull a code or show you a worn pad, you see the actual part on your actual car, and you decide with the information in front of you rather than over the phone from a service advisor you have never met. Nothing gets done that you have not agreed to first.
           </p>
           <p className="mb-4">
-            We are also clear about our limits, which is the part that matters most. Engine internals, transmission work, exhaust welding, and anything needing a hoist or alignment rack belong in a shop, and we will tell you that instead of starting a job we cannot finish in a parking garage. {COMPANY_NAME} is owner-operated — <strong>Safi</strong> answers the phone, does the diagnosis, and does the repair, so nothing is lost between the person who quoted you and the person holding the wrench.
+            We are also clear about our limits. Engine internals and full rebuilds belong in a shop, and we will tell you that instead of starting a job we cannot finish in a parking garage. Short of that the range is wider than most people expect — transmission work, exhaust, wheel alignment, steering and suspension, and air conditioning all get done where the car is parked. {COMPANY_NAME} is owner-operated — <strong>Safi</strong> answers the phone, does the diagnosis, and does the repair, so nothing is lost between the person who quoted you and the person holding the wrench.
           </p>
         </>
       ),
@@ -85,7 +85,7 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
       faqs: [
         {
           question: 'What repairs can you actually do on-site in North York?',
-          answer: 'Computer diagnostics and fault-code reading, battery and alternator and starter replacement, brake pads and rotors, belts and hoses, sensors, filters, fluid top-ups and changes, tire work, and full pre-purchase inspections. What we cannot do on-site is anything needing a hoist or an alignment rack — engine internals, transmission work, exhaust welding, suspension geometry. We will tell you which category your problem is in before dispatching.'
+          answer: 'Computer diagnostics and fault-code reading, battery and alternator and starter replacement, brake pads and rotors, belts and hoses, sensors, filters, fluid top-ups and oil changes, tire work, wheel alignment, steering and suspension, exhaust, transmission work, air conditioning, and full pre-purchase inspections. Engine internals and full rebuilds are the exception — those belong in a shop, and we will tell you which category your problem is in before dispatching.'
         },
         {
           question: 'Can you do a pre-purchase inspection on a private sale?',
@@ -97,7 +97,7 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
         },
         {
           question: 'Is a mobile mechanic more expensive than a shop?',
-          answer: 'Generally no, and often less. We carry no bay rent or service-advisor overhead, and you save the hidden costs a shop visit adds — a day off work, a rental, or a tow to get the car there in the first place. Where a shop wins is on jobs needing a hoist, which is exactly why we tell you when your job is one of those rather than quoting you for something we should not be doing in a driveway.'
+          answer: 'Generally no, and often less. We carry no bay rent or service-advisor overhead, and you save the hidden costs a shop visit adds — a day off work, a rental, or a tow to get the car there in the first place. A shop still wins on engine rebuilds, which is exactly why we tell you when your job is one of those rather than quoting you for something we should not be doing in a driveway.'
         },
         {
           question: 'Do you need power or a specific kind of space?',
@@ -140,7 +140,7 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
       faqs: [
         {
           question: 'Can you fix my car on-site in Scarborough?',
-          answer: 'Yes! We handle starters, alternators, brakes, batteries, sensors, and belt repairs right where you are. If it\'s a major engine or transmission job, we\'ll diagnose it and help arrange a tow to a trusted local shop.'
+          answer: 'Yes! We handle starters, alternators, brakes, batteries, sensors, belts, exhaust, transmission work, wheel alignment, steering and suspension, and air conditioning right where you are. If it turns out to be a major engine job, we\'ll diagnose it and tow you to a trusted local shop on one of our own trucks.'
         },
         {
           question: 'How fast can a mechanic reach me in Agincourt?',
