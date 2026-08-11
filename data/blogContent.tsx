@@ -426,7 +426,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              CAA South Central Ontario offers three membership tiers (pricing as of 2025):
+              CAA South Central Ontario offers three membership tiers (pricing verified against caasco.com, August 2026):
             </p>
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-sm border-collapse">
@@ -440,9 +440,9 @@ export const BLOG_POSTS: BlogPost[] = [
                 </thead>
                 <tbody>
                   {[
-                    { tier: 'CAA Classic', cost: '~$103/yr', tow: '10 km', calls: '4 calls' },
-                    { tier: 'CAA Plus', cost: '~$143/yr', tow: '200 km', calls: '4 calls' },
-                    { tier: 'CAA Premier', cost: '~$186/yr', tow: '500 km', calls: '4 calls' },
+                    { tier: 'CAA Basic', cost: '$80/yr', tow: '10 km per call', calls: '4 calls' },
+                    { tier: 'CAA Plus', cost: '$124/yr', tow: '200 km per call', calls: '4 calls' },
+                    { tier: 'CAA Premier', cost: '$154/yr', tow: '320 km once, then 200 km', calls: '5 calls' },
                   ].map((row, i) => (
                     <tr key={row.tier} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                       <td className="p-3 font-bold text-brand-dark border-b border-gray-100">{row.tier}</td>
@@ -455,7 +455,7 @@ export const BLOG_POSTS: BlogPost[] = [
               </table>
             </div>
             <p className="mb-4 text-gray-700">
-              Additional family members cost extra. And crucially: CAA Classic's 10 km towing limit means if you break down in Pickering and need to get to a shop in Scarborough, you're paying the difference out of pocket.
+              Additional family members cost extra. And crucially: CAA Basic's 10 km towing limit means if you break down in Pickering and need to get to a shop in Scarborough, you're paying the difference out of pocket — CAA charges a per-kilometre rate for anything past your included distance, and that rate isn't published. We broke down what that actually means in <a href="/blog/caa-towing-cost-ontario" className="text-brand-yellow font-bold hover:underline">our guide to CAA towing costs in Ontario</a>.
             </p>
           </>
         )
@@ -596,7 +596,193 @@ export const BLOG_POSTS: BlogPost[] = [
       { question: 'Does iFAST require any membership or monthly fee?', answer: 'No. iFAST is a pure pay-per-use service. You call when you need us, we give you a transparent quote, and you pay only for the service provided. No annual membership, no activation fees, no minimums.' },
       { question: 'Can I cancel CAA and use iFAST instead?', answer: 'That\'s your call based on your driving patterns. If you rarely leave the East GTA and don\'t take long highway road trips, iFAST\'s pay-per-use model likely costs you less annually. If you regularly drive across Ontario or to the US, keeping a CAA membership for long-distance coverage is reasonable.' },
       { question: 'What if iFAST can\'t fix my car on-site?', answer: 'If a repair genuinely requires a shop (major transmission work, engine overhauls), we\'ll be upfront about it and can arrange towing to your preferred garage. But our mobile mechanics resolve approximately 80% of common breakdowns on-site — that covers most day-to-day failures.' },
-      { question: 'How much does a typical iFAST service call cost vs. CAA?', answer: 'CAA membership costs $103–$186/year regardless of whether you use it. A single iFAST jump start or tire change is typically comparable to or less than the cost of one month of CAA membership. For drivers who break down once per year or less, pay-per-use often wins financially.' },
+      { question: 'How much does a typical iFAST service call cost vs. CAA?', answer: 'CAA membership costs $80–$154/year (verified August 2026) whether or not you ever call them, and that price only covers towing up to your tier\'s limit — past it, CAA bills a per-kilometre rate it does not publish. With iFAST you pay per call, you are quoted before a truck is dispatched, and distance does not change the number after the fact. For drivers who break down about once a year, pay-per-use usually costs less; for drivers who tow long distances several times a year, a membership can still win.' },
+    ]
+  },
+
+  /* ============================================================
+     POST 3B: CAA TOWING COST IN ONTARIO
+     ============================================================ */
+  {
+    slug: 'caa-towing-cost-ontario',
+    title: 'CAA Towing Cost in Ontario: What You Actually Pay Per KM',
+    excerpt: 'CAA publishes what your membership includes. It does not publish what happens when you go past it. Here is what each tier actually covers, when the per-kilometre meter starts, and what your options are if you are not a member.',
+    seoTitle: 'CAA Towing Cost Ontario: Per KM Rates & Without a Membership (2026)',
+    seoDescription: 'What CAA towing really costs in Ontario: included distance by tier, when per-km charges start, and what non-members pay. Verified against CAA South Central Ontario, August 2026.',
+    keywords: 'CAA towing cost, CAA towing cost per km, CAA towing rate per km, CAA towing cost without membership, CAA tow distance, CAA towing price Ontario, CAA non member towing, CAA tow cost Toronto',
+    category: 'Costs & Pricing',
+    publishDate: '2026-08-11',
+    readTime: '7 min read',
+    heroImage: '/roadside_technician_towing.jpg',
+    heroImageAlt: 'Tow truck operator loading a vehicle at the roadside in Ontario',
+    sections: [
+      {
+        content: (
+          <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
+            If you are searching for what CAA charges to tow your car, you have probably already noticed the problem: CAA's own pages explain what your membership <em>includes</em>, then go quiet about what happens once you exceed it. We went through CAA South Central Ontario's published material in August 2026 and pulled out the parts that answer the question, plus the parts they do not answer.
+          </p>
+        )
+      },
+      {
+        heading: 'The short answer',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              If you are a member and the tow is within your tier's distance, you pay nothing at the roadside. If you go past that distance, CAA charges a per-kilometre rate on the overage. <strong>That rate is not published anywhere on CAA's website</strong> — their wording is that "a charge per kilometre will be applied for any additional mileage that exceeds your coverage (service coverage varies by territory)."
+            </p>
+            <p className="mb-4 text-gray-700">
+              If you are not a member, CAA's online service request will not process your call. It asks for a valid membership number and postal code before it will dispatch anything. In practice that leaves you joining on the spot or calling an independent operator.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'What each CAA tier includes',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Current CAA South Central Ontario pricing and towing allowances, verified against caasco.com in August 2026:
+            </p>
+            <div className="overflow-x-auto mb-6">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-brand-dark text-white">
+                    <th className="p-3 text-left rounded-tl-xl">Tier</th>
+                    <th className="p-3 text-left">Annual Cost</th>
+                    <th className="p-3 text-left">Towing Included</th>
+                    <th className="p-3 text-left rounded-tr-xl">Service Calls/Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { tier: 'CAA Basic', cost: '$80/yr', tow: '10 km per call', calls: '4 calls' },
+                    { tier: 'CAA Plus', cost: '$124/yr', tow: '200 km per call', calls: '4 calls' },
+                    { tier: 'CAA Premier', cost: '$154/yr', tow: '320 km on one call, 200 km on the rest', calls: '5 calls' },
+                  ].map((row, i) => (
+                    <tr key={row.tier} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                      <td className="p-3 font-bold text-brand-dark border-b border-gray-100">{row.tier}</td>
+                      <td className="p-3 border-b border-gray-100">{row.cost}</td>
+                      <td className="p-3 border-b border-gray-100">{row.tow}</td>
+                      <td className="p-3 border-b border-gray-100">{row.calls}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mb-4 text-gray-700">
+              The distances are measured per call, not per year, and they are measured from where you broke down. That last detail is what catches most people out.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Where the 10 km limit actually lands you',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              CAA Basic is the tier most drivers hold, and 10 km is a smaller radius than it sounds like in the GTA. A few real distances:
+            </p>
+            <div className="space-y-3 mb-6">
+              {[
+                { from: 'Pickering to downtown Toronto', km: '~45 km', over: '35 km chargeable' },
+                { from: 'Ajax to a Scarborough shop', km: '~25 km', over: '15 km chargeable' },
+                { from: 'Oshawa to Whitby', km: '~12 km', over: '2 km chargeable' },
+                { from: 'Stranded on the 401 to the nearest garage', km: 'varies', over: 'often over on a long stretch' },
+              ].map((row) => (
+                <div key={row.from} className="flex items-start gap-3 bg-gray-50 rounded-xl p-4">
+                  <MapPin className="text-brand-yellow flex-shrink-0 mt-0.5" size={20} />
+                  <div>
+                    <p className="font-bold text-brand-dark">{row.from}</p>
+                    <p className="text-sm text-gray-600">{row.km} · on CAA Basic, {row.over}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="mb-4 text-gray-700">
+              You do not get to choose a closer shop to stay under the limit if the closer shop cannot do the work. That is how a "free" tow turns into a bill you did not plan for.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Why CAA is charging you for a tow',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              There are four common reasons a CAA tow produces a charge:
+            </p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'You exceeded your tier\'s included distance, and the overage is billed per kilometre.',
+                'You have already used your allotted service calls for the year (four on Basic and Plus, five on Premier).',
+                'The membership was purchased recently and the call falls inside the waiting period that applies to new memberships.',
+                'The vehicle is not eligible under your membership, or the driver requesting service is not the member.',
+              ].map((reason) => (
+                <li key={reason} className="flex items-start gap-3">
+                  <AlertTriangle className="text-brand-yellow flex-shrink-0 mt-0.5" size={20} />
+                  <span className="text-gray-700">{reason}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mb-4 text-gray-700">
+              The membership follows the person, not the car, so a CAA member can call for a tow on a vehicle they are driving or riding in. What you cannot do is hand your membership number to someone else and have them call for their own breakdown while you are elsewhere.
+            </p>
+          </>
+        )
+      },
+      { content: <BlogCTA source="caa_towing_cost_mid" /> },
+      {
+        heading: 'If you are not a CAA member',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              CAA does not operate as a pay-per-use towing company. Their online request form requires a valid membership number before it will accept a call, and there is no published non-member rate card. Your realistic options are to join and wait out whatever waiting period applies to a new membership, or to call an independent operator who quotes per job.
+            </p>
+            <p className="mb-4 text-gray-700">
+              That second route is what <a href="/service/towing" className="text-brand-yellow font-bold hover:underline">iFAST's towing service</a> is built for. There is no membership to buy, no annual fee sitting on your credit card for a year you might not break down, and no per-kilometre meter running behind the scenes. You get a quote before a truck is dispatched, and that quote is the number.
+            </p>
+            <p className="mb-4 text-gray-700">
+              Whether that works out cheaper than CAA depends entirely on how often you break down. If you need a tow three or four times a year, or you regularly move a vehicle long distances, a Plus or Premier membership is genuinely good value and we will say so. If you break down about once a year, paying per call almost always costs less than an annual fee plus overage.
+            </p>
+            <p className="mb-4 text-gray-700">
+              For a fuller comparison of the two models, including wait times and where each one wins, see our <a href="/blog/caa-vs-independent-roadside-assistance-ontario" className="text-brand-yellow font-bold hover:underline">CAA vs. independent roadside assistance guide</a>.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'What we could not find',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              In the interest of not padding this out with guesses, here is what is genuinely not published by CAA and therefore not stated above:
+            </p>
+            <ul className="space-y-3 mb-6">
+              {[
+                'The actual per-kilometre overage rate. CAA says it varies by territory and does not give a figure.',
+                'A non-member price for a single tow. There does not appear to be one.',
+                'What a same-day call costs if you join and request service immediately.',
+              ].map((gap) => (
+                <li key={gap} className="flex items-start gap-3">
+                  <ThumbsDown className="text-gray-400 flex-shrink-0 mt-0.5" size={20} />
+                  <span className="text-gray-700">{gap}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mb-4 text-gray-700">
+              If you are a CAA member and you want the overage rate for your area before you need it, the number to call is the one on the back of your membership card. It is worth knowing in advance rather than at the roadside.
+            </p>
+          </>
+        )
+      },
+    ],
+    faqs: [
+      { question: 'How much does CAA charge per km for towing?', answer: 'CAA does not publish a per-kilometre rate. Their stated policy is that "a charge per kilometre will be applied for any additional mileage that exceeds your coverage," and that coverage varies by territory. The only way to get the figure for your area is to call CAA directly. Within your tier\'s included distance (10 km on Basic, 200 km on Plus, 320 km on one Premier call), there is no towing charge at all.' },
+      { question: 'What does CAA towing cost without a membership?', answer: 'CAA does not sell single tows to non-members. Their online service request requires a valid membership number and postal code before it will dispatch, and there is no published non-member rate. Your options are to join a membership and wait out any applicable waiting period, or to call an independent towing operator who quotes per job with no membership required.' },
+      { question: 'Why is CAA charging me for towing when I have a membership?', answer: 'The four usual reasons are: the tow went past your tier\'s included distance and the overage is billed per kilometre; you have used up your service calls for the year (four on Basic and Plus, five on Premier); the membership is new and the call falls inside the waiting period; or the vehicle or driver is not eligible under your membership.' },
+      { question: 'How far will CAA tow for free in Ontario?', answer: 'It depends on your tier. CAA Basic ($80/yr) includes 10 km per call. CAA Plus ($124/yr) includes 200 km per call. CAA Premier ($154/yr) includes 320 km on one call and 200 km on the rest. Distance is measured from your breakdown location, and anything beyond it is charged per kilometre. Figures verified against CAA South Central Ontario in August 2026.' },
+      { question: 'Is CAA or a local towing service cheaper?', answer: 'It comes down to frequency. A CAA membership is $80 to $154 a year whether you use it or not, and long tows can add per-kilometre charges on top. Paying an independent operator per call means no annual fee and a quote before dispatch. If you break down roughly once a year, pay-per-use normally costs less. If you need several long tows a year, a Plus or Premier membership is the better deal.' },
+      { question: 'Can I use my CAA membership for someone else\'s car?', answer: 'The membership follows you rather than a specific vehicle, so you can call for service on any car you are driving or riding in. What is not permitted is giving your membership number to another person so they can request service for their own breakdown while you are not present.' },
     ]
   },
 
@@ -2212,6 +2398,7 @@ export const BLOG_RELATED_SERVICES: Record<string, string[]> = {
   'flat-tire-on-401-east-gta': ['tire-change', 'flat-tire-repair', 'towing'],
   'winter-roadside-emergencies-ontario-guide': ['jump-start', 'towing', 'tire-change'],
   'caa-vs-independent-roadside-assistance-ontario': ['towing', 'jump-start', 'lockout'],
+  'caa-towing-cost-ontario': ['towing', 'jump-start', 'flat-tire-repair'],
   'mobile-mechanic-cost-ontario-pricing-guide': ['mobile-mechanic', 'battery-diagnostic'],
   'correct-tire-pressure-scarborough': ['tire-change', 'flat-tire-repair', 'tire-installation'],
   'dead-car-battery-boost-or-replace-east-gta': ['jump-start', 'battery-replacement', 'battery-diagnostic'],
