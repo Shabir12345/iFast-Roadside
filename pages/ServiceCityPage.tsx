@@ -26,8 +26,9 @@ const NOINDEX_COMBOS = new Set<string>([
   'lockout/ajax', 'lockout/whitby', 'lockout/oshawa',
   'fuel/scarborough', 'fuel/ajax', 'fuel/whitby', 'fuel/oshawa',
   'towing/scarborough', 'towing/pickering', 'towing/ajax', 'towing/whitby', 'towing/oshawa',
-  // North York wave 2b — see the matching note in scripts/prerender.mjs.
-  'fuel/north-york', 'towing/north-york',
+  // North York wave 2b released 2026-08-11: fuel/north-york (924 words, 5 FAQs) and
+  // towing/north-york (1,024 words, 5 FAQs) both clear the depth of every currently
+  // indexed combo, so the hold was rollout timing rather than quality.
 ]);
 
 const ServiceCityPage: React.FC = () => {
