@@ -6,6 +6,7 @@ declare global {
 
 export const GTAG_ID = 'AW-18054263913';
 export const GTAG_ID_2 = 'AW-18177365102';
+export const GA4_ID = 'G-J8Z9MYFLY5';
 
 /**
  * Tracks a Google Ads conversion event.
@@ -38,7 +39,20 @@ export const trackConversion = (action: string, label?: string) => {
 
 /**
  * Special helper for tracking phone calls.
+ *
+ * Fires two things for two different consumers:
+ *   - Google Ads conversions, which feed live campaign bidding.
+ *   - A GA4 event, which is what the Mission Control reporting reads. The
+ *     `call_location` parameter is the only signal saying which page produced
+ *     the call, so it must be sent, not just logged.
  */
 export const trackPhoneCall = (label = 'call_button_click') => {
   trackConversion('call_click', label);
+
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', 'phone_call_click', {
+      send_to: GA4_ID,
+      call_location: label,
+    });
+  }
 };
