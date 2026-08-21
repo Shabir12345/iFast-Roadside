@@ -56,3 +56,40 @@ export const trackPhoneCall = (label = 'call_button_click') => {
     });
   }
 };
+
+/**
+ * Tracks a contact-form submission.
+ *
+ * GA4 only, deliberately. The Google Ads conversion action is bid on as a
+ * phone call; firing it here would inflate call conversions with form leads
+ * and quietly corrupt campaign bidding. If forms should count as an Ads
+ * conversion, create a separate conversion action for them.
+ *
+ * `form_outcome` is recorded so a form that starts failing shows up as a
+ * spike in errors rather than as silence.
+ */
+export const trackFormSubmit = (
+  formName = 'contact_form',
+  outcome: 'success' | 'error' = 'success'
+) => {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', 'form_submit', {
+      send_to: GA4_ID,
+      form_name: formName,
+      form_outcome: outcome,
+    });
+  }
+};
+
+/**
+ * Tracks a click on a mailto: link. Low volume next to calls, but it is the
+ * only other way a visitor can reach the business unprompted.
+ */
+export const trackEmailClick = (label = 'email_click') => {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', 'email_click', {
+      send_to: GA4_ID,
+      click_location: label,
+    });
+  }
+};

@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES } from '../constants';
 import { CITY_CONTENT } from '../data/cityContent';
 import { REGION_CONTENT } from '../data/regionContent';
-import { trackPhoneCall } from '../utils/analytics';
+import { trackPhoneCall, trackEmailClick } from '../utils/analytics';
 import { serviceHref } from '../utils/serviceHref';
 
 const Footer: React.FC = () => {
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="text-brand-yellow shrink-0" size={18} />
-                <a href={`mailto:${EMAIL}`} className="hover:text-white transition-colors">{EMAIL}</a>
+                <a href={`mailto:${EMAIL}`} onClick={() => trackEmailClick('footer_email')} className="hover:text-white transition-colors">{EMAIL}</a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="text-brand-yellow shrink-0" size={18} />

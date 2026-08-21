@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { trackPhoneCall, GA4_ID } from './analytics';
+import { trackPhoneCall, trackFormSubmit, trackEmailClick, GA4_ID } from './analytics';
 
 describe('trackPhoneCall', () => {
   let gtag: ReturnType<typeof vi.fn>;
@@ -52,5 +52,83 @@ describe('trackPhoneCall', () => {
   it('does not throw when gtag is unavailable', () => {
     vi.stubGlobal('window', {});
     expect(() => trackPhoneCall('header_desktop_call')).not.toThrow();
+  });
+});
+
+describe('trackFormSubmit', () => {
+  let gtag: ReturnType<typeof vi.fn>;
+
+  beforeEach(() => {
+    gtag = vi.fn();
+    vi.stubGlobal('window', { gtag });
+  });
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
+  const formEvents = () =>
+    gtag.mock.calls.filter(([kind, name]) => kind === 'event' && name === 'form_submit');
+
+  it('sends a GA4 form_submit carrying the form name and outcome', () => {
+    trackFormSubmit('contact_form', 'success');
+
+    expect(formEvents()).toHaveLength(1);
+    expect(formEvents()[0][2]).toMatchObject({
+      send_to: GA4_ID,
+      form_name: 'contact_form',
+      form_outcome: 'success',
+    });
+  });
+
+  it('records a failed submission distinctly so broken forms are visible', () => {
+    trackFormSubmit('contact_form', 'error');
+
+    expect(formEvents()[0][2].form_outcome).toBe('error');
+  });
+
+  it('does NOT fire a Google Ads conversion, which is reserved for calls', () => {
+    trackFormSubmit('contact_form', 'success');
+
+    const conversions = gtag.mock.calls.filter(
+      ([kind, name]) => kind === 'event' && name === 'conversion'
+    );
+    expect(conversions).toHaveLength(0);
+  });
+
+  it('does not throw when gtag is unavailable', () => {
+    vi.stubGlobal('window', {});
+    expect(() => trackFormSubmit('contact_form', 'success')).not.toThrow();
+  });
+});
+
+describe('trackEmailClick', () => {
+  let gtag: ReturnType<typeof vi.fn>;
+
+  beforeEach(() => {
+    gtag = vi.fn();
+    vi.stubGlobal('window', { gtag });
+  });
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
+  it('sends a GA4 email_click carrying the click location', () => {
+    trackEmailClick('footer_email');
+
+    const events = gtag.mock.calls.filter(
+      ([kind, name]) => kind === 'event' && name === 'email_click'
+    );
+    expect(events).toHaveLength(1);
+    expect(events[0][2]).toMatchObject({
+      send_to: GA4_ID,
+      click_location: 'footer_email',
+    });
+  });
+
+  it('does not throw when gtag is unavailable', () => {
+    vi.stubGlobal('window', {});
+    expect(() => trackEmailClick('footer_email')).not.toThrow();
   });
 });

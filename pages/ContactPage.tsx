@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { PhoneCall, Mail, MapPin, Clock, Send, CheckCircle, Loader2, ShieldCheck } from 'lucide-react';
 import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES } from '../constants';
-import { trackPhoneCall } from '../utils/analytics';
+import { trackPhoneCall, trackFormSubmit, trackEmailClick } from '../utils/analytics';
 
 // Web3Forms delivers the form to the business inbox without a backend.
 // Get a free access key at https://web3forms.com (enter the destination email,
@@ -42,12 +42,15 @@ const ContactPage: React.FC = () => {
       const data = await res.json();
       if (data.success) {
         setStatus('success');
+        trackFormSubmit('contact_form', 'success');
       } else {
         setStatus('error');
+        trackFormSubmit('contact_form', 'error');
         setErrorMsg(data.message || 'Something went wrong. Please call us instead.');
       }
     } catch {
       setStatus('error');
+      trackFormSubmit('contact_form', 'error');
       setErrorMsg('Could not send your message. Please call us instead.');
     }
   };
@@ -91,6 +94,7 @@ const ContactPage: React.FC = () => {
       label: 'Email',
       value: EMAIL,
       href: `mailto:${EMAIL}`,
+      onClick: () => trackEmailClick('contact_page_details_email'),
     },
     {
       icon: Clock,
