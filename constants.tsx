@@ -1,4 +1,4 @@
-import { Disc, Battery, Fuel, Key, Truck, Wrench, RefreshCw, CircleDot, Gauge, BatteryCharging, ClipboardCheck } from 'lucide-react';
+import { Disc, Battery, Fuel, Key, Truck, Wrench, RefreshCw, CircleDot, Gauge, BatteryCharging, ClipboardCheck, Clock } from 'lucide-react';
 import { ServiceItem, Testimonial, GoogleReview } from './types';
 import REVIEW_STATS from './data/reviewStats.json';
 
@@ -108,6 +108,12 @@ export const SERVICES: ServiceItem[] = [
     title: 'Mobile Mechanic',
     description: 'Vehicle won\'t start or making strange noises? Our certified mechanics come to your home or office to diagnose and repair your car on-site. Professional grade tools and diagnostics.',
     icon: Wrench,
+  },
+  {
+    id: '24-hour-roadside',
+    title: '24/7 Emergency Service',
+    description: 'Stranded at 2am? Dead battery, flat tire, locked out, or out of fuel — our mobile units run around the clock across the GTA and reach you in 15–30 minutes.',
+    icon: Clock,
   },
   {
     id: 'tire-change',

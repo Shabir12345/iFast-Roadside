@@ -1430,5 +1430,128 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       { question: 'What do I get at the end of the inspection?', answer: 'Our technician walks you through everything he found in plain English, right there at the car, and goes over the diagnostic scan results with you — including any stored or pending trouble codes. You can ask him anything you want while he\'s in front of the vehicle.' },
       { question: 'What if you find problems with the car?', answer: 'Then the inspection just paid for itself. You\'ll know exactly what\'s wrong and roughly what it takes to fix, which puts you in a position to negotiate the price down or walk away. Plenty of our customers have done both.' },
     ]
+  },
+  '24-hour-roadside': {
+    id: '24-hour-roadside',
+    seoTitle: '24 Hour Emergency Roadside Assistance & Mobile Mechanic | GTA',
+    seoDescription: 'Stuck at 2am? iFAST runs 24/7 across the GTA — dead battery, flat tire, locked out, out of fuel, or a car that won\'t start. A mobile unit reaches you in 15–30 minutes. Call now for an upfront price.',
+    keywords: '24 hour mobile mechanic GTA, 24/7 emergency roadside assistance, 24 hour mechanic near me, emergency car repair Scarborough, 24 hour auto repair Toronto, emergency roadside mechanic Pickering, 24-7 roadside assistance Ajax',
+    heroImage: '/mobile_mechanic_hero.jpg',
+    hero: {
+      eyebrow: 'Open 24 Hours · 7 Days',
+      h1: 'Stuck Right Now?',
+      h1Accent: 'We Answer at 2am.',
+      intro: 'Dead battery in a freezing driveway, a flat on the 401 shoulder, locked out in a parking garage, or a car that just won\'t turn over — it never happens at a convenient hour. iFAST runs a live 24/7 line and a fleet of mobile units across the GTA, so someone picks up and rolls when the shops are shut. Most drivers see us in 15–30 minutes.',
+    },
+    featuresHeading: 'One Number, Any Hour, Most Roadside Problems',
+    features: [
+      {
+        title: 'Truly 24/7',
+        desc: 'Nights, weekends and holidays — a real person answers and a unit is dispatched. No voicemail, no "call back Monday".',
+        icon: Clock,
+        color: 'bg-brand-dark',
+      },
+      {
+        title: 'On Scene in 15–30 Min',
+        desc: 'Agile vans routed to your GPS pin, not a tow truck stuck in traffic behind a collision call. We beat traditional ETAs.',
+        icon: Zap,
+        color: 'bg-yellow-500',
+      },
+      {
+        title: 'Upfront Price First',
+        desc: 'You get a firm price on the call before anyone rolls. No surprise 2am invoice, no meter running while you wait.',
+        icon: ShieldCheck,
+        color: 'bg-green-500',
+      },
+      {
+        title: 'Most Emergencies Covered',
+        desc: 'Boost, tire, lockout, fuel, on-site mechanical — one call handles it instead of guessing which specialist to phone.',
+        icon: Wrench,
+        color: 'bg-blue-500',
+      },
+    ],
+    cta: {
+      heading: 'Broken Down Right Now?',
+      body: 'Tell us where you\'re parked and what happened. You\'ll have an ETA and an upfront price before a unit leaves — any hour, anywhere in the GTA.',
+    },
+    blogSections: [
+      {
+        title: '24/7 Emergency Roadside Assistance Across the Greater Toronto Area',
+        content: (
+          <>
+            <p className="mb-4">
+              Car trouble keeps its own schedule. It hits on the drive home from a late shift, in a condo garage at midnight, or on a −18°C morning when the battery finally gives up. That is exactly when most garages are locked and the big auto clubs put you in a two-to-three-hour queue behind everyone else who called. <strong>{COMPANY_NAME}</strong> exists for those hours — a genuine 24-hour, 7-day mobile operation covering Scarborough, North York, Pickering, Ajax, Whitby, Oshawa and the wider GTA. You call, a person answers, and a unit is on the way in minutes rather than hours.
+            </p>
+            <p className="mb-4">
+              We do not run a call centre that dispatches whoever is nearest tomorrow. Our own technicians are on the road overnight, routed straight to your live location, and they carry what a roadside emergency actually needs — commercial boost packs, spare-tire and repair gear, lockout tools and fuel. That is the whole point of a mobile unit: the shop comes to your car, at the hour you\'re actually stranded.
+            </p>
+            <CallNowButton source="service_content_24hr_intro" />
+          </>
+        )
+      },
+      {
+        title: 'What Counts as a Roadside Emergency — and Exactly Who We Send',
+        content: (
+          <>
+            <p className="mb-4">
+              If your car has stopped being useful and you need it working again tonight, that is a call worth making. The most common 2am problems, and the service that solves each:
+            </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6">
+              <li><strong>Car won\'t start / dead battery</strong> — a professional boost and an on-the-spot charge test so it doesn\'t die again ten minutes later. See <a href="/service/jump-start" className="text-brand-yellow font-semibold underline">24/7 mobile jump start & battery boost</a>.</li>
+              <li><strong>Flat or blown tire</strong> — spare fitted or the puncture handled on the shoulder or in your driveway. See <a href="/service/tire-change" className="text-brand-yellow font-semibold underline">emergency mobile tire change</a>.</li>
+              <li><strong>Locked out of the car</strong> — non-destructive entry, including keys shut inside a running vehicle. See <a href="/service/lockout" className="text-brand-yellow font-semibold underline">24-hour car lockout service</a>.</li>
+              <li><strong>Out of fuel</strong> — enough gas or diesel brought to you to reach the nearest station. See <a href="/service/fuel" className="text-brand-yellow font-semibold underline">emergency fuel delivery</a>.</li>
+              <li><strong>Mechanical breakdown</strong> — on-site diagnostics and repairs from a certified <a href="/mobile-mechanic" className="text-brand-yellow font-semibold underline">mobile mechanic</a> when the problem is more than a boost or a tire.</li>
+            </ul>
+            <p className="mb-4">
+              Not sure which one you need? That is what the call is for — describe what the car is doing and we\'ll send the right unit with the right gear the first time.
+            </p>
+            <CallNowButton source="service_content_24hr_which" />
+          </>
+        )
+      },
+      {
+        title: 'Why a 24-Hour Mobile Unit Beats Waiting for a Tow',
+        content: (
+          <>
+            <p className="mb-4">
+              The reflex when a car dies is to call a tow truck. But most roadside emergencies never needed a tow at all — a dead battery, a flat, a lockout and an empty tank are all fixed where the car sits, in minutes, for a fraction of a tow-plus-shop bill. Towing prioritises high-value collision calls, so a simple overnight boost can leave you waiting in the cold for hours while the meter idea of "help is coming" quietly stretches out.
+            </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6">
+              <li><strong>Faster</strong>: nimble service vans reach your pin and get to work; a flatbed has to arrive, load, drive and unload before anything is fixed.</li>
+              <li><strong>Cheaper</strong>: fixing the actual fault roadside avoids a tow fee and a next-day shop diagnosis on top of it.</li>
+              <li><strong>Reaches you</strong>: low-clearance condo and underground garages that a tow truck physically can\'t enter are no problem for a mobile unit on foot with portable gear.</li>
+            </ul>
+            <p className="mb-4">
+              When a tow genuinely is the answer — a seized engine, a serious collision — we\'ll tell you straight and help arrange it. The rest of the time, we just get you running.
+            </p>
+            <CallNowButton source="service_content_24hr_vs_tow" />
+          </>
+        )
+      },
+      {
+        title: `About ${COMPANY_NAME} — Built for the Hours Nobody Else Covers`,
+        content: (
+          <>
+            <p className="mb-4">
+              iFAST started because too many GTA drivers were stranded overnight for a two-minute fix. Shops close, clubs queue, and tow companies chase the big jobs first. We built a rapid-response mobile fleet specifically to answer the calls that come in at the worst possible time — and to reach you fast, with an upfront price and no drama.
+            </p>
+            <p className="mb-4">
+              Today we run overnight units across Scarborough, North York, Pickering, Ajax, Whitby, Oshawa and the surrounding GTA, handling battery, tire, lockout, fuel and on-site mechanical emergencies around the clock. One number, any hour — that\'s the whole promise.
+            </p>
+            <CallNowButton source="service_content_24hr_about" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'Are you really open 24 hours?', answer: 'Yes — a real person answers the line overnight, on weekends and on holidays, and a mobile unit is dispatched right then. There is no voicemail and no "call back in the morning." The hours nobody else covers are exactly the ones we built the business for.' },
+      { question: 'How fast can you reach me in the middle of the night?', answer: 'We average 15–30 minutes across the GTA. Overnight roads are clearer, and because we route the closest van straight to your GPS location rather than sending a tow truck across the city, late-night calls are often our fastest.' },
+      { question: 'What kinds of emergencies do you handle?', answer: 'Dead batteries and no-starts, flat and blown tires, lockouts, running out of fuel, and on-site mechanical faults. If it has left you stranded and you need the car working again tonight, it is worth a call — and if it turns out you genuinely need a tow, we will tell you and help arrange one.' },
+      { question: 'Will I know the price before you come out at 2am?', answer: 'Yes. You get a firm, upfront price on the phone before any unit leaves — no surprise overnight invoice and no meter running while you wait. Tell us where you are and what happened and you will have a number and an ETA up front.' },
+      { question: 'Do you come out in the winter and in bad weather?', answer: 'Especially then. Cold snaps are when batteries die and cars won\'t start, and that is our busiest season. Our units carry commercial-grade boost packs built to turn over deeply cold engines that consumer jump boxes can\'t.' },
+      { question: 'Can you reach my car in an underground or condo parking garage?', answer: 'Yes. Our portable gear and low-clearance vans get down to P4 and into tight parkades that a flatbed tow truck physically cannot enter. Underground condo garages across the GTA are routine for us.' },
+      { question: 'What areas do you cover overnight?', answer: 'Scarborough, North York, Pickering, Ajax, Whitby, Oshawa and the wider Greater Toronto Area. If you are not sure whether you are in range, call and tell us where you are parked — we will give you a straight answer and an ETA.' },
+    ]
   }
 };

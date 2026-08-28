@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { SERVICES, PHONE_NUMBER } from '../constants';
 import { SERVICE_CONTENT } from '../data/serviceContent';
+import { SERVICE_CITY_CONTENT } from '../data/serviceCityContent';
 import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle2, Star, ShieldCheck, MapPin, Camera, Zap } from 'lucide-react';
 import { CITY_CONTENT } from '../data/cityContent';
 import Process from '../components/Process';
@@ -284,11 +285,12 @@ const ServicePage: React.FC = () => {
            </div>
         </div>
 
-        {/* City cross-links for internal linking & local SEO. Only render for top-level
-            services: sub-services (service.parent set) have no SERVICE_CITY_CONTENT[id][city]
-            entry, so linking them here produced dead "Page Not Found" combo URLs that still
-            returned HTTP 200 (a soft 404) — see the matching guard in ServiceCityPage.tsx. */}
-        {!service.parent && (
+        {/* City cross-links for internal linking & local SEO. Render only when this service
+            actually has SERVICE_CITY_CONTENT combos: sub-services (service.parent set) never do,
+            and some top-level services (e.g. the 24-hour-roadside hub) are category pages with no
+            per-city combo content. Linking either produced dead "Page Not Found" combo URLs that
+            still returned HTTP 200 (a soft 404) — see the matching guard in ServiceCityPage.tsx. */}
+        {!service.parent && (SERVICE_CITY_CONTENT as any)[id] && (
         <div className="max-w-5xl mx-auto mb-16">
           <h2 className="text-2xl md:text-3xl font-black text-brand-dark mb-8 text-center tracking-tight">Need {title} in a Specific City?</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
