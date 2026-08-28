@@ -40,9 +40,21 @@ so the winter deadline is **~mid-October** (indexed before the peak), not August
 - [ ] NOT YET committed / deployed / indexed — needs Shabir's go-ahead.
 
 ### Phase 2 — Winter cold-battery cluster (timed for Dec–Jan; deadline ~mid-Oct)
-- [ ] One batched, **cached** DataForSEO pull (~$0.09) to size "car won't start in cold / dead battery cold
-      weather / winter boost" (out of season in GSC now, so invisible).
-- [ ] Winter-battery hub + weave the cold-weather angle into jump-start / battery pages.
+- [x] Batched cached DataForSEO pull done 2026-08-28 ($0.09, `ifast-winter-battery-2026-08-28`).
+  Data: `C:/dev/dfs-cache/ifast/data/2026-08-28-winter-battery/`.
+- **Finding — January peak, 4–6× the annual average:**
+  - car won't start in cold — **3,600 (Jan)** / 590 avg — the head term, info→transactional
+  - car battery replacement near me — 1,000 / 590 · car not starting in cold — 720 / 140
+  - frozen car battery — 590 / 110 · mobile battery replacement — 590 / 390
+  - battery boost service — 320 · car won't start in winter — 210 · dead battery cold weather — 170
+  - **Zero-volume (do NOT target):** "winter battery boost", "cold weather jump start", "24 hour battery boost",
+    "winter roadside assistance", "emergency roadside assistance winter" — invented phrasings nobody searches.
+- **Gap:** no page targets the cold no-start cluster (~5,000/mo Jan). Existing `winter-roadside-emergencies`
+  guide is too broad (~2 impr); `dead-car-battery-boost-or-replace` answers a different question.
+- [ ] BUILD: focused guide post "Car Won't Start in the Cold?" owning car won't start in cold / not starting in
+      cold / frozen car battery / car won't start in winter; funnels to jump-start + /service/24-hour-roadside +
+      battery-replacement. Index by mid-Oct for the Jan peak.
+- [ ] Sharpen `/service/battery-replacement` for "car battery replacement near me" (1,000 Jan).
 
 ## Guardrail (every build)
 `npm run build && bash scripts/check-mobile-mechanic-guardrail.sh` → must print GUARDRAIL PASS.

@@ -2383,6 +2383,143 @@ export const BLOG_POSTS: BlogPost[] = [
       { question: 'How much does it cost to fix a rattling heat shield?', answer: 'Removing a broken shield is one of the more affordable mobile mechanic calls — but the exact price depends on the vehicle and what we find underneath, so call +1 437-215-3468 for a quote. The price is confirmed up front before we book anything, and there\'s no shop drop-off or towing cost because the fix happens at your car.' },
       { question: 'How long does the fix take?', answer: 'Most broken heat shield calls are diagnosed and fixed in a single short visit — the inspection, the removal, and a check of the surrounding exhaust components all happen on the spot. You keep your day; the car never has to go anywhere.' },
     ]
+  },
+  /* ============================================================
+     POST: CAR WON'T START IN THE COLD (winter no-start cluster)
+     ============================================================ */
+  {
+    slug: 'car-wont-start-in-the-cold-gta',
+    title: 'Car Won\'t Start in the Cold? Here\'s What\'s Actually Happening — and What to Do',
+    excerpt: 'The first real cold snap every winter, our phone doesn\'t stop. Same story every time: fine last night, dead this morning. Here\'s why the cold does it, the 60-second playbook before you call, and the one mistake that turns a boost into a tow.',
+    seoTitle: 'Car Won\'t Start in the Cold? Why It Happens & What to Do | iFAST GTA',
+    seoDescription: 'Car won\'t start in the cold across Scarborough, North York, Pickering, Ajax, Whitby or Oshawa? Here\'s why winter kills car batteries, what to try before you call, and when a boost isn\'t enough. 24/7 mobile jump start and battery service across the GTA.',
+    keywords: 'car won\'t start in cold, car not starting in cold, car won\'t start in winter, frozen car battery, dead battery cold weather, car battery dead in winter, cold weather jump start GTA, winter car battery boost, car won\'t start what to do, how to start car in cold weather',
+    category: 'Seasonal Guide',
+    publishDate: '2026-08-28',
+    readTime: '6 min read',
+    heroImage: '/jump_start_hero.jpg',
+    heroImageAlt: 'iFAST technician boosting a car that won\'t start on a freezing GTA morning',
+    sections: [
+      {
+        content: (
+          <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
+            The first real cold snap of the winter, our phone doesn't stop. And it's the same call almost every time: <em>"It was completely fine last night. This morning — nothing."</em> A car that ran perfectly on Tuesday will not turn over on a <strong>−15°C</strong> Wednesday, and it feels like it broke overnight. It usually didn't. Here's what the cold is actually doing under your hood, the 60-second playbook to try before you call anyone, and the single mistake that turns a two-minute boost into a tow.
+          </p>
+        )
+      },
+      {
+        heading: 'Why the Cold Does This: Two Things Happening at Once',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              A no-start on a cold morning is almost never bad luck. It's physics, and there are two forces working against you at the same time:
+            </p>
+            <ul className="list-none space-y-4 mb-6">
+              <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                <Snowflake className="text-brand-yellow shrink-0 mt-1" size={24} />
+                <div>
+                  <p className="font-bold text-brand-dark">Your battery gets weaker</p>
+                  <p className="text-gray-700">A car battery makes power through a chemical reaction, and cold slows that reaction down. At around <strong>−18°C a healthy battery delivers roughly half</strong> the cranking power it has on a mild day. A battery that's two or three winters old has even less in reserve — so the cold doesn't create the problem, it exposes one that was already there.</p>
+                </div>
+              </li>
+              <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                <Gauge className="text-brand-yellow shrink-0 mt-1" size={24} />
+                <div>
+                  <p className="font-bold text-brand-dark">Your engine gets harder to turn</p>
+                  <p className="text-gray-700">Engine oil thickens as it gets colder. On a freezing morning the starter has to shove the engine through oil the consistency of syrup — so it demands <strong>more</strong> power at the exact moment the battery has <strong>less</strong> to give. That's the squeeze. When the two lines cross, you get a slow groan, a click, or silence.</p>
+                </div>
+              </li>
+            </ul>
+            <p className="mb-4 text-gray-700">
+              This is why a battery that was "fine" can die without warning: it was quietly fading all along, and the first hard freeze was simply the morning it ran out of margin.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'The 60-Second Cold-Morning Playbook',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Before you assume the worst, run through this. It costs a minute and it starts a surprising number of cars:
+            </p>
+            <ol className="list-none space-y-3 mb-6">
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Kill everything electrical first.</strong> Heater, headlights, rear defrost, radio, phone charger — all off. Every one of those steals power the starter needs. Give the battery its whole reserve for the one job that matters.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Dip the clutch or hold the brake.</strong> On a manual, pressing the clutch in takes the transmission out of the equation so the starter turns less. On an automatic, make sure you're firmly in Park.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Crank in short bursts — then stop.</strong> Try the key for no more than <strong>5 seconds</strong>, then wait 20–30 seconds and try once more. Short tries let the battery recover a little between attempts.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>If it hasn't caught in three tries, stop.</strong> This is the part people get wrong.</span></li>
+            </ol>
+            <div className="flex gap-4 bg-red-50 border border-red-100 p-5 rounded-xl mb-6">
+              <ThumbsDown className="text-red-500 shrink-0 mt-1" size={24} />
+              <div>
+                <p className="font-bold text-brand-dark mb-1">The one mistake that turns a boost into a tow</p>
+                <p className="text-gray-700">Cranking over and over feels like effort, like you're getting closer. You're not — you're draining what little charge is left, and each long crank also pumps raw fuel into a cold engine that can foul the plugs. Grind a weak-but-boostable battery flat and you can turn a two-minute jump into a no-start that genuinely needs a tow. When in doubt, stop and call.</p>
+              </div>
+            </div>
+            <BlogCTA source="blog_cold_no_start_playbook" />
+          </>
+        )
+      },
+      {
+        heading: 'Is It Really the Battery? The Cold-Weather Suspects',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Nine times out of ten on a cold morning it's the battery — but the <em>sound</em> your car makes narrows it down, and it decides whether a boost will actually fix it:
+            </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6 text-gray-700">
+              <li><strong>Rapid clicking or a slow groan, then it catches on a boost</strong> — classic cold-weakened battery. A jump gets you going, but a battery that groaned this morning is on borrowed time. <a href="/blog/dead-car-battery-boost-or-replace-east-gta" className="text-brand-yellow font-semibold underline">Here's how we decide whether it needs a boost or a replacement</a>.</li>
+              <li><strong>Cranks strong but won't fire</strong> — the battery's fine; suspect fuel or a cold-start sensor issue. This one needs a <a href="/mobile-mechanic" className="text-brand-yellow font-semibold underline">mobile mechanic</a>, not just a boost.</li>
+              <li><strong>One click or dead silence</strong> — could be a deeply flat battery, a corroded terminal, or a starter. Worth having someone test before you buy a part you may not need.</li>
+            </ul>
+            <p className="mb-4 text-gray-700">
+              A "frozen battery" in the literal sense — the electrolyte actually freezing solid — is rarer, and it only happens to a battery that was already deeply discharged. If a battery is frozen, it should not be jumped; it needs to be assessed and usually replaced. That's exactly the kind of call worth making before you try anything else.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'When to Stop Trying and Just Call',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              If you're late, it's freezing, and the car has clicked twice — you don't have to stand in the cold problem-solving. That's the whole point of a mobile unit. <strong>{COMPANY_NAME}</strong> runs <a href="/service/24-hour-roadside" className="text-brand-yellow font-semibold underline">24/7 across the GTA</a>, and a cold-morning boost is the most common call we take. We bring commercial-grade boost packs built to turn over deeply cold engines that consumer jump boxes can't — and once you're running, we test the battery and charging system on the spot so you know whether it'll survive the next freeze or leave you stranded again on Thursday.
+            </p>
+            <p className="mb-4 text-gray-700">
+              If the battery is done, we can <a href="/service/battery-replacement" className="text-brand-yellow font-semibold underline">supply and fit a replacement right in your driveway</a> — no tow, no shop drop-off. Most drivers see us in 15–30 minutes.
+            </p>
+            <BlogCTA source="blog_cold_no_start_call" />
+          </>
+        )
+      },
+      {
+        heading: 'Stop It Happening Again',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              The drivers who don't get caught out are the ones who treat the battery as a wear item, not a surprise:
+            </p>
+            <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+              <li><strong>Know its age.</strong> Most car batteries last 3–5 years in Ontario's climate. If yours is past three winters, it's living on borrowed time — get it tested before the cold, not during it.</li>
+              <li><strong>Watch for the tell.</strong> A slow, lazy crank on a <em>mild</em> day is the clearest warning you'll get. A battery that groans in October will not survive January.</li>
+              <li><strong>Drive it.</strong> Lots of short trips in winter never fully recharge the battery. An occasional longer drive helps it hold charge.</li>
+            </ul>
+            <p className="mb-4 text-gray-700">
+              A quick battery-and-charging test before winter costs nothing like a stranded morning does — and we can do it at your home or workplace while the weather's still on your side.
+            </p>
+            <BlogCTA source="blog_cold_no_start_prevention" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'Why won\'t my car start in the cold?', answer: 'Two things happen at once on a freezing morning. Cold slows the chemical reaction inside your battery, so it delivers far less cranking power — around half its normal output near −18°C. At the same time, cold thickens your engine oil, so the starter has to work harder to turn the engine. The battery has less to give exactly when the engine demands more. An older battery simply runs out of margin first.' },
+      { question: 'What should I do when my car won\'t start in the cold?', answer: 'Turn off everything electrical (heater, lights, radio, chargers) so the battery\'s full reserve goes to the starter. On a manual, press the clutch in; on an automatic, confirm you\'re in Park. Then crank in short 5-second bursts with a pause between them. If it hasn\'t started in about three tries, stop — cranking repeatedly drains a boostable battery flat and can foul the engine. That\'s the point to call for a boost.' },
+      { question: 'Can a frozen car battery be jump started?', answer: 'No. If a battery has actually frozen — which only happens to one that was already deeply discharged — it should not be jumped, because attempting it can be dangerous. It needs to be assessed and, in most cases, replaced. If you suspect a frozen battery, call for a technician rather than trying to boost it yourself.' },
+      { question: 'How cold is too cold for a car battery?', answer: 'There\'s no single cut-off, but the effect climbs fast below freezing. Around −18°C a healthy battery makes roughly half its normal cranking power, and a battery that\'s three or more winters old may not have enough left to start the car. If yours is older, the first hard freeze of the season is often when it gives up.' },
+      { question: 'Does cold weather kill car batteries?', answer: 'Cold rarely kills a healthy new battery outright — but it exposes and finishes off a weak one. It reduces every battery\'s available power temporarily, and it\'s the final straw for a battery that was already fading. That\'s why so many no-starts cluster on the first cold mornings of winter.' },
+      { question: 'Do you come out for cold-weather no-starts in the GTA?', answer: 'Yes — it\'s our busiest winter call. iFAST runs 24/7 across Scarborough, North York, Pickering, Ajax, Whitby, Oshawa and the wider GTA, with commercial boost packs built for deeply cold engines. We typically reach you in 15–30 minutes, test the battery and charging system once you\'re running, and can fit a replacement on the spot if the battery is done. Call +1 437-215-3468.' },
+    ]
   }
 ];
 
@@ -2407,4 +2544,5 @@ export const BLOG_RELATED_SERVICES: Record<string, string[]> = {
   'battery-boost-ajax': ['jump-start', 'battery-replacement'],
   'pre-purchase-car-inspection-ajax': ['mobile-mechanic'],
   'exhaust-heat-shield-repair-pickering': ['mobile-mechanic', 'towing'],
+  'car-wont-start-in-the-cold-gta': ['jump-start', 'battery-replacement', '24-hour-roadside'],
 };
