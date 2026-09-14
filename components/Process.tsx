@@ -5,12 +5,12 @@ const STEPS = [
     {
         icon: PhoneCall,
         title: "Call for Help",
-        description: "Tell dispatch what happened and where you are — a highway exit, plaza, or nearby business is enough. You'll get an upfront price before we roll."
+        description: "Tell dispatch what happened and where you are; a highway exit, plaza, or nearby business is enough. You'll get an upfront price before we roll."
     },
     {
         icon: Wrench,
         title: "Rapid Dispatch",
-        description: "The closest fully-equipped service van is routed to you with a real ETA — typically around 30 minutes across the Greater Toronto Area."
+        description: "The closest fully-equipped service van is routed to you with a real ETA, typically around 30 minutes across the Greater Toronto Area."
     },
     {
         icon: CheckCircle2,

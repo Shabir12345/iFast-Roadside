@@ -56,7 +56,7 @@ const CityPage: React.FC = () => {
   const localBusinessLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    'name': `${COMPANY_NAME} — ${content.name}`,
+    'name': `${COMPANY_NAME}, ${content.name}`,
     'description': content.seoDescription,
     'telephone': PHONE_NUMBER,
     'url': canonical,
@@ -153,7 +153,7 @@ const CityPage: React.FC = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
-              {content.tagline}. Mobile tire repair, jump starts, lockouts, fuel delivery, and emergency towing — dispatched from our {DISPATCH_ORIGIN[content.id] ?? 'East GTA hub'} in {content.responseTime}.
+              {content.tagline}. Mobile tire repair, jump starts, lockouts, fuel delivery, and emergency towing, dispatched from our {DISPATCH_ORIGIN[content.id] ?? 'East GTA hub'} in {content.responseTime}.
             </p>
 
             <div className="space-y-4 mb-10">
@@ -240,7 +240,7 @@ const CityPage: React.FC = () => {
       <div className="container mx-auto px-4 mt-8 mb-16">
         <article className="prose prose-lg md:prose-xl max-w-4xl mx-auto text-gray-700 mb-16 bg-white p-8 md:p-14 rounded-[3rem] premium-shadow border border-gray-100 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-yellow via-brand-yellow/50 to-brand-yellow"></div>
-          <h2 className="text-3xl font-black text-brand-dark mb-6 tracking-tight">Local {content.name} Roadside — How We Work Here</h2>
+          <h2 className="text-3xl font-black text-brand-dark mb-6 tracking-tight">Local {content.name} Roadside: How We Work Here</h2>
           <div className="text-gray-700 leading-relaxed text-lg">{content.introParagraph}</div>
           <div className="text-gray-700 leading-relaxed text-lg mt-8">{content.localAngle}</div>
         </article>

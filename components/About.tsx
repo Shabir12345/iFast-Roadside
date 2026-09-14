@@ -53,7 +53,7 @@ const About: React.FC = () => {
                         </h2>
                         <p className="text-gray-600 text-lg mb-8 leading-relaxed">
                             Being stranded on the side of the 401 or stuck in a freezing parking lot is stressful enough without wondering <em>if</em> help will show up.
-                            Big tow companies make you wait for a flatbed. <strong>{COMPANY_NAME}</strong>, based at <strong>{ADDRESS}</strong>, sends fast, fully-equipped service vans from our Scarborough home base — so most calls are fixed on the spot, no tow needed.
+                            Big tow companies make you wait for a flatbed. <strong>{COMPANY_NAME}</strong>, based at <strong>{ADDRESS}</strong>, sends fast, fully-equipped service vans from our Scarborough home base, so most calls are fixed on the spot, no tow needed.
                         </p>
 
                         <div className="flex flex-col gap-6 mb-10">
@@ -81,7 +81,7 @@ const About: React.FC = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-brand-dark mb-1">Fixed On-Site, Not Towed</h3>
-                                    <p className="text-gray-500 text-sm">Tires, batteries, lockouts, and fuel are handled right where you're stuck — towing is the backup plan, not the default.</p>
+                                    <p className="text-gray-500 text-sm">Tires, batteries, lockouts, and fuel are handled right where you're stuck; towing is the backup plan, not the default.</p>
                                 </div>
                             </div>
                         </div>

@@ -112,7 +112,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: '24-hour-roadside',
     title: '24/7 Emergency Service',
-    description: 'Stranded at 2am? Dead battery, flat tire, locked out, or out of fuel — our mobile units run around the clock across the GTA and reach you in 15–30 minutes.',
+    description: 'Stranded at 2am? Dead battery, flat tire, locked out, or out of fuel: our mobile units run around the clock across the GTA and reach you in 15 to 30 minutes.',
     icon: Clock,
   },
   {
@@ -149,7 +149,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'flat-tire-repair',
     title: 'Flat Tire Repair',
-    description: 'Nail or screw in your tread? We dismount, patch-and-plug from the inside, re-balance, and reinstall — a permanent, MTO-approved fix done at your location.',
+    description: 'Nail or screw in your tread? We dismount, patch-and-plug from the inside, re-balance, and reinstall for a permanent, MTO-approved fix done at your location.',
     icon: Wrench,
     parent: 'tire-change',
   },
@@ -163,7 +163,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'tire-installation',
     title: 'New & Used Tire Installation',
-    description: 'No spare? We bring new or quality used tires in your size to your driveway or roadside, then mount, balance, and install them on-site — no shop visit needed.',
+    description: 'No spare? We bring new or quality used tires in your size to your driveway or roadside, then mount, balance, and install them on-site, no shop visit needed.',
     icon: CircleDot,
     parent: 'tire-change',
   },
@@ -178,7 +178,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'battery-replacement',
     title: 'Battery Replacement',
-    description: 'Battery beyond saving? We deliver and install the correct new battery for your vehicle right where you are, and safely recycle the old one — no towing required.',
+    description: 'Battery beyond saving? We deliver and install the correct new battery for your vehicle right where you are, and safely recycle the old one, no towing required.',
     icon: BatteryCharging,
     parent: 'jump-start',
   },
@@ -186,7 +186,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'pre-purchase-inspection',
     title: 'Pre-Purchase Car Inspection',
-    description: 'Buying a used car? Before you hand over the money, we send a certified mechanic to the car — private driveway, dealer lot, or parking garage — for a full inspection and diagnostic scan, plus an honest verdict on what you\'re actually buying.',
+    description: 'Buying a used car? Before you hand over the money, we send a certified mechanic to the car, whether a private driveway, dealer lot, or parking garage, for a full inspection and diagnostic scan, plus an honest verdict on what you\'re actually buying.',
     icon: ClipboardCheck,
     parent: 'mobile-mechanic',
   }

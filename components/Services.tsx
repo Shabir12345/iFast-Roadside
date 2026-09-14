@@ -10,7 +10,7 @@ const Services: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Whatever Stopped You, We Fix It Where You're Stuck</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Highway blowout, dead battery in the cold, keys locked inside — our vans carry the tools to handle it on the spot. And if it truly needs a tow, we do that too.
+            Highway blowout, dead battery in the cold, keys locked inside: our vans carry the tools to handle it on the spot. And if it truly needs a tow, we do that too.
           </p>
         </div>
 

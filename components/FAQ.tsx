@@ -68,7 +68,7 @@ const FAQ: React.FC = () => {
 
                     <div className="mt-12 p-6 bg-brand-dark rounded-3xl text-center text-white glass-morphism border-none">
                         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                            <p className="text-sm font-medium">Still have questions? A live dispatcher can answer them right now — 24/7.</p>
+                            <p className="text-sm font-medium">Still have questions? A live dispatcher can answer them right now, 24/7.</p>
                             <a
                                 href={`tel:${PHONE_NUMBER}`}
                                 onClick={() => trackPhoneCall('faq_call_home')}

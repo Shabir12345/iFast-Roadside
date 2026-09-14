@@ -10,7 +10,7 @@ const BlogCTA = ({ source }: { source: string }) => (
     <div className="relative z-10">
       <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
         <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-        Available Now — East GTA
+        Available Now: East GTA
       </div>
       <p className="text-white font-black text-xl md:text-2xl mb-6">Stranded right now? Don't wait.</p>
       <a
@@ -21,7 +21,7 @@ const BlogCTA = ({ source }: { source: string }) => (
         <PhoneCall size={22} fill="currentColor" />
         Call {PHONE_NUMBER}
       </a>
-      <p className="text-white/50 text-xs mt-3">Average arrival: 15–30 min · Pickering · Ajax · Whitby · Oshawa · Scarborough</p>
+      <p className="text-white/50 text-xs mt-3">Average arrival: 15 to 30 min · Pickering · Ajax · Whitby · Oshawa · Scarborough</p>
     </div>
   </div>
 );
@@ -52,7 +52,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'flat-tire-on-401-east-gta',
     title: 'Flat Tire on the 401? Here\'s Exactly What to Do (East GTA\'s Fastest Response)',
-    excerpt: 'A blowout at highway speed is one of the most dangerous moments a driver can face. Here\'s the exact step-by-step survival guide for flat tires on the 401, 412, and 407 in East GTA — and why calling a mobile tire specialist is safer than changing it yourself.',
+    excerpt: 'A blowout at highway speed is one of the most dangerous moments a driver can face. Here\'s the exact step-by-step survival guide for flat tires on the 401, 412, and 407 in East GTA, and why calling a mobile tire specialist is safer than changing it yourself.',
     seoTitle: 'Flat Tire on the 401? What to Do + East GTA\'s Fastest Roadside Tire Service | iFAST',
     seoDescription: 'Blown a tire on the 401 near Pickering, Ajax, or Oshawa? Read our step-by-step highway flat tire guide, then call iFAST for a 15-30 minute mobile tire response across East GTA.',
     keywords: 'flat tire 401, blowout highway Ontario, flat tire Pickering, flat tire Ajax, emergency tire service East GTA, tire blowout Oshawa, roadside tire repair Whitby, what to do flat tire highway Ontario',
@@ -65,12 +65,12 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         content: (
           <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
-            It happens in an instant. You hear a loud bang, the steering wheel yanks hard to one side, and 60 km/h of momentum is suddenly working against you. A highway blowout is terrifying — and statistically, how you react in the next 8 seconds determines whether this is a minor inconvenience or a catastrophic accident. This guide covers exactly what to do, why DIY tire changes on the highway shoulder are dangerous, and how <strong>{COMPANY_NAME}</strong> responds across Pickering, Ajax, Whitby, Oshawa, and Scarborough in under 30 minutes.
+            It happens in an instant. You hear a loud bang, the steering wheel yanks hard to one side, and 60 km/h of momentum is suddenly working against you. A highway blowout is terrifying, and statistically, how you react in the next 8 seconds determines whether this is a minor inconvenience or a catastrophic accident. This guide covers exactly what to do, why DIY tire changes on the highway shoulder are dangerous, and how <strong>{COMPANY_NAME}</strong> responds across Pickering, Ajax, Whitby, Oshawa, and Scarborough in under 30 minutes.
           </p>
         )
       },
       {
-        heading: 'Step 1: Don\'t Panic — Control the Car First',
+        heading: 'Step 1: Don\'t Panic. Control the Car First',
         content: (
           <>
             <p className="mb-4 text-gray-700">
@@ -78,11 +78,11 @@ export const BLOG_POSTS: BlogPost[] = [
             </p>
             <ol className="list-none space-y-4 mb-6">
               {[
-                { num: '01', title: 'Grip the wheel firmly with both hands', desc: 'The car will pull toward the flat. Hold your line and resist the pull — do not jerk the wheel.' },
+                { num: '01', title: 'Grip the wheel firmly with both hands', desc: 'The car will pull toward the flat. Hold your line and resist the pull. Do not jerk the wheel.' },
                 { num: '02', title: 'Ease off the accelerator slowly', desc: 'Lift your foot gradually. Don\'t hit the gas or the brake. Let aerodynamic drag slow the vehicle naturally.' },
                 { num: '03', title: 'Signal right and move to the shoulder', desc: 'Check your mirrors, activate your turn signal, and steer calmly to the right shoulder or the nearest exit ramp.' },
                 { num: '04', title: 'Apply brakes gently only once under 50 km/h', desc: 'Only begin braking softly once you\'re off the main lanes and below highway speed.' },
-                { num: '05', title: 'Get as far off the road as possible', desc: 'Drive as far right as you can — beyond the rumble strips, onto the gravel if available. Distance from traffic is survival.' },
+                { num: '05', title: 'Get as far off the road as possible', desc: 'Drive as far right as you can, beyond the rumble strips, onto the gravel if available. Distance from traffic is survival.' },
               ].map(s => (
                 <li key={s.num} className="flex gap-4 bg-gray-50 p-4 rounded-xl">
                   <span className="text-3xl font-black text-brand-yellow/50 leading-none">{s.num}</span>
@@ -97,16 +97,16 @@ export const BLOG_POSTS: BlogPost[] = [
         )
       },
       {
-        heading: 'Step 2: Make Yourself Visible — Then Call for Help',
+        heading: 'Step 2: Make Yourself Visible, Then Call for Help',
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Once the car is stopped on the shoulder, your job is to make it impossible for other drivers to miss you — especially at night or in bad weather.
+              Once the car is stopped on the shoulder, your job is to make it impossible for other drivers to miss you, especially at night or in bad weather.
             </p>
             <ul className="list-disc pl-6 space-y-3 mb-6 text-gray-700">
               <li><strong>Turn on your hazard lights immediately.</strong> This is the first thing you do before the car even stops rolling.</li>
               <li><strong>Stay inside the vehicle</strong> if you are on a high-speed highway like the 401. Transport trucks create wind blasts that can knock a person off their feet from the shoulder.</li>
-              <li><strong>If you have road flares or reflective triangles,</strong> deploy them 30–50 metres behind your vehicle — but only if you can do so safely without entering traffic lanes.</li>
+              <li><strong>If you have road flares or reflective triangles,</strong> deploy them 30 to 50 metres behind your vehicle, but only if you can do so safely without entering traffic lanes.</li>
               <li><strong>Call a professional mobile tire service</strong> from inside your locked car. Do not attempt to change the tire yourself on a live highway shoulder.</li>
             </ul>
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-6">
@@ -126,7 +126,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              You might think: "I know how to change a tire — I'll just do it myself." Here is why that calculation changes completely on a 401 shoulder:
+              You might think: "I know how to change a tire, I'll just do it myself." Here is why that calculation changes completely on a 401 shoulder:
             </p>
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
               {[
@@ -143,7 +143,7 @@ export const BLOG_POSTS: BlogPost[] = [
               ))}
             </div>
             <p className="text-gray-700 mb-4">
-              Professional roadside technicians — like {COMPANY_NAME}'s teams — arrive with amber strobe light bars, high-visibility vests, proper traffic cones, and the correct tools to secure the work zone and change your tire safely. It is simply not a fair comparison.
+              Professional roadside technicians, like {COMPANY_NAME}'s teams, arrive with amber strobe light bars, high-visibility vests, proper traffic cones, and the correct tools to secure the work zone and change your tire safely. It is simply not a fair comparison.
             </p>
           </>
         )
@@ -158,9 +158,9 @@ export const BLOG_POSTS: BlogPost[] = [
             <ol className="space-y-4 mb-6">
               {[
                 { step: 'You call, we dispatch instantly', desc: 'Our dispatcher identifies your location using the cell tower your call is hitting. You don\'t need to know the exact highway marker.' },
-                { step: 'Nearest unit is routed to you', desc: 'We have units pre-positioned across Pickering, Ajax, Whitby, and Oshawa. Average response time on the 401 corridor is 15–30 minutes.' },
+                { step: 'Nearest unit is routed to you', desc: 'We have units pre-positioned across Pickering, Ajax, Whitby, and Oshawa. Average response time on the 401 corridor is 15 to 30 minutes.' },
                 { step: 'We set up a safe work zone', desc: 'Our vans arrive with roof-mounted amber strobes, reflective cones, and high-viz gear. We create a buffer between you and traffic.' },
-                { step: 'We mount a new tire (not just a spare)', desc: 'We carry a range of common tire sizes on the van. In most cases, we mount a proper full-size tire — not a 50 km/h-limited donut.' },
+                { step: 'We mount a new tire (not just a spare)', desc: 'We carry a range of common tire sizes on the van. In most cases, we mount a proper full-size tire, not a 50 km/h-limited donut.' },
                 { step: 'We balance and pressure-check', desc: 'Every tire we install is balanced on our onboard digital balancer. We reset your TPMS sensor light before we leave.' },
               ].map((s, i) => (
                 <li key={i} className="flex gap-4">
@@ -181,16 +181,16 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              {COMPANY_NAME} covers the full 401 corridor from Scarborough through Pickering, Ajax, Whitby, and Oshawa — as well as the 412 and 407 toll routes and the 115/35 north of Oshawa. If you're stranded anywhere in Durham Region or East Toronto, we have a unit nearby.
+              {COMPANY_NAME} covers the full 401 corridor from Scarborough through Pickering, Ajax, Whitby, and Oshawa, as well as the 412 and 407 toll routes and the 115/35 north of Oshawa. If you're stranded anywhere in Durham Region or East Toronto, we have a unit nearby.
             </p>
             <div className="grid sm:grid-cols-3 gap-3 mb-6">
               {[
-                { city: 'Pickering', highway: 'Hwy 401 (Exit 394–401)', eta: '15–20 min' },
-                { city: 'Ajax', highway: 'Hwy 401 (Exit 410–412)', eta: '15–25 min' },
-                { city: 'Whitby', highway: 'Hwy 401 (Exit 419–425)', eta: '20–25 min' },
-                { city: 'Oshawa', highway: 'Hwy 401 (Exit 431–438)', eta: '20–30 min' },
-                { city: 'Scarborough', highway: 'Hwy 401 (Exit 375–390)', eta: '20–30 min' },
-                { city: '407 / 412', highway: 'Full Durham stretch', eta: '25–35 min' },
+                { city: 'Pickering', highway: 'Hwy 401 (Exit 394 to 401)', eta: '15 to 20 min' },
+                { city: 'Ajax', highway: 'Hwy 401 (Exit 410 to 412)', eta: '15 to 25 min' },
+                { city: 'Whitby', highway: 'Hwy 401 (Exit 419 to 425)', eta: '20 to 25 min' },
+                { city: 'Oshawa', highway: 'Hwy 401 (Exit 431 to 438)', eta: '20 to 30 min' },
+                { city: 'Scarborough', highway: 'Hwy 401 (Exit 375 to 390)', eta: '20 to 30 min' },
+                { city: '407 / 412', highway: 'Full Durham stretch', eta: '25 to 35 min' },
               ].map(c => (
                 <div key={c.city} className="bg-brand-dark text-white p-4 rounded-xl text-center">
                   <p className="font-black text-brand-yellow">{c.city}</p>
@@ -204,7 +204,7 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     faqs: [
-      { question: 'Can I drive on a flat tire to the next exit?', answer: 'No. Driving even 100 metres on a flat destroys the tire\'s internal steel belts and can severely gouge your alloy rim — a rim replacement costs $300–$800+. Stay put and call iFAST.' },
+      { question: 'Can I drive on a flat tire to the next exit?', answer: 'No. Driving even 100 metres on a flat destroys the tire\'s internal steel belts and can severely gouge your alloy rim, and a rim replacement costs $300 to $800+. Stay put and call iFAST.' },
       { question: 'Will iFAST come to the 401 shoulder at night?', answer: 'Yes. We are available 24/7, 365 days a year including overnight, weekends, and holidays. Night calls on the 401 are common and our technicians are fully equipped with lit work zones.' },
       { question: 'What if I don\'t have a spare tire?', answer: 'That\'s fine. Our vans carry common tire sizes. We can mount a brand-new tire directly on your rim on-site. We\'ll discuss options and pricing before doing any work.' },
       { question: 'How much does a highway tire change cost?', answer: 'Costs vary based on tire size and whether a repair or replacement is needed. We provide a transparent quote before work begins. There are no hidden fees or surprise charges.' },
@@ -218,9 +218,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'winter-roadside-emergencies-ontario-guide',
     title: 'Winter Roadside Emergencies in Ontario: The Complete Driver\'s Guide (2026)',
-    excerpt: 'Ontario winters turn routine drives into potential disasters. Dead batteries, frozen locks, highway blowouts on ice — this complete guide covers every winter emergency, what causes it, and exactly what to do when it happens in East GTA.',
+    excerpt: 'Ontario winters turn routine drives into potential disasters. Dead batteries, frozen locks, highway blowouts on ice. This complete guide covers every winter emergency, what causes it, and exactly what to do when it happens in East GTA.',
     seoTitle: 'Winter Roadside Emergencies Ontario 2026: Complete Driver\'s Guide | iFAST East GTA',
-    seoDescription: 'Dead battery in the cold? Flat tire on ice? Locked out in a snowstorm? iFAST Roadside covers every winter emergency across Pickering, Ajax, Whitby, Oshawa, and Scarborough — 24/7.',
+    seoDescription: 'Dead battery in the cold? Flat tire on ice? Locked out in a snowstorm? iFAST Roadside covers every winter emergency across Pickering, Ajax, Whitby, Oshawa, and Scarborough, 24/7.',
     keywords: 'winter roadside emergencies Ontario, dead battery cold weather Ontario, winter flat tire East GTA, frozen car lock Pickering, winter car breakdown Ajax, cold weather battery jump start Whitby, winter driving Ontario 2025',
     category: 'Seasonal Guide',
     publishDate: '2026-05-04',
@@ -231,7 +231,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         content: (
           <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
-            Every October, millions of Ontario drivers start gambling with winter. They skip the tire swap until it snows. They ignore the battery warning light. They forget a blanket in the trunk. Then the temperature drops to −18°C on a Tuesday morning and the car doesn't start. This guide is the complete playbook for every winter roadside emergency you might face across East GTA — written by the team that responds to them every single day.
+            Every October, millions of Ontario drivers start gambling with winter. They skip the tire swap until it snows. They ignore the battery warning light. They forget a blanket in the trunk. Then the temperature drops to −18°C on a Tuesday morning and the car doesn't start. This guide is the complete playbook for every winter roadside emergency you might face across East GTA, written by the team that responds to them every single day.
           </p>
         )
       },
@@ -253,7 +253,7 @@ export const BLOG_POSTS: BlogPost[] = [
               </ul>
             </div>
             <p className="mb-4 text-gray-700">
-              <strong>What to do:</strong> Call iFAST for a professional battery jump start or battery replacement. We use surge-protected commercial boosters that won't fry your car's sensitive electronics — unlike jumper cables connected incorrectly to a donor vehicle. If the battery is dead dead (not just weak), we can install a new battery on-site.
+              <strong>What to do:</strong> Call iFAST for a professional battery jump start or battery replacement. We use surge-protected commercial boosters that won't fry your car's sensitive electronics, unlike jumper cables connected incorrectly to a donor vehicle. If the battery is dead dead (not just weak), we can install a new battery on-site.
             </p>
             <BlogCTA source="blog_winter_battery_cta" />
           </>
@@ -284,7 +284,7 @@ export const BLOG_POSTS: BlogPost[] = [
               ))}
             </ul>
             <p className="text-gray-700">
-              Our mobile mechanics carry diagnostic computers that read live sensor data and identify the exact cause within minutes — no guessing, no "try this and see."
+              Our mobile mechanics carry diagnostic computers that read live sensor data and identify the exact cause within minutes: no guessing, no "try this and see."
             </p>
           </>
         )
@@ -304,7 +304,7 @@ export const BLOG_POSTS: BlogPost[] = [
               <li><strong>Wet lug nuts seize</strong> onto the studs in the cold</li>
             </ul>
             <p className="mb-4 text-gray-700">
-              Beyond technique, winter tires significantly reduce your blowout risk to begin with. Ontario law doesn't mandate winter tires province-wide (Quebec does), but they reduce stopping distance on ice by up to 50%. iFAST offers on-site seasonal tire swaps — we come to your home or office and do the swap in your driveway.
+              Beyond technique, winter tires significantly reduce your blowout risk to begin with. Ontario law doesn't mandate winter tires province-wide (Quebec does), but they reduce stopping distance on ice by up to 50%. iFAST offers on-site seasonal tire swaps: we come to your home or office and do the swap in your driveway.
             </p>
             <BlogCTA source="blog_winter_tire_cta" />
           </>
@@ -323,17 +323,17 @@ export const BLOG_POSTS: BlogPost[] = [
                 <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
                   <li>DO use a commercial deicer spray (not boiling water)</li>
                   <li>DO gently warm the key with your hands before inserting</li>
-                  <li>DON'T force the key — it will snap</li>
+                  <li>DON'T force the key. It will snap</li>
                   <li>DON'T use a lighter on the lock barrel</li>
                 </ul>
               </div>
               <div className="bg-gray-50 rounded-xl p-4">
                 <p className="font-bold text-brand-dark mb-2">If your keys are inside:</p>
                 <ul className="text-sm text-gray-600 space-y-1 list-disc pl-4">
-                  <li>Stay warm — get inside a nearby building</li>
+                  <li>Stay warm. Get inside a nearby building</li>
                   <li>Call iFAST for a professional damage-free unlock</li>
                   <li>We use non-marring tools that won't scratch door panels or weather seals</li>
-                  <li>Typical arrival in East GTA: 20–35 min</li>
+                  <li>Typical arrival in East GTA: 20 to 35 min</li>
                 </ul>
               </div>
             </div>
@@ -351,7 +351,7 @@ export const BLOG_POSTS: BlogPost[] = [
               Why? Beyond the obvious risk of running dry, a low fuel tank also increases condensation inside the tank, which can add water to your fuel system and contribute to a frozen fuel line. Keep the tank topped up.
             </p>
             <p className="mb-4 text-gray-700">
-              If you do run dry, stay in your car with the hazard lights on and call {COMPANY_NAME}. We deliver premium, regular, or diesel fuel directly to your location across East GTA — you never have to leave the warm vehicle.
+              If you do run dry, stay in your car with the hazard lights on and call {COMPANY_NAME}. We deliver premium, regular, or diesel fuel directly to your location across East GTA, so you never have to leave the warm vehicle.
             </p>
           </>
         )
@@ -390,10 +390,10 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     faqs: [
-      { question: 'Does cold weather really kill car batteries that fast?', answer: 'Yes. At −18°C, a battery loses roughly 40–50% of its cranking power. A battery that tested "fine" in September can fail completely when January hits. Batteries older than 3–4 years should be tested each fall before winter sets in.' },
+      { question: 'Does cold weather really kill car batteries that fast?', answer: 'Yes. At −18°C, a battery loses roughly 40 to 50% of its cranking power. A battery that tested "fine" in September can fail completely when January hits. Batteries older than 3 to 4 years should be tested each fall before winter sets in.' },
       { question: 'Does iFAST operate in bad weather?', answer: 'Absolutely. Snow, freezing rain, and cold are when we\'re needed most. Our vehicles are equipped for winter conditions and our technicians are trained for safe roadside work in low-visibility, icy environments. We are fully operational 24/7 all winter.' },
       { question: 'Are winter tires worth it in the East GTA?', answer: 'Without question, yes. Durham Region roads and the 401 corridor can be treacherous from November through March. Winter tires have a stopping distance advantage of up to 50% over all-season tires on ice. iFAST offers convenient at-home seasonal tire swaps so there\'s no excuse to skip them.' },
-      { question: 'My car has remote start — does that prevent winter battery issues?', answer: 'Remote start warms the engine, which helps oil flow, but it doesn\'t meaningfully charge a weak battery. The alternator charges while the engine runs, but short remote-start sessions don\'t give the alternator enough time to recover a deeply depleted battery. Get the battery tested annually.' },
+      { question: 'My car has remote start. Does that prevent winter battery issues?', answer: 'Remote start warms the engine, which helps oil flow, but it doesn\'t meaningfully charge a weak battery. The alternator charges while the engine runs, but short remote-start sessions don\'t give the alternator enough time to recover a deeply depleted battery. Get the battery tested annually.' },
       { question: 'What if I\'m stranded in winter and my phone battery is low?', answer: 'Call us first before your phone dies. Give your location (the nearest cross-streets, exit ramp, or landmark). Then conserve your battery by putting the phone in low-power mode. If possible, stay in your locked, running vehicle (cracked window for CO safety) and wait for our team to arrive.' },
     ]
   },
@@ -404,9 +404,9 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'caa-vs-independent-roadside-assistance-ontario',
     title: 'CAA vs. Independent Roadside Assistance: What Nobody Tells You',
-    excerpt: 'Millions of Ontarians pay $100+ a year for CAA memberships. But when you\'re stranded on the 401 at midnight in January, does CAA actually deliver? An honest, data-backed comparison between CAA and independent local services like iFAST — with no agenda.',
+    excerpt: 'Millions of Ontarians pay $100+ a year for CAA memberships. But when you\'re stranded on the 401 at midnight in January, does CAA actually deliver? An honest, data-backed comparison between CAA and independent local services like iFAST, with no agenda.',
     seoTitle: 'Is CAA Worth It in Ontario? Real Cost vs. Independent Roadside (2026)',
-    seoDescription: 'Is CAA actually worth it in Ontario? We break down the real membership cost, wait times, and coverage vs. calling an independent service like iFAST — so you know which is faster and cheaper before you\'re stranded on the 401.',
+    seoDescription: 'Is CAA actually worth it in Ontario? We break down the real membership cost, wait times, and coverage vs. calling an independent service like iFAST, so you know which is faster and cheaper before you\'re stranded on the 401.',
     keywords: 'CAA vs independent roadside assistance, CAA alternative Ontario, is CAA worth it Ontario, roadside assistance comparison East GTA, best roadside help Pickering, independent roadside service Ajax, CAA wait times Ontario',
     category: 'Buyer\'s Guide',
     publishDate: '2026-05-04',
@@ -417,7 +417,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         content: (
           <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
-            CAA has 2.4 million members in Ontario. It's been around since 1903 and has arguably the strongest brand in Canadian automotive safety. So why do thousands of East GTA drivers call independent services instead? This isn't an attack on CAA — it's a realistic assessment of when each option actually serves you better. After reading this, you'll know exactly which choice makes sense for your situation.
+            CAA has 2.4 million members in Ontario. It's been around since 1903 and has arguably the strongest brand in Canadian automotive safety. So why do thousands of East GTA drivers call independent services instead? This isn't an attack on CAA. It's a realistic assessment of when each option actually serves you better. After reading this, you'll know exactly which choice makes sense for your situation.
           </p>
         )
       },
@@ -455,7 +455,7 @@ export const BLOG_POSTS: BlogPost[] = [
               </table>
             </div>
             <p className="mb-4 text-gray-700">
-              Additional family members cost extra. And crucially: CAA Basic's 10 km towing limit means if you break down in Pickering and need to get to a shop in Scarborough, you're paying the difference out of pocket — CAA charges a per-kilometre rate for anything past your included distance, and that rate isn't published. We broke down what that actually means in <a href="/blog/caa-towing-cost-ontario" className="text-brand-yellow font-bold hover:underline">our guide to CAA towing costs in Ontario</a>.
+              Additional family members cost extra. And crucially: CAA Basic's 10 km towing limit means if you break down in Pickering and need to get to a shop in Scarborough, you're paying the difference out of pocket: CAA charges a per-kilometre rate for anything past your included distance, and that rate isn't published. We broke down what that actually means in <a href="/blog/caa-towing-cost-ontario" className="text-brand-yellow font-bold hover:underline">our guide to CAA towing costs in Ontario</a>.
             </p>
           </>
         )
@@ -465,7 +465,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              CAA's service model works by dispatching contracted third-party towing and roadside companies in your area. In peak periods — rush hour, snowstorms, Friday evenings — wait times climb significantly.
+              CAA's service model works by dispatching contracted third-party towing and roadside companies in your area. In peak periods, such as rush hour, snowstorms, and Friday evenings, wait times climb significantly.
             </p>
             <div className="grid sm:grid-cols-2 gap-6 mb-6">
               <div className="bg-gray-100 rounded-2xl p-6">
@@ -474,9 +474,9 @@ export const BLOG_POSTS: BlogPost[] = [
                   <p className="font-black text-brand-dark">CAA Dispatch</p>
                 </div>
                 <ul className="text-sm text-gray-700 space-y-2">
-                  <li className="flex gap-2"><Clock size={14} className="text-gray-400 flex-shrink-0 mt-0.5" /><span>Average response: <strong>45–90 min</strong> in peak periods</span></li>
-                  <li className="flex gap-2"><Clock size={14} className="text-gray-400 flex-shrink-0 mt-0.5" /><span>Winter storms: <strong>2–4+ hours</strong> reported</span></li>
-                  <li className="flex gap-2"><Clock size={14} className="text-gray-400 flex-shrink-0 mt-0.5" /><span>Dispatches a subcontractor — quality varies</span></li>
+                  <li className="flex gap-2"><Clock size={14} className="text-gray-400 flex-shrink-0 mt-0.5" /><span>Average response: <strong>45 to 90 min</strong> in peak periods</span></li>
+                  <li className="flex gap-2"><Clock size={14} className="text-gray-400 flex-shrink-0 mt-0.5" /><span>Winter storms: <strong>2 to 4+ hours</strong> reported</span></li>
+                  <li className="flex gap-2"><Clock size={14} className="text-gray-400 flex-shrink-0 mt-0.5" /><span>Dispatches a subcontractor, quality varies</span></li>
                 </ul>
               </div>
               <div className="bg-brand-dark rounded-2xl p-6">
@@ -485,14 +485,14 @@ export const BLOG_POSTS: BlogPost[] = [
                   <p className="font-black text-white">iFAST Direct Dispatch</p>
                 </div>
                 <ul className="text-sm text-white/80 space-y-2">
-                  <li className="flex gap-2"><Clock size={14} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>Average response: <strong>15–30 min</strong></span></li>
-                  <li className="flex gap-2"><Clock size={14} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>Direct dispatch — no middleman</span></li>
-                  <li className="flex gap-2"><Clock size={14} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>Same tech you called — consistent quality</span></li>
+                  <li className="flex gap-2"><Clock size={14} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>Average response: <strong>15 to 30 min</strong></span></li>
+                  <li className="flex gap-2"><Clock size={14} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>Direct dispatch, no middleman</span></li>
+                  <li className="flex gap-2"><Clock size={14} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>Same tech you called, consistent quality</span></li>
                 </ul>
               </div>
             </div>
             <p className="text-gray-700 mb-4">
-              The key difference: CAA uses a network of subcontractors. When volume is high, they prioritize by membership tier and geography. iFAST dispatches its own team directly to your GPS location — no call centre, no subcontracting.
+              The key difference: CAA uses a network of subcontractors. When volume is high, they prioritize by membership tier and geography. iFAST dispatches its own team directly to your GPS location, no call centre, no subcontracting.
             </p>
             <BlogCTA source="blog_caa_compare_cta1" />
           </>
@@ -533,9 +533,9 @@ export const BLOG_POSTS: BlogPost[] = [
             </p>
             <ul className="space-y-3 mb-6">
               {[
-                { pro: 'Speed for local emergencies', detail: 'iFAST\'s East GTA focus means 15–30 min response versus the 45–90 min CAA average in peak periods. In a January snowstorm on the 401, that difference is not trivial.' },
-                { pro: 'No membership required', detail: 'You pay only when you need service. If you never break down, you pay nothing. The average driver has 1–2 roadside incidents per year — the math for low-incident drivers favours pay-per-use.' },
-                { pro: 'Mobile mechanic capability', detail: 'iFAST\'s mobile mechanics can diagnose and repair your car on-site. CAA dispatches a tow — they can\'t fix your car.' },
+                { pro: 'Speed for local emergencies', detail: 'iFAST\'s East GTA focus means 15 to 30 min response versus the 45 to 90 min CAA average in peak periods. In a January snowstorm on the 401, that difference is not trivial.' },
+                { pro: 'No membership required', detail: 'You pay only when you need service. If you never break down, you pay nothing. The average driver has 1 to 2 roadside incidents per year, and the math for low-incident drivers favours pay-per-use.' },
+                { pro: 'Mobile mechanic capability', detail: 'iFAST\'s mobile mechanics can diagnose and repair your car on-site. CAA dispatches a tow. They can\'t fix your car.' },
                 { pro: 'Full tire service', detail: 'iFAST mounts, balances, and installs proper tires on-site. CAA typically installs your donut spare, which is limited to 80 km/h and 80 km.' },
                 { pro: 'Transparent per-call pricing', detail: 'CAA\'s membership model means you\'ve already paid whether you use it or not. iFAST pricing is transparent, per-service, with a quote before work begins.' },
               ].map(item => (
@@ -595,8 +595,8 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       { question: 'Does iFAST require any membership or monthly fee?', answer: 'No. iFAST is a pure pay-per-use service. You call when you need us, we give you a transparent quote, and you pay only for the service provided. No annual membership, no activation fees, no minimums.' },
       { question: 'Can I cancel CAA and use iFAST instead?', answer: 'That\'s your call based on your driving patterns. If you rarely leave the East GTA and don\'t take long highway road trips, iFAST\'s pay-per-use model likely costs you less annually. If you regularly drive across Ontario or to the US, keeping a CAA membership for long-distance coverage is reasonable.' },
-      { question: 'What if iFAST can\'t fix my car on-site?', answer: 'If a repair genuinely requires a shop (engine overhauls and internal rebuilds), we\'ll be upfront about it and tow you to your preferred garage on one of our own trucks. But our mobile mechanics resolve approximately 80% of common breakdowns on-site — that covers most day-to-day failures.' },
-      { question: 'How much does a typical iFAST service call cost vs. CAA?', answer: 'CAA membership costs $80–$154/year (verified August 2026) whether or not you ever call them, and that price only covers towing up to your tier\'s limit — past it, CAA bills a per-kilometre rate it does not publish. With iFAST you pay per call, you are quoted before a truck is dispatched, and distance does not change the number after the fact. For drivers who break down about once a year, pay-per-use usually costs less; for drivers who tow long distances several times a year, a membership can still win.' },
+      { question: 'What if iFAST can\'t fix my car on-site?', answer: 'If a repair genuinely requires a shop (engine overhauls and internal rebuilds), we\'ll be upfront about it and tow you to your preferred garage on one of our own trucks. But our mobile mechanics resolve approximately 80% of common breakdowns on-site, which covers most day-to-day failures.' },
+      { question: 'How much does a typical iFAST service call cost vs. CAA?', answer: 'CAA membership costs $80 to $154/year (verified August 2026) whether or not you ever call them, and that price only covers towing up to your tier\'s limit; past it, CAA bills a per-kilometre rate it does not publish. With iFAST you pay per call, you are quoted before a truck is dispatched, and distance does not change the number after the fact. For drivers who break down about once a year, pay-per-use usually costs less; for drivers who tow long distances several times a year, a membership can still win.' },
     ]
   },
 
@@ -628,7 +628,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              If you are a member and the tow is within your tier's distance, you pay nothing at the roadside. If you go past that distance, CAA charges a per-kilometre rate on the overage. <strong>That rate is not published anywhere on CAA's website</strong> — their wording is that "a charge per kilometre will be applied for any additional mileage that exceeds your coverage (service coverage varies by territory)."
+              If you are a member and the tow is within your tier's distance, you pay nothing at the roadside. If you go past that distance, CAA charges a per-kilometre rate on the overage. <strong>That rate is not published anywhere on CAA's website</strong>: their wording is that "a charge per kilometre will be applied for any additional mileage that exceeds your coverage (service coverage varies by territory)."
             </p>
             <p className="mb-4 text-gray-700">
               If you are not a member, CAA's online service request will not process your call. It asks for a valid membership number and postal code before it will dispatch anything. In practice that leaves you joining on the spot or calling an independent operator.
@@ -792,7 +792,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'mobile-mechanic-cost-ontario-pricing-guide',
     title: 'How Much Does a Mobile Mechanic Cost in Ontario? Honest East GTA Pricing',
-    excerpt: 'You\'ve broken down and you don\'t want to be ripped off. We break down exactly what a mobile mechanic costs in Ontario — diagnostic fees, common repairs, parts markup, and what a fair quote looks like — so you\'re never in the dark.',
+    excerpt: 'You\'ve broken down and you don\'t want to be ripped off. We break down exactly what a mobile mechanic costs in Ontario: diagnostic fees, common repairs, parts markup, and what a fair quote looks like, so you\'re never in the dark.',
     seoTitle: 'Mobile Mechanic Cost in Ontario: Honest 2026 Pricing Guide (East GTA)',
     seoDescription: 'How much does a mobile mechanic cost in Pickering, Ajax, Oshawa, or Whitby? iFAST breaks down fair diagnostic fees, repair costs, and how we price transparently so you\'re never surprised.',
     keywords: 'mobile mechanic cost Ontario, how much does mobile mechanic cost, mobile mechanic price East GTA, on-site auto repair pricing Pickering, mobile mechanic fees Ajax, car repair cost Oshawa, mobile mechanic rate Whitby',
@@ -818,8 +818,8 @@ export const BLOG_POSTS: BlogPost[] = [
             </p>
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
               {[
-                { icon: DollarSign, label: 'Diagnostic / Call-Out Fee', desc: 'The fee for the technician to come to you, inspect the vehicle, and diagnose the problem. Typically $60–$120 in East GTA. This is separate from repair labor.' },
-                { icon: DollarSign, label: 'Labor Rate', desc: 'Billed hourly or per job. Mobile mechanic rates typically run $80–$130/hr in Ontario, slightly less than dealerships ($130–$180/hr) but comparable to independent shops.' },
+                { icon: DollarSign, label: 'Diagnostic / Call-Out Fee', desc: 'The fee for the technician to come to you, inspect the vehicle, and diagnose the problem. Typically $60 to $120 in East GTA. This is separate from repair labor.' },
+                { icon: DollarSign, label: 'Labor Rate', desc: 'Billed hourly or per job. Mobile mechanic rates typically run $80 to $130/hr in Ontario, slightly less than dealerships ($130 to $180/hr) but comparable to independent shops.' },
                 { icon: DollarSign, label: 'Parts Cost', desc: 'Parts are typically priced at retail + a small markup. Reputable services will tell you the part number and price before ordering. Beware of unmarked "misc fees" on parts.' },
                 { icon: DollarSign, label: 'Travel/Distance Fee', desc: 'Some services charge a per-km fee beyond a base radius. iFAST\'s service zone covers all of East GTA with no additional travel surcharge within our operating area.' },
               ].map(({ icon: Icon, label, desc }) => (
@@ -855,17 +855,17 @@ export const BLOG_POSTS: BlogPost[] = [
                 </thead>
                 <tbody>
                   {[
-                    { service: 'Battery Jump Start', range: '$60–$100', note: 'Flat fee, includes surge-protection equipment' },
-                    { service: 'Battery Replacement (supply + install)', range: '$180–$320', note: 'Varies by battery spec (AGM vs. standard, size)' },
-                    { service: 'Flat Tire Change (spare swap)', range: '$60–$90', note: 'Mounting your own spare' },
-                    { service: 'Flat Tire Repair (patch)', range: '$80–$130', note: 'Full dismount, vulcanized patch, remount, balance' },
-                    { service: 'Alternator Replacement', range: '$380–$620', note: 'Parts + 1.5–2 hrs labor; varies by vehicle' },
-                    { service: 'Starter Motor Replacement', range: '$320–$500', note: 'Parts + 1–1.5 hrs labor; varies by vehicle' },
-                    { service: 'Brake Pads + Rotors (1 axle)', range: '$280–$450', note: 'Parts quality significantly affects price' },
-                    { service: 'Serpentine Belt Replacement', range: '$150–$280', note: 'Varies by engine accessibility' },
-                    { service: 'Fuel Delivery (up to 10L)', range: '$60–$90', note: 'Flat service fee; fuel cost additional' },
-                    { service: 'Car Lockout', range: '$60–$100', note: 'Flat fee; complexity affects time' },
-                    { service: 'Diagnostic Scan (OBD2 read + analysis)', range: '$60–$120', note: 'Required before most repairs; sometimes waived if repair proceeds' },
+                    { service: 'Battery Jump Start', range: '$60 to $100', note: 'Flat fee, includes surge-protection equipment' },
+                    { service: 'Battery Replacement (supply + install)', range: '$180 to $320', note: 'Varies by battery spec (AGM vs. standard, size)' },
+                    { service: 'Flat Tire Change (spare swap)', range: '$60 to $90', note: 'Mounting your own spare' },
+                    { service: 'Flat Tire Repair (patch)', range: '$80 to $130', note: 'Full dismount, vulcanized patch, remount, balance' },
+                    { service: 'Alternator Replacement', range: '$380 to $620', note: 'Parts + 1.5 to 2 hrs labor; varies by vehicle' },
+                    { service: 'Starter Motor Replacement', range: '$320 to $500', note: 'Parts + 1 to 1.5 hrs labor; varies by vehicle' },
+                    { service: 'Brake Pads + Rotors (1 axle)', range: '$280 to $450', note: 'Parts quality significantly affects price' },
+                    { service: 'Serpentine Belt Replacement', range: '$150 to $280', note: 'Varies by engine accessibility' },
+                    { service: 'Fuel Delivery (up to 10L)', range: '$60 to $90', note: 'Flat service fee; fuel cost additional' },
+                    { service: 'Car Lockout', range: '$60 to $100', note: 'Flat fee; complexity affects time' },
+                    { service: 'Diagnostic Scan (OBD2 read + analysis)', range: '$60 to $120', note: 'Required before most repairs; sometimes waived if repair proceeds' },
                   ].map((row, i) => (
                     <tr key={row.service} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                       <td className="p-3 font-semibold text-brand-dark border-b border-gray-100">{row.service}</td>
@@ -903,10 +903,10 @@ export const BLOG_POSTS: BlogPost[] = [
                 </thead>
                 <tbody>
                   {[
-                    { factor: 'Labor rate/hr', dealer: '$130–$180', shop: '$90–$130', mobile: '$80–$130' },
-                    { factor: 'Tow to get there', dealer: '$150–$300', shop: '$150–$300', mobile: '$0' },
-                    { factor: 'Rental car / Uber', dealer: '$40–$80/day', shop: '$40–$80/day', mobile: '$0' },
-                    { factor: 'Wait time for appointment', dealer: '2–5 days', shop: '1–3 days', mobile: '30 min' },
+                    { factor: 'Labor rate/hr', dealer: '$130 to $180', shop: '$90 to $130', mobile: '$80 to $130' },
+                    { factor: 'Tow to get there', dealer: '$150 to $300', shop: '$150 to $300', mobile: '$0' },
+                    { factor: 'Rental car / Uber', dealer: '$40 to $80/day', shop: '$40 to $80/day', mobile: '$0' },
+                    { factor: 'Wait time for appointment', dealer: '2 to 5 days', shop: '1 to 3 days', mobile: '30 min' },
                     { factor: 'You can watch the work', dealer: 'No', shop: 'Sometimes', mobile: 'Yes' },
                     { factor: 'Warranty on work', dealer: 'Yes', shop: 'Varies', mobile: 'Yes' },
                   ].map((row, i) => (
@@ -921,7 +921,7 @@ export const BLOG_POSTS: BlogPost[] = [
               </table>
             </div>
             <p className="text-gray-700 mb-4">
-              The tow fee alone ($150–$300) often closes the pricing gap between a shop and a mobile mechanic completely. Add the cost of a rental car for a day or two, and mobile service frequently comes out cheaper — even before factoring in your time.
+              The tow fee alone ($150 to $300) often closes the pricing gap between a shop and a mobile mechanic completely. Add the cost of a rental car for a day or two, and mobile service frequently comes out cheaper, even before factoring in your time.
             </p>
           </>
         )
@@ -936,7 +936,7 @@ export const BLOG_POSTS: BlogPost[] = [
             <ol className="space-y-4 mb-6">
               {[
                 { title: 'Quote before we touch anything', desc: 'We diagnose first, provide a clear written breakdown of parts and labor, and wait for your approval. No surprises on the final bill.' },
-                { title: 'No upselling on safety-critical work', desc: 'We don\'t pressure-sell additional services while we\'re at your vehicle. If we notice something else, we\'ll tell you honestly — but the decision is always yours.' },
+                { title: 'No upselling on safety-critical work', desc: 'We don\'t pressure-sell additional services while we\'re at your vehicle. If we notice something else, we\'ll tell you honestly, but the decision is always yours.' },
                 { title: 'Transparent parts sourcing', desc: 'We use quality OEM-equivalent parts and can show you the part number and source. We don\'t mark parts up at a rate that makes the service uncompetitive.' },
               ].map((item, i) => (
                 <li key={i} className="flex gap-4 bg-gray-50 p-5 rounded-xl">
@@ -957,22 +957,22 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     faqs: [
-      { question: 'Is there a fee just for the mechanic to come out and look?', answer: 'Yes — we charge a diagnostic/call-out fee to come to your location and assess the vehicle. This fee is typically $60–$120 and is clearly stated before we dispatch. If you proceed with the repair, this fee is often applied toward the total labor cost.' },
+      { question: 'Is there a fee just for the mechanic to come out and look?', answer: 'Yes. We charge a diagnostic/call-out fee to come to your location and assess the vehicle. This fee is typically $60 to $120 and is clearly stated before we dispatch. If you proceed with the repair, this fee is often applied toward the total labor cost.' },
       { question: 'Can I supply my own parts?', answer: 'We can discuss this on a case-by-case basis. In general, we prefer to supply parts to ensure quality and to be able to back the repair with a warranty. If you supply parts, we cannot warranty the repair against parts failure.' },
       { question: 'Are your mechanics certified?', answer: 'Yes. All iFAST technicians are fully certified with professional-grade diagnostic equipment and years of field experience. We follow manufacturer-specific repair procedures and use proper torque specs.' },
       { question: 'Do you warranty your work?', answer: 'Yes. All parts and labor performed by iFAST are covered by a comprehensive warranty. If something goes wrong with a repair we performed, we make it right.' },
-      { question: 'Is a mobile mechanic more expensive than a regular shop?', answer: 'On paper, labor rates are comparable. But when you factor in the cost of a tow truck ($150–$300), a rental car or Uber for the day, and the time you lose waiting for an appointment, mobile service is usually equal to or cheaper than a shop for most common repairs. For emergency situations, there\'s no comparison.' },
+      { question: 'Is a mobile mechanic more expensive than a regular shop?', answer: 'On paper, labor rates are comparable. But when you factor in the cost of a tow truck ($150 to $300), a rental car or Uber for the day, and the time you lose waiting for an appointment, mobile service is usually equal to or cheaper than a shop for most common repairs. For emergency situations, there\'s no comparison.' },
     ]
   },
 
   /* ============================================================
-     POST 5: CORRECT TIRE PRESSURE — SCARBOROUGH CUSTOMER STORY
+     POST 5: CORRECT TIRE PRESSURE (SCARBOROUGH CUSTOMER STORY)
      ============================================================ */
   {
     slug: 'correct-tire-pressure-scarborough',
     title: 'Correct Tire Pressure Saved This Scarborough Mom: The 72 PSI Story',
-    excerpt: 'A driver at a Scarborough gas station pumped her tires to a dangerous 72 PSI — with her child in the back seat. Here\'s the true story of how our technician Fayaz stepped in, what correct tire pressure actually is, and why overinflated tires are so dangerous.',
-    seoTitle: 'Correct Tire Pressure Saved This Scarborough Mom | What PSI Your Tires Need — iFAST',
+    excerpt: 'A driver at a Scarborough gas station pumped her tires to a dangerous 72 PSI, with her child in the back seat. Here\'s the true story of how our technician Fayaz stepped in, what correct tire pressure actually is, and why overinflated tires are so dangerous.',
+    seoTitle: 'Correct Tire Pressure Saved This Scarborough Mom | What PSI Your Tires Need | iFAST',
     seoDescription: 'A Scarborough driver pumped her tires to a dangerous 72 PSI with her child in the car. Here\'s what correct tire pressure actually is, why overinflated tires are dangerous, and how iFAST mobile tire service helps across Scarborough & East GTA.',
     keywords: 'correct tire pressure, what PSI should my tires be, overinflated tires danger, tire pressure check Scarborough, mobile tire service Scarborough, tire pressure help near me, too much air in tires, tire safety Scarborough, mobile tire service East GTA, recommended tire pressure',
     category: 'Emergency Tips',
@@ -984,7 +984,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         content: (
           <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
-            It was a quiet weekend at a gas station near <strong>Finch and Kennedy in Scarborough</strong> when our technician <strong>Fayaz</strong> noticed something that made him stop. A woman was fighting with the air pump at the side of the lot, a young child buckled in the back seat of her car. When Fayaz walked over to help and checked her tires, his stomach dropped: <strong className="text-red-600">72 PSI</strong> — more than double what most cars are built to run. She had no idea she\'d done anything wrong, and she was about to drive her child home on four tires inflated like rock-hard balloons. This is the story of how a two-minute conversation may have prevented a blowout — and everything you need to know about <strong>{COMPANY_NAME}</strong>-approved correct tire pressure so it never happens to you.
+            It was a quiet weekend at a gas station near <strong>Finch and Kennedy in Scarborough</strong> when our technician <strong>Fayaz</strong> noticed something that made him stop. A woman was fighting with the air pump at the side of the lot, a young child buckled in the back seat of her car. When Fayaz walked over to help and checked her tires, his stomach dropped: <strong className="text-red-600">72 PSI</strong>, more than double what most cars are built to run. She had no idea she\'d done anything wrong, and she was about to drive her child home on four tires inflated like rock-hard balloons. This is the story of how a two-minute conversation may have prevented a blowout, and everything you need to know about <strong>{COMPANY_NAME}</strong>-approved correct tire pressure so it never happens to you.
           </p>
         )
       },
@@ -993,13 +993,13 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              A tire stamped to run around 35 PSI that\'s been pumped to 72 is carrying roughly <strong>double its designed pressure</strong>. That isn\'t a small mistake you can shrug off — it changes how the tire behaves in every situation that matters:
+              A tire stamped to run around 35 PSI that\'s been pumped to 72 is carrying roughly <strong>double its designed pressure</strong>. That isn\'t a small mistake you can shrug off. It changes how the tire behaves in every situation that matters:
             </p>
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
               {[
                 { icon: '💥', title: 'Blowout risk skyrockets', desc: 'An over-pressurized tire is rigid and brittle. Add a hot summer highway and a pothole, and you\'re inviting a sudden blowout at speed.' },
                 { icon: '🛑', title: 'Less grip, longer stops', desc: 'Over-inflated tires bulge in the middle and ride on the center of the tread only. Less rubber on the road means reduced traction and longer stopping distances.' },
-                { icon: '🎢', title: 'Harsh, twitchy handling', desc: 'Every bump becomes a bounce. The car skips over road seams and feels nervous at highway speed — exactly when you want it planted.' },
+                { icon: '🎢', title: 'Harsh, twitchy handling', desc: 'Every bump becomes a bounce. The car skips over road seams and feels nervous at highway speed, exactly when you want it planted.' },
                 { icon: '🪙', title: 'You burn money on rubber', desc: 'That center-only contact wears the middle of the tread out fast, killing the tire long before its time and costing you a premature replacement.' },
               ].map(r => (
                 <div key={r.title} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
@@ -1025,7 +1025,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Here\'s the part Fayaz explained to her, and the part most drivers get wrong: the big number molded into the tire\'s sidewall is the <strong>maximum</strong> pressure the tire can physically hold — it is <em>not</em> the pressure your car wants. Inflate to that number and you\'ve done exactly what she did.
+              Here\'s the part Fayaz explained to her, and the part most drivers get wrong: the big number molded into the tire\'s sidewall is the <strong>maximum</strong> pressure the tire can physically hold. It is <em>not</em> the pressure your car wants. Inflate to that number and you\'ve done exactly what she did.
             </p>
             <div className="bg-brand-dark text-white rounded-2xl p-6 mb-6 flex flex-col sm:flex-row gap-5 items-start">
               <div className="bg-brand-yellow/20 p-3 rounded-xl flex-shrink-0">
@@ -1036,7 +1036,7 @@ export const BLOG_POSTS: BlogPost[] = [
                 <ul className="space-y-2 text-sm text-white/85">
                   <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>The sticker inside your <strong>driver\'s-side door jamb</strong> (and your owner\'s manual) lists your car\'s recommended PSI.</span></li>
                   <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>For most cars and SUVs in the GTA, that\'s between <strong>30 and 35 PSI</strong>.</span></li>
-                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>Check them <strong>cold</strong> — before you\'ve driven — because driving heats the air and inflates the reading.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>Check them <strong>cold</strong>, before you\'ve driven, because driving heats the air and inflates the reading.</span></li>
                 </ul>
               </div>
             </div>
@@ -1055,7 +1055,7 @@ export const BLOG_POSTS: BlogPost[] = [
               Fayaz didn\'t just bleed the pressure down and walk off. He let each tire down to the exact number on her door jamb, then walked her through how to read it herself and how to use the gauge so she\'d never be guessing again. By the time he was done, she understood <em>why</em> 72 PSI was dangerous and exactly how to keep her tires right.
             </p>
             <p className="mb-4 text-gray-700">
-              Then he made sure she and her little one were safe to drive home — on four tires that would actually grip the road. No charge for the kindness, no catch. Just the right thing to do for a stranger who needed a hand.
+              Then he made sure she and her little one were safe to drive home, on four tires that would actually grip the road. No charge for the kindness, no catch. Just the right thing to do for a stranger who needed a hand.
             </p>
             <div className="bg-brand-dark/5 border border-brand-dark/10 rounded-xl p-5 flex gap-3">
               <ShieldCheck className="text-brand-dark flex-shrink-0 mt-0.5" size={22} />
@@ -1071,7 +1071,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-5 text-gray-700">
-              A couple of days later, Selena left us this on Google. We didn\'t ask for it — and it\'s the kind of thing that means the most:
+              A couple of days later, Selena left us this on Google. We didn\'t ask for it, and it\'s the kind of thing that means the most:
             </p>
             <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
               <div className="flex items-center justify-between mb-4">
@@ -1105,7 +1105,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Not sure what pressure your tires should be? Warning light glowing on the dash? A slow leak you keep topping up at the gas station? That\'s exactly what we do. {COMPANY_NAME} runs <strong>mobile tire service across Scarborough</strong> and the East GTA — we come to you, check and correct your pressure, repair or replace flat tires on-site, and reset your TPMS light before we leave. No tow, no waiting room.
+              Not sure what pressure your tires should be? Warning light glowing on the dash? A slow leak you keep topping up at the gas station? That\'s exactly what we do. {COMPANY_NAME} runs <strong>mobile tire service across Scarborough</strong> and the East GTA: we come to you, check and correct your pressure, repair or replace flat tires on-site, and reset your TPMS light before we leave. No tow, no waiting room.
             </p>
             <div className="grid sm:grid-cols-3 gap-3 mb-6">
               {[
@@ -1114,7 +1114,7 @@ export const BLOG_POSTS: BlogPost[] = [
                 { city: 'Ajax', note: 'Durham Region' },
                 { city: 'Whitby', note: 'Durham Region' },
                 { city: 'Oshawa', note: 'Hwy 401 & 407' },
-                { city: 'East GTA', note: '15–30 min ETA' },
+                { city: 'East GTA', note: '15 to 30 min ETA' },
               ].map(c => (
                 <div key={c.city} className="bg-brand-dark text-white p-4 rounded-xl text-center">
                   <p className="font-black text-brand-yellow">{c.city}</p>
@@ -1130,23 +1130,23 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     faqs: [
-      { question: 'What PSI should my tires be?', answer: 'Check the sticker inside your driver\'s-side door jamb or your owner\'s manual. Most cars and SUVs run between 30 and 35 PSI. Never use the maximum number on the tire sidewall as your target — that\'s the ceiling the tire can hold, not the pressure your car is designed for.' },
-      { question: 'Can overinflated tires explode or blow out?', answer: 'Yes. Significant over-inflation — like 72 PSI on a tire built for around 35 — makes the tire rigid and far more likely to blow out, especially in summer heat or at highway speed. Bring it back down to the recommended pressure as soon as you can.' },
+      { question: 'What PSI should my tires be?', answer: 'Check the sticker inside your driver\'s-side door jamb or your owner\'s manual. Most cars and SUVs run between 30 and 35 PSI. Never use the maximum number on the tire sidewall as your target. That\'s the ceiling the tire can hold, not the pressure your car is designed for.' },
+      { question: 'Can overinflated tires explode or blow out?', answer: 'Yes. Significant over-inflation, like 72 PSI on a tire built for around 35, makes the tire rigid and far more likely to blow out, especially in summer heat or at highway speed. Bring it back down to the recommended pressure as soon as you can.' },
       { question: 'Is it safe to drive with 70 PSI in my tires?', answer: 'No. That is roughly double the recommended pressure for most vehicles. It reduces grip, lengthens your stopping distance, and dramatically raises blowout risk. Let the tires down to the door-jamb spec before driving any real distance.' },
-      { question: 'Where can I get my tire pressure checked in Scarborough?', answer: 'iFAST offers mobile tire service across Scarborough and the East GTA — we come to your location to check and correct tire pressure, repair flats, and reset your TPMS light. Call +1 437-215-3468 and we typically arrive in 15–30 minutes.' },
-      { question: 'Does iFAST do mobile tire service in Scarborough?', answer: 'Yes. We cover Scarborough, Pickering, Ajax, Whitby, and Oshawa with on-site tire repair, replacement, pressure correction, and seasonal swaps — no tow required, typically arriving in 15–30 minutes.' },
+      { question: 'Where can I get my tire pressure checked in Scarborough?', answer: 'iFAST offers mobile tire service across Scarborough and the East GTA: we come to your location to check and correct tire pressure, repair flats, and reset your TPMS light. Call +1 437-215-3468 and we typically arrive in 15 to 30 minutes.' },
+      { question: 'Does iFAST do mobile tire service in Scarborough?', answer: 'Yes. We cover Scarborough, Pickering, Ajax, Whitby, and Oshawa with on-site tire repair, replacement, pressure correction, and seasonal swaps, no tow required, typically arriving in 15 to 30 minutes.' },
     ]
   },
 
   /* ============================================================
-     POST 6: DEAD BATTERY — BOOST OR REPLACE (2 A.M. CALL)
+     POST 6: DEAD BATTERY, BOOST OR REPLACE (2 A.M. CALL)
      ============================================================ */
   {
     slug: 'dead-car-battery-boost-or-replace-east-gta',
-    title: 'The 2 A.M. Phone Call: Does Your Dead Battery Need a Boost — or Is It Done?',
-    excerpt: 'A real customer called us at 2 a.m. because his car wouldn\'t start — we were there in 15 minutes. Here\'s the decision our technicians make in the first 30 seconds of every dead-battery call: boost it, or replace it. And how you can read the signs yourself.',
+    title: 'The 2 A.M. Phone Call: Does Your Dead Battery Need a Boost, or Is It Done?',
+    excerpt: 'A real customer called us at 2 a.m. because his car wouldn\'t start. We were there in 15 minutes. Here\'s the decision our technicians make in the first 30 seconds of every dead-battery call: boost it, or replace it. And how you can read the signs yourself.',
     seoTitle: 'Dead Car Battery: Boost or Replace? How the Pros Decide | iFAST East GTA',
-    seoDescription: 'Car won\'t start in Pickering, Ajax, Whitby, Oshawa or Scarborough? Learn how roadside technicians decide between a battery boost and a replacement — the sounds, the signs, and why winter boosts are sometimes just a band-aid. 24/7 mobile battery service.',
+    seoDescription: 'Car won\'t start in Pickering, Ajax, Whitby, Oshawa or Scarborough? Learn how roadside technicians decide between a battery boost and a replacement: the sounds, the signs, and why winter boosts are sometimes just a band-aid. 24/7 mobile battery service.',
     keywords: 'dead car battery, battery boost near me, boost or replace car battery, car won\'t start, battery boost service East GTA, jump start Scarborough, battery replacement Pickering, car battery dead winter Ontario, mobile battery service, 24 hour battery boost',
     category: 'Emergency Tips',
     publishDate: '2026-07-03',
@@ -1157,7 +1157,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         content: (
           <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
-            The phone rang at <strong>2 a.m.</strong> A driver, stranded — car completely dead, not going anywhere. Fifteen minutes later our technician was standing in front of his open hood. That call ended like most of them do: engine running, driver back on the road. But here's what most people never see — the <strong>30-second decision</strong> the technician makes before touching a single cable: <em>does this battery need a boost, or is it done?</em> Get that call wrong and you're stranded again on Thursday. This is how <strong>{COMPANY_NAME}</strong> actually makes it — and how you can read the same signs yourself.
+            The phone rang at <strong>2 a.m.</strong> A driver, stranded, car completely dead, not going anywhere. Fifteen minutes later our technician was standing in front of his open hood. That call ended like most of them do: engine running, driver back on the road. But here's what most people never see: the <strong>30-second decision</strong> the technician makes before touching a single cable: <em>does this battery need a boost, or is it done?</em> Get that call wrong and you're stranded again on Thursday. This is how <strong>{COMPANY_NAME}</strong> actually makes it, and how you can read the same signs yourself.
           </p>
         )
       },
@@ -1166,13 +1166,13 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Before we test anything, we ask you to turn the key one more time — because the sound your car makes is the first diagnostic. There are really only three sounds, and each one points somewhere different:
+              Before we test anything, we ask you to turn the key one more time, because the sound your car makes is the first diagnostic. There are really only three sounds, and each one points somewhere different:
             </p>
             <ol className="list-none space-y-4 mb-6">
               {[
-                { num: '01', title: 'Rapid clicking — like a machine gun', desc: 'The classic dead battery. There\'s enough power to snap the starter relay but not enough to turn the engine. Good news: this usually boosts cleanly.' },
-                { num: '02', title: 'A slow, groaning crank — "rrr… rrr… rrr"', desc: 'The battery is dying, not dead. It might catch this time — but a battery that groans on a mild day will not survive the next cold snap. This is the sound of a battery on borrowed time.' },
-                { num: '03', title: 'One click, or total silence', desc: 'Could be a deeply dead battery — or a corroded connection or a failed starter. This is where a technician who tests before boosting saves you from buying a battery you didn\'t need.' },
+                { num: '01', title: 'Rapid clicking, like a machine gun', desc: 'The classic dead battery. There\'s enough power to snap the starter relay but not enough to turn the engine. Good news: this usually boosts cleanly.' },
+                { num: '02', title: 'A slow, groaning crank: "rrr… rrr… rrr"', desc: 'The battery is dying, not dead. It might catch this time, but a battery that groans on a mild day will not survive the next cold snap. This is the sound of a battery on borrowed time.' },
+                { num: '03', title: 'One click, or total silence', desc: 'Could be a deeply dead battery, a corroded connection, or a failed starter. This is where a technician who tests before boosting saves you from buying a battery you didn\'t need.' },
               ].map(s => (
                 <li key={s.num} className="flex gap-4 bg-gray-50 p-4 rounded-xl">
                   <span className="text-3xl font-black text-brand-yellow/50 leading-none">{s.num}</span>
@@ -1194,7 +1194,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Here's the part that matters: <strong>a boost starts your car — it doesn't fix why it died.</strong> Sometimes the "why" is innocent. Sometimes the boost is just a band-aid on a battery that's already finished. This is the actual decision tree we run on your driveway:
+              Here's the part that matters: <strong>a boost starts your car. It doesn't fix why it died.</strong> Sometimes the "why" is innocent. Sometimes the boost is just a band-aid on a battery that's already finished. This is the actual decision tree we run on your driveway:
             </p>
             <div className="grid md:grid-cols-2 gap-5 mb-6">
               <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
@@ -1203,7 +1203,7 @@ export const BLOG_POSTS: BlogPost[] = [
                   <p className="font-black text-green-800">A boost is probably all you need if…</p>
                 </div>
                 <ul className="space-y-2 text-sm text-green-900">
-                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /><span>You left the headlights, an interior light, or the hazards on overnight — there's a clear, one-time reason it drained.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /><span>You left the headlights, an interior light, or the hazards on overnight, and there's a clear, one-time reason it drained.</span></li>
                   <li className="flex gap-2"><CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /><span>The battery is under about 3 years old.</span></li>
                   <li className="flex gap-2"><CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /><span>The car sat unused for a couple of weeks (batteries self-drain, especially with modern electronics sipping power).</span></li>
                   <li className="flex gap-2"><CheckCircle2 size={16} className="text-green-600 flex-shrink-0 mt-0.5" /><span>After the boost, it starts strong on its own the next morning.</span></li>
@@ -1216,9 +1216,9 @@ export const BLOG_POSTS: BlogPost[] = [
                 </div>
                 <ul className="space-y-2 text-sm text-red-900">
                   <li className="flex gap-2"><AlertTriangle size={16} className="text-red-600 flex-shrink-0 mt-0.5" /><span>This is your <strong>second boost in a month</strong>. A healthy battery doesn't need rescuing twice.</span></li>
-                  <li className="flex gap-2"><AlertTriangle size={16} className="text-red-600 flex-shrink-0 mt-0.5" /><span>It's 4–5+ years old. In our climate, that's a full career.</span></li>
-                  <li className="flex gap-2"><AlertTriangle size={16} className="text-red-600 flex-shrink-0 mt-0.5" /><span>It cranks slowly even on a warm afternoon — weak warm means dead cold.</span></li>
-                  <li className="flex gap-2"><AlertTriangle size={16} className="text-red-600 flex-shrink-0 mt-0.5" /><span>The case looks swollen or the terminals are heavily corroded — physical damage doesn't recover.</span></li>
+                  <li className="flex gap-2"><AlertTriangle size={16} className="text-red-600 flex-shrink-0 mt-0.5" /><span>It's 4 to 5+ years old. In our climate, that's a full career.</span></li>
+                  <li className="flex gap-2"><AlertTriangle size={16} className="text-red-600 flex-shrink-0 mt-0.5" /><span>It cranks slowly even on a warm afternoon: weak warm means dead cold.</span></li>
+                  <li className="flex gap-2"><AlertTriangle size={16} className="text-red-600 flex-shrink-0 mt-0.5" /><span>The case looks swollen or the terminals are heavily corroded, and physical damage doesn't recover.</span></li>
                 </ul>
               </div>
             </div>
@@ -1229,7 +1229,7 @@ export const BLOG_POSTS: BlogPost[] = [
               <div>
                 <p className="font-black text-brand-yellow mb-2">Why we test before we sell</p>
                 <p className="text-sm text-white/85">
-                  Our technicians carry a battery tester, and it runs <em>before</em> any recommendation. If the test says your battery is healthy and you just left a light on, you get a boost and a handshake — not a sales pitch. If it's genuinely failing, we can usually replace it on the spot so you're not doing this again next week.
+                  Our technicians carry a battery tester, and it runs <em>before</em> any recommendation. If the test says your battery is healthy and you just left a light on, you get a boost and a handshake, not a sales pitch. If it's genuinely failing, we can usually replace it on the spot so you're not doing this again next week.
                 </p>
               </div>
             </div>
@@ -1244,19 +1244,19 @@ export const BLOG_POSTS: BlogPost[] = [
               Here's the counterintuitive part: <strong>summer heat does the damage, winter just reveals it.</strong> Heat evaporates the electrolyte inside the battery and quietly corrodes the plates all summer long. Then the first −15°C morning arrives and two things happen at once:
             </p>
             <ul className="list-disc pl-6 space-y-3 mb-6 text-gray-700">
-              <li>A cold battery can only deliver a fraction of its normal cranking power — at −18°C, roughly <strong>half</strong> of what it delivers on a mild day.</li>
+              <li>A cold battery can only deliver a fraction of its normal cranking power, at −18°C roughly <strong>half</strong> of what it delivers on a mild day.</li>
               <li>Meanwhile the engine needs <em>more</em> power than usual to turn over, because the oil inside it has thickened like syrup.</li>
             </ul>
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-6">
               <div className="flex gap-3">
                 <Snowflake className="text-blue-500 flex-shrink-0 mt-0.5" size={20} />
                 <p className="text-blue-900 text-sm font-medium">
-                  Weaker supply meets bigger demand — that's why the first real cold snap of the year is our busiest morning for boost calls across Pickering, Ajax, Whitby, Oshawa, and Scarborough. The batteries didn't die that morning. They died in August. Nobody noticed until January.
+                  Weaker supply meets bigger demand. That's why the first real cold snap of the year is our busiest morning for boost calls across Pickering, Ajax, Whitby, Oshawa, and Scarborough. The batteries didn't die that morning. They died in August. Nobody noticed until January.
                 </p>
               </div>
             </div>
             <p className="text-gray-700 mb-4">
-              There's a third East GTA-specific killer: <strong>short commutes</strong>. If your daily drive is 10 minutes of stop-and-go, your alternator never fully recharges what the starter took out. The battery loses a little ground every day — until one morning there's nothing left to lose.
+              There's a third East GTA-specific killer: <strong>short commutes</strong>. If your daily drive is 10 minutes of stop-and-go, your alternator never fully recharges what the starter took out. The battery loses a little ground every day, until one morning there's nothing left to lose.
             </p>
             <BlogCTA source="blog_battery_mid1" />
           </>
@@ -1267,7 +1267,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-5 text-gray-700">
-              Not every dead battery is a 2 a.m. highway drama. Sometimes it's your mom, stuck in a parking lot, calling you because the car won't start and she doesn't know who to trust. This Google review — word for word — is exactly the situation:
+              Not every dead battery is a 2 a.m. highway drama. Sometimes it's your mom, stuck in a parking lot, calling you because the car won't start and she doesn't know who to trust. This Google review, word for word, is exactly the situation:
             </p>
             <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
               <div className="flex items-center justify-between mb-4">
@@ -1289,14 +1289,14 @@ export const BLOG_POSTS: BlogPost[] = [
                 {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
               </div>
               <p className="text-gray-700 leading-relaxed italic">
-                &ldquo;My mom had an issue with a car battery and was stuck in a parking lot—they got there quickly and were super helpful. They spoke us through possible solutions and were super transparent about how much they charge. Very reliable!&rdquo;
+                &ldquo;My mom had an issue with a car battery and was stuck in a parking lot. They got there quickly and were super helpful. They spoke us through possible solutions and were super transparent about how much they charge. Very reliable!&rdquo;
               </p>
             </div>
             <p className="text-gray-700 mb-4">
-              Notice what he highlights: not just speed, but that we <strong>talked the family through the options</strong> and were upfront about cost <em>before</em> doing the work. That's the boost-or-replace conversation, happening exactly the way it should — with you making the call, fully informed.
+              Notice what he highlights: not just speed, but that we <strong>talked the family through the options</strong> and were upfront about cost <em>before</em> doing the work. That's the boost-or-replace conversation, happening exactly the way it should, with you making the call, fully informed.
             </p>
             <p className="mb-1 text-gray-700">
-              And the 2 a.m. driver from the top of this story? His review, verbatim: <em>&ldquo;Called him around 2am and he arrived in 15 minutes&rdquo;</em> — that's oyindamola a., five stars. The clock doesn't decide whether we pick up. We're 24/7 because batteries don't die at convenient times.
+              And the 2 a.m. driver from the top of this story? His review, verbatim: <em>&ldquo;Called him around 2am and he arrived in 15 minutes&rdquo;</em>, that's oyindamola a., five stars. The clock doesn't decide whether we pick up. We're 24/7 because batteries don't die at convenient times.
             </p>
           </>
         )
@@ -1306,7 +1306,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              One call to {COMPANY_NAME} and a technician heads your way — driveway, parking lot, roadside, office garage. On arrival: we test the battery first, tell you honestly whether it's a <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">boost</a> or a <a href="/service/battery-replacement" className="text-brand-yellow font-bold hover:underline">replacement</a>, and do the work on the spot. No tow, no waiting room, no membership required.
+              One call to {COMPANY_NAME} and a technician heads your way: driveway, parking lot, roadside, office garage. On arrival: we test the battery first, tell you honestly whether it's a <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">boost</a> or a <a href="/service/battery-replacement" className="text-brand-yellow font-bold hover:underline">replacement</a>, and do the work on the spot. No tow, no waiting room, no membership required.
             </p>
             <div className="grid sm:grid-cols-3 gap-3 mb-6">
               {[
@@ -1315,7 +1315,7 @@ export const BLOG_POSTS: BlogPost[] = [
                 { city: 'Ajax', note: 'Durham Region' },
                 { city: 'Whitby', note: 'Durham Region' },
                 { city: 'Oshawa', note: 'Hwy 401 & 407' },
-                { city: 'East GTA', note: '15–30 min ETA' },
+                { city: 'East GTA', note: '15 to 30 min ETA' },
               ].map(c => (
                 <div key={c.city} className="bg-brand-dark text-white p-4 rounded-xl text-center">
                   <p className="font-black text-brand-yellow">{c.city}</p>
@@ -1329,24 +1329,24 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     faqs: [
-      { question: 'My car won\'t start — how do I know if it\'s the battery?', answer: 'Listen to the sound when you turn the key. Rapid clicking almost always means a dead battery. A slow, groaning crank means the battery is dying. One click or total silence could be the battery, a corroded connection, or the starter — which is why iFAST technicians test the battery before recommending anything.' },
-      { question: 'Should I boost my car battery or replace it?', answer: 'Boost it if there\'s a clear one-time cause (lights left on, car sat unused) and the battery is under about 3 years old. Replace it if this is your second boost in a month, the battery is 4–5+ years old, it cranks slowly even in warm weather, or the case is swollen. A boost starts the car — it doesn\'t fix a battery that\'s reached the end of its life.' },
-      { question: 'Do you really come out at 2 a.m. for a dead battery?', answer: 'Yes — iFAST runs 24/7 across Pickering, Ajax, Whitby, Oshawa, and Scarborough. One of our five-star reviews is from a driver who called around 2 a.m. and had a technician on site in 15 minutes.' },
-      { question: 'How long does a battery boost take?', answer: 'The boost itself takes a few minutes once we arrive, and we typically reach you in 15–30 minutes anywhere in the East GTA. We also test the battery so you know whether it will hold a charge or needs replacing soon.' },
+      { question: 'My car won\'t start. How do I know if it\'s the battery?', answer: 'Listen to the sound when you turn the key. Rapid clicking almost always means a dead battery. A slow, groaning crank means the battery is dying. One click or total silence could be the battery, a corroded connection, or the starter, which is why iFAST technicians test the battery before recommending anything.' },
+      { question: 'Should I boost my car battery or replace it?', answer: 'Boost it if there\'s a clear one-time cause (lights left on, car sat unused) and the battery is under about 3 years old. Replace it if this is your second boost in a month, the battery is 4 to 5+ years old, it cranks slowly even in warm weather, or the case is swollen. A boost starts the car. It doesn\'t fix a battery that\'s reached the end of its life.' },
+      { question: 'Do you really come out at 2 a.m. for a dead battery?', answer: 'Yes. iFAST runs 24/7 across Pickering, Ajax, Whitby, Oshawa, and Scarborough. One of our five-star reviews is from a driver who called around 2 a.m. and had a technician on site in 15 minutes.' },
+      { question: 'How long does a battery boost take?', answer: 'The boost itself takes a few minutes once we arrive, and we typically reach you in 15 to 30 minutes anywhere in the East GTA. We also test the battery so you know whether it will hold a charge or needs replacing soon.' },
       { question: 'Why did my car battery die in winter?', answer: 'Cold weather is usually the trigger, not the cause. Summer heat degrades the battery internally; then the first cold snap cuts its cranking power roughly in half while the engine demands more power to turn over thickened oil. Batteries that were quietly weakened all summer fail on the first −15°C morning.' },
-      { question: 'Will you tell me the price before doing the work?', answer: 'Yes. We walk you through what we found, your options, and the cost before any work starts — customers regularly mention our transparency in reviews. You decide, fully informed, before we touch the car.' },
+      { question: 'Will you tell me the price before doing the work?', answer: 'Yes. We walk you through what we found, your options, and the cost before any work starts. Customers regularly mention our transparency in reviews. You decide, fully informed, before we touch the car.' },
     ]
   },
 
   /* ============================================================
-     POST 7: CAR LOCKOUT — THE COAT HANGER'S TRUE COST
+     POST 7: CAR LOCKOUT (THE COAT HANGER'S TRUE COST)
      ============================================================ */
   {
     slug: 'locked-out-of-car-what-not-to-do-east-gta',
     title: 'Locked Out of Your Car? What That Coat Hanger Trick Actually Costs',
-    excerpt: 'YouTube says a coat hanger and two minutes will get you back in your car. Your door\'s weatherstripping, paint, and wiring say otherwise. Here\'s the damage math on DIY lockout tricks — and how a professional gets you in without leaving a mark.',
+    excerpt: 'YouTube says a coat hanger and two minutes will get you back in your car. Your door\'s weatherstripping, paint, and wiring say otherwise. Here\'s the damage math on DIY lockout tricks, and how a professional gets you in without leaving a mark.',
     seoTitle: 'Locked Out of Your Car? The Real Cost of DIY Tricks | iFAST East GTA Lockout Service',
-    seoDescription: 'Locked out of your car in Pickering, Ajax, Whitby, Oshawa or Scarborough? Before you try the coat hanger trick, read the damage math — torn seals, scratched paint, snagged wiring. 24/7 damage-free car lockout service, 15–30 min response.',
+    seoDescription: 'Locked out of your car in Pickering, Ajax, Whitby, Oshawa or Scarborough? Before you try the coat hanger trick, read the damage math: torn seals, scratched paint, snagged wiring. 24/7 damage-free car lockout service, 15 to 30 min response.',
     keywords: 'locked out of car, car lockout service, 24/7 car unlocking Toronto, unlock car door service, keys locked in car, keys locked in trunk, car lockout Scarborough, auto lockout East GTA, locked keys in car Pickering, car unlocking service near me',
     category: 'Emergency Tips',
     publishDate: '2026-07-03',
@@ -1357,7 +1357,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         content: (
           <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
-            You can see them. Right there. Your keys, sitting on the driver's seat, on the wrong side of a locked door. And somewhere in the back of your mind, a YouTube video is whispering: <em>coat hanger, two minutes, easy.</em> Before you straighten that hanger, here's the math nobody shows you in the video: the parts of your door you're about to fight with — the weatherstripping, the paint along the glass, the wiring inside the panel — cost <strong>many times more to repair than a professional lockout call costs</strong>. This is the damage math, from the people who open cars for a living across the East GTA.
+            You can see them. Right there. Your keys, sitting on the driver's seat, on the wrong side of a locked door. And somewhere in the back of your mind, a YouTube video is whispering: <em>coat hanger, two minutes, easy.</em> Before you straighten that hanger, here's the math nobody shows you in the video: the parts of your door you're about to fight with (the weatherstripping, the paint along the glass, the wiring inside the panel) cost <strong>many times more to repair than a professional lockout call costs</strong>. This is the damage math, from the people who open cars for a living across the East GTA.
           </p>
         )
       },
@@ -1370,10 +1370,10 @@ export const BLOG_POSTS: BlogPost[] = [
             </p>
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
               {[
-                { icon: '🧥', title: 'The coat hanger', desc: 'Slides down between the glass and the weatherstripping — tearing the rubber seal, scratching a line into the glass or paint, and snagging any wiring or linkage rods it finds inside the door.' },
+                { icon: '🧥', title: 'The coat hanger', desc: 'Slides down between the glass and the weatherstripping, tearing the rubber seal, scratching a line into the glass or paint, and snagging any wiring or linkage rods it finds inside the door.' },
                 { icon: '🚪', title: 'The wedge + rod', desc: 'Prying the door frame open far enough to reach in can permanently bend it. A bent frame never seals right again: wind noise at highway speed, water leaks in every rainstorm.' },
                 { icon: '🪛', title: 'The slim jim', desc: 'Made for cars from the 1990s. Modern doors pack airbag sensors, lock actuators, and wiring harnesses exactly where a slim jim slides. One wrong hook and you\'re into real electrical repair.' },
-                { icon: '🧱', title: 'The "just break the small window"', desc: 'The most honest trick — at least you know the cost up front. It\'s glass replacement, plus vacuuming cubes of glass out of your seats and vents for a month.' },
+                { icon: '🧱', title: 'The "just break the small window"', desc: 'The most honest trick: at least you know the cost up front. It\'s glass replacement, plus vacuuming cubes of glass out of your seats and vents for a month.' },
               ].map(r => (
                 <div key={r.title} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
                   <span className="text-2xl mb-2 block">{r.icon}</span>
@@ -1386,7 +1386,7 @@ export const BLOG_POSTS: BlogPost[] = [
               <div className="flex gap-3">
                 <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
                 <p className="text-amber-900 text-sm font-medium">
-                  The common thread: the repair bill for a torn seal, scratched panel, or snagged wire runs to <strong>hundreds of dollars</strong> — several professional lockout calls' worth — and that's if it goes <em>mostly</em> right. The video never shows attempt number four.
+                  The common thread: the repair bill for a torn seal, scratched panel, or snagged wire runs to <strong>hundreds of dollars</strong>, several professional lockout calls' worth, and that's if it goes <em>mostly</em> right. The video never shows attempt number four.
                 </p>
               </div>
             </div>
@@ -1398,12 +1398,12 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              The difference between DIY and professional isn't courage — it's purpose-built tools and repetition. Here's what actually happens when our technician reaches your car:
+              The difference between DIY and professional isn't courage. It's purpose-built tools and repetition. Here's what actually happens when our technician reaches your car:
             </p>
             <ol className="list-none space-y-4 mb-6">
               {[
-                { num: '01', title: 'A protective wedge goes in first', desc: 'An inflatable or soft-polymer wedge creates a small, controlled gap at the top of the door — spreading pressure evenly so nothing bends and no paint gets touched.' },
-                { num: '02', title: 'A long-reach tool does the finger-work', desc: 'A coated rod reaches through the gap to press the unlock button or lift the handle — the same motion your hand would make, just from outside.' },
+                { num: '01', title: 'A protective wedge goes in first', desc: 'An inflatable or soft-polymer wedge creates a small, controlled gap at the top of the door, spreading pressure evenly so nothing bends and no paint gets touched.' },
+                { num: '02', title: 'A long-reach tool does the finger-work', desc: 'A coated rod reaches through the gap to press the unlock button or lift the handle, the same motion your hand would make, just from outside.' },
                 { num: '03', title: 'The wedge comes out, the seal closes', desc: 'The door returns to exactly its original shape. No bent frame, no torn rubber, no evidence anyone was ever locked out.' },
               ].map(s => (
                 <li key={s.num} className="flex gap-4 bg-gray-50 p-4 rounded-xl">
@@ -1422,7 +1422,7 @@ export const BLOG_POSTS: BlogPost[] = [
               <div>
                 <p className="font-black text-brand-yellow mb-2">The whole thing usually takes minutes</p>
                 <p className="text-sm text-white/85">
-                  Most lockouts are open within minutes of our technician arriving — no drilling, no broken glass, no damage. Keyless and smart-key cars are opened the same careful way; the tech just targets the door's mechanical backup instead of the electronics.
+                  Most lockouts are open within minutes of our technician arriving, no drilling, no broken glass, no damage. Keyless and smart-key cars are opened the same careful way; the tech just targets the door's mechanical backup instead of the electronics.
                 </p>
               </div>
             </div>
@@ -1440,11 +1440,11 @@ export const BLOG_POSTS: BlogPost[] = [
               </li>
               <li className="bg-gray-50 p-5 rounded-xl">
                 <p className="font-bold text-brand-dark mb-1">🔥 Engine running in the driveway</p>
-                <p className="text-gray-600 text-sm">You started the car to warm it up, stepped out, and the door locked behind you. It's burning fuel and it's a theft magnet — call right away and stay with the vehicle until we arrive.</p>
+                <p className="text-gray-600 text-sm">You started the car to warm it up, stepped out, and the door locked behind you. It's burning fuel and it's a theft magnet, so call right away and stay with the vehicle until we arrive.</p>
               </li>
               <li className="bg-red-50 border border-red-200 p-5 rounded-xl">
                 <p className="font-bold text-red-800 mb-1">🚨 A child or pet locked inside</p>
-                <p className="text-red-900 text-sm"><strong>Call 911 first. Always.</strong> On a warm day the inside of a car heats to dangerous levels in minutes, and first responders will not hesitate to break a window — nor should you. Property is replaceable. Call us second, or don't call us at all: 911 comes first, every time.</p>
+                <p className="text-red-900 text-sm"><strong>Call 911 first. Always.</strong> On a warm day the inside of a car heats to dangerous levels in minutes, and first responders will not hesitate to break a window, nor should you. Property is replaceable. Call us second, or don't call us at all: 911 comes first, every time.</p>
               </li>
             </ul>
             <BlogCTA source="blog_lockout_mid1" />
@@ -1487,7 +1487,7 @@ export const BLOG_POSTS: BlogPost[] = [
               ))}
             </div>
             <p className="text-gray-700">
-              &ldquo;Fast&rdquo; and &ldquo;fair price&rdquo; — both reviews, independently. That's the whole promise: we get there quickly, open the car without damage, and the number we quote is the number you pay.
+              &ldquo;Fast&rdquo; and &ldquo;fair price&rdquo;: both reviews, independently. That's the whole promise: we get there quickly, open the car without damage, and the number we quote is the number you pay.
             </p>
           </>
         )
@@ -1497,7 +1497,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              {COMPANY_NAME} runs 24/7 <a href="/service/lockout" className="text-brand-yellow font-bold hover:underline">car lockout service</a> across the East GTA — no membership, no callback queue, no &ldquo;next available appointment Tuesday.&rdquo; A technician heads your way the moment you call, typically arriving in 15–30 minutes.
+              {COMPANY_NAME} runs 24/7 <a href="/service/lockout" className="text-brand-yellow font-bold hover:underline">car lockout service</a> across the East GTA: no membership, no callback queue, no &ldquo;next available appointment Tuesday.&rdquo; A technician heads your way the moment you call, typically arriving in 15 to 30 minutes.
             </p>
             <div className="grid sm:grid-cols-3 gap-3 mb-6">
               {[
@@ -1506,7 +1506,7 @@ export const BLOG_POSTS: BlogPost[] = [
                 { city: 'Ajax', note: 'Durham Region' },
                 { city: 'Whitby', note: 'Durham Region' },
                 { city: 'Oshawa', note: 'Hwy 401 & 407' },
-                { city: 'East GTA', note: '15–30 min ETA' },
+                { city: 'East GTA', note: '15 to 30 min ETA' },
               ].map(c => (
                 <div key={c.city} className="bg-brand-dark text-white p-4 rounded-xl text-center">
                   <p className="font-black text-brand-yellow">{c.city}</p>
@@ -1520,24 +1520,24 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     faqs: [
-      { question: 'I\'m locked out of my car — how fast can you get here?', answer: 'iFAST typically arrives in 15–30 minutes anywhere in Pickering, Ajax, Whitby, Oshawa, or Scarborough, 24/7. Customers describe it as "fast" and "there in a flash" in their Google reviews.' },
-      { question: 'Will unlocking my car damage the door or paint?', answer: 'No. Professional lockout tools — a protective wedge and a coated long-reach tool — open the door without bending the frame, tearing the weatherstripping, or touching the paint. That\'s the key difference from DIY tricks like coat hangers and slim jims, which regularly cause hundreds of dollars in damage.' },
-      { question: 'My keys are locked in the trunk — can you still get them?', answer: 'Yes. On most modern vehicles, once the cabin is open we can reach the keys through the interior trunk release or the folding rear seats. One damage-free unlock solves the whole problem.' },
-      { question: 'What should I do if my child or pet is locked in the car?', answer: 'Call 911 first — always. A car\'s interior heats to dangerous temperatures within minutes on a warm day, and first responders will break a window if needed, which is exactly the right call. Property is replaceable.' },
-      { question: 'Can you unlock keyless and smart-key cars?', answer: 'Yes. Push-button-start and keyless vehicles are opened the same careful, damage-free way — the technician works with the door\'s mechanical mechanism rather than the electronics.' },
-      { question: 'How much does a car lockout service cost in the East GTA?', answer: 'We quote you the price up front on the phone before a technician is dispatched, and the number we quote is the number you pay. Reviewers consistently describe our lockout pricing as "fair" and "genuine rates" — and it\'s a fraction of what repairing coat-hanger damage costs.' },
+      { question: 'I\'m locked out of my car. How fast can you get here?', answer: 'iFAST typically arrives in 15 to 30 minutes anywhere in Pickering, Ajax, Whitby, Oshawa, or Scarborough, 24/7. Customers describe it as "fast" and "there in a flash" in their Google reviews.' },
+      { question: 'Will unlocking my car damage the door or paint?', answer: 'No. Professional lockout tools (a protective wedge and a coated long-reach tool) open the door without bending the frame, tearing the weatherstripping, or touching the paint. That\'s the key difference from DIY tricks like coat hangers and slim jims, which regularly cause hundreds of dollars in damage.' },
+      { question: 'My keys are locked in the trunk. Can you still get them?', answer: 'Yes. On most modern vehicles, once the cabin is open we can reach the keys through the interior trunk release or the folding rear seats. One damage-free unlock solves the whole problem.' },
+      { question: 'What should I do if my child or pet is locked in the car?', answer: 'Call 911 first, always. A car\'s interior heats to dangerous temperatures within minutes on a warm day, and first responders will break a window if needed, which is exactly the right call. Property is replaceable.' },
+      { question: 'Can you unlock keyless and smart-key cars?', answer: 'Yes. Push-button-start and keyless vehicles are opened the same careful, damage-free way, the technician works with the door\'s mechanical mechanism rather than the electronics.' },
+      { question: 'How much does a car lockout service cost in the East GTA?', answer: 'We quote you the price up front on the phone before a technician is dispatched, and the number we quote is the number you pay. Reviewers consistently describe our lockout pricing as "fair" and "genuine rates," and it\'s a fraction of what repairing coat-hanger damage costs.' },
     ]
   },
 
   /* ============================================================
-     POST 8: TIRE PATCH AT PORT UNION & KINGSTON — SCARBOROUGH CUSTOMER STORY
+     POST 8: TIRE PATCH AT PORT UNION & KINGSTON (SCARBOROUGH CUSTOMER STORY)
      ============================================================ */
   {
     slug: 'tire-patch-repair-scarborough',
     title: 'Flat Tire at Port Union & Kingston: The On-the-Spot Tire Patch That Got a Scarborough Driver Rolling Again',
-    excerpt: 'A driver picked up a puncture near Port Union and Kingston Road in Scarborough. Instead of a tow truck and a lost afternoon, one call brought the tire shop to him — the flat was found, patched, and back on the road in no time. Here is the real story, plus how to know if your own flat can be patched.',
-    seoTitle: 'Tire Patch Scarborough | Mobile Flat Tire Repair at Port Union & Kingston Rd — iFAST',
-    seoDescription: 'Flat tire in Scarborough? This driver got a puncture near Port Union & Kingston Rd — iFAST arrived fast and patched it on the spot, no tow needed. Learn when a tire can be patched vs replaced, and how mobile tire patch service works across the East GTA.',
+    excerpt: 'A driver picked up a puncture near Port Union and Kingston Road in Scarborough. Instead of a tow truck and a lost afternoon, one call brought the tire shop to him: the flat was found, patched, and back on the road in no time. Here is the real story, plus how to know if your own flat can be patched.',
+    seoTitle: 'Tire Patch Scarborough | Mobile Flat Tire Repair at Port Union & Kingston Rd | iFAST',
+    seoDescription: 'Flat tire in Scarborough? This driver got a puncture near Port Union & Kingston Rd, and iFAST arrived fast and patched it on the spot, no tow needed. Learn when a tire can be patched vs replaced, and how mobile tire patch service works across the East GTA.',
     keywords: 'tire patch Scarborough, tire patch near me, mobile tire repair Scarborough, flat tire repair Port Union, tire puncture repair Scarborough, can my tire be patched, tire patch or replace, mobile tire patch service, flat tire help East GTA, tire repair Kingston Rd Scarborough',
     category: 'Emergency Tips',
     publishDate: '2026-07-03',
@@ -1549,7 +1549,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="text-xl text-gray-600 font-medium leading-relaxed mb-6">
-              A flat tire near <strong>Port Union Road and Kingston Road in Scarborough</strong> usually means one of two bad afternoons: wrestling a spare on the shoulder of a busy road, or waiting on a tow to a shop. Kuruvilla Abraham got a third kind — he made one call to <strong>{COMPANY_NAME}</strong>, and the tire was patched on the spot.
+              A flat tire near <strong>Port Union Road and Kingston Road in Scarborough</strong> usually means one of two bad afternoons: wrestling a spare on the shoulder of a busy road, or waiting on a tow to a shop. Kuruvilla Abraham got a third kind: he made one call to <strong>{COMPANY_NAME}</strong>, and the tire was patched on the spot.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200 mb-6">
               {[
@@ -1576,7 +1576,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              The call came in from the Port Union and Kingston Road intersection — the busy east Scarborough corridor where West Hill meets the 401. A technician was dispatched immediately and, in Kuruvilla&rsquo;s own words, came in a short time.
+              The call came in from the Port Union and Kingston Road intersection, the busy east Scarborough corridor where West Hill meets the 401. A technician was dispatched immediately and, in Kuruvilla&rsquo;s own words, came in a short time.
             </p>
             <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
               <iframe
@@ -1588,27 +1588,27 @@ export const BLOG_POSTS: BlogPost[] = [
                 allowFullScreen
               />
               <p className="text-xs text-gray-500 text-center py-2 px-3 bg-gray-50">
-                Port Union Rd &amp; Kingston Rd, Scarborough — where this mobile tire patch happened
+                Port Union Rd &amp; Kingston Rd, Scarborough: where this mobile tire patch happened
               </p>
             </div>
             <p className="mb-4 text-gray-700">
-              On-site, the repair followed the same process we use on every patchable flat: find the puncture, confirm it sits in the tread and is small enough to repair safely, then seal it properly and get the pressure back to the number on the door jamb — not just &ldquo;looks about right.&rdquo;
+              On-site, the repair followed the same process we use on every patchable flat: find the puncture, confirm it sits in the tread and is small enough to repair safely, then seal it properly and get the pressure back to the number on the door jamb, not just &ldquo;looks about right.&rdquo;
             </p>
             <div className="bg-brand-dark text-white rounded-2xl p-6 mb-6 flex flex-col sm:flex-row gap-5 items-start">
               <div className="bg-brand-yellow/20 p-3 rounded-xl flex-shrink-0">
                 <ShieldCheck className="text-brand-yellow" size={28} />
               </div>
               <div>
-                <p className="font-black text-brand-yellow mb-2">Patch vs. plug — why it matters</p>
+                <p className="font-black text-brand-yellow mb-2">Patch vs. plug: why it matters</p>
                 <ul className="space-y-2 text-sm text-white/85">
-                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>A <strong>string plug</strong> jammed in from the outside is a roadside band-aid — fine to limp to a shop, not a permanent fix.</span></li>
-                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>A <strong>proper patch</strong> seals the puncture and restores the tire&rsquo;s inner liner — the repair tire makers and safety standards actually endorse.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>A <strong>string plug</strong> jammed in from the outside is a roadside band-aid, fine to limp to a shop, not a permanent fix.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>A <strong>proper patch</strong> seals the puncture and restores the tire&rsquo;s inner liner, the repair method tire makers and safety standards actually endorse.</span></li>
                   <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span>Done right, a patched tire runs out the rest of its normal life. You should never have to think about that puncture again.</span></li>
                 </ul>
               </div>
             </div>
             <p className="text-gray-700">
-              Minutes later, Kuruvilla was back on the road on his own tire — no spare, no tow, no shop visit. That is the entire point of <a href="/service/flat-tire-repair" className="text-brand-yellow font-bold hover:underline">mobile flat tire repair</a>: the shop comes to you.
+              Minutes later, Kuruvilla was back on the road on his own tire, no spare, no tow, no shop visit. That is the entire point of <a href="/service/flat-tire-repair" className="text-brand-yellow font-bold hover:underline">mobile flat tire repair</a>: the shop comes to you.
             </p>
           </>
         )
@@ -1618,7 +1618,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-5 text-gray-700">
-              After the repair, Kuruvilla left us this on Google — along with a photo he took of our mobile tire unit at the scene:
+              After the repair, Kuruvilla left us this on Google, along with a photo he took of our mobile tire unit at the scene:
             </p>
             <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
               <div className="flex items-center justify-between mb-4">
@@ -1644,7 +1644,7 @@ export const BLOG_POSTS: BlogPost[] = [
               </p>
             </div>
             <p className="text-gray-700 mb-4">
-              Eight words. That is what good roadside service should look like from the driver&rsquo;s side — nothing dramatic to report, because the problem simply got handled.
+              Eight words. That is what good roadside service should look like from the driver&rsquo;s side: nothing dramatic to report, because the problem simply got handled.
             </p>
             <div className="text-center mb-6">
               <a
@@ -1665,13 +1665,13 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Kuruvilla&rsquo;s flat could be patched — but how do you know if yours can? Not every flat means a new tire; far from it. Most punctures picked up on GTA roads are small nails and screws sitting in the tread, and a properly patched tire is a <strong>permanent repair</strong> for that puncture. Here is the quick rule of thumb our technicians use:
+              Kuruvilla&rsquo;s flat could be patched. But how do you know if yours can? Not every flat means a new tire; far from it. Most punctures picked up on GTA roads are small nails and screws sitting in the tread, and a properly patched tire is a <strong>permanent repair</strong> for that puncture. Here is the quick rule of thumb our technicians use:
             </p>
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
               {[
-                { icon: '✅', title: 'Puncture in the tread', desc: 'A nail or screw in the flat face of the tire — the part that touches the road — is patch territory. This is the most common flat we see, and it is exactly what we fixed at Port Union.' },
+                { icon: '✅', title: 'Puncture in the tread', desc: 'A nail or screw in the flat face of the tire (the part that touches the road) is patch territory. This is the most common flat we see, and it is exactly what we fixed at Port Union.' },
                 { icon: '✅', title: 'Hole under 6 mm', desc: 'Roughly the diameter of a pencil. Standard nails and screws fall well inside this limit, which is why most punctures are repairable.' },
-                { icon: '❌', title: 'Sidewall or shoulder damage', desc: 'The sidewall flexes with every rotation — no patch can hold there safely. A sidewall puncture, bubble, or gash means the tire is done.' },
+                { icon: '❌', title: 'Sidewall or shoulder damage', desc: 'The sidewall flexes with every rotation, so no patch can hold there safely. A sidewall puncture, bubble, or gash means the tire is done.' },
                 { icon: '❌', title: 'Driven flat for a distance', desc: 'Driving on a fully flat tire grinds and overheats the internal structure. Even a small puncture can become an unrepairable tire if the car kept rolling on it.' },
               ].map(r => (
                 <div key={r.title} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
@@ -1685,7 +1685,7 @@ export const BLOG_POSTS: BlogPost[] = [
               <div className="flex gap-3">
                 <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
                 <p className="text-amber-900 text-sm font-medium">
-                  Losing air? Pull over somewhere safe and stop driving on it. The single biggest thing that turns a $40 fix into a full tire replacement is rolling on a flat — the tire destroys itself from the inside in a couple of kilometres.
+                  Losing air? Pull over somewhere safe and stop driving on it. The single biggest thing that turns a $40 fix into a full tire replacement is rolling on a flat: the tire destroys itself from the inside in a couple of kilometres.
                 </p>
               </div>
             </div>
@@ -1698,10 +1698,10 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              One more detail from this call-out worth sharing: before we left, Kuruvilla kept our number — his tires are getting on in kilometres, and when the time comes to replace them he wants the same thing to happen: <strong>the tire shop comes to him</strong>. That is our <a href="/service/tire-installation" className="text-brand-yellow font-bold hover:underline">mobile tire installation</a> service — we source the right tires for your vehicle, bring them to your driveway or workplace, and install them on-site.
+              One more detail from this call-out worth sharing: before we left, Kuruvilla kept our number: his tires are getting on in kilometres, and when the time comes to replace them he wants the same thing to happen: <strong>the tire shop comes to him</strong>. That is our <a href="/service/tire-installation" className="text-brand-yellow font-bold hover:underline">mobile tire installation</a> service: we source the right tires for your vehicle, bring them to your driveway or workplace, and install them on-site.
             </p>
             <p className="mb-4 text-gray-700">
-              A patch and a plan. The patch fixes today&rsquo;s puncture permanently; knowing who to call means the next tire problem — flat, seasonal swap, or full replacement — never costs you a day at a shop counter.
+              A patch and a plan. The patch fixes today&rsquo;s puncture permanently; knowing who to call means the next tire problem (flat, seasonal swap, or full replacement) never costs you a day at a shop counter.
             </p>
           </>
         )
@@ -1711,7 +1711,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Nail in your tire? Slow leak you keep topping up? Flat in a parking lot? {COMPANY_NAME} runs <strong>24/7 mobile tire patch and flat repair across Scarborough</strong> — Port Union, West Hill, Kingston Road, the 401 corridor — and the whole East GTA. We come to you, repair the tire on-site when it is safe to do so, and get you rolling in a single visit.
+              Nail in your tire? Slow leak you keep topping up? Flat in a parking lot? {COMPANY_NAME} runs <strong>24/7 mobile tire patch and flat repair across Scarborough</strong> (Port Union, West Hill, Kingston Road, the 401 corridor) and the whole East GTA. We come to you, repair the tire on-site when it is safe to do so, and get you rolling in a single visit.
             </p>
             <div className="grid sm:grid-cols-3 gap-3 mb-6">
               {[
@@ -1720,7 +1720,7 @@ export const BLOG_POSTS: BlogPost[] = [
                 { city: 'Ajax', note: 'Durham Region' },
                 { city: 'Whitby', note: 'Durham Region' },
                 { city: 'Oshawa', note: 'Hwy 401 & 407' },
-                { city: 'East GTA', note: '15–30 min ETA' },
+                { city: 'East GTA', note: '15 to 30 min ETA' },
               ].map(c => (
                 <div key={c.city} className="bg-brand-dark text-white p-4 rounded-xl text-center">
                   <p className="font-black text-brand-yellow">{c.city}</p>
@@ -1729,7 +1729,7 @@ export const BLOG_POSTS: BlogPost[] = [
               ))}
             </div>
             <p className="text-gray-700">
-              And if the tire is beyond saving, we handle that too — <a href="/service/spare-tire-change" className="text-brand-yellow font-bold hover:underline">spare tire changes</a> on the spot, or <a href="/service/tire-installation" className="text-brand-yellow font-bold hover:underline">new tires delivered and installed</a> at your location.
+              And if the tire is beyond saving, we handle that too: <a href="/service/spare-tire-change" className="text-brand-yellow font-bold hover:underline">spare tire changes</a> on the spot, or <a href="/service/tire-installation" className="text-brand-yellow font-bold hover:underline">new tires delivered and installed</a> at your location.
             </p>
             <BlogCTA source="blog_tirepatch_mid2" />
           </>
@@ -1737,24 +1737,24 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     faqs: [
-      { question: 'Can a punctured tire be patched?', answer: 'Usually, yes. If the puncture is in the tread (the flat part that touches the road), is smaller than about 6 mm — a standard nail or screw — and the tire wasn\'t driven on while flat, a proper patch is a safe, permanent repair. Sidewall damage or a puncture on the tire\'s shoulder cannot be patched safely and means replacement.' },
-      { question: 'How long does a mobile tire patch take in Scarborough?', answer: 'iFAST typically arrives in 15–30 minutes anywhere in Scarborough and the East GTA, and the patch itself usually takes about 30 minutes on-site. Most drivers are back on the road within the hour — like our customer at Port Union and Kingston Rd.' },
+      { question: 'Can a punctured tire be patched?', answer: 'Usually, yes. If the puncture is in the tread (the flat part that touches the road), is smaller than about 6 mm (a standard nail or screw) and the tire wasn\'t driven on while flat, a proper patch is a safe, permanent repair. Sidewall damage or a puncture on the tire\'s shoulder cannot be patched safely and means replacement.' },
+      { question: 'How long does a mobile tire patch take in Scarborough?', answer: 'iFAST typically arrives in 15 to 30 minutes anywhere in Scarborough and the East GTA, and the patch itself usually takes about 30 minutes on-site. Most drivers are back on the road within the hour, like our customer at Port Union and Kingston Rd.' },
       { question: 'Is a patched tire safe to drive on?', answer: 'Yes. A professional patch seals the puncture and restores the tire\'s inner liner, and is considered a permanent repair for that puncture. A patched tire done right will safely run out the rest of its normal tread life.' },
-      { question: 'What\'s the difference between a tire patch and a plug?', answer: 'A string plug is pushed into the hole from the outside — it\'s a temporary roadside fix, good enough to get you to a proper repair. A patch seals the puncture from inside the tire, which is the repair method tire manufacturers endorse as permanent. iFAST repairs flats properly so you don\'t have to think about that puncture again.' },
-      { question: 'Do you come to my location for a flat tire in Scarborough?', answer: 'Yes. iFAST is a mobile service — we patch and repair flat tires at your home, workplace, parking lot, or roadside across Scarborough (including Port Union, West Hill, and the Kingston Rd corridor), Pickering, Ajax, Whitby, and Oshawa, 24/7. Call +1 437-215-3468.' },
-      { question: 'What if my tire can\'t be patched?', answer: 'If the damage is in the sidewall, too large, or the tire was driven flat, we\'ll tell you straight and give you options on the spot: install your spare so you\'re mobile again, or arrange mobile tire installation — we source new tires and install them at your location, no shop visit needed.' },
+      { question: 'What\'s the difference between a tire patch and a plug?', answer: 'A string plug is pushed into the hole from the outside: it\'s a temporary roadside fix, good enough to get you to a proper repair. A patch seals the puncture from inside the tire, which is the repair method tire manufacturers endorse as permanent. iFAST repairs flats properly so you don\'t have to think about that puncture again.' },
+      { question: 'Do you come to my location for a flat tire in Scarborough?', answer: 'Yes. iFAST is a mobile service: we patch and repair flat tires at your home, workplace, parking lot, or roadside across Scarborough (including Port Union, West Hill, and the Kingston Rd corridor), Pickering, Ajax, Whitby, and Oshawa, 24/7. Call +1 437-215-3468.' },
+      { question: 'What if my tire can\'t be patched?', answer: 'If the damage is in the sidewall, too large, or the tire was driven flat, we\'ll tell you straight and give you options on the spot: install your spare so you\'re mobile again, or arrange mobile tire installation: we source new tires and install them at your location, no shop visit needed.' },
     ]
   },
 
   /* ============================================================
-     POST 9: BATTERY BOOST IN AJAX (CUSTOMER STORY — SREE V GOPI)
+     POST 9: BATTERY BOOST IN AJAX (CUSTOMER STORY, SREE V GOPI)
      ============================================================ */
   {
     slug: 'battery-boost-ajax',
     title: 'Dead Battery at Taunton & Salem: The Ajax Boost Call That Turned Into a Driveway Battery Replacement',
-    excerpt: 'A driver\'s battery died near Taunton and Salem in Ajax. One call brought a boost to his car, honest advice with zero pressure — and later that same day, he called back to have a new battery installed in his own driveway. Here is the real story, plus how to tell if your battery needs a boost or a replacement.',
-    seoTitle: 'Battery Boost Ajax | 24/7 Car Jump Start at Taunton & Salem — iFAST',
-    seoDescription: 'Dead battery in Ajax? This driver got stranded near Taunton Rd & Salem Rd — iFAST boosted his car on the spot, then replaced his battery at home the same day. Learn when a boost is enough vs when your battery is done, and how mobile battery service works across the East GTA.',
+    excerpt: 'A driver\'s battery died near Taunton and Salem in Ajax. One call brought a boost to his car, honest advice with zero pressure, and later that same day, he called back to have a new battery installed in his own driveway. Here is the real story, plus how to tell if your battery needs a boost or a replacement.',
+    seoTitle: 'Battery Boost Ajax | 24/7 Car Jump Start at Taunton & Salem | iFAST',
+    seoDescription: 'Dead battery in Ajax? This driver got stranded near Taunton Rd & Salem Rd, and iFAST boosted his car on the spot, then replaced his battery at home the same day. Learn when a boost is enough vs when your battery is done, and how mobile battery service works across the East GTA.',
     keywords: 'battery boost Ajax, car jump start Ajax, dead battery Ajax, jump start near me, mobile battery replacement Ajax, battery boost Taunton Salem, car won\'t start Ajax, battery replacement at home Ajax, 24/7 jump start Durham Region, roadside assistance Ajax',
     category: 'Emergency Tips',
     publishDate: '2026-07-04',
@@ -1766,7 +1766,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="text-xl text-gray-600 font-medium leading-relaxed mb-6">
-              A dead battery near <strong>Taunton Road and Salem Road in Ajax</strong> means you're not going anywhere — no crank, no dash lights, no plan. Sree V Gopi made one call to <strong>{COMPANY_NAME}</strong>, got boosted on the spot, and was driving again in minutes. Then came the part we're most proud of: later that same day, he called back — this time to his house.
+              A dead battery near <strong>Taunton Road and Salem Road in Ajax</strong> means you're not going anywhere: no crank, no dash lights, no plan. Sree V Gopi made one call to <strong>{COMPANY_NAME}</strong>, got boosted on the spot, and was driving again in minutes. Then came the part we're most proud of: later that same day, he called back, this time to his house.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200 mb-6">
               {[
@@ -1783,7 +1783,7 @@ export const BLOG_POSTS: BlogPost[] = [
               ))}
             </div>
             <p className="mb-4 text-gray-700">
-              Here is what happened on that call-out, the review Sree left afterwards, and how to tell whether your own battery needs a quick boost — or has reached the end of the road.
+              Here is what happened on that call-out, the review Sree left afterwards, and how to tell whether your own battery needs a quick boost, or has reached the end of the road.
             </p>
           </>
         )
@@ -1793,7 +1793,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              The call came in from the Taunton and Salem intersection in north Ajax — a battery that had given up and a driver who needed to get moving. A technician was dispatched right away, hooked up a surge-protected booster pack, and had the engine running shortly after arriving.
+              The call came in from the Taunton and Salem intersection in north Ajax, a battery that had given up and a driver who needed to get moving. A technician was dispatched right away, hooked up a surge-protected booster pack, and had the engine running shortly after arriving.
             </p>
             <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
               <iframe
@@ -1805,27 +1805,27 @@ export const BLOG_POSTS: BlogPost[] = [
                 allowFullScreen
               />
               <p className="text-xs text-gray-500 text-center py-2 px-3 bg-gray-50">
-                Taunton Rd &amp; Salem Rd, Ajax — where this battery boost happened
+                Taunton Rd &amp; Salem Rd, Ajax: where this battery boost happened
               </p>
             </div>
             <p className="mb-4 text-gray-700">
-              But a boost only gets you started — it doesn't tell you <em>why</em> the battery died. So before leaving, our technician gave Sree the straight version of what he was looking at:
+              But a boost only gets you started. It doesn't tell you <em>why</em> the battery died. So before leaving, our technician gave Sree the straight version of what he was looking at:
             </p>
             <div className="bg-brand-dark text-white rounded-2xl p-6 mb-6 flex flex-col sm:flex-row gap-5 items-start">
               <div className="bg-brand-yellow/20 p-3 rounded-xl flex-shrink-0">
                 <ShieldCheck className="text-brand-yellow" size={28} />
               </div>
               <div>
-                <p className="font-black text-brand-yellow mb-2">The advice we gave — no pressure attached</p>
+                <p className="font-black text-brand-yellow mb-2">The advice we gave: no pressure attached</p>
                 <ul className="space-y-2 text-sm text-white/85">
-                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>For right now:</strong> drive for 30 minutes straight, or let the engine run for about 45 — that gives the alternator time to put a real charge back into the battery.</span></li>
-                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>For soon:</strong> the battery is on its way out and will need replacing. If you can do it now, great — if not, it doesn't have to happen today.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>For right now:</strong> drive for 30 minutes straight, or let the engine run for about 45, which gives the alternator time to put a real charge back into the battery.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>For soon:</strong> the battery is on its way out and will need replacing. If you can do it now, great. If not, it doesn't have to happen today.</span></li>
                   <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>No upsell, no scare tactics.</strong> Just what the battery actually needs, so the driver can decide on his own schedule and budget.</span></li>
                 </ul>
               </div>
             </div>
             <p className="text-gray-700">
-              Minutes after the call, Sree was back on the road — no tow, no waiting on a friend with cables. That is exactly what our <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">24/7 battery jump start service</a> is built for.
+              Minutes after the call, Sree was back on the road, no tow, no waiting on a friend with cables. That is exactly what our <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">24/7 battery jump start service</a> is built for.
             </p>
           </>
         )
@@ -1878,17 +1878,17 @@ export const BLOG_POSTS: BlogPost[] = [
         )
       },
       {
-        heading: 'Will a Boost Fix It — or Is Your Battery Done?',
+        heading: 'Will a Boost Fix It, or Is Your Battery Done?',
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Sree's car started with one boost — but his battery still needed replacing. That combination confuses a lot of drivers, so here is the honest breakdown. A boost solves a <strong>charge</strong> problem: lights left on, a long stretch of short trips, a car that sat for weeks. It cannot solve a <strong>battery</strong> problem: an aging battery that no longer holds the charge your alternator gives it. The quick signs our technicians look for:
+              Sree's car started with one boost. But his battery still needed replacing. That combination confuses a lot of drivers, so here is the honest breakdown. A boost solves a <strong>charge</strong> problem: lights left on, a long stretch of short trips, a car that sat for weeks. It cannot solve a <strong>battery</strong> problem: an aging battery that no longer holds the charge your alternator gives it. The quick signs our technicians look for:
             </p>
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
               {[
-                { icon: '✅', title: 'One-off cause, healthy battery', desc: 'Dome light left on, doors not fully closed, a week of 5-minute drives. A boost plus a proper 30–45 minute recharge usually ends the story.' },
-                { icon: '✅', title: 'Battery under 3–4 years old', desc: 'Most car batteries live 3–5 years in Ontario. A younger battery that dies once from a known cause is normally fine after a boost.' },
-                { icon: '❌', title: 'Slow crank, dim lights, repeat boosts', desc: 'If the engine cranks slower every week or this is your second boost this month, the battery is no longer holding charge — replacement territory.' },
+                { icon: '✅', title: 'One-off cause, healthy battery', desc: 'Dome light left on, doors not fully closed, a week of 5-minute drives. A boost plus a proper 30 to 45 minute recharge usually ends the story.' },
+                { icon: '✅', title: 'Battery under 3 to 4 years old', desc: 'Most car batteries live 3 to 5 years in Ontario. A younger battery that dies once from a known cause is normally fine after a boost.' },
+                { icon: '❌', title: 'Slow crank, dim lights, repeat boosts', desc: 'If the engine cranks slower every week or this is your second boost this month, the battery is no longer holding charge: replacement territory.' },
                 { icon: '❌', title: '4+ Ontario winters on the clock', desc: 'Deep cold kills weak batteries. A battery heading into its fifth winter that already needed a boost is living on borrowed time.' },
               ].map(r => (
                 <div key={r.title} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
@@ -1902,7 +1902,7 @@ export const BLOG_POSTS: BlogPost[] = [
               <div className="flex gap-3">
                 <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
                 <p className="text-amber-900 text-sm font-medium">
-                  After any boost, don't just drive around the corner and park. The battery needs 30+ minutes of continuous driving to take on real charge — shut the engine off too early and you'll be calling for another boost tomorrow morning.
+                  After any boost, don't just drive around the corner and park. The battery needs 30+ minutes of continuous driving to take on real charge. Shut the engine off too early and you'll be calling for another boost tomorrow morning.
                 </p>
               </div>
             </div>
@@ -1915,10 +1915,10 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Here is the part of this story we like best. Remember the advice at the roadside — <em>the battery will need replacing, but it doesn't have to be today</em>? Later that same day, Sree called back: &ldquo;I think you should change my battery before it goes bad.&rdquo; No breakdown this time, no stress — just a driver getting ahead of the next one.
+              Here is the part of this story we like best. Remember the advice at the roadside: <em>the battery will need replacing, but it doesn't have to be today</em>? Later that same day, Sree called back: &ldquo;I think you should change my battery before it goes bad.&rdquo; No breakdown this time, no stress, just a driver getting ahead of the next one.
             </p>
             <p className="mb-4 text-gray-700">
-              So we came to his house in Ajax and did the <a href="/service/battery-replacement" className="text-brand-yellow font-bold hover:underline">battery replacement</a> right in his driveway — correct battery for his vehicle, installed on-site, old battery taken away for recycling, and a <strong>two-year warranty</strong> on the new one. Total shop visits required: zero.
+              So we came to his house in Ajax and did the <a href="/service/battery-replacement" className="text-brand-yellow font-bold hover:underline">battery replacement</a> right in his driveway: correct battery for his vehicle, installed on-site, old battery taken away for recycling, and a <strong>two-year warranty</strong> on the new one. Total shop visits required: zero.
             </p>
             <p className="mb-4 text-gray-700">
               That is the pattern we see all the time: the boost handles today's emergency, and because nobody pressured him at the roadside, the customer comes back on his own terms for the permanent fix.
@@ -1931,7 +1931,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Car won't start in a driveway, a commuter lot, or on the side of Taunton Road? {COMPANY_NAME} runs <strong>24/7 battery boost and jump start service across Ajax</strong> — Taunton, Salem, Westney, the 401 corridor — and the whole East GTA. We come to you with surge-protected boosters that are safe for modern vehicle electronics, and if the battery is done, we can replace it on the spot.
+              Car won't start in a driveway, a commuter lot, or on the side of Taunton Road? {COMPANY_NAME} runs <strong>24/7 battery boost and jump start service across Ajax</strong> (Taunton, Salem, Westney, the 401 corridor) and the whole East GTA. We come to you with surge-protected boosters that are safe for modern vehicle electronics, and if the battery is done, we can replace it on the spot.
             </p>
             <div className="grid sm:grid-cols-3 gap-3 mb-6">
               {[
@@ -1940,7 +1940,7 @@ export const BLOG_POSTS: BlogPost[] = [
                 { city: 'Whitby', note: 'Durham Region' },
                 { city: 'Oshawa', note: 'Hwy 401 & 407' },
                 { city: 'Scarborough', note: 'Kingston Rd & the 401' },
-                { city: 'East GTA', note: '15–30 min ETA' },
+                { city: 'East GTA', note: '15 to 30 min ETA' },
               ].map(c => (
                 <div key={c.city} className="bg-brand-dark text-white p-4 rounded-xl text-center">
                   <p className="font-black text-brand-yellow">{c.city}</p>
@@ -1949,7 +1949,7 @@ export const BLOG_POSTS: BlogPost[] = [
               ))}
             </div>
             <p className="text-gray-700">
-              Not sure whether your battery can be saved? We test it at your location — <a href="/service/battery-diagnostic" className="text-brand-yellow font-bold hover:underline">on-site battery diagnostics</a> tell you exactly where it stands, and <a href="/service/battery-replacement" className="text-brand-yellow font-bold hover:underline">mobile battery replacement</a> handles the rest without a tow or a shop counter.
+              Not sure whether your battery can be saved? We test it at your location: <a href="/service/battery-diagnostic" className="text-brand-yellow font-bold hover:underline">on-site battery diagnostics</a> tell you exactly where it stands, and <a href="/service/battery-replacement" className="text-brand-yellow font-bold hover:underline">mobile battery replacement</a> handles the rest without a tow or a shop counter.
             </p>
             <BlogCTA source="blog_batteryboost_mid2" />
           </>
@@ -1957,24 +1957,24 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     faqs: [
-      { question: 'How fast can you boost a dead battery in Ajax?', answer: 'iFAST typically arrives in 15–30 minutes anywhere in Ajax and the East GTA — including busy corridors like Taunton Rd and Salem Rd. The boost itself takes only a few minutes once we\'re on-site, so most drivers are moving again within the half hour.' },
-      { question: 'Will my battery recharge itself after a boost?', answer: 'Partially, yes — if you let it. After a boost, drive for at least 30 minutes continuously (or let the engine run for about 45) so the alternator can put real charge back into the battery. But a boost only restores charge; if the battery itself is worn out, it will die again and needs replacement.' },
-      { question: 'How do I know if I need a boost or a new battery?', answer: 'A one-time death with a clear cause (lights left on, short trips, car sat unused) usually just needs a boost. Slow cranking, dim lights, a battery over 3–4 years old, or needing more than one boost in a short period all point to replacement. When we boost your car, we\'ll tell you honestly which side of the line your battery is on — with no pressure to buy anything that day.' },
-      { question: 'Do you replace car batteries at my home in Ajax?', answer: 'Yes. iFAST does mobile battery replacement at your home, workplace, or roadside across Ajax, Pickering, Whitby, Oshawa, and Scarborough. We bring the correct battery for your vehicle, install it on-site, and take the old one away for recycling — exactly what we did for this customer in his own driveway.' },
-      { question: 'Is there a warranty on a replacement battery?', answer: 'Yes — the new battery we installed in this story came with a two-year warranty. Warranty terms depend on the battery your vehicle needs; we\'ll confirm the coverage before any work starts.' },
+      { question: 'How fast can you boost a dead battery in Ajax?', answer: 'iFAST typically arrives in 15 to 30 minutes anywhere in Ajax and the East GTA, including busy corridors like Taunton Rd and Salem Rd. The boost itself takes only a few minutes once we\'re on-site, so most drivers are moving again within the half hour.' },
+      { question: 'Will my battery recharge itself after a boost?', answer: 'Partially, yes, if you let it. After a boost, drive for at least 30 minutes continuously (or let the engine run for about 45) so the alternator can put real charge back into the battery. But a boost only restores charge; if the battery itself is worn out, it will die again and needs replacement.' },
+      { question: 'How do I know if I need a boost or a new battery?', answer: 'A one-time death with a clear cause (lights left on, short trips, car sat unused) usually just needs a boost. Slow cranking, dim lights, a battery over 3 to 4 years old, or needing more than one boost in a short period all point to replacement. When we boost your car, we\'ll tell you honestly which side of the line your battery is on, with no pressure to buy anything that day.' },
+      { question: 'Do you replace car batteries at my home in Ajax?', answer: 'Yes. iFAST does mobile battery replacement at your home, workplace, or roadside across Ajax, Pickering, Whitby, Oshawa, and Scarborough. We bring the correct battery for your vehicle, install it on-site, and take the old one away for recycling, exactly what we did for this customer in his own driveway.' },
+      { question: 'Is there a warranty on a replacement battery?', answer: 'Yes. The new battery we installed in this story came with a two-year warranty. Warranty terms depend on the battery your vehicle needs; we\'ll confirm the coverage before any work starts.' },
       { question: 'Is a jump start safe for my car\'s electronics?', answer: 'Done properly, yes. iFAST uses surge-protected, microprocessor-controlled booster packs rather than cables off a stranger\'s running car, which protects your vehicle\'s ECU and sensitive electronics from voltage spikes. It\'s the safest way to boost a modern vehicle.' },
     ]
   },
 
   /* ============================================================
-     POST 10: PRE-PURCHASE INSPECTION IN AJAX (CUSTOMER STORY — IFEYINWA BLESSING)
+     POST 10: PRE-PURCHASE INSPECTION IN AJAX (CUSTOMER STORY, IFEYINWA BLESSING)
      ============================================================ */
   {
     slug: 'pre-purchase-car-inspection-ajax',
-    title: 'Buying a Used Car in Ajax? Ifeyinwa Had Us Inspect It First — Here\'s Why That Was the Smartest Money She Spent',
-    excerpt: 'Before paying for a used car in Ajax, Ifeyinwa called iFAST for a mobile pre-purchase inspection. Our mechanic came to the car, went through it end to end, and gave her the transparent picture she needed to buy with confidence. Here is the real story — and what a pre-purchase inspection catches that a test drive never will.',
-    seoTitle: 'Pre-Purchase Car Inspection Ajax | Mobile Used Car Check — iFAST',
-    seoDescription: 'Buying a used car in Ajax or Durham Region? iFAST brings the pre-purchase inspection to the car — engine, brakes, tires, diagnostics and an honest verdict before you pay. Read how one Ajax buyer used it to purchase with 100% confidence.',
+    title: 'Buying a Used Car in Ajax? Ifeyinwa Had Us Inspect It First: Here\'s Why That Was the Smartest Money She Spent',
+    excerpt: 'Before paying for a used car in Ajax, Ifeyinwa called iFAST for a mobile pre-purchase inspection. Our mechanic came to the car, went through it end to end, and gave her the transparent picture she needed to buy with confidence. Here is the real story, and what a pre-purchase inspection catches that a test drive never will.',
+    seoTitle: 'Pre-Purchase Car Inspection Ajax | Mobile Used Car Check | iFAST',
+    seoDescription: 'Buying a used car in Ajax or Durham Region? iFAST brings the pre-purchase inspection to the car: engine, brakes, tires, diagnostics and an honest verdict before you pay. Read how one Ajax buyer used it to purchase with 100% confidence.',
     keywords: 'pre-purchase car inspection Ajax, used car inspection Ajax, mobile car inspection Ajax, pre purchase inspection near me, used car inspection Durham Region, mobile mechanic Ajax, buy used car inspection Ontario, car inspection before buying Ajax, vehicle inspection Pickering Whitby Oshawa',
     category: 'Buyer\'s Guide',
     publishDate: '2026-07-04',
@@ -1986,7 +1986,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="text-xl text-gray-600 font-medium leading-relaxed mb-6">
-              Ifeyinwa Blessing was about to buy a used car in <strong>Ajax</strong> — and before any money changed hands, she did the one thing most buyers skip: she called <strong>{COMPANY_NAME}</strong> for a <strong>pre-purchase inspection</strong>. Our mechanic came to the car, went through it end to end, and gave her the straight, transparent picture of exactly what she was buying.
+              Ifeyinwa Blessing was about to buy a used car in <strong>Ajax</strong>, and before any money changed hands, she did the one thing most buyers skip: she called <strong>{COMPANY_NAME}</strong> for a <strong>pre-purchase inspection</strong>. Our mechanic came to the car, went through it end to end, and gave her the straight, transparent picture of exactly what she was buying.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200 mb-6">
               {[
@@ -2016,7 +2016,7 @@ export const BLOG_POSTS: BlogPost[] = [
               Ifeyinwa had found a car she was serious about. The problem every used-car buyer faces at that moment is the same: the seller says it runs great, the test drive feels fine, and you have no way of knowing what's hiding under the hood, under the paint, or in the computer. So instead of guessing, she booked a <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> to meet the car in Ajax.
             </p>
             <p className="mb-4 text-gray-700">
-              That's the part people love about a mobile pre-purchase inspection: <strong>the car doesn't have to go anywhere</strong>. No convincing a seller to drive to a shop, no arranging plates and insurance for a car you don't own yet. The mechanic comes to the driveway, parking lot, or dealership — tools, diagnostic scanner and all.
+              That's the part people love about a mobile pre-purchase inspection: <strong>the car doesn't have to go anywhere</strong>. No convincing a seller to drive to a shop, no arranging plates and insurance for a car you don't own yet. The mechanic comes to the driveway, parking lot, or dealership, tools, diagnostic scanner and all.
             </p>
             <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
               <iframe
@@ -2028,11 +2028,11 @@ export const BLOG_POSTS: BlogPost[] = [
                 allowFullScreen
               />
               <p className="text-xs text-gray-500 text-center py-2 px-3 bg-gray-50">
-                Ajax, Ontario — where this mobile pre-purchase inspection took place
+                Ajax, Ontario: where this mobile pre-purchase inspection took place
               </p>
             </div>
             <p className="mb-4 text-gray-700">
-              On-site, our technician worked through the same checklist we bring to every pre-purchase call: engine start-up and idle behaviour, a diagnostic scan for stored trouble codes, fluid levels and condition, battery health, brakes, tires, suspension, lights, and the visual tells of past accident repair. Then came the part Ifeyinwa singled out in her review — the <strong>transparent</strong> walkthrough of what he found:
+              On-site, our technician worked through the same checklist we bring to every pre-purchase call: engine start-up and idle behaviour, a diagnostic scan for stored trouble codes, fluid levels and condition, battery health, brakes, tires, suspension, lights, and the visual tells of past accident repair. Then came the part Ifeyinwa singled out in her review: the <strong>transparent</strong> walkthrough of what he found:
             </p>
             <div className="bg-brand-dark text-white rounded-2xl p-6 mb-6 flex flex-col sm:flex-row gap-5 items-start">
               <div className="bg-brand-yellow/20 p-3 rounded-xl flex-shrink-0">
@@ -2041,14 +2041,14 @@ export const BLOG_POSTS: BlogPost[] = [
               <div>
                 <p className="font-black text-brand-yellow mb-2">Transparent means the whole picture</p>
                 <ul className="space-y-2 text-sm text-white/85">
-                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>What's genuinely good</strong> about the car — so you know what you're paying for.</span></li>
-                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>What needs attention</strong> — now, soon, and eventually — in plain language, not mechanic-speak.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>What's genuinely good</strong> about the car, so you know what you're paying for.</span></li>
+                  <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>What needs attention</strong> (now, soon, and eventually) in plain language, not mechanic-speak.</span></li>
                   <li className="flex gap-2"><CheckCircle2 size={16} className="text-brand-yellow flex-shrink-0 mt-0.5" /><span><strong>No stake in the sale.</strong> We don't work for the seller and we're not trying to win repair work. The only job is telling the buyer the truth.</span></li>
                 </ul>
               </div>
             </div>
             <p className="text-gray-700">
-              Ifeyinwa got what every used-car buyer actually needs before handing over money: an independent expert's verdict, delivered at the car, with nothing held back. She walked away 100% sure of her decision — her words, not ours.
+              Ifeyinwa got what every used-car buyer actually needs before handing over money: an independent expert's verdict, delivered at the car, with nothing held back. She walked away 100% sure of her decision, her words, not ours.
             </p>
           </>
         )
@@ -2084,7 +2084,7 @@ export const BLOG_POSTS: BlogPost[] = [
               </p>
             </div>
             <p className="text-gray-700 mb-4">
-              Reliable. Trustworthy. Transparent. When someone is deciding whether to trust a stranger's opinion on the biggest purchase of their month — maybe their year — those are exactly the three words the job depends on.
+              Reliable. Trustworthy. Transparent. When someone is deciding whether to trust a stranger's opinion on the biggest purchase of their month (maybe their year), those are exactly the three words the job depends on.
             </p>
             <div className="text-center mb-6">
               <a
@@ -2105,7 +2105,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Ifeyinwa's instinct was right, and here is the uncomfortable reason why: in Ontario, most private used-car sales are effectively <strong>as-is</strong>. Once you've paid and signed, whatever is wrong with the car is your problem. A seller's Safety Standards Certificate proves the car met minimum safety requirements on the day it was tested — it says nothing about a tired transmission, a head gasket starting to weep, or four tires that all need replacing next spring.
+              Ifeyinwa's instinct was right, and here is the uncomfortable reason why: in Ontario, most private used-car sales are effectively <strong>as-is</strong>. Once you've paid and signed, whatever is wrong with the car is your problem. A seller's Safety Standards Certificate proves the car met minimum safety requirements on the day it was tested. It says nothing about a tired transmission, a head gasket starting to weep, or four tires that all need replacing next spring.
             </p>
             <p className="mb-4 text-gray-700">
               A pre-purchase inspection exists to catch exactly the things a test drive and a walk-around can't:
@@ -2113,8 +2113,8 @@ export const BLOG_POSTS: BlogPost[] = [
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
               {[
                 { icon: '🔍', title: 'Hidden accident history', desc: 'Overspray, misaligned panels, non-factory welds and fresh undercoating tell a story the ad never will. Structural repair can knock thousands off what a car is worth.' },
-                { icon: '💻', title: 'Codes the seller cleared', desc: 'A diagnostic scan reads what the engine computer remembers — including trouble codes and readiness monitors that reveal a warning light was recently reset for the sale.' },
-                { icon: '🛞', title: 'The next $2,000 in wear items', desc: 'Brakes at 20%, tires near the wear bars, a battery on its last winter. None of it fails the test drive — all of it lands on your credit card in the first six months.' },
+                { icon: '💻', title: 'Codes the seller cleared', desc: 'A diagnostic scan reads what the engine computer remembers, including trouble codes and readiness monitors that reveal a warning light was recently reset for the sale.' },
+                { icon: '🛞', title: 'The next $2,000 in wear items', desc: 'Brakes at 20%, tires near the wear bars, a battery on its last winter. None of it fails the test drive. All of it lands on your credit card in the first six months.' },
                 { icon: '💧', title: 'Leaks, rust and neglect', desc: 'Fluid condition and slow leaks show how the car was maintained, not just how it runs today. Ten minutes under a car tells the truth about ten years of ownership.' },
               ].map(r => (
                 <div key={r.title} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
@@ -2128,7 +2128,7 @@ export const BLOG_POSTS: BlogPost[] = [
               <div className="flex gap-3">
                 <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
                 <p className="text-amber-900 text-sm font-medium">
-                  Whatever the inspection finds, you win. A clean report buys you confidence, like it did for Ifeyinwa. A list of problems buys you leverage to negotiate the price down — or the best reason you'll ever get to walk away before it becomes your problem.
+                  Whatever the inspection finds, you win. A clean report buys you confidence, like it did for Ifeyinwa. A list of problems buys you leverage to negotiate the price down, or the best reason you'll ever get to walk away before it becomes your problem.
                 </p>
               </div>
             </div>
@@ -2141,10 +2141,10 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              The relationship doesn't end when the plates go on. The same <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic service</a> that inspected the car before you bought it can maintain it afterwards — diagnostics when a warning light comes on, <a href="/service/battery-diagnostic" className="text-brand-yellow font-bold hover:underline">battery testing</a> before winter, and repairs done in your own driveway instead of a shop waiting room.
+              The relationship doesn't end when the plates go on. The same <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic service</a> that inspected the car before you bought it can maintain it afterwards: diagnostics when a warning light comes on, <a href="/service/battery-diagnostic" className="text-brand-yellow font-bold hover:underline">battery testing</a> before winter, and repairs done in your own driveway instead of a shop waiting room.
             </p>
             <p className="mb-4 text-gray-700">
-              And because we're a roadside company first, the number you saved for the inspection is the same one that answers at 2 a.m. if that new-to-you car ever leaves you stranded — <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">boosts</a>, <a href="/service/flat-tire-repair" className="text-brand-yellow font-bold hover:underline">flat tires</a>, lockouts, the lot. Most buyers we inspect for keep the number. Ifeyinwa did.
+              And because we're a roadside company first, the number you saved for the inspection is the same one that answers at 2 a.m. if that new-to-you car ever leaves you stranded: <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">boosts</a>, <a href="/service/flat-tire-repair" className="text-brand-yellow font-bold hover:underline">flat tires</a>, lockouts, the lot. Most buyers we inspect for keep the number. Ifeyinwa did.
             </p>
           </>
         )
@@ -2154,7 +2154,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Found a used car in Ajax, Pickering, or anywhere in Durham Region? {COMPANY_NAME} brings the <strong>pre-purchase inspection to the car</strong> — private sellers' driveways, dealership lots, workplace parking garages. You get an independent, transparent verdict before you pay, usually bookable within a day.
+              Found a used car in Ajax, Pickering, or anywhere in Durham Region? {COMPANY_NAME} brings the <strong>pre-purchase inspection to the car</strong>: private sellers' driveways, dealership lots, workplace parking garages. You get an independent, transparent verdict before you pay, usually bookable within a day.
             </p>
             <div className="grid sm:grid-cols-3 gap-3 mb-6">
               {[
@@ -2172,7 +2172,7 @@ export const BLOG_POSTS: BlogPost[] = [
               ))}
             </div>
             <p className="text-gray-700">
-              One phone call books it: tell us where the car is and when the seller is available, and a certified <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> meets you there. Here's <a href="/service/pre-purchase-inspection" className="text-brand-yellow font-bold hover:underline">everything a pre-purchase inspection covers</a>. Buy the car knowing exactly what you're getting — the way Ifeyinwa did.
+              One phone call books it: tell us where the car is and when the seller is available, and a certified <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> meets you there. Here's <a href="/service/pre-purchase-inspection" className="text-brand-yellow font-bold hover:underline">everything a pre-purchase inspection covers</a>. Buy the car knowing exactly what you're getting, the way Ifeyinwa did.
             </p>
             <BlogCTA source="blog_prepurchase_mid2" />
           </>
@@ -2180,24 +2180,24 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     faqs: [
-      { question: 'Do you come to the seller\'s location for a pre-purchase inspection in Ajax?', answer: 'Yes — that\'s the whole point of a mobile pre-purchase inspection. iFAST meets the car wherever it is: a private seller\'s driveway, a dealership lot, or a parking garage, anywhere in Ajax, Pickering, Whitby, Oshawa, or Scarborough. The car never has to move, so you don\'t need plates, insurance, or the seller\'s cooperation to get it to a shop.' },
+      { question: 'Do you come to the seller\'s location for a pre-purchase inspection in Ajax?', answer: 'Yes. That\'s the whole point of a mobile pre-purchase inspection. iFAST meets the car wherever it is: a private seller\'s driveway, a dealership lot, or a parking garage, anywhere in Ajax, Pickering, Whitby, Oshawa, or Scarborough. The car never has to move, so you don\'t need plates, insurance, or the seller\'s cooperation to get it to a shop.' },
       { question: 'What does a pre-purchase car inspection cover?', answer: 'Our mechanic checks the engine\'s start-up and running behaviour, runs a diagnostic scan for stored and cleared trouble codes, and inspects fluids, battery health, brakes, tires, suspension, steering, lights, and visible signs of accident repair or rust. You get a plain-language verdict: what\'s good, what needs work soon, and whether we\'d be comfortable buying the car.' },
-      { question: 'How long does a pre-purchase inspection take?', answer: 'Plan for roughly 45 to 90 minutes at the car, depending on the vehicle and what we find. Most sellers are fine with it — and a seller who refuses to allow an inspection is telling you something important about the car.' },
-      { question: 'How much does a mobile pre-purchase inspection cost in Ajax?', answer: 'It depends on the vehicle and location, so call +1 437-215-3468 for an exact quote — the price is confirmed up front before we book anything. Weigh it against the downside: buyers who skip the inspection routinely inherit thousands of dollars in repairs that a one-hour check would have caught.' },
-      { question: 'Can you inspect a car the same day I call?', answer: 'Often, yes. We run 24/7 across the East GTA, and pre-purchase inspections can usually be scheduled the same day or next day — useful when a good car is priced to sell and other buyers are circling. Call as soon as you\'re serious about a vehicle and we\'ll work around the seller\'s availability.' },
+      { question: 'How long does a pre-purchase inspection take?', answer: 'Plan for roughly 45 to 90 minutes at the car, depending on the vehicle and what we find. Most sellers are fine with it, and a seller who refuses to allow an inspection is telling you something important about the car.' },
+      { question: 'How much does a mobile pre-purchase inspection cost in Ajax?', answer: 'It depends on the vehicle and location, so call +1 437-215-3468 for an exact quote: the price is confirmed up front before we book anything. Weigh it against the downside: buyers who skip the inspection routinely inherit thousands of dollars in repairs that a one-hour check would have caught.' },
+      { question: 'Can you inspect a car the same day I call?', answer: 'Often, yes. We run 24/7 across the East GTA, and pre-purchase inspections can usually be scheduled the same day or next day, useful when a good car is priced to sell and other buyers are circling. Call as soon as you\'re serious about a vehicle and we\'ll work around the seller\'s availability.' },
       { question: 'What should I do if the inspection finds problems?', answer: 'Use the report as leverage. Minor wear items (brakes, tires, a tired battery) are normal on a used car and justify negotiating the price down by their repair cost. Structural damage, transmission issues, or evidence of hidden accident repair are usually walk-away findings. Either way, you\'re deciding with the facts instead of the seller\'s word.' },
     ]
   },
 
   /* ============================================================
-     POST 11: EXHAUST HEAT SHIELD — PICKERING CUSTOMER STORY (Chris Moitalta)
+     POST 11: EXHAUST HEAT SHIELD, PICKERING CUSTOMER STORY (Chris Moitalta)
      ============================================================ */
   {
     slug: 'exhaust-heat-shield-repair-pickering',
-    title: 'That Rattle Under Your Car? Chris in Pickering Had a Broken Exhaust Heat Shield — Here\'s the Fix',
-    excerpt: 'A broken exhaust heat shield was hanging under Chris\'s car in Pickering — the kind of problem that sounds terrifying and fixes fast. Our mobile mechanic came to him, removed the broken shield safely, and had him back to a quiet car the same visit. Here is the real story, and what that rattling under your car actually means.',
-    seoTitle: 'Exhaust Heat Shield Rattle Pickering | Mobile Fix — iFAST',
-    seoDescription: 'Rattling or scraping noise under your car in Pickering? A rusted exhaust heat shield is the usual culprit. iFAST\'s mobile mechanic comes to you and removes or secures the broken shield on the spot — read how we fixed it for one Pickering driver.',
+    title: 'That Rattle Under Your Car? Chris in Pickering Had a Broken Exhaust Heat Shield: Here\'s the Fix',
+    excerpt: 'A broken exhaust heat shield was hanging under Chris\'s car in Pickering, the kind of problem that sounds terrifying and fixes fast. Our mobile mechanic came to him, removed the broken shield safely, and had him back to a quiet car the same visit. Here is the real story, and what that rattling under your car actually means.',
+    seoTitle: 'Exhaust Heat Shield Rattle Pickering | Mobile Fix | iFAST',
+    seoDescription: 'Rattling or scraping noise under your car in Pickering? A rusted exhaust heat shield is the usual culprit. iFAST\'s mobile mechanic comes to you and removes or secures the broken shield on the spot: read how we fixed it for one Pickering driver.',
     keywords: 'exhaust heat shield rattle Pickering, heat shield repair Pickering, rattling noise under car Pickering, exhaust heat shield removal, metal dragging under car, loose heat shield fix, mobile mechanic Pickering, mobile exhaust repair Durham Region, heat shield fell off can I drive',
     category: 'Emergency Tips',
     publishDate: '2026-07-04',
@@ -2209,7 +2209,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="text-xl text-gray-600 font-medium leading-relaxed mb-6">
-              Chris Moitalta's car developed the noise every driver dreads — something metal, loose, and rattling underneath. In <strong>Pickering</strong>, that sound usually has one very common cause: a rusted-out <strong>exhaust heat shield</strong>. Chris's had broken and was hanging under the car. One call to <strong>{COMPANY_NAME}</strong>, and our mobile mechanic came to him, removed the broken shield safely, and confirmed the rest of the exhaust was solid.
+              Chris Moitalta's car developed the noise every driver dreads: something metal, loose, and rattling underneath. In <strong>Pickering</strong>, that sound usually has one very common cause: a rusted-out <strong>exhaust heat shield</strong>. Chris's had broken and was hanging under the car. One call to <strong>{COMPANY_NAME}</strong>, and our mobile mechanic came to him, removed the broken shield safely, and confirmed the rest of the exhaust was solid.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200 mb-6">
               {[
@@ -2236,7 +2236,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              A broken heat shield announces itself. At idle it buzzes like a loose panel; over bumps it clanks; and once it breaks free and starts hanging, you can hear — sometimes feel — metal moving around under the floor. It sounds like the exhaust is falling off the car. Chris did the right thing: instead of driving it around Pickering hoping the noise would go away, he called a <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> to come take a look where the car sat.
+              A broken heat shield announces itself. At idle it buzzes like a loose panel; over bumps it clanks; and once it breaks free and starts hanging, you can hear (sometimes feel) metal moving around under the floor. It sounds like the exhaust is falling off the car. Chris did the right thing: instead of driving it around Pickering hoping the noise would go away, he called a <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> to come take a look where the car sat.
             </p>
             <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-[0_10px_40px_rgba(11,30,54,0.08)] mb-6">
               <iframe
@@ -2248,14 +2248,14 @@ export const BLOG_POSTS: BlogPost[] = [
                 allowFullScreen
               />
               <p className="text-xs text-gray-500 text-center py-2 px-3 bg-gray-50">
-                Pickering, Ontario — where this mobile heat shield call took place
+                Pickering, Ontario: where this mobile heat shield call took place
               </p>
             </div>
             <p className="mb-4 text-gray-700">
-              On-site, our technician ran the same checks we bring to every underbody noise call: find the actual source of the rattle, inspect the exhaust hangers and connections, and confirm nothing else has shaken loose. The diagnosis matched the sound — the heat shield cover had broken and was hanging on, rusted past the point of being reattached.
+              On-site, our technician ran the same checks we bring to every underbody noise call: find the actual source of the rattle, inspect the exhaust hangers and connections, and confirm nothing else has shaken loose. The diagnosis matched the sound: the heat shield cover had broken and was hanging on, rusted past the point of being reattached.
             </p>
             <p className="mb-4 text-gray-700">
-              The fix was straightforward and done on the spot: <strong>remove the broken shield cleanly</strong>, make sure no sharp or loose metal was left behind, and verify the exhaust itself — pipes, hangers, muffler — was still mounted tight. No shop appointment, no leaving the car anywhere, no more noise.
+              The fix was straightforward and done on the spot: <strong>remove the broken shield cleanly</strong>, make sure no sharp or loose metal was left behind, and verify the exhaust itself (pipes, hangers, muffler) was still mounted tight. No shop appointment, no leaving the car anywhere, no more noise.
             </p>
           </>
         )
@@ -2291,7 +2291,7 @@ export const BLOG_POSTS: BlogPost[] = [
               </p>
             </div>
             <p className="text-gray-700 mb-4">
-              Notice what Chris called us: a <em>tire</em> service — even though this was an exhaust job. That's how most of Pickering knows us, and it's the part we love about this review. Whatever the problem turns out to be — a flat, a dead battery, or a heat shield hanging under the car — it's the same number, the same truck, and the same &ldquo;very reliable&rdquo;.
+              Notice what Chris called us: a <em>tire</em> service, even though this was an exhaust job. That's how most of Pickering knows us, and it's the part we love about this review. Whatever the problem turns out to be (a flat, a dead battery, or a heat shield hanging under the car), it's the same number, the same truck, and the same &ldquo;very reliable&rdquo;.
             </p>
             <div className="text-center mb-6">
               <a
@@ -2308,25 +2308,25 @@ export const BLOG_POSTS: BlogPost[] = [
         )
       },
       {
-        heading: 'What Is an Exhaust Heat Shield — and Can You Drive With It Hanging?',
+        heading: 'What Is an Exhaust Heat Shield, and Can You Drive With It Hanging?',
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              A heat shield is a thin layer of stamped metal that sits between the hot parts of your exhaust — manifold, catalytic converter, muffler — and everything that shouldn't get cooked by them: the floor of the cabin, fuel and brake lines, plastic trim, and whatever the car is parked over. It matters more than it looks like it should. A catalytic converter runs hot enough to scorch dry grass under a parked car.
+              A heat shield is a thin layer of stamped metal that sits between the hot parts of your exhaust (manifold, catalytic converter, muffler) and everything that shouldn't get cooked by them: the floor of the cabin, fuel and brake lines, plastic trim, and whatever the car is parked over. It matters more than it looks like it should. A catalytic converter runs hot enough to scorch dry grass under a parked car.
             </p>
             <p className="mb-4 text-gray-700">
-              The reason they fail in Ontario is simple: <strong>road salt</strong>. The shield itself is thin metal, and the small spot welds and clamps holding it on rust through years before the exhaust does. When a few of those welds let go, the shield starts buzzing. When enough let go, it breaks and hangs — which is exactly what happened on Chris's car.
+              The reason they fail in Ontario is simple: <strong>road salt</strong>. The shield itself is thin metal, and the small spot welds and clamps holding it on rust through years before the exhaust does. When a few of those welds let go, the shield starts buzzing. When enough let go, it breaks and hangs, which is exactly what happened on Chris's car.
             </p>
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-4">
               <div className="flex gap-3">
                 <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
                 <p className="text-amber-900 text-sm font-medium">
-                  A rattling shield is an annoyance. A <strong>hanging</strong> one is a real problem: it can drag, catch on road debris, contact hot exhaust parts, or drop onto the road at speed. If yours is hanging low or scraping, don't put the fix off — and if it's dragging on the pavement, stop driving and call.
+                  A rattling shield is an annoyance. A <strong>hanging</strong> one is a real problem: it can drag, catch on road debris, contact hot exhaust parts, or drop onto the road at speed. If yours is hanging low or scraping, don't put the fix off, and if it's dragging on the pavement, stop driving and call.
                 </p>
               </div>
             </div>
             <p className="mb-4 text-gray-700">
-              As for the fix — honesty matters here. When a shield has rusted to the point of breaking, welding the old one back on is rarely worth anyone's money. The standard fix is to <strong>remove the broken section cleanly</strong> and check whether the area it protected still needs coverage; where it does, a replacement shield or a proper clamp-on repair is the answer. That call gets made under your actual car, not over the phone — which is why we come look before quoting anything.
+              As for the fix: honesty matters here. When a shield has rusted to the point of breaking, welding the old one back on is rarely worth anyone's money. The standard fix is to <strong>remove the broken section cleanly</strong> and check whether the area it protected still needs coverage; where it does, a replacement shield or a proper clamp-on repair is the answer. That call gets made under your actual car, not over the phone, which is why we come look before quoting anything.
             </p>
             <BlogCTA source="blog_heatshield_mid1" />
           </>
@@ -2337,7 +2337,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Chris's review calls us a tire service, and tires are how a lot of Durham Region first finds us. But the same <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic service</a> that pulled a broken heat shield off his car handles the rest of the small-but-urgent list too: diagnostics when a warning light comes on, <a href="/service/battery-diagnostic" className="text-brand-yellow font-bold hover:underline">battery testing</a> and replacement in your driveway, and the roadside classics — <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">boosts</a>, <a href="/service/flat-tire-repair" className="text-brand-yellow font-bold hover:underline">flat tires</a>, lockouts — at 2 a.m. if that's when it happens.
+              Chris's review calls us a tire service, and tires are how a lot of Durham Region first finds us. But the same <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic service</a> that pulled a broken heat shield off his car handles the rest of the small-but-urgent list too: diagnostics when a warning light comes on, <a href="/service/battery-diagnostic" className="text-brand-yellow font-bold hover:underline">battery testing</a> and replacement in your driveway, and the roadside classics: <a href="/service/jump-start" className="text-brand-yellow font-bold hover:underline">boosts</a>, <a href="/service/flat-tire-repair" className="text-brand-yellow font-bold hover:underline">flat tires</a>, lockouts, at 2 a.m. if that's when it happens.
             </p>
             <p className="mb-4 text-gray-700">
               The pattern is the same every time: you describe the problem, we come to the car, and the price is confirmed before any work starts.
@@ -2350,7 +2350,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Hearing a rattle, buzz, or scrape from under your car in Pickering or anywhere in the East GTA? {COMPANY_NAME} comes to your driveway, workplace, or roadside spot, finds the source, and fixes what can be fixed on-site — usually within 15 to 30 minutes of your call.
+              Hearing a rattle, buzz, or scrape from under your car in Pickering or anywhere in the East GTA? {COMPANY_NAME} comes to your driveway, workplace, or roadside spot, finds the source, and fixes what can be fixed on-site, usually within 15 to 30 minutes of your call.
             </p>
             <div className="grid sm:grid-cols-3 gap-3 mb-6">
               {[
@@ -2368,7 +2368,7 @@ export const BLOG_POSTS: BlogPost[] = [
               ))}
             </div>
             <p className="text-gray-700">
-              One call does it: tell us what you're hearing and where the car is, and a <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> meets you there — the way it worked for Chris.
+              One call does it: tell us what you're hearing and where the car is, and a <a href="/mobile-mechanic" className="text-brand-yellow font-bold hover:underline">mobile mechanic</a> meets you there, the way it worked for Chris.
             </p>
             <BlogCTA source="blog_heatshield_mid2" />
           </>
@@ -2376,12 +2376,12 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     faqs: [
-      { question: 'Can I drive with a loose or hanging heat shield?', answer: 'A shield that\'s only rattling is safe to drive short-term, but book the fix — the rust that loosened it only gets worse. A shield that\'s hanging low is different: it can drag, catch debris, or drop onto the road. And if it\'s actually scraping the pavement, stop driving and call +1 437-215-3468 — we come to the car, so there\'s no need to risk the drive.' },
-      { question: 'What does a rattling noise under my car mean?', answer: 'The most common cause by far — especially on cars that have seen a few Ontario winters — is a rusted exhaust heat shield vibrating against the exhaust. Classic signs: a metallic buzz at idle or at certain RPMs that changes when the engine revs. Loose exhaust hangers and road debris caught underneath are the other usual suspects. A mobile mechanic can confirm the source at your location in minutes.' },
-      { question: 'Do you remove or replace broken heat shields?', answer: 'It depends on the shield\'s condition and what it protects. A shield that\'s rusted through and broken, like the one on this Pickering call, is removed cleanly and safely. If the area it covered still needs heat protection — near fuel lines or the cabin floor, for example — we\'ll tell you straight and recommend a replacement or clamp-on repair. The decision is made under your actual car, and the price is confirmed before any work starts.' },
-      { question: 'Do you fix heat shield and exhaust rattles in Pickering?', answer: 'Yes — Pickering is core coverage for iFAST, along with Ajax, Whitby, Oshawa, Scarborough, and the rest of the East GTA. We come to your driveway, workplace, or wherever the car is, 24/7, typically arriving within 15 to 30 minutes.' },
-      { question: 'How much does it cost to fix a rattling heat shield?', answer: 'Removing a broken shield is one of the more affordable mobile mechanic calls — but the exact price depends on the vehicle and what we find underneath, so call +1 437-215-3468 for a quote. The price is confirmed up front before we book anything, and there\'s no shop drop-off or towing cost because the fix happens at your car.' },
-      { question: 'How long does the fix take?', answer: 'Most broken heat shield calls are diagnosed and fixed in a single short visit — the inspection, the removal, and a check of the surrounding exhaust components all happen on the spot. You keep your day; the car never has to go anywhere.' },
+      { question: 'Can I drive with a loose or hanging heat shield?', answer: 'A shield that\'s only rattling is safe to drive short-term, but book the fix: the rust that loosened it only gets worse. A shield that\'s hanging low is different: it can drag, catch debris, or drop onto the road. And if it\'s actually scraping the pavement, stop driving and call +1 437-215-3468, we come to the car, so there\'s no need to risk the drive.' },
+      { question: 'What does a rattling noise under my car mean?', answer: 'The most common cause by far (especially on cars that have seen a few Ontario winters) is a rusted exhaust heat shield vibrating against the exhaust. Classic signs: a metallic buzz at idle or at certain RPMs that changes when the engine revs. Loose exhaust hangers and road debris caught underneath are the other usual suspects. A mobile mechanic can confirm the source at your location in minutes.' },
+      { question: 'Do you remove or replace broken heat shields?', answer: 'It depends on the shield\'s condition and what it protects. A shield that\'s rusted through and broken, like the one on this Pickering call, is removed cleanly and safely. If the area it covered still needs heat protection (near fuel lines or the cabin floor, for example) we\'ll tell you straight and recommend a replacement or clamp-on repair. The decision is made under your actual car, and the price is confirmed before any work starts.' },
+      { question: 'Do you fix heat shield and exhaust rattles in Pickering?', answer: 'Yes. Pickering is core coverage for iFAST, along with Ajax, Whitby, Oshawa, Scarborough, and the rest of the East GTA. We come to your driveway, workplace, or wherever the car is, 24/7, typically arriving within 15 to 30 minutes.' },
+      { question: 'How much does it cost to fix a rattling heat shield?', answer: 'Removing a broken shield is one of the more affordable mobile mechanic calls, but the exact price depends on the vehicle and what we find underneath, so call +1 437-215-3468 for a quote. The price is confirmed up front before we book anything, and there\'s no shop drop-off or towing cost because the fix happens at your car.' },
+      { question: 'How long does the fix take?', answer: 'Most broken heat shield calls are diagnosed and fixed in a single short visit: the inspection, the removal, and a check of the surrounding exhaust components all happen on the spot. You keep your day; the car never has to go anywhere.' },
     ]
   },
   /* ============================================================
@@ -2389,7 +2389,7 @@ export const BLOG_POSTS: BlogPost[] = [
      ============================================================ */
   {
     slug: 'car-wont-start-in-the-cold-gta',
-    title: 'Car Won\'t Start in the Cold? Here\'s What\'s Actually Happening — and What to Do',
+    title: 'Car Won\'t Start in the Cold? Here\'s What\'s Actually Happening, and What to Do',
     excerpt: 'The first real cold snap every winter, our phone doesn\'t stop. Same story every time: fine last night, dead this morning. Here\'s why the cold does it, the 60-second playbook before you call, and the one mistake that turns a boost into a tow.',
     seoTitle: 'Car Won\'t Start in the Cold? Why It Happens & What to Do | iFAST GTA',
     seoDescription: 'Car won\'t start in the cold across Scarborough, North York, Pickering, Ajax, Whitby or Oshawa? Here\'s why winter kills car batteries, what to try before you call, and when a boost isn\'t enough. 24/7 mobile jump start and battery service across the GTA.',
@@ -2403,7 +2403,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         content: (
           <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
-            The first real cold snap of the winter, our phone doesn't stop. And it's the same call almost every time: <em>"It was completely fine last night. This morning — nothing."</em> A car that ran perfectly on Tuesday will not turn over on a <strong>−15°C</strong> Wednesday, and it feels like it broke overnight. It usually didn't. Here's what the cold is actually doing under your hood, the 60-second playbook to try before you call anyone, and the single mistake that turns a two-minute boost into a tow.
+            The first real cold snap of the winter, our phone doesn't stop. And it's the same call almost every time: <em>"It was completely fine last night. This morning, nothing."</em> A car that ran perfectly on Tuesday will not turn over on a <strong>−15°C</strong> Wednesday, and it feels like it broke overnight. It usually didn't. Here's what the cold is actually doing under your hood, the 60-second playbook to try before you call anyone, and the single mistake that turns a two-minute boost into a tow.
           </p>
         )
       },
@@ -2419,14 +2419,14 @@ export const BLOG_POSTS: BlogPost[] = [
                 <Snowflake className="text-brand-yellow shrink-0 mt-1" size={24} />
                 <div>
                   <p className="font-bold text-brand-dark">Your battery gets weaker</p>
-                  <p className="text-gray-700">A car battery makes power through a chemical reaction, and cold slows that reaction down. At around <strong>−18°C a healthy battery delivers roughly half</strong> the cranking power it has on a mild day. A battery that's two or three winters old has even less in reserve — so the cold doesn't create the problem, it exposes one that was already there.</p>
+                  <p className="text-gray-700">A car battery makes power through a chemical reaction, and cold slows that reaction down. At around <strong>−18°C a healthy battery delivers roughly half</strong> the cranking power it has on a mild day. A battery that's two or three winters old has even less in reserve, so the cold doesn't create the problem, it exposes one that was already there.</p>
                 </div>
               </li>
               <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
                 <Gauge className="text-brand-yellow shrink-0 mt-1" size={24} />
                 <div>
                   <p className="font-bold text-brand-dark">Your engine gets harder to turn</p>
-                  <p className="text-gray-700">Engine oil thickens as it gets colder. On a freezing morning the starter has to shove the engine through oil the consistency of syrup — so it demands <strong>more</strong> power at the exact moment the battery has <strong>less</strong> to give. That's the squeeze. When the two lines cross, you get a slow groan, a click, or silence.</p>
+                  <p className="text-gray-700">Engine oil thickens as it gets colder. On a freezing morning the starter has to shove the engine through oil the consistency of syrup, so it demands <strong>more</strong> power at the exact moment the battery has <strong>less</strong> to give. That's the squeeze. When the two lines cross, you get a slow groan, a click, or silence.</p>
                 </div>
               </li>
             </ul>
@@ -2444,16 +2444,16 @@ export const BLOG_POSTS: BlogPost[] = [
               Before you assume the worst, run through this. It costs a minute and it starts a surprising number of cars:
             </p>
             <ol className="list-none space-y-3 mb-6">
-              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Kill everything electrical first.</strong> Heater, headlights, rear defrost, radio, phone charger — all off. Every one of those steals power the starter needs. Give the battery its whole reserve for the one job that matters.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Kill everything electrical first.</strong> Heater, headlights, rear defrost, radio, phone charger: all off. Every one of those steals power the starter needs. Give the battery its whole reserve for the one job that matters.</span></li>
               <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Dip the clutch or hold the brake.</strong> On a manual, pressing the clutch in takes the transmission out of the equation so the starter turns less. On an automatic, make sure you're firmly in Park.</span></li>
-              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Crank in short bursts — then stop.</strong> Try the key for no more than <strong>5 seconds</strong>, then wait 20–30 seconds and try once more. Short tries let the battery recover a little between attempts.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Crank in short bursts, then stop.</strong> Try the key for no more than <strong>5 seconds</strong>, then wait 20 to 30 seconds and try once more. Short tries let the battery recover a little between attempts.</span></li>
               <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>If it hasn't caught in three tries, stop.</strong> This is the part people get wrong.</span></li>
             </ol>
             <div className="flex gap-4 bg-red-50 border border-red-100 p-5 rounded-xl mb-6">
               <ThumbsDown className="text-red-500 shrink-0 mt-1" size={24} />
               <div>
                 <p className="font-bold text-brand-dark mb-1">The one mistake that turns a boost into a tow</p>
-                <p className="text-gray-700">Cranking over and over feels like effort, like you're getting closer. You're not — you're draining what little charge is left, and each long crank also pumps raw fuel into a cold engine that can foul the plugs. Grind a weak-but-boostable battery flat and you can turn a two-minute jump into a no-start that genuinely needs a tow. When in doubt, stop and call.</p>
+                <p className="text-gray-700">Cranking over and over feels like effort, like you're getting closer. You're not. You're draining what little charge is left, and each long crank also pumps raw fuel into a cold engine that can foul the plugs. Grind a weak-but-boostable battery flat and you can turn a two-minute jump into a no-start that genuinely needs a tow. When in doubt, stop and call.</p>
               </div>
             </div>
             <BlogCTA source="blog_cold_no_start_playbook" />
@@ -2465,15 +2465,15 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Nine times out of ten on a cold morning it's the battery — but the <em>sound</em> your car makes narrows it down, and it decides whether a boost will actually fix it:
+              Nine times out of ten on a cold morning it's the battery. But the <em>sound</em> your car makes narrows it down, and it decides whether a boost will actually fix it:
             </p>
             <ul className="list-disc pl-5 space-y-3 mb-6 text-gray-700">
-              <li><strong>Rapid clicking or a slow groan, then it catches on a boost</strong> — classic cold-weakened battery. A jump gets you going, but a battery that groaned this morning is on borrowed time. <a href="/blog/dead-car-battery-boost-or-replace-east-gta" className="text-brand-yellow font-semibold underline">Here's how we decide whether it needs a boost or a replacement</a>.</li>
-              <li><strong>Cranks strong but won't fire</strong> — the battery's fine; suspect fuel or a cold-start sensor issue. This one needs a <a href="/mobile-mechanic" className="text-brand-yellow font-semibold underline">mobile mechanic</a>, not just a boost.</li>
-              <li><strong>One click or dead silence</strong> — could be a deeply flat battery, a corroded terminal, or a starter. Worth having someone test before you buy a part you may not need.</li>
+              <li><strong>Rapid clicking or a slow groan, then it catches on a boost</strong>: classic cold-weakened battery. A jump gets you going, but a battery that groaned this morning is on borrowed time. <a href="/blog/dead-car-battery-boost-or-replace-east-gta" className="text-brand-yellow font-semibold underline">Here's how we decide whether it needs a boost or a replacement</a>.</li>
+              <li><strong>Cranks strong but won't fire</strong>: the battery's fine; suspect fuel or a cold-start sensor issue. This one needs a <a href="/mobile-mechanic" className="text-brand-yellow font-semibold underline">mobile mechanic</a>, not just a boost.</li>
+              <li><strong>One click or dead silence</strong>: could be a deeply flat battery, a corroded terminal, or a starter. Worth having someone test before you buy a part you may not need.</li>
             </ul>
             <p className="mb-4 text-gray-700">
-              A "frozen battery" in the literal sense — the electrolyte actually freezing solid — is rarer, and it only happens to a battery that was already deeply discharged. If a battery is frozen, it should not be jumped; it needs to be assessed and usually replaced. That's exactly the kind of call worth making before you try anything else.
+              A "frozen battery" in the literal sense (the electrolyte actually freezing solid) is rarer, and it only happens to a battery that was already deeply discharged. If a battery is frozen, it should not be jumped; it needs to be assessed and usually replaced. That's exactly the kind of call worth making before you try anything else.
             </p>
           </>
         )
@@ -2483,10 +2483,10 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              If you're late, it's freezing, and the car has clicked twice — you don't have to stand in the cold problem-solving. That's the whole point of a mobile unit. <strong>{COMPANY_NAME}</strong> runs <a href="/service/24-hour-roadside" className="text-brand-yellow font-semibold underline">24/7 across the GTA</a>, and a cold-morning boost is the most common call we take. We bring commercial-grade boost packs built to turn over deeply cold engines that consumer jump boxes can't — and once you're running, we test the battery and charging system on the spot so you know whether it'll survive the next freeze or leave you stranded again on Thursday.
+              If you're late, it's freezing, and the car has clicked twice, you don't have to stand in the cold problem-solving. That's the whole point of a mobile unit. <strong>{COMPANY_NAME}</strong> runs <a href="/service/24-hour-roadside" className="text-brand-yellow font-semibold underline">24/7 across the GTA</a>, and a cold-morning boost is the most common call we take. We bring commercial-grade boost packs built to turn over deeply cold engines that consumer jump boxes can't, and once you're running, we test the battery and charging system on the spot so you know whether it'll survive the next freeze or leave you stranded again on Thursday.
             </p>
             <p className="mb-4 text-gray-700">
-              If the battery is done, we can <a href="/service/battery-replacement" className="text-brand-yellow font-semibold underline">supply and fit a replacement right in your driveway</a> — no tow, no shop drop-off. Most drivers see us in 15–30 minutes.
+              If the battery is done, we can <a href="/service/battery-replacement" className="text-brand-yellow font-semibold underline">supply and fit a replacement right in your driveway</a>: no tow, no shop drop-off. Most drivers see us in 15 to 30 minutes.
             </p>
             <BlogCTA source="blog_cold_no_start_call" />
           </>
@@ -2500,12 +2500,12 @@ export const BLOG_POSTS: BlogPost[] = [
               The drivers who don't get caught out are the ones who treat the battery as a wear item, not a surprise:
             </p>
             <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
-              <li><strong>Know its age.</strong> Most car batteries last 3–5 years in Ontario's climate. If yours is past three winters, it's living on borrowed time — get it tested before the cold, not during it.</li>
+              <li><strong>Know its age.</strong> Most car batteries last 3 to 5 years in Ontario's climate. If yours is past three winters, it's living on borrowed time, so get it tested before the cold, not during it.</li>
               <li><strong>Watch for the tell.</strong> A slow, lazy crank on a <em>mild</em> day is the clearest warning you'll get. A battery that groans in October will not survive January.</li>
               <li><strong>Drive it.</strong> Lots of short trips in winter never fully recharge the battery. An occasional longer drive helps it hold charge.</li>
             </ul>
             <p className="mb-4 text-gray-700">
-              A quick battery-and-charging test before winter costs nothing like a stranded morning does — and we can do it at your home or workplace while the weather's still on your side.
+              A quick battery-and-charging test before winter costs nothing like a stranded morning does, and we can do it at your home or workplace while the weather's still on your side.
             </p>
             <BlogCTA source="blog_cold_no_start_prevention" />
           </>
@@ -2513,12 +2513,12 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     faqs: [
-      { question: 'Why won\'t my car start in the cold?', answer: 'Two things happen at once on a freezing morning. Cold slows the chemical reaction inside your battery, so it delivers far less cranking power — around half its normal output near −18°C. At the same time, cold thickens your engine oil, so the starter has to work harder to turn the engine. The battery has less to give exactly when the engine demands more. An older battery simply runs out of margin first.' },
-      { question: 'What should I do when my car won\'t start in the cold?', answer: 'Turn off everything electrical (heater, lights, radio, chargers) so the battery\'s full reserve goes to the starter. On a manual, press the clutch in; on an automatic, confirm you\'re in Park. Then crank in short 5-second bursts with a pause between them. If it hasn\'t started in about three tries, stop — cranking repeatedly drains a boostable battery flat and can foul the engine. That\'s the point to call for a boost.' },
-      { question: 'Can a frozen car battery be jump started?', answer: 'No. If a battery has actually frozen — which only happens to one that was already deeply discharged — it should not be jumped, because attempting it can be dangerous. It needs to be assessed and, in most cases, replaced. If you suspect a frozen battery, call for a technician rather than trying to boost it yourself.' },
+      { question: 'Why won\'t my car start in the cold?', answer: 'Two things happen at once on a freezing morning. Cold slows the chemical reaction inside your battery, so it delivers far less cranking power: around half its normal output near −18°C. At the same time, cold thickens your engine oil, so the starter has to work harder to turn the engine. The battery has less to give exactly when the engine demands more. An older battery simply runs out of margin first.' },
+      { question: 'What should I do when my car won\'t start in the cold?', answer: 'Turn off everything electrical (heater, lights, radio, chargers) so the battery\'s full reserve goes to the starter. On a manual, press the clutch in; on an automatic, confirm you\'re in Park. Then crank in short 5-second bursts with a pause between them. If it hasn\'t started in about three tries, stop: cranking repeatedly drains a boostable battery flat and can foul the engine. That\'s the point to call for a boost.' },
+      { question: 'Can a frozen car battery be jump started?', answer: 'No. If a battery has actually frozen (which only happens to one that was already deeply discharged) it should not be jumped, because attempting it can be dangerous. It needs to be assessed and, in most cases, replaced. If you suspect a frozen battery, call for a technician rather than trying to boost it yourself.' },
       { question: 'How cold is too cold for a car battery?', answer: 'There\'s no single cut-off, but the effect climbs fast below freezing. Around −18°C a healthy battery makes roughly half its normal cranking power, and a battery that\'s three or more winters old may not have enough left to start the car. If yours is older, the first hard freeze of the season is often when it gives up.' },
-      { question: 'Does cold weather kill car batteries?', answer: 'Cold rarely kills a healthy new battery outright — but it exposes and finishes off a weak one. It reduces every battery\'s available power temporarily, and it\'s the final straw for a battery that was already fading. That\'s why so many no-starts cluster on the first cold mornings of winter.' },
-      { question: 'Do you come out for cold-weather no-starts in the GTA?', answer: 'Yes — it\'s our busiest winter call. iFAST runs 24/7 across Scarborough, North York, Pickering, Ajax, Whitby, Oshawa and the wider GTA, with commercial boost packs built for deeply cold engines. We typically reach you in 15–30 minutes, test the battery and charging system once you\'re running, and can fit a replacement on the spot if the battery is done. Call +1 437-215-3468.' },
+      { question: 'Does cold weather kill car batteries?', answer: 'Cold rarely kills a healthy new battery outright. But it exposes and finishes off a weak one. It reduces every battery\'s available power temporarily, and it\'s the final straw for a battery that was already fading. That\'s why so many no-starts cluster on the first cold mornings of winter.' },
+      { question: 'Do you come out for cold-weather no-starts in the GTA?', answer: 'Yes. It\'s our busiest winter call. iFAST runs 24/7 across Scarborough, North York, Pickering, Ajax, Whitby, Oshawa and the wider GTA, with commercial boost packs built for deeply cold engines. We typically reach you in 15 to 30 minutes, test the battery and charging system once you\'re running, and can fit a replacement on the spot if the battery is done. Call +1 437-215-3468.' },
     ]
   }
 ];
@@ -2527,10 +2527,10 @@ export const getBlogPost = (slug: string): BlogPost | undefined =>
   BLOG_POSTS.find(p => p.slug === slug);
 
 // Maps each blog post to the service pages it should link to. Drives the
-// "Related Services" block on every post — descriptive internal links that
+// "Related Services" block on every post: descriptive internal links that
 // point crawl signals at the top-level /service/* money pages (which were
-// stuck at "Discovered — currently not indexed"). Values are SERVICES ids
-// from constants.tsx. Keep 2–3 genuinely relevant services per post.
+// stuck at "Discovered - currently not indexed"). Values are SERVICES ids
+// from constants.tsx. Keep 2 to 3 genuinely relevant services per post.
 export const BLOG_RELATED_SERVICES: Record<string, string[]> = {
   'flat-tire-on-401-east-gta': ['tire-change', 'flat-tire-repair', 'towing'],
   'winter-roadside-emergencies-ontario-guide': ['jump-start', 'towing', 'tire-change'],

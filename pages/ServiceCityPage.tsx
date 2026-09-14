@@ -252,7 +252,7 @@ const ServiceCityPage: React.FC = () => {
           <div className="prose prose-lg md:prose-xl prose-headings:text-brand-dark prose-p:text-gray-600 focus:outline-none">
             
             <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight relative pb-4 after:absolute after:bottom-0 after:left-0 after:w-16 after:h-1.5 after:bg-brand-yellow after:rounded-full">
-              {service.title} in {cityData.name} — How We Work
+              {service.title} in {cityData.name}: How We Work
             </h2>
             <div className="leading-relaxed mb-12">{combo.intro}</div>
 

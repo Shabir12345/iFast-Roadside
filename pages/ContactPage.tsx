@@ -31,7 +31,7 @@ const ContactPage: React.FC = () => {
 
     const formData = new FormData(e.currentTarget);
     formData.append('access_key', WEB3FORMS_ACCESS_KEY);
-    formData.append('subject', `New website enquiry — ${COMPANY_NAME}`);
+    formData.append('subject', `New website enquiry: ${COMPANY_NAME}`);
     formData.append('from_name', COMPANY_NAME);
 
     try {
@@ -84,7 +84,7 @@ const ContactPage: React.FC = () => {
   const details = [
     {
       icon: PhoneCall,
-      label: 'Call us — fastest response',
+      label: 'Call us for the fastest response',
       value: PHONE_NUMBER,
       href: `tel:${PHONE_NUMBER}`,
       onClick: () => trackPhoneCall('contact_page_details_call'),
@@ -99,7 +99,7 @@ const ContactPage: React.FC = () => {
     {
       icon: Clock,
       label: 'Hours',
-      value: `${BUSINESS_HOURS} — including holidays`,
+      value: `${BUSINESS_HOURS}, including holidays`,
     },
     {
       icon: MapPin,
@@ -134,7 +134,7 @@ const ContactPage: React.FC = () => {
             Contact <span className="text-brand-yellow">iFAST</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-            Stranded right now? Don't fill out a form — <strong className="text-white">call us</strong>. We're
+            Stranded right now? Don't fill out a form, <strong className="text-white">call us</strong>. We're
             available {BUSINESS_HOURS} across the Greater Toronto Area. For quotes and non-urgent questions,
             send a message below.
           </p>

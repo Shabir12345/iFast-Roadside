@@ -30,7 +30,7 @@ const Blog: React.FC = () => {
   return (
     <div className="bg-white min-h-screen pt-24 pb-0 font-sans">
       <Helmet>
-        <title>Roadside Tips & Guides | iFAST Roadside Blog — Greater Toronto Area</title>
+        <title>Roadside Tips & Guides | iFAST Roadside Blog | Greater Toronto Area</title>
         <meta name="description" content="Expert roadside emergency guides, seasonal driving tips, and honest auto service advice from the GTA's fastest mobile roadside team. Serving Toronto, Scarborough, Mississauga, Brampton, Markham, and Durham." />
         <meta name="keywords" content="roadside tips GTA, flat tire guide Ontario, winter car emergency, mobile mechanic advice, roadside assistance blog Toronto" />
         <link rel="canonical" href="https://www.ifastroadside.ca/blog" />
@@ -159,8 +159,8 @@ const Blog: React.FC = () => {
           <div className="absolute -top-20 -right-20 w-80 h-80 bg-brand-yellow rounded-full blur-[100px] opacity-20"></div>
           <div className="relative z-10">
             <p className="text-white/60 text-sm font-bold uppercase tracking-widest mb-3">Need help right now?</p>
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-2">Don't Google — Just Call.</h2>
-            <p className="text-white/60 mb-8 max-w-md mx-auto">iFAST responds across the Greater Toronto Area. Average arrival: 15–30 min.</p>
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-2">Don't Google. Just Call.</h2>
+            <p className="text-white/60 mb-8 max-w-md mx-auto">iFAST responds across the Greater Toronto Area. Average arrival: 15 to 30 min.</p>
             <a
               href={`tel:${PHONE_NUMBER}`}
               onClick={() => trackPhoneCall('blog_index_cta')}

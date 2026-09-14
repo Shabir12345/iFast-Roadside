@@ -255,11 +255,11 @@ const BlogPost: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 text-brand-yellow font-bold text-sm tracking-widest uppercase mb-4">
             <span className="w-2 h-2 rounded-full bg-brand-yellow animate-pulse"></span>
-            Available 24/7 — GTA-Wide
+            Available 24/7, GTA-Wide
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight">Stranded Right Now?</h2>
           <p className="text-lg text-white/70 mb-10 max-w-xl mx-auto font-medium">
-            Skip the Googling. One call deploys the nearest iFAST unit to your location. Average arrival: 15–30 minutes.
+            Skip the Googling. One call deploys the nearest iFAST unit to your location. Average arrival: 15 to 30 minutes.
           </p>
           <a
             href={`tel:${PHONE_NUMBER}`}
