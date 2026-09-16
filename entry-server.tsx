@@ -1,8 +1,8 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
-import { HelmetProvider } from 'react-helmet-async';
 import App, { preloadAllRoutes } from './App';
+import { extractHead } from './utils/extractHead';
 
 // Build-time prerendering entry — scripts/prerender.mjs calls render() for
 // every sitemap route and writes the result as static HTML into dist/.
@@ -18,13 +18,15 @@ export async function warmup() {
 }
 
 export function render(url: string) {
-  const helmetContext: { helmet?: Record<string, { toString(): string }> } = {};
   const html = renderToString(
-    <HelmetProvider context={helmetContext}>
-      <StaticRouter location={url}>
-        <App />
-      </StaticRouter>
-    </HelmetProvider>
+    <StaticRouter location={url}>
+      <App />
+    </StaticRouter>
   );
-  return { html, helmet: helmetContext.helmet };
+  // Every page renders its <title>/<meta>/<link> tags directly in its own
+  // JSX (no Helmet wrapper — React 19 hoists them to the front of the
+  // renderToString output on its own). Split them out here so prerender.mjs
+  // can place them in the real <head> instead of inside #root.
+  const { head, body } = extractHead(html);
+  return { head, html: body };
 }

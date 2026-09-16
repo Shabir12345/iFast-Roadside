@@ -116,7 +116,7 @@ console.log(
 
 const failures = [];
 for (const route of routes) {
-  const { html, helmet } = render(route);
+  const { head, html } = render(route);
 
   // A page that renders almost nothing (e.g. an unknown :id returning null)
   // would be served as a blank shell — fail the build instead of shipping it.
@@ -125,11 +125,6 @@ for (const route of routes) {
     console.error(`✗ ${route} rendered only ${html.length} chars — check route data`);
     continue;
   }
-
-  const head = ['title', 'meta', 'link', 'script']
-    .map((k) => helmet?.[k]?.toString() ?? '')
-    .filter(Boolean)
-    .join('\n  ');
 
   const out = template
     .replace('<div id="root"></div>', `<div id="root">${html}</div>`)
