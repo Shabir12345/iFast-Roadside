@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { PHONE_NUMBER, COMPANY_NAME, GOOGLE_RATING } from '../constants';
 import { SERVICE_CONTENT } from '../data/serviceContent';
 import { CITY_CONTENT } from '../data/cityContent';
@@ -86,7 +85,7 @@ const MobileMechanicLanding: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen pt-24 pb-0 font-sans">
-      <Helmet>
+      <>
         <title>{contentData.seoTitle}</title>
         <meta name="description" content={contentData.seoDescription} />
         <meta name="keywords" content={contentData.keywords} />
@@ -97,7 +96,7 @@ const MobileMechanicLanding: React.FC = () => {
         <meta property="og:url" content="https://www.ifastroadside.ca/mobile-mechanic" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      </>
 
       {/* Premium Hero Section */}
       <section className="relative py-12 md:py-20 overflow-hidden">

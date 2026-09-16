@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { SERVICES, PHONE_NUMBER } from '../constants';
 import { SERVICE_CONTENT } from '../data/serviceContent';
 import { SERVICE_CITY_CONTENT } from '../data/serviceCityContent';
@@ -69,7 +68,7 @@ const ServicePage: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen pt-24 pb-0 font-sans">
-      <Helmet>
+      <>
         <title>{contentData.seoTitle}</title>
         <meta name="description" content={contentData.seoDescription} />
         <meta name="keywords" content={contentData.keywords} />
@@ -82,7 +81,7 @@ const ServicePage: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
-      </Helmet>
+      </>
 
       <div className="container mx-auto px-4">
         {/* Breadcrumb */}

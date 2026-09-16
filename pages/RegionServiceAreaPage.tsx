@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { PhoneCall, ShieldCheck, ThumbsUp, Clock, CheckCircle, Star, MapPin } from 'lucide-react';
 import { PHONE_NUMBER, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
 import Process from '../components/Process';
@@ -40,13 +39,13 @@ const RegionServiceAreaPage: React.FC = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen pt-24 pb-0">
-      <Helmet>
+      <>
         <title>{content.seoTitle}</title>
         <meta name="description" content={content.seoDescription} />
         <link rel="canonical" href={`https://www.ifastroadside.ca/service-area/${content.slug}`} />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      </>
 
       <div className="container mx-auto px-4">
         {/* Region Focus Banner */}

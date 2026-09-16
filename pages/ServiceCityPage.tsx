@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle2, Star, ShieldCheck, MapPin, Camera, Zap } from 'lucide-react';
 import { SERVICES, PHONE_NUMBER, COMPANY_NAME, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { CITY_CONTENT } from '../data/cityContent';
@@ -120,7 +119,7 @@ const ServiceCityPage: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen pt-24 pb-0 font-sans">
-      <Helmet>
+      <>
         <title>{combo.seoTitle}</title>
         <meta name="description" content={combo.seoDescription} />
         <meta name="keywords" content={combo.keywords} />
@@ -134,7 +133,7 @@ const ServiceCityPage: React.FC = () => {
         <script type="application/ld+json">{JSON.stringify(serviceLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
-      </Helmet>
+      </>
 
       <div className="container mx-auto px-4">
         {/* Breadcrumb */}

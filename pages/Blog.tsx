@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { Clock, ArrowRight, PhoneCall } from 'lucide-react';
 import { BLOG_POSTS } from '../data/blogContent';
 import { PHONE_NUMBER } from '../constants';
@@ -29,7 +28,7 @@ const Blog: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen pt-24 pb-0 font-sans">
-      <Helmet>
+      <>
         <title>Roadside Tips & Guides | iFAST Roadside Blog | Greater Toronto Area</title>
         <meta name="description" content="Expert roadside emergency guides, seasonal driving tips, and honest auto service advice from the GTA's fastest mobile roadside team. Serving Toronto, Scarborough, Mississauga, Brampton, Markham, and Durham." />
         <meta name="keywords" content="roadside tips GTA, flat tire guide Ontario, winter car emergency, mobile mechanic advice, roadside assistance blog Toronto" />
@@ -39,7 +38,7 @@ const Blog: React.FC = () => {
         <meta property="og:url" content="https://www.ifastroadside.ca/blog" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      </>
 
       {/* Hero */}
       <div className="bg-brand-dark py-16 mb-16 relative overflow-hidden">

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { PhoneCall, Mail, MapPin, Clock, Send, CheckCircle, Loader2, ShieldCheck } from 'lucide-react';
 import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES } from '../constants';
 import { trackPhoneCall, trackFormSubmit, trackEmailClick } from '../utils/analytics';
@@ -111,7 +110,7 @@ const ContactPage: React.FC = () => {
 
   return (
     <main className="bg-gray-50">
-      <Helmet>
+      <>
         <title>Contact iFAST Roadside Assistance | 24/7 GTA Roadside & Mobile Tires</title>
         <meta
           name="description"
@@ -122,7 +121,7 @@ const ContactPage: React.FC = () => {
         <meta property="og:description" content="24/7 roadside assistance and mobile tire service across the GTA. Call or message us." />
         <meta property="og:url" content={canonical} />
         <script type="application/ld+json">{JSON.stringify(contactLd)}</script>
-      </Helmet>
+      </>
 
       {/* Hero */}
       <section className="bg-brand-dark text-white pt-32 pb-20 background-pattern">

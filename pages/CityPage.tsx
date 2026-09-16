@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle, Star, ShieldCheck, ThumbsUp, MapPin, Route, Camera, Circle } from 'lucide-react';
 import { PHONE_NUMBER, COMPANY_NAME, SERVICES, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { CITY_CONTENT } from '../data/cityContent';
@@ -118,7 +117,7 @@ const CityPage: React.FC = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen pt-24 pb-0">
-      <Helmet>
+      <>
         <title>{content.seoTitle}</title>
         <meta name="description" content={content.seoDescription} />
         <meta name="keywords" content={content.keywords} />
@@ -132,7 +131,7 @@ const CityPage: React.FC = () => {
         <script type="application/ld+json">{JSON.stringify(localBusinessLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
-      </Helmet>
+      </>
 
       <div className="container mx-auto px-4">
         <div className="mb-6">

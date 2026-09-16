@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import GoogleReviews from '../components/GoogleReviews';
 import Services from '../components/Services';
@@ -34,7 +33,7 @@ const Home: React.FC = () => {
 
   return (
     <main>
-      <Helmet>
+      <>
         <title>iFAST Roadside Assistance | 24/7 Fast Towing & Mobile Tires Across the GTA</title>
         <meta name="description" content="Stranded? Get rapid 24/7 roadside assistance and mobile tire repair across the Greater Toronto Area: Toronto, Scarborough, Mississauga, Brampton, Markham, Vaughan, and Durham. 30-min ETA. Safe, damage-free service. No hidden fees. Call now." />
         <link rel="canonical" href="https://www.ifastroadside.ca/" />
@@ -95,7 +94,7 @@ const Home: React.FC = () => {
             ]
           })}
         </script>
-      </Helmet>
+      </>
       <Hero />
       <GoogleReviews />
       <About />

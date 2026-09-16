@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { Clock, ArrowLeft, ChevronDown, Calendar, ArrowRight, PhoneCall } from 'lucide-react';
 import { BLOG_POSTS, getBlogPost, BLOG_RELATED_SERVICES } from '../data/blogContent';
 import { PHONE_NUMBER, SERVICES } from '../constants';
@@ -79,7 +78,7 @@ const BlogPost: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen pt-24 pb-0 font-sans">
-      <Helmet>
+      <>
         <title>{post.seoTitle}</title>
         <meta name="description" content={post.seoDescription} />
         <meta name="keywords" content={post.keywords} />
@@ -93,7 +92,7 @@ const BlogPost: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         {faqJsonLd && <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>}
-      </Helmet>
+      </>
 
       <div className="container mx-auto px-4">
         {/* Breadcrumb */}
