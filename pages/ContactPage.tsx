@@ -3,12 +3,6 @@ import { PhoneCall, Mail, MapPin, Clock, Send, CheckCircle, Loader2, ShieldCheck
 import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES } from '../constants';
 import { trackPhoneCall, trackFormSubmit, trackEmailClick } from '../utils/analytics';
 
-// Web3Forms delivers the form to the business inbox without a backend.
-// Get a free access key at https://web3forms.com (enter the destination email,
-// they email you a key) and paste it below — submissions land in that inbox.
-// Until a real key is set the form will return an error on submit.
-const WEB3FORMS_ACCESS_KEY = 'REPLACE_WITH_WEB3FORMS_ACCESS_KEY';
-
 // Google Maps embed for the home base. Uses the keyless embed endpoint, so no
 // Maps API key or billing account is required.
 const MAP_SRC = `https://maps.google.com/maps?q=${encodeURIComponent(ADDRESS)}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
@@ -28,24 +22,24 @@ const ContactPage: React.FC = () => {
     setStatus('submitting');
     setErrorMsg('');
 
-    const formData = new FormData(e.currentTarget);
-    formData.append('access_key', WEB3FORMS_ACCESS_KEY);
-    formData.append('subject', `New website enquiry: ${COMPANY_NAME}`);
-    formData.append('from_name', COMPANY_NAME);
+    const payload = Object.fromEntries(new FormData(e.currentTarget).entries());
 
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        body: formData,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
       });
-      const data = await res.json();
-      if (data.success) {
+      // Treat anything other than an explicit success as a failure, so the
+      // customer is never told their message arrived when it did not.
+      const data = await res.json().catch(() => null);
+      if (res.ok && data?.ok) {
         setStatus('success');
         trackFormSubmit('contact_form', 'success');
       } else {
         setStatus('error');
         trackFormSubmit('contact_form', 'error');
-        setErrorMsg(data.message || 'Something went wrong. Please call us instead.');
+        setErrorMsg(data?.error || 'Something went wrong. Please call us instead.');
       }
     } catch {
       setStatus('error');
