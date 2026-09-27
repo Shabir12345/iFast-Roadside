@@ -619,7 +619,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
             </p>
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Frozen locks and winter lockouts</h3>
             <p className="mb-4 text-gray-700">
-              GTA winters seize locks and handles solid. Frozen-lock calls are routine for us from December through March, and we carry what's needed to deal with them without forcing anything.
+              GTA winters seize locks and handles solid. Frozen-lock calls are routine for us from December through March, and we carry what's needed to deal with them without forcing anything. Here's <a href="/blog/frozen-car-door-wont-open-gta" className="text-brand-yellow font-semibold underline">how to open a frozen car door without breaking anything</a> if you want to try first.
             </p>
             <CallNowButton source="service_content_lockout_services" />
           </>
@@ -855,7 +855,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
 
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">3. Specialized Winter Ditch Winch-Outs</h3>
             <p className="mb-4 text-gray-700">
-              Hit a patch of Toronto black ice and slid deeply down an embankment? Our trucks possess massive 12,000-pound spooling hydraulic winches. We calculate perfect vector angles to slowly drag your vehicle out of deep snow ditches or thick mud without ripping off your bumpers, subsequently inspecting it for undercarriage damage before you drive off or towing it if necessary. <br/>
+              Hit a patch of Toronto black ice and slid deeply down an embankment? Our trucks possess massive 12,000-pound spooling hydraulic winches. We calculate perfect vector angles to slowly drag your vehicle out of deep snow ditches or thick mud without ripping off your bumpers, subsequently inspecting it for undercarriage damage before you drive off or towing it if necessary. Still digging? Read <a href="/blog/car-stuck-in-snow-what-to-do-gta" className="text-brand-yellow font-semibold underline">what to try when your car is stuck in snow</a> before you spin the wheels. <br/>
               <span className="text-sm text-gray-400 italic mt-1 block">Keywords: car stuck in snow towing Whitby, ditch winch out service Oshawa, mud recovery tow truck Ajax.</span>
             </p>
             <CallNowButton />
@@ -1243,9 +1243,9 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'battery-replacement': {
     id: 'battery-replacement',
-    seoTitle: 'Car Battery Replacement GTA | Delivered and Fitted to You',
-    seoDescription: 'Boosting the same car every morning? We bring the right battery to your home or workplace, fit it and recycle the old one free. Call for a fitted price.',
-    keywords: 'car battery replacement Pickering, mobile battery install Ajax, new car battery delivery Oshawa, battery installation at home Whitby, replace dead battery Scarborough, car battery service GTA',
+    seoTitle: 'Mobile Car Battery Replacement GTA, 24/7 at Home | iFAST',
+    seoDescription: 'Car battery replacement near you, done where the car is. We bring the right battery to your home, workplace or condo garage, fit it and recycle the old one free. Call for a fitted price.',
+    keywords: 'car battery replacement near me, mobile battery replacement, mobile car battery replacement GTA, battery replacement at home, car battery replacement Scarborough, mobile battery install Pickering, new car battery delivery Ajax, battery installation at home Whitby, car battery replacement Oshawa, car battery service North York',
     heroImage: '/battery_replacement_hero.jpg',
     hero: {
       eyebrow: 'Mobile Battery Replacement',
@@ -1306,7 +1306,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
 
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">2. Planned Replacement Before It Fails</h3>
             <p className="mb-4 text-gray-700">
-              Battery testing weak or 4 to 5 years old heading into winter? Replace it on your schedule, at home or the office, before it leaves you stranded on the coldest morning of the year. <br/>
+              Battery testing weak or 4 to 5 years old heading into winter? Replace it on your schedule, at home or the office, before it leaves you stranded on the coldest morning of the year. Not sure yours is due? Here are <a href="/blog/how-long-does-a-car-battery-last-ontario" className="text-brand-yellow font-semibold underline">the signs a car battery won't survive the winter</a>. <br/>
               <span className="text-sm text-gray-400 italic mt-1 block">Keywords: battery replacement at home Whitby, proactive battery change Ajax, mobile battery service Scarborough.</span>
             </p>
 

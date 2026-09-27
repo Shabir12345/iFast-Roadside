@@ -315,7 +315,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: (
           <>
             <p className="mb-4 text-gray-700">
-              Car lockouts don't care about the weather. In fact, winter makes them more common: gloves make keys slippery, people rush out of warm buildings, and some older door lock mechanisms literally freeze. Freezing rain can ice over the door lock cylinder entirely.
+              Car lockouts don't care about the weather. In fact, winter makes them more common: gloves make keys slippery, people rush out of warm buildings, and some older door lock mechanisms literally freeze. Freezing rain can ice over the door lock cylinder entirely. (Full walkthrough: <a href="/blog/frozen-car-door-wont-open-gta" className="text-brand-yellow font-semibold underline">how to open a frozen car door without damage</a>.)
             </p>
             <div className="grid sm:grid-cols-2 gap-4 mb-6">
               <div className="bg-gray-50 rounded-xl p-4">
@@ -2500,7 +2500,7 @@ export const BLOG_POSTS: BlogPost[] = [
               The drivers who don't get caught out are the ones who treat the battery as a wear item, not a surprise:
             </p>
             <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
-              <li><strong>Know its age.</strong> Most car batteries last 3 to 5 years in Ontario's climate. If yours is past three winters, it's living on borrowed time, so get it tested before the cold, not during it.</li>
+              <li><strong>Know its age.</strong> Most car batteries last 3 to 5 years in Ontario's climate. If yours is past three winters, it's living on borrowed time, so get it tested before the cold, not during it. Here's <a href="/blog/how-long-does-a-car-battery-last-ontario" className="text-brand-yellow font-semibold underline">how long a car battery really lasts and the signs yours is dying</a>.</li>
               <li><strong>Watch for the tell.</strong> A slow, lazy crank on a <em>mild</em> day is the clearest warning you'll get. A battery that groans in October will not survive January.</li>
               <li><strong>Drive it.</strong> Lots of short trips in winter never fully recharge the battery. An occasional longer drive helps it hold charge.</li>
             </ul>
@@ -2519,6 +2519,422 @@ export const BLOG_POSTS: BlogPost[] = [
       { question: 'How cold is too cold for a car battery?', answer: 'There\'s no single cut-off, but the effect climbs fast below freezing. Around −18°C a healthy battery makes roughly half its normal cranking power, and a battery that\'s three or more winters old may not have enough left to start the car. If yours is older, the first hard freeze of the season is often when it gives up.' },
       { question: 'Does cold weather kill car batteries?', answer: 'Cold rarely kills a healthy new battery outright. But it exposes and finishes off a weak one. It reduces every battery\'s available power temporarily, and it\'s the final straw for a battery that was already fading. That\'s why so many no-starts cluster on the first cold mornings of winter.' },
       { question: 'Do you come out for cold-weather no-starts in the GTA?', answer: 'Yes. It\'s our busiest winter call. iFAST runs 24/7 across Scarborough, North York, Pickering, Ajax, Whitby, Oshawa and the wider GTA, with commercial boost packs built for deeply cold engines. We typically reach you in 15 to 30 minutes, test the battery and charging system once you\'re running, and can fit a replacement on the spot if the battery is done. Call +1 437-215-3468.' },
+    ]
+  },
+  /* ============================================================
+     POST: CAR STUCK IN SNOW (winter recovery / winch-out cluster)
+     ============================================================ */
+  {
+    slug: 'car-stuck-in-snow-what-to-do-gta',
+    title: 'Car Stuck in Snow? How to Get Out Safely, and When to Call for a Winch-Out',
+    excerpt: 'Wheels spinning, car going nowhere, snow still falling. Here\'s the order to try things in, the one check that matters more than getting free, and the point where spinning harder starts costing you a transmission.',
+    seoTitle: 'Car Stuck in Snow? How to Get Unstuck Safely | iFAST GTA',
+    seoDescription: 'Car stuck in snow in Scarborough, North York, Pickering, Ajax, Whitby or Oshawa? The safe step-by-step way to get unstuck, what never to do, and when to call a 24/7 winch-out. iFAST reaches most GTA drivers in 15 to 30 minutes.',
+    keywords: 'car stuck in snow, how to get car unstuck from snow, stuck in snow what to do, car stuck in snow tow, winch out service, car stuck in ditch, car stuck in snow driveway, stuck in snow help GTA, snow recovery tow Toronto, car slid into ditch winter',
+    category: 'Seasonal Guide',
+    publishDate: '2026-09-27',
+    readTime: '6 min read',
+    heroImage: '/roadside_technician_towing.jpg',
+    heroImageAlt: 'iFAST flatbed recovery truck loading a vehicle for a GTA driver',
+    sections: [
+      {
+        content: (
+          <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
+            The plow went by at 5 a.m. and left a wall of packed snow at the end of your driveway. Or you pulled onto a side street shoulder, felt the car drop, and now the wheels just spin. Being stuck in snow is one of the most common calls we take from <strong>December through March</strong>, and most of them could have been a five-minute fix if the first ten minutes had gone differently. Here's the safe order to try things in, what never to do, and the point where you should stop and call a winch-out.
+          </p>
+        )
+      },
+      {
+        heading: 'First, Before Anything Else: Check Your Tailpipe',
+        content: (
+          <>
+            <div className="flex gap-4 bg-red-50 border border-red-100 p-5 rounded-xl mb-6">
+              <AlertTriangle className="text-red-500 shrink-0 mt-1" size={24} />
+              <div>
+                <p className="font-bold text-brand-dark mb-1">A buried exhaust can fill the cabin with carbon monoxide</p>
+                <p className="text-gray-700">If the back of the car is sitting in a snowbank, the exhaust pipe may be packed with snow. With the engine running and the windows up, exhaust gas has nowhere to go but inside. Carbon monoxide has no smell and no colour. Before you sit in a running car to wait or to spin the wheels, get out and clear the tailpipe completely. If you can't clear it, keep the engine off and crack a window.</p>
+              </div>
+            </div>
+            <p className="mb-4 text-gray-700">
+              Then check where you are. If you're stuck on a highway shoulder or a live lane with traffic passing, your job is not to get unstuck, it's to stay safe: hazards on, stay belted in the car unless it's safer to get out and away from traffic, and call for help. If anyone is hurt or you're blocking a live lane, call 911 first.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'How to Get Your Car Unstuck From Snow, Step by Step',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              For a car that's stuck in a driveway, a parking lot, or a quiet residential street, work through this in order. Each step is gentler on the car than the one after it.
+            </p>
+            <ol className="list-none space-y-3 mb-6">
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Straighten the wheels.</strong> Turned wheels plough snow instead of climbing over it. Point them straight ahead so the tires have the shortest path out.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Dig out the drive wheels and the underside.</strong> Clear snow from in front of and behind all four tires, and check the car isn't beached: if packed snow is holding the body up off the ground, the tires have no weight on them and will never grip. Clear it from under the bumpers and the middle of the car.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Give the tires something to bite.</strong> Sand, road salt, non-clumping kitty litter, or your car's floor mats wedged in front of the drive wheels (behind them if you're reversing out). Stand well clear once you start moving; a mat can shoot out.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Turn traction control off.</strong> It sounds backwards, but on many cars traction control cuts power the moment a wheel slips, which is exactly the slip you need to creep out. Check your owner's manual, and switch it back on once you're free.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Go gently, in the lowest gear.</strong> Light throttle. You want the tires turning slowly enough to grip, not spinning. If the car moves even an inch, keep that momentum.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Rock it, carefully.</strong> Ease forward as far as it will go, then ease back, and repeat to build a short track. Wait until the car has <strong>fully stopped</strong> before you shift between Drive and Reverse. Slamming between gears while the wheels are still turning is how transmissions get damaged.</span></li>
+            </ol>
+            <BlogCTA source="blog_stuck_snow_steps" />
+          </>
+        )
+      },
+      {
+        heading: 'What Not to Do (The Mistakes That Turn a Stuck Car Into a Repair Bill)',
+        content: (
+          <>
+            <ul className="list-none space-y-4 mb-6">
+              <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                <ThumbsDown className="text-red-500 shrink-0 mt-1" size={24} />
+                <div>
+                  <p className="font-bold text-brand-dark">Flooring it</p>
+                  <p className="text-gray-700">Spinning the wheels hard polishes the snow underneath into ice and digs the tires deeper. It also overheats the transmission and, on some cars, can damage the differential. If the wheels are just spinning in place, more throttle is making it worse.</p>
+                </div>
+              </li>
+              <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                <ThumbsDown className="text-red-500 shrink-0 mt-1" size={24} />
+                <div>
+                  <p className="font-bold text-brand-dark">Letting a stranger yank it out with a strap</p>
+                  <p className="text-gray-700">Tow straps tied to a bumper, a suspension arm or a tie-down loop that isn't rated for recovery can rip parts off the car. A strap that snaps under tension can also whip back hard enough to injure someone. Recovery points on most modern cars are specific, and some are hidden behind a cover in the bumper.</p>
+                </div>
+              </li>
+              <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                <ThumbsDown className="text-red-500 shrink-0 mt-1" size={24} />
+                <div>
+                  <p className="font-bold text-brand-dark">Pushing from behind a spinning wheel</p>
+                  <p className="text-gray-700">If friends are pushing, keep them to the sides of the car, not directly behind or in front of it, and never behind a wheel that's throwing snow, ice and gravel.</p>
+                </div>
+              </li>
+            </ul>
+          </>
+        )
+      },
+      {
+        heading: 'When to Stop and Call for a Winch-Out',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Give it an honest ten minutes of the steps above. If the car hasn't moved, stop. These are the situations where a winch-out is the right call, not the last resort:
+            </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6 text-gray-700">
+              <li><strong>The car has slid into a ditch or down an embankment.</strong> Driving out of a ditch at an angle risks a rollover or a torn-off bumper. A controlled winch pull from the right angle doesn't.</li>
+              <li><strong>It's beached on packed snow or a snowbank</strong> and digging hasn't freed the underside.</li>
+              <li><strong>You're on a shoulder or a busy road</strong> where standing outside digging isn't safe.</li>
+              <li><strong>You smell burning or see smoke</strong> from spinning wheels. That's the clutch or transmission, and it's time to stop.</li>
+              <li><strong>It's an AWD or low-clearance car.</strong> Both are easy to damage with improvised pulls and pushes.</li>
+            </ul>
+            <p className="mb-4 text-gray-700">
+              <strong>{COMPANY_NAME}</strong> runs recovery trucks <a href="/service/24-hour-roadside" className="text-brand-yellow font-semibold underline">24/7 across the GTA</a>. Our <a href="/service/towing" className="text-brand-yellow font-semibold underline">towing and recovery units</a> carry hydraulic winches built to pull cars out of snow-filled ditches and deep snowbanks slowly and from the correct angle, so the bumper stays on the car. Once you're back on solid ground we check underneath for damage. If the car is fine, you drive away. If it isn't, we can tow it to your driveway or your shop in the same visit. Most drivers see us in 15 to 30 minutes.
+            </p>
+            <BlogCTA source="blog_stuck_snow_winch" />
+          </>
+        )
+      },
+      {
+        heading: 'Stuck and the Car Won\'t Start Either?',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Deep cold and a long wait in a snowbank are hard on a battery, especially if you've been idling with the heater on or cranking a stalled engine. If you get free and then get a click instead of a start, that's a separate problem with a quick fix. Our guide to <a href="/blog/car-wont-start-in-the-cold-gta" className="text-brand-yellow font-semibold underline">why cars won't start in the cold</a> covers what to try, and a <a href="/service/jump-start" className="text-brand-yellow font-semibold underline">mobile battery boost</a> usually has you running in minutes.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Keep a Stuck-in-Snow Kit in the Trunk',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Everything on this list fits in a small bin and turns most stuck-in-snow situations into something you can handle yourself:
+            </p>
+            <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+              <li>A compact or folding snow shovel</li>
+              <li>A bag of sand or non-clumping kitty litter (it also adds weight over the rear wheels on rear-wheel-drive cars)</li>
+              <li>A snow brush and ice scraper</li>
+              <li>Warm gloves, a hat and a blanket, in case you're waiting</li>
+              <li>A phone charger and a flashlight</li>
+              <li>Our number saved in your phone: {PHONE_NUMBER}</li>
+            </ul>
+            <p className="mb-4 text-gray-700">
+              And the best prevention costs nothing: when heavy snow is coming, park nose-out, away from where the plow will push the bank, and keep the tank at least half full so you can run the heater safely while you wait if you ever need to.
+            </p>
+            <BlogCTA source="blog_stuck_snow_kit" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'What should I do if my car is stuck in snow?', answer: 'First make sure the exhaust pipe is clear of snow so carbon monoxide can\'t build up inside the car. Then straighten the wheels, dig snow away from all four tires and from under the car, put sand, salt, kitty litter or floor mats in front of the drive wheels, turn off traction control, and ease forward in the lowest gear with light throttle. Gently rock between Drive and Reverse, letting the car stop fully before changing gear. If it hasn\'t moved after about ten minutes, stop and call for a winch-out.' },
+      { question: 'Is spinning your tires in snow bad for your car?', answer: 'Yes. Hard wheelspin polishes snow into ice so the tires dig deeper, and it builds heat in the transmission and differential. A few seconds of gentle slip is fine, but if the wheels are spinning without the car moving, more throttle only makes it worse and can lead to a costly repair.' },
+      { question: 'Can a tow truck pull my car out of a ditch without damage?', answer: 'A proper recovery truck uses a winch and a rated recovery point to pull the car out slowly and from the correct angle, which is far gentler than a strap tied to a bumper and a hard yank from another vehicle. iFAST checks underneath the car once it\'s back on solid ground, so you know whether it\'s safe to drive.' },
+      { question: 'How long does a winch-out take in the GTA?', answer: 'iFAST typically reaches drivers across Scarborough, North York, Pickering, Ajax, Whitby, Oshawa and the wider GTA in 15 to 30 minutes, and a straightforward pull out of a snowbank or shallow ditch is usually done shortly after we arrive. Deep ditches and awkward angles take longer to set up safely. Call for a quote before we dispatch.' },
+      { question: 'Should I stay in my car if I\'m stuck in snow on the highway?', answer: 'Usually, yes: stay belted in with your hazards on, and call for help. Leave the car only if it\'s safer to move well away from traffic, for example behind a guardrail. If you run the engine for heat, make sure the tailpipe is clear of snow and crack a window. If anyone is hurt or the car is blocking a live lane, call 911.' },
+      { question: 'Do you help if my car is stuck in snow in my driveway?', answer: 'Yes. Driveways and residential streets are some of our most common winter recovery calls, especially after the plow leaves a packed bank behind the car. Call +1 437-215-3468 and we\'ll quote the job on the phone before we come out.' },
+    ]
+  },
+  /* ============================================================
+     POST: HOW LONG DOES A CAR BATTERY LAST (pre-winter replacement cluster)
+     ============================================================ */
+  {
+    slug: 'how-long-does-a-car-battery-last-ontario',
+    title: 'How Long Does a Car Battery Last in Ontario? 7 Signs Yours Won\'t Survive the Winter',
+    excerpt: 'Most batteries don\'t die in January. They die in July and nobody notices until the first freeze. Here\'s how long a battery really lasts in the GTA, the warning signs to look for now, and how to replace it before it strands you.',
+    seoTitle: 'How Long Does a Car Battery Last in Ontario? 7 Signs | iFAST',
+    seoDescription: 'Most car batteries in Ontario last 3 to 5 years. Here are the 7 signs yours is dying, why summer heat does the damage and winter gets the blame, and how mobile battery replacement across the GTA works.',
+    keywords: 'how long does a car battery last, how long do car batteries last in Canada, signs of a dying car battery, car battery replacement near me, mobile battery replacement, when to replace car battery, car battery life Ontario, battery replacement at home GTA, weak car battery symptoms, car battery test near me',
+    category: 'Seasonal Guide',
+    publishDate: '2026-09-27',
+    readTime: '6 min read',
+    heroImage: '/battery_replacement_hero.jpg',
+    heroImageAlt: 'Technician disconnecting a car battery terminal during a mobile battery replacement',
+    sections: [
+      {
+        content: (
+          <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
+            Every winter we hear the same thing from drivers standing next to a car that won't start: <em>"But the battery was fine."</em> It almost never was. The cold doesn't kill a healthy battery, it finishes off one that's been quietly failing for months. The good news is that a dying battery gives you warnings well before the first freeze, if you know what to look for. Here's how long a car battery actually lasts in Ontario, the seven signs yours is on its way out, and what to do about it while the weather is still mild.
+          </p>
+        )
+      },
+      {
+        heading: 'How Long a Car Battery Lasts in Ontario: 3 to 5 Years',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              A standard car battery in the GTA typically lasts <strong>3 to 5 years</strong>. Where yours lands in that range depends less on the brand and more on how it's used and what it's been through:
+            </p>
+            <ul className="list-none space-y-4 mb-6">
+              <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                <Clock className="text-brand-yellow shrink-0 mt-1" size={24} />
+                <div>
+                  <p className="font-bold text-brand-dark">Summer heat does the damage</p>
+                  <p className="text-gray-700">Heat speeds up the chemical wear inside a battery. A hot July in a black-top parking lot ages a battery faster than a cold January does. The damage just doesn't show until winter.</p>
+                </div>
+              </li>
+              <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                <Snowflake className="text-brand-yellow shrink-0 mt-1" size={24} />
+                <div>
+                  <p className="font-bold text-brand-dark">Winter cold exposes it</p>
+                  <p className="text-gray-700">Cold cuts the power any battery can deliver, and it thickens engine oil so the starter needs more. A worn battery that got by all summer suddenly has no margin left. That's why no-starts cluster on the first hard-frost mornings.</p>
+                </div>
+              </li>
+              <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                <MapPin className="text-brand-yellow shrink-0 mt-1" size={24} />
+                <div>
+                  <p className="font-bold text-brand-dark">Short trips never recharge it</p>
+                  <p className="text-gray-700">A ten-minute run to the GO station or the grocery store uses a big chunk of charge to start the engine and doesn't drive long enough to put it back. Months of that leave a battery chronically undercharged, which shortens its life.</p>
+                </div>
+              </li>
+            </ul>
+            <p className="mb-4 text-gray-700">
+              Rule of thumb: if your battery has been through <strong>three GTA winters</strong>, get it tested before the fourth. The date is usually on a sticker on the battery case, or on your last service invoice.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: '7 Signs Your Car Battery Is Dying',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Any one of these is worth a test. Two or more heading into October means the battery is very unlikely to see you through to spring.
+            </p>
+            <ol className="list-none space-y-3 mb-6">
+              <li className="flex gap-3"><BatteryCharging className="text-brand-yellow shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>1. A slow, lazy crank.</strong> The engine turns over with a drawn-out <em>rrr-rrr-rrr</em> before it catches. On a mild day this is the clearest warning you'll ever get.</span></li>
+              <li className="flex gap-3"><BatteryCharging className="text-brand-yellow shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>2. Dim headlights or interior lights at start-up</strong>, or lights that flicker when you turn the key.</span></li>
+              <li className="flex gap-3"><BatteryCharging className="text-brand-yellow shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>3. Clicking when you turn the key</strong>, even if it starts on the second or third try.</span></li>
+              <li className="flex gap-3"><BatteryCharging className="text-brand-yellow shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>4. The battery warning light</strong> comes on while driving. This can also point to the alternator, which is exactly why a proper test matters.</span></li>
+              <li className="flex gap-3"><BatteryCharging className="text-brand-yellow shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>5. White or blue-green crust on the terminals.</strong> Corrosion blocks current and is often a sign of a battery venting as it ages.</span></li>
+              <li className="flex gap-3"><BatteryCharging className="text-brand-yellow shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>6. A swollen case or a rotten-egg smell.</strong> Both mean the battery is failing internally. Don't boost it; have it replaced.</span></li>
+              <li className="flex gap-3"><BatteryCharging className="text-brand-yellow shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>7. You've needed a boost more than once this year.</strong> One dead battery can be a light left on. Two is a pattern. <a href="/blog/dead-car-battery-boost-or-replace-east-gta" className="text-brand-yellow font-semibold underline">Here's how we decide between a boost and a replacement</a>.</span></li>
+            </ol>
+            <BlogCTA source="blog_battery_life_signs" />
+          </>
+        )
+      },
+      {
+        heading: 'Is It the Battery or the Alternator?',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              This is the question that saves people money. A new battery on a car with a failing alternator will be dead again within days, because nothing is recharging it. The quick way to tell:
+            </p>
+            <ul className="list-disc pl-5 space-y-3 mb-6 text-gray-700">
+              <li><strong>Car starts on a boost and keeps running fine</strong>, but won't start again the next morning: usually the battery isn't holding charge.</li>
+              <li><strong>Car starts on a boost, then dies while driving</strong>, or the lights dim and the battery light comes on as you go: suspect the alternator.</li>
+              <li><strong>Battery keeps dying overnight even though it's new</strong>: something may be drawing power with the car off.</li>
+            </ul>
+            <p className="mb-4 text-gray-700">
+              Guessing here is how people end up buying two batteries. Our <a href="/service/battery-diagnostic" className="text-brand-yellow font-semibold underline">on-site battery and charging-system test</a> checks the battery, the alternator output and the starter draw in one visit, so you only pay for the part that's actually worn out.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Replacing It Before It Strands You',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              A planned battery replacement in October takes about twenty minutes. The same replacement at 7 a.m. on a −20°C January morning, when you're already late, is a very different day. If your battery is past three winters or showing any of the signs above, replace it on your schedule, not the weather's.
+            </p>
+            <p className="mb-4 text-gray-700">
+              <strong>{COMPANY_NAME}</strong> does <a href="/service/battery-replacement" className="text-brand-yellow font-semibold underline">mobile car battery replacement</a> across the GTA. We bring the correct battery for your make, model and engine to your driveway, workplace lot or condo garage, fit it, clean and protect the terminals, confirm the alternator is charging, and take the old battery away for recycling. No shop appointment, no waiting room, and no lugging a heavy battery around yourself. We quote the supplied-and-fitted price on the phone before we come out.
+            </p>
+            <BlogCTA source="blog_battery_life_replace" />
+          </>
+        )
+      },
+      {
+        heading: 'Make Your Next Battery Last Longer',
+        content: (
+          <>
+            <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+              <li><strong>Drive it properly once a week.</strong> A 30-minute highway run gives the alternator time to top the battery up.</li>
+              <li><strong>Keep the terminals clean and tight.</strong> Corrosion and loose clamps waste charge and can mimic a dead battery.</li>
+              <li><strong>Park in a garage when you can.</strong> Shade in summer and shelter in winter both take stress off the battery.</li>
+              <li><strong>Use a battery maintainer</strong> if the car sits for weeks at a time.</li>
+              <li><strong>Test it every fall</strong> once it's past its third winter.</li>
+            </ul>
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'How long does a car battery last in Ontario?', answer: 'Most car batteries in Ontario last 3 to 5 years. Hot summers speed up the internal wear, cold winters expose it, and lots of short trips keep the battery undercharged. Once a battery has been through three GTA winters, it\'s worth testing every fall.' },
+      { question: 'What are the signs of a dying car battery?', answer: 'The most common signs are a slow or lazy crank, dim or flickering lights at start-up, clicking when you turn the key, the battery warning light on the dash, corrosion on the terminals, a swollen case or a rotten-egg smell, and needing a boost more than once in a year.' },
+      { question: 'Should I replace my car battery before winter?', answer: 'If it\'s more than three years old or showing any warning signs, yes. Cold weather cuts the power a battery can deliver right when the engine needs more to start, so a weak battery that got through summer often fails on the first hard-frost morning. Replacing it in the fall is quicker, cheaper in stress, and done on your schedule.' },
+      { question: 'How do I know if it\'s my battery or my alternator?', answer: 'If the car starts on a boost and runs fine but won\'t start the next morning, the battery usually isn\'t holding a charge. If it starts on a boost and then dies while driving, or the battery light comes on as you drive, suspect the alternator. An on-site charging-system test tells you for certain before you buy parts.' },
+      { question: 'Can you replace my car battery at home?', answer: 'Yes. iFAST brings the correct battery for your vehicle to your home, workplace or condo garage anywhere across the GTA, fits it on the spot, checks your charging system and recycles the old battery. Call +1 437-215-3468 for a supplied-and-fitted quote before we come out.' },
+      { question: 'How long does a mobile battery replacement take?', answer: 'The install itself usually takes 15 to 20 minutes once we arrive, and most drivers in Scarborough, North York, Pickering, Ajax, Whitby and Oshawa see us within 15 to 30 minutes of calling.' },
+    ]
+  },
+  /* ============================================================
+     POST: FROZEN CAR DOOR / LOCK (winter lockout cluster)
+     ============================================================ */
+  {
+    slug: 'frozen-car-door-wont-open-gta',
+    title: 'Car Door Frozen Shut? How to Get In Without Breaking Anything',
+    excerpt: 'Freezing rain overnight, and now the door won\'t budge or the key won\'t turn. Here\'s what actually works, the kettle trick that cracks windows, and when a damage-free unlock is the faster option.',
+    seoTitle: 'Car Door Frozen Shut? How to Open It Safely | iFAST GTA',
+    seoDescription: 'Car door frozen shut or key won\'t turn in a frozen lock? The safe way to get in without cracked glass or torn seals, what never to do, and 24/7 damage-free unlocking across Scarborough, North York, Pickering, Ajax, Whitby and Oshawa.',
+    keywords: 'car door frozen shut, frozen car door, car door won\'t open frozen, frozen car lock, how to unfreeze car door, frozen car door handle, key won\'t turn frozen lock, car lockout winter, frozen car door help GTA, how to prevent car doors freezing',
+    category: 'Seasonal Guide',
+    publishDate: '2026-09-27',
+    readTime: '5 min read',
+    heroImage: '/car_lockout_hero.jpg',
+    heroImageAlt: 'Lockout tool in a car door lock, opening the car without damage',
+    sections: [
+      {
+        content: (
+          <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
+            Freezing rain overnight, a sheet of ice on the car, and now the handle lifts but the door doesn't move. Or the key goes in and won't turn at all. It's one of the most frustrating winter mornings there is, because the car is fine, you just can't get into it. The instinct is to pull harder or grab the kettle. Both can turn a free fix into a cracked window or a torn door seal. Here's what actually works.
+          </p>
+        )
+      },
+      {
+        heading: 'Is It the Door Seal or the Lock? Figure Out Which First',
+        content: (
+          <>
+            <ul className="list-none space-y-4 mb-6">
+              <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                <Snowflake className="text-brand-yellow shrink-0 mt-1" size={24} />
+                <div>
+                  <p className="font-bold text-brand-dark">The door is unlocked but won't open</p>
+                  <p className="text-gray-700">Water got into the rubber seal around the door and froze it to the frame. The lock is fine; the door is glued shut by ice. This is the most common one.</p>
+                </div>
+              </li>
+              <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                <KeyRound className="text-brand-yellow shrink-0 mt-1" size={24} />
+                <div>
+                  <p className="font-bold text-brand-dark">The key won't go in or won't turn</p>
+                  <p className="text-gray-700">Moisture inside the lock cylinder has frozen. Common on older cars and on the one door you only ever unlock with the key when the fob battery dies.</p>
+                </div>
+              </li>
+              <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                <Gauge className="text-brand-yellow shrink-0 mt-1" size={24} />
+                <div>
+                  <p className="font-bold text-brand-dark">The handle won't lift or springs back limp</p>
+                  <p className="text-gray-700">Ice has seized the handle mechanism or the latch inside the door. Forcing the handle here is how handles snap.</p>
+                </div>
+              </li>
+            </ul>
+          </>
+        )
+      },
+      {
+        heading: 'How to Open a Frozen Car Door, Safely',
+        content: (
+          <>
+            <ol className="list-none space-y-3 mb-6">
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Try every other door, and the trunk or hatch.</strong> One door is often frozen worse than the others. If you can get in anywhere, start the car and let the heater and defrost do the work from the inside.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Push before you pull.</strong> Lean your weight firmly into the door near the edge a few times. That flexes the seal and cracks the ice bond, and it's far gentler than yanking on the handle.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Clear the ice from the seam.</strong> Use a plastic scraper along the gap around the door to chip away the ice that's bridging the door and the frame. Plastic only; metal tools gouge paint.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>For a frozen lock, use a lock de-icer.</strong> A few seconds of spray into the keyhole, wait a minute, then try the key gently. Keep the de-icer in your coat or your house, not in the glovebox of the car it's meant to open.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Warm the key in your hand.</strong> A warm key can melt a thin layer of ice in the cylinder. Skip the lighter: most keys have an electronic chip in the head that heat can ruin. Ease it in and turn gently, a little each way.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Use your remote start if you have one.</strong> Fifteen minutes of engine and defrost heat will free most doors on its own.</span></li>
+            </ol>
+            <BlogCTA source="blog_frozen_door_steps" />
+          </>
+        )
+      },
+      {
+        heading: 'What Never to Do',
+        content: (
+          <>
+            <div className="flex gap-4 bg-red-50 border border-red-100 p-5 rounded-xl mb-6">
+              <ThumbsDown className="text-red-500 shrink-0 mt-1" size={24} />
+              <div>
+                <p className="font-bold text-brand-dark mb-1">Don't pour hot water on it</p>
+                <p className="text-gray-700">Boiling water on frozen glass can crack a window or windshield from the temperature shock. Even when it works, the water runs into the seals and the lock and refreezes harder within minutes, so you're worse off tomorrow.</p>
+              </div>
+            </div>
+            <ul className="list-disc pl-5 space-y-3 mb-6 text-gray-700">
+              <li><strong>Don't yank the handle.</strong> Plastic handles and their internal linkages get brittle in the cold and snap. A handle replacement costs far more than the time you save.</li>
+              <li><strong>Don't pry at the door edge</strong> with a screwdriver or ice pick. It tears the rubber seal and chips paint, and a torn seal lets in more water, so the door freezes again.</li>
+              <li><strong>Don't force a key that won't turn.</strong> Keys snap inside frozen cylinders, and then you have a lockout <em>and</em> a broken key.</li>
+            </ul>
+          </>
+        )
+      },
+      {
+        heading: 'When a Damage-Free Unlock Is Faster',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              If you've tried the other doors, the de-icer and the push, and you're late and freezing, you don't have to keep fighting it. Frozen locks and seized doors are routine winter calls for our <a href="/service/lockout" className="text-brand-yellow font-semibold underline">car lockout service</a>, and we carry what's needed to deal with them without forcing anything: no cracked glass, no torn weatherstripping, no snapped handles.
+            </p>
+            <p className="mb-4 text-gray-700">
+              The same goes for the other winter classic: the fob battery dies in the cold, the car won't unlock, and the backup key cylinder is frozen solid. If a child or pet is locked inside and in any distress, <strong>call 911 first</strong>, then call us and we'll treat it as a priority dispatch. <strong>{COMPANY_NAME}</strong> runs <a href="/service/24-hour-roadside" className="text-brand-yellow font-semibold underline">24/7 across the GTA</a>, and most drivers see us in 15 to 30 minutes.
+            </p>
+            <p className="mb-4 text-gray-700">
+              Locked out for another reason entirely? Our guide to <a href="/blog/locked-out-of-car-what-not-to-do-east-gta" className="text-brand-yellow font-semibold underline">what not to do when you're locked out of your car</a> covers the DIY tricks that cost the most.
+            </p>
+            <BlogCTA source="blog_frozen_door_call" />
+          </>
+        )
+      },
+      {
+        heading: 'How to Stop Your Car Doors Freezing Shut',
+        content: (
+          <>
+            <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+              <li><strong>Treat the rubber seals before winter.</strong> Wipe them dry and apply a silicone spray or rubber conditioner around each door. Water beads off instead of freezing the seal to the frame. Redo it after a car wash.</li>
+              <li><strong>Protect the lock.</strong> A quick shot of lock lubricant or de-icer in the keyhole in late fall keeps moisture out.</li>
+              <li><strong>Cover up before freezing rain.</strong> A windshield cover or even a tarp over the doors on a bad-forecast night saves a lot of scraping.</li>
+              <li><strong>Replace the fob battery every couple of years</strong>, before the cold finds it for you.</li>
+              <li><strong>Park facing the morning sun</strong> if you can. A little sunlight on the driver's side loosens things faster than you'd expect.</li>
+            </ul>
+            <BlogCTA source="blog_frozen_door_prevention" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'How do you open a car door that is frozen shut?', answer: 'Try the other doors and the trunk first, since one door is often frozen worse than the rest. Then push firmly into the door near its edge a few times to crack the ice bond on the seal, clear the ice along the door seam with a plastic scraper, and, if you can get into the car any other way, start it and let the heater and defrost free the rest. Never yank the handle or pry at the seal.' },
+      { question: 'Is it OK to pour hot water on a frozen car door?', answer: 'No. Hot water on frozen glass can crack a window or windshield from the sudden temperature change, and the water runs into the seals and lock and refreezes even harder within minutes. Use a lock de-icer, gentle pressure on the door, and the car\'s own heat instead.' },
+      { question: 'What do I do if my car key won\'t turn in a frozen lock?', answer: 'Spray a lock de-icer into the keyhole, wait a minute, then try the key gently, turning a little each way. Warming the key in your hand can also help. Don\'t force it: keys can snap inside a frozen cylinder. If it still won\'t turn, a lockout technician can open the car without damage.' },
+      { question: 'How do I stop my car doors from freezing?', answer: 'Before winter, dry the rubber door seals and treat them with a silicone spray or rubber conditioner so water can\'t freeze the seal to the frame, and put a little lock lubricant or de-icer in the keyholes. On nights with freezing rain in the forecast, a cover over the doors and windshield helps a lot.' },
+      { question: 'Can a lockout service open a frozen car door?', answer: 'Yes. iFAST handles frozen locks and seized doors routinely from December through March across the GTA, and we carry what\'s needed to open the car without cracking glass, tearing seals or snapping handles. Call +1 437-215-3468 and we\'ll quote the job before we come out.' },
     ]
   }
 ];
@@ -2545,4 +2961,7 @@ export const BLOG_RELATED_SERVICES: Record<string, string[]> = {
   'pre-purchase-car-inspection-ajax': ['mobile-mechanic'],
   'exhaust-heat-shield-repair-pickering': ['mobile-mechanic', 'towing'],
   'car-wont-start-in-the-cold-gta': ['jump-start', 'battery-replacement', '24-hour-roadside'],
+  'car-stuck-in-snow-what-to-do-gta': ['towing', '24-hour-roadside', 'jump-start'],
+  'how-long-does-a-car-battery-last-ontario': ['battery-replacement', 'battery-diagnostic', 'jump-start'],
+  'frozen-car-door-wont-open-gta': ['lockout', '24-hour-roadside'],
 };

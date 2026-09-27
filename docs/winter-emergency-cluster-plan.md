@@ -63,3 +63,20 @@ so the winter deadline is **~mid-October** (indexed before the peak), not August
 `{ id, seoTitle, seoDescription, keywords, heroImage, hero:{eyebrow,h1,h1Accent,intro},
 featuresHeading, features:[{title,desc,icon,color}], cta:{heading,body},
 blogSections:[{title,content:JSX}], faqs:[{question,answer}] }`
+
+### Phase 3 — Winter emergency guides ✅ BUILT 2026-09-27
+Picked from the agency winter plan (`claude-home/projects/roadside-winter-seo-plan.html`), which
+assigns battery / no-start / winter-emergency search to iFAST and tire changeover to GoldenNorth.
+Tire changeover terms were deliberately NOT targeted here so the two clients don't compete.
+- [x] `/blog/car-stuck-in-snow-what-to-do-gta`: "car stuck in snow" (10/mo Aug → 320/mo Jan, 32×).
+      Funnels to `/service/towing` (winch-out) + `/service/24-hour-roadside`.
+- [x] `/blog/how-long-does-a-car-battery-last-ontario`: pre-winter replacement research query feeding
+      "car battery replacement near me" (590 avg / 1,000 Jan, Canada) and "mobile battery replacement"
+      (390 / 590 Jan). Funnels to battery-replacement + battery-diagnostic.
+- [x] `/blog/frozen-car-door-wont-open-gta`: frozen door / frozen lock, funnels to lockout. Volume
+      NOT verified in DataForSEO; pull it before investing further in this topic.
+- [x] `/service/battery-replacement` title/description/keywords retargeted to
+      "mobile car battery replacement" / "car battery replacement near me".
+- [x] Contextual links in: towing winch-out section, lockout frozen-lock section, battery-replacement
+      planned-replacement section, the winter-emergencies guide and the cold-start guide.
+- [ ] After deploy: request indexing for the 3 posts in GSC (needs to happen in October for the Dec–Jan peak).
