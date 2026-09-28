@@ -1,4 +1,4 @@
-import { Disc, Battery, Fuel, Key, Truck, Wrench, RefreshCw, CircleDot, Gauge, BatteryCharging, ClipboardCheck, Clock } from 'lucide-react';
+import { Disc, Battery, Fuel, Key, Truck, Wrench, RefreshCw, CircleDot, Gauge, BatteryCharging, ClipboardCheck, Clock, Snowflake } from 'lucide-react';
 import { ServiceItem, Testimonial, GoogleReview } from './types';
 import REVIEW_STATS from './data/reviewStats.json';
 
@@ -165,6 +165,13 @@ export const SERVICES: ServiceItem[] = [
     title: 'New & Used Tire Installation',
     description: 'No spare? We bring new or quality used tires in your size to your driveway or roadside, then mount, balance, and install them on-site, no shop visit needed.',
     icon: CircleDot,
+    parent: 'tire-change',
+  },
+  {
+    id: 'winter-tire-change',
+    title: 'Winter Tire Changeover',
+    description: 'Seasonal tire swap in your driveway or at work. We swap your winters on, torque every wheel to spec and check pressures and tread, no shop lineup or waiting room.',
+    icon: Snowflake,
     parent: 'tire-change',
   },
   // --- Battery sub-services (grouped under the Battery Jump Start card) ---

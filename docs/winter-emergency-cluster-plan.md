@@ -80,3 +80,16 @@ Tire changeover terms were deliberately NOT targeted here so the two clients don
 - [x] Contextual links in: towing winch-out section, lockout frozen-lock section, battery-replacement
       planned-replacement section, the winter-emergencies guide and the cold-start guide.
 - [ ] After deploy: request indexing for the 3 posts in GSC (needs to happen in October for the Dec–Jan peak).
+
+### Phase 4 — Winter tire changeover campaign ✅ BUILT 2026-09-28
+GoldenNorth is no longer a client (user, 2026-09-28), so iFAST now owns the tire changeover cluster.
+Toronto volumes (cached DataForSEO): "tire changeover near me" 2,900 avg / **12,100 Nov**; "winter tire change"
+and "snow tire change" 390 / 2,400 Nov; "tire swap" 320 / 1,000 Nov; "winter tire change near me" 170 / 1,000 Nov;
+"seasonal tire change" 70 / 260 Nov. The spike collapses within ~4 weeks, so these must be indexed in October.
+- [x] `/service/winter-tire-change` (sub-service of tire-change): the booking page for the unmodified terms.
+      Appears automatically in the header Services dropdown and the homepage tire card (the only change to
+      /mobile-mechanic's output is that one nav link, same precedent as the 24-hour hub).
+- [x] `/blog/when-to-put-winter-tires-on-ontario`: the research query that peaks in October, a month before booking.
+- [x] `/blog/tire-swap-vs-tire-change-on-rim-off-rim`: "tire swap" / on-rim vs off-rim.
+- [x] Linked from tire-installation's seasonal section and between all three.
+- [ ] Request indexing in GSC immediately; November is harvest, not build.

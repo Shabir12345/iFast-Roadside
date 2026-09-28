@@ -1137,7 +1137,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
 
             <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">3. Seasonal & Full-Set Installation at Home</h3>
             <p className="mb-4 text-gray-700">
-              Swapping winters to all-seasons, or installing a full new set you bought online? We come to your driveway or office lot, mount and balance every wheel, and torque to spec. No shop queue required. <br/>
+              Swapping winters to all-seasons, or installing a full new set you bought online? We come to your driveway or office lot, mount and balance every wheel, and torque to spec. No shop queue required. Just need your winters swapped on? Book a <a href="/service/winter-tire-change" className="text-brand-yellow font-semibold underline">mobile winter tire changeover</a>. <br/>
               <span className="text-sm text-gray-400 italic mt-1 block">Keywords: mobile winter tire install Pickering, full set tire installation Oshawa, seasonal tire swap at home Ajax.</span>
             </p>
             <CallNowButton source="service_content_tire-installation_seasonal" />
@@ -1152,6 +1152,123 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
       { question: 'How much does mobile tire installation cost in the Greater Toronto Area?', answer: 'It depends on whether you choose new or used tires and your size, but you save the tow and the shop trip. We give you a firm all-in quote over the phone before dispatch.' },
       { question: 'Do you install used tires safely?', answer: 'Yes. Every used tire we carry is inspected for tread depth, age, and internal damage before installation. If we wouldn\'t put it on our own car, we won\'t put it on yours.' },
       { question: 'Will you reset my TPMS light after installation?', answer: 'Yes, we carry the scanners to reset your Tire Pressure Monitoring System so you leave with no warning lights on the dash.' },
+    ]
+  },
+  'winter-tire-change': {
+    id: 'winter-tire-change',
+    seoTitle: 'Mobile Winter Tire Changeover GTA | Tire Swap at Home | iFAST',
+    seoDescription: 'Winter tire changeover in your driveway, not a shop lineup. We swap your winters on, torque every wheel to spec and check pressures at your home or office across the GTA. Call to book your tire swap.',
+    keywords: 'tire changeover near me, winter tire change, winter tire change near me, snow tire change, tire swap, mobile tire swap, seasonal tire change, winter tire installation, mobile winter tire change Toronto, tire changeover at home Scarborough, winter tire swap Pickering, mobile tire change Ajax Whitby Oshawa, tire swap North York',
+    heroImage: '/tire_installation_hero.jpg',
+    hero: {
+      eyebrow: 'Winter Tire Changeover · At Your Door',
+      h1: 'Winter Tire Swap?',
+      h1Accent: 'Done in Your Driveway.',
+      intro: 'Every fall the tire shops book up for weeks and the waiting rooms fill with people burning a Saturday. Skip all of it. We come to your home, condo lot or office, swap your winters on, torque every wheel to spec, set your pressures and load your summer set back in the trunk or garage. You don\'t move the car and you don\'t lose the day.',
+    },
+    featuresHeading: 'What\'s Included in Every Changeover',
+    features: [
+      {
+        title: 'We Come to You',
+        desc: 'Driveway, condo parking, underground garage or your workplace lot. No shop booking weeks out, no waiting room.',
+        icon: Clock,
+        color: 'bg-brand-dark',
+      },
+      {
+        title: 'On-Rim or Off-Rim',
+        desc: 'Winters already on their own rims? A straight swap. Same rims for both sets? We mount and balance on-site.',
+        icon: Disc3,
+        color: 'bg-yellow-500',
+      },
+      {
+        title: 'Torqued to Spec',
+        desc: 'Every lug nut tightened to your vehicle\'s specification with a torque wrench, not guessed with an impact gun.',
+        icon: Wrench,
+        color: 'bg-green-500',
+      },
+      {
+        title: 'Inspected While We\'re There',
+        desc: 'Tread depth, damage, pressures and TPMS warnings checked, so you know your winters are safe before the first storm.',
+        icon: ShieldCheck,
+        color: 'bg-blue-500',
+      },
+    ],
+    cta: {
+      heading: 'Book Your Winter Tire Changeover',
+      body: 'Tell us your vehicle and whether your winters are on their own rims, and we\'ll give you an upfront price and a time that suits you, at home or at work.',
+    },
+    blogSections: [
+      {
+        title: 'Mobile Winter Tire Changeover Across the Greater Toronto Area',
+        content: (
+          <>
+            <p className="mb-4">
+              The first cold snap sends half the GTA looking for a tire changeover in the same two weeks. Shops fill their calendars, walk-in lines wrap around the building, and the drivers who waited end up on summer tires during the first snowfall. <strong>{COMPANY_NAME}</strong> takes the shop out of it. We bring the equipment to your driveway, your condo parking spot or your office lot anywhere across Scarborough, North York, Toronto, Pickering, Ajax, Whitby, Oshawa and the wider GTA, and we swap your tires while you get on with your day.
+            </p>
+            <p className="mb-4">
+              A mobile tire swap is the same job a shop does, done where your car already is. We lift the vehicle safely, change the wheels, torque every lug nut to your manufacturer's specification, set the pressures for the cold, and check the tread and sidewalls on the set going on. The set coming off goes back in your trunk, garage or storage space. No drive, no drop-off, no second trip to pick it up.
+            </p>
+            <CallNowButton source="service_content_winter-tire-change_intro" />
+          </>
+        )
+      },
+      {
+        title: 'On-Rim Swap or Off-Rim Changeover: Which One You Need',
+        content: (
+          <>
+            <p className="mb-4">
+              The first thing we'll ask when you call is whether your winter tires are on their own rims. It decides what the job involves:
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">On-rim tire swap (winters on their own wheels)</h3>
+            <p className="mb-4 text-gray-700">
+              This is the quickest option. Your winter tires are already mounted on a second set of rims, so we simply take one set of wheels off and put the other on, then torque, set pressures and inspect. It's also the gentlest on your tires, because nothing is pried on or off a rim twice a year.
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-2">Off-rim changeover (one set of rims for both)</h3>
+            <p className="mb-4 text-gray-700">
+              If you only own one set of rims, each tire has to be dismounted and the other tire mounted on the same wheel, then balanced. We do the mounting and balancing on-site, the same as a shop, and fit the finished wheels back on your car. Takes longer than an on-rim swap, but still no shop visit. If you're doing this every season, a dedicated set of winter rims usually pays for itself; our guide on <a href="/blog/tire-swap-vs-tire-change-on-rim-off-rim" className="text-brand-yellow font-semibold underline">on-rim vs off-rim changeovers</a> explains the trade-off.
+            </p>
+            <CallNowButton source="service_content_winter-tire-change_types" />
+          </>
+        )
+      },
+      {
+        title: 'When to Book Your Winter Tire Change',
+        content: (
+          <>
+            <p className="mb-4">
+              The common rule in Ontario is to put winter tires on once daytime temperatures stay at or below <strong>7°C</strong>. Below that, the rubber in all-season and summer tires stiffens and loses grip, while winter compounds stay soft. In the GTA that's usually from late October into November. It's also exactly when every shop is booked solid, which is why booking a mobile changeover a little early is the easy win.
+            </p>
+            <p className="mb-4">
+              Winter tires aren't legally required in Ontario, but Ontario insurers are required to offer a discount to drivers who use them, so they can pay you back while keeping you on the road. Here's the full guide to <a href="/blog/when-to-put-winter-tires-on-ontario" className="text-brand-yellow font-semibold underline">when to put winter tires on in Ontario</a>, including the spring swap back.
+            </p>
+            <CallNowButton source="service_content_winter-tire-change_when" />
+          </>
+        )
+      },
+      {
+        title: 'Fleets, Families and Multi-Car Driveways',
+        content: (
+          <>
+            <p className="mb-4">
+              Two or three cars in the driveway, or a small business fleet that can't be off the road for a shop day? We can swap several vehicles in one visit at your home or yard, one after the other, so nobody has to drive anywhere. Tell us how many vehicles when you call and we'll quote the whole visit up front.
+            </p>
+            <p className="mb-4">
+              Found a nail, a bulge or worn-out tread while we're swapping? We'll show you, and we can patch a repairable puncture or <a href="/service/tire-installation" className="text-brand-yellow font-semibold underline">supply and install replacement tires</a> in the same visit, so you don't head into winter on a tire that won't last it.
+            </p>
+            <CallNowButton source="service_content_winter-tire-change_fleet" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'Do you do winter tire changeovers at my home?', answer: 'Yes. We come to your driveway, condo parking spot, underground garage or workplace lot anywhere across the GTA, including Scarborough, North York, Toronto, Pickering, Ajax, Whitby and Oshawa, and swap your tires on the spot. You never have to drive to a shop or wait in line.' },
+      { question: 'How long does a mobile tire swap take?', answer: 'An on-rim swap, where your winters are already on their own wheels, is the quickest and is usually done well within an hour. An off-rim changeover, where each tire is dismounted, remounted and balanced on the same rims, takes longer. We\'ll give you a time estimate when you book.' },
+      { question: 'What\'s the difference between a tire swap and a tire changeover?', answer: 'People use the words interchangeably. A swap usually means changing complete wheels (tires already mounted on rims). A changeover sometimes means dismounting tires and mounting the other set on the same rims, which also needs balancing. We do both at your location.' },
+      { question: 'When should I put my winter tires on in Ontario?', answer: 'Once daytime temperatures stay at or below about 7°C, which in the GTA is usually late October to November. Below that, all-season tires lose grip as their rubber stiffens. Book early: shops and mobile services get busiest right after the first cold snap.' },
+      { question: 'Are winter tires mandatory in Ontario?', answer: 'No, winter tires are not legally required in Ontario (they are in Quebec). But Ontario insurers must offer a discount to drivers who put winter tires on, and winters stop noticeably shorter than all-seasons on cold, snowy and icy roads.' },
+      { question: 'Do you balance the tires?', answer: 'Yes. For an off-rim changeover we mount and balance each wheel on-site. For an on-rim swap, balancing isn\'t normally needed, but if you notice a vibration or a wheel is due, tell us and we\'ll check it.' },
+      { question: 'How much does a mobile winter tire change cost?', answer: 'It depends on your vehicle, how many vehicles, and whether your winters are on their own rims. We give you a firm price on the phone before we book, with no surprises when we arrive. Call +1 437-215-3468.' },
+      { question: 'Do you swap them back in the spring?', answer: 'Yes. The same service works in reverse once spring temperatures stay above about 7°C. Many customers book their spring swap with us so the whole year is handled without a single shop visit.' },
     ]
   },
   'battery-diagnostic': {

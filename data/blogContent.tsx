@@ -2936,6 +2936,251 @@ export const BLOG_POSTS: BlogPost[] = [
       { question: 'How do I stop my car doors from freezing?', answer: 'Before winter, dry the rubber door seals and treat them with a silicone spray or rubber conditioner so water can\'t freeze the seal to the frame, and put a little lock lubricant or de-icer in the keyholes. On nights with freezing rain in the forecast, a cover over the doors and windshield helps a lot.' },
       { question: 'Can a lockout service open a frozen car door?', answer: 'Yes. iFAST handles frozen locks and seized doors routinely from December through March across the GTA, and we carry what\'s needed to open the car without cracking glass, tearing seals or snapping handles. Call +1 437-215-3468 and we\'ll quote the job before we come out.' },
     ]
+  },
+  /* ============================================================
+     POST: WHEN TO PUT WINTER TIRES ON (tire changeover research query)
+     ============================================================ */
+  {
+    slug: 'when-to-put-winter-tires-on-ontario',
+    title: 'When to Put Winter Tires On in Ontario (2026): The 7°C Rule, the Law and the Insurance Discount',
+    excerpt: 'Too early and you wear them out on warm pavement. Too late and you\'re on all-seasons for the first snowfall, fighting everyone else for a shop slot. Here\'s exactly when to switch in the GTA, and when to switch back.',
+    seoTitle: 'When to Put Winter Tires On in Ontario (2026) | 7°C Rule | iFAST',
+    seoDescription: 'When should you put winter tires on in Ontario? Follow the 7°C rule, usually late October to November in the GTA. Are winter tires mandatory, how the insurance discount works, and when to switch back in spring.',
+    keywords: 'when to put winter tires on, when to put winter tires on Ontario, when to change to winter tires, are winter tires mandatory in Ontario, winter tire insurance discount Ontario, 7 degree rule winter tires, when to take winter tires off Ontario, winter tire change, tire changeover near me, winter tires GTA',
+    category: 'Seasonal Guide',
+    publishDate: '2026-09-28',
+    readTime: '6 min read',
+    heroImage: '/tire_installation_hero.jpg',
+    heroImageAlt: 'Winter tire being fitted during a mobile tire changeover in the GTA',
+    sections: [
+      {
+        content: (
+          <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
+            Every fall it goes the same way. The first cold morning arrives, the forecast mentions flurries, and suddenly everyone in the GTA is trying to book a tire changeover in the same week. Shops fill up for weeks, and the drivers who waited spend the first snowfall on all-seasons. Here's the simple rule for when to put winter tires on in Ontario, what the law actually says, how the insurance discount works, and when to switch back.
+          </p>
+        )
+      },
+      {
+        heading: 'The Short Answer: The 7°C Rule',
+        content: (
+          <>
+            <div className="flex gap-4 bg-gray-50 p-5 rounded-xl mb-6">
+              <Snowflake className="text-brand-yellow shrink-0 mt-1" size={24} />
+              <div>
+                <p className="font-bold text-brand-dark mb-1">Put winter tires on once daytime temperatures stay at or below 7°C.</p>
+                <p className="text-gray-700">That's the guidance tire makers and safety groups use across Canada. It's about temperature, not snow. Winter conditions start costing you grip well before the first flake falls.</p>
+              </div>
+            </div>
+            <p className="mb-4 text-gray-700">
+              Why 7°C? The rubber in all-season and summer tires is designed for warmer roads. As it gets colder, that rubber stiffens and grips less, even on dry pavement. Winter tires use a softer compound that stays flexible in the cold, plus deep tread and thousands of small cuts (sipes) that bite into snow and slush. On a cold, icy road, the difference in stopping distance is significant.
+            </p>
+            <p className="mb-4 text-gray-700">
+              In the GTA, temperatures usually settle at or below 7°C from <strong>late October into November</strong>. Lakeshore areas like Scarborough, Pickering and Ajax can run a little milder than North York or north Durham, but not enough to change the plan: aim to be on winters by early to mid November.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Why Waiting for the First Snow Is a Mistake',
+        content: (
+          <>
+            <ul className="list-none space-y-4 mb-6">
+              <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                <AlertTriangle className="text-brand-yellow shrink-0 mt-1" size={24} />
+                <div>
+                  <p className="font-bold text-brand-dark">Grip goes before the snow comes</p>
+                  <p className="text-gray-700">Frosty mornings, black ice on ramps and bridges, and cold wet pavement all show up before the first real snowfall. That's when all-seasons are already past their best.</p>
+                </div>
+              </li>
+              <li className="flex gap-4 bg-gray-50 p-4 rounded-xl">
+                <Clock className="text-brand-yellow shrink-0 mt-1" size={24} />
+                <div>
+                  <p className="font-bold text-brand-dark">Everyone else waits too</p>
+                  <p className="text-gray-700">Tire changeover searches in the GTA jump several times over in November. The first snow forecast sends thousands of drivers to book in the same few days, and shop calendars fill for weeks.</p>
+                </div>
+              </li>
+            </ul>
+            <p className="mb-4 text-gray-700">
+              The easy fix is to book in October, before the rush. A <a href="/service/winter-tire-change" className="text-brand-yellow font-semibold underline">mobile winter tire changeover</a> means you don't need a shop slot at all: we come to your driveway or workplace and swap them there.
+            </p>
+            <BlogCTA source="blog_when_winter_tires_book" />
+          </>
+        )
+      },
+      {
+        heading: 'Are Winter Tires Mandatory in Ontario?',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              <strong>No.</strong> Ontario does not legally require winter tires on passenger vehicles. Quebec does: there, winter tires are mandatory from December 1 to March 15. If you drive into Quebec regularly in winter, that rule applies to vehicles registered there, and it's a good reminder of how seriously winter grip is taken just next door.
+            </p>
+            <p className="mb-4 text-gray-700">
+              When you buy winter tires, look for the <strong>three-peak mountain snowflake</strong> symbol on the sidewall. It means the tire has passed a standardized snow traction test. A plain "M+S" (mud and snow) marking on an all-season tire is not the same thing.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'The Winter Tire Insurance Discount',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              Ontario insurers are required to offer a discount to drivers who install winter tires. The amount varies by insurer, so it's worth asking yours what they offer and what they need from you. Typically that's:
+            </p>
+            <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+              <li>A full set of four winter tires, not just two</li>
+              <li>Tires on the car for the insurer's winter window (often roughly November or December through March or April)</li>
+              <li>Sometimes a receipt or proof of installation</li>
+            </ul>
+            <p className="mb-4 text-gray-700">
+              Ask for a receipt when your changeover is done so you have it if your insurer asks.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'When to Take Winter Tires Off in the Spring',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              The same rule works in reverse. Once daytime temperatures stay <strong>above 7°C</strong>, usually April in the GTA, it's time to swap back. Soft winter rubber wears quickly on warm pavement, so leaving them on through May costs you tread you'll want next winter. Don't jump too early either: a cold snap and a late-March snowfall are normal here.
+            </p>
+            <p className="mb-4 text-gray-700">
+              Before you store them, check the tread. Winter tires lose much of their snow grip as the tread wears down, and most drivers are advised to replace them once the tread is getting low, before it reaches the legal minimum. We check this at every changeover.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Skip the Shop: Get Your Winter Tires Put On at Home',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              <strong>{COMPANY_NAME}</strong> does <a href="/service/winter-tire-change" className="text-brand-yellow font-semibold underline">winter tire changeovers at your home or office</a> across Scarborough, North York, Toronto, Pickering, Ajax, Whitby, Oshawa and the wider GTA. If your winters are on their own rims, it's a quick swap. If they share rims with your summer set, we mount and balance them on-site. Either way we torque every wheel to spec, set the pressures and check the tread before we leave.
+            </p>
+            <p className="mb-4 text-gray-700">
+              Not sure which kind of changeover you need? Here's <a href="/blog/tire-swap-vs-tire-change-on-rim-off-rim" className="text-brand-yellow font-semibold underline">the difference between an on-rim swap and an off-rim changeover</a>.
+            </p>
+            <BlogCTA source="blog_when_winter_tires_home" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'When should I put winter tires on in Ontario?', answer: 'Once daytime temperatures stay at or below 7°C. In the GTA that\'s usually late October into November. Below 7°C, all-season tire rubber stiffens and loses grip, while winter tire compounds stay soft. Aim to be on winters by early to mid November, and book early to avoid the rush after the first snow forecast.' },
+      { question: 'Are winter tires mandatory in Ontario?', answer: 'No. Winter tires are not legally required on passenger vehicles in Ontario. They are mandatory in Quebec from December 1 to March 15. Ontario insurers are, however, required to offer a discount to drivers who use winter tires.' },
+      { question: 'How much is the winter tire insurance discount in Ontario?', answer: 'It varies by insurer. Ontario insurers must offer a winter tire discount, but each sets its own amount and conditions, usually requiring a full set of four winter tires on the car through the winter months. Ask your insurer what they offer and keep your installation receipt.' },
+      { question: 'When should I take my winter tires off?', answer: 'Once daytime temperatures stay above 7°C, which in the GTA is usually April. Winter tires wear quickly on warm pavement, so swapping back on time saves tread for next season.' },
+      { question: 'Can I put winter tires on too early?', answer: 'A week or two early does little harm, but running winter tires for weeks on warm pavement wears the soft tread faster. Going by the 7°C rule rather than the calendar gets you the best of both.' },
+      { question: 'Can someone change my winter tires at home?', answer: 'Yes. iFAST does mobile winter tire changeovers at your driveway, condo lot or workplace across the GTA, on-rim or off-rim, with every wheel torqued to spec. Call +1 437-215-3468 to book and get an upfront price.' },
+    ]
+  },
+  /* ============================================================
+     POST: TIRE SWAP VS TIRE CHANGE (on-rim vs off-rim)
+     ============================================================ */
+  {
+    slug: 'tire-swap-vs-tire-change-on-rim-off-rim',
+    title: 'Tire Swap vs. Tire Changeover: On-Rim or Off-Rim, and Which One You Need',
+    excerpt: 'Booking a seasonal tire change and not sure what to ask for? The one question that decides the job, the time and the cost is whether your winters are on their own rims. Here\'s the difference in plain English.',
+    seoTitle: 'Tire Swap vs Tire Changeover: On-Rim or Off-Rim? | iFAST GTA',
+    seoDescription: 'What\'s the difference between a tire swap and a tire changeover? On-rim vs off-rim explained: what each involves, how long it takes, whether you need winter rims, and how to get it done at home in the GTA.',
+    keywords: 'tire swap, tire changeover, on rim vs off rim tire change, tire swap vs tire change, seasonal tire change, do I need rims for winter tires, winter tire swap, mobile tire swap, tire changeover near me, tire mounting and balancing',
+    category: 'Seasonal Guide',
+    publishDate: '2026-09-28',
+    readTime: '5 min read',
+    heroImage: '/tire_service_hero.jpg',
+    heroImageAlt: 'Wheel being swapped during a seasonal tire changeover',
+    sections: [
+      {
+        content: (
+          <p className="text-xl text-gray-600 font-medium leading-relaxed mb-8">
+            "I need my tires swapped." Simple enough, until someone asks, "Are they on rims?" and you're not sure. That one question decides almost everything about a seasonal tire change: what the job involves, how long it takes, and what it costs. Here's the difference between an on-rim swap and an off-rim changeover, and how to tell which one you need.
+          </p>
+        )
+      },
+      {
+        heading: 'On-Rim Tire Swap: Changing Whole Wheels',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              If your winter tires are already mounted on their own set of rims (steel or alloy), a changeover is just a wheel swap. The car is lifted, each wheel comes off, the other wheel goes on, and every lug nut is torqued to spec. Pressures are set and the tires checked. That's it.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+              <li><strong>Fastest option.</strong> No tire ever comes off a rim.</li>
+              <li><strong>Easiest on the tires.</strong> Beads and sidewalls aren't stretched over a rim twice a year.</li>
+              <li><strong>No balancing needed</strong> in most cases, because each tire stays balanced on its own rim.</li>
+              <li><strong>Cheapest per season</strong>, once you've bought the second set of rims.</li>
+            </ul>
+          </>
+        )
+      },
+      {
+        heading: 'Off-Rim Changeover: One Set of Rims, Two Sets of Tires',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              If you own one set of rims, the tires themselves have to be changed. Each summer tire is dismounted from its rim, the winter tire is mounted in its place, and every wheel is balanced before it goes back on the car.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+              <li><strong>Takes longer</strong>: mounting and balancing four tires is real work.</li>
+              <li><strong>Needs a tire machine and a balancer</strong>, which is why many people assume it has to be done at a shop. It doesn't, if the mobile service carries the equipment.</li>
+              <li><strong>More wear and tear</strong> on the tire beads and on rims, and a small risk to TPMS sensors, each time it's done.</li>
+              <li><strong>Costs more every season</strong>, which adds up over the life of the tires.</li>
+            </ul>
+            <BlogCTA source="blog_tire_swap_types" />
+          </>
+        )
+      },
+      {
+        heading: 'How to Tell Which One You Have',
+        content: (
+          <>
+            <ul className="list-none space-y-3 mb-6">
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Look at the stored set.</strong> If your off-season tires are sitting in the garage as complete wheels (tire plus metal rim), you need an on-rim swap. If they're just rubber tires with a hole in the middle, you need an off-rim changeover.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Check last year's invoice.</strong> "Mount and balance" on the bill means off-rim. "Seasonal swap" or "wheel changeover" usually means on-rim.</span></li>
+              <li className="flex gap-3"><CheckCircle2 className="text-green-600 shrink-0 mt-1" size={20} /><span className="text-gray-700"><strong>Still not sure? Tell us when you call.</strong> Send a photo of the stored set and we'll confirm before we book.</span></li>
+            </ul>
+          </>
+        )
+      },
+      {
+        heading: 'Should You Buy a Second Set of Rims for Winter?',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              If you keep your car for more than a couple of winters, a dedicated set of winter rims usually makes sense:
+            </p>
+            <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
+              <li>Every changeover afterward is a quicker, cheaper on-rim swap.</li>
+              <li>Your good alloy rims stay out of the salt and slush.</li>
+              <li>Your tires last longer without being mounted and dismounted twice a year.</li>
+              <li>You can switch on short notice when the cold comes early.</li>
+            </ul>
+            <p className="mb-4 text-gray-700">
+              If your car has a tire pressure monitoring system (TPMS), ask about sensors for the winter rims too, or the warning light may stay on all winter.
+            </p>
+          </>
+        )
+      },
+      {
+        heading: 'Either Way, It Can Be Done in Your Driveway',
+        content: (
+          <>
+            <p className="mb-4 text-gray-700">
+              <strong>{COMPANY_NAME}</strong> does both. Our <a href="/service/winter-tire-change" className="text-brand-yellow font-semibold underline">mobile winter tire changeover</a> covers on-rim swaps and off-rim mount-and-balance jobs at your home, condo lot or workplace across the GTA, with every wheel torqued to spec and the tread checked before we leave. Wondering about timing? Here's <a href="/blog/when-to-put-winter-tires-on-ontario" className="text-brand-yellow font-semibold underline">when to put winter tires on in Ontario</a>.
+            </p>
+            <BlogCTA source="blog_tire_swap_home" />
+          </>
+        )
+      }
+    ],
+    faqs: [
+      { question: 'What is the difference between a tire swap and a tire changeover?', answer: 'The terms are often used interchangeably. Strictly, a tire swap usually means changing complete wheels, where your seasonal tires are already on their own rims. A changeover can also mean an off-rim job, where each tire is dismounted and the other set is mounted and balanced on the same rims.' },
+      { question: 'What does on-rim vs off-rim mean for a tire change?', answer: 'On-rim means your tires are already mounted on their own rims, so only the wheels are swapped. Off-rim means you have one set of rims, so each tire must be dismounted, the other tire mounted, and the wheel balanced. On-rim is quicker, cheaper per season and easier on the tires.' },
+      { question: 'Do I need separate rims for winter tires?', answer: 'You don\'t need them, but they usually pay off if you keep the car more than a couple of winters. Every changeover becomes a quicker on-rim swap, your tires last longer, and your good rims stay out of the winter salt.' },
+      { question: 'Do tires need to be balanced after a seasonal swap?', answer: 'For an on-rim swap, normally no, because each tire stays balanced on its own rim. For an off-rim changeover, yes: every newly mounted tire must be balanced. If you notice a vibration after any swap, have the balance checked.' },
+      { question: 'Can a tire changeover be done at home?', answer: 'Yes. iFAST does on-rim swaps and off-rim mount-and-balance changeovers at your driveway, condo parking or workplace across the GTA. Call +1 437-215-3468 for an upfront price and a time that suits you.' },
+    ]
   }
 ];
 
@@ -2964,4 +3209,6 @@ export const BLOG_RELATED_SERVICES: Record<string, string[]> = {
   'car-stuck-in-snow-what-to-do-gta': ['towing', '24-hour-roadside', 'jump-start'],
   'how-long-does-a-car-battery-last-ontario': ['battery-replacement', 'battery-diagnostic', 'jump-start'],
   'frozen-car-door-wont-open-gta': ['lockout', '24-hour-roadside'],
+  'when-to-put-winter-tires-on-ontario': ['winter-tire-change', 'tire-installation', 'tire-change'],
+  'tire-swap-vs-tire-change-on-rim-off-rim': ['winter-tire-change', 'tire-installation'],
 };
