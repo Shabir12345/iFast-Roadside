@@ -3,7 +3,7 @@ import { ServiceItem, Testimonial, GoogleReview } from './types';
 import REVIEW_STATS from './data/reviewStats.json';
 
 export const COMPANY_NAME = "iFAST Roadside Assistance";
-export const PHONE_NUMBER = "+1 437-215-3468";
+export const PHONE_NUMBER = "+1 844-814-0070";
 export const EMAIL = "info@ifastroadside.ca";
 export const ADDRESS = "20 Antrim Crescent, Scarborough, ON M1P 4N3";
 export const BUSINESS_HOURS = "24/7";

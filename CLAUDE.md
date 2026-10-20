@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Marketing site for **iFAST Roadside & Mobile Tires** — a roadside assistance company serving the whole Greater Toronto Area (units stationed GTA-wide across Toronto, Durham, York, and Peel), with its home base and fastest response in the East GTA (Scarborough, Pickering, Ajax, Whitby, Oshawa). Phone `+1 437-215-3468`. The site's primary job is to convert paid-traffic visitors into phone calls, so call CTAs and Google Ads conversion tracking matter more than most features.
+Marketing site for **iFAST Roadside & Mobile Tires** — a roadside assistance company serving the whole Greater Toronto Area (units stationed GTA-wide across Toronto, Durham, York, and Peel), with its home base and fastest response in the East GTA (Scarborough, Pickering, Ajax, Whitby, Oshawa). Phone `+1 844-814-0070`. The site's primary job is to convert paid-traffic visitors into phone calls, so call CTAs and Google Ads conversion tracking matter more than most features.
 
 Deployed on Vercel (`vercel.json` rewrites all paths to `/` for SPA fallback). Canonical domain: `www.ifastroadside.ca` (the apex `ifastroadside.ca` 307-redirects to www via Vercel; all canonicals/sitemap/schema use www).
 
