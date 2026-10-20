@@ -108,7 +108,7 @@ const ContactPage: React.FC = () => {
         <title>Contact iFAST Roadside Assistance | 24/7 GTA Roadside & Mobile Tires</title>
         <meta
           name="description"
-          content="Contact iFAST Roadside & Mobile Tires. Call +1 437-215-3468 for 24/7 roadside assistance across the Greater Toronto Area, or send us a message and we'll get right back to you."
+          content="Contact iFAST Roadside & Mobile Tires. Call +1 844-814-0070 for 24/7 roadside assistance across the Greater Toronto Area, or send us a message and we'll get right back to you."
         />
         <link rel="canonical" href={canonical} />
         <meta property="og:title" content="Contact iFAST Roadside Assistance" />
@@ -250,7 +250,7 @@ const ContactPage: React.FC = () => {
                         required
                         autoComplete="tel"
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 outline-none transition"
-                        placeholder="(437) 215-3468"
+                        placeholder="(844) 814-0070"
                       />
                     </div>
                     <div>

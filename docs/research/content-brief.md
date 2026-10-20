@@ -47,7 +47,7 @@ This is the single source the content tasks build from. Every page (hub + city c
 - **ZERO of 47 reviews name any city.** For city combos, NEVER write or imply that a reviewer was in that city. The review supplies the *story* (speed / nail-in-tire / fair price); the *city specificity* comes only from real local detail in `cityContent.tsx` (neighborhoods, highways, landmarks). Keep these two streams separate. A safe attribution label is "— [Name], verified Google review" with NO city tacked on.
 - **Pricing rule (site-wide) — UPDATED 2026-06-26:** publish **NO numeric prices**
   on any page (supersedes the old "Starts at $X" guidance). The only number on the
-  page is the phone: **+1 437-215-3468**. CTA everywhere = **"Call for a fast,
+  page is the phone: **+1 844-814-0070**. CTA everywhere = **"Call for a fast,
   no-obligation quote."** Price *perception* comes only from verbatim "fair price"
   review quotes, never from us stating a figure.
 - **Aggregate rating for schema:** the live Featurable feed is 5-star. For cited
@@ -118,7 +118,7 @@ Every page must clear these or it loses to Sparky X / Williams / Towing Toronto.
 **This is the pilot page. It sets the quality bar. 9 real reviews = the only service that can carry the trust block on its own quotes.** Lead the page on **speed + named owner-tech Safi + the "fair price" reputation carried by real review quotes** (customer words — we publish no price ourselves; see 2026-06-26 strategy update). "Fair price" is the single most-repeated phrase in the entire review set, so the *perception* of value comes through verbatim quotes, not a number.
 
 ### §1 — Hero (hub + each city)
-- Service + city, honest ETA (city ETA from `cityContent.tsx`: Scarborough 15-25, Pickering 20-30, Ajax 25-35), call CTA to +1 437-215-3468.
+- Service + city, honest ETA (city ETA from `cityContent.tsx`: Scarborough 15-25, Pickering 20-30, Ajax 25-35), call CTA to +1 844-814-0070.
 - Relief line: skip the shop lineup, skip the tow — we change it in your driveway / on the shoulder.
 - Value line in hero subhead (no price): "Mobile tire service that comes to you — fast, fair, and done where your car already is. Call for a quick quote."
 
@@ -137,7 +137,7 @@ Every page must clear these or it loses to Sparky X / Williams / Towing Toronto.
 > We give you the price **on the call, before we dispatch** — so you know exactly
 > what you're paying before the van rolls. No hidden fees, no "out of zone"
 > highway surcharge, no surprises when we arrive. Customers consistently call our
-> pricing fair (see the reviews below). **Call +1 437-215-3468 for a fast,
+> pricing fair (see the reviews below). **Call +1 844-814-0070 for a fast,
 > no-obligation quote.**
 
 - Do **not** put a dollar figure on the page. The "fair price" perception is
@@ -172,7 +172,7 @@ Pull from per-city blocks below.
 ### §8 — Service-specific FAQ (6–8 Qs, draft answers — seeded from review-mining FAQ seeds + competitor table-stakes)
 1. **How fast can you get to me for a flat tire?** — Typical arrival is 15–35 minutes depending on where you are in the East GTA (Scarborough fastest, Oshawa the longest honest range). Real reviews cite arrivals of 10–20 minutes — including a midnight flat. We give you a live ETA on the call. *(seed: multiple 10–20 min reviews)*
 2. **Do you come out at night or after hours?** — Yes, 24/7. Reviewers have called us at midnight and 10:30 p.m. for flats and we came. *(seed: after-hours reviews)*
-3. **How much does it cost to fix a flat or patch a nail/screw puncture?** — We give you the exact price on the call before we dispatch, so there are no surprises. A plug/patch of a tread puncture is the fastest, most affordable fix; a full replacement is quoted before we start. Customers consistently describe our pricing as fair — one was quoted "almost half" what other shops wanted. Call +1 437-215-3468 for a quick quote. *(seed: price-comparison review; no figure published per 2026-06-26 strategy)*
+3. **How much does it cost to fix a flat or patch a nail/screw puncture?** — We give you the exact price on the call before we dispatch, so there are no surprises. A plug/patch of a tread puncture is the fastest, most affordable fix; a full replacement is quoted before we start. Customers consistently describe our pricing as fair — one was quoted "almost half" what other shops wanted. Call +1 844-814-0070 for a quick quote. *(seed: price-comparison review; no figure published per 2026-06-26 strategy)*
 4. **Can you find a slow leak or a screw that isn't obviously leaking?** — Yes. We locate the puncture even when it's a slow leak you can barely see — one customer's screw was found and the tire repaired in under half an hour, late at night. *(seed: 吴千红 slow-leak case)*
 5. **What if the tire problem comes back after a repair — will you come back?** — Yes. One reviewer's tire developed a *separate* issue two days later; we came back within 20 minutes and fixed it. We stand behind the work. *(seed: Hayoung repeat-visit)*
 6. **Do you carry the tools and a tire if I don't have a spare?** — Yes — that's the whole point of mobile service. We carry common 15"–20" sizes, a plug-patch kit, and a balancer. If your exact size isn't on the van, we plug/patch the original or install your spare and pre-order your tire. *(seed: Mohammad Badakhash "didn't have the right tools")*
