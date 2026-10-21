@@ -7,6 +7,7 @@ import { SERVICE_CITY_CONTENT } from '../data/serviceCityContent';
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from '../components/WhatsAppButton';
 import { serviceHref } from '../utils/serviceHref';
 
 // Thin, templated service×city combos deliberately kept OUT of Google's index
@@ -177,17 +178,25 @@ const ServiceCityPage: React.FC = () => {
               </div>
             </div>
 
-            <a
-              href={`tel:${PHONE_NUMBER}`}
-              onClick={() => trackPhoneCall(`svc_city_hero_${id}_${city}`)}
-              className="group relative overflow-hidden flex items-center justify-center gap-4 bg-brand-yellow hover:bg-brand-yellowHover text-white px-8 py-5 rounded-2xl font-black text-xl lg:text-2xl transition-all duration-300 shadow-[0_10px_30px_rgba(255,90,31,0.35)] hover:shadow-[0_15px_40px_rgba(255,90,31,0.5)] transform hover:-translate-y-1 text-center w-full sm:w-auto"
-            >
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-              <div className="bg-white/20 p-2 rounded-full group-hover:scale-110 transition-transform duration-300">
-                <PhoneCall size={28} fill="currentColor" />
-              </div>
-              <span className="tracking-wide">Call Now for Help</span>
-            </a>
+            <div className="flex flex-col sm:items-start gap-4">
+              <a
+                href={`tel:${PHONE_NUMBER}`}
+                onClick={() => trackPhoneCall(`svc_city_hero_${id}_${city}`)}
+                className="group relative overflow-hidden flex items-center justify-center gap-4 bg-brand-yellow hover:bg-brand-yellowHover text-white px-8 py-5 rounded-2xl font-black text-xl lg:text-2xl transition-all duration-300 shadow-[0_10px_30px_rgba(255,90,31,0.35)] hover:shadow-[0_15px_40px_rgba(255,90,31,0.5)] transform hover:-translate-y-1 text-center w-full sm:w-auto"
+              >
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+                <div className="bg-white/20 p-2 rounded-full group-hover:scale-110 transition-transform duration-300">
+                  <PhoneCall size={28} fill="currentColor" />
+                </div>
+                <span className="tracking-wide">Call Now for Help</span>
+              </a>
+              <WhatsAppButton
+                source={`svc_city_hero_whatsapp_${id}_${city}`}
+                className="px-8 py-5 rounded-2xl text-xl lg:text-2xl w-full sm:w-auto"
+                iconSize={28}
+                label="WhatsApp Us"
+              />
+            </div>
             
             <p className="text-xs font-semibold text-gray-400 mt-4 text-center sm:text-left">
               Click to call {PHONE_NUMBER} directly
@@ -365,16 +374,24 @@ const ServiceCityPage: React.FC = () => {
           <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto font-medium">
             Stop waiting. Local technicians are standing by. Typical arrival time is {cityData.responseTime}. Let's get you moving.
           </p>
-          <a
-            href={`tel:${PHONE_NUMBER}`}
-            onClick={() => trackPhoneCall(`svc_city_footer_${id}_${city}`)}
-            className="group inline-flex flex-col sm:flex-row items-center justify-center gap-4 bg-brand-yellow hover:bg-brand-yellowHover text-white px-10 py-6 rounded-2xl font-black text-2xl md:text-4xl transition-all duration-300 shadow-[0_10px_35px_rgba(255,90,31,0.4)] transform hover:-translate-y-1"
-          >
-            <div className="flex items-center gap-3">
-              <PhoneCall size={32} fill="currentColor" />
-              {PHONE_NUMBER}
-            </div>
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={`tel:${PHONE_NUMBER}`}
+              onClick={() => trackPhoneCall(`svc_city_footer_${id}_${city}`)}
+              className="group inline-flex flex-col sm:flex-row items-center justify-center gap-4 bg-brand-yellow hover:bg-brand-yellowHover text-white px-10 py-6 rounded-2xl font-black text-2xl md:text-4xl transition-all duration-300 shadow-[0_10px_35px_rgba(255,90,31,0.4)] transform hover:-translate-y-1"
+            >
+              <div className="flex items-center gap-3">
+                <PhoneCall size={32} fill="currentColor" />
+                {PHONE_NUMBER}
+              </div>
+            </a>
+            <WhatsAppButton
+              source={`svc_city_footer_whatsapp_${id}_${city}`}
+              className="px-10 py-6 rounded-2xl text-2xl md:text-4xl"
+              iconSize={32}
+              label="WhatsApp"
+            />
+          </div>
         </div>
       </div>
     </div>

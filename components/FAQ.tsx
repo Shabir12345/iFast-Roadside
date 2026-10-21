@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, PhoneCall } from 'lucide-react';
 import { PHONE_NUMBER } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from './WhatsAppButton';
 
 const FAQS = [
     {
@@ -69,13 +70,21 @@ const FAQ: React.FC = () => {
                     <div className="mt-12 p-6 bg-brand-dark rounded-3xl text-center text-white glass-morphism border-none">
                         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                             <p className="text-sm font-medium">Still have questions? A live dispatcher can answer them right now, 24/7.</p>
-                            <a
-                                href={`tel:${PHONE_NUMBER}`}
-                                onClick={() => trackPhoneCall('faq_call_home')}
-                                className="inline-flex items-center gap-2 px-6 py-2 bg-brand-yellow text-brand-dark rounded-full font-bold text-sm hover:bg-brand-yellowHover transition-colors"
-                            >
-                                <PhoneCall size={16} /> Call {PHONE_NUMBER}
-                            </a>
+                            <div className="flex flex-wrap items-center justify-center gap-3">
+                              <a
+                                  href={`tel:${PHONE_NUMBER}`}
+                                  onClick={() => trackPhoneCall('faq_call_home')}
+                                  className="inline-flex items-center gap-2 px-6 py-2 bg-brand-yellow text-brand-dark rounded-full font-bold text-sm hover:bg-brand-yellowHover transition-colors"
+                              >
+                                  <PhoneCall size={16} /> Call {PHONE_NUMBER}
+                              </a>
+                              <WhatsAppButton
+                                source={'faq_whatsapp_home'}
+                                className="px-6 py-2 rounded-full text-sm"
+                                iconSize={16}
+                                label="WhatsApp"
+                              />
+                            </div>
                         </div>
                     </div>
                 </div>

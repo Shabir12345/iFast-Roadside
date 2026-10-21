@@ -1,9 +1,10 @@
 import type React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES } from '../constants';
+import { COMPANY_NAME, PHONE_NUMBER, WHATSAPP_URL, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES } from '../constants';
 import { CITY_CONTENT } from '../data/cityContent';
 import { REGION_CONTENT } from '../data/regionContent';
-import { trackPhoneCall, trackEmailClick } from '../utils/analytics';
+import { trackPhoneCall, trackEmailClick, trackWhatsAppClick } from '../utils/analytics';
+import { WhatsAppIcon } from './WhatsAppButton';
 import { serviceHref } from '../utils/serviceHref';
 
 const Footer: React.FC = () => {
@@ -80,6 +81,19 @@ const Footer: React.FC = () => {
                   className="hover:text-white transition-colors"
                 >
                   {PHONE_NUMBER}
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <WhatsAppIcon className="text-whatsapp shrink-0" size={18} />
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick('footer_contact_whatsapp')}
+                  aria-label="Chat with us on WhatsApp (opens in a new tab)"
+                  className="hover:text-white transition-colors"
+                >
+                  WhatsApp us
                 </a>
               </li>
               <li className="flex items-start gap-3">

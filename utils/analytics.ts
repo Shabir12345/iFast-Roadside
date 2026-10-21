@@ -93,3 +93,20 @@ export const trackEmailClick = (label = 'email_click') => {
     });
   }
 };
+
+/**
+ * Tracks a click on a WhatsApp click-to-chat button.
+ *
+ * GA4 only, for the same reason as trackFormSubmit: the Google Ads conversion
+ * action is bid on as a phone call, and counting chats as calls would corrupt
+ * campaign bidding. If chats should count in Ads, give them their own
+ * conversion action.
+ */
+export const trackWhatsAppClick = (label = 'whatsapp_click') => {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', 'whatsapp_click', {
+      send_to: GA4_ID,
+      click_location: label,
+    });
+  }
+};

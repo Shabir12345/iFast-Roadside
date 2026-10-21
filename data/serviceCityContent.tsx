@@ -2,18 +2,27 @@ import React from 'react';
 import { PhoneCall } from 'lucide-react';
 import { PHONE_NUMBER, COMPANY_NAME, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 const InlineCall = ({ source }: { source: string }) => (
   <div className="my-6 text-center sm:text-left">
-    <a
-      href={`tel:${PHONE_NUMBER}`}
-      onClick={() => trackPhoneCall(source)}
-      className="inline-flex items-center justify-center gap-2 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 premium-shadow-hover animate-pulse"
-      style={{ animationDuration: '2s' }}
-    >
-      <PhoneCall size={20} />
-      Call Local Dispatch
-    </a>
+    <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
+      <a
+        href={`tel:${PHONE_NUMBER}`}
+        onClick={() => trackPhoneCall(source)}
+        className="inline-flex items-center justify-center gap-2 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 premium-shadow-hover animate-pulse"
+        style={{ animationDuration: '2s' }}
+      >
+        <PhoneCall size={20} />
+        Call Local Dispatch
+      </a>
+      <WhatsAppButton
+        source={source}
+        className="px-8 py-3 rounded-full text-lg"
+        iconSize={20}
+        label="WhatsApp Us"
+      />
+    </div>
   </div>
 );
 

@@ -6,6 +6,7 @@ import { CITY_CONTENT } from '../data/cityContent';
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from '../components/WhatsAppButton';
 import { serviceHref } from '../utils/serviceHref';
 
 // Where the unit that serves each city actually rolls from. Scarborough is the
@@ -170,17 +171,25 @@ const CityPage: React.FC = () => {
               </div>
             </div>
 
-            <a
-              href={`tel:${PHONE_NUMBER}`}
-              onClick={() => trackPhoneCall(`city_hero_call_${content.id}`)}
-              className="group relative overflow-hidden flex items-center justify-center gap-4 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark px-8 py-5 rounded-2xl font-black text-xl lg:text-3xl transition-all duration-300 shadow-[0_0_40px_rgba(253,224,71,0.5)] hover:shadow-[0_0_60px_rgba(253,224,71,0.7)] transform hover:-translate-y-1 text-center"
-            >
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-              <div className="bg-brand-dark text-brand-yellow p-2 rounded-full group-hover:scale-110 transition-transform duration-300">
-                <PhoneCall size={32} />
-              </div>
-              <span>Call {content.name} Dispatch</span>
-            </a>
+            <div className="flex flex-col gap-4">
+              <a
+                href={`tel:${PHONE_NUMBER}`}
+                onClick={() => trackPhoneCall(`city_hero_call_${content.id}`)}
+                className="group relative overflow-hidden flex items-center justify-center gap-4 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark px-8 py-5 rounded-2xl font-black text-xl lg:text-3xl transition-all duration-300 shadow-[0_0_40px_rgba(253,224,71,0.5)] hover:shadow-[0_0_60px_rgba(253,224,71,0.7)] transform hover:-translate-y-1 text-center"
+              >
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+                <div className="bg-brand-dark text-brand-yellow p-2 rounded-full group-hover:scale-110 transition-transform duration-300">
+                  <PhoneCall size={32} />
+                </div>
+                <span>Call {content.name} Dispatch</span>
+              </a>
+              <WhatsAppButton
+                source={`city_hero_whatsapp_${content.id}`}
+                className="px-8 py-5 rounded-2xl text-xl lg:text-3xl"
+                iconSize={32}
+                label="WhatsApp Us"
+              />
+            </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-6 text-sm font-semibold text-gray-500">
               <div className="flex items-center gap-2"><ShieldCheck className="text-brand-dark" size={20} /> Licensed & Insured</div>
@@ -378,14 +387,22 @@ const CityPage: React.FC = () => {
           <p className="text-xl md:text-2xl text-brand-dark/80 mb-10 max-w-2xl mx-auto font-medium">
             Local dispatch is standing by. Typical ETA {content.responseTime}. One call handles it.
           </p>
-          <a
-            href={`tel:${PHONE_NUMBER}`}
-            onClick={() => trackPhoneCall(`city_footer_call_${content.id}`)}
-            className="inline-flex items-center justify-center gap-4 bg-brand-dark hover:bg-gray-900 text-white px-10 py-6 rounded-2xl font-black text-2xl md:text-4xl transition-all duration-300 shadow-2xl transform hover:scale-105 active:scale-95"
-          >
-            <PhoneCall size={36} className="text-brand-yellow animate-bounce" />
-            {PHONE_NUMBER}
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={`tel:${PHONE_NUMBER}`}
+              onClick={() => trackPhoneCall(`city_footer_call_${content.id}`)}
+              className="inline-flex items-center justify-center gap-4 bg-brand-dark hover:bg-gray-900 text-white px-10 py-6 rounded-2xl font-black text-2xl md:text-4xl transition-all duration-300 shadow-2xl transform hover:scale-105 active:scale-95"
+            >
+              <PhoneCall size={36} className="text-brand-yellow animate-bounce" />
+              {PHONE_NUMBER}
+            </a>
+            <WhatsAppButton
+              source={`city_footer_whatsapp_${content.id}`}
+              className="px-10 py-6 rounded-2xl text-2xl md:text-4xl"
+              iconSize={32}
+              label="WhatsApp"
+            />
+          </div>
         </div>
       </div>
     </div>

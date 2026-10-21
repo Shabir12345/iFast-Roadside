@@ -4,6 +4,7 @@ import { Clock, ArrowRight, PhoneCall } from 'lucide-react';
 import { BLOG_POSTS } from '../data/blogContent';
 import { PHONE_NUMBER } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 const categoryColors: Record<string, string> = {
   'Emergency Tips': 'bg-red-100 text-red-700',
@@ -160,14 +161,22 @@ const Blog: React.FC = () => {
             <p className="text-white/60 text-sm font-bold uppercase tracking-widest mb-3">Need help right now?</p>
             <h2 className="text-3xl md:text-4xl font-black text-white mb-2">Don't Google. Just Call.</h2>
             <p className="text-white/60 mb-8 max-w-md mx-auto">iFAST responds across the Greater Toronto Area. Average arrival: 15 to 30 min.</p>
-            <a
-              href={`tel:${PHONE_NUMBER}`}
-              onClick={() => trackPhoneCall('blog_index_cta')}
-              className="inline-flex items-center justify-center gap-3 bg-brand-yellow hover:bg-brand-yellowHover text-white px-10 py-5 rounded-2xl font-black text-2xl transition-all duration-300 shadow-[0_10px_30px_rgba(255,90,31,0.4)] hover:-translate-y-1"
-            >
-              <PhoneCall size={28} fill="currentColor" />
-              {PHONE_NUMBER}
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={`tel:${PHONE_NUMBER}`}
+                onClick={() => trackPhoneCall('blog_index_cta')}
+                className="inline-flex items-center justify-center gap-3 bg-brand-yellow hover:bg-brand-yellowHover text-white px-10 py-5 rounded-2xl font-black text-2xl transition-all duration-300 shadow-[0_10px_30px_rgba(255,90,31,0.4)] hover:-translate-y-1"
+              >
+                <PhoneCall size={28} fill="currentColor" />
+                {PHONE_NUMBER}
+              </a>
+              <WhatsAppButton
+                source={'blog_index_whatsapp'}
+                className="px-10 py-5 rounded-2xl text-2xl"
+                iconSize={28}
+                label="WhatsApp"
+              />
+            </div>
           </div>
         </div>
       </div>

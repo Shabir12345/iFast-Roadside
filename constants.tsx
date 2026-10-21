@@ -5,6 +5,12 @@ import REVIEW_STATS from './data/reviewStats.json';
 export const COMPANY_NAME = "iFAST Roadside Assistance";
 export const PHONE_NUMBER = "+1 844-814-0070";
 export const EMAIL = "info@ifastroadside.ca";
+
+// WhatsApp click-to-chat. Same line as PHONE_NUMBER; wa.me wants the number as
+// bare digits with country code, no "+", spaces or dashes.
+export const WHATSAPP_NUMBER = "18448140070";
+export const WHATSAPP_MESSAGE = "Hi iFAST, I need roadside help.";
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 export const ADDRESS = "20 Antrim Crescent, Scarborough, ON M1P 4N3";
 export const BUSINESS_HOURS = "24/7";
 // Single source of truth for every review claim on the site — JSON-LD

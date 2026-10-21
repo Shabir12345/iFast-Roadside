@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { PhoneCall, Mail, MapPin, Clock, Send, CheckCircle, Loader2, ShieldCheck } from 'lucide-react';
-import { COMPANY_NAME, PHONE_NUMBER, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES } from '../constants';
-import { trackPhoneCall, trackFormSubmit, trackEmailClick } from '../utils/analytics';
+import { COMPANY_NAME, PHONE_NUMBER, WHATSAPP_URL, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES } from '../constants';
+import { trackPhoneCall, trackFormSubmit, trackEmailClick, trackWhatsAppClick } from '../utils/analytics';
+import WhatsAppButton, { WhatsAppIcon } from '../components/WhatsAppButton';
 
 // Google Maps embed for the home base. Uses the keyless embed endpoint, so no
 // Maps API key or billing account is required.
@@ -83,6 +84,14 @@ const ContactPage: React.FC = () => {
       onClick: () => trackPhoneCall('contact_page_details_call'),
     },
     {
+      icon: WhatsAppIcon,
+      label: 'WhatsApp us',
+      value: 'Chat on WhatsApp',
+      href: WHATSAPP_URL,
+      external: true,
+      onClick: () => trackWhatsAppClick('contact_page_details_whatsapp'),
+    },
+    {
       icon: Mail,
       label: 'Email',
       value: EMAIL,
@@ -131,15 +140,23 @@ const ContactPage: React.FC = () => {
             available {BUSINESS_HOURS} across the Greater Toronto Area. For quotes and non-urgent questions,
             send a message below.
           </p>
-          <a
-            href={`tel:${PHONE_NUMBER}`}
-            onClick={() => trackPhoneCall('contact_page_hero_call')}
-            className="inline-flex items-center gap-3 bg-brand-yellow hover:bg-brand-yellowHover text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 shadow-[0_4px_14px_0_rgba(255,90,31,0.39)] hover:-translate-y-0.5"
-            aria-label={`Call us at ${PHONE_NUMBER}`}
-          >
-            <PhoneCall size={22} fill="currentColor" />
-            {PHONE_NUMBER}
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href={`tel:${PHONE_NUMBER}`}
+              onClick={() => trackPhoneCall('contact_page_hero_call')}
+              className="inline-flex items-center gap-3 bg-brand-yellow hover:bg-brand-yellowHover text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 shadow-[0_4px_14px_0_rgba(255,90,31,0.39)] hover:-translate-y-0.5"
+              aria-label={`Call us at ${PHONE_NUMBER}`}
+            >
+              <PhoneCall size={22} fill="currentColor" />
+              {PHONE_NUMBER}
+            </a>
+            <WhatsAppButton
+              source={'contact_page_hero_whatsapp'}
+              className="px-8 py-4 rounded-full text-lg"
+              iconSize={22}
+              label="WhatsApp Us"
+            />
+          </div>
         </div>
       </section>
 
@@ -167,7 +184,12 @@ const ContactPage: React.FC = () => {
                 return (
                   <li key={d.label}>
                     {d.href ? (
-                      <a href={d.href} onClick={d.onClick} className="flex items-start gap-4 group">
+                      <a
+                        href={d.href}
+                        onClick={d.onClick}
+                        {...(d.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                        className="flex items-start gap-4 group"
+                      >
                         <span className="flex items-start gap-4 group-hover:opacity-80 transition-opacity">{content}</span>
                       </a>
                     ) : (
@@ -204,14 +226,22 @@ const ContactPage: React.FC = () => {
                   Thanks for reaching out. We'll get back to you shortly. Need help right now?
                   Call us and we'll dispatch a unit.
                 </p>
-                <a
-                  href={`tel:${PHONE_NUMBER}`}
-                  onClick={() => trackPhoneCall('contact_page_success_call')}
-                  className="inline-flex items-center gap-2 bg-brand-yellow hover:bg-brand-yellowHover text-white px-7 py-3 rounded-full font-black transition-all"
-                >
-                  <PhoneCall size={18} fill="currentColor" />
-                  {PHONE_NUMBER}
-                </a>
+                <div className="flex flex-wrap items-center justify-center gap-3">
+                  <a
+                    href={`tel:${PHONE_NUMBER}`}
+                    onClick={() => trackPhoneCall('contact_page_success_call')}
+                    className="inline-flex items-center gap-2 bg-brand-yellow hover:bg-brand-yellowHover text-white px-7 py-3 rounded-full font-black transition-all"
+                  >
+                    <PhoneCall size={18} fill="currentColor" />
+                    {PHONE_NUMBER}
+                  </a>
+                  <WhatsAppButton
+                    source={'contact_page_success_whatsapp'}
+                    className="px-7 py-3 rounded-full"
+                    iconSize={18}
+                    label="WhatsApp"
+                  />
+                </div>
               </div>
             ) : (
               <>

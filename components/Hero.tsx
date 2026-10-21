@@ -2,6 +2,7 @@ import type React from 'react';
 import { ArrowRight, Clock, MapPin, ShieldCheck, PhoneCall, Star, CheckCircle2 } from 'lucide-react';
 import { PHONE_NUMBER } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from './WhatsAppButton';
 import { useGoogleReviewStats } from '../hooks/useGoogleReviewStats';
 
 const Hero: React.FC = () => {
@@ -56,7 +57,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-center lg:justify-start items-center">
               <a
                 href={`tel:${PHONE_NUMBER}`}
                 onClick={() => trackPhoneCall('home_hero_call')}
@@ -67,6 +68,12 @@ const Hero: React.FC = () => {
                 </div>
                 Call: {PHONE_NUMBER}
               </a>
+              <WhatsAppButton
+                source="home_hero_whatsapp"
+                className="w-full sm:w-auto px-8 py-5 text-xl lg:text-2xl rounded-2xl"
+                iconSize={28}
+                label="WhatsApp Us"
+              />
               <a
                 href="#services"
                 className="w-full sm:w-auto px-8 py-5 bg-gray-50 hover:bg-gray-100 text-brand-dark font-bold text-lg rounded-2xl border border-gray-200 transition-all flex items-center justify-center gap-2"

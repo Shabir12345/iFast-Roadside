@@ -4,6 +4,7 @@ import { Clock, ArrowLeft, ChevronDown, Calendar, ArrowRight, PhoneCall } from '
 import { BLOG_POSTS, getBlogPost, BLOG_RELATED_SERVICES } from '../data/blogContent';
 import { PHONE_NUMBER, SERVICES } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from '../components/WhatsAppButton';
 import { serviceHref } from '../utils/serviceHref';
 
 const categoryColors: Record<string, string> = {
@@ -129,7 +130,7 @@ const BlogPost: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/50 to-transparent"></div>
               {/* Sticky call badge on hero */}
-              <div className="absolute bottom-6 right-6">
+              <div className="absolute bottom-6 right-6 flex flex-wrap justify-end gap-2">
                 <a
                   href={`tel:${PHONE_NUMBER}`}
                   onClick={() => trackPhoneCall(`blog_post_hero_${post.slug}`)}
@@ -138,6 +139,12 @@ const BlogPost: React.FC = () => {
                   <PhoneCall size={16} fill="currentColor" />
                   Need Help Now?
                 </a>
+                <WhatsAppButton
+                  source={`blog_post_hero_whatsapp_${post.slug}`}
+                  className="px-4 py-2.5 rounded-xl text-sm !gap-2 shadow-lg"
+                  iconSize={16}
+                  label="WhatsApp"
+                />
               </div>
             </div>
           </div>
@@ -260,14 +267,22 @@ const BlogPost: React.FC = () => {
           <p className="text-lg text-white/70 mb-10 max-w-xl mx-auto font-medium">
             Skip the Googling. One call deploys the nearest iFAST unit to your location. Average arrival: 15 to 30 minutes.
           </p>
-          <a
-            href={`tel:${PHONE_NUMBER}`}
-            onClick={() => trackPhoneCall(`blog_post_footer_${post.slug}`)}
-            className="inline-flex items-center justify-center gap-4 bg-brand-yellow hover:bg-brand-yellowHover text-white px-10 py-6 rounded-2xl font-black text-2xl md:text-4xl transition-all duration-300 shadow-[0_10px_35px_rgba(255,90,31,0.4)] hover:-translate-y-1"
-          >
-            <PhoneCall size={32} fill="currentColor" />
-            {PHONE_NUMBER}
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={`tel:${PHONE_NUMBER}`}
+              onClick={() => trackPhoneCall(`blog_post_footer_${post.slug}`)}
+              className="inline-flex items-center justify-center gap-4 bg-brand-yellow hover:bg-brand-yellowHover text-white px-10 py-6 rounded-2xl font-black text-2xl md:text-4xl transition-all duration-300 shadow-[0_10px_35px_rgba(255,90,31,0.4)] hover:-translate-y-1"
+            >
+              <PhoneCall size={32} fill="currentColor" />
+              {PHONE_NUMBER}
+            </a>
+            <WhatsAppButton
+              source={`blog_post_footer_whatsapp_${post.slug}`}
+              className="px-10 py-6 rounded-2xl text-2xl md:text-4xl"
+              iconSize={32}
+              label="WhatsApp"
+            />
+          </div>
         </div>
       </div>
     </div>

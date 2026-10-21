@@ -21,6 +21,7 @@ import {
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from '../components/WhatsAppButton';
 import { useGoogleReviewStats } from '../hooks/useGoogleReviewStats';
 
 const MobileMechanicLanding: React.FC = () => {
@@ -117,7 +118,7 @@ const MobileMechanicLanding: React.FC = () => {
                 Stranded in your driveway? Car making a strange noise? Skip the tow truck and the dealership wait. Our certified mechanics bring the shop to your door.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 mb-10">
                 <a
                   href={`tel:${PHONE_NUMBER}`}
                   onClick={() => trackPhoneCall('mechanic_hero_call')}
@@ -126,6 +127,12 @@ const MobileMechanicLanding: React.FC = () => {
                   <PhoneCall size={24} fill="currentColor" />
                   Request Service Now
                 </a>
+                <WhatsAppButton
+                  source="mechanic_hero_whatsapp"
+                  className="px-8 py-5 rounded-2xl text-xl"
+                  iconSize={24}
+                  label="WhatsApp Us"
+                />
                 <div className="flex items-center gap-4 bg-gray-50 px-6 py-4 rounded-2xl border border-gray-100">
                   {/* Real Google rating — replaced a row of i.pravatar.cc
                       placeholder faces labelled "Customer". See CityPage.tsx. */}
@@ -333,14 +340,22 @@ const MobileMechanicLanding: React.FC = () => {
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto font-medium">
             Don't wait in line at a shop. Our nearest mobile unit is ready to roll to your location. Get an instant quote over the phone.
           </p>
-          <a
-            href={`tel:${PHONE_NUMBER}`}
-            onClick={() => trackPhoneCall('mechanic_footer_call')}
-            className="group inline-flex items-center gap-4 bg-brand-dark text-white px-10 py-6 rounded-2xl font-black text-2xl md:text-4xl transition-all duration-300 shadow-2xl hover:scale-105 active:scale-95"
-          >
-            <PhoneCall size={32} fill="currentColor" />
-            {PHONE_NUMBER}
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={`tel:${PHONE_NUMBER}`}
+              onClick={() => trackPhoneCall('mechanic_footer_call')}
+              className="group inline-flex items-center gap-4 bg-brand-dark text-white px-10 py-6 rounded-2xl font-black text-2xl md:text-4xl transition-all duration-300 shadow-2xl hover:scale-105 active:scale-95"
+            >
+              <PhoneCall size={32} fill="currentColor" />
+              {PHONE_NUMBER}
+            </a>
+            <WhatsAppButton
+              source={'mechanic_footer_whatsapp'}
+              className="px-10 py-6 rounded-2xl text-2xl md:text-4xl"
+              iconSize={32}
+              label="WhatsApp"
+            />
+          </div>
         </div>
       </section>
     </div>
