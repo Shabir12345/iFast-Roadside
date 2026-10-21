@@ -2,6 +2,7 @@ import React from 'react';
 import { Users, Zap, PhoneCall, BadgeDollarSign, Wrench } from 'lucide-react';
 import { COMPANY_NAME, ADDRESS, PHONE_NUMBER, GOOGLE_RATING } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from './WhatsAppButton';
 
 const About: React.FC = () => {
     return (
@@ -86,13 +87,21 @@ const About: React.FC = () => {
                             </div>
                         </div>
 
-                        <a
-                            href={`tel:${PHONE_NUMBER}`}
-                            onClick={() => trackPhoneCall('about_call_home')}
-                            className="px-10 py-4 bg-brand-dark text-white rounded-2xl font-bold premium-shadow-hover hover:bg-gray-800 transition-all inline-flex items-center gap-3 w-fit"
-                        >
-                            Talk to a Live Dispatcher <PhoneCall size={20} className="text-brand-yellow" />
-                        </a>
+                        <div className="flex flex-col sm:items-start gap-4">
+                          <a
+                              href={`tel:${PHONE_NUMBER}`}
+                              onClick={() => trackPhoneCall('about_call_home')}
+                              className="px-10 py-4 bg-brand-dark text-white rounded-2xl font-bold premium-shadow-hover hover:bg-gray-800 transition-all inline-flex items-center gap-3 w-fit"
+                          >
+                              Talk to a Live Dispatcher <PhoneCall size={20} className="text-brand-yellow" />
+                          </a>
+                          <WhatsAppButton
+                            source={'about_whatsapp_home'}
+                            className="px-10 py-4 rounded-2xl w-fit"
+                            iconSize={20}
+                            label="WhatsApp Us"
+                          />
+                        </div>
                     </div>
                 </div>
             </div>

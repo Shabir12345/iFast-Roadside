@@ -2,18 +2,27 @@ import React from 'react';
 import { PHONE_NUMBER, COMPANY_NAME, GOOGLE_REVIEWS_COUNT } from '../constants';
 import { PhoneCall, type LucideIcon, Disc3, Gauge, Wrench, ShieldCheck, Zap, Clock, CircleDot } from 'lucide-react';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 const CallNowButton = ({ source = 'service_content_inline' }: { source?: string }) => (
   <div className="my-6 text-center sm:text-left">
-    <a
-      href={`tel:${PHONE_NUMBER}`}
-      onClick={() => trackPhoneCall(source)}
-      className="inline-flex items-center justify-center gap-2 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 premium-shadow-hover animate-pulse"
-      style={{ animationDuration: '2s' }}
-    >
-      <PhoneCall size={20} />
-      Call Now For Quick Help
-    </a>
+    <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
+      <a
+        href={`tel:${PHONE_NUMBER}`}
+        onClick={() => trackPhoneCall(source)}
+        className="inline-flex items-center justify-center gap-2 bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 premium-shadow-hover animate-pulse"
+        style={{ animationDuration: '2s' }}
+      >
+        <PhoneCall size={20} />
+        Call Now For Quick Help
+      </a>
+      <WhatsAppButton
+        source={source}
+        className="px-8 py-3 rounded-full text-lg"
+        iconSize={20}
+        label="WhatsApp Us"
+      />
+    </div>
     <p className="text-xs text-gray-500 mt-2">✨ Average arrival time: 15-30 minutes</p>
   </div>
 );

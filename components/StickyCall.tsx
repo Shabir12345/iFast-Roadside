@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone, Clock } from 'lucide-react';
 import { PHONE_NUMBER } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from './WhatsAppButton';
 
 const StickyCall: React.FC = () => {
   return (
@@ -15,10 +16,11 @@ const StickyCall: React.FC = () => {
            <Clock size={12} className="text-brand-yellow" /> <span>Avg ETA: ~30 Mins</span>
         </div>
       </div>
+      <div className="flex gap-2">
       <a 
         href={`tel:${PHONE_NUMBER}`}
         onClick={() => trackPhoneCall('sticky_call_mobile')}
-        className="group relative overflow-hidden flex items-center justify-center gap-3 w-full bg-brand-yellow text-white font-black py-4 rounded-xl shadow-[0_0_20px_rgba(255,90,31,0.5)] active:scale-95 transition-all duration-200"
+        className="group relative overflow-hidden flex items-center justify-center gap-3 flex-1 min-w-0 bg-brand-yellow text-white font-black py-4 rounded-xl shadow-[0_0_20px_rgba(255,90,31,0.5)] active:scale-95 transition-all duration-200"
       >
         <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-[shimmer_2s_infinite]"></div>
         <div className="text-brand-dark bg-white p-1.5 rounded-full shadow-sm">
@@ -26,6 +28,13 @@ const StickyCall: React.FC = () => {
         </div>
         <span className="text-xl drop-shadow-sm tracking-wide">Call Now for Help</span>
       </a>
+      <WhatsAppButton
+        source="sticky_whatsapp_mobile"
+        className="flex-col !gap-0.5 px-4 rounded-xl text-[11px] uppercase tracking-wide active:scale-95 hover:!translate-y-0"
+        iconSize={26}
+        label="WhatsApp"
+      />
+      </div>
     </div>
   );
 };

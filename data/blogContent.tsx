@@ -2,6 +2,7 @@ import React from 'react';
 import { PhoneCall, CheckCircle2, AlertTriangle, Clock, DollarSign, ThumbsUp, ThumbsDown, Star, Gauge, ShieldCheck, BatteryCharging, KeyRound, Snowflake, MapPin, Wrench } from 'lucide-react';
 import { PHONE_NUMBER, COMPANY_NAME } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 const BlogCTA = ({ source }: { source: string }) => (
   <div className="my-8 bg-brand-dark rounded-2xl p-8 text-center relative overflow-hidden">
@@ -13,14 +14,22 @@ const BlogCTA = ({ source }: { source: string }) => (
         Available Now: East GTA
       </div>
       <p className="text-white font-black text-xl md:text-2xl mb-6">Stranded right now? Don't wait.</p>
-      <a
-        href={`tel:${PHONE_NUMBER}`}
-        onClick={() => trackPhoneCall(source)}
-        className="inline-flex items-center justify-center gap-3 bg-brand-yellow hover:bg-brand-yellowHover text-white px-8 py-4 rounded-xl font-black text-xl transition-all duration-300 shadow-[0_8px_25px_rgba(255,90,31,0.4)] hover:-translate-y-0.5"
-      >
-        <PhoneCall size={22} fill="currentColor" />
-        Call {PHONE_NUMBER}
-      </a>
+      <div className="flex flex-wrap justify-center gap-3">
+        <a
+          href={`tel:${PHONE_NUMBER}`}
+          onClick={() => trackPhoneCall(source)}
+          className="inline-flex items-center justify-center gap-3 bg-brand-yellow hover:bg-brand-yellowHover text-white px-8 py-4 rounded-xl font-black text-xl transition-all duration-300 shadow-[0_8px_25px_rgba(255,90,31,0.4)] hover:-translate-y-0.5"
+        >
+          <PhoneCall size={22} fill="currentColor" />
+          Call {PHONE_NUMBER}
+        </a>
+        <WhatsAppButton
+          source={source}
+          className="px-8 py-4 rounded-xl text-xl"
+          iconSize={22}
+          label="WhatsApp Us"
+        />
+      </div>
       <p className="text-white/50 text-xs mt-3">Average arrival: 15 to 30 min · Pickering · Ajax · Whitby · Oshawa · Scarborough</p>
     </div>
   </div>

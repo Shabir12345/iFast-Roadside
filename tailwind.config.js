@@ -22,6 +22,11 @@ export default {
           yellowHover: '#E04812',
           gray: '#475569',
         },
+        // WhatsApp's own brand green, used only on WhatsApp buttons.
+        whatsapp: {
+          DEFAULT: '#25D366',
+          hover: '#1EBE5B',
+        },
       },
     },
   },

@@ -6,6 +6,7 @@ import { COMPANY_NAME, PHONE_NUMBER, SERVICES } from '../constants';
 import { REGION_CONTENT } from '../data/regionContent';
 import { CITY_CONTENT } from '../data/cityContent';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from './WhatsAppButton';
 import { serviceHref } from '../utils/serviceHref';
 
 // Nav data is derived from the content maps, never hand-listed — that is why
@@ -142,7 +143,13 @@ const Header: React.FC = () => {
         )}
 
         {/* CTA Button */}
-        <div className="hidden md:flex">
+        <div className="hidden md:flex items-center gap-3">
+          <WhatsAppButton
+            source="header_desktop_whatsapp"
+            className="px-5 py-3 rounded-full text-[15px] !gap-2"
+            iconSize={18}
+            label="WhatsApp"
+          />
           <a
             href={`tel:${PHONE_NUMBER}`}
             onClick={() => trackPhoneCall('header_desktop_call')}
@@ -272,6 +279,12 @@ const Header: React.FC = () => {
                 <PhoneCall size={22} fill="currentColor" />
                 Call {PHONE_NUMBER}
               </a>
+              <WhatsAppButton
+                source="header_mobile_whatsapp"
+                className="flex w-full mt-3 py-4 rounded-xl text-lg"
+                iconSize={22}
+                label="WhatsApp Us"
+              />
             </div>
           </div>
         </div>

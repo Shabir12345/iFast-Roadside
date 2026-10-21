@@ -6,6 +6,7 @@ import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import Services from '../components/Services';
 import { trackPhoneCall } from '../utils/analytics';
+import WhatsAppButton from '../components/WhatsAppButton';
 import { REGION_CONTENT } from '../data/regionContent';
 
 const RegionServiceAreaPage: React.FC = () => {
@@ -81,17 +82,25 @@ const RegionServiceAreaPage: React.FC = () => {
               ))}
             </div>
 
-            <a
-              href={`tel:${PHONE_NUMBER}`}
-              onClick={() => trackPhoneCall(`${callSource}_hero_call`)}
-              className="group relative overflow-hidden flex items-center justify-center gap-4 bg-brand-yellow hover:bg-brand-yellowHover text-white px-8 py-5 rounded-2xl font-black text-xl lg:text-3xl transition-all duration-300 shadow-[0_10px_30px_rgba(255,90,31,0.35)] hover:shadow-[0_15px_40px_rgba(255,90,31,0.5)] transform hover:-translate-y-1 text-center w-full sm:w-auto"
-            >
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-              <div className="bg-white/20 p-2 rounded-full group-hover:scale-110 transition-transform duration-300">
-                <PhoneCall size={32} fill="currentColor" />
-              </div>
-              <span className="tracking-wide">Click for {content.name} Dispatch</span>
-            </a>
+            <div className="flex flex-col sm:items-start gap-4">
+              <a
+                href={`tel:${PHONE_NUMBER}`}
+                onClick={() => trackPhoneCall(`${callSource}_hero_call`)}
+                className="group relative overflow-hidden flex items-center justify-center gap-4 bg-brand-yellow hover:bg-brand-yellowHover text-white px-8 py-5 rounded-2xl font-black text-xl lg:text-3xl transition-all duration-300 shadow-[0_10px_30px_rgba(255,90,31,0.35)] hover:shadow-[0_15px_40px_rgba(255,90,31,0.5)] transform hover:-translate-y-1 text-center w-full sm:w-auto"
+              >
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
+                <div className="bg-white/20 p-2 rounded-full group-hover:scale-110 transition-transform duration-300">
+                  <PhoneCall size={32} fill="currentColor" />
+                </div>
+                <span className="tracking-wide">Click for {content.name} Dispatch</span>
+              </a>
+              <WhatsAppButton
+                source={`${callSource}_hero_whatsapp`}
+                className="px-8 py-5 rounded-2xl text-xl lg:text-3xl w-full sm:w-auto"
+                iconSize={32}
+                label="WhatsApp Us"
+              />
+            </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-6 text-sm font-semibold text-gray-500">
               <div className="flex items-center gap-2 hover:text-brand-dark transition-colors"><ShieldCheck className="text-brand-dark" size={20} /> Licensed & Insured</div>
@@ -166,16 +175,24 @@ const RegionServiceAreaPage: React.FC = () => {
           <p className="text-xl md:text-2xl text-brand-dark/80 mb-10 max-w-2xl mx-auto font-medium">
             {content.bottomCtaText}
           </p>
-          <a
-            href={`tel:${PHONE_NUMBER}`}
-            onClick={() => trackPhoneCall(`${callSource}_footer_call`)}
-            className="group inline-flex flex-col sm:flex-row items-center justify-center gap-4 bg-brand-dark hover:bg-gray-900 text-white px-10 py-6 rounded-2xl font-black text-2xl md:text-4xl transition-all duration-300 shadow-[0_10px_35px_rgba(11,30,54,0.4)] transform hover:-translate-y-1"
-          >
-            <div className="flex items-center gap-3 text-brand-yellow group-hover:text-white transition-colors">
-              <PhoneCall size={36} fill="currentColor" className="animate-bounce" />
-            </div>
-            {PHONE_NUMBER}
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={`tel:${PHONE_NUMBER}`}
+              onClick={() => trackPhoneCall(`${callSource}_footer_call`)}
+              className="group inline-flex flex-col sm:flex-row items-center justify-center gap-4 bg-brand-dark hover:bg-gray-900 text-white px-10 py-6 rounded-2xl font-black text-2xl md:text-4xl transition-all duration-300 shadow-[0_10px_35px_rgba(11,30,54,0.4)] transform hover:-translate-y-1"
+            >
+              <div className="flex items-center gap-3 text-brand-yellow group-hover:text-white transition-colors">
+                <PhoneCall size={36} fill="currentColor" className="animate-bounce" />
+              </div>
+              {PHONE_NUMBER}
+            </a>
+            <WhatsAppButton
+              source={`${callSource}_footer_whatsapp`}
+              className="px-10 py-6 rounded-2xl text-2xl md:text-4xl"
+              iconSize={32}
+              label="WhatsApp"
+            />
+          </div>
         </div>
       </div>
     </div>
