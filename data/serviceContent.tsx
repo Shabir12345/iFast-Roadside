@@ -73,8 +73,8 @@ export interface ServiceContent {
 export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   'mobile-mechanic': {
     id: 'mobile-mechanic',
-    seoTitle: '24/7 Mobile Mechanic GTA | Emergency On-Site Car Repair Pickering, Ajax, Oshawa',
-    seoDescription: 'Need a mechanic that comes to you? iFAST Roadside provides 24/7 mobile mechanic services across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Expert diagnostics, on-site repairs, and emergency service. Call now.',
+    seoTitle: 'Mobile Mechanic Near Me GTA | We Come to You 24/7',
+    seoDescription: 'Need a mechanic who comes to you? iFAST sends a mobile mechanic across the GTA, 24/7. Diagnostics and on-site repairs at home or roadside. Call now.',
     keywords: 'mobile mechanic Pickering, emergency car repair Ajax, on-site mechanic Oshawa, mobile auto repair Whitby, 24/7 mechanic Scarborough, mobile engine diagnostics GTA',
     heroImage: '/mobile_mechanic_hero.jpg',
     blogSections: [
@@ -355,8 +355,8 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'jump-start': {
     id: 'jump-start',
-    seoTitle: 'Car Won’t Start? 24/7 Mobile Jump Start Across the GTA',
-    seoDescription: 'One click and then nothing? We bring commercial boost packs to your driveway or condo garage, then test whether the battery will hold. 24/7 GTA. Call now.',
+    seoTitle: 'Jump Start & Battery Boost GTA | 24/7 Mobile Service',
+    seoDescription: 'Car won\'t start? We boost your car in your driveway, condo garage or at the roadside, then test the battery. 24/7 across the GTA. Call now.',
     keywords: 'car battery jump start Pickering, dead battery service Ajax, mobile jump start Oshawa, onsite battery boost Whitby, 24/7 jump start Scarborough, car won\'t start GTA',
     heroImage: '/jump_start_hero.jpg',
     hero: {

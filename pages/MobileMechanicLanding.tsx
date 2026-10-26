@@ -110,7 +110,7 @@ const MobileMechanicLanding: React.FC = () => {
               </div>
               
               <h1 className="text-5xl md:text-7xl font-black text-brand-dark mb-6 leading-tight tracking-tighter">
-                The Mechanic That <br />
+                The Mobile Mechanic That <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-orange-500">Comes To You.</span>
               </h1>
               
