@@ -1,6 +1,6 @@
 import type React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { COMPANY_NAME, PHONE_NUMBER, WHATSAPP_URL, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES } from '../constants';
+import { COMPANY_NAME, PHONE_NUMBER, WHATSAPP_URL, EMAIL, ADDRESS, BUSINESS_HOURS, SERVICES, YEARS_IN_BUSINESS } from '../constants';
 import { CITY_CONTENT } from '../data/cityContent';
 import { REGION_CONTENT } from '../data/regionContent';
 import { trackPhoneCall, trackEmailClick, trackWhatsAppClick } from '../utils/analytics';
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
             </a>
             <p className="max-w-md mb-6">
               Your trusted partner for {BUSINESS_HOURS} roadside assistance and mobile tire services
-              across the Greater Toronto Area. Licensed, insured, and ready to help when you need it most.
+              across the Greater Toronto Area. {YEARS_IN_BUSINESS} years in business, licensed, insured, and ready to help when you need it most.
             </p>
             {/* Social icons removed until real profiles exist — dead "#" links erode trust. */}
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Users, Zap, PhoneCall, BadgeDollarSign, Wrench } from 'lucide-react';
-import { COMPANY_NAME, ADDRESS, PHONE_NUMBER, GOOGLE_RATING } from '../constants';
+import { COMPANY_NAME, ADDRESS, PHONE_NUMBER, GOOGLE_RATING, YEARS_IN_BUSINESS } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
 import WhatsAppButton from './WhatsAppButton';
 
@@ -30,6 +30,8 @@ const About: React.FC = () => {
                                     <Zap className="text-brand-yellow mb-4" size={32} />
                                     <div className="text-2xl font-bold">24/7</div>
                                     <div className="text-gray-400 text-xs uppercase tracking-widest mt-1">Availability</div>
+                                    <div className="text-2xl font-bold mt-5">{YEARS_IN_BUSINESS} Years</div>
+                                    <div className="text-gray-400 text-xs uppercase tracking-widest mt-1">In Business</div>
                                 </div>
                                 <img
                                     src="/roadside_technician_towing.webp"

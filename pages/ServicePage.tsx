@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { SERVICES, PHONE_NUMBER } from '../constants';
+import { SERVICES, PHONE_NUMBER, YEARS_IN_BUSINESS } from '../constants';
 import { SERVICE_CONTENT } from '../data/serviceContent';
 import { SERVICE_CITY_CONTENT } from '../data/serviceCityContent';
-import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle2, Star, ShieldCheck, MapPin, Camera, Zap } from 'lucide-react';
+import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle2, Star, ShieldCheck, MapPin, Camera, Zap, Award } from 'lucide-react';
 import { CITY_CONTENT } from '../data/cityContent';
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
@@ -197,6 +197,7 @@ const ServicePage: React.FC = () => {
            <div className="flex items-center gap-2"><ShieldCheck className="text-brand-dark" size={24} /> Fully Licensed</div>
            <div className="flex items-center gap-2"><Zap className="text-brand-yellow" size={24} /> Fast Arrival Times</div>
            <div className="flex items-center gap-2"><Camera className="text-brand-dark" size={24} /> 100% Damage Free</div>
+           <div className="flex items-center gap-2"><Award className="text-brand-dark" size={24} /> {YEARS_IN_BUSINESS} Years in Business</div>
         </div>
       </div>
 

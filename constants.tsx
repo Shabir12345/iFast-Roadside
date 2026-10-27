@@ -15,6 +15,9 @@ export const WHATSAPP_MESSAGE = "Hi iFAST, I need roadside help.";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 export const ADDRESS = "20 Antrim Crescent, Scarborough, ON M1P 4N3";
 export const BUSINESS_HOURS = "24/7";
+// Matches the "3+ years in business" line Google shows on the Business Profile.
+// Bump it when the GBP does (4+ etc.) so the site never claims more than Google.
+export const YEARS_IN_BUSINESS = "3+";
 // Single source of truth for every review claim on the site — JSON-LD
 // aggregateRating, the visible "X+ Google Reviews" badges, and body copy.
 //

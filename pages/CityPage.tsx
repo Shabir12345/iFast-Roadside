@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle, Star, ShieldCheck, ThumbsUp, MapPin, Route, Camera, Circle } from 'lucide-react';
-import { PHONE_NUMBER, COMPANY_NAME, SERVICES, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
+import { PhoneCall, ArrowLeft, ChevronDown, Clock, CheckCircle, Star, ShieldCheck, ThumbsUp, MapPin, Route, Camera, Circle, Award } from 'lucide-react';
+import { PHONE_NUMBER, COMPANY_NAME, SERVICES, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT, YEARS_IN_BUSINESS } from '../constants';
 import { CITY_CONTENT } from '../data/cityContent';
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
@@ -194,6 +194,7 @@ const CityPage: React.FC = () => {
             <div className="mt-8 flex flex-wrap items-center gap-6 text-sm font-semibold text-gray-500">
               <div className="flex items-center gap-2"><ShieldCheck className="text-brand-dark" size={20} /> Licensed & Insured</div>
               <div className="flex items-center gap-2"><ThumbsUp className="text-brand-dark" size={20} /> Damage-Free Guarantee</div>
+              <div className="flex items-center gap-2"><Award className="text-brand-dark" size={20} /> {YEARS_IN_BUSINESS} Years in Business</div>
             </div>
           </div>
 

@@ -1,6 +1,6 @@
 import type React from 'react';
-import { ArrowRight, Clock, MapPin, ShieldCheck, PhoneCall, Star, CheckCircle2 } from 'lucide-react';
-import { PHONE_NUMBER } from '../constants';
+import { ArrowRight, Clock, MapPin, ShieldCheck, PhoneCall, Star, CheckCircle2, Award } from 'lucide-react';
+import { PHONE_NUMBER, YEARS_IN_BUSINESS } from '../constants';
 import { trackPhoneCall } from '../utils/analytics';
 import WhatsAppButton from './WhatsAppButton';
 import { useGoogleReviewStats } from '../hooks/useGoogleReviewStats';
@@ -31,6 +31,10 @@ const Hero: React.FC = () => {
                     <Star size={14} fill="currentColor" />
                  </div>
                  <span className="ml-1 tracking-tight">{rating}/5 ({reviewsCount} Reviews)</span>
+              </div>
+              <div className="inline-flex items-center gap-1.5 text-brand-dark bg-gray-50 px-3 py-1.5 rounded-full text-xs font-bold border border-gray-200">
+                <Award size={14} className="text-brand-yellow" />
+                <span className="tracking-tight">{YEARS_IN_BUSINESS} Years in Business</span>
               </div>
             </div>
 

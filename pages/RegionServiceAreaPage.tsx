@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import { PhoneCall, ShieldCheck, ThumbsUp, Clock, CheckCircle, Star, MapPin } from 'lucide-react';
-import { PHONE_NUMBER, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT } from '../constants';
+import { PhoneCall, ShieldCheck, ThumbsUp, Clock, CheckCircle, Star, MapPin, Award } from 'lucide-react';
+import { PHONE_NUMBER, GOOGLE_RATING, GOOGLE_REVIEWS_COUNT, YEARS_IN_BUSINESS } from '../constants';
 import Process from '../components/Process';
 import GoogleReviews from '../components/GoogleReviews';
 import Services from '../components/Services';
@@ -105,6 +105,7 @@ const RegionServiceAreaPage: React.FC = () => {
             <div className="mt-8 flex flex-wrap items-center gap-6 text-sm font-semibold text-gray-500">
               <div className="flex items-center gap-2 hover:text-brand-dark transition-colors"><ShieldCheck className="text-brand-dark" size={20} /> Licensed & Insured</div>
               <div className="flex items-center gap-2 hover:text-brand-dark transition-colors"><ThumbsUp className="text-brand-dark" size={20} /> Verified Professionals</div>
+              <div className="flex items-center gap-2 hover:text-brand-dark transition-colors"><Award className="text-brand-dark" size={20} /> {YEARS_IN_BUSINESS} Years in Business</div>
             </div>
           </div>
 

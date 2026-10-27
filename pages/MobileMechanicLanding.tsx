@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { PHONE_NUMBER, COMPANY_NAME, GOOGLE_RATING } from '../constants';
+import { PHONE_NUMBER, COMPANY_NAME, GOOGLE_RATING, YEARS_IN_BUSINESS } from '../constants';
 import { SERVICE_CONTENT } from '../data/serviceContent';
 import { CITY_CONTENT } from '../data/cityContent';
 import { 
@@ -142,6 +142,7 @@ const MobileMechanicLanding: React.FC = () => {
                       {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                     </div>
                     <p className="text-xs font-bold text-gray-500">{reviewsCount}+ Google Reviews</p>
+                    <p className="text-xs font-bold text-gray-500">{YEARS_IN_BUSINESS} Years in Business</p>
                   </div>
                 </div>
               </div>
