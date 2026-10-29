@@ -34,7 +34,7 @@ await warmup();
 
 // Kept in sync with NOINDEX_COMBOS in pages/ServiceCityPage.tsx.
 const NOINDEX_COMBOS = [
-  'mobile-mechanic/scarborough', 'mobile-mechanic/pickering', 'mobile-mechanic/ajax', 'mobile-mechanic/whitby', 'mobile-mechanic/oshawa',
+  'mobile-mechanic/pickering', 'mobile-mechanic/ajax',
   'tire-change/pickering', 'tire-change/whitby', 'tire-change/oshawa',
   'jump-start/ajax', 'jump-start/whitby', 'jump-start/oshawa',
   'lockout/ajax', 'lockout/whitby', 'lockout/oshawa',

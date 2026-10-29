@@ -115,49 +115,65 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
       ]
     },
     scarborough: {
-      seoTitle: 'Mobile Mechanic Scarborough | 24/7 On-Site Auto Repair | iFAST Roadside',
-      seoDescription: 'Need a mechanic in Scarborough? iFAST provides 24/7 mobile mechanic services across Agincourt, Malvern, and the 401. Expert diagnostics and on-site repair. 20-30 min arrival. Call now.',
-      keywords: 'mobile mechanic Scarborough, on-site car repair Scarborough, emergency mechanic Scarborough, mobile auto repair Agincourt, car won\'t start Scarborough',
-      h1: 'Mobile Mechanic in Scarborough: 24/7 On-Site Auto Repair',
+      seoTitle: 'Mobile Mechanic Scarborough | Repair At Your Home | iFAST',
+      seoDescription: 'Mobile mechanic in Scarborough: diagnostics, brakes, batteries and pre-purchase inspections at your home, condo or workplace. Scarborough is our home base.',
+      keywords: 'mobile mechanic Scarborough, car repair at home Scarborough, mobile mechanic Agincourt, mobile mechanic Malvern, mechanic comes to you Scarborough, mobile diagnostics Scarborough, pre purchase inspection Scarborough',
+      h1: 'Mobile Mechanic in Scarborough: Repairs At Your Home or Workplace',
       intro: (
         <>
           <p className="mb-4">
-            Stuck in your driveway in Agincourt or broken down near the STC? <strong>{COMPANY_NAME}</strong> dispatches expert mobile mechanics directly from our Scarborough base at 20 Antrim Crescent. We typically reach any Scarborough location in <strong>15-25 minutes</strong>, equipped with advanced diagnostic tools to solve your automotive issues on the spot.
+            Most repairs that keep a car off the road do not actually need a hoist. Diagnostics, batteries, starters, alternators, brakes, belts, sensors and pre-purchase inspections can all be done properly where the car is parked. <strong>{COMPANY_NAME}</strong> is based in Scarborough, so we bring the tools and the diagnostic scanner to your driveway in Agincourt, your lot near Scarborough Town Centre or your condo garage in Malvern.
           </p>
           <p className="mb-4">
-            Whether it's a failed starter, a snapped belt, or a mysterious electrical issue, our Scarborough-based mechanics handle it all without the need for an expensive tow. We bring the shop to you, anywhere in Scarborough.
+            Scarborough is our home base, which is why it is where we are usually closest. You get told what is actually wrong, what it will cost and, importantly, whether it is something we can do on-site or something that genuinely needs a shop. <strong>Call {PHONE_NUMBER}.</strong>
           </p>
-          <InlineCall source="sc_mechanic_intro" />
+          <InlineCall source="service_city_mobile-mechanic_scarborough_intro" />
         </>
       ),
       localScenario: (
         <>
           <p className="mb-4">
-            Scarborough's stop-and-go traffic on Kennedy and Markham Road is brutal on cooling systems and brakes. We often handle emergency radiator hose repairs and brake service for commuters who can't afford to wait for a traditional shop.
+            Scarborough is a commuter district, and the pattern is familiar: a car that did fine all week starts grinding on the brakes after a run down Kennedy or Markham Road, or throws a check-engine light on the 401 and then sits in the driveway while you work out how to get it to a shop and yourself to work. A mobile mechanic removes that gap. We read the codes where the car is parked and tell you whether it can wait or cannot.
           </p>
           <p className="mb-4">
-            If you're in a residential pocket like Guildwood or Rouge, we'll perform the diagnosis and repair right in your driveway, keeping you out of the elements while we work.
+            Condo residents around Sheppard, Kennedy and Eglinton have the other version of the problem: no driveway and nowhere to leave a car for the day. We work in the parking spot, so brake jobs, battery and starter replacement and diagnostics happen on your level while you are upstairs. Give dispatch the building address and parking level when you book so we can confirm clearance.
+          </p>
+          <p className="mb-4">
+            The rest is ordinary daily work across Agincourt, Malvern, Woburn, Rouge, Birch Cliff and Guildwood: a battery that gave up in the cold, a belt squealing on startup, a used car you are about to buy from a private seller and want checked before money changes hands.
           </p>
         </>
       ),
       uniqueAngle: (
-        <p className="mb-4">
-          Being based in Scarborough, our response times for mechanical diagnostics are the fastest in the city. We often have a technician available to start your repair while others are still on the phone with a tow truck.
-        </p>
+        <>
+          <p className="mb-4">
+            The value of a mobile mechanic is not only convenience: it is that you are standing there. When we pull a code or show you a worn pad, you see the actual part on your actual car, and you decide with the information in front of you rather than over the phone from a service advisor you have never met. Nothing gets done that you have not agreed to first.
+          </p>
+          <p className="mb-4">
+            We are also clear about our limits. Engine internals and full rebuilds belong in a shop, and we will tell you that instead of starting a job we cannot finish in a parking garage. Short of that the range is wider than most people expect, and because Scarborough is where we are based, the same crew that handles your roadside emergency is the one that shows up for your repair.
+          </p>
+        </>
       ),
-      priceNote: 'Scarborough mobile mechanic calls start at a flat local diagnostic rate. Parts and labor are quoted after the initial inspection.',
+      priceNote: 'Diagnostics and pre-purchase inspections are quoted on the call. Repairs are quoted after diagnosis and before any work starts, with parts and labour separated so you can see what you are paying for. If the honest answer is that the job needs a shop, we tell you.',
       faqs: [
         {
-          question: 'Can you fix my car on-site in Scarborough?',
-          answer: 'Yes! We handle starters, alternators, brakes, batteries, sensors, belts, exhaust, transmission work, wheel alignment, steering and suspension, and air conditioning right where you are. If it turns out to be a major engine job, we\'ll diagnose it and tow you to a trusted local shop on one of our own trucks.'
+          question: 'What repairs can you do on-site in Scarborough?',
+          answer: 'Computer diagnostics and fault-code reading, battery, alternator and starter replacement, brake pads and rotors, belts and hoses, sensors, filters, fluid top-ups and oil changes, and full pre-purchase inspections. Engine internals and full rebuilds are the exception: those belong in a shop, and we will say so rather than start something we cannot finish where the car is parked.'
         },
         {
-          question: 'How fast can a mechanic reach me in Agincourt?',
-          answer: 'Since we are based right near Agincourt, our ETAs are typically 15-20 minutes. We are the fastest mobile mechanic option in North Scarborough.'
+          question: 'Can you inspect a used car I am buying from a private seller?',
+          answer: 'Yes. We meet you and the seller wherever the car is. We scan for stored and pending codes, check the underbody for accident repair and rust, test the battery and charging system, check brakes and tires, and give you a plain verdict. Book us before money changes hands, because that is when the inspection can still change your decision.'
         },
         {
-          question: 'Do you work in Scarborough condo parking garages?',
-          answer: 'Yes. Our mobile units are designed to navigate low-clearance garages, and our mechanics are experienced in working in tight parking stalls.'
+          question: 'Can you work on my car in a condo parking garage?',
+          answer: 'Usually yes. Our vans clear standard residential garage heights, which is what makes this practical for condo residents with nowhere else to leave a car. Give dispatch the building address and parking level when you book so we can confirm clearance. Some buildings restrict maintenance work in the garage, so it is worth a quick check with your property manager.'
+        },
+        {
+          question: 'Is a mobile mechanic more expensive than a shop?',
+          answer: 'Often it is not. We carry no bay rent or service-advisor overhead, and you save the hidden costs a shop visit adds: a day off work, a rental, or a tow to get the car there in the first place. A shop still wins on engine rebuilds, which is why we tell you when your job is one of those.'
+        },
+        {
+          question: 'Do you need a driveway or special equipment on site?',
+          answer: 'No. The van is self-sufficient with its own power, lighting and tools. We need a reasonably level parking spot with room to open the doors and work at the wheels. A driveway, a workplace lot, a condo space or a plaza lot all work. We do not work in a live traffic lane; if the car is somewhere unsafe we will move it or tow it somewhere it can be worked on properly.'
         }
       ]
     },
@@ -256,96 +272,128 @@ export const SERVICE_CITY_CONTENT: Record<ServiceId, Record<CityId, ServiceCityC
       ]
     },
     whitby: {
-      seoTitle: 'Mobile Mechanic Whitby & Brooklin | 24/7 Auto Repair | iFAST Roadside',
-      seoDescription: 'Expert mobile mechanic serving Whitby and Brooklin. 24/7 on-site car repair, diagnostics, and emergency service. 30-40 min arrival. Call now.',
-      keywords: 'mobile mechanic Whitby, on-site car repair Whitby, emergency mechanic Brooklin, mobile auto repair Whitby, car won\'t start Brooklin',
-      h1: 'Mobile Mechanic in Whitby: On-Site Repair for Whitby & Brooklin',
+      seoTitle: 'Mobile Mechanic Whitby & Brooklin | Repair At Home | iFAST',
+      seoDescription: 'Mobile mechanic in Whitby and Brooklin: diagnostics, brakes, batteries and pre-purchase inspections at your home or workplace. Port Whitby to Brooklin.',
+      keywords: 'mobile mechanic Whitby, mobile mechanic Brooklin, car repair at home Whitby, mechanic comes to you Whitby, mobile diagnostics Whitby, pre purchase inspection Whitby, mobile auto repair Brooklin',
+      h1: 'Mobile Mechanic in Whitby: Repairs At Your Home for Whitby & Brooklin',
       intro: (
         <>
           <p className="mb-4">
-            Mechanical trouble in Whitby or Brooklin? <strong>{COMPANY_NAME}</strong> brings 24/7 mobile mechanic services to your door. From Port Whitby to the residential streets of Brooklin, our mechanics provide expert diagnostics and on-site repairs with a <strong>30-40 minute</strong> ETA.
+            Most repairs that keep a car off the road do not actually need a hoist. Diagnostics, batteries, starters, alternators, brakes, belts, sensors and pre-purchase inspections can all be done properly where the car is parked. <strong>{COMPANY_NAME}</strong> brings the tools and the diagnostic scanner to your driveway in Brooklin, your street in Port Whitby or your workplace lot near Dundas and Thickson.
           </p>
           <p className="mb-4">
-            We handle the "no-start" issues, the strange noises, and the warning lights that traditional shops make you wait days for. Our Whitby mobile mechanics get you back on the road fast.
+            Whitby sits inside our Durham coverage, so you get a mechanic who comes to you instead of a morning lost at a shop. You get told what is actually wrong, what it will cost and, importantly, whether it is something we can do on-site or something that genuinely needs a shop. <strong>Call {PHONE_NUMBER}.</strong>
           </p>
-          <InlineCall source="wh_mechanic_intro" />
+          <InlineCall source="service_city_mobile-mechanic_whitby_intro" />
         </>
       ),
       localScenario: (
         <>
           <p className="mb-4">
-            Whitby's diverse geography, from the lake to the 407, requires a versatile mobile team. We often handle emergency belt and battery issues for drivers stuck on the 412 or 407.
+            Whitby's geography decides a lot of the calls. A family in Brooklin is a long way from the nearest shop that can fit a car in the same day, so a mobile repair in the driveway is often the practical answer, not a luxury. Brake pads, a dead battery, a no-start and a check-engine light are the common ones, and most of them are finished in the time a shop would still be writing the work order.
           </p>
           <p className="mb-4">
-            Brooklin residents love the convenience of our driveway service, avoiding the trek south to find a reliable mechanic shop.
+            The second pattern is commuters. Whitby drivers run the 401, the 407 and the 412 every day, and a belt, battery or sensor failure turns up on the way out the door at 6am, not at a convenient time. We read the codes where the car is parked and tell you whether it is safe to drive or whether it is staying put.
+          </p>
+          <p className="mb-4">
+            The rest is everyday work across Port Whitby, Downtown Whitby, Williamsburg, Pringle Creek and Brooklin: a used car you are about to buy from a private seller, a squeal on startup, brakes that started grinding on Taunton Road.
           </p>
         </>
       ),
       uniqueAngle: (
-        <p className="mb-4">
-          We are one of the few mobile mechanic services that regularly services Brooklin with the same 24/7 availability as downtown Whitby.
-        </p>
+        <>
+          <p className="mb-4">
+            The value of a mobile mechanic is not only convenience: it is that you are standing there. When we pull a code or show you a worn pad, you see the actual part on your actual car, and you decide with the information in front of you rather than over the phone from someone you have never met. Nothing gets done that you have not agreed to first.
+          </p>
+          <p className="mb-4">
+            We are also clear about our limits. Engine internals and full rebuilds belong in a shop, and we will tell you that instead of starting a job we cannot finish in a driveway. We cover Brooklin with the same availability as the rest of Whitby, so you are not treated as outside the zone.
+          </p>
+        </>
       ),
-      priceNote: 'Standard flat-rate diagnostic fees apply to all Whitby and Brooklin mobile mechanic calls.',
+      priceNote: 'Diagnostics and pre-purchase inspections are quoted on the call. Repairs are quoted after diagnosis and before any work starts, with parts and labour separated so you can see what you are paying for. There is no separate charge for Brooklin. If the honest answer is that the job needs a shop, we tell you.',
       faqs: [
         {
-          question: 'Do you service Brooklin for mechanical repairs?',
-          answer: 'Yes! Brooklin is a core part of our Whitby service area. We offer 24/7 mobile mechanic support there.'
+          question: 'Do you come to Brooklin as well as Whitby?',
+          answer: 'Yes. Brooklin is part of our Whitby coverage, and Port Whitby, Downtown Whitby, Williamsburg and Pringle Creek are covered too. Tell dispatch your street or the nearest major intersection when you call and we will confirm timing.'
         },
         {
-          question: 'Can you diagnose a check engine light on-site in Whitby?',
-          answer: 'Absolutely. We use professional-grade scanners to read codes and perform live data analysis to find the exact cause of the light.'
+          question: 'Can you diagnose a check-engine light on-site in Whitby?',
+          answer: 'Yes. We read stored and pending fault codes with a professional scanner and check live data to find the cause. Then we tell you whether it is safe to keep driving, what the fix involves and whether we can do it on the spot.'
         },
         {
-          question: 'What if my car needs a part you don\'t have?',
-          answer: 'We have accounts with all major parts suppliers in the East GTA and can typically source and deliver the required part to your location the same day.'
+          question: 'Can you do a pre-purchase inspection on a private sale?',
+          answer: 'Yes. We meet you and the seller wherever the car is. We scan for codes, check the underbody for accident repair and rust, test the battery and charging system, check brakes and tires, and give you a plain verdict. Book us before money changes hands.'
+        },
+        {
+          question: 'What if the repair needs a part you do not have on the van?',
+          answer: 'We source parts through our usual suppliers and, where we can, come back with the part rather than sending you to a shop. If the job turns out to need a shop, we say so before anything is taken apart.'
+        },
+        {
+          question: 'Do you need a driveway or special equipment on site?',
+          answer: 'No. The van is self-sufficient with its own power, lighting and tools. We need a reasonably level spot with room to open the doors and work at the wheels. A driveway, a workplace lot or a plaza lot all work. We do not work in a live traffic lane; if the car is somewhere unsafe we will move it or tow it somewhere it can be worked on properly.'
         }
       ]
     },
     oshawa: {
-      seoTitle: 'Mobile Mechanic Oshawa | 24/7 Emergency On-Site Repair | iFAST Roadside',
-      seoDescription: 'Reliable mobile mechanic in Oshawa. 24/7 on-site auto repair, diagnostics, and emergency service across Downtown, Samac, and UOIT. 35-50 min arrival. Call now.',
-      keywords: 'mobile mechanic Oshawa, on-site car repair Oshawa, emergency mechanic Oshawa, mobile auto repair UOIT, Durham College mechanic',
-      h1: 'Mobile Mechanic in Oshawa: 24/7 Honest-ETA Auto Repair',
+      seoTitle: 'Mobile Mechanic Oshawa | Car Repair At Your Home | iFAST',
+      seoDescription: 'Mobile mechanic in Oshawa: diagnostics, brakes, batteries and pre-purchase inspections at your home or workplace. Windfields, Taunton, Northwood, downtown.',
+      keywords: 'mobile mechanic Oshawa, car repair at home Oshawa, mechanic comes to you Oshawa, mobile diagnostics Oshawa, pre purchase inspection Oshawa, mobile auto repair Oshawa, mobile mechanic Windfields',
+      h1: 'Mobile Mechanic in Oshawa: Repairs At Your Home or Workplace',
       intro: (
         <>
           <p className="mb-4">
-            Stuck in Oshawa with a mechanical failure? <strong>{COMPANY_NAME}</strong> dispatches certified mobile mechanics from our Scarborough base with an honest <strong>35-50 minute</strong> ETA. We provide expert diagnostics and on-site repairs for all vehicle makes and models in Oshawa 24/7.
+            Most repairs that keep a car off the road do not actually need a hoist. Diagnostics, batteries, starters, alternators, brakes, belts, sensors and pre-purchase inspections can all be done properly where the car is parked. <strong>{COMPANY_NAME}</strong> brings the tools and the diagnostic scanner to your driveway in Windfields, your workplace lot near the Oshawa Centre or your street off Simcoe.
           </p>
           <p className="mb-4">
-            Whether you're a student at UOIT or a commuter in Vanier, our Oshawa mobile mechanics bring the tools and expertise to fix your car without the need for a tow.
+            Oshawa is the eastern edge of our Durham coverage. You get a mechanic who comes to you instead of a day lost at a shop, and you get told what is actually wrong, what it will cost and whether it is something we can do on-site or something that genuinely needs a shop. <strong>Call {PHONE_NUMBER}.</strong>
           </p>
-          <InlineCall source="os_mechanic_intro" />
+          <InlineCall source="service_city_mobile-mechanic_oshawa_intro" />
         </>
       ),
       localScenario: (
         <>
           <p className="mb-4">
-            Oshawa's large student population often deals with older vehicles that need frequent attention. We provide affordable, on-site maintenance and emergency repairs right at student residences.
+            Oshawa is a driving city, and a lot of its calls follow the same shape: a car that is a daily commuter on the 401 or the 407 starts misbehaving, and the owner cannot afford to lose it for a day. A battery that failed overnight, a starter that clicks, brakes that began to grind coming down Simcoe Street or Harmony Road. We diagnose it where it sits and fix what can be fixed on the spot.
           </p>
           <p className="mb-4">
-            If you're broken down near the GM plant or at the Oshawa Centre, our mechanics will meet you and provide a clear, honest diagnosis of the issue.
+            The second pattern is students and shift workers. Around Ontario Tech and Durham College, and across the shift patterns in the east end, nobody has a free weekday morning to sit in a waiting room. A mechanic at the curb or in the lot fits around a timetable instead of replacing it.
+          </p>
+          <p className="mb-4">
+            The rest is ordinary daily work across Windfields, Taunton, Northwood, Samac, Kedron and downtown: a used car you are about to buy from a private seller, a squeal on startup, a check-engine light that needs reading before it becomes expensive.
           </p>
         </>
       ),
       uniqueAngle: (
-        <p className="mb-4">
-          We pride ourselves on providing Oshawa residents with the most transparent and reliable mobile mechanic service, featuring up-front pricing and honest arrival times.
-        </p>
+        <>
+          <p className="mb-4">
+            The value of a mobile mechanic is not only convenience: it is that you are standing there. When we pull a code or show you a worn pad, you see the actual part on your actual car, and you decide with the information in front of you rather than over the phone from someone you have never met. Nothing gets done that you have not agreed to first.
+          </p>
+          <p className="mb-4">
+            We are also clear about our limits. Engine internals and full rebuilds belong in a shop, and we will tell you that instead of starting a job we cannot finish in a driveway. Oshawa is the furthest point of our regular coverage, so we confirm timing on the call instead of guessing.
+          </p>
+        </>
       ),
-      priceNote: 'Oshawa calls have a small distance adjustment on the diagnostic fee, which is always quoted upfront.',
+      priceNote: 'Diagnostics and pre-purchase inspections are quoted on the call. Repairs are quoted after diagnosis and before any work starts, with parts and labour separated so you can see what you are paying for. If the honest answer is that the job needs a shop, we tell you.',
       faqs: [
         {
-          question: 'Is it worth calling a mobile mechanic in Oshawa?',
-          answer: 'Absolutely. You save the cost of a tow and get an immediate diagnosis. For many common issues, we\'ll have you running again in the time it would take just to get a tow truck to arrive.'
+          question: 'What repairs can you do on-site in Oshawa?',
+          answer: 'Computer diagnostics and fault-code reading, battery, alternator and starter replacement, brake pads and rotors, belts and hoses, sensors, filters, fluid top-ups and oil changes, and full pre-purchase inspections. Engine internals and full rebuilds are the exception: those belong in a shop, and we will say so rather than start something we cannot finish where the car is parked.'
         },
         {
-          question: 'Can you work on my car at UOIT / Durham College?',
-          answer: 'Yes, we frequently service student vehicles on-site at UOIT and Durham College residences.'
+          question: 'Which parts of Oshawa do you cover?',
+          answer: 'The whole city, including Windfields, Taunton, Northwood, Samac, Kedron and downtown. Tell dispatch your street or the nearest major intersection when you call and we will confirm timing, since Oshawa is the eastern edge of our regular coverage.'
         },
         {
-          question: 'Do you handle emergency brake repairs in Oshawa?',
-          answer: 'Yes, we can replace brake pads, rotors, and lines on-site anywhere in Oshawa 24/7.'
+          question: 'Can you do a pre-purchase inspection on a private sale?',
+          answer: 'Yes. We meet you and the seller wherever the car is. We scan for codes, check the underbody for accident repair and rust, test the battery and charging system, check brakes and tires, and give you a plain verdict. Book us before money changes hands.'
+        },
+        {
+          question: 'Can you diagnose a check-engine light on-site?',
+          answer: 'Yes. We read stored and pending fault codes with a professional scanner and check live data to find the cause. Then we tell you whether it is safe to keep driving, what the fix involves and whether we can do it on the spot.'
+        },
+        {
+          question: 'Do you need a driveway or special equipment on site?',
+          answer: 'No. The van is self-sufficient with its own power, lighting and tools. We need a reasonably level spot with room to open the doors and work at the wheels. A driveway, a workplace lot or a plaza lot all work. We do not work in a live traffic lane; if the car is somewhere unsafe we will move it or tow it somewhere it can be worked on properly.'
         }
       ]
     }
