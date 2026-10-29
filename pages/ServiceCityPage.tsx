@@ -20,7 +20,7 @@ import { serviceHref } from '../utils/serviceHref';
 // index,follow on the next deploy. Reverse these one at a time when ready.
 // (Tracked as an open task — see the money-page rebuild follow-up.)
 const NOINDEX_COMBOS = new Set<string>([
-  'mobile-mechanic/scarborough', 'mobile-mechanic/pickering', 'mobile-mechanic/ajax', 'mobile-mechanic/whitby', 'mobile-mechanic/oshawa',
+  'mobile-mechanic/pickering', 'mobile-mechanic/ajax',
   'tire-change/pickering', 'tire-change/whitby', 'tire-change/oshawa',
   'jump-start/ajax', 'jump-start/whitby', 'jump-start/oshawa',
   'lockout/ajax', 'lockout/whitby', 'lockout/oshawa',
