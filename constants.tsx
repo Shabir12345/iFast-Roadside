@@ -7,10 +7,10 @@ export const PHONE_NUMBER = "+1 844-814-0070";
 export const EMAIL = "info@ifastroadside.ca";
 
 // WhatsApp click-to-chat. Deliberately NOT PHONE_NUMBER: the 844 line is
-// toll-free and can't be registered on WhatsApp, so chats go to the 437 mobile
-// (+1 437-215-3468). Calls stay on PHONE_NUMBER. wa.me wants bare digits with
+// toll-free and can't be registered on WhatsApp, so chats go to the 905 line
+// (+1 905-428-0070). Calls stay on PHONE_NUMBER. wa.me wants bare digits with
 // country code, no "+", spaces or dashes.
-export const WHATSAPP_NUMBER = "14372153468";
+export const WHATSAPP_NUMBER = "19054280070";
 export const WHATSAPP_MESSAGE = "Hi iFAST, I need roadside help.";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 export const ADDRESS = "20 Antrim Crescent, Scarborough, ON M1P 4N3";
