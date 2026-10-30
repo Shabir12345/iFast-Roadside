@@ -157,9 +157,9 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'tire-change': {
     id: 'tire-change',
-    seoTitle: 'Mobile Tire Change GTA | We Come to You, 24/7',
-    seoDescription: 'Flat tire and nowhere to go? We bring the jack, torque wrench and a spare to your driveway or the shoulder, 24/7 across the GTA. Call for an upfront price.',
-    keywords: 'mobile tire change GTA, flat tire repair Scarborough, mobile tire service Pickering, flat tire change Ajax, nail in tire repair Whitby, 24/7 mobile tire Oshawa, roadside tire change near me, mobile tire swap GTA',
+    seoTitle: 'Mobile Tire Service GTA | Tire Change Near Me, 24/7 | iFAST',
+    seoDescription: 'Mobile tire service that comes to you. Flat tire, spare swap or tire change in your driveway or on the shoulder, 24/7 across Toronto and the GTA. Call for an upfront price.',
+    keywords: 'mobile tire service, mobile tire service near me, tire change near me, change tire near me, mobile tire change, mobile tire repair, mobile tire change GTA, flat tire repair Scarborough, mobile tire service Pickering, flat tire change Ajax, nail in tire repair Whitby, 24/7 mobile tire Oshawa, roadside tire change near me, mobile tire swap GTA',
     heroImage: '/tire_service_hero.jpg',
     hero: {
       eyebrow: 'Roadside Tire Emergency',
@@ -806,10 +806,16 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'towing': {
     id: 'towing',
-    seoTitle: '24/7 Emergency Towing Service GTA | Pickering, Ajax, Oshawa',
-    seoDescription: 'Reliable 24/7 emergency flatbed towing service across Pickering, Ajax, Whitby, Oshawa, and Scarborough. Safe, damage-free transport for accidents and breakdowns.',
-    keywords: 'tow truck Pickering, emergency towing Ajax, flatbed tow truck Oshawa, accident towing Whitby, AWD towing Scarborough, luxury car towing GTA',
+    seoTitle: 'Tow Truck Near Me 24/7 | Towing Service Toronto & GTA | iFAST',
+    seoDescription: '24/7 tow truck service across Toronto and the GTA. Flatbed towing for breakdowns and accidents, to your home, your mechanic or a collision centre. Call for a fast quote.',
+    keywords: 'tow truck near me, towing near me, towing service near me, tow truck Toronto, towing company near me, 24 hour towing, emergency towing, flatbed tow truck, tow truck Scarborough, tow truck Pickering, emergency towing Ajax, flatbed tow truck Oshawa, accident towing Whitby, AWD towing Scarborough, luxury car towing GTA',
     heroImage: '/roadside_technician_towing.jpg',
+    hero: {
+      eyebrow: '24/7 Towing · Toronto & the GTA',
+      h1: 'Need a Tow Truck?',
+      h1Accent: 'Flatbed Towing, Day or Night.',
+      intro: 'Broken down, in a collision, or the car just won\'t move? Call and we send a tow truck to you anywhere in Toronto and the GTA, any hour. Our flatbeds lift the whole car off the road, so AWD and lowered cars travel safely to your home, your mechanic or a collision reporting centre. And if a boost, a tire change or a can of fuel will get you driving again, we\'ll tell you before we hook anything up.',
+    },
     blogSections: [
       {
         title: '24/7 Fast & Reliable Flatbed Towing Across the Greater Toronto Area (Pickering, Ajax, Whitby)',
@@ -903,9 +909,9 @@ export const SERVICE_CONTENT: Record<string, ServiceContent> = {
   },
   'flat-tire-repair': {
     id: 'flat-tire-repair',
-    seoTitle: 'Mobile Flat Tire Repair GTA | Patch & Plug at Your Door',
-    seoDescription: 'Nail in your tire and losing air every morning? We come to you and fit a permanent internal patch-plug: no shop, no tow, no waiting room. Call for a price.',
-    keywords: 'flat tire repair Pickering, mobile tire patch Ajax, nail in tire repair Oshawa, tire plug service Whitby, puncture repair Scarborough, fix flat tire on site GTA',
+    seoTitle: 'Flat Tire Repair Near Me | Mobile Puncture Repair GTA, 24/7',
+    seoDescription: 'Flat tire or a nail in your tire? We come to you and patch-plug the puncture on the spot, 24/7 across Toronto and the GTA. No shop, no tow, no waiting room. Call now.',
+    keywords: 'flat tire repair near me, tire puncture repair near me, puncture repair near me, flat tire repair, mobile flat tire repair, flat tire repair Pickering, mobile tire patch Ajax, nail in tire repair Oshawa, tire plug service Whitby, puncture repair Scarborough, fix flat tire on site GTA',
     heroImage: '/flat_tire_repair_hero.jpg',
     hero: {
       eyebrow: 'Puncture Repair On-Site',
