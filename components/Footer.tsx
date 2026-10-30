@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           <div>
             <h2 className="text-white font-bold mb-4 uppercase tracking-wider text-sm">Services</h2>
             <ul className="space-y-1 text-sm">
-              {SERVICES.filter(s => !s.parent).map(service => (
+              {SERVICES.map(service => (
                 <li key={service.id}>
                   <a href={serviceHref(service.id)} className="inline-block py-1.5 hover:text-brand-yellow transition-colors">{service.title}</a>
                 </li>
